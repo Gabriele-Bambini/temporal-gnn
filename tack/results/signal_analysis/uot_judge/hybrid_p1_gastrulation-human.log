@@ -1,0 +1,40 @@
+gastrulation-human transition 1 done
+gastrulation-human transition 2 done
+gastrulation-human transition 3 done
+gastrulation-human transition 4 done
+gastrulation-human transition 5 done
+gastrulation-human transition 6 done
+gastrulation-human transition 7 done
+gastrulation-human transition 8 done
+gastrulation-human transition 9 done
+gastrulation-human transition 10 done
+gastrulation-human transition 11 done
+gastrulation-human transition 12 done
+gastrulation-human transition 13 done
+gastrulation-human transition 14 done
+gastrulation-human transition 15 done
+gastrulation-human transition 16 done
+gastrulation-human transition 17 done
+gastrulation-human transition 18 done
+gastrulation-human transition 19 done
+gastrulation-human transition 20 done
+gastrulation-human transition 21 done
+gastrulation-human transition 22 done
+gastrulation-human transition 23 done
+gastrulation-human transition 24 done
+gastrulation-human transition 25 done
+gastrulation-human transition 26 done
+gastrulation-human transition 27 done
+gastrulation-human transition 28 done
+gastrulation-human l1 {"HYB_closed_form|Kany(strict sel)": {"i>=1": {"pearson_nan0": 0.2675, "p_ta_up": 0.2634, "p_ta_down": 0.2723, "pcc_seed_sd": 0.0032, "spearman": 0.2401}, "i>=2": {"pearson_nan0": 0.2725, "p_ta_up": 0.266, "p_ta_down": 0.2779, "pcc_seed_sd": 0.0029, "spearman": 0.2502}}, "sink_norm_Kany": {"i>=1": {"pearson_nan0": 0.2688, "p_ta_up": 0.2658, "p_ta_down": 0.2789, "pcc_seed_sd": 0.0031, "spearman": 0.2594}}, "balanced_Kany": {"i>=1": {"pearson_nan0": 0.2576, "p_ta_up": 0.2582, "p_ta_down": 0.2677, "pcc_seed_sd": 0.0048, "spearman": 0.2377}}, "persist_L3_Kany": {"i>=1": {"pearson_nan0": 0.255, "p_ta_up": 0.2682, "p_ta_down": 0.2842, "pcc_seed_sd": 0.0027, "spearman": 0.2823}}, "lin1_Kany": {"i>=1": {"pearson_nan0": 0.2582, "p_ta_up": 0.2587, "p_ta_down": 0.2648, "pcc_seed_sd": 0.0049, "spearman": 0.223}}, "sink_abs_Kany": {"i>=1": {"pearson_nan0": 0.2502, "p_ta_up": 0.2665, "p_ta_down": 0.2724, "pcc_seed_sd": 0.0038, "spearman": 0.2546}}}
+   l1: HYB - sink_norm_Kany {"dPCC": {"mean": -0.0014, "wins": 15, "losses": 12, "p_wilcoxon": 0.9717}, "dJ": {"mean": -0.0036, "wins": 14, "losses": 13, "p_wilcoxon": 0.4553}}
+   l1: HYB - balanced_Kany {"dPCC": {"mean": 0.0103, "wins": 16, "losses": 11, "p_wilcoxon": 0.3361}, "dJ": {"mean": 0.0068, "wins": 15, "losses": 12, "p_wilcoxon": 0.6446}}
+   l1: HYB - persist_L3_Kany {"dPCC": {"mean": 0.013, "wins": 20, "losses": 7, "p_wilcoxon": 0.2109}, "dJ": {"mean": -0.0015, "wins": 18, "losses": 9, "p_wilcoxon": 0.4698}}
+   l1: HYB - lin1_Kany {"dPCC": {"mean": 0.0096, "wins": 14, "losses": 13, "p_wilcoxon": 0.427}, "dJ": {"mean": 0.0074, "wins": 14, "losses": 13, "p_wilcoxon": 0.1937}}
+   l1: HYB - sink_abs_Kany {"dPCC": {"mean": 0.0179, "wins": 14, "losses": 13, "p_wilcoxon": 1.0}, "dJ": {"mean": 0.0049, "wins": 13, "losses": 14, "p_wilcoxon": 0.5944}}
+gastrulation-human linear {"HYB_closed_form|Kany(strict sel)": {"i>=1": {"pearson_nan0": 0.192, "p_ta_up": 0.3173, "p_ta_down": 0.3087, "pcc_seed_sd": 0.0225, "spearman": 0.0674}, "i>=2": {"pearson_nan0": 0.2096, "p_ta_up": 0.3038, "p_ta_down": 0.3164, "pcc_seed_sd": 0.0176, "spearman": 0.062}}, "sink_norm_Kany": {"i>=1": {"pearson_nan0": 0.1392, "p_ta_up": 0.3074, "p_ta_down": 0.2828, "pcc_seed_sd": 0.0239, "spearman": 0.0443}}, "balanced_Kany": {"i>=1": {"pearson_nan0": 0.141, "p_ta_up": 0.3083, "p_ta_down": 0.2806, "pcc_seed_sd": 0.0225, "spearman": 0.0317}}, "persist_L3_Kany": {"i>=1": {"pearson_nan0": -0.0192, "p_ta_up": 0.3114, "p_ta_down": 0.3349, "pcc_seed_sd": 0.0287, "spearman": 0.2464}}, "lin1_Kany": {"i>=1": {"pearson_nan0": 0.2216, "p_ta_up": 0.3243, "p_ta_down": 0.318, "pcc_seed_sd": 0.0362, "spearman": 0.0986}}, "sink_abs_Kany": {"i>=1": {"pearson_nan0": 0.1076, "p_ta_up": 0.313, "p_ta_down": 0.2944, "pcc_seed_sd": 0.0431, "spearman": 0.0636}}}
+   linear: HYB - sink_norm_Kany {"dPCC": {"mean": 0.0547, "wins": 14, "losses": 13, "p_wilcoxon": 0.3242}, "dJ": {"mean": 0.0306, "wins": 15, "losses": 12, "p_wilcoxon": 0.2021}}
+   linear: HYB - balanced_Kany {"dPCC": {"mean": 0.0528, "wins": 15, "losses": 12, "p_wilcoxon": 0.3242}, "dJ": {"mean": 0.0304, "wins": 15, "losses": 12, "p_wilcoxon": 0.2901}}
+   linear: HYB - persist_L3_Kany {"dPCC": {"mean": 0.219, "wins": 17, "losses": 10, "p_wilcoxon": 0.0655}, "dJ": {"mean": 0.066, "wins": 18, "losses": 9, "p_wilcoxon": 0.0692}}
+   linear: HYB - lin1_Kany {"dPCC": {"mean": -0.0307, "wins": 11, "losses": 16, "p_wilcoxon": 0.0731}, "dJ": {"mean": -0.0158, "wins": 11, "losses": 16, "p_wilcoxon": 0.0906}}
+   linear: HYB - sink_abs_Kany {"dPCC": {"mean": 0.0875, "wins": 14, "losses": 13, "p_wilcoxon": 0.4846}, "dJ": {"mean": 0.0356, "wins": 13, "losses": 14, "p_wilcoxon": 0.5303}}

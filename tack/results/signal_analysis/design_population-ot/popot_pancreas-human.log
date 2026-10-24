@@ -1,0 +1,20 @@
+pancreas-human N 18561 T 14 configs 120 orig configs 38
+pancreas-human transition 0 23.7 s
+pancreas-human transition 1 48.8 s
+pancreas-human transition 2 73.8 s
+pancreas-human transition 3 98.0 s
+pancreas-human transition 4 137.9 s
+pancreas-human transition 5 182.8 s
+pancreas-human transition 6 229.2 s
+pancreas-human transition 7 286.6 s
+pancreas-human transition 8 348.6 s
+pancreas-human transition 9 415.4 s
+pancreas-human transition 10 480.8 s
+pancreas-human transition 11 548.2 s
+pancreas-human transition 12 627.6 s
+pancreas-human transition 13 707.1 s
+pancreas-human orig groups done 709.8 s
+pancreas-human l1 groups done 711.6 s
+pancreas-human linear groups done 715.7 s
+pancreas-human oracles done 751.5 s
+pancreas-human done 768.5 s

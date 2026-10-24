@@ -1,0 +1,214 @@
+{
+ "pancreas-human": {
+  "p1_json": {
+   "max": 0.0,
+   "argmax": null,
+   "n_num": 5986,
+   "big": [],
+   "missing": [],
+   "str_mismatch": [],
+   "n_big": 0,
+   "n_str_mismatch": 0
+  },
+  "p1_scores_npz": {
+   "max_abs_diff_over_arrays": 0.0,
+   "n_arrays": 122,
+   "n_arrays_nonzero_diff": 0,
+   "worst": [
+    [
+     "J_l1",
+     0.0
+    ],
+    [
+     "J_linear",
+     0.0
+    ],
+    [
+     "J_orig",
+     0.0
+    ],
+    [
+     "TV",
+     0.0
+    ],
+    [
+     "S_l1_persist_Kany",
+     0.0
+    ],
+    [
+     "S_l1_persist_K4",
+     0.0
+    ],
+    [
+     "S_l1_persist_K8",
+     0.0
+    ],
+    [
+     "S_l1_persist_K16",
+     0.0
+    ]
+   ]
+  },
+  "p2_json": {
+   "max": 7.099999999999998,
+   "argmax": "/convergence/seconds_per_job_mean",
+   "n_num": 3296,
+   "big": [
+    [
+     "/convergence/seconds_per_job_mean",
+     16.1,
+     23.2
+    ]
+   ],
+   "missing": [],
+   "str_mismatch": [],
+   "n_big": 1,
+   "n_str_mismatch": 0
+  },
+  "p2_sel_preds_npz": {
+   "max_abs_diff_over_arrays": 0.0,
+   "n_arrays": 8,
+   "n_arrays_nonzero_diff": 0,
+   "worst": [
+    [
+     "uot__l1",
+     0.0
+    ],
+    [
+     "uot__linear",
+     0.0
+    ],
+    [
+     "uot_forced__l1",
+     0.0
+    ],
+    [
+     "uot_forced__linear",
+     0.0
+    ],
+    [
+     "bal__l1",
+     0.0
+    ],
+    [
+     "bal__linear",
+     0.0
+    ],
+    [
+     "persist__l1",
+     0.0
+    ],
+    [
+     "persist__linear",
+     0.0
+    ]
+   ]
+  }
+ },
+ "gastrulation-human": {
+  "p1_json": {
+   "max": 0.0,
+   "argmax": null,
+   "n_num": 9864,
+   "big": [],
+   "missing": [],
+   "str_mismatch": [],
+   "n_big": 0,
+   "n_str_mismatch": 0
+  },
+  "p1_scores_npz": {
+   "max_abs_diff_over_arrays": 0.0,
+   "n_arrays": 122,
+   "n_arrays_nonzero_diff": 0,
+   "worst": [
+    [
+     "J_l1",
+     0.0
+    ],
+    [
+     "J_linear",
+     0.0
+    ],
+    [
+     "J_orig",
+     0.0
+    ],
+    [
+     "TV",
+     0.0
+    ],
+    [
+     "S_l1_persist_Kany",
+     0.0
+    ],
+    [
+     "S_l1_persist_K4",
+     0.0
+    ],
+    [
+     "S_l1_persist_K8",
+     0.0
+    ],
+    [
+     "S_l1_persist_K16",
+     0.0
+    ]
+   ]
+  },
+  "p2_json": {
+   "max": 6.199999999999996,
+   "argmax": "/convergence/seconds_per_job_mean",
+   "n_num": 5141,
+   "big": [
+    [
+     "/convergence/seconds_per_job_mean",
+     35.2,
+     41.4
+    ]
+   ],
+   "missing": [],
+   "str_mismatch": [],
+   "n_big": 1,
+   "n_str_mismatch": 0
+  },
+  "p2_sel_preds_npz": {
+   "max_abs_diff_over_arrays": 0.0,
+   "n_arrays": 8,
+   "n_arrays_nonzero_diff": 0,
+   "worst": [
+    [
+     "uot__l1",
+     0.0
+    ],
+    [
+     "uot__linear",
+     0.0
+    ],
+    [
+     "uot_forced__l1",
+     0.0
+    ],
+    [
+     "uot_forced__linear",
+     0.0
+    ],
+    [
+     "bal__l1",
+     0.0
+    ],
+    [
+     "bal__linear",
+     0.0
+    ],
+    [
+     "persist__l1",
+     0.0
+    ],
+    [
+     "persist__linear",
+     0.0
+    ]
+   ]
+  }
+ }
+}

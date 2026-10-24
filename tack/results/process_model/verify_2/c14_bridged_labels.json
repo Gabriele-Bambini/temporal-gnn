@@ -1,0 +1,248 @@
+{
+ "gastrulation-human": {
+  "baseline_equals_nass.run_learned_maxabs": 0.0,
+  "label_diag": {
+   "L_eb": {
+    "corr(bridged, raw) mean at last origin": 0.663,
+    "var(bridged)/var(raw) mean": 1.035
+   },
+   "CP_nass": {
+    "corr(bridged, raw) mean at last origin": 0.563,
+    "var(bridged)/var(raw) mean": 1.287
+   }
+  },
+  "rows": {
+   "raw": {
+    "ctx_i>=2": [
+     0.3365,
+     0.2765,
+     0.2948
+    ],
+    "nassmasks_i>=2": {
+     "pcc": 0.3351,
+     "p200_up": 0.2755,
+     "p200_down": 0.2905,
+     "pta_up": 0.2755,
+     "pta_down": 0.2905,
+     "pcc_sd": 0.0084,
+     "p200_up_sd": 0.0037,
+     "p200_down_sd": 0.0035
+    }
+   },
+   "L_eb": {
+    "ctx_i>=2": [
+     0.3074,
+     0.2711,
+     0.2788
+    ],
+    "nassmasks_i>=2": {
+     "pcc": 0.3119,
+     "p200_up": 0.2706,
+     "p200_down": 0.2708,
+     "pta_up": 0.2705,
+     "pta_down": 0.2708,
+     "pcc_sd": 0.01,
+     "p200_up_sd": 0.0041,
+     "p200_down_sd": 0.0031
+    }
+   },
+   "CP_nass": {
+    "ctx_i>=2": [
+     0.291,
+     0.2636,
+     0.2728
+    ],
+    "nassmasks_i>=2": {
+     "pcc": 0.2977,
+     "p200_up": 0.2636,
+     "p200_down": 0.2647,
+     "pta_up": 0.2636,
+     "pta_down": 0.2646,
+     "pcc_sd": 0.0112,
+     "p200_up_sd": 0.0037,
+     "p200_down_sd": 0.0035
+    }
+   }
+  },
+  "paired_pcc_i>=2": {
+   "L_eb - raw": {
+    "mean_delta": -0.0291,
+    "better": 3,
+    "worse": 24,
+    "wilcoxon_p": 0.0,
+    "per_transition": [
+     -0.0,
+     -0.0054,
+     -0.1821,
+     0.0163,
+     -0.0061,
+     -0.0669,
+     -0.0048,
+     0.0293,
+     -0.0424,
+     -0.0238,
+     -0.033,
+     -0.0208,
+     -0.0185,
+     -0.0312,
+     -0.0167,
+     -0.0542,
+     -0.0225,
+     -0.0067,
+     -0.0393,
+     -0.0269,
+     -0.1153,
+     -0.0377,
+     -0.0191,
+     0.0056,
+     -0.0034,
+     -0.034,
+     -0.0258
+    ]
+   },
+   "CP_nass - raw": {
+    "mean_delta": -0.0456,
+    "better": 2,
+    "worse": 25,
+    "wilcoxon_p": 0.0,
+    "per_transition": [
+     -0.0,
+     -0.0011,
+     -0.1486,
+     0.0217,
+     -0.0187,
+     -0.0648,
+     0.0006,
+     -0.12,
+     -0.0862,
+     -0.0389,
+     -0.0464,
+     -0.0352,
+     -0.0354,
+     -0.0497,
+     -0.032,
+     -0.0794,
+     -0.0372,
+     -0.0112,
+     -0.055,
+     -0.0354,
+     -0.1594,
+     -0.0565,
+     -0.0437,
+     -0.0016,
+     -0.0196,
+     -0.0449,
+     -0.0313
+    ]
+   }
+  }
+ },
+ "pancreas-human": {
+  "baseline_equals_nass.run_learned_maxabs": 0.0,
+  "label_diag": {
+   "L_eb": {
+    "corr(bridged, raw) mean at last origin": 0.899,
+    "var(bridged)/var(raw) mean": 0.798
+   },
+   "CP_nass": {
+    "corr(bridged, raw) mean at last origin": 0.79,
+    "var(bridged)/var(raw) mean": 0.818
+   }
+  },
+  "rows": {
+   "raw": {
+    "ctx_i>=2": [
+     0.3223,
+     0.2212,
+     0.2798
+    ],
+    "nassmasks_i>=2": {
+     "pcc": 0.308,
+     "p200_up": 0.221,
+     "p200_down": 0.283,
+     "pta_up": 0.221,
+     "pta_down": 0.283,
+     "pcc_sd": 0.0249,
+     "p200_up_sd": 0.0047,
+     "p200_down_sd": 0.0061
+    }
+   },
+   "L_eb": {
+    "ctx_i>=2": [
+     0.313,
+     0.2185,
+     0.2742
+    ],
+    "nassmasks_i>=2": {
+     "pcc": 0.2969,
+     "p200_up": 0.2201,
+     "p200_down": 0.2772,
+     "pta_up": 0.2201,
+     "pta_down": 0.2772,
+     "pcc_sd": 0.0248,
+     "p200_up_sd": 0.0055,
+     "p200_down_sd": 0.0063
+    }
+   },
+   "CP_nass": {
+    "ctx_i>=2": [
+     0.3106,
+     0.2144,
+     0.2715
+    ],
+    "nassmasks_i>=2": {
+     "pcc": 0.2936,
+     "p200_up": 0.2145,
+     "p200_down": 0.2742,
+     "pta_up": 0.2145,
+     "pta_down": 0.2742,
+     "pcc_sd": 0.025,
+     "p200_up_sd": 0.0046,
+     "p200_down_sd": 0.0063
+    }
+   }
+  },
+  "paired_pcc_i>=2": {
+   "L_eb - raw": {
+    "mean_delta": -0.0093,
+    "better": 4,
+    "worse": 8,
+    "wilcoxon_p": 0.1514,
+    "per_transition": [
+     -0.0,
+     -0.0125,
+     -0.0002,
+     0.008,
+     0.0104,
+     -0.0514,
+     -0.0201,
+     0.0147,
+     0.0103,
+     -0.0144,
+     -0.0359,
+     -0.0201
+    ]
+   },
+   "CP_nass - raw": {
+    "mean_delta": -0.0116,
+    "better": 4,
+    "worse": 8,
+    "wilcoxon_p": 0.1763,
+    "per_transition": [
+     -0.0,
+     -0.0127,
+     -0.0039,
+     0.0124,
+     0.0212,
+     -0.0495,
+     -0.0334,
+     0.0145,
+     0.0153,
+     -0.0387,
+     -0.0417,
+     -0.0229
+    ]
+   }
+  }
+ }
+}

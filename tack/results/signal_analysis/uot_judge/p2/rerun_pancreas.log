@@ -1,0 +1,110 @@
+== pancreas-human: G=18561 T=14 n_test=4640 cells/bin=[111, 612, 361, 116, 50, 53, 68, 79, 191, 218, 132, 286, 698, 616, 105]
+163 jobs on 12 workers
+  25/163 done, 48s elapsed
+  50/163 done, 78s elapsed
+  75/163 done, 114s elapsed
+  100/163 done, 147s elapsed
+  125/163 done, 183s elapsed
+  150/163 done, 224s elapsed
+  163/163 done, 229s elapsed
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\uot_judge\p2\run_uot.py:210: RuntimeWarning: Mean of empty slice
+  per_seed = np.nanmean(S[:, start:], axis=1)
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\uot_judge\p2\run_uot.py:223: RuntimeWarning: Mean of empty slice
+  scores[fam][tg]["allgenes_pcc_i>=1"] = round(float(np.nanmean(ag)), 4)  # mask-free robustness check
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\uot_judge\p2\run_uot.py:231: RuntimeWarning: Mean of empty slice
+  np.nanmean(S[:, 1:, 0] + S[:, 1:, 1] + S[:, 1:, 2], axis=1))), 4)}
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\uot_judge\p2\run_uot.py:230: RuntimeWarning: Mean of empty slice
+  cfg_scores["/".join(map(str, c))][tg] = {"i>=1": summ(S, 1), "J_i>=1": round(float(np.nanmean(
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\uot_judge\p2\run_uot.py:242: RuntimeWarning: Mean of empty slice
+  d = np.nanmean(f(A), 0) - np.nanmean(f(B), 0)
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\uot_judge\p2\run_uot.py:245: RuntimeWarning: Mean of empty slice
+  out[nm] = {"mean_diff": round(float(d.mean()), 4), "wins": int((d > 0).sum()), "losses": int((d < 0).sum()),
+C:\Users\Gabriele\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\_core\_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+
+== pancreas-human: PCC / P@200 up / P@200 down (tie-aware; argsort in brackets), mean over 3 mask seeds
+ target l1
+   trend          i>=1 +0.177 / 0.225 / 0.221 [0.225 / 0.221]   i>=2 +0.167 / 0.225 / 0.215   all-gene PCC +0.156
+   persist        i>=1 +0.020 / 0.097 / 0.157 [0.097 / 0.157]   i>=2 +0.023 / 0.097 / 0.160   all-gene PCC +0.023
+   bal            i>=1 +0.184 / 0.201 / 0.258 [0.201 / 0.258]   i>=2 +0.177 / 0.204 / 0.253   all-gene PCC +0.169
+   uot_forced     i>=1 +0.167 / 0.225 / 0.238 [0.225 / 0.238]   i>=2 +0.159 / 0.226 / 0.234   all-gene PCC +0.156
+   uot            i>=1 +0.153 / 0.220 / 0.235 [0.220 / 0.235]   i>=2 +0.143 / 0.221 / 0.230   all-gene PCC +0.144
+   uot_lam128     i>=1 +0.167 / 0.225 / 0.238 [0.225 / 0.238]   i>=2 +0.159 / 0.226 / 0.234   all-gene PCC +0.156
+   uot_lam4       i>=1 +0.157 / 0.223 / 0.235 [0.223 / 0.235]   i>=2 +0.147 / 0.223 / 0.230   all-gene PCC +0.147
+   uot_lam1       i>=1 +0.160 / 0.226 / 0.245 [0.226 / 0.245]   i>=2 +0.151 / 0.227 / 0.241   all-gene PCC +0.151
+   uot_lam0.25    i>=1 +0.142 / 0.208 / 0.233 [0.208 / 0.233]   i>=2 +0.132 / 0.210 / 0.228   all-gene PCC +0.137
+   uot_lam0.0625  i>=1 +0.101 / 0.178 / 0.216 [0.178 / 0.216]   i>=2 +0.095 / 0.181 / 0.214   all-gene PCC +0.090
+   paired uot vs bal             dPCC -0.031 (1/12, p=0.0012)  dJ -0.035 (1/12, p=0.0017)
+   paired uot vs uot_forced      dPCC -0.014 (3/2, p=1.0)  dJ -0.022 (3/2, p=1.0)
+   paired uot_forced vs bal      dPCC -0.017 (2/11, p=0.0327)  dJ -0.013 (2/11, p=0.0398)
+   paired uot vs trend           dPCC -0.024 (5/8, p=0.4143)  dJ -0.015 (5/8, p=0.5879)
+   paired uot vs persist         dPCC +0.133 (9/4, p=0.0215)  dJ +0.335 (11/2, p=0.0034)
+   paired bal vs trend           dPCC +0.007 (6/7, p=0.946)  dJ +0.020 (7/6, p=0.7869)
+   paired persist vs trend       dPCC -0.157 (4/9, p=0.0479)  dJ -0.349 (3/10, p=0.0171)
+ target linear
+   trend          i>=1 +0.425 / 0.292 / 0.358 [0.292 / 0.358]   i>=2 +0.462 / 0.301 / 0.356   all-gene PCC +0.387
+   persist        i>=1 +nan / 0.043 / 0.043 [0.000 / 0.000]   i>=2 +nan / 0.043 / 0.043   all-gene PCC +nan
+   bal            i>=1 +0.409 / 0.283 / 0.364 [0.283 / 0.364]   i>=2 +0.444 / 0.291 / 0.361   all-gene PCC +0.326
+   uot_forced     i>=1 +0.373 / 0.300 / 0.349 [0.300 / 0.349]   i>=2 +0.406 / 0.310 / 0.348   all-gene PCC +0.338
+   uot            i>=1 +0.373 / 0.211 / 0.421 [0.211 / 0.421]   i>=2 +0.406 / 0.214 / 0.426   all-gene PCC +0.297
+   uot_lam128     i>=1 +0.373 / 0.300 / 0.349 [0.300 / 0.349]   i>=2 +0.406 / 0.310 / 0.348   all-gene PCC +0.338
+   uot_lam4       i>=1 +0.371 / 0.299 / 0.351 [0.299 / 0.351]   i>=2 +0.404 / 0.309 / 0.349   all-gene PCC +0.335
+   uot_lam1       i>=1 +0.342 / 0.292 / 0.339 [0.292 / 0.339]   i>=2 +0.373 / 0.302 / 0.337   all-gene PCC +0.308
+   uot_lam0.25    i>=1 +0.375 / 0.263 / 0.367 [0.263 / 0.367]   i>=2 +0.407 / 0.271 / 0.364   all-gene PCC +0.346
+   uot_lam0.0625  i>=1 +0.401 / 0.182 / 0.437 [0.182 / 0.437]   i>=2 +0.384 / 0.184 / 0.431   all-gene PCC +0.353
+   paired uot vs bal             dPCC -0.036 (3/10, p=0.3054)  dJ -0.050 (3/10, p=0.3396)
+   paired uot vs uot_forced      dPCC -0.001 (3/9, p=0.5693)  dJ -0.017 (3/9, p=0.5186)
+   paired uot_forced vs bal      dPCC -0.036 (4/9, p=0.0398)  dJ -0.033 (4/9, p=0.0942)
+   paired uot vs trend           dPCC -0.053 (3/10, p=0.1909)  dJ -0.070 (4/9, p=0.2163)
+   paired uot vs persist         dPCC +nan (0/0, p=nan)  dJ +nan (0/0, p=nan)
+   paired bal vs trend           dPCC -0.016 (9/4, p=0.2734)  dJ -0.020 (9/4, p=0.2163)
+   paired persist vs trend       dPCC +nan (0/0, p=nan)  dJ +nan (0/0, p=nan)
+ target orig
+   trend          i>=1 -0.390 / 0.040 / 0.038 [0.040 / 0.037]   i>=2 -0.387 / 0.035 / 0.027   all-gene PCC -0.394
+   persist        i>=1 +0.389 / 0.017 / 0.386 [0.003 / 0.383]   i>=2 +0.378 / 0.018 / 0.375   all-gene PCC +0.394
+   bal            i>=1 +0.331 / 0.016 / 0.332 [0.016 / 0.329]   i>=2 +0.329 / 0.013 / 0.328   all-gene PCC +0.336
+   uot_forced     i>=1 +0.300 / 0.021 / 0.301 [0.021 / 0.295]   i>=2 +0.316 / 0.017 / 0.309   all-gene PCC +0.304
+   uot            i>=1 +0.300 / 0.020 / 0.300 [0.020 / 0.296]   i>=2 +0.316 / 0.016 / 0.308   all-gene PCC +0.304
+   uot_lam128     i>=1 +0.300 / 0.021 / 0.301 [0.021 / 0.295]   i>=2 +0.316 / 0.017 / 0.309   all-gene PCC +0.304
+   uot_lam4       i>=1 +0.300 / 0.021 / 0.303 [0.021 / 0.299]   i>=2 +0.316 / 0.017 / 0.311   all-gene PCC +0.304
+   uot_lam1       i>=1 +0.300 / 0.023 / 0.303 [0.023 / 0.298]   i>=2 +0.315 / 0.018 / 0.311   all-gene PCC +0.304
+   uot_lam0.25    i>=1 +0.301 / 0.020 / 0.300 [0.020 / 0.295]   i>=2 +0.316 / 0.016 / 0.308   all-gene PCC +0.304
+   uot_lam0.0625  i>=1 +0.301 / 0.021 / 0.302 [0.021 / 0.298]   i>=2 +0.317 / 0.016 / 0.310   all-gene PCC +0.305
+   paired uot vs bal             dPCC -0.030 (2/11, p=0.0061)  dJ -0.058 (2/11, p=0.0017)
+   paired uot vs uot_forced      dPCC -0.000 (1/4, p=0.625)  dJ -0.002 (1/4, p=0.125)
+   paired uot_forced vs bal      dPCC -0.030 (2/11, p=0.0061)  dJ -0.056 (3/10, p=0.0046)
+   paired uot vs trend           dPCC +0.691 (13/0, p=0.0002)  dJ +0.934 (13/0, p=0.0002)
+   paired uot vs persist         dPCC -0.088 (0/13, p=0.0002)  dJ -0.170 (1/12, p=0.0005)
+   paired bal vs trend           dPCC +0.721 (13/0, p=0.0002)  dJ +0.992 (13/0, p=0.0002)
+   paired persist vs trend       dPCC +0.779 (13/0, p=0.0002)  dJ +1.104 (13/0, p=0.0002)
+ target l1_plugin
+   trend          i>=1 +0.177 / 0.225 / 0.221 [0.225 / 0.221]   i>=2 +0.167 / 0.225 / 0.215   all-gene PCC +0.156
+   persist        i>=1 +nan / 0.043 / 0.043 [0.000 / 0.000]   i>=2 +nan / 0.043 / 0.043   all-gene PCC +nan
+   bal            i>=1 +0.181 / 0.200 / 0.254 [0.200 / 0.254]   i>=2 +0.173 / 0.203 / 0.248   all-gene PCC +0.165
+   uot_forced     i>=1 +0.169 / 0.226 / 0.241 [0.226 / 0.240]   i>=2 +0.161 / 0.227 / 0.236   all-gene PCC +0.158
+   uot            i>=1 +0.167 / 0.226 / 0.241 [0.226 / 0.241]   i>=2 +0.158 / 0.227 / 0.236   all-gene PCC +0.156
+   uot_lam128     i>=1 +0.169 / 0.226 / 0.241 [0.226 / 0.240]   i>=2 +0.161 / 0.227 / 0.236   all-gene PCC +0.158
+   uot_lam4       i>=1 +0.169 / 0.226 / 0.241 [0.226 / 0.241]   i>=2 +0.160 / 0.227 / 0.236   all-gene PCC +0.158
+   uot_lam1       i>=1 +0.158 / 0.225 / 0.243 [0.225 / 0.243]   i>=2 +0.149 / 0.226 / 0.239   all-gene PCC +0.150
+   uot_lam0.25    i>=1 +0.150 / 0.219 / 0.237 [0.219 / 0.237]   i>=2 +0.140 / 0.221 / 0.233   all-gene PCC +0.144
+   uot_lam0.0625  i>=1 +0.095 / 0.179 / 0.212 [0.179 / 0.212]   i>=2 +0.089 / 0.181 / 0.210   all-gene PCC +0.085
+   paired uot vs bal             dPCC -0.014 (2/11, p=0.0398)  dJ -0.001 (4/9, p=0.1909)
+   paired uot vs uot_forced      dPCC -0.002 (1/1, p=1.0)  dJ -0.002 (1/1, p=1.0)
+   paired uot_forced vs bal      dPCC -0.012 (2/11, p=0.0398)  dJ +0.001 (4/9, p=0.1909)
+   paired uot vs trend           dPCC -0.010 (5/8, p=0.5417)  dJ +0.010 (6/7, p=0.946)
+   paired uot vs persist         dPCC +nan (0/0, p=nan)  dJ +nan (0/0, p=nan)
+   paired bal vs trend           dPCC +0.004 (6/7, p=0.8926)  dJ +0.012 (7/6, p=1.0)
+   paired persist vs trend       dPCC +nan (0/0, p=nan)  dJ +nan (0/0, p=nan)
+ hindsight (non-strict): {"uot/l1": {"config": ["uot", 128.0, 1, 1.0], "i>=1": {"pearson": 0.1779, "p_ta_up": 0.2212, "p_ta_down": 0.2411, "p_at_200_up": 0.2212, "p_at_200_down": 0.241, "spearman": -0.0739, "pearson_sd_over_seeds": 0.002}, "J_i>=1": 0.6402}, "uot/linear": {"config": ["uot", 0.25, 1, 0.5], "i>=1": {"pearson": 0.4351, "p_ta_up": 0.2865, "p_ta_down": 0.3638, "p_at_200_up": 0.2865, "p_at_200_down": 0.3638, "spearman": -0.0671, "pearson_sd_over_seeds": 0.0257}, "J_i>=1": 1.0854}, "bal/l1": {"config": ["bal", 1, 0.5], "i>=1": {"pearson": 0.2085, "p_ta_up": 0.199, "p_ta_down": 0.2586, "p_at_200_up": 0.199, "p_at_200_down": 0.2586, "spearman": -0.0426, "pearson_sd_over_seeds": 0.0051}, "J_i>=1": 0.6661}, "bal/linear": {"config": ["bal", 1, 0.5], "i>=1": {"pearson": 0.4659, "p_ta_up": 0.2884, "p_ta_down": 0.3572, "p_at_200_up": 0.2886, "p_at_200_down": 0.3572, "spearman": -0.0619, "pearson_sd_over_seeds": 0.0133}, "J_i>=1": 1.1115}}
+ convergence: {"uot_max_potential_move_over_eps": 0.28759164683361377, "uot_max_marginal_overshoot": 0.006232321646427397, "bal_max_row_err": 0.008160652836299853, "seconds_per_job_mean": 16.1}
+ diag lam128_L1: sink/fA 0.0884 forced 0.0884 excess 0.0 | source/fB 0.0739 excess -0.0 | death lvl ratio 1.0901 birth lvl ratio 1.0723 | death c1 vs >=2 [0.0869, 0.0959] birth c1 vs >=2 [0.0745, 0.0763] | corr(sink, log n ratio) 0.014
+ diag lam128_L3: sink/fA 0.1564 forced 0.1564 excess 0.0 | source/fB 0.1116 excess -0.0 | death lvl ratio 1.0684 birth lvl ratio 1.0505 | death c1 vs >=2 [0.1546, 0.168] birth c1 vs >=2 [0.1119, 0.1152] | corr(sink, log n ratio) -0.321
+ diag lam4_L1: sink/fA 0.0885 forced 0.0884 excess 0.0001 | source/fB 0.074 excess 0.0001 | death lvl ratio 1.0988 birth lvl ratio 1.0827 | death c1 vs >=2 [0.0869, 0.096] birth c1 vs >=2 [0.0745, 0.0764] | corr(sink, log n ratio) 0.014
+ diag lam4_L3: sink/fA 0.1566 forced 0.1564 excess 0.0002 | source/fB 0.1119 excess 0.0003 | death lvl ratio 1.0775 birth lvl ratio 1.0588 | death c1 vs >=2 [0.1547, 0.1683] birth c1 vs >=2 [0.112, 0.1155] | corr(sink, log n ratio) -0.32
+ diag lam1_L1: sink/fA 0.0899 forced 0.0884 excess 0.0014 | source/fB 0.0754 excess 0.0015 | death lvl ratio 1.1554 birth lvl ratio 1.1568 | death c1 vs >=2 [0.0873, 0.0984] birth c1 vs >=2 [0.0751, 0.0786] | corr(sink, log n ratio) 0.016
+ diag lam1_L3: sink/fA 0.163 forced 0.1564 excess 0.0066 | source/fB 0.1186 excess 0.007 | death lvl ratio 1.2371 birth lvl ratio 1.5523 | death c1 vs >=2 [0.1555, 0.1801] birth c1 vs >=2 [0.114, 0.1264] | corr(sink, log n ratio) -0.304
+ diag lam0.25_L1: sink/fA 0.1114 forced 0.0884 excess 0.0229 | source/fB 0.0973 excess 0.0234 | death lvl ratio 1.6133 birth lvl ratio 1.8022 | death c1 vs >=2 [0.0901, 0.1496] birth c1 vs >=2 [0.0796, 0.1285] | corr(sink, log n ratio) 0.021
+ diag lam0.25_L3: sink/fA 0.1977 forced 0.1564 excess 0.0413 | source/fB 0.1553 excess 0.0437 | death lvl ratio 1.3537 birth lvl ratio 1.6482 | death c1 vs >=2 [0.1614, 0.2571] birth c1 vs >=2 [0.1237, 0.2044] | corr(sink, log n ratio) -0.308
+ diag lam0.0625_L1: sink/fA 0.2437 forced 0.0884 excess 0.1553 | source/fB 0.2318 excess 0.1579 | death lvl ratio 1.3932 birth lvl ratio 1.4556 | death c1 vs >=2 [0.127, 0.4414] birth c1 vs >=2 [0.1178, 0.4262] | corr(sink, log n ratio) 0.027
+ diag lam0.0625_L3: sink/fA 0.2992 forced 0.1564 excess 0.1428 | source/fB 0.2625 excess 0.1509 | death lvl ratio 1.1992 birth lvl ratio 1.2546 | death c1 vs >=2 [0.2113, 0.4343] birth c1 vs >=2 [0.1769, 0.3952] | corr(sink, log n ratio) -0.368
+total 247s

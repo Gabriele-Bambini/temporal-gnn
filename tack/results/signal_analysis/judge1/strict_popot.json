@@ -1,0 +1,70 @@
+{
+ "pancreas-human|k=5": {
+  "orig": {
+   "maxdiff_all": 0.0,
+   "maxdiff_OT_cfgs": 0.0,
+   "pred_sd": 1.0533131212937157
+  },
+  "l1": {
+   "maxdiff_all": 1.532107773982716e-13,
+   "maxdiff_OT_cfgs": 4.118927421359331e-14,
+   "pred_sd": 0.08252343026485792
+  },
+  "linear": {
+   "maxdiff_all": 5.151434834260726e-13,
+   "maxdiff_OT_cfgs": 1.8474111129762605e-13,
+   "pred_sd": 0.2691577454746946
+  }
+ },
+ "pancreas-human|k=11": {
+  "orig": {
+   "maxdiff_all": 0.0,
+   "maxdiff_OT_cfgs": 0.0,
+   "pred_sd": 0.7226672215885679
+  },
+  "l1": {
+   "maxdiff_all": 1.3944401189291966e-13,
+   "maxdiff_OT_cfgs": 3.8191672047105385e-14,
+   "pred_sd": 0.03824660475393005
+  },
+  "linear": {
+   "maxdiff_all": 1.4779288903810084e-12,
+   "maxdiff_OT_cfgs": 7.389644451905042e-13,
+   "pred_sd": 0.30090319903731816
+  }
+ },
+ "gastrulation-human|k=8": {
+  "orig": {
+   "maxdiff_all": 0.0,
+   "maxdiff_OT_cfgs": 0.0,
+   "pred_sd": 0.7261193317860282
+  },
+  "l1": {
+   "maxdiff_all": 1.738165167353145e-12,
+   "maxdiff_OT_cfgs": 1.723954312637943e-12,
+   "pred_sd": 0.016728607089976574
+  },
+  "linear": {
+   "maxdiff_all": 8.554934538551606e-12,
+   "maxdiff_OT_cfgs": 8.554934538551606e-12,
+   "pred_sd": 0.6421337802115462
+  }
+ },
+ "gastrulation-human|k=26": {
+  "orig": {
+   "maxdiff_all": 0.0,
+   "maxdiff_OT_cfgs": 0.0,
+   "pred_sd": 0.7875329501333128
+  },
+  "l1": {
+   "maxdiff_all": 2.042810365310288e-14,
+   "maxdiff_OT_cfgs": 2.042810365310288e-14,
+   "pred_sd": 0.018419520628739288
+  },
+  "linear": {
+   "maxdiff_all": 1.2789769243681803e-13,
+   "maxdiff_OT_cfgs": 9.947598300641403e-14,
+   "pred_sd": 0.09012840780501909
+  }
+ }
+}

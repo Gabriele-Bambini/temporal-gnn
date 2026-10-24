@@ -1,0 +1,7 @@
+arm,scenario,sign_error,n,signed_minus_unsigned,ci95,verdict
+CFM static_graph,noisy,0.0,15,0.573,0.119,signed better
+CFM static_graph,noisy_context,0.0,15,0.544,0.141,signed better
+mech_graph clean vel,noisy,0.0,15,0.203,0.114,signed better
+mech_graph clean vel,noisy_context,0.0,15,0.222,0.12,signed better
+mech_graph SNR1 vel,noisy,0.0,15,0.433,0.202,signed better
+mech_graph SNR1 vel,noisy_context,0.0,15,0.411,0.147,signed better

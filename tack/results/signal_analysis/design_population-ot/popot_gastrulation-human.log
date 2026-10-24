@@ -1,0 +1,35 @@
+gastrulation-human N 21430 T 29 configs 120 orig configs 38
+gastrulation-human transition 0 10.8 s
+gastrulation-human transition 1 29.4 s
+gastrulation-human transition 2 52.5 s
+gastrulation-human transition 3 76.6 s
+gastrulation-human transition 4 103.1 s
+gastrulation-human transition 5 151.7 s
+gastrulation-human transition 6 208.7 s
+gastrulation-human transition 7 267.1 s
+gastrulation-human transition 8 328.8 s
+gastrulation-human transition 9 391.8 s
+gastrulation-human transition 10 461.0 s
+gastrulation-human transition 11 528.5 s
+gastrulation-human transition 12 606.3 s
+gastrulation-human transition 13 686.1 s
+gastrulation-human transition 14 752.1 s
+gastrulation-human transition 15 824.3 s
+gastrulation-human transition 16 911.7 s
+gastrulation-human transition 17 1008.6 s
+gastrulation-human transition 18 1127.3 s
+gastrulation-human transition 19 1181.7 s
+gastrulation-human transition 20 1211.5 s
+gastrulation-human transition 21 1239.8 s
+gastrulation-human transition 22 1265.9 s
+gastrulation-human transition 23 1293.4 s
+gastrulation-human transition 24 1330.2 s
+gastrulation-human transition 25 1399.6 s
+gastrulation-human transition 26 1473.6 s
+gastrulation-human transition 27 1517.8 s
+gastrulation-human transition 28 1598.7 s
+gastrulation-human orig groups done 1599.4 s
+gastrulation-human l1 groups done 1599.6 s
+gastrulation-human linear groups done 1599.9 s
+gastrulation-human oracles done 1654.0 s
+gastrulation-human done 1765.1 s

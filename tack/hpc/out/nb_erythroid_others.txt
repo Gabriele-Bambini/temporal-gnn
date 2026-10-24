@@ -1,0 +1,476 @@
+
+######## Erythroid_others.ipynb ########
+
+--- [md 0] ---
+<a href="https://colab.research.google.com/github/meichenfang/Poisson-regression/blob/main/demos.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+--- [md 1] ---
+# Introduction
+
+--- [code 2] ---
+%cd ..
+
+# Load before numpy to restrict its usage of cores, otherwise it will use all cores when doing @
+import os
+os.environ["BLAS_NUM_THREADS"] = "1" 
+os.environ["OPENBLAS_NUM_THREADS"] = "1" # 
+
+import Chronocell
+print(Chronocell.__version__)
+
+from Chronocell.inference import Trajectory
+from Chronocell.mixtures import PoissonMixtureSS
+from Chronocell.utils import *
+from Chronocell.plotting import *
+--- [out 2] ---
+/home/mffang/workspace/Trajectory/FGP_2024
+2024.10
+
+
+--- [code 3] ---
+import scipy.stats as stats
+from sklearn.model_selection import StratifiedKFold
+from sklearn.decomposition import PCA
+import anndata as ad
+import scanpy as sc
+import scvelo as scv
+import copy
+from multiprocessing import Pool
+import cmasher as cmr
+from matplotlib.colors import LinearSegmentedColormap
+import pickle
+import tqdm
+--- [out 3] ---
+Global seed set to 0
+
+
+--- [code 4] ---
+plt.rcParams['font.size'] = '24'
+plt.rcParams['lines.linewidth'] = 12
+plt.rcParams['lines.markersize'] = 12
+plt.rcParams['figure.constrained_layout.use'] = True
+label_font = '30'
+legend_font = '24'
+title_font = '36'
+
+color_palette = ["#d1e2e5","#a2c5ca","#458b94","#2a606b","#0e3442"]
+cmap_teal = LinearSegmentedColormap.from_list("Teals", color_palette, N=7)
+
+--- [code 5] ---
+import rpy2
+import rpy2.robjects as robjects
+
+--- [code 6] ---
+%load_ext rpy2.ipython
+--- [out 6] ---
+The rpy2.ipython extension is already loaded. To reload it, use:
+  %reload_ext rpy2.ipython
+
+
+--- [code 7] ---
+adata = ad.read("data/erythroid_lineage.h5ad")
+adata
+--- [out 7] ---
+AnnData object with n_obs × n_vars = 9815 × 53801
+    obs: 'sample', 'stage', 'sequencing.batch', 'theiler', 'celltype'
+    var: 'Accession', 'Chromosome', 'End', 'Start', 'Strand', 'MURK_gene', 'Δm', 'scaled Δm'
+    uns: 'celltype_colors'
+    obsm: 'X_pca', 'X_umap'
+    layers: 'spliced', 'unspliced'
+
+--- [code 8] ---
+Timepoints = ['E7.0', 'E7.25', 'E7.5', 'E7.75', 'E8.0', 'E8.25', 'E8.5']
+color_palette = ["#b1cdd8", "#5f9da2", "#2a7986", "#0e3442"]
+timepoint_cmp = LinearSegmentedColormap.from_list("my_cmap", color_palette, N=len(Timepoints))
+
+--- [md 9] ---
+# Slingshot + tradeSeq
+
+--- [code 10] ---
+## For R counts is gene by cell
+counts = adata.X.toarray().T
+X_pca = adata.obsm['X_pca']
+celltype = np.array(adata.obs['celltype'],dtype=str)
+true_t = np.array([stage[1:] for stage in adata.obs['stage']],dtype=float)
+rd1 = X_pca[:,:2]
+
+--- [code 11] ---
+%%R -i rd1 -i celltype -i counts
+
+library(SingleCellExperiment)
+library(slingshot)
+library(scater)
+library(RColorBrewer)
+
+# Assuming X_pca is a matrix with PCA results, where rows are cells and columns are principal components
+# And assuming 'celltype' is a vector or factor with the cell type labels for each cell
+sce <- SingleCellExperiment(assays = list(counts = counts))
+
+reducedDims(sce) <- SimpleList(PCA = rd1)
+
+# Example: Adding cell type information if available
+# Assuming `celltype` is a vector with labels for each cell
+colData(sce)$celltype <- celltype
+
+--- [code 12] ---
+%%R
+
+# Assuming `X_pca` is a matrix with PCA results and `celltype` is a factor or vector with cell type labels
+# Generate colors using the Spectral palette
+unique_celltypes <- unique(celltype)  # Get unique cell types
+n_celltypes <- length(unique_celltypes)  # Count unique cell types
+
+# Ensure there are enough colors; Spectral palette can handle up to 11 colors
+# If there are more than 11 unique cell types, you can adjust the palette or cycle colors
+if (n_celltypes > 11) {
+    warning("More than 11 unique cell types detected; colors may repeat.")
+}
+
+# Use Spectral palette (up to 11 colors)
+celltype_colors <- brewer.pal(min(n_celltypes, 11), "Spectral")
+
+# Map `celltype` to colors
+cell_colors <- setNames(celltype_colors, unique_celltypes)[celltype]
+
+# Plot PCA with colors by cell type
+plot(rd1, col = cell_colors, pch = 16, asp = 1,
+     xlab = "PC1", ylab = "PC2", main = "PCA Plot Colored by Cell Type")
+
+unique_celltypes
+--- [out 12] ---
+[1] "Blood progenitors 2" "Blood progenitors 1" "Erythroid1"         
+[4] "Erythroid2"          "Erythroid3"         
+
+--- [out 12] ---
+<IPython.core.display.Image object>
+
+--- [code 13] ---
+%%R
+set.seed(0)
+cl2 <- kmeans(rd1, centers = 5)$cluster
+colData(sce)$kmeans <- cl2
+
+plot(rd1, col = brewer.pal(9,"Set1")[cl2], pch=16, asp = 1)
+
+## Set1: red blue green purple
+--- [out 13] ---
+<IPython.core.display.Image object>
+
+--- [code 14] ---
+%%R -i true_t
+# Create a continuous color ramp from the Spectral colormap
+color_ramp <- colorRampPalette(brewer.pal(11, "Spectral"))
+
+# Normalize true_t (or C) to [0, 1]
+norm_true_t <- (true_t - min(true_t)) / (max(true_t) - min(true_t))
+
+# Create a palette of 100 colors from the Spectral colormap
+colors <- color_ramp(100)
+
+# Map normalized true_t to the color palette using cut()
+mapped_colors <- colors[cut(norm_true_t, breaks = 100)]
+
+# Plot the reduced dimensions (rd) with colors based on continuous true_t
+plot(rd1, col = mapped_colors, pch = 16, asp = 1)
+--- [out 14] ---
+<IPython.core.display.Image object>
+
+--- [code 15] ---
+%%R
+# slingshot with the true start cluster provided
+sce <- slingshot(sce, clusterLabels = 'kmeans', reducedDim = 'PCA', start.clus = 3)
+colData(sce)$slingshot
+--- [out 15] ---
+class: PseudotimeOrdering 
+dim: 9815 1 
+metadata(4): lineages mst slingParams curves
+pathStats(2): pseudotime weights
+cellnames(9815): Cell-1 Cell-2 ... Cell-9814 Cell-9815
+cellData names(2): reducedDim clusterLabels
+pathnames(1): Lineage1
+pathData names(0):
+
+
+--- [code 16] ---
+%%R
+library(grDevices)
+colors <- colorRampPalette(brewer.pal(11,'Spectral')[-6])(100)
+plotcol <- colors[cut(sce$slingPseudotime_1, breaks=100)]
+
+plot(reducedDims(sce)$PCA, col = plotcol, pch=16, asp = 1)
+lines(SlingshotDataSet(sce), lwd=2, col='black')
+--- [out 16] ---
+<IPython.core.display.Image object>
+
+--- [code 17] ---
+%%R
+
+#pdf('principle_curve.pdf')
+par(mar = c(4, 6, 0, 0))
+
+weights = slingCurveWeights(sce)
+weight = weights/rowSums(weights)
+time1 = sce$slingPseudotime_1
+time1[is.na(time1)] = 0
+x_pca = reducedDims(sce)$PCA
+
+--- [code 18] ---
+time1 = robjects.r['time1']
+
+# Normalize time1
+t = time1 / np.max(time1)
+
+# Create the plot
+fig, ax = plt.subplots(figsize=(9, 6))
+
+for i, timepoint in enumerate(Timepoints):
+    # Get indices for the current timepoint
+    idx = adata.obs["stage"].isin([timepoint])
+    
+    # Extract t values for the selected indices
+    t_values = t[idx]  # Get the corresponding t values for the current timepoint
+    
+    # Plot the distribution of t values using KDE
+    sns.kdeplot(t_values, linewidth=8, label=timepoint, color=timepoint_cmp(i), linestyle='-')
+
+# Set labels and legend
+ax.set_xlabel("Slingshot Pseudotime")
+ax.set_ylabel("Density")
+plt.legend(loc=(1.01, 0.4),fontsize=20)
+
+# Show the plot
+plt.show()
+--- [out 18] ---
+<Figure size 900x600 with 1 Axes>
+
+--- [md 19] ---
+# DPT
+
+We follow this [tutorial](https://scanpy.readthedocs.io/en/stable/tutorials/trajectories/paga-paul15.html)
+
+--- [code 20] ---
+data = adata.copy()
+data
+--- [out 20] ---
+AnnData object with n_obs × n_vars = 9815 × 53801
+    obs: 'sample', 'stage', 'sequencing.batch', 'theiler', 'celltype'
+    var: 'Accession', 'Chromosome', 'End', 'Start', 'Strand', 'MURK_gene', 'Δm', 'scaled Δm'
+    uns: 'celltype_colors'
+    obsm: 'X_pca', 'X_umap'
+    layers: 'spliced', 'unspliced'
+
+--- [code 21] ---
+#sc.pp.recipe_zheng17(data, n_top_genes=2000)
+#sc.tl.pca(data, svd_solver="arpack")
+
+--- [code 22] ---
+sc.pp.neighbors(data, n_neighbors=4, n_pcs=20)
+sc.tl.draw_graph(data)
+
+sc.tl.diffmap(data)
+sc.pp.neighbors(data, n_neighbors=10, use_rep="X_diffmap")
+sc.pl.draw_graph(data, legend_loc="on data")
+--- [out 22] ---
+<Figure size 640x480 with 1 Axes>
+
+--- [code 23] ---
+sc.tl.leiden(data)
+sc.tl.paga(data, groups="leiden")
+
+--- [code 24] ---
+sc.pl.draw_graph(data, color=["stage"], legend_loc="on data")
+--- [out 24] ---
+<Figure size 640x480 with 1 Axes>
+
+--- [code 25] ---
+true_t = np.array(data.obs['stage'],dtype=str)
+
+np.where (true_t == 'E7.0')
+--- [out 25] ---
+(array([1818, 1819, 1820, 1821, 1822, 1823, 1824, 1825, 1826, 1827, 1828,
+        1829, 1830, 1831, 1832, 1833, 1834, 1835, 1836, 1837, 1838, 1839,
+        1840, 1841, 1842, 1843, 1844, 1845, 1846, 1847, 1848, 1849, 1850,
+        1851, 1852, 1853, 1854, 1855, 1856, 1857, 1858, 1859, 6438]),)
+
+--- [code 26] ---
+data.uns["iroot"] = 1818
+sc.tl.dpt(data)
+
+--- [code 27] ---
+sc.pl.draw_graph(data, color=["stage", "dpt_pseudotime"], legend_loc="on data")
+--- [out 27] ---
+<Figure size 1455.6x480 with 3 Axes>
+
+--- [code 28] ---
+# Extract pseudotime
+t = data.obs["dpt_pseudotime"]
+
+# Remove NaN values
+mask = ~np.isnan(t) & ~np.isinf(t)  # Mask to ignore NaNs in both true_t and t
+filtered_t = t[mask]
+filtered_true_t = true_t[mask]
+
+Timepoints = ['E7.0', 'E7.25', 'E7.5', 'E7.75', 'E8.0', 'E8.25', 'E8.5']
+
+color_palette = ["#b3cde0","#6497b1","#011f4b"]
+color_palette = ["#b1cdd8","#5f9da2","#2a7986","#0e3442"]
+
+timepoint_cmp = LinearSegmentedColormap.from_list("my_cmap", color_palette, N=len(Timepoints))
+
+# Plot the results
+plt.scatter(filtered_true_t, filtered_t, s=filtered_true_t, color='#457b9d',alpha=0.1,label='RMSE='+str(np.around(rmse,2)))
+plt.xlabel('True time')
+plt.ylabel('Diffusion pseudotime')
+plt.legend()
+plt.show()
+
+--- [md 29] ---
+# VeloVI
+
+https://velovi.readthedocs.io/en/latest/tutorial.html
+
+--- [code 30] ---
+import scanpy as sc
+import scvelo as scv
+import torch
+from velovi import preprocess_data, VELOVI
+
+import seaborn as sns
+
+torch.set_num_threads(10)
+
+--- [code 31] ---
+vdata = adata.copy()
+scv.pp.filter_and_normalize(vdata, min_shared_counts=30)
+scv.pp.moments(vdata, n_pcs=30, n_neighbors=30)
+--- [out 31] ---
+Filtered out 1 genes that are detected 30 counts (shared).
+Normalized count data: X, spliced, unspliced.
+Logarithmized X.
+
+--- [out 31] ---
+/home/mffang/miniconda3/envs/python_3.8/lib/python3.8/site-packages/scvelo/preprocessing/utils.py:705: DeprecationWarning: `log1p` is deprecated since scVelo v0.3.0 and will be removed in a future version. Please use `log1p` from `scanpy.pp` instead.
+  log1p(adata)
+
+--- [out 31] ---
+computing neighbors
+    finished (0:00:04) --> added 
+    'distances' and 'connectivities', weighted adjacency matrices (adata.obsp)
+computing moments based on connectivities
+    finished (0:00:00) --> added 
+    'Ms' and 'Mu', moments of un/spliced abundances (adata.layers)
+
+
+--- [code 32] ---
+vdata = preprocess_data(vdata)
+--- [out 32] ---
+computing velocities
+    finished (0:00:00) --> added 
+    'velocity', velocity vectors for each individual cell (adata.layers)
+
+
+--- [code 33] ---
+sc.tl.umap(vdata)
+
+--- [code 34] ---
+VELOVI.setup_anndata(vdata, spliced_layer="Ms", unspliced_layer="Mu")
+vae = VELOVI(vdata)
+vae.train()
+--- [out 34] ---
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+
+--- [out 34] ---
+Epoch 351/500:  70%|███████   | 351/500 [13:09<05:35,  2.25s/it, loss=-67.5, v_num=1]
+Monitored metric elbo_validation did not improve in the last 45 records. Best score: -67.448. Signaling Trainer to stop.
+
+
+--- [code 35] ---
+fig, ax = plt.subplots()
+vae.history["elbo_train"].iloc[20:].plot(ax=ax, label="train")
+vae.history["elbo_validation"].iloc[20:].plot(ax=ax, label="validation")
+plt.legend()
+--- [out 35] ---
+<matplotlib.legend.Legend at 0x7f9f44313400>
+--- [out 35] ---
+<Figure size 640x480 with 1 Axes>
+
+--- [code 36] ---
+def add_velovi_outputs_to_adata(adata, vae):
+    latent_time = vae.get_latent_time(n_samples=25)
+    velocities = vae.get_velocity(n_samples=25, velo_statistic="mean")
+
+    t = latent_time
+    scaling = 20 / t.max(0)
+
+    adata.layers["velocity"] = velocities / scaling
+    adata.layers["latent_time_velovi"] = latent_time
+
+    adata.var["fit_alpha"] = vae.get_rates()["alpha"] / scaling
+    adata.var["fit_beta"] = vae.get_rates()["beta"] / scaling
+    adata.var["fit_gamma"] = vae.get_rates()["gamma"] / scaling
+    adata.var["fit_t_"] = (
+        torch.nn.functional.softplus(vae.module.switch_time_unconstr)
+        .detach()
+        .cpu()
+        .numpy()
+    ) * scaling
+    adata.layers["fit_t"] = latent_time.values * scaling[np.newaxis, :]
+    adata.var['fit_scaling'] = 1.0
+
+add_velovi_outputs_to_adata(vdata, vae)
+
+--- [code 37] ---
+latent_time = vae.get_latent_time(n_samples=25)
+np.shape(latent_time)
+--- [out 37] ---
+(10000, 67)
+
+--- [code 38] ---
+# Extract pseudotime
+t = vdata.layers["latent_time_velovi"].mean(1)
+true_t = vdata.obs["time"]
+
+# Remove NaN values
+mask = ~np.isnan(t) & ~np.isinf(t)  # Mask to ignore NaNs in both true_t and t
+filtered_t = norm(t[mask])
+filtered_true_t = norm(true_t[mask])
+
+# Calculate RMSE
+rmse = np.sqrt(np.mean((filtered_true_t - filtered_t) ** 2))
+
+# Plot the results
+plt.scatter(filtered_true_t, filtered_t, s=10, color='#457b9d', alpha=0.1, label='RMSE=' + str(np.around(rmse, 3)))
+plt.xlabel('True time')
+plt.ylabel('Mean latenet time')
+plt.legend()
+plt.show()
+--- [out 38] ---
+<Figure size 640x480 with 1 Axes>
+
+--- [code 39] ---
+scv.tl.velocity_graph(vdata)
+--- [out 39] ---
+computing velocity graph (using 1/88 cores)
+
+--- [out 39] ---
+  0%|          | 0/10000 [00:00<?, ?cells/s]
+--- [out 39] ---
+    finished (0:00:06) --> added 
+    'velocity_graph', sparse matrix with cosine correlations (adata.uns)
+
+
+--- [code 40] ---
+scv.pl.velocity_embedding_stream(vdata, basis='umap')
+--- [out 40] ---
+computing velocity embedding
+    finished (0:00:02) --> added
+    'velocity_umap', embedded velocity vectors (adata.obsm)
+
+--- [out 40] ---
+<Figure size 640x480 with 1 Axes>
+
+--- [code 41] ---
+

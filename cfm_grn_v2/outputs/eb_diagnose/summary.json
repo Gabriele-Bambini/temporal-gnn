@@ -1,0 +1,214 @@
+{
+ "diagnosis": [
+  {
+   "space": "genes (1272)",
+   "what": "mean error, linear between neighbours",
+   "mean": 2.6916,
+   "std": NaN
+  },
+  {
+   "space": "genes (1272)",
+   "what": "mean error, cubic spline through all observed windows",
+   "mean": 3.0233,
+   "std": NaN
+  },
+  {
+   "space": "genes (1272)",
+   "what": "mean error, cubic spline through the fit windows only",
+   "mean": 4.4601,
+   "std": NaN
+  },
+  {
+   "space": "genes (1272)",
+   "what": "distance between the two neighbouring means",
+   "mean": 7.2422,
+   "std": NaN
+  },
+  {
+   "space": "genes (1272)",
+   "what": "ED, spline path (the model's training target)",
+   "mean": 0.1597,
+   "std": 0.0092
+  },
+  {
+   "space": "genes (1272)",
+   "what": "ED after moving the centre onto the truth, spline path (the model's training target)",
+   "mean": -0.0226,
+   "std": 0.0011
+  },
+  {
+   "space": "genes (1272)",
+   "what": "ED, mean interpolation (control)",
+   "mean": 0.4558,
+   "std": 0.0232
+  },
+  {
+   "space": "genes (1272)",
+   "what": "ED after moving the centre onto the truth, mean interpolation (control)",
+   "mean": 0.3212,
+   "std": 0.0201
+  },
+  {
+   "space": "genes (1272)",
+   "what": "ED, McCann / OT interpolant (straight chained pairs)",
+   "mean": 0.8226,
+   "std": 0.04
+  },
+  {
+   "space": "genes (1272)",
+   "what": "ED after moving the centre onto the truth, McCann / OT interpolant (straight chained pairs)",
+   "mean": 0.6686,
+   "std": 0.0375
+  },
+  {
+   "space": "genes (1272)",
+   "what": "ED, noise floor (two halves of the true window)",
+   "mean": 0.0058,
+   "std": 0.0079
+  },
+  {
+   "space": "PCA-50",
+   "what": "mean error, linear between neighbours",
+   "mean": 0.9672,
+   "std": NaN
+  },
+  {
+   "space": "PCA-50",
+   "what": "mean error, cubic spline through all observed windows",
+   "mean": 1.0858,
+   "std": NaN
+  },
+  {
+   "space": "PCA-50",
+   "what": "mean error, cubic spline through the fit windows only",
+   "mean": 1.6873,
+   "std": NaN
+  },
+  {
+   "space": "PCA-50",
+   "what": "distance between the two neighbouring means",
+   "mean": 2.1599,
+   "std": NaN
+  },
+  {
+   "space": "PCA-50",
+   "what": "ED, spline path (the model's training target)",
+   "mean": 0.1164,
+   "std": 0.0004
+  },
+  {
+   "space": "PCA-50",
+   "what": "ED after moving the centre onto the truth, spline path (the model's training target)",
+   "mean": 0.0023,
+   "std": 0.0001
+  },
+  {
+   "space": "PCA-50",
+   "what": "ED, mean interpolation (control)",
+   "mean": 0.1106,
+   "std": 0.004
+  },
+  {
+   "space": "PCA-50",
+   "what": "ED after moving the centre onto the truth, mean interpolation (control)",
+   "mean": 0.0173,
+   "std": 0.0014
+  },
+  {
+   "space": "PCA-50",
+   "what": "ED, McCann / OT interpolant (straight chained pairs)",
+   "mean": 0.1631,
+   "std": 0.0027
+  },
+  {
+   "space": "PCA-50",
+   "what": "ED after moving the centre onto the truth, McCann / OT interpolant (straight chained pairs)",
+   "mean": 0.063,
+   "std": 0.0025
+  },
+  {
+   "space": "PCA-50",
+   "what": "ED, noise floor (two halves of the true window)",
+   "mean": 0.0001,
+   "std": 0.001
+  }
+ ],
+ "benchmark_for_reference": {
+  "genes (1272)": {
+   "flow_matching": {
+    "energy_distance": 0.2778,
+    "mean_error": 3.1921
+   },
+   "flow_matching_shuffled_time": {
+    "energy_distance": 0.8117,
+    "mean_error": 5.2529
+   },
+   "freefm_replay": {
+    "energy_distance": 2.615,
+    "mean_error": 7.9271
+   },
+   "linear": {
+    "energy_distance": 2.4908,
+    "mean_error": 8.1296
+   },
+   "mean_interp": {
+    "energy_distance": 0.4754,
+    "mean_error": 2.9477
+   },
+   "mlp": {
+    "energy_distance": 0.72,
+    "mean_error": 6.2111
+   },
+   "noise_floor": {
+    "energy_distance": -0.0007,
+    "mean_error": 1.61
+   },
+   "ot_interp": {
+    "energy_distance": 0.7933,
+    "mean_error": 2.9437
+   },
+   "persistence": {
+    "energy_distance": 0.9229,
+    "mean_error": 5.4098
+   }
+  },
+  "PCA-50": {
+   "flow_matching": {
+    "energy_distance": 0.1411,
+    "mean_error": 1.1792
+   },
+   "flow_matching_shuffled_time": {
+    "energy_distance": 0.307,
+    "mean_error": 1.6817
+   },
+   "freefm_replay": {
+    "energy_distance": 1.2167,
+    "mean_error": 2.8939
+   },
+   "linear": {
+    "energy_distance": 1.0596,
+    "mean_error": 1.8563
+   },
+   "mean_interp": {
+    "energy_distance": 0.1345,
+    "mean_error": 1.0433
+   },
+   "mlp": {
+    "energy_distance": 0.5156,
+    "mean_error": 2.0716
+   },
+   "noise_floor": {
+    "energy_distance": -0.0015,
+    "mean_error": 0.2978
+   },
+   "ot_interp": {
+    "energy_distance": 0.1799,
+    "mean_error": 1.0414
+   },
+   "persistence": {
+    "energy_distance": 0.3211,
+    "mean_error": 1.7059
+   }
+  }
+ }
+}

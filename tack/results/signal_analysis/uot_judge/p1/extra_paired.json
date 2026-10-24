@@ -1,0 +1,1110 @@
+{
+ "gastrulation-human": {
+  "l1": {
+   "sink_norm_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0144,
+     "wins": 19,
+     "losses": 8,
+     "p_wilcoxon": 0.3126
+    },
+    "dJ": {
+     "mean": 0.0021,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.4846
+    }
+   },
+   "sink_norm_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.0144,
+     "wins": 19,
+     "losses": 8,
+     "p_wilcoxon": 0.3126
+    },
+    "dJ": {
+     "mean": 0.0021,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.4846
+    }
+   },
+   "sink_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": -0.005,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.5781
+    },
+    "dJ": {
+     "mean": -0.0063,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.9153
+    }
+   },
+   "sink_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": -0.005,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.5781
+    },
+    "dJ": {
+     "mean": -0.0063,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.9153
+    }
+   },
+   "kluot_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0169,
+     "wins": 19,
+     "losses": 8,
+     "p_wilcoxon": 0.1937
+    },
+    "dJ": {
+     "mean": 0.0021,
+     "wins": 19,
+     "losses": 8,
+     "p_wilcoxon": 0.3483
+    }
+   },
+   "kluot_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.0169,
+     "wins": 19,
+     "losses": 8,
+     "p_wilcoxon": 0.1937
+    },
+    "dJ": {
+     "mean": 0.0021,
+     "wins": 19,
+     "losses": 8,
+     "p_wilcoxon": 0.3483
+    }
+   },
+   "balanced_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0027,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.4698
+    },
+    "dJ": {
+     "mean": -0.0083,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.7496
+    }
+   },
+   "balanced_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.0027,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.4698
+    },
+    "dJ": {
+     "mean": -0.0083,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.7496
+    }
+   },
+   "lin1_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0034,
+     "wins": 19,
+     "losses": 8,
+     "p_wilcoxon": 0.3361
+    },
+    "dJ": {
+     "mean": -0.0089,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.7317
+    }
+   },
+   "lin1_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.0034,
+     "wins": 19,
+     "losses": 8,
+     "p_wilcoxon": 0.3361
+    },
+    "dJ": {
+     "mean": -0.0089,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.7317
+    }
+   },
+   "full_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": -0.0257,
+     "wins": 16,
+     "losses": 8,
+     "p_wilcoxon": 0.7257
+    },
+    "dJ": {
+     "mean": -0.0189,
+     "wins": 15,
+     "losses": 9,
+     "p_wilcoxon": 0.9664
+    }
+   },
+   "full_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": -0.0257,
+     "wins": 16,
+     "losses": 8,
+     "p_wilcoxon": 0.7257
+    },
+    "dJ": {
+     "mean": -0.0189,
+     "wins": 15,
+     "losses": 9,
+     "p_wilcoxon": 0.9664
+    }
+   },
+   "sink_norm_Kany - sink_abs_Kany": {
+    "dPCC": {
+     "mean": 0.0194,
+     "wins": 15,
+     "losses": 12,
+     "p_wilcoxon": 0.6617
+    },
+    "dJ": {
+     "mean": 0.0084,
+     "wins": 10,
+     "losses": 17,
+     "p_wilcoxon": 0.5619
+    }
+   }
+  },
+  "linear": {
+   "sink_norm_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1426,
+     "wins": 16,
+     "losses": 11,
+     "p_wilcoxon": 0.2584
+    },
+    "dJ": {
+     "mean": 0.0553,
+     "wins": 16,
+     "losses": 11,
+     "p_wilcoxon": 0.427
+    }
+   },
+   "sink_norm_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.1643,
+     "wins": 16,
+     "losses": 11,
+     "p_wilcoxon": 0.1624
+    },
+    "dJ": {
+     "mean": 0.0354,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.3608
+    }
+   },
+   "sink_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1098,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.2687
+    },
+    "dJ": {
+     "mean": 0.0503,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.3012
+    }
+   },
+   "sink_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.1316,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.1624
+    },
+    "dJ": {
+     "mean": 0.0304,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.3361
+    }
+   },
+   "kluot_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1931,
+     "wins": 16,
+     "losses": 11,
+     "p_wilcoxon": 0.1349
+    },
+    "dJ": {
+     "mean": 0.0876,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.0906
+    }
+   },
+   "kluot_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.2148,
+     "wins": 16,
+     "losses": 11,
+     "p_wilcoxon": 0.0772
+    },
+    "dJ": {
+     "mean": 0.0677,
+     "wins": 19,
+     "losses": 8,
+     "p_wilcoxon": 0.0521
+    }
+   },
+   "balanced_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1445,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.2584
+    },
+    "dJ": {
+     "mean": 0.0554,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.3997
+    }
+   },
+   "balanced_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.1662,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.1624
+    },
+    "dJ": {
+     "mean": 0.0355,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.3361
+    }
+   },
+   "lin1_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.228,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.0362
+    },
+    "dJ": {
+     "mean": 0.1017,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.0319
+    }
+   },
+   "lin1_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.2497,
+     "wins": 17,
+     "losses": 10,
+     "p_wilcoxon": 0.0187
+    },
+    "dJ": {
+     "mean": 0.0818,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.014
+    }
+   },
+   "full_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1791,
+     "wins": 15,
+     "losses": 11,
+     "p_wilcoxon": 0.1165
+    },
+    "dJ": {
+     "mean": 0.0755,
+     "wins": 18,
+     "losses": 8,
+     "p_wilcoxon": 0.0525
+    }
+   },
+   "full_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.2008,
+     "wins": 16,
+     "losses": 11,
+     "p_wilcoxon": 0.0692
+    },
+    "dJ": {
+     "mean": 0.0556,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.1004
+    }
+   },
+   "sink_norm_Kany - sink_abs_Kany": {
+    "dPCC": {
+     "mean": 0.0327,
+     "wins": 12,
+     "losses": 15,
+     "p_wilcoxon": 0.714
+    },
+    "dJ": {
+     "mean": 0.005,
+     "wins": 14,
+     "losses": 13,
+     "p_wilcoxon": 0.9153
+    }
+   }
+  },
+  "orig": {
+   "sink_norm_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0021,
+     "wins": 16,
+     "losses": 11,
+     "p_wilcoxon": 0.2483
+    },
+    "dJ": {
+     "mean": 0.0008,
+     "wins": 15,
+     "losses": 12,
+     "p_wilcoxon": 0.6109
+    }
+   },
+   "sink_norm_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": -0.0003,
+     "wins": 16,
+     "losses": 11,
+     "p_wilcoxon": 0.2483
+    },
+    "dJ": {
+     "mean": -0.0018,
+     "wins": 15,
+     "losses": 12,
+     "p_wilcoxon": 0.6109
+    }
+   },
+   "sink_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0034,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.1225
+    },
+    "dJ": {
+     "mean": 0.0012,
+     "wins": 14,
+     "losses": 13,
+     "p_wilcoxon": 0.5781
+    }
+   },
+   "sink_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.0009,
+     "wins": 18,
+     "losses": 9,
+     "p_wilcoxon": 0.1551
+    },
+    "dJ": {
+     "mean": -0.0014,
+     "wins": 14,
+     "losses": 13,
+     "p_wilcoxon": 0.5781
+    }
+   },
+   "kluot_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": -0.0143,
+     "wins": 4,
+     "losses": 23,
+     "p_wilcoxon": 0.0001
+    },
+    "dJ": {
+     "mean": -0.0108,
+     "wins": 6,
+     "losses": 21,
+     "p_wilcoxon": 0.0017
+    }
+   },
+   "kluot_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": -0.0168,
+     "wins": 4,
+     "losses": 23,
+     "p_wilcoxon": 0.0001
+    },
+    "dJ": {
+     "mean": -0.0134,
+     "wins": 6,
+     "losses": 21,
+     "p_wilcoxon": 0.0017
+    }
+   },
+   "balanced_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": -0.0146,
+     "wins": 3,
+     "losses": 24,
+     "p_wilcoxon": 0.0
+    },
+    "dJ": {
+     "mean": -0.0108,
+     "wins": 4,
+     "losses": 23,
+     "p_wilcoxon": 0.0004
+    }
+   },
+   "balanced_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": -0.0171,
+     "wins": 3,
+     "losses": 24,
+     "p_wilcoxon": 0.0
+    },
+    "dJ": {
+     "mean": -0.0135,
+     "wins": 4,
+     "losses": 23,
+     "p_wilcoxon": 0.0004
+    }
+   },
+   "lin1_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": -0.0494,
+     "wins": 2,
+     "losses": 25,
+     "p_wilcoxon": 0.0
+    },
+    "dJ": {
+     "mean": -0.0345,
+     "wins": 3,
+     "losses": 24,
+     "p_wilcoxon": 0.0
+    }
+   },
+   "lin1_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": -0.0519,
+     "wins": 2,
+     "losses": 25,
+     "p_wilcoxon": 0.0
+    },
+    "dJ": {
+     "mean": -0.0372,
+     "wins": 3,
+     "losses": 24,
+     "p_wilcoxon": 0.0
+    }
+   },
+   "full_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0046,
+     "wins": 13,
+     "losses": 4,
+     "p_wilcoxon": 0.0032
+    },
+    "dJ": {
+     "mean": 0.0015,
+     "wins": 10,
+     "losses": 7,
+     "p_wilcoxon": 0.3529
+    }
+   },
+   "full_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.0021,
+     "wins": 13,
+     "losses": 5,
+     "p_wilcoxon": 0.0268
+    },
+    "dJ": {
+     "mean": -0.0011,
+     "wins": 10,
+     "losses": 8,
+     "p_wilcoxon": 0.6397
+    }
+   },
+   "sink_norm_Kany - sink_abs_Kany": {
+    "dPCC": {
+     "mean": -0.0012,
+     "wins": 11,
+     "losses": 16,
+     "p_wilcoxon": 0.3483
+    },
+    "dJ": {
+     "mean": -0.0004,
+     "wins": 9,
+     "losses": 18,
+     "p_wilcoxon": 0.1698
+    }
+   }
+  }
+ },
+ "pancreas-human": {
+  "l1": {
+   "sink_norm_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1914,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.021
+    },
+    "dJ": {
+     "mean": 0.1339,
+     "wins": 10,
+     "losses": 2,
+     "p_wilcoxon": 0.0068
+    }
+   },
+   "sink_norm_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.2085,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0161
+    },
+    "dJ": {
+     "mean": 0.1271,
+     "wins": 10,
+     "losses": 2,
+     "p_wilcoxon": 0.0093
+    }
+   },
+   "sink_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1449,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.1763
+    },
+    "dJ": {
+     "mean": 0.111,
+     "wins": 10,
+     "losses": 2,
+     "p_wilcoxon": 0.021
+    }
+   },
+   "sink_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.162,
+     "wins": 8,
+     "losses": 4,
+     "p_wilcoxon": 0.0771
+    },
+    "dJ": {
+     "mean": 0.1042,
+     "wins": 10,
+     "losses": 2,
+     "p_wilcoxon": 0.0269
+    }
+   },
+   "kluot_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1799,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0269
+    },
+    "dJ": {
+     "mean": 0.1305,
+     "wins": 10,
+     "losses": 2,
+     "p_wilcoxon": 0.0049
+    }
+   },
+   "kluot_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.197,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0161
+    },
+    "dJ": {
+     "mean": 0.1237,
+     "wins": 10,
+     "losses": 2,
+     "p_wilcoxon": 0.0093
+    }
+   },
+   "balanced_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.2025,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0161
+    },
+    "dJ": {
+     "mean": 0.1412,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0024
+    }
+   },
+   "balanced_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.2197,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0122
+    },
+    "dJ": {
+     "mean": 0.1344,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "lin1_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1575,
+     "wins": 8,
+     "losses": 4,
+     "p_wilcoxon": 0.0923
+    },
+    "dJ": {
+     "mean": 0.1199,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0161
+    }
+   },
+   "lin1_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.1746,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0425
+    },
+    "dJ": {
+     "mean": 0.1131,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0342
+    }
+   },
+   "full_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.1293,
+     "wins": 6,
+     "losses": 5,
+     "p_wilcoxon": 0.2402
+    },
+    "dJ": {
+     "mean": 0.0982,
+     "wins": 8,
+     "losses": 3,
+     "p_wilcoxon": 0.0674
+    }
+   },
+   "full_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.1464,
+     "wins": 8,
+     "losses": 4,
+     "p_wilcoxon": 0.0923
+    },
+    "dJ": {
+     "mean": 0.0914,
+     "wins": 8,
+     "losses": 4,
+     "p_wilcoxon": 0.1099
+    }
+   },
+   "sink_norm_Kany - sink_abs_Kany": {
+    "dPCC": {
+     "mean": 0.0465,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.6772
+    },
+    "dJ": {
+     "mean": 0.0229,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.4238
+    }
+   }
+  },
+  "linear": {
+   "sink_norm_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.5005,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0015
+    },
+    "dJ": {
+     "mean": 0.2382,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "sink_norm_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.5005,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0015
+    },
+    "dJ": {
+     "mean": 0.2382,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "sink_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.5131,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.001
+    },
+    "dJ": {
+     "mean": 0.2443,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "sink_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.5131,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.001
+    },
+    "dJ": {
+     "mean": 0.2443,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "kluot_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.4905,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0015
+    },
+    "dJ": {
+     "mean": 0.2316,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "kluot_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.4905,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0015
+    },
+    "dJ": {
+     "mean": 0.2316,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "balanced_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.5157,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.001
+    },
+    "dJ": {
+     "mean": 0.2447,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "balanced_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.5157,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.001
+    },
+    "dJ": {
+     "mean": 0.2447,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "lin1_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.4853,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0122
+    },
+    "dJ": {
+     "mean": 0.2248,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0122
+    }
+   },
+   "lin1_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.4853,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0122
+    },
+    "dJ": {
+     "mean": 0.2248,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0122
+    }
+   },
+   "full_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.4775,
+     "wins": 10,
+     "losses": 1,
+     "p_wilcoxon": 0.002
+    },
+    "dJ": {
+     "mean": 0.2259,
+     "wins": 10,
+     "losses": 1,
+     "p_wilcoxon": 0.0049
+    }
+   },
+   "full_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.4775,
+     "wins": 10,
+     "losses": 1,
+     "p_wilcoxon": 0.002
+    },
+    "dJ": {
+     "mean": 0.2259,
+     "wins": 10,
+     "losses": 1,
+     "p_wilcoxon": 0.0049
+    }
+   },
+   "sink_norm_Kany - sink_abs_Kany": {
+    "dPCC": {
+     "mean": -0.0127,
+     "wins": 5,
+     "losses": 7,
+     "p_wilcoxon": 0.3394
+    },
+    "dJ": {
+     "mean": -0.0061,
+     "wins": 5,
+     "losses": 7,
+     "p_wilcoxon": 0.5693
+    }
+   }
+  },
+  "orig": {
+   "sink_norm_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0517,
+     "wins": 8,
+     "losses": 4,
+     "p_wilcoxon": 0.064
+    },
+    "dJ": {
+     "mean": 0.0372,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0269
+    }
+   },
+   "sink_norm_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.0517,
+     "wins": 8,
+     "losses": 4,
+     "p_wilcoxon": 0.064
+    },
+    "dJ": {
+     "mean": 0.0372,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0269
+    }
+   },
+   "sink_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0262,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.3013
+    },
+    "dJ": {
+     "mean": 0.0265,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0771
+    }
+   },
+   "sink_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.0262,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.3013
+    },
+    "dJ": {
+     "mean": 0.0265,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0771
+    }
+   },
+   "kluot_abs_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": -0.0316,
+     "wins": 0,
+     "losses": 12,
+     "p_wilcoxon": 0.0005
+    },
+    "dJ": {
+     "mean": -0.0218,
+     "wins": 0,
+     "losses": 12,
+     "p_wilcoxon": 0.0005
+    }
+   },
+   "kluot_abs_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": -0.0316,
+     "wins": 0,
+     "losses": 12,
+     "p_wilcoxon": 0.0005
+    },
+    "dJ": {
+     "mean": -0.0218,
+     "wins": 0,
+     "losses": 12,
+     "p_wilcoxon": 0.0005
+    }
+   },
+   "balanced_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": -0.0318,
+     "wins": 0,
+     "losses": 12,
+     "p_wilcoxon": 0.0005
+    },
+    "dJ": {
+     "mean": -0.0213,
+     "wins": 0,
+     "losses": 12,
+     "p_wilcoxon": 0.0005
+    }
+   },
+   "balanced_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": -0.0318,
+     "wins": 0,
+     "losses": 12,
+     "p_wilcoxon": 0.0005
+    },
+    "dJ": {
+     "mean": -0.0213,
+     "wins": 0,
+     "losses": 12,
+     "p_wilcoxon": 0.0005
+    }
+   },
+   "lin1_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": -0.0341,
+     "wins": 3,
+     "losses": 9,
+     "p_wilcoxon": 0.0342
+    },
+    "dJ": {
+     "mean": -0.023,
+     "wins": 1,
+     "losses": 11,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "lin1_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": -0.0341,
+     "wins": 3,
+     "losses": 9,
+     "p_wilcoxon": 0.0342
+    },
+    "dJ": {
+     "mean": -0.023,
+     "wins": 1,
+     "losses": 11,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "full_Kany - persist_Kany": {
+    "dPCC": {
+     "mean": 0.0424,
+     "wins": 7,
+     "losses": 4,
+     "p_wilcoxon": 0.042
+    },
+    "dJ": {
+     "mean": 0.034,
+     "wins": 9,
+     "losses": 2,
+     "p_wilcoxon": 0.0049
+    }
+   },
+   "full_Kany - persist_L3_Kany": {
+    "dPCC": {
+     "mean": 0.0424,
+     "wins": 7,
+     "losses": 4,
+     "p_wilcoxon": 0.042
+    },
+    "dJ": {
+     "mean": 0.034,
+     "wins": 9,
+     "losses": 2,
+     "p_wilcoxon": 0.0049
+    }
+   },
+   "sink_norm_Kany - sink_abs_Kany": {
+    "dPCC": {
+     "mean": 0.0255,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0522
+    },
+    "dJ": {
+     "mean": 0.0107,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.2036
+    }
+   }
+  }
+ }
+}

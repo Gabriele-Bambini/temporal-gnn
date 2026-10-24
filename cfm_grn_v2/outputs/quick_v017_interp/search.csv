@@ -1,0 +1,11 @@
+dataset,val_time,config_id,hidden,lr,sigma_min,coupling,pair_mode,clock,path,seed,val_energy_distance,best_iter,seconds
+synthetic_grn_interp_t3,1.0,0,128,0.001,0.001,ot,consecutive,flow,linear,0,0.7542725199404212,450,15.750254154205322
+synthetic_grn_interp_t3,1.0,1,128,0.001,0.001,ot,consecutive,duration,linear,0,0.9296940090871284,300,7.543402910232544
+synthetic_grn_interp_t3,1.0,2,128,0.001,0.001,ot,all,flow,linear,0,0.6842694372396112,1350,15.93626070022583
+synthetic_grn_interp_t3,1.0,3,128,0.001,0.001,ot,all,duration,linear,0,1.9170791072473294,150,14.734808444976807
+synthetic_grn_interp_t3,1.0,4,128,0.001,0.001,ot,consecutive,duration,spline,0,0.5854090149815967,150,4.029008626937866
+synthetic_grn_interp_t3,5.0,0,128,0.001,0.001,ot,consecutive,flow,linear,0,0.47224714868905227,1200,14.595751523971558
+synthetic_grn_interp_t3,5.0,1,128,0.001,0.001,ot,consecutive,duration,linear,0,0.1328833157178968,450,14.61811089515686
+synthetic_grn_interp_t3,5.0,2,128,0.001,0.001,ot,all,flow,linear,0,0.031428383392628545,1500,17.764123678207397
+synthetic_grn_interp_t3,5.0,3,128,0.001,0.001,ot,all,duration,linear,0,0.29489313633344794,450,8.633660316467285
+synthetic_grn_interp_t3,5.0,4,128,0.001,0.001,ot,consecutive,duration,spline,0,0.10390334053317352,1050,11.23075819015503

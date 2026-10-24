@@ -1,0 +1,86 @@
+{
+ "dataset": "argelaguet",
+ "smoke": false,
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  4.0
+ ],
+ "long_folds": [
+  [
+   "argelaguet",
+   4.0
+  ]
+ ],
+ "grid_gap": 1.0,
+ "reference": "outputs/argelaguet_select_v0111/results.csv",
+ "prereg": "docs/superpowers/prereg/2026-09-25-prereg-v02.md",
+ "note": "per-data-set view only; the pre-registered rules pool both data sets (--combine)",
+ "reproducibility_gate": {
+  "max_abs_diff": 4.440892098500626e-16,
+  "n": 12,
+  "passes": true,
+  "diffs": {
+   "argelaguet|base|1.0|0": 0.0,
+   "argelaguet|base|1.0|1": -4.440892098500626e-16,
+   "argelaguet|base|4.0|0": 0.0,
+   "argelaguet|base|4.0|1": 0.0,
+   "argelaguet|noft|1.0|0": 0.0,
+   "argelaguet|noft|1.0|1": 0.0,
+   "argelaguet|noft|4.0|0": -4.440892098500626e-16,
+   "argelaguet|noft|4.0|1": 0.0,
+   "argelaguet|time|1.0|0": 0.0,
+   "argelaguet|time|1.0|1": 0.0,
+   "argelaguet|time|4.0|0": 0.0,
+   "argelaguet|time|4.0|1": 0.0
+  }
+ },
+ "rule_b": {
+  "time_noft": {
+   "g": [
+    -0.1585337143998003,
+    0.5468484371873703,
+    -0.1080367466832975
+   ],
+   "n_pairs": 3,
+   "n_ge_0.5": 1,
+   "n_lt_0.25": 2,
+   "verdict": "inconclusive",
+   "median_g": -0.1080367466832975
+  },
+  "spline_noft": {
+   "g": [
+    -3.211345417616352,
+    -6.696187193474032,
+    -7.03604224242381
+   ],
+   "n_pairs": 3,
+   "n_ge_0.5": 0,
+   "n_lt_0.25": 3,
+   "verdict": "does not repair",
+   "median_g": -6.696187193474032
+  }
+ },
+ "admitted_to_step6": [
+  "base",
+  "noft",
+  "gated",
+  "transfer"
+ ],
+ "mean_by_fold_arm": {
+  "1.0|base": 3.708037469494888,
+  "1.0|gated": 3.5097619622748844,
+  "1.0|noft": 3.5097619622748844,
+  "1.0|spline_noft": 4.099396738379937,
+  "1.0|time": 3.6986823978378425,
+  "1.0|time_noft": 3.5311945122912127,
+  "1.0|transfer": 3.5097619622748844,
+  "4.0|base": 1.3362572286491268,
+  "4.0|gated": 1.3362572286491268,
+  "4.0|noft": 1.6588149343856695,
+  "4.0|spline_noft": 3.223075516148294,
+  "4.0|time": 1.3535990647311376,
+  "4.0|time_noft": 1.6599717218074492,
+  "4.0|transfer": 1.4866287753176575
+ }
+}

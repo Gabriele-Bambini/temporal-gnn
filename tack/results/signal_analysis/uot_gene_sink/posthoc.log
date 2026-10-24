@@ -1,0 +1,28 @@
+pancreas-human l1
+   uot_lam0.0625 vs uot_lam128 {"pcc": {"mean_diff": -0.0664, "wins": 3, "losses": 10, "wilcoxon_p": 0.0215}, "p_up": {"mean_diff": -0.0468, "wins": 1, "losses": 12, "wilcoxon_p": 0.0032}, "p_down": {"mean_diff": -0.022, "wins": 5, "losses": 8, "wilcoxon_p": 0.1318}}
+   uot_lam0.25 vs uot_lam128 {"pcc": {"mean_diff": -0.0251, "wins": 4, "losses": 9, "wilcoxon_p": 0.1677}, "p_up": {"mean_diff": -0.0167, "wins": 2, "losses": 11, "wilcoxon_p": 0.0266}, "p_down": {"mean_diff": -0.0052, "wins": 6, "losses": 7, "wilcoxon_p": 0.8533}}
+   uot_lam0.0625 vs bal {"pcc": {"mean_diff": -0.0834, "wins": 2, "losses": 11, "wilcoxon_p": 0.0012}, "p_up": {"mean_diff": -0.0231, "wins": 2, "losses": 11, "wilcoxon_p": 0.0129}, "p_down": {"mean_diff": -0.0415, "wins": 1, "losses": 12, "wilcoxon_p": 0.0007}}
+   uot_lam0.25 vs bal {"pcc": {"mean_diff": -0.0421, "wins": 1, "losses": 12, "wilcoxon_p": 0.0081}, "p_up": {"mean_diff": 0.0071, "wins": 7, "losses": 5, "wilcoxon_p": 0.7173}, "p_down": {"mean_diff": -0.0248, "wins": 0, "losses": 13, "wilcoxon_p": 0.0002}}
+   uot_selected_lam0_counts_i>=2 {"1.0": 1, "4.0": 3, "128.0": 8}
+   uot_selected_top_configs [[[128.0, 1, 2.0], 6], [[4.0, 3, 2.0], 3], [[1.0, 3, 2.0], 1], [[128.0, 3, 2.0], 1]]
+pancreas-human linear
+   uot_lam0.0625 vs uot_lam128 {"pcc": {"mean_diff": 0.027, "wins": 4, "losses": 9, "wilcoxon_p": 0.946}, "p_up": {"mean_diff": -0.1179, "wins": 1, "losses": 12, "wilcoxon_p": 0.0005}, "p_down": {"mean_diff": 0.0878, "wins": 11, "losses": 2, "wilcoxon_p": 0.0024}}
+   uot_lam0.25 vs uot_lam128 {"pcc": {"mean_diff": 0.0018, "wins": 7, "losses": 6, "wilcoxon_p": 0.6355}, "p_up": {"mean_diff": -0.0369, "wins": 3, "losses": 10, "wilcoxon_p": 0.0574}, "p_down": {"mean_diff": 0.0177, "wins": 6, "losses": 7, "wilcoxon_p": 0.6494}}
+   uot_lam0.0625 vs bal {"pcc": {"mean_diff": -0.0088, "wins": 4, "losses": 9, "wilcoxon_p": 0.6848}, "p_up": {"mean_diff": -0.1008, "wins": 1, "losses": 12, "wilcoxon_p": 0.0024}, "p_down": {"mean_diff": 0.0735, "wins": 10, "losses": 3, "wilcoxon_p": 0.0061}}
+   uot_lam0.25 vs bal {"pcc": {"mean_diff": -0.0339, "wins": 6, "losses": 7, "wilcoxon_p": 0.4548}, "p_up": {"mean_diff": -0.0198, "wins": 6, "losses": 7, "wilcoxon_p": 0.5417}, "p_down": {"mean_diff": 0.0033, "wins": 6, "losses": 7, "wilcoxon_p": 0.6226}}
+   uot_selected_lam0_counts_i>=2 {"0.0625": 11, "128.0": 1}
+   uot_selected_top_configs [[[0.0625, 3, 0.5], 6], [[0.0625, 3, 1.0], 3], [[0.0625, 1, 0.5], 2], [[128.0, 1, 0.5], 1]]
+gastrulation-human l1
+   uot_lam0.0625 vs uot_lam128 {"pcc": {"mean_diff": -0.0144, "wins": 12, "losses": 16, "wilcoxon_p": 0.5369}, "p_up": {"mean_diff": -0.0353, "wins": 5, "losses": 23, "wilcoxon_p": 0.0001}, "p_down": {"mean_diff": 0.0355, "wins": 22, "losses": 6, "wilcoxon_p": 0.0005}}
+   uot_lam0.25 vs uot_lam128 {"pcc": {"mean_diff": -0.0158, "wins": 10, "losses": 18, "wilcoxon_p": 0.1145}, "p_up": {"mean_diff": -0.019, "wins": 4, "losses": 24, "wilcoxon_p": 0.0}, "p_down": {"mean_diff": 0.0171, "wins": 21, "losses": 7, "wilcoxon_p": 0.0091}}
+   uot_lam0.0625 vs bal {"pcc": {"mean_diff": -0.0283, "wins": 9, "losses": 19, "wilcoxon_p": 0.1375}, "p_up": {"mean_diff": -0.0159, "wins": 10, "losses": 17, "wilcoxon_p": 0.0366}, "p_down": {"mean_diff": 0.0326, "wins": 22, "losses": 6, "wilcoxon_p": 0.001}}
+   uot_lam0.25 vs bal {"pcc": {"mean_diff": -0.0296, "wins": 8, "losses": 20, "wilcoxon_p": 0.0191}, "p_up": {"mean_diff": 0.0004, "wins": 12, "losses": 15, "wilcoxon_p": 0.4208}, "p_down": {"mean_diff": 0.0143, "wins": 18, "losses": 8, "wilcoxon_p": 0.0505}}
+   uot_selected_lam0_counts_i>=2 {"0.0625": 9, "128.0": 18}
+   uot_selected_top_configs [[[128.0, 3, 2.0], 14], [[0.0625, 1, 0.5], 8], [[128.0, 3, 1.0], 2], [[128.0, 1, 1.0], 1]]
+gastrulation-human linear
+   uot_lam0.0625 vs uot_lam128 {"pcc": {"mean_diff": -0.0442, "wins": 12, "losses": 16, "wilcoxon_p": 0.362}, "p_up": {"mean_diff": -0.1068, "wins": 4, "losses": 24, "wilcoxon_p": 0.0}, "p_down": {"mean_diff": 0.0939, "wins": 23, "losses": 5, "wilcoxon_p": 0.0001}}
+   uot_lam0.25 vs uot_lam128 {"pcc": {"mean_diff": -0.0266, "wins": 9, "losses": 19, "wilcoxon_p": 0.1042}, "p_up": {"mean_diff": -0.0368, "wins": 6, "losses": 22, "wilcoxon_p": 0.0001}, "p_down": {"mean_diff": 0.0629, "wins": 24, "losses": 4, "wilcoxon_p": 0.0}}
+   uot_lam0.0625 vs bal {"pcc": {"mean_diff": -0.0515, "wins": 12, "losses": 16, "wilcoxon_p": 0.3272}, "p_up": {"mean_diff": -0.0964, "wins": 4, "losses": 24, "wilcoxon_p": 0.0001}, "p_down": {"mean_diff": 0.0966, "wins": 23, "losses": 5, "wilcoxon_p": 0.0}}
+   uot_lam0.25 vs bal {"pcc": {"mean_diff": -0.0339, "wins": 10, "losses": 18, "wilcoxon_p": 0.1145}, "p_up": {"mean_diff": -0.0264, "wins": 9, "losses": 19, "wilcoxon_p": 0.0094}, "p_down": {"mean_diff": 0.0657, "wins": 26, "losses": 2, "wilcoxon_p": 0.0}}
+   uot_selected_lam0_counts_i>=2 {"0.0625": 4, "0.25": 8, "1.0": 1, "128.0": 14}
+   uot_selected_top_configs [[[128.0, 3, 1.0], 7], [[0.25, 1, 0.5], 5], [[128.0, 1, 1.0], 4], [[0.0625, 3, 2.0], 4]]

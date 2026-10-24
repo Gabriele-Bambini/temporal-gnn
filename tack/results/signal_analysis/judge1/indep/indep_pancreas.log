@@ -1,0 +1,36 @@
+== pancreas-human orig (20s)
+  trend        all [-0.3935, 0.0357, 0.0348]  i>=2 [-0.3906, 0.034, 0.0277, 0.0052]  i>=3 [-0.3945, 0.0302, 0.0303]
+  level        all [0.4637, 0.2968, 0.4476]  i>=2 [0.4819, 0.3327, 0.4441, 0.0053]  i>=3 [0.4799, 0.3431, 0.4425]
+  regime_h0.5  all [0.4629, 0.2966, 0.4184]  i>=2 [0.481, 0.3325, 0.4101, 0.0042]  i>=3 [0.5085, 0.3456, 0.4267]
+  stack_h0.5   all [0.51, 0.3054, 0.4601]  i>=2 [0.536, 0.3427, 0.4587, 0.0045]  i>=3 [0.5317, 0.3569, 0.4582]
+  stack_RO     all [0.5175, 0.3082, 0.4619]  i>=2 [0.5446, 0.346, 0.4608, 0.0044]  i>=3 [0.5412, 0.3605, 0.4605]
+  paired stack_RO vs trend          {'dPCC': 0.9352, 'better': 12, 'worse': 0, 'p': 0.0005}
+  paired stack_h0.5 vs trend        {'dPCC': 0.9266, 'better': 12, 'worse': 0, 'p': 0.0005}
+  paired stack_RO vs regime_h0.5    {'dPCC': 0.0637, 'better': 11, 'worse': 1, 'p': 0.001}
+  paired stack_RO vs level          {'dPCC': 0.0628, 'better': 12, 'worse': 0, 'p': 0.0005}
+  paired regime_h0.5 vs trend       {'dPCC': 0.8716, 'better': 12, 'worse': 0, 'p': 0.0005}
+  paired stack_h0.5 vs regime_h0.5  {'dPCC': 0.055, 'better': 10, 'worse': 2, 'p': 0.0161}
+== pancreas-human l1 (29s)
+  trend        all [0.1575, 0.2084, 0.2054]  i>=2 [0.1422, 0.2234, 0.2162, 0.0168]  i>=3 [0.1574, 0.2297, 0.2262]
+  level        all [-0.0999, 0.1046, 0.168]  i>=2 [-0.1367, 0.1022, 0.1727, 0.0156]  i>=3 [-0.1513, 0.0965, 0.1702]
+  regime_h0.5  all [0.2446, 0.1881, 0.2532]  i>=2 [0.2365, 0.1997, 0.2721, 0.0222]  i>=3 [0.2646, 0.2053, 0.2847]
+  stack_h0.5   all [0.302, 0.2076, 0.2657]  i>=2 [0.2987, 0.2224, 0.2867, 0.0243]  i>=3 [0.3184, 0.2292, 0.2977]
+  stack_RO     all [0.3006, 0.2078, 0.2643]  i>=2 [0.2972, 0.2226, 0.285, 0.0243]  i>=3 [0.3167, 0.2295, 0.2959]
+  paired stack_RO vs trend          {'dPCC': 0.155, 'better': 10, 'worse': 2, 'p': 0.0093}
+  paired stack_h0.5 vs trend        {'dPCC': 0.1565, 'better': 10, 'worse': 2, 'p': 0.0093}
+  paired stack_RO vs regime_h0.5    {'dPCC': 0.0607, 'better': 11, 'worse': 1, 'p': 0.0024}
+  paired stack_RO vs level          {'dPCC': 0.4339, 'better': 12, 'worse': 0, 'p': 0.0005}
+  paired regime_h0.5 vs trend       {'dPCC': 0.0943, 'better': 8, 'worse': 4, 'p': 0.1099}
+  paired stack_h0.5 vs regime_h0.5  {'dPCC': 0.0622, 'better': 11, 'worse': 1, 'p': 0.0024}
+== pancreas-human linear (37s)
+  trend        all [0.3813, 0.2721, 0.3343]  i>=2 [0.4163, 0.3025, 0.3593, 0.0532]  i>=3 [0.4147, 0.3154, 0.358]
+  level        all [-0.3452, 0.1541, 0.2109]  i>=2 [-0.3707, 0.1649, 0.2154, 0.0599]  i>=3 [-0.3671, 0.1581, 0.2205]
+  regime_h0.5  all [0.0968, 0.2193, 0.3004]  i>=2 [0.1081, 0.241, 0.3198, 0.0555]  i>=3 [0.1553, 0.2526, 0.3279]
+  stack_h0.5   all [0.2151, 0.1962, 0.3114]  i>=2 [0.2363, 0.214, 0.3327, 0.0863]  i>=3 [0.2294, 0.2287, 0.323]
+  stack_RO     all [0.2636, 0.1376, 0.3443]  i>=2 [0.2888, 0.1456, 0.3711, 0.0872]  i>=3 [0.2867, 0.1541, 0.3649]
+  paired stack_RO vs trend          {'dPCC': -0.1275, 'better': 3, 'worse': 9, 'p': 0.0923}
+  paired stack_h0.5 vs trend        {'dPCC': -0.18, 'better': 1, 'worse': 11, 'p': 0.0034}
+  paired stack_RO vs regime_h0.5    {'dPCC': 0.1807, 'better': 5, 'worse': 7, 'p': 0.791}
+  paired stack_RO vs level          {'dPCC': 0.6595, 'better': 12, 'worse': 0, 'p': 0.0005}
+  paired regime_h0.5 vs trend       {'dPCC': -0.3082, 'better': 2, 'worse': 10, 'p': 0.0269}
+  paired stack_h0.5 vs regime_h0.5  {'dPCC': 0.1282, 'better': 5, 'worse': 7, 'p': 0.791}

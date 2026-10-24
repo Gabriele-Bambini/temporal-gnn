@@ -1,0 +1,5 @@
+torch 2.5.1+cu121 | cuda True
+runs: 315 | device: cuda
+Wed Sep 23 09:11:57 PM CEST 2026
+=== finished: 315 result files ===
+Wed Sep 23 10:35:08 PM CEST 2026

@@ -1,0 +1,32 @@
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\cfm_grn_v2\src\cfm_grn_v2\training\trainer.py:231: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:823.)
+  rec = {"iter": it, "loss": float(loss), "seconds": time.time() - t_start}
+times [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0] fit_times [0.0, 1.0, 2.0, 3.0, 4.0] val t4.0->t5.0 test t5.0->t6.0
+
+Training transitions (standardised on fit cells):
+  r1 0->1: |mean disp|=5.27 ED(persist)=4.614 |x0|max=6.6
+  r1 1->2: |mean disp|=1.98 ED(persist)=0.959 |x0|max=3.3
+  r1 2->3: |mean disp|=1.97 ED(persist)=1.027 |x0|max=2.2
+  r1 3->4: |mean disp|=3.12 ED(persist)=2.513 |x0|max=2.7
+  r2 0->1: |mean disp|=5.35 ED(persist)=4.690 |x0|max=6.5
+  r2 1->2: |mean disp|=1.91 ED(persist)=0.884 |x0|max=3.7
+  r2 2->3: |mean disp|=1.93 ED(persist)=0.981 |x0|max=2.5
+  r2 3->4: |mean disp|=3.16 ED(persist)=2.573 |x0|max=2.2
+  val r1 4->5: |mean disp|=3.49 ED(persist)=3.039 |x0|max=2.9
+  val r2 4->5: |mean disp|=3.42 ED(persist)=2.943 |x0|max=2.9
+
+[delta lr=0.001 ode_steps=20] iter:loss/valED  100:0.695/0.812 200:0.620/1.490 300:0.338/2.416 400:0.240/2.630 500:0.319/1.725 600:0.314/2.738 700:0.540/2.380 800:0.248/2.258 900:0.312/1.873 1000:0.242/2.026 1100:0.224/1.763 1200:0.482/1.549 1300:0.485/1.251 1400:0.453/0.838 1500:0.297/0.497
+   in-sample 3->4: ED(fm)=0.080 ED(persist)=2.543 max|pred|=2.6
+   val (final weights): ED(fm)=0.497 max|pred|=5.3 |pred mean - x0 mean|=4.40
+
+[delta lr=0.0003 ode_steps=20] iter:loss/valED  100:1.010/1.458 200:0.674/0.954 300:0.409/0.698 400:0.255/0.980 500:0.336/0.969 600:0.340/1.681 700:0.603/1.809 800:0.266/2.695 900:0.336/2.525 1000:0.262/2.821 1100:0.237/3.430 1200:0.520/2.813 1300:0.530/3.074 1400:0.501/3.157 1500:0.319/2.766
+   in-sample 3->4: ED(fm)=0.086 ED(persist)=2.543 max|pred|=2.8
+   val (final weights): ED(fm)=0.698 max|pred|=5.4 |pred mean - x0 mean|=4.09
+
+[delta lr=0.001 ode_steps=100] iter:loss/valED  100:0.695/0.808 200:0.620/1.481 300:0.338/2.399 400:0.240/2.619 500:0.319/1.714 600:0.314/2.736 700:0.540/2.384 800:0.248/2.258 900:0.312/1.879 1000:0.242/2.028 1100:0.224/1.756 1200:0.482/1.551 1300:0.485/1.247 1400:0.453/0.838 1500:0.297/0.495
+   in-sample 3->4: ED(fm)=0.081 ED(persist)=2.543 max|pred|=2.6
+   val (final weights): ED(fm)=0.495 max|pred|=5.3 |pred mean - x0 mean|=4.40
+
+[absolute lr=0.001 ode_steps=20] iter:loss/valED  100:0.685/0.890 200:0.611/1.544 300:0.339/2.554 400:0.236/2.998 500:0.320/2.062 600:0.316/2.967 700:0.515/2.418 800:0.248/2.299 900:0.310/1.894 1000:0.242/2.130 1100:0.219/1.884 1200:0.482/1.673 1300:0.490/1.513 1400:0.454/1.312 1500:0.300/0.552
+   in-sample 3->4: ED(fm)=0.030 ED(persist)=2.543 max|pred|=2.7
+   val (final weights): ED(fm)=0.552 max|pred|=5.3 |pred mean - x0 mean|=4.52

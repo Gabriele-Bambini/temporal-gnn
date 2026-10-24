@@ -1,0 +1,225 @@
+{
+ "summary": [
+  {
+   "model": "noise_floor",
+   "mean": -0.00028151827310409774,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "flow_matching",
+   "mean": 0.19904248567132185,
+   "std": 0.018345887589381896,
+   "count": 5
+  },
+  {
+   "model": "mean_interp",
+   "mean": 0.28473001312389956,
+   "std": 0.027387010959173824,
+   "count": 5
+  },
+  {
+   "model": "flow_matching_shuffled_time",
+   "mean": 0.30149800053560655,
+   "std": 0.02370518160721424,
+   "count": 5
+  },
+  {
+   "model": "persistence",
+   "mean": 0.32507093609512483,
+   "std": 0.02835066133102405,
+   "count": 5
+  },
+  {
+   "model": "ot_interp",
+   "mean": 0.8084450781619011,
+   "std": 0.03307462313574887,
+   "count": 5
+  },
+  {
+   "model": "mlp",
+   "mean": 1.1588741387155266,
+   "std": 0.14600065380442473,
+   "count": 5
+  },
+  {
+   "model": "freefm_replay",
+   "mean": 3.980925925637746,
+   "std": 0.10774431574031507,
+   "count": 5
+  },
+  {
+   "model": "linear",
+   "mean": 9.01474431706481,
+   "std": 0.5684624835977173,
+   "count": 5
+  }
+ ],
+ "paired": {
+  "flow_vs_mean_interp": {
+   "model": "flow_matching",
+   "reference": "mean_interp",
+   "metric": "energy_distance",
+   "mean": -0.08568752745257768,
+   "ci_low": -0.11550379263745919,
+   "ci_high": -0.05587126226769617,
+   "n": 5
+  },
+  "flow_vs_ot_interp": {
+   "model": "flow_matching",
+   "reference": "ot_interp",
+   "metric": "energy_distance",
+   "mean": -0.6094025924905793,
+   "ci_low": -0.6530235638814363,
+   "ci_high": -0.5657816210997222,
+   "n": 5
+  },
+  "flow_vs_linear": {
+   "model": "flow_matching",
+   "reference": "linear",
+   "metric": "energy_distance",
+   "mean": -8.815701831393488,
+   "ci_low": -9.502327880942769,
+   "ci_high": -8.129075781844207,
+   "n": 5
+  },
+  "flow_vs_mlp": {
+   "model": "flow_matching",
+   "reference": "mlp",
+   "metric": "energy_distance",
+   "mean": -0.9598316530442048,
+   "ci_low": -1.136156041412784,
+   "ci_high": -0.7835072646756256,
+   "n": 5
+  },
+  "flow_vs_persistence": {
+   "model": "flow_matching",
+   "reference": "persistence",
+   "metric": "energy_distance",
+   "mean": -0.12602845042380295,
+   "ci_low": -0.1645546687324836,
+   "ci_high": -0.08750223211512231,
+   "n": 5
+  },
+  "flow_vs_freefm_replay": {
+   "model": "flow_matching",
+   "reference": "freefm_replay",
+   "metric": "energy_distance",
+   "mean": -3.781883439966424,
+   "ci_low": -3.9103369848776244,
+   "ci_high": -3.6534298950552233,
+   "n": 5
+  },
+  "flow_vs_flow_matching_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.10245551486428468,
+   "ci_low": -0.1254320032026345,
+   "ci_high": -0.07947902652593486,
+   "n": 5
+  }
+ },
+ "design": {
+  "times": [
+   0.0,
+   1.0,
+   2.0,
+   3.0,
+   4.0
+  ],
+  "test_time": 3.0,
+  "t_prev": 2.0,
+  "t_next": 4.0,
+  "obs_times": [
+   0.0,
+   1.0,
+   2.0,
+   4.0
+  ],
+  "val_time": 1.0,
+  "v_prev": 0.0,
+  "fit_times": [
+   0.0,
+   2.0,
+   4.0
+  ],
+  "horizon": 1.0,
+  "frac": 0.5
+ },
+ "genes": {
+  "n_selected": 1199,
+  "n_hvg_requested": 1000,
+  "n_prior_regulators": 248,
+  "prior_edges_within_selected_genes": 442,
+  "prior_regulators_present": 134
+ },
+ "qc": {
+  "cells_raw": 31161,
+  "cells_kept": 31054,
+  "genes_raw": 33694,
+  "genes_kept": 17619,
+  "filters": {
+   "min_counts": 1000,
+   "min_genes": 500,
+   "max_mito": 0.2,
+   "min_cells": 20
+  },
+  "per_sample": {
+   "T0_1A": 4636,
+   "T2_3B": 7375,
+   "T4_5C": 6241,
+   "T6_7D": 6555,
+   "T8_9E": 6247
+  },
+  "median_counts": 4151.5,
+  "median_genes": 1513.0
+ },
+ "config": {
+  "hidden": 128,
+  "depth": 3,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "batch_size": 256,
+  "n_iters": 8000,
+  "sigma_min": 0.01,
+  "coupling": "ot",
+  "n_ode_steps": 20,
+  "ode_method": "rk4",
+  "time_embed_dim": 32,
+  "cond_dim": 8,
+  "time_conditioning": "delta",
+  "eval_every": 250,
+  "patience": 8,
+  "seed": 0,
+  "shuffle_biological_time": false,
+  "ema_decay": 0.999,
+  "grad_clip": 1.0,
+  "pair_mode": "consecutive",
+  "clock": "duration",
+  "path": "spline",
+  "chain": "ot",
+  "spline_kind": "natural",
+  "field_time": "none",
+  "path_center": "linear",
+  "marginal_iters": 1000,
+  "marginal_weight": 1.0,
+  "marginal_prior": 1.0,
+  "marginal_batch": 256,
+  "marginal_steps": 8,
+  "marginal_metric": "energy",
+  "marginal_window": 1.0,
+  "marginal_lr": 0.0003,
+  "marginal_eval_every": 25,
+  "marginal_patience": 10
+ },
+ "null_q95": 0.012483782116105142,
+ "quick": false,
+ "pca": 0,
+ "min_detect": 0.01,
+ "overrides": {
+  "path_center": "linear"
+ },
+ "max_cells_per_group": 2000,
+ "seconds": 9386.0
+}

@@ -1,0 +1,40 @@
+{
+ "dataset": "argelaguet",
+ "arm_set": "v0111",
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  4.0
+ ],
+ "min_detect": 0.01,
+ "smoke": false,
+ "rule": "improve on base in >= 3 of 4 (fold, seed) pairs and on average; most negative mean change; else base",
+ "per_arm": {
+  "time": {
+   "mean_change": 0.006366132277722869,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    -0.012531074915180795,
+    0.02310642726281742,
+    -0.011666892404669227,
+    0.02655606916792408
+   ]
+  },
+  "noft": {
+   "mean_change": 0.09276080720001545,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    -0.1245485683135854,
+    -0.23587254721599749,
+    0.5358106490359305,
+    0.19565369529371424
+   ]
+  }
+ },
+ "winner": "base",
+ "overrides": {
+  "path_center": "linear"
+ }
+}

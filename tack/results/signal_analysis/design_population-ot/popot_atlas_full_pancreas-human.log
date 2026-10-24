@@ -1,0 +1,16 @@
+pancreas-human full transition 1 48.6 s
+pancreas-human full transition 2 80.4 s
+pancreas-human full transition 3 108.2 s
+pancreas-human full transition 4 132.3 s
+pancreas-human full transition 5 156.5 s
+pancreas-human full transition 6 181.2 s
+pancreas-human full transition 7 204.5 s
+pancreas-human full transition 8 231.7 s
+pancreas-human full transition 9 258.9 s
+pancreas-human full transition 10 285.4 s
+pancreas-human full transition 11 315.8 s
+pancreas-human full transition 12 348.0 s
+pancreas-human full transition 13 378.3 s
+pancreas-human full orig {'trend_repeat_last_change': [-0.3951, 0.04, 0.0376], 'fc=persist': [0.4812, 0.3199, 0.4535], 'fc=lin1': [0.6453, 0.459, 0.5299], 'fc=loglin1': [0.6575, 0.4778, 0.5439], 'fc=ot0.05': [0.6539, 0.4458, 0.5578], 'fc=uot0.05t1': [0.6621, 0.4507, 0.56], 'fc=sb3': [0.6232, 0.4223, 0.532], 'fc=bridge': [0.6179, 0.4215, 0.5358], 'fc=oracle': [0.6822, 0.4847, 0.5707]}
+pancreas-human full l1 {'trend_repeat_last_change': [0.16, 0.2231, 0.2171], 'fc=persist': [-0.0718, 0.134, 0.1704], 'fc=lin1': [0.5866, 0.4873, 0.4755], 'fc=loglin1': [0.6027, 0.479, 0.4647], 'fc=ot0.05': [0.5793, 0.486, 0.4872], 'fc=uot0.05t1': [0.5916, 0.5008, 0.4788], 'fc=sb3': [0.4434, 0.3988, 0.4097], 'fc=bridge': [0.4211, 0.4035, 0.4277], 'fc=oracle': [0.7305, 0.6025, 0.5858]}
+pancreas-human full linear {'trend_repeat_last_change': [0.4013, 0.2933, 0.3575], 'fc=persist': [0.1323, 0.2254, 0.282], 'fc=lin1': [0.5456, 0.5308, 0.5915], 'fc=loglin1': [0.6143, 0.5203, 0.5728], 'fc=ot0.05': [0.4933, 0.529, 0.591], 'fc=uot0.05t1': [0.539, 0.5373, 0.5902], 'fc=sb3': [0.3788, 0.455, 0.5103], 'fc=bridge': [0.4177, 0.4412, 0.5505], 'fc=oracle': [0.7096, 0.6309, 0.6826]}

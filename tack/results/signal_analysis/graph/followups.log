@@ -1,0 +1,20 @@
+gastrulation-human orig F1 {'zero_a': -0.357, 'Q1': -0.361, 'Q2': -0.353, 'Q3': -0.393, 'Q4': -0.325, 'Q5': -0.171} noise {'Q1': 0.499, 'Q2': 0.118, 'Q3': 0.035, 'Q4': 0.012, 'Q5': 0.003}
+   own                        pcc=0.513 up=0.358 down=0.496
+   own+noise_interactions     pcc=0.546 up=0.351 down=0.501
+gastrulation-human l1 F1 {'zero_a': -0.391, 'Q1': -0.428, 'Q2': -0.41, 'Q3': -0.375, 'Q4': -0.297, 'Q5': -0.085} noise {'Q1': 0.499, 'Q2': 0.118, 'Q3': 0.035, 'Q4': 0.012, 'Q5': 0.003}
+   own                        pcc=0.134 up=0.184 down=0.212
+   own+noise_interactions     pcc=0.193 up=0.187 down=0.206
+gastrulation-human linear F1 {'zero_a': -0.389, 'Q1': -0.426, 'Q2': -0.408, 'Q3': -0.373, 'Q4': -0.285, 'Q5': 0.293} noise {'Q1': 0.499, 'Q2': 0.118, 'Q3': 0.035, 'Q4': 0.012, 'Q5': 0.003}
+   own                        pcc=0.152 up=0.203 down=0.164
+   own+noise_interactions     pcc=0.084 up=0.238 down=0.168
+   own+library                pcc=0.142 up=0.188 down=0.196
+pancreas-human orig F1 {'zero_a': -0.318, 'Q1': -0.302, 'Q2': -0.19, 'Q3': -0.076, 'Q4': 0.053, 'Q5': 0.281} noise {'Q1': 0.423, 'Q2': 0.139, 'Q3': 0.058, 'Q4': 0.027, 'Q5': 0.009}
+   own                        pcc=0.452 up=0.308 down=0.409
+   own+noise_interactions     pcc=0.448 up=0.290 down=0.398
+pancreas-human l1 F1 {'zero_a': -0.341, 'Q1': -0.227, 'Q2': -0.15, 'Q3': -0.076, 'Q4': 0.066, 'Q5': 0.32} noise {'Q1': 0.423, 'Q2': 0.139, 'Q3': 0.058, 'Q4': 0.027, 'Q5': 0.009}
+   own                        pcc=0.151 up=0.189 down=0.248
+   own+noise_interactions     pcc=0.213 up=0.117 down=0.240
+pancreas-human linear F1 {'zero_a': -0.336, 'Q1': -0.212, 'Q2': -0.139, 'Q3': -0.065, 'Q4': 0.076, 'Q5': 0.403} noise {'Q1': 0.423, 'Q2': 0.139, 'Q3': 0.058, 'Q4': 0.027, 'Q5': 0.009}
+   own                        pcc=0.347 up=0.080 down=0.453
+   own+noise_interactions     pcc=0.312 up=0.040 down=0.425
+   own+library                pcc=0.272 up=0.111 down=0.395

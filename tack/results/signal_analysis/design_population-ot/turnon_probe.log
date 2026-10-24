@@ -1,0 +1,10 @@
+gastrulation-human box4 (baseline) [0.5905, 0.3933, 0.545] [0.578, 0.3801, 0.5358] 0.792
+gastrulation-human zeros<-box8 [0.6033, 0.418, 0.5465] [0.5903, 0.4039, 0.5364] 0.8418
+gastrulation-human zeros<-all_past [0.6006, 0.4144, 0.5445] [0.5877, 0.4006, 0.5348] 0.863
+gastrulation-human zeros<-recency_h2 [0.6021, 0.4147, 0.5436] [0.5892, 0.4008, 0.5342] 0.8627
+gastrulation-human zeros<-recency_h4 [0.6048, 0.4221, 0.5452] [0.5918, 0.408, 0.5366] 0.8643
+pancreas-human box4 (baseline) [0.4811, 0.3199, 0.4537] [0.4635, 0.2971, 0.4484] 0.7529
+pancreas-human zeros<-box8 [0.493, 0.33, 0.4543] [0.4745, 0.3064, 0.4496] 0.7915
+pancreas-human zeros<-all_past [0.4967, 0.3313, 0.4546] [0.478, 0.3076, 0.4505] 0.8103
+pancreas-human zeros<-recency_h2 [0.4978, 0.332, 0.4536] [0.479, 0.3083, 0.4495] 0.8127
+pancreas-human zeros<-recency_h4 [0.4991, 0.3315, 0.4541] [0.4802, 0.3079, 0.4487] 0.8121

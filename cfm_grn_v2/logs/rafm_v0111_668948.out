@@ -1,0 +1,138 @@
+[Fri Sep 25 12:40:50 PM CEST 2026] v0111 on gnode01
+eb: test time 2.0 removed: 24813 cells, times [0.0, 1.0, 3.0, 4.0], folds [1.0, 3.0]
+
+=== fold 1.0: predicted from 0.0, bracketing 0.0->3.0; validation 3.0; fit [0.0, 4.0]; 1192 genes (1s) ===
+  path family, no network: {'linear': 0.5123, 'spline': 0.5898}
+  seed 0  base         ED 0.7396  mean_err 4.578  (623s, total 11 min)
+  seed 0  time         ED 0.7430  mean_err 4.548  (612s, total 21 min)
+  seed 0  noft         ED 0.5649  mean_err 4.675  (416s, total 28 min)
+  seed 1  base         ED 0.7277  mean_err 4.531  (599s, total 38 min)
+  seed 1  time         ED 0.7427  mean_err 4.559  (578s, total 47 min)
+  seed 1  noft         ED 0.5834  mean_err 4.794  (407s, total 54 min)
+
+=== fold 3.0: predicted from 1.0, bracketing 1.0->4.0; validation 1.0; fit [0.0, 4.0]; 1192 genes (3245s) ===
+  path family, no network: {'linear': 0.5259, 'spline': 0.5791}
+  seed 0  base         ED 0.6008  mean_err 5.284  (515s, total 63 min)
+  seed 0  time         ED 0.6004  mean_err 5.279  (523s, total 72 min)
+  seed 0  noft         ED 0.9907  mean_err 5.601  (121s, total 74 min)
+  seed 1  base         ED 0.4721  mean_err 5.278  (575s, total 83 min)
+  seed 1  time         ED 0.4645  mean_err 5.237  (589s, total 93 min)
+  seed 1  noft         ED 1.3995  mean_err 10.297  (402s, total 100 min)
+
+fold     1.0     3.0
+arm                 
+base  0.7336  0.5365
+noft  0.5742  1.1951
+time  0.7429  0.5325
+{
+ "dataset": "eb",
+ "arm_set": "v0111",
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  3.0
+ ],
+ "min_detect": 0.01,
+ "smoke": false,
+ "rule": "improve on base in >= 3 of 4 (fold, seed) pairs and on average; most negative mean change; else base",
+ "per_arm": {
+  "time": {
+   "mean_change": 0.0026301441483003174,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    0.0034512124210763773,
+    0.015065442323020761,
+    -0.000409877266740466,
+    -0.007586200884155403
+   ]
+  },
+  "noft": {
+   "mean_change": 0.2495763503513082,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    -0.1747088659358269,
+    -0.1442022341750544,
+    0.38985765619022317,
+    0.927358845325891
+   ]
+  }
+ },
+ "winner": "base",
+ "overrides": {
+  "path_center": "linear"
+ }
+}
+done in 99.7 min
+[Fri Sep 25 02:21:02 PM CEST 2026] eb selection done
+eb: no arm beats the version-0.1.10 configuration on the validation folds; nothing to measure
+argelaguet: test time 2.0 removed: 58970 cells, times [0.0, 1.0, 4.0, 5.0], folds [1.0, 4.0]
+
+=== fold 1.0: predicted from 0.0, bracketing 0.0->4.0; validation 4.0; fit [0.0, 5.0]; 1427 genes (6s) ===
+  path family, no network: {'linear': 3.4475, 'spline': 4.0252}
+  seed 0  base         ED 3.6128  mean_err 13.479  (429s, total 7 min)
+  seed 0  time         ED 3.6002  mean_err 13.461  (426s, total 15 min)
+  seed 0  noft         ED 3.4882  mean_err 13.245  (152s, total 17 min)
+  seed 1  base         ED 3.7250  mean_err 13.723  (475s, total 25 min)
+  seed 1  time         ED 3.7481  mean_err 13.754  (453s, total 33 min)
+  seed 1  noft         ED 3.4891  mean_err 13.356  (205s, total 36 min)
+
+=== fold 4.0: predicted from 1.0, bracketing 1.0->5.0; validation 1.0; fit [0.0, 5.0]; 1427 genes (2176s) ===
+  path family, no network: {'linear': 1.0913, 'spline': 1.9486}
+  seed 0  base         ED 1.3526  mean_err 7.658  (416s, total 43 min)
+  seed 0  time         ED 1.3409  mean_err 7.623  (502s, total 52 min)
+  seed 0  noft         ED 1.8884  mean_err 8.774  (151s, total 54 min)
+  seed 1  base         ED 1.3343  mean_err 7.999  (751s, total 67 min)
+  seed 1  time         ED 1.3609  mean_err 8.074  (768s, total 80 min)
+  seed 1  noft         ED 1.5300  mean_err 8.915  (489s, total 88 min)
+
+fold     1.0     4.0
+arm                 
+base  3.6689  1.3435
+noft  3.4887  1.7092
+time  3.6742  1.3509
+{
+ "dataset": "argelaguet",
+ "arm_set": "v0111",
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  4.0
+ ],
+ "min_detect": 0.01,
+ "smoke": false,
+ "rule": "improve on base in >= 3 of 4 (fold, seed) pairs and on average; most negative mean change; else base",
+ "per_arm": {
+  "time": {
+   "mean_change": 0.006366132277722869,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    -0.012531074915180795,
+    0.02310642726281742,
+    -0.011666892404669227,
+    0.02655606916792408
+   ]
+  },
+  "noft": {
+   "mean_change": 0.09276080720001545,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    -0.1245485683135854,
+    -0.23587254721599749,
+    0.5358106490359305,
+    0.19565369529371424
+   ]
+  }
+ },
+ "winner": "base",
+ "overrides": {
+  "path_center": "linear"
+ }
+}
+done in 87.7 min
+[Fri Sep 25 03:49:26 PM CEST 2026] argelaguet selection done
+argelaguet: no arm beats the version-0.1.10 configuration on the validation folds; nothing to measure
+[Fri Sep 25 03:49:26 PM CEST 2026] all done

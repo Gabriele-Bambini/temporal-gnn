@@ -1,0 +1,16 @@
+fold,seed,knots,center,path_energy_distance
+1.0,0,observed,spline,0.5835217106539403
+1.0,0,observed,linear,0.5123558502598513
+1.0,1,observed,spline,0.5961692853178633
+1.0,1,observed,linear,0.5122497156161998
+1.0,2,observed,spline,0.5510376198653617
+1.0,2,observed,linear,0.49040514107608857
+3.0,0,observed,spline,0.5892647734218954
+3.0,0,observed,linear,0.5355187283138392
+3.0,0,without first,linear,0.8957641792343338
+3.0,1,observed,spline,0.5689892961901748
+3.0,1,observed,linear,0.51633223221625
+3.0,1,without first,linear,0.8986060562775151
+3.0,2,observed,spline,0.501895512818578
+3.0,2,observed,linear,0.4611984727210512
+3.0,2,without first,linear,0.823736648463651

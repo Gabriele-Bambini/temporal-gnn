@@ -1,0 +1,33 @@
+{
+ "synthetic_grn": {
+  "dataset": "synthetic_grn",
+  "metric": "energy_distance",
+  "mode": "benchmark",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "linear",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "linear",
+   "metric": "energy_distance",
+   "mean": 5.108516642606498,
+   "ci_low": -3.68892995433918,
+   "ci_high": 13.905963239552175,
+   "n": 5
+  },
+  "uses_time": false,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": 2.7959626436546565,
+   "ci_low": -5.9927610535726625,
+   "ci_high": 11.584686340881975,
+   "n": 5
+  },
+  "fm_mean": 5.66763587454389,
+  "noise_floor": 6.054047591237397e-05,
+  "null_q95": 0.021501324549697203,
+  "matches_target": false
+ }
+}

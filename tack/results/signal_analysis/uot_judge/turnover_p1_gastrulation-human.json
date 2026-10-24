@@ -1,0 +1,74 @@
+{
+ "K4|sink_abs|lam0.5|eps0.05": {
+  "free_turnover_share_median": 0.0,
+  "free_turnover_share_max": 0.0364,
+  "free_turnover_share_mean": 0.002,
+  "pairs_free_gt_1pct": 2,
+  "n_pairs": 28,
+  "total_turnover_share": 0.141,
+  "spearman_turnover_vs_abs_dlogn": 0.1615
+ },
+ "K4|sink_abs|lam1|eps0.05": {
+  "free_turnover_share_median": 0.0,
+  "free_turnover_share_max": 0.0,
+  "free_turnover_share_mean": 0.0,
+  "pairs_free_gt_1pct": 0,
+  "n_pairs": 28,
+  "total_turnover_share": 0.1396,
+  "spearman_turnover_vs_abs_dlogn": 0.1571
+ },
+ "K4|sink_norm|lam0.5|eps0.05": {
+  "free_turnover_share_median": 0.01,
+  "free_turnover_share_max": 0.14,
+  "free_turnover_share_mean": 0.0196,
+  "pairs_free_gt_1pct": 7,
+  "n_pairs": 28,
+  "total_turnover_share": 0.0205,
+  "spearman_turnover_vs_abs_dlogn": 0.0088
+ },
+ "K4|sink_norm|lam1|eps0.05": {
+  "free_turnover_share_median": 0.0,
+  "free_turnover_share_max": 0.02,
+  "free_turnover_share_mean": 0.0007,
+  "pairs_free_gt_1pct": 1,
+  "n_pairs": 28,
+  "total_turnover_share": 0.0007,
+  "spearman_turnover_vs_abs_dlogn": 0.0323
+ },
+ "K8|sink_abs|lam0.5|eps0.05": {
+  "free_turnover_share_median": 0.0013,
+  "free_turnover_share_max": 0.0601,
+  "free_turnover_share_mean": 0.0092,
+  "pairs_free_gt_1pct": 7,
+  "n_pairs": 28,
+  "total_turnover_share": 0.1477,
+  "spearman_turnover_vs_abs_dlogn": 0.1702
+ },
+ "K8|sink_abs|lam1|eps0.05": {
+  "free_turnover_share_median": 0.0,
+  "free_turnover_share_max": 0.0,
+  "free_turnover_share_mean": 0.0,
+  "pairs_free_gt_1pct": 0,
+  "n_pairs": 28,
+  "total_turnover_share": 0.1396,
+  "spearman_turnover_vs_abs_dlogn": 0.1565
+ },
+ "K8|sink_norm|lam0.5|eps0.05": {
+  "free_turnover_share_median": 0.03,
+  "free_turnover_share_max": 0.33,
+  "free_turnover_share_mean": 0.0514,
+  "pairs_free_gt_1pct": 26,
+  "n_pairs": 28,
+  "total_turnover_share": 0.0514,
+  "spearman_turnover_vs_abs_dlogn": -0.1374
+ },
+ "K8|sink_norm|lam1|eps0.05": {
+  "free_turnover_share_median": 0.0,
+  "free_turnover_share_max": 0.02,
+  "free_turnover_share_mean": 0.0018,
+  "pairs_free_gt_1pct": 1,
+  "n_pairs": 28,
+  "total_turnover_share": 0.0017,
+  "spearman_turnover_vs_abs_dlogn": -0.2463
+ }
+}

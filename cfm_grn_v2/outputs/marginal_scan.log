@@ -1,0 +1,41 @@
+
+=== fold t=1: fit [0.0, 2.0, 4.0, 6.0], validate on t=5, predict t=1 from t=0 ===
+  seed 0  base             ED 0.2762  mean_err 0.997   (20s)
+  seed 0  p1               ED 0.2789  mean_err 1.002  val 0.3674 stop@275   (65s)
+  seed 0  win05_p1         ED 0.2668  mean_err 0.980  val 0.3651 stop@175   (100s)
+  seed 0  win10_p1         ED 0.2643  mean_err 0.975  val 0.3686 stop@175   (134s)
+  seed 0  win05_p1_lr1e3   ED 0.3095  mean_err 1.058  val 0.3211 stop@250   (188s)
+  seed 1  base             ED 0.2801  mean_err 1.001   (211s)
+  seed 1  p1               ED 0.4663  mean_err 1.293  val 0.3777 stop@25   (238s)
+  seed 1  win05_p1         ED 0.2873  mean_err 1.015  val 0.3750 stop@450   (295s)
+  seed 1  win10_p1         ED 0.2758  mean_err 0.995  val 0.3708 stop@375   (342s)
+  seed 1  win05_p1_lr1e3   ED 0.2502  mean_err 0.949  val 0.2991 stop@550   (398s)
+
+=== fold t=5: fit [0.0, 2.0, 4.0, 6.0], validate on t=1, predict t=5 from t=4 ===
+  seed 0  base             ED 0.4177  mean_err 1.017   (410s)
+  seed 0  p1               ED 0.3838  mean_err 0.974  val 0.2116 stop@25   (430s)
+  seed 0  win05_p1         ED 0.4135  mean_err 1.012  val 0.2554 stop@75   (452s)
+  seed 0  win10_p1         ED 0.3846  mean_err 0.974  val 0.2460 stop@350   (495s)
+  seed 0  win05_p1_lr1e3   ED 0.3877  mean_err 0.977  val 0.2290 stop@125   (522s)
+  seed 1  base             ED 0.4177  mean_err 1.018   (531s)
+  seed 1  p1               ED 0.4085  mean_err 1.006  val 0.2493 stop@400   (574s)
+  seed 1  win05_p1         ED 0.4100  mean_err 1.008  val 0.2314 stop@150   (600s)
+  seed 1  win10_p1         ED 0.4164  mean_err 1.015  val 0.2412 stop@475   (647s)
+  seed 1  win05_p1_lr1e3   ED 0.4052  mean_err 1.000  val 0.1960 stop@150   (674s)
+
+               energy_distance         mean_error        
+fold                       1.0     5.0        1.0     5.0
+setting                                                  
+base                    0.2781  0.4177     0.9990  1.0174
+p1                      0.3726  0.3962     1.1473  0.9896
+win05_p1                0.2770  0.4118     0.9974  1.0097
+win05_p1_lr1e3          0.2798  0.3965     1.0035  0.9882
+win10_p1                0.2700  0.4005     0.9846  0.9948
+
+paired change versus base (negative = better), pooled over folds and seeds:
+                  mean     std  count
+setting                              
+win10_p1       -0.0127  0.0143      4
+win05_p1_lr1e3 -0.0098  0.0299      4
+win05_p1       -0.0035  0.0075      4
+p1              0.0365  0.1010      4

@@ -1,0 +1,3 @@
+== pancreas-human clean pipeline 740s, 24 models
+  pancreas-human k=3: PASS {'models': 24, 'models_with_any_diff_upto_k': 0, 'chosen_lists_differing_upto_k': 0, 'models_changed_at_k+1': 24, 'worst_diff': 0.0} (321s)
+  pancreas-human k=9: PASS {'models': 24, 'models_with_any_diff_upto_k': 0, 'chosen_lists_differing_upto_k': 0, 'models_changed_at_k+1': 24, 'worst_diff': 0.0} (377s)

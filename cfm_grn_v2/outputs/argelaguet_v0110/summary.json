@@ -1,0 +1,266 @@
+{
+ "summary": [
+  {
+   "model": "noise_floor",
+   "mean": -0.0020668641526256693,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "mean_interp",
+   "mean": 1.5130862775290255,
+   "std": 0.025604387910881814,
+   "count": 5
+  },
+  {
+   "model": "ot_interp",
+   "mean": 1.9866575512470888,
+   "std": 0.015020890162558418,
+   "count": 5
+  },
+  {
+   "model": "flow_matching",
+   "mean": 2.029624948178797,
+   "std": 0.07443247076678913,
+   "count": 5
+  },
+  {
+   "model": "flow_matching_shuffled_time",
+   "mean": 2.847974713049588,
+   "std": 0.08499483494365993,
+   "count": 5
+  },
+  {
+   "model": "persistence",
+   "mean": 3.116208202910923,
+   "std": 0.033902175852393,
+   "count": 5
+  },
+  {
+   "model": "mlp",
+   "mean": 4.31947973041346,
+   "std": 0.13121823376904407,
+   "count": 5
+  },
+  {
+   "model": "linear",
+   "mean": 8.891051374846102,
+   "std": 0.5609858142984099,
+   "count": 5
+  },
+  {
+   "model": "freefm_replay",
+   "mean": 11.229699008176233,
+   "std": 0.8085477144855783,
+   "count": 5
+  }
+ ],
+ "paired": {
+  "flow_vs_mean_interp": {
+   "model": "flow_matching",
+   "reference": "mean_interp",
+   "metric": "energy_distance",
+   "mean": 0.5165386706497713,
+   "ci_low": 0.4362239961730188,
+   "ci_high": 0.5968533451265239,
+   "n": 5
+  },
+  "flow_vs_ot_interp": {
+   "model": "flow_matching",
+   "reference": "ot_interp",
+   "metric": "energy_distance",
+   "mean": 0.042967396931707924,
+   "ci_low": -0.031745501107236104,
+   "ci_high": 0.11768029497065195,
+   "n": 5
+  },
+  "flow_vs_linear": {
+   "model": "flow_matching",
+   "reference": "linear",
+   "metric": "energy_distance",
+   "mean": -6.861426426667305,
+   "ci_low": -7.553460400384263,
+   "ci_high": -6.169392452950347,
+   "n": 5
+  },
+  "flow_vs_mlp": {
+   "model": "flow_matching",
+   "reference": "mlp",
+   "metric": "energy_distance",
+   "mean": -2.289854782234663,
+   "ci_low": -2.425107553896434,
+   "ci_high": -2.1546020105728916,
+   "n": 5
+  },
+  "flow_vs_persistence": {
+   "model": "flow_matching",
+   "reference": "persistence",
+   "metric": "energy_distance",
+   "mean": -1.0865832547321261,
+   "ci_low": -1.157145003595729,
+   "ci_high": -1.0160215058685234,
+   "n": 5
+  },
+  "flow_vs_freefm_replay": {
+   "model": "flow_matching",
+   "reference": "freefm_replay",
+   "metric": "energy_distance",
+   "mean": -9.200074059997437,
+   "ci_low": -10.167683191979746,
+   "ci_high": -8.232464928015128,
+   "n": 5
+  },
+  "flow_vs_flow_matching_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.8183497648707914,
+   "ci_low": -0.935438209735006,
+   "ci_high": -0.7012613200065767,
+   "n": 5
+  }
+ },
+ "design": {
+  "times": [
+   0.0,
+   1.0,
+   2.0,
+   4.0,
+   5.0
+  ],
+  "test_time": 2.0,
+  "t_prev": 1.0,
+  "t_next": 4.0,
+  "obs_times": [
+   0.0,
+   1.0,
+   4.0,
+   5.0
+  ],
+  "val_time": 4.0,
+  "v_prev": 1.0,
+  "fit_times": [
+   0.0,
+   1.0,
+   5.0
+  ],
+  "horizon": 1.0,
+  "frac": 0.3333333333333333
+ },
+ "stage_of_time": {
+  "0.0": "E7.5",
+  "1.0": "E7.75",
+  "2.0": "E8.0",
+  "4.0": "E8.5",
+  "5.0": "E8.75"
+ },
+ "replicate_yardstick": {
+  "E7.5": {
+   "replicates": [
+    "E7.5_rep1",
+    "E7.5_rep2"
+   ],
+   "energy_distance": 0.5519623659786816
+  },
+  "E8.0": {
+   "replicates": [
+    "E8.0_rep1",
+    "E8.0_rep2"
+   ],
+   "energy_distance": 0.02650720693571884
+  },
+  "E8.5": {
+   "replicates": [
+    "E8.5_rep1",
+    "E8.5_rep2"
+   ],
+   "energy_distance": 0.23636832858776557
+  },
+  "E8.75": {
+   "replicates": [
+    "E8.75_rep1",
+    "E8.75_rep2"
+   ],
+   "energy_distance": 0.1701340203605639
+  }
+ },
+ "genes": {
+  "n_selected": 1428,
+  "n_hvg_requested": 1000,
+  "n_prior_regulators": 465,
+  "prior_edges_within_selected_genes": 1587,
+  "prior_regulators_present": 331
+ },
+ "qc": {
+  "cells": 86139,
+  "genes_kept": 24672,
+  "genes_raw": 32285,
+  "min_cells": 20,
+  "per_sample": {
+   "E7.5_rep1": 8936,
+   "E7.5_rep2": 13181,
+   "E7.75_rep1": 5257,
+   "E8.0_rep1": 6598,
+   "E8.0_rep2": 5608,
+   "E8.5_CRISPR_T_KO": 7359,
+   "E8.5_CRISPR_T_WT": 7604,
+   "E8.5_rep1": 10903,
+   "E8.5_rep2": 11419,
+   "E8.75_rep1": 3892,
+   "E8.75_rep2": 5382
+  },
+  "per_stage_genotype": {
+   "E7.5|WT": 22117,
+   "E7.75|WT": 5257,
+   "E8.0|WT": 12206,
+   "E8.5|T_KO": 7359,
+   "E8.5|WT": 29926,
+   "E8.75|WT": 9274
+  }
+ },
+ "config": {
+  "hidden": 128,
+  "depth": 3,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "batch_size": 256,
+  "n_iters": 8000,
+  "sigma_min": 0.01,
+  "coupling": "ot",
+  "n_ode_steps": 20,
+  "ode_method": "rk4",
+  "time_embed_dim": 32,
+  "cond_dim": 8,
+  "time_conditioning": "delta",
+  "eval_every": 250,
+  "patience": 8,
+  "seed": 0,
+  "shuffle_biological_time": false,
+  "ema_decay": 0.999,
+  "grad_clip": 1.0,
+  "pair_mode": "consecutive",
+  "clock": "duration",
+  "path": "spline",
+  "chain": "ot",
+  "spline_kind": "natural",
+  "path_center": "linear",
+  "marginal_iters": 1000,
+  "marginal_weight": 1.0,
+  "marginal_prior": 1.0,
+  "marginal_batch": 256,
+  "marginal_steps": 8,
+  "marginal_metric": "energy",
+  "marginal_window": 1.0,
+  "marginal_lr": 0.0003,
+  "marginal_eval_every": 25,
+  "marginal_patience": 10
+ },
+ "null_q95": 0.009024134424664607,
+ "quick": false,
+ "overrides": {
+  "path_center": "linear"
+ },
+ "min_detect": 0.01,
+ "max_cells_per_group": 3000,
+ "seconds": 8469.0
+}

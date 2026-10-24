@@ -1,0 +1,58 @@
+gastrulation-human done 22.9 s
+ noise budget l1 {'share_noise_t': 0.39133286397104616, 'share_noise_t1': 0.43086604793068645, 'share_signal': 0.1778010880982674, 'pcc_ceiling_strict': 0.7419659152410916} {'intercept': 0.0001246592683175612, 'slope': 1.1261636849296899, 'corr': 0.941190199312669}
+ noise budget lin {'share_noise_t': 0.3029245898369945, 'share_noise_t1': 0.3674519319175919, 'share_signal': 0.32962347824541355, 'pcc_ceiling_strict': 0.7744019624420421} {'intercept': -1.0011537906902248, 'slope': 32.260707225619974, 'corr': 0.9540948368001606}
+ persistence l1 -0.16876669341510733 0.7009780175479259 0.692829402079571
+ persistence linear 0.2823153560193229 0.3347331463869955 0.3345770440589021
+ spectrum {'sv2_share': [0.7105, 0.1523, 0.0453, 0.0304, 0.0156, 0.0087, 0.0049, 0.0031, 0.0029, 0.0025, 0.0021, 0.0019], 'cum_share_k1_5_10': [0.7105499756733475, 0.8628509293003739, 0.9081243531255893, 0.9541411877184833, 0.9763185210610631], 'participation_ratio': 1.8816331035437042, 'n_above_noise_edge': 2, 'noise_share_of_total_energy': 0.13894207425844737}
+ topk signal share of delta energy 0.1638
+    strict_level_bins_le_t_k1 0.0453 0.2745 0.2748
+    strict_level_bins_le_t_k2 0.0726 0.4393 0.4373
+    strict_level_bins_le_t_k3 0.0836 0.505 0.5011
+    strict_level_bins_le_t_k5 0.1379 0.8293 0.616
+    strict_level_bins_le_t_k8 0.1892 1.1292 0.8256
+    strict_level_bins_le_t-1_k1 0.0446 0.2706 0.2704
+    strict_level_bins_le_t-1_k2 0.0743 0.4504 0.4506
+    strict_level_bins_le_t-1_k3 0.0877 0.5301 0.5298
+    strict_level_bins_le_t-1_k5 0.1017 0.6099 0.6035
+    strict_level_bins_le_t-1_k8 0.1065 0.6306 0.6211
+    strict_change_bins_le_t-1_k1 0.0428 0.2603 0.2599
+    strict_change_bins_le_t-1_k2 0.0573 0.3466 0.3464
+    strict_change_bins_le_t-1_k3 0.0612 0.3657 0.3658
+    strict_change_bins_le_t-1_k5 0.081 0.4812 0.48
+    strict_change_bins_le_t-1_k8 0.0926 0.5484 0.5442
+    oracle_all_bins_k1 0.0766 0.4652 0.4565
+    oracle_all_bins_k2 0.139 0.8452 0.7817
+    oracle_all_bins_k3 0.3339 2.034 0.8029
+    oracle_all_bins_k5 0.4762 2.8992 0.9515
+    oracle_all_bins_k8 0.6138 3.7276 1.6088
+ lib {'corr_m_t_delta': -0.06223667063489886, 'var_share_library_term': 0.2449124112061764, 'var_share_composition_term': 0.8048106614006934, 'share_of_sumsq_top1pct_genes': 0.8444234478158459} 0.5714285714285714
+ nmf cv {1: 176.7564040406054, 2: 11.967257939512457, 3: 6.579851069399832, 4: 3.6556958030825952, 5: 3.3542180599613522, 6: 3.1071415219123133, 7: 2.831609568380473, 8: 2.524364866732595, 10: 2.349176894072954, 12: 2.2185473163205907, 15: 2.262481921578291, 18: 2.305153748654653} 12 12
+pancreas-human done 8.2 s
+ noise budget l1 {'share_noise_t': 0.21042417615202363, 'share_noise_t1': 0.24945403858057885, 'share_signal': 0.5401217852673975, 'pcc_ceiling_strict': 0.8631309383213885} {'intercept': 0.003062501494698582, 'slope': 0.9392847850898203, 'corr': 0.6177237987541961}
+ noise budget lin {'share_noise_t': 0.08522770340864647, 'share_noise_t1': 0.108876233097305, 'share_signal': 0.8058960634940485, 'pcc_ceiling_strict': 0.9426480365733074} {'intercept': -0.17599935148284854, 'slope': 16.659137516206375, 'corr': 0.8159879798549861}
+ persistence l1 0.1559786827093219 0.6771065021856667 0.6735144977935452
+ persistence linear 0.38691320666779766 0.6098404609940108 0.5113350483602926
+ spectrum {'sv2_share': [0.5164, 0.2811, 0.0802, 0.0402, 0.018, 0.0142, 0.0107, 0.0102, 0.0088, 0.007, 0.005, 0.0047], 'cum_share_k1_5_10': [0.5164462217978472, 0.7975304710593759, 0.8777075179757627, 0.9358725798844996, 0.9867981208564045], 'participation_ratio': 2.819353479763098, 'n_above_noise_edge': 6, 'noise_share_of_total_energy': 0.0784362817973471}
+ topk signal share of delta energy 0.5375
+    strict_level_bins_le_t_k1 0.03 0.0556 0.058
+    strict_level_bins_le_t_k2 0.0444 0.0822 0.0862
+    strict_level_bins_le_t_k3 0.0612 0.1133 0.1174
+    strict_level_bins_le_t_k5 0.0796 0.1473 0.1486
+    strict_level_bins_le_t_k8 0.0859 0.1586 0.1598
+    strict_level_bins_le_t-1_k1 0.0389 0.0721 0.075
+    strict_level_bins_le_t-1_k2 0.0443 0.082 0.0852
+    strict_level_bins_le_t-1_k3 0.0481 0.089 0.0925
+    strict_level_bins_le_t-1_k5 0.0522 0.0964 0.0982
+    strict_level_bins_le_t-1_k8 0.0547 0.101 0.1028
+    strict_change_bins_le_t-1_k1 0.0074 0.0136 0.0144
+    strict_change_bins_le_t-1_k2 0.0206 0.0379 0.0367
+    strict_change_bins_le_t-1_k3 0.0352 0.0649 0.0648
+    strict_change_bins_le_t-1_k5 0.0514 0.0949 0.0962
+    strict_change_bins_le_t-1_k8 0.0545 0.1004 0.1022
+    oracle_all_bins_k1 0.0912 0.1694 0.18
+    oracle_all_bins_k2 0.269 0.5 0.5296
+    oracle_all_bins_k3 0.3846 0.7147 0.742
+    oracle_all_bins_k5 0.5227 0.9711 0.9889
+    oracle_all_bins_k8 0.7526 1.3982 1.4178
+ lib {'corr_m_t_delta': -0.26065776582520567, 'var_share_library_term': 0.1798635855729185, 'var_share_composition_term': 0.7902824700247822, 'share_of_sumsq_top1pct_genes': 0.7800899436988277} 0.6923076923076923
+ nmf cv {1: 102.68047818492992, 2: 33.233825375304, 3: 13.133787477208763, 4: 18.380401827680377, 5: 26.771248623163956, 6: 24.128711891174543, 7: 25.318558597472855, 8: 43.411092488786174, 10: 38.67197872761982, 12: 52.224842027146146} 3 3

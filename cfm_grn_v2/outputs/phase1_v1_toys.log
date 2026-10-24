@@ -1,0 +1,48 @@
+[toy_translation] best config: {'hidden': 256, 'depth': 3, 'lr': 0.0003, 'weight_decay': 0.0, 'batch_size': 256, 'n_iters': 8000, 'sigma_min': 0.01, 'coupling': 'independent', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'delta', 'eval_every': 250, 'patience': 8, 'seed': 0, 'shuffle_biological_time': False, 'ema_decay': 0.999, 'grad_clip': 1.0, 'pair_mode': 'consecutive', 'clock': 'flow'}
+[toy_translation] flow_matching seed=0 done in 15s
+[toy_translation] flow_matching_shuffled_time seed=0 done in 12s
+[toy_translation] flow_matching seed=1 done in 12s
+[toy_translation] flow_matching_shuffled_time seed=1 done in 29s
+[toy_translation] flow_matching seed=2 done in 14s
+[toy_translation] flow_matching_shuffled_time seed=2 done in 24s
+[toy_translation] flow_matching seed=3 done in 15s
+[toy_translation] flow_matching_shuffled_time seed=3 done in 18s
+[toy_translation] flow_matching seed=4 done in 14s
+[toy_translation] flow_matching_shuffled_time seed=4 done in 22s
+[toy_variance] best config: {'hidden': 128, 'depth': 3, 'lr': 0.001, 'weight_decay': 0.0, 'batch_size': 256, 'n_iters': 8000, 'sigma_min': 0.01, 'coupling': 'independent', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'delta', 'eval_every': 250, 'patience': 8, 'seed': 0, 'shuffle_biological_time': False, 'ema_decay': 0.999, 'grad_clip': 1.0, 'pair_mode': 'consecutive', 'clock': 'flow'}
+[toy_variance] flow_matching seed=0 done in 22s
+[toy_variance] flow_matching_shuffled_time seed=0 done in 12s
+[toy_variance] flow_matching seed=1 done in 30s
+[toy_variance] flow_matching_shuffled_time seed=1 done in 18s
+[toy_variance] flow_matching seed=2 done in 11s
+[toy_variance] flow_matching_shuffled_time seed=2 done in 25s
+[toy_variance] flow_matching seed=3 done in 9s
+[toy_variance] flow_matching_shuffled_time seed=3 done in 15s
+[toy_variance] flow_matching seed=4 done in 13s
+[toy_variance] flow_matching_shuffled_time seed=4 done in 42s
+[toy_bimodal] best config: {'hidden': 256, 'depth': 3, 'lr': 0.0003, 'weight_decay': 0.0, 'batch_size': 256, 'n_iters': 8000, 'sigma_min': 0.01, 'coupling': 'independent', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'delta', 'eval_every': 250, 'patience': 8, 'seed': 0, 'shuffle_biological_time': False, 'ema_decay': 0.999, 'grad_clip': 1.0, 'pair_mode': 'consecutive', 'clock': 'flow'}
+[toy_bimodal] flow_matching seed=0 done in 27s
+[toy_bimodal] flow_matching_shuffled_time seed=0 done in 13s
+[toy_bimodal] flow_matching seed=1 done in 33s
+[toy_bimodal] flow_matching_shuffled_time seed=1 done in 28s
+[toy_bimodal] flow_matching seed=2 done in 35s
+[toy_bimodal] flow_matching_shuffled_time seed=2 done in 20s
+[toy_bimodal] flow_matching seed=3 done in 31s
+[toy_bimodal] flow_matching_shuffled_time seed=3 done in 36s
+[toy_bimodal] flow_matching seed=4 done in 28s
+[toy_bimodal] flow_matching_shuffled_time seed=4 done in 50s
+[toy_condition_shift] best config: {'hidden': 256, 'depth': 3, 'lr': 0.0003, 'weight_decay': 0.0, 'batch_size': 256, 'n_iters': 8000, 'sigma_min': 0.01, 'coupling': 'independent', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'delta', 'eval_every': 250, 'patience': 8, 'seed': 0, 'shuffle_biological_time': False, 'ema_decay': 0.999, 'grad_clip': 1.0, 'pair_mode': 'consecutive', 'clock': 'flow'}
+[toy_condition_shift] flow_matching seed=0 done in 25s
+[toy_condition_shift] flow_matching_shuffled_time seed=0 done in 19s
+[toy_condition_shift] flow_matching seed=1 done in 17s
+[toy_condition_shift] flow_matching_shuffled_time seed=1 done in 46s
+[toy_condition_shift] flow_matching seed=2 done in 17s
+[toy_condition_shift] flow_matching_shuffled_time seed=2 done in 17s
+[toy_condition_shift] flow_matching seed=3 done in 20s
+[toy_condition_shift] flow_matching_shuffled_time seed=3 done in 21s
+[toy_condition_shift] flow_matching seed=4 done in 15s
+[toy_condition_shift] flow_matching_shuffled_time seed=4 done in 16s
+toy_bimodal (sanity): PASS fm=0.002 best_control=freefm_replay uses_time=True null_q95=0.008 matches=True
+toy_condition_shift (sanity): PASS fm=0.001 best_control=mean_shift uses_time=True null_q95=0.003 matches=True
+toy_translation (sanity): FAIL fm=0.003 best_control=mean_shift uses_time=True null_q95=0.003 matches=False
+toy_variance (sanity): PASS fm=0.001 best_control=linear uses_time=True null_q95=0.004 matches=True

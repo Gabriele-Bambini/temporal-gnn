@@ -1,0 +1,157 @@
+{
+ "synthetic_grn": {
+  "dataset": "synthetic_grn",
+  "metric": "energy_distance",
+  "mode": "benchmark",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "freefm_replay",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "freefm_replay",
+   "metric": "energy_distance",
+   "mean": 1.0090167404088946,
+   "ci_low": -1.265538170707453,
+   "ci_high": 3.283571651525242,
+   "n": 2
+  },
+  "uses_time": false,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": 0.6447056802254617,
+   "ci_low": -2.346065916173647,
+   "ci_high": 3.6354772766245707,
+   "n": 2
+  },
+  "fm_mean": 1.3021222176697067,
+  "noise_floor": -0.0057549482062511535,
+  "null_q95": 0.020756300385799762,
+  "matches_target": false
+ },
+ "toy_bimodal": {
+  "dataset": "toy_bimodal",
+  "metric": "energy_distance",
+  "mode": "sanity",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "freefm_replay",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "freefm_replay",
+   "metric": "energy_distance",
+   "mean": 0.040667307924965534,
+   "ci_low": -0.0416533904515826,
+   "ci_high": 0.12298800630151367,
+   "n": 2
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.9620326750569506,
+   "ci_low": -1.0504289099950037,
+   "ci_high": -0.8736364401188974,
+   "n": 2
+  },
+  "fm_mean": 0.028798815750512574,
+  "noise_floor": -0.00445172924389885,
+  "null_q95": 0.017951726292717025,
+  "matches_target": false
+ },
+ "toy_condition_shift": {
+  "dataset": "toy_condition_shift",
+  "metric": "energy_distance",
+  "mode": "sanity",
+  "pass": true,
+  "beats_all_controls": false,
+  "best_control": "mean_shift",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "mean_shift",
+   "metric": "energy_distance",
+   "mean": 0.0008474883424557378,
+   "ci_low": -0.0032058029573248424,
+   "ci_high": 0.004900779642236318,
+   "n": 2
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.8649329681971647,
+   "ci_low": -1.048616705519278,
+   "ci_high": -0.6812492308750514,
+   "n": 2
+  },
+  "fm_mean": 0.0031342305683993432,
+  "noise_floor": -0.004019407865499369,
+  "null_q95": 0.007713478076171238,
+  "matches_target": true
+ },
+ "toy_translation": {
+  "dataset": "toy_translation",
+  "metric": "energy_distance",
+  "mode": "sanity",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "mean_shift",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "mean_shift",
+   "metric": "energy_distance",
+   "mean": 0.0019156189462843365,
+   "ci_low": -0.017957477929476495,
+   "ci_high": 0.021788715822045168,
+   "n": 2
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -2.4925287399324665,
+   "ci_low": -3.722641064912163,
+   "ci_high": -1.2624164149527701,
+   "n": 2
+  },
+  "fm_mean": 0.010311611202789672,
+  "noise_floor": 0.003155259373027386,
+  "null_q95": 0.0083861646328774,
+  "matches_target": false
+ },
+ "toy_variance": {
+  "dataset": "toy_variance",
+  "metric": "energy_distance",
+  "mode": "sanity",
+  "pass": true,
+  "beats_all_controls": false,
+  "best_control": "linear",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "linear",
+   "metric": "energy_distance",
+   "mean": 0.0001725071689004931,
+   "ci_low": -0.04362305414383821,
+   "ci_high": 0.04396806848163919,
+   "n": 2
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.10657983037070229,
+   "ci_low": -0.19129806254690465,
+   "ci_high": -0.021861598194499926,
+   "n": 2
+  },
+  "fm_mean": 0.01093186199074736,
+  "noise_floor": 0.0020576437720160714,
+  "null_q95": 0.014814934020869575,
+  "matches_target": true
+ }
+}

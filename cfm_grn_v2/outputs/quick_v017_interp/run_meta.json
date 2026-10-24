@@ -1,0 +1,137 @@
+{
+ "version": "0.1.7",
+ "args": {
+  "out": "outputs/quick_v017_interp",
+  "quick": true,
+  "seeds": 2,
+  "search_seeds": 1,
+  "datasets": "grn",
+  "max_configs": null,
+  "seed": 0,
+  "tasks": "interpolation",
+  "interp_times": "3.0"
+ },
+ "base_config": {
+  "hidden": 256,
+  "depth": 2,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "batch_size": 128,
+  "n_iters": 1500,
+  "sigma_min": 0.001,
+  "coupling": "ot",
+  "n_ode_steps": 20,
+  "ode_method": "rk4",
+  "time_embed_dim": 32,
+  "cond_dim": 8,
+  "time_conditioning": "delta",
+  "eval_every": 150,
+  "patience": 4,
+  "seed": 0,
+  "shuffle_biological_time": false,
+  "ema_decay": 0.999,
+  "grad_clip": 1.0,
+  "pair_mode": "consecutive",
+  "clock": "flow",
+  "path": "linear"
+ },
+ "grids": {
+  "toys": {
+   "hidden": [
+    64,
+    128
+   ],
+   "lr": [
+    0.001
+   ],
+   "sigma_min": [
+    0.001
+   ],
+   "coupling": [
+    "ot"
+   ]
+  },
+  "grn": [
+   {
+    "hidden": 128,
+    "lr": 0.001,
+    "sigma_min": 0.001,
+    "coupling": "ot",
+    "pair_mode": "consecutive",
+    "clock": "flow",
+    "path": "linear"
+   },
+   {
+    "hidden": 128,
+    "lr": 0.001,
+    "sigma_min": 0.001,
+    "coupling": "ot",
+    "pair_mode": "consecutive",
+    "clock": "duration",
+    "path": "linear"
+   },
+   {
+    "hidden": 128,
+    "lr": 0.001,
+    "sigma_min": 0.001,
+    "coupling": "ot",
+    "pair_mode": "all",
+    "clock": "flow",
+    "path": "linear"
+   },
+   {
+    "hidden": 128,
+    "lr": 0.001,
+    "sigma_min": 0.001,
+    "coupling": "ot",
+    "pair_mode": "all",
+    "clock": "duration",
+    "path": "linear"
+   },
+   {
+    "hidden": 128,
+    "lr": 0.001,
+    "sigma_min": 0.001,
+    "coupling": "ot",
+    "pair_mode": "consecutive",
+    "clock": "duration",
+    "path": "spline"
+   }
+  ]
+ },
+ "protocol": {
+  "n_samples": 300,
+  "seed": 0,
+  "bandwidth": 1.0,
+  "w2_max": 500,
+  "n_perm": 50
+ },
+ "started": "2026-09-18 15:29:56",
+ "best_configs": {
+  "synthetic_grn_interp_t3": {
+   "hidden": 128,
+   "depth": 2,
+   "lr": 0.001,
+   "weight_decay": 0.0,
+   "batch_size": 128,
+   "n_iters": 1500,
+   "sigma_min": 0.001,
+   "coupling": "ot",
+   "n_ode_steps": 20,
+   "ode_method": "rk4",
+   "time_embed_dim": 32,
+   "cond_dim": 8,
+   "time_conditioning": "delta",
+   "eval_every": 150,
+   "patience": 4,
+   "seed": 0,
+   "shuffle_biological_time": false,
+   "ema_decay": 0.999,
+   "grad_clip": 1.0,
+   "pair_mode": "consecutive",
+   "clock": "duration",
+   "path": "spline"
+  }
+ },
+ "finished": "2026-09-18 15:32:44"
+}

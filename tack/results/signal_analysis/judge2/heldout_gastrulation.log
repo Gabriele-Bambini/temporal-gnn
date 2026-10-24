@@ -1,0 +1,62 @@
+﻿== gastrulation seed 20261022 orig (35s)
+  trend                  i>=2 0.220/0.392/0.355 (sd 0.032) | all 0.206/0.387/0.351
+  level(box4+obs)        i>=2 0.037/0.356/0.016 (sd 0.009) | all 0.029/0.353/0.018
+  regime                 i>=2 0.333/0.395/0.327 (sd 0.022) | all 0.306/0.390/0.309
+  full                   i>=2 0.318/0.401/0.323 (sd 0.024) | all 0.291/0.395/0.305
+  full-kal               i>=2 0.317/0.400/0.326 (sd 0.021) | all 0.291/0.394/0.308
+  full-cg                i>=2 0.335/0.406/0.323 (sd 0.029) | all 0.307/0.400/0.306
+  full-obs               i>=2 0.333/0.399/0.325 (sd 0.023) | all 0.306/0.394/0.307
+  regime[h=0.5 fixed]    i>=2 0.285/0.380/0.317 (sd 0.025) | all 0.261/0.376/0.299
+  full[h=0.5 fixed]      i>=2 0.235/0.372/0.316 (sd 0.032) | all 0.214/0.368/0.299
+  auto(full|trend)       i>=2 0.315/0.401/0.323 (sd 0.027) | all 0.288/0.396/0.305
+  paired full vs trend                    dPCC +0.098 (20/10, p=0.0128) dJ +0.074 (20/10, p=0.0636)
+  paired full vs regime                   dPCC -0.016 (13/17, p=0.3285) dJ -0.013 (13/17, p=0.7766)
+  paired full vs level(box4+obs)          dPCC +0.280 (28/2, p=0.0) dJ +0.632 (29/1, p=0.0)
+  paired full vs regime[h=0.5 fixed]      dPCC +0.033 (20/10, p=0.0667) dJ +0.060 (20/10, p=0.0175)
+  paired full vs full-kal                 dPCC +0.001 (15/15, p=0.9032) dJ -0.001 (16/14, p=0.9354)
+  paired full vs full-cg                  dPCC -0.017 (11/19, p=0.1403) dJ -0.023 (12/18, p=0.1241)
+  paired full vs full-obs                 dPCC -0.015 (13/17, p=0.0364) dJ -0.015 (12/18, p=0.0549)
+  paired auto(full|trend) vs trend        dPCC +0.094 (18/9, p=0.014) dJ +0.072 (18/9, p=0.0655)
+== gastrulation seed 20261022 l1 (47s)
+  trend                  i>=2 0.533/0.416/0.379 (sd 0.011) | all 0.516/0.412/0.376
+  level(box4)            i>=2 -0.481/0.082/0.090 (sd 0.013) | all -0.490/0.077/0.088
+  regime                 i>=2 0.539/0.409/0.378 (sd 0.015) | all 0.521/0.406/0.375
+  full                   i>=2 0.511/0.405/0.373 (sd 0.018) | all 0.495/0.402/0.370
+  full-kal               i>=2 0.524/0.405/0.374 (sd 0.016) | all 0.507/0.402/0.371
+  full-cg                i>=2 0.510/0.404/0.375 (sd 0.017) | all 0.493/0.401/0.372
+  regime[h=0.5 fixed]    i>=2 0.523/0.399/0.367 (sd 0.015) | all 0.506/0.396/0.365
+  full[h=0.5 fixed]      i>=2 0.493/0.387/0.361 (sd 0.021) | all 0.477/0.386/0.359
+  auto(full|trend)       i>=2 0.531/0.414/0.376 (sd 0.015) | all 0.513/0.411/0.374
+  paired full vs trend                    dPCC -0.022 (21/9, p=0.3387) dJ -0.039 (23/7, p=0.1706)
+  paired full vs regime                   dPCC -0.028 (13/17, p=0.2206) dJ -0.038 (13/17, p=0.2801)
+  paired full vs level(box4)              dPCC +0.993 (29/1, p=0.0) dJ +1.599 (29/1, p=0.0)
+  paired full vs regime[h=0.5 fixed]      dPCC -0.012 (15/15, p=0.7611) dJ +0.000 (17/13, p=0.5291)
+  paired full vs full-kal                 dPCC -0.013 (17/13, p=1.0) dJ -0.013 (14/16, p=0.4898)
+  paired full vs full-cg                  dPCC +0.002 (13/17, p=0.612) dJ +0.000 (15/15, p=0.7766)
+  paired auto(full|trend) vs trend        dPCC -0.003 (14/6, p=0.2943) dJ -0.007 (16/4, p=0.1054)
+python : C:\Users\Gabriele\My Drive\PhD & Research\Temporal 
+GNN\tack\results\signal_analysis\judge2\nass_heldout.py:62: RuntimeWarning: Mean of empty slice
+At line:1 char:595
++ ... creas.log"; python nass_heldout.py gastrulation *> "$j\heldout_gastru ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\Gabrie... of empty slice:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  "per_transition": {k: np.round(np.nanmean(S[k], 0)[:, :3], 4).tolist() for k in S}}
+== gastrulation seed 20261022 linear (57s)
+  trend                  i>=2 0.656/0.511/0.467 (sd 0.026) | all 0.667/0.509/0.458
+  level(box4)            i>=2 -0.595/0.133/0.155 (sd 0.022) | all -0.608/0.130/0.150
+  regime                 i>=2 0.568/0.479/0.422 (sd 0.027) | all 0.581/0.480/0.416
+  full                   i>=2 0.558/0.464/0.400 (sd 0.035) | all 0.572/0.466/0.396
+  full-kal               i>=2 0.541/0.485/0.407 (sd 0.043) | all 0.555/0.485/0.402
+  full-cg                i>=2 0.557/0.464/0.404 (sd 0.037) | all 0.571/0.466/0.399
+  regime[h=0.5 fixed]    i>=2 0.589/0.498/0.432 (sd 0.030) | all 0.602/0.497/0.426
+  full[h=0.5 fixed]      i>=2 0.543/0.471/0.420 (sd 0.040) | all 0.557/0.472/0.415
+  auto(full|trend)       i>=2 0.646/0.498/0.455 (sd 0.029) | all 0.657/0.498/0.447
+  paired full vs trend                    dPCC -0.098 (11/19, p=0.0636) dJ -0.211 (7/23, p=0.0008)
+  paired full vs regime                   dPCC -0.010 (11/19, p=0.3707) dJ -0.047 (11/19, p=0.0919)
+  paired full vs level(box4)              dPCC +1.153 (28/2, p=0.0) dJ +1.728 (28/2, p=0.0)
+  paired full vs regime[h=0.5 fixed]      dPCC -0.031 (14/16, p=0.685) dJ -0.097 (11/19, p=0.0497)
+  paired full vs full-kal                 dPCC +0.017 (16/14, p=0.8236) dJ -0.011 (11/19, p=0.4045)
+  paired full vs full-cg                  dPCC +0.001 (10/20, p=0.1191) dJ -0.003 (13/17, p=0.3707)
+  paired auto(full|trend) vs trend        dPCC -0.010 (2/6, p=0.1953) dJ -0.035 (3/5, p=0.1953)

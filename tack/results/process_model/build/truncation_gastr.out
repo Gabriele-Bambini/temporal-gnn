@@ -1,0 +1,3 @@
+== gastrulation-human clean pipeline 1147s, 24 models
+  gastrulation-human k=5: PASS {'models': 24, 'models_with_any_diff_upto_k': 0, 'chosen_lists_differing_upto_k': 0, 'models_changed_at_k+1': 24, 'worst_diff': 0.0} (625s)
+  gastrulation-human k=17: PASS {'models': 24, 'models_with_any_diff_upto_k': 0, 'chosen_lists_differing_upto_k': 0, 'models_changed_at_k+1': 24, 'worst_diff': 0.0} (490s)

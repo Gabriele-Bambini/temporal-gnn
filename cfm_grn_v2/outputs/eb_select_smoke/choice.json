@@ -1,0 +1,43 @@
+{
+ "rule": "improve on base in >= 3 of 4 (fold, seed) pairs; most negative mean change; else base",
+ "per_arm": {
+  "center": {
+   "mean_change": -0.0451763449336795,
+   "n_better": 4,
+   "n": 4,
+   "changes": [
+    -0.03783141517033073,
+    -0.04725427061293885,
+    -0.04554816003656015,
+    -0.05007153391488828
+   ]
+  },
+  "wide": {
+   "mean_change": -0.025687639321404276,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    0.05092299229454511,
+    0.04191125147463026,
+    -0.10475135734304786,
+    -0.09083344371174462
+   ]
+  },
+  "wide_center": {
+   "mean_change": -0.09481873055187862,
+   "n_better": 4,
+   "n": 4,
+   "changes": [
+    -0.022826673785857565,
+    -0.03640373384405393,
+    -0.13876572501612827,
+    -0.1812787895614747
+   ]
+  }
+ },
+ "winner": "wide_center",
+ "overrides": {
+  "hidden": 512,
+  "path_center": "linear"
+ }
+}

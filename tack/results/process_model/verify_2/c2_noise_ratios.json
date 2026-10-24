@@ -1,0 +1,968 @@
+{
+ "gastrulation-human": {
+  "cv2lib_per_bin": [
+   -0.2799,
+   0.011,
+   0.0773,
+   0.0737,
+   0.0782,
+   0.0798,
+   0.0782,
+   0.0413,
+   0.049,
+   0.0472,
+   0.0594,
+   0.0639,
+   0.0568,
+   0.0636,
+   0.0534,
+   0.0435,
+   0.0447,
+   0.0355,
+   0.072,
+   0.058,
+   0.0678,
+   0.1019,
+   0.0704,
+   0.0601,
+   0.0698,
+   0.0926,
+   0.0666,
+   0.0389,
+   0.0431,
+   -0.3205
+  ],
+  "n_cells": [
+   9.0,
+   182.0,
+   792.0,
+   929.0,
+   982.0,
+   616.0,
+   340.0,
+   217.0,
+   225.0,
+   248.0,
+   290.0,
+   304.0,
+   431.0,
+   440.0,
+   333.0,
+   247.0,
+   246.0,
+   230.0,
+   275.0,
+   316.0,
+   355.0,
+   350.0,
+   264.0,
+   233.0,
+   228.0,
+   306.0,
+   231.0,
+   138.0,
+   46.0,
+   7.0
+  ],
+  "selected_bins>=100": {
+   "R_cls": {
+    "0": {
+     "var_ratio": 1.853,
+     "lag_ratio": null,
+     "genes_per_transition": 10576.2,
+     "ss_share": 0.0035
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.065,
+     "lag_ratio": 0.984,
+     "genes_per_transition": 5353.3,
+     "ss_share": 0.1103
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.016,
+     "lag_ratio": 0.847,
+     "genes_per_transition": 3863.7,
+     "ss_share": 0.5164
+    },
+    "(1,10]": {
+     "var_ratio": 1.081,
+     "lag_ratio": 0.475,
+     "genes_per_transition": 1472.0,
+     "ss_share": 0.3248
+    },
+    "(10,100]": {
+     "var_ratio": 1.999,
+     "lag_ratio": -1.837,
+     "genes_per_transition": 163.5,
+     "ss_share": 0.045
+    },
+    ">100": {
+     "var_ratio": null,
+     "lag_ratio": null,
+     "genes_per_transition": 0,
+     "ss_share": 0.0
+    }
+   },
+   "Rcorr_cls": {
+    "0": {
+     "var_ratio": 1.854,
+     "lag_ratio": null,
+     "genes_per_transition": 10576.2,
+     "ss_share": 0.0035
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.068,
+     "lag_ratio": 0.987,
+     "genes_per_transition": 5353.3,
+     "ss_share": 0.1103
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.04,
+     "lag_ratio": 0.866,
+     "genes_per_transition": 3863.7,
+     "ss_share": 0.5164
+    },
+    "(1,10]": {
+     "var_ratio": 1.192,
+     "lag_ratio": 0.523,
+     "genes_per_transition": 1472.0,
+     "ss_share": 0.3248
+    },
+    "(10,100]": {
+     "var_ratio": 2.698,
+     "lag_ratio": -2.466,
+     "genes_per_transition": 163.5,
+     "ss_share": 0.045
+    },
+    ">100": {
+     "var_ratio": null,
+     "lag_ratio": null,
+     "genes_per_transition": 0,
+     "ss_share": 0.0
+    }
+   },
+   "Rcorr_cv2>=0_cls": {
+    "0": {
+     "var_ratio": 1.854,
+     "lag_ratio": null,
+     "genes_per_transition": 10576.2,
+     "ss_share": 0.0035
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.068,
+     "lag_ratio": 0.987,
+     "genes_per_transition": 5353.3,
+     "ss_share": 0.1103
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.04,
+     "lag_ratio": 0.866,
+     "genes_per_transition": 3863.7,
+     "ss_share": 0.5164
+    },
+    "(1,10]": {
+     "var_ratio": 1.192,
+     "lag_ratio": 0.523,
+     "genes_per_transition": 1472.0,
+     "ss_share": 0.3248
+    },
+    "(10,100]": {
+     "var_ratio": 2.698,
+     "lag_ratio": -2.466,
+     "genes_per_transition": 163.5,
+     "ss_share": 0.045
+    },
+    ">100": {
+     "var_ratio": null,
+     "lag_ratio": null,
+     "genes_per_transition": 0,
+     "ss_share": 0.0
+    }
+   }
+  },
+  "signal_share_R": [
+   0.52,
+   0.151,
+   0.522,
+   0.585,
+   0.482,
+   0.659,
+   0.807,
+   0.362,
+   -0.042,
+   -0.028,
+   0.077,
+   0.117,
+   0.169,
+   0.084,
+   0.035,
+   0.008,
+   0.033,
+   0.189,
+   0.04,
+   0.051,
+   0.485,
+   0.411,
+   0.096,
+   0.305,
+   0.149,
+   0.316,
+   -0.042,
+   -0.064,
+   -0.191
+  ],
+  "signal_share_Rcorr": [
+   0.405,
+   0.17,
+   0.56,
+   0.618,
+   0.523,
+   0.685,
+   0.817,
+   0.388,
+   0.003,
+   0.02,
+   0.127,
+   0.164,
+   0.213,
+   0.132,
+   0.078,
+   0.049,
+   0.07,
+   0.228,
+   0.095,
+   0.103,
+   0.52,
+   0.449,
+   0.145,
+   0.344,
+   0.207,
+   0.361,
+   0.002,
+   -0.03,
+   -0.532
+  ],
+  "selected_R (share<0.2 at i and i-1)": [
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   27,
+   28
+  ],
+  "selected_Rcorr": [
+   9,
+   10,
+   11,
+   14,
+   15,
+   16,
+   19,
+   27,
+   28
+  ],
+  "Rcorr_over_R_by_class(sel)": {
+   "0": null,
+   "(0,0.1]": 0.997,
+   "(0.1,1]": 0.981,
+   "(1,10]": 0.926,
+   "(10,100]": 0.823,
+   ">100": 0.81
+  },
+  "selected": {
+   "R_cls": {
+    "0": {
+     "var_ratio": 1.327,
+     "lag_ratio": null,
+     "genes_per_transition": 10685.1,
+     "ss_share": 0.0133
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.071,
+     "lag_ratio": 0.978,
+     "genes_per_transition": 5158.9,
+     "ss_share": 0.1065
+    },
+    "(0.1,1]": {
+     "var_ratio": 0.962,
+     "lag_ratio": 0.883,
+     "genes_per_transition": 3933.7,
+     "ss_share": 0.5417
+    },
+    "(1,10]": {
+     "var_ratio": 0.801,
+     "lag_ratio": 0.606,
+     "genes_per_transition": 1490.2,
+     "ss_share": 0.318
+    },
+    "(10,100]": {
+     "var_ratio": 0.615,
+     "lag_ratio": -0.65,
+     "genes_per_transition": 160.9,
+     "ss_share": 0.0205
+    },
+    ">100": {
+     "var_ratio": null,
+     "lag_ratio": null,
+     "genes_per_transition": 0,
+     "ss_share": 0.0
+    }
+   },
+   "R_all": {
+    "0": {
+     "var_ratio": 1.431,
+     "lag_ratio": null,
+     "genes_per_transition": 10685.1,
+     "ss_share": 0.0142
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.076,
+     "lag_ratio": 0.983,
+     "genes_per_transition": 5158.9,
+     "ss_share": 0.1063
+    },
+    "(0.1,1]": {
+     "var_ratio": 0.966,
+     "lag_ratio": 0.889,
+     "genes_per_transition": 3933.7,
+     "ss_share": 0.5403
+    },
+    "(1,10]": {
+     "var_ratio": 0.808,
+     "lag_ratio": 0.61,
+     "genes_per_transition": 1490.2,
+     "ss_share": 0.3184
+    },
+    "(10,100]": {
+     "var_ratio": 0.63,
+     "lag_ratio": -0.687,
+     "genes_per_transition": 160.9,
+     "ss_share": 0.0208
+    },
+    ">100": {
+     "var_ratio": null,
+     "lag_ratio": null,
+     "genes_per_transition": 0,
+     "ss_share": 0.0
+    }
+   },
+   "Rcorr_cls": {
+    "0": {
+     "var_ratio": 1.261,
+     "lag_ratio": null,
+     "genes_per_transition": 10685.1,
+     "ss_share": 0.0133
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.039,
+     "lag_ratio": 0.98,
+     "genes_per_transition": 5158.9,
+     "ss_share": 0.1065
+    },
+    "(0.1,1]": {
+     "var_ratio": 0.888,
+     "lag_ratio": 0.899,
+     "genes_per_transition": 3933.7,
+     "ss_share": 0.5417
+    },
+    "(1,10]": {
+     "var_ratio": 0.631,
+     "lag_ratio": 0.654,
+     "genes_per_transition": 1490.2,
+     "ss_share": 0.318
+    },
+    "(10,100]": {
+     "var_ratio": 0.395,
+     "lag_ratio": -0.791,
+     "genes_per_transition": 160.9,
+     "ss_share": 0.0205
+    },
+    ">100": {
+     "var_ratio": null,
+     "lag_ratio": null,
+     "genes_per_transition": 0,
+     "ss_share": 0.0
+    }
+   },
+   "Rcorr_all": {
+    "0": {
+     "var_ratio": 1.36,
+     "lag_ratio": null,
+     "genes_per_transition": 10685.1,
+     "ss_share": 0.0142
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.044,
+     "lag_ratio": 0.986,
+     "genes_per_transition": 5158.9,
+     "ss_share": 0.1063
+    },
+    "(0.1,1]": {
+     "var_ratio": 0.892,
+     "lag_ratio": 0.906,
+     "genes_per_transition": 3933.7,
+     "ss_share": 0.5403
+    },
+    "(1,10]": {
+     "var_ratio": 0.637,
+     "lag_ratio": 0.658,
+     "genes_per_transition": 1490.2,
+     "ss_share": 0.3184
+    },
+    "(10,100]": {
+     "var_ratio": 0.405,
+     "lag_ratio": -0.835,
+     "genes_per_transition": 160.9,
+     "ss_share": 0.0208
+    },
+    ">100": {
+     "var_ratio": null,
+     "lag_ratio": null,
+     "genes_per_transition": 0,
+     "ss_share": 0.0
+    }
+   },
+   "Rcorr_cv2>=0_cls": {
+    "0": {
+     "var_ratio": 1.327,
+     "lag_ratio": null,
+     "genes_per_transition": 10685.1,
+     "ss_share": 0.0133
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.073,
+     "lag_ratio": 0.98,
+     "genes_per_transition": 5158.9,
+     "ss_share": 0.1065
+    },
+    "(0.1,1]": {
+     "var_ratio": 0.971,
+     "lag_ratio": 0.899,
+     "genes_per_transition": 3933.7,
+     "ss_share": 0.5417
+    },
+    "(1,10]": {
+     "var_ratio": 0.829,
+     "lag_ratio": 0.654,
+     "genes_per_transition": 1490.2,
+     "ss_share": 0.318
+    },
+    "(10,100]": {
+     "var_ratio": 0.668,
+     "lag_ratio": -0.791,
+     "genes_per_transition": 160.9,
+     "ss_share": 0.0205
+    },
+    ">100": {
+     "var_ratio": null,
+     "lag_ratio": null,
+     "genes_per_transition": 0,
+     "ss_share": 0.0
+    }
+   }
+  },
+  "all_i>=1": {
+   "R_cls": {
+    "0": {
+     "var_ratio": 2.38,
+     "lag_ratio": null,
+     "genes_per_transition": 10487.0,
+     "ss_share": 0.0179
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.12,
+     "lag_ratio": 0.916,
+     "genes_per_transition": 5467.4,
+     "ss_share": 0.1018
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.048,
+     "lag_ratio": 0.702,
+     "genes_per_transition": 3875.0,
+     "ss_share": 0.515
+    },
+    "(1,10]": {
+     "var_ratio": 1.01,
+     "lag_ratio": 0.346,
+     "genes_per_transition": 1447.2,
+     "ss_share": 0.3336
+    },
+    "(10,100]": {
+     "var_ratio": 0.867,
+     "lag_ratio": -1.17,
+     "genes_per_transition": 151.4,
+     "ss_share": 0.0232
+    },
+    ">100": {
+     "var_ratio": 14.092,
+     "lag_ratio": -14.437,
+     "genes_per_transition": 4.6,
+     "ss_share": 0.0085
+    }
+   },
+   "R_all": {
+    "0": {
+     "var_ratio": 3.13,
+     "lag_ratio": null,
+     "genes_per_transition": 10487.0,
+     "ss_share": 0.0223
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.138,
+     "lag_ratio": 0.898,
+     "genes_per_transition": 5467.4,
+     "ss_share": 0.0983
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.063,
+     "lag_ratio": 0.689,
+     "genes_per_transition": 3875.0,
+     "ss_share": 0.4959
+    },
+    "(1,10]": {
+     "var_ratio": 1.083,
+     "lag_ratio": 0.194,
+     "genes_per_transition": 1447.2,
+     "ss_share": 0.3398
+    },
+    "(10,100]": {
+     "var_ratio": 0.995,
+     "lag_ratio": -1.519,
+     "genes_per_transition": 151.4,
+     "ss_share": 0.0253
+    },
+    ">100": {
+     "var_ratio": 32.081,
+     "lag_ratio": -36.918,
+     "genes_per_transition": 4.6,
+     "ss_share": 0.0183
+    }
+   },
+   "Rcorr_cls": {
+    "0": {
+     "var_ratio": 2.279,
+     "lag_ratio": null,
+     "genes_per_transition": 10487.0,
+     "ss_share": 0.0179
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.097,
+     "lag_ratio": 0.919,
+     "genes_per_transition": 5467.4,
+     "ss_share": 0.1018
+    },
+    "(0.1,1]": {
+     "var_ratio": 0.995,
+     "lag_ratio": 0.718,
+     "genes_per_transition": 3875.0,
+     "ss_share": 0.515
+    },
+    "(1,10]": {
+     "var_ratio": 0.856,
+     "lag_ratio": 0.378,
+     "genes_per_transition": 1447.2,
+     "ss_share": 0.3336
+    },
+    "(10,100]": {
+     "var_ratio": 0.628,
+     "lag_ratio": -1.493,
+     "genes_per_transition": 151.4,
+     "ss_share": 0.0232
+    },
+    ">100": {
+     "var_ratio": 14.575,
+     "lag_ratio": -14.902,
+     "genes_per_transition": 4.6,
+     "ss_share": 0.0085
+    }
+   },
+   "Rcorr_all": {
+    "0": {
+     "var_ratio": 2.997,
+     "lag_ratio": null,
+     "genes_per_transition": 10487.0,
+     "ss_share": 0.0223
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.115,
+     "lag_ratio": 0.9,
+     "genes_per_transition": 5467.4,
+     "ss_share": 0.0983
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.009,
+     "lag_ratio": 0.705,
+     "genes_per_transition": 3875.0,
+     "ss_share": 0.4959
+    },
+    "(1,10]": {
+     "var_ratio": 0.918,
+     "lag_ratio": 0.212,
+     "genes_per_transition": 1447.2,
+     "ss_share": 0.3398
+    },
+    "(10,100]": {
+     "var_ratio": 0.721,
+     "lag_ratio": -1.937,
+     "genes_per_transition": 151.4,
+     "ss_share": 0.0253
+    },
+    ">100": {
+     "var_ratio": 33.181,
+     "lag_ratio": -38.107,
+     "genes_per_transition": 4.6,
+     "ss_share": 0.0183
+    }
+   },
+   "Rcorr_cv2>=0_cls": {
+    "0": {
+     "var_ratio": 2.381,
+     "lag_ratio": null,
+     "genes_per_transition": 10487.0,
+     "ss_share": 0.0179
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.122,
+     "lag_ratio": 0.919,
+     "genes_per_transition": 5467.4,
+     "ss_share": 0.1018
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.063,
+     "lag_ratio": 0.718,
+     "genes_per_transition": 3875.0,
+     "ss_share": 0.515
+    },
+    "(1,10]": {
+     "var_ratio": 1.065,
+     "lag_ratio": 0.378,
+     "genes_per_transition": 1447.2,
+     "ss_share": 0.3336
+    },
+    "(10,100]": {
+     "var_ratio": 0.988,
+     "lag_ratio": -1.493,
+     "genes_per_transition": 151.4,
+     "ss_share": 0.0232
+    },
+    ">100": {
+     "var_ratio": 14.575,
+     "lag_ratio": -14.902,
+     "genes_per_transition": 4.6,
+     "ss_share": 0.0085
+    }
+   }
+  },
+  "Rcorr_over_R_sum_i_i+1(sel)": {
+   "0": 1.052,
+   "(0,0.1]": 1.031,
+   "(0.1,1]": 1.083,
+   "(1,10]": 1.269,
+   "(10,100]": 1.556,
+   ">100": 1.686
+  },
+  "Rcorr_cv2>=0_over_R_sum_i_i+1(sel)": {
+   "0": 1.0,
+   "(0,0.1]": 0.998,
+   "(0.1,1]": 0.99,
+   "(1,10]": 0.966,
+   "(10,100]": 0.92,
+   ">100": 0.89
+  }
+ },
+ "pancreas-human": {
+  "cv2lib_per_bin": [
+   -0.0902,
+   0.0198,
+   0.034,
+   -0.026,
+   -0.1237,
+   -0.1317,
+   -0.1118,
+   -0.1024,
+   -0.0521,
+   -0.045,
+   -0.056,
+   0.0098,
+   0.0319,
+   0.009,
+   -0.0731
+  ],
+  "n_cells": [
+   111.0,
+   612.0,
+   361.0,
+   116.0,
+   50.0,
+   53.0,
+   68.0,
+   79.0,
+   191.0,
+   218.0,
+   132.0,
+   286.0,
+   698.0,
+   616.0,
+   105.0
+  ],
+  "selected_bins>=100": [],
+  "signal_share_R": [
+   0.439,
+   0.589,
+   0.419,
+   0.542,
+   0.288,
+   0.241,
+   0.341,
+   0.466,
+   0.712,
+   0.765,
+   0.773,
+   0.839,
+   0.804,
+   0.575
+  ],
+  "signal_share_Rcorr": [
+   0.414,
+   0.595,
+   0.415,
+   0.52,
+   0.242,
+   0.196,
+   0.307,
+   0.444,
+   0.707,
+   0.76,
+   0.77,
+   0.84,
+   0.806,
+   0.563
+  ],
+  "selected_R (share<0.2 at i and i-1)": [],
+  "selected_Rcorr": [],
+  "Rcorr_over_R_by_class(sel)": {
+   "0": null,
+   "(0,0.1]": 1.003,
+   "(0.1,1]": 1.021,
+   "(1,10]": 1.086,
+   "(10,100]": 1.289,
+   ">100": 1.002
+  },
+  "selected": "no transition qualifies",
+  "all_i>=1": {
+   "R_cls": {
+    "0": {
+     "var_ratio": 2.697,
+     "lag_ratio": null,
+     "genes_per_transition": 7164.0,
+     "ss_share": 0.0084
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.767,
+     "lag_ratio": 0.687,
+     "genes_per_transition": 4063.3,
+     "ss_share": 0.0726
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.761,
+     "lag_ratio": 0.005,
+     "genes_per_transition": 5567.7,
+     "ss_share": 0.4762
+    },
+    "(1,10]": {
+     "var_ratio": 3.38,
+     "lag_ratio": -2.293,
+     "genes_per_transition": 1631.1,
+     "ss_share": 0.3887
+    },
+    "(10,100]": {
+     "var_ratio": 8.985,
+     "lag_ratio": -11.365,
+     "genes_per_transition": 134.3,
+     "ss_share": 0.0514
+    },
+    ">100": {
+     "var_ratio": 14.447,
+     "lag_ratio": -51.744,
+     "genes_per_transition": 4.0,
+     "ss_share": 0.0027
+    }
+   },
+   "R_all": {
+    "0": {
+     "var_ratio": 3.139,
+     "lag_ratio": null,
+     "genes_per_transition": 7164.0,
+     "ss_share": 0.0096
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.812,
+     "lag_ratio": 0.767,
+     "genes_per_transition": 4063.3,
+     "ss_share": 0.0732
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.768,
+     "lag_ratio": 0.003,
+     "genes_per_transition": 5567.7,
+     "ss_share": 0.4705
+    },
+    "(1,10]": {
+     "var_ratio": 3.43,
+     "lag_ratio": -2.206,
+     "genes_per_transition": 1631.1,
+     "ss_share": 0.3882
+    },
+    "(10,100]": {
+     "var_ratio": 9.903,
+     "lag_ratio": -11.329,
+     "genes_per_transition": 134.3,
+     "ss_share": 0.0558
+    },
+    ">100": {
+     "var_ratio": 14.448,
+     "lag_ratio": -52.409,
+     "genes_per_transition": 4.0,
+     "ss_share": 0.0027
+    }
+   },
+   "Rcorr_cls": {
+    "0": {
+     "var_ratio": 2.688,
+     "lag_ratio": null,
+     "genes_per_transition": 7164.0,
+     "ss_share": 0.0084
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.759,
+     "lag_ratio": 0.684,
+     "genes_per_transition": 4063.3,
+     "ss_share": 0.0726
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.725,
+     "lag_ratio": 0.005,
+     "genes_per_transition": 5567.7,
+     "ss_share": 0.4762
+    },
+    "(1,10]": {
+     "var_ratio": 3.112,
+     "lag_ratio": -2.111,
+     "genes_per_transition": 1631.1,
+     "ss_share": 0.3887
+    },
+    "(10,100]": {
+     "var_ratio": 6.948,
+     "lag_ratio": -8.814,
+     "genes_per_transition": 134.3,
+     "ss_share": 0.0514
+    },
+    ">100": {
+     "var_ratio": 14.296,
+     "lag_ratio": -51.848,
+     "genes_per_transition": 4.0,
+     "ss_share": 0.0027
+    }
+   },
+   "Rcorr_all": {
+    "0": {
+     "var_ratio": 3.128,
+     "lag_ratio": null,
+     "genes_per_transition": 7164.0,
+     "ss_share": 0.0096
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.804,
+     "lag_ratio": 0.765,
+     "genes_per_transition": 4063.3,
+     "ss_share": 0.0732
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.731,
+     "lag_ratio": 0.003,
+     "genes_per_transition": 5567.7,
+     "ss_share": 0.4705
+    },
+    "(1,10]": {
+     "var_ratio": 3.157,
+     "lag_ratio": -2.031,
+     "genes_per_transition": 1631.1,
+     "ss_share": 0.3882
+    },
+    "(10,100]": {
+     "var_ratio": 7.658,
+     "lag_ratio": -8.787,
+     "genes_per_transition": 134.3,
+     "ss_share": 0.0558
+    },
+    ">100": {
+     "var_ratio": 14.297,
+     "lag_ratio": -52.514,
+     "genes_per_transition": 4.0,
+     "ss_share": 0.0027
+    }
+   },
+   "Rcorr_cv2>=0_cls": {
+    "0": {
+     "var_ratio": 2.697,
+     "lag_ratio": null,
+     "genes_per_transition": 7164.0,
+     "ss_share": 0.0084
+    },
+    "(0,0.1]": {
+     "var_ratio": 1.767,
+     "lag_ratio": 0.687,
+     "genes_per_transition": 4063.3,
+     "ss_share": 0.0726
+    },
+    "(0.1,1]": {
+     "var_ratio": 1.762,
+     "lag_ratio": 0.005,
+     "genes_per_transition": 5567.7,
+     "ss_share": 0.4762
+    },
+    "(1,10]": {
+     "var_ratio": 3.387,
+     "lag_ratio": -2.298,
+     "genes_per_transition": 1631.1,
+     "ss_share": 0.3887
+    },
+    "(10,100]": {
+     "var_ratio": 9.042,
+     "lag_ratio": -11.444,
+     "genes_per_transition": 134.3,
+     "ss_share": 0.0514
+    },
+    ">100": {
+     "var_ratio": 14.45,
+     "lag_ratio": -51.848,
+     "genes_per_transition": 4.0,
+     "ss_share": 0.0027
+    }
+   }
+  },
+  "Rcorr_over_R_sum_i_i+1(sel)": {
+   "0": 1.003,
+   "(0,0.1]": 1.005,
+   "(0.1,1]": 1.021,
+   "(1,10]": 1.086,
+   "(10,100]": 1.293,
+   ">100": 1.007
+  },
+  "Rcorr_cv2>=0_over_R_sum_i_i+1(sel)": {
+   "0": 1.0,
+   "(0,0.1]": 1.0,
+   "(0.1,1]": 1.0,
+   "(1,10]": 0.998,
+   "(10,100]": 0.994,
+   ">100": 0.999
+  }
+ }
+}

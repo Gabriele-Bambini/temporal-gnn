@@ -1,0 +1,87 @@
+﻿{
+ "dataset": "gastrulation-human",
+ "checks": {
+  "nass_cache_mean_maxdiff": 0.0,
+  "nass_cache_sd_maxdiff": 0.0,
+  "lsb_cache_mean_maxdiff": 0.0,
+  "l1_target_vs_TARGET_NP_maxdiff": 5.5763890838278485e-08
+ },
+ "table": {
+  "trend": {
+   "i>=2": [
+    -0.1823,
+    0.0984,
+    0.0904,
+    0.0103
+   ],
+   "all": [
+    -0.1658,
+    0.0986,
+    0.0884,
+    0.0095
+   ]
+  },
+  "core_h1": {
+   "i>=2": [
+    0.3206,
+    0.2711,
+    0.2838,
+    0.0083
+   ],
+   "all": [
+    0.3024,
+    0.2594,
+    0.2685,
+    0.0081
+   ]
+  },
+  "core_h0.5": {
+   "i>=2": [
+    0.3252,
+    0.2752,
+    0.2852,
+    0.0071
+   ],
+   "all": [
+    0.3067,
+    0.2632,
+    0.2698,
+    0.007
+   ]
+  },
+  "kal_reversion_only": {
+   "i>=2": [
+    0.1217,
+    0.2025,
+    0.195,
+    0.0101
+   ],
+   "all": [
+    0.1125,
+    0.1934,
+    0.1884,
+    0.0095
+   ]
+  }
+ },
+ "paired_i>=2": {
+  "core_h1 - trend": {
+   "dPCC": 0.5029,
+   "better": 23,
+   "worse": 4,
+   "wilcoxon_p": 0.0
+  },
+  "core_h0.5 - trend": {
+   "dPCC": 0.5075,
+   "better": 23,
+   "worse": 4,
+   "wilcoxon_p": 0.0
+  },
+  "kal_reversion_only - trend": {
+   "dPCC": 0.3039,
+   "better": 22,
+   "worse": 5,
+   "wilcoxon_p": 0.00074
+  }
+ }
+}

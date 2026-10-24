@@ -1,0 +1,934 @@
+{
+ "dataset": "pijuan_sala",
+ "smoke": false,
+ "prereg": "docs/superpowers/prereg/2026-09-25-prereg-v02.md",
+ "test_time_removed": 6.0,
+ "full_grid": [
+  0.0,
+  1.0,
+  2.0,
+  3.0,
+  4.0,
+  5.0,
+  6.0,
+  7.0,
+  8.0
+ ],
+ "grid": [
+  0.0,
+  1.0,
+  2.0,
+  3.0,
+  4.0,
+  5.0,
+  7.0,
+  8.0
+ ],
+ "qc_loader": {
+  "dataset": "pijuan_sala2019_atlas",
+  "inputs": {
+   "counts": {
+    "file": "raw_counts.mtx.gz",
+    "bytes": 1527653430,
+    "sha256": "a032d82e4f948214e69bda04ac954fa0a322b5bc0c3928a7ef61a8ffdb89c809",
+    "matches_prereg": true
+   },
+   "genes": {
+    "file": "genes.tsv.gz",
+    "bytes": 228898,
+    "sha256": "e1dbb4662b224fd77f6c3ac52c5882da2abd1013daf869cb2fb99a004044f85f",
+    "matches_prereg": true
+   },
+   "meta": {
+    "file": "meta.tab.gz",
+    "bytes": 4941002,
+    "sha256": "1b5e09b6c16803278f9b2d427dff0888f20d41889de3369eebbae840cc886988",
+    "matches_prereg": true
+   }
+  },
+  "test_time": 6.0,
+  "matrix": {
+   "genes": 29452,
+   "cells": 139331,
+   "entries": 483512215,
+   "entries_kept_excl_test": 316559154
+  },
+  "filters": {
+   "rule": "drop doublet == TRUE, stripped == TRUE and stage == mixed_gastrulation",
+   "flagged_doublet": 13556,
+   "flagged_stripped": 9466,
+   "stage_mixed_gastrulation": 9325,
+   "removed": 30474
+  },
+  "cells_kept": 108857,
+  "genes": 29452,
+  "per_time": {
+   "0": 3484,
+   "1": 2075,
+   "2": 14749,
+   "3": 13537,
+   "4": 10994,
+   "5": 14493,
+   "6": 16681,
+   "7": 15935,
+   "8": 16909
+  },
+  "per_stage": {
+   "E6.5": 3484,
+   "E6.75": 2075,
+   "E7.0": 14749,
+   "E7.25": 13537,
+   "E7.5": 10994,
+   "E7.75": 14493,
+   "E8.0": 16681,
+   "E8.25": 15935,
+   "E8.5": 16909
+  },
+  "per_stage_pool": {
+   "E6.5": {
+    "1": 337,
+    "15": 2041,
+    "5": 1106
+   },
+   "E6.75": {
+    "7": 2075
+   },
+   "E7.0": {
+    "12": 2665,
+    "23": 9918,
+    "9": 2166
+   },
+   "E7.25": {
+    "18": 1313,
+    "20": 12224
+   },
+   "E7.5": {
+    "16": 7471,
+    "2": 321,
+    "3": 400,
+    "4": 255,
+    "6": 2547
+   },
+   "E7.75": {
+    "11": 8795,
+    "8": 5698
+   },
+   "E8.0": {
+    "13": 4479,
+    "24": 12202
+   },
+   "E8.25": {
+    "19": 11961,
+    "21": 3974
+   },
+   "E8.5": {
+    "14": 3611,
+    "22": 6460,
+    "25": 3652,
+    "26": 3186
+   }
+  },
+  "stage_pool_batches": {
+   "E6.5": {
+    "1": [
+     "1"
+    ],
+    "15": [
+     "2"
+    ],
+    "5": [
+     "1"
+    ]
+   },
+   "E6.75": {
+    "7": [
+     "1"
+    ]
+   },
+   "E7.0": {
+    "12": [
+     "2"
+    ],
+    "23": [
+     "3"
+    ],
+    "9": [
+     "1"
+    ]
+   },
+   "E7.25": {
+    "18": [
+     "2"
+    ],
+    "20": [
+     "2"
+    ]
+   },
+   "E7.5": {
+    "16": [
+     "2"
+    ],
+    "2": [
+     "1"
+    ],
+    "3": [
+     "1"
+    ],
+    "4": [
+     "1"
+    ],
+    "6": [
+     "1"
+    ]
+   },
+   "E7.75": {
+    "11": [
+     "2"
+    ],
+    "8": [
+     "1"
+    ]
+   },
+   "E8.0": {
+    "13": [
+     "2"
+    ],
+    "24": [
+     "3"
+    ]
+   },
+   "E8.25": {
+    "19": [
+     "2"
+    ],
+    "21": [
+     "2"
+    ]
+   },
+   "E8.5": {
+    "14": [
+     "2"
+    ],
+    "22": [
+     "3"
+    ],
+    "25": [
+     "3"
+    ],
+    "26": [
+     "3"
+    ]
+   }
+  },
+  "stages_with_pools_in_several_batches": [
+   "E6.5",
+   "E7.0",
+   "E7.5",
+   "E7.75",
+   "E8.0",
+   "E8.5"
+  ],
+  "expected_counts": {
+   "ok": true,
+   "mismatches": {},
+   "expected": {
+    "E6.5": 3484,
+    "E6.75": 2075,
+    "E7.0": 14749,
+    "E7.25": 13537,
+    "E7.5": 10994,
+    "E7.75": 14493,
+    "E8.0": 16681,
+    "E8.25": 15935,
+    "E8.5": 16909
+   }
+  },
+  "non_integer_entries_excl_test": 0,
+  "meta_cell_names_sequential": true,
+  "duplicated_gene_symbols": 41,
+  "empty_gene_symbols": 0,
+  "replicate": "all (the pools of a stage are pooled; 'pool' kept for replicate floors and robustness); documented deviation from Step 5 'replicate = pool', decisions.md 2026-09-26 afternoon",
+  "time_unit": "quarter day from E6.5",
+  "chunk_entries": 20000000,
+  "gene_symbols_renamed": [
+   "Sept2|ENSMUSG00000112508",
+   "Gm15853|ENSMUSG00000089853",
+   "Gm16701|ENSMUSG00000097823",
+   "Gm2464|ENSMUSG00000097338",
+   "Jakmip1|ENSMUSG00000113373",
+   "Dancr|ENSMUSG00000053656",
+   "Ugt2a1|ENSMUSG00000106677",
+   "Btbd8|ENSMUSG00000110859",
+   "D130017N08Rik|ENSMUSG00000105354",
+   "U2af1l4|ENSMUSG00000109378",
+   "A230057D06Rik|ENSMUSG00000108824",
+   "A230057D06Rik|ENSMUSG00000109394",
+   "Itgam|ENSMUSG00000108596",
+   "Lilrb4a|ENSMUSG00000112148",
+   "Sumo3|ENSMUSG00000112241",
+   "Gm2696|ENSMUSG00000112600",
+   "Adat3|ENSMUSG00000035370",
+   "Dohh|ENSMUSG00000113262",
+   "Gm3055|ENSMUSG00000112160",
+   "Map2k7|ENSMUSG00000109061",
+   "Raver1|ENSMUSG00000010205",
+   "Olfr912|ENSMUSG00000111448",
+   "Rnf26|ENSMUSG00000053128",
+   "Spata22|ENSMUSG00000112920",
+   "St6galnac2|ENSMUSG00000110170",
+   "Zfp935|ENSMUSG00000055228",
+   "Srp54a|ENSMUSG00000112449",
+   "Gm16381|ENSMUSG00000113951",
+   "4930556M19Rik|ENSMUSG00000096971",
+   "Pcdha11|ENSMUSG00000102206",
+   "Nudt8|ENSMUSG00000024869",
+   "Ccl21b|ENSMUSG00000094121",
+   "Fam205a2|ENSMUSG00000079774",
+   "Il11ra2|ENSMUSG00000095456",
+   "Ccl27a|ENSMUSG00000095247",
+   "Ccl21b|ENSMUSG00000096873",
+   "Gm3286|ENSMUSG00000094337",
+   "Ccl27a|ENSMUSG00000093828",
+   "Il11ra2|ENSMUSG00000095623",
+   "Ccl19|ENSMUSG00000094661",
+   "Ccl21a|ENSMUSG00000095320"
+  ],
+  "qc_gate": {
+   "min_stage_cells": 500,
+   "dropped_times": [],
+   "test_time": 6.0,
+   "test_time_present": true,
+   "test_time_dropped": false
+  }
+ },
+ "qc_gate": {
+  "min_cells": 500,
+  "stage_counts": {
+   "0.0": 3484,
+   "1.0": 2075,
+   "2.0": 14749,
+   "3.0": 13537,
+   "4.0": 10994,
+   "5.0": 14493,
+   "7.0": 15935,
+   "8.0": 16909
+  },
+  "dropped_stages": {}
+ },
+ "folds_requested": null,
+ "dropped_folds": {},
+ "designs": {
+  "P1": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "removed": [
+    1.0
+   ],
+   "obs_times": [
+    0.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "source": 0.0,
+   "t_next": 2.0,
+   "boundary_source": true,
+   "centre": 1.0,
+   "val_time": 7.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    8.0
+   ],
+   "g": 1.0,
+   "span": 8.0,
+   "predictions": [
+    {
+     "target": 1.0,
+     "source": 0.0,
+     "t_next": 2.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.125,
+     "frac": 0.5
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "P2": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "removed": [
+    2.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "source": 1.0,
+   "t_next": 3.0,
+   "boundary_source": false,
+   "centre": 2.0,
+   "val_time": 7.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    1.0,
+    3.0,
+    4.0,
+    5.0,
+    8.0
+   ],
+   "g": 1.0,
+   "span": 8.0,
+   "predictions": [
+    {
+     "target": 2.0,
+     "source": 1.0,
+     "t_next": 3.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.125,
+     "frac": 0.5
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "P3": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "removed": [
+    3.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    2.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "source": 2.0,
+   "t_next": 4.0,
+   "boundary_source": false,
+   "centre": 3.0,
+   "val_time": 7.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    1.0,
+    2.0,
+    4.0,
+    5.0,
+    8.0
+   ],
+   "g": 1.0,
+   "span": 8.0,
+   "predictions": [
+    {
+     "target": 3.0,
+     "source": 2.0,
+     "t_next": 4.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.125,
+     "frac": 0.5
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "P4": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "removed": [
+    4.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "source": 3.0,
+   "t_next": 5.0,
+   "boundary_source": false,
+   "centre": 4.0,
+   "val_time": 7.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    8.0
+   ],
+   "g": 1.0,
+   "span": 8.0,
+   "predictions": [
+    {
+     "target": 4.0,
+     "source": 3.0,
+     "t_next": 5.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.125,
+     "frac": 0.5
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "P5": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "removed": [
+    5.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    7.0,
+    8.0
+   ],
+   "source": 4.0,
+   "t_next": 7.0,
+   "boundary_source": false,
+   "centre": 5.0,
+   "val_time": 1.0,
+   "v_prev": 0.0,
+   "fit_times": [
+    0.0,
+    2.0,
+    3.0,
+    4.0,
+    7.0,
+    8.0
+   ],
+   "g": 1.0,
+   "span": 8.0,
+   "predictions": [
+    {
+     "target": 5.0,
+     "source": 4.0,
+     "t_next": 7.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.125,
+     "frac": 0.3333333333333333
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "P7": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "removed": [
+    7.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    8.0
+   ],
+   "source": 5.0,
+   "t_next": 8.0,
+   "boundary_source": false,
+   "centre": 7.0,
+   "val_time": 1.0,
+   "v_prev": 0.0,
+   "fit_times": [
+    0.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    8.0
+   ],
+   "g": 1.0,
+   "span": 8.0,
+   "predictions": [
+    {
+     "target": 7.0,
+     "source": 5.0,
+     "t_next": 8.0,
+     "kind": "near",
+     "horizon": 2.0,
+     "h_rel": 2.0,
+     "h_span": 0.25,
+     "frac": 0.6666666666666666
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "P12": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "removed": [
+    1.0,
+    2.0
+   ],
+   "obs_times": [
+    0.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "source": 0.0,
+   "t_next": 3.0,
+   "boundary_source": true,
+   "centre": 1.5,
+   "val_time": 7.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    3.0,
+    4.0,
+    5.0,
+    8.0
+   ],
+   "g": 1.0,
+   "span": 8.0,
+   "predictions": [
+    {
+     "target": 1.0,
+     "source": 0.0,
+     "t_next": 3.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.125,
+     "frac": 0.3333333333333333
+    },
+    {
+     "target": 2.0,
+     "source": 0.0,
+     "t_next": 3.0,
+     "kind": "far",
+     "horizon": 2.0,
+     "h_rel": 2.0,
+     "h_span": 0.25,
+     "frac": 0.6666666666666666
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "P34": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "removed": [
+    3.0,
+    4.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "source": 2.0,
+   "t_next": 5.0,
+   "boundary_source": false,
+   "centre": 3.5,
+   "val_time": 7.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    8.0
+   ],
+   "g": 1.0,
+   "span": 8.0,
+   "predictions": [
+    {
+     "target": 3.0,
+     "source": 2.0,
+     "t_next": 5.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.125,
+     "frac": 0.3333333333333333
+    },
+    {
+     "target": 4.0,
+     "source": 2.0,
+     "t_next": 5.0,
+     "kind": "far",
+     "horizon": 2.0,
+     "h_rel": 2.0,
+     "h_span": 0.25,
+     "frac": 0.6666666666666666
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "P234": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "removed": [
+    2.0,
+    3.0,
+    4.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    5.0,
+    7.0,
+    8.0
+   ],
+   "source": 1.0,
+   "t_next": 5.0,
+   "boundary_source": false,
+   "centre": 3.0,
+   "val_time": 7.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    1.0,
+    5.0,
+    8.0
+   ],
+   "g": 1.0,
+   "span": 8.0,
+   "predictions": [
+    {
+     "target": 2.0,
+     "source": 1.0,
+     "t_next": 5.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.125,
+     "frac": 0.25
+    },
+    {
+     "target": 4.0,
+     "source": 1.0,
+     "t_next": 5.0,
+     "kind": "far",
+     "horizon": 3.0,
+     "h_rel": 3.0,
+     "h_span": 0.375,
+     "frac": 0.75
+    }
+   ],
+   "changed_by_qc": false
+  }
+ },
+ "genes": {
+  "P1": {
+   "n_selected": 1314,
+   "n_fit_cells": 74166,
+   "n_prior_regulators": 431
+  },
+  "P2": {
+   "n_selected": 1322,
+   "n_fit_cells": 61492,
+   "n_prior_regulators": 439
+  },
+  "P3": {
+   "n_selected": 1319,
+   "n_fit_cells": 62704,
+   "n_prior_regulators": 439
+  },
+  "P4": {
+   "n_selected": 1317,
+   "n_fit_cells": 65247,
+   "n_prior_regulators": 432
+  },
+  "P5": {
+   "n_selected": 1314,
+   "n_fit_cells": 75608,
+   "n_prior_regulators": 432
+  },
+  "P7": {
+   "n_selected": 1314,
+   "n_fit_cells": 74166,
+   "n_prior_regulators": 431
+  },
+  "P12": {
+   "n_selected": 1324,
+   "n_fit_cells": 59417,
+   "n_prior_regulators": 440
+  },
+  "P34": {
+   "n_selected": 1320,
+   "n_fit_cells": 51710,
+   "n_prior_regulators": 441
+  },
+  "P234": {
+   "n_selected": 1331,
+   "n_fit_cells": 36961,
+   "n_prior_regulators": 445
+  }
+ },
+ "admitted_to_step6": [
+  "base",
+  "noft",
+  "gated",
+  "transfer"
+ ],
+ "m_arm": null,
+ "m_recipe": null,
+ "config": {
+  "hidden": 128,
+  "depth": 3,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "batch_size": 256,
+  "n_iters": 8000,
+  "sigma_min": 0.01,
+  "coupling": "ot",
+  "n_ode_steps": 20,
+  "ode_method": "rk4",
+  "time_embed_dim": 32,
+  "cond_dim": 8,
+  "time_conditioning": "delta",
+  "eval_every": 250,
+  "patience": 8,
+  "seed": 0,
+  "shuffle_biological_time": false,
+  "ema_decay": 0.999,
+  "grad_clip": 1.0,
+  "pair_mode": "consecutive",
+  "clock": "duration",
+  "path": "spline",
+  "chain": "ot",
+  "spline_kind": "natural",
+  "field_time": "none",
+  "path_center": "linear",
+  "marginal_iters": 1000,
+  "marginal_weight": 1.0,
+  "marginal_prior": 1.0,
+  "marginal_batch": 256,
+  "marginal_steps": 8,
+  "marginal_metric": "energy",
+  "marginal_window": 1.0,
+  "marginal_lr": 0.0003,
+  "marginal_eval_every": 25,
+  "marginal_patience": 10
+ },
+ "seeds": [
+  0,
+  1
+ ],
+ "cap": 3000,
+ "min_group_cells": 200,
+ "n_hvg": 1000,
+ "min_detect": 0.01,
+ "mlp": {
+  "hidden": 128,
+  "n_iters": 2000
+ },
+ "n_kept_cells": 23075,
+ "seconds": 7022.2,
+ "complete": true,
+ "note": "per-data-set run; the rules pool both data sets (--decide)"
+}

@@ -1,0 +1,1816 @@
+{
+ "l1": {
+  "trend": [
+   0.1769,
+   0.2253,
+   0.2209
+  ],
+  "persist|Kany": [
+   -0.0364,
+   0.101,
+   0.1383
+  ],
+  "persist|L3|Kany": [
+   -0.0522,
+   0.1142,
+   0.1597
+  ],
+  "lin1|Kany": [
+   0.109,
+   0.2054,
+   0.2204
+  ],
+  "balanced|Kany": [
+   0.1506,
+   0.232,
+   0.2115
+  ],
+  "sink_abs|Kany": [
+   0.0974,
+   0.1956,
+   0.2174
+  ],
+  "sink_norm|Kany": [
+   0.1403,
+   0.2242,
+   0.2093
+  ],
+  "kluot_abs|Kany": [
+   0.1297,
+   0.2271,
+   0.2077
+  ],
+  "full|Kany": [
+   0.083,
+   0.1897,
+   0.2022
+  ],
+  "sink_any|Kany": [
+   0.0949,
+   0.2001,
+   0.2107
+  ],
+  "balanced|K4": [
+   0.0863,
+   0.2137,
+   0.1937
+  ],
+  "sink_abs|K4": [
+   0.0284,
+   0.1746,
+   0.2076
+  ],
+  "sink_norm|K4": [
+   0.0762,
+   0.2013,
+   0.2043
+  ],
+  "oracle|K4|Lsel": [
+   0.0524,
+   0.1595,
+   0.2415
+  ],
+  "balanced|K8": [
+   0.1468,
+   0.2301,
+   0.2124
+  ],
+  "sink_abs|K8": [
+   0.0916,
+   0.1955,
+   0.2174
+  ],
+  "sink_norm|K8": [
+   0.0742,
+   0.2001,
+   0.2011
+  ],
+  "oracle|K8|Lsel": [
+   0.1467,
+   0.1954,
+   0.25
+  ],
+  "balanced|K16": [
+   0.1629,
+   0.2325,
+   0.2203
+  ],
+  "sink_abs|K16": [
+   0.1044,
+   0.1985,
+   0.2196
+  ],
+  "sink_norm|K16": [
+   0.0882,
+   0.2019,
+   0.2086
+  ],
+  "oracle|K16|Lsel": [
+   0.1636,
+   0.2025,
+   0.2564
+  ],
+  "oracle|Ksel|Lsel": [
+   0.1626,
+   0.2004,
+   0.2552
+  ],
+  "paired": {
+   "sink_abs|Kany - balanced|Kany": {
+    "dPCC": {
+     "mean": -0.0576,
+     "wins": 4,
+     "losses": 8,
+     "p_wilcoxon": 0.2334
+    },
+    "dJ": {
+     "mean": -0.0302,
+     "wins": 3,
+     "losses": 9,
+     "p_wilcoxon": 0.1099
+    }
+   },
+   "sink_norm|Kany - balanced|Kany": {
+    "dPCC": {
+     "mean": -0.0112,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.791
+    },
+    "dJ": {
+     "mean": -0.0073,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.8501
+    }
+   },
+   "kluot_abs|Kany - balanced|Kany": {
+    "dPCC": {
+     "mean": -0.0226,
+     "wins": 5,
+     "losses": 7,
+     "p_wilcoxon": 0.5693
+    },
+    "dJ": {
+     "mean": -0.0107,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.6772
+    }
+   },
+   "sink_norm|Kany - lin1|Kany": {
+    "dPCC": {
+     "mean": 0.0339,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.4238
+    },
+    "dJ": {
+     "mean": 0.014,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.5693
+    }
+   },
+   "sink_any|Kany - persist|Kany": {
+    "dPCC": {
+     "mean": 0.1422,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.2661
+    },
+    "dJ": {
+     "mean": 0.1093,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0342
+    }
+   },
+   "balanced|Kany - lin1|Kany": {
+    "dPCC": {
+     "mean": 0.045,
+     "wins": 8,
+     "losses": 4,
+     "p_wilcoxon": 0.064
+    },
+    "dJ": {
+     "mean": 0.0214,
+     "wins": 8,
+     "losses": 4,
+     "p_wilcoxon": 0.1294
+    }
+   }
+  },
+  "selection_shares::sink_norm|Kany": {
+   "lam": {
+    "lam0.1": 6,
+    "lam1": 1,
+    "lam0.25": 4,
+    "lam0.5": 1
+   },
+   "K": {
+    "K4": 9,
+    "K8": 1,
+    "K16": 2
+   },
+   "L": {
+    "L1": 12
+   },
+   "R": {
+    "R1": 7,
+    "R3": 5
+   },
+   "fam": {
+    "sink_norm": 12
+   }
+  },
+  "selection_shares::sink_abs|Kany": {
+   "lam": {
+    "lam0.1": 8,
+    "lam0.5": 4
+   },
+   "K": {
+    "K4": 5,
+    "K8": 5,
+    "K16": 2
+   },
+   "L": {
+    "L1": 12
+   },
+   "R": {
+    "R1": 7,
+    "R3": 5
+   },
+   "fam": {
+    "sink_abs": 12
+   }
+  },
+  "selection_shares::balanced|Kany": {
+   "lam": {},
+   "K": {
+    "K4": 7,
+    "K8": 1,
+    "K16": 4
+   },
+   "L": {
+    "L1": 12
+   },
+   "R": {
+    "R1": 7,
+    "R3": 5
+   },
+   "fam": {
+    "balanced": 12
+   }
+  },
+  "selection_shares::full|Kany": {
+   "lam": {
+    "lam0.1": 1,
+    "lam0.5": 3,
+    "lam0.25": 3
+   },
+   "K": {
+    "K4": 7,
+    "K8": 2,
+    "K16": 3
+   },
+   "L": {
+    "L1": 12
+   },
+   "R": {
+    "R3": 6,
+    "R1": 3
+   },
+   "fam": {
+    "persist": 1,
+    "sink_abs": 5,
+    "lin1": 2,
+    "sink_norm": 2,
+    "kluot_abs": 2
+   }
+  }
+ },
+ "linear": {
+  "trend": [
+   0.4255,
+   0.2916,
+   0.3584
+  ],
+  "persist|Kany": [
+   -0.1611,
+   0.1599,
+   0.2759
+  ],
+  "persist|L3|Kany": [
+   -0.1611,
+   0.1599,
+   0.2759
+  ],
+  "lin1|Kany": [
+   0.2868,
+   0.2749,
+   0.3355
+  ],
+  "balanced|Kany": [
+   0.3149,
+   0.2937,
+   0.3437
+  ],
+  "sink_abs|Kany": [
+   0.3126,
+   0.2926,
+   0.346
+  ],
+  "sink_norm|Kany": [
+   0.3009,
+   0.2893,
+   0.3442
+  ],
+  "kluot_abs|Kany": [
+   0.2917,
+   0.2844,
+   0.3399
+  ],
+  "full|Kany": [
+   0.2797,
+   0.288,
+   0.3326
+  ],
+  "sink_any|Kany": [
+   0.3015,
+   0.2887,
+   0.3441
+  ],
+  "balanced|K4": [
+   0.2173,
+   0.2656,
+   0.3313
+  ],
+  "sink_abs|K4": [
+   0.1487,
+   0.2589,
+   0.3254
+  ],
+  "sink_norm|K4": [
+   0.1879,
+   0.2585,
+   0.3229
+  ],
+  "oracle|K4|Lsel": [
+   -0.1088,
+   0.2354,
+   0.2558
+  ],
+  "balanced|K8": [
+   0.3484,
+   0.2856,
+   0.3469
+  ],
+  "sink_abs|K8": [
+   0.3596,
+   0.287,
+   0.3521
+  ],
+  "sink_norm|K8": [
+   0.3467,
+   0.2856,
+   0.3497
+  ],
+  "oracle|K8|Lsel": [
+   0.1395,
+   0.2715,
+   0.3122
+  ],
+  "balanced|K16": [
+   0.366,
+   0.2924,
+   0.3513
+  ],
+  "sink_abs|K16": [
+   0.3747,
+   0.2907,
+   0.3531
+  ],
+  "sink_norm|K16": [
+   0.3614,
+   0.2898,
+   0.3517
+  ],
+  "oracle|K16|Lsel": [
+   0.1583,
+   0.28,
+   0.317
+  ],
+  "oracle|Ksel|Lsel": [
+   0.1576,
+   0.2769,
+   0.3153
+  ],
+  "paired": {
+   "sink_abs|Kany - balanced|Kany": {
+    "dPCC": {
+     "mean": -0.0025,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.9097
+    },
+    "dJ": {
+     "mean": -0.0004,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 1.0
+    }
+   },
+   "sink_norm|Kany - balanced|Kany": {
+    "dPCC": {
+     "mean": -0.0152,
+     "wins": 5,
+     "losses": 7,
+     "p_wilcoxon": 0.1763
+    },
+    "dJ": {
+     "mean": -0.0065,
+     "wins": 4,
+     "losses": 8,
+     "p_wilcoxon": 0.2334
+    }
+   },
+   "kluot_abs|Kany - balanced|Kany": {
+    "dPCC": {
+     "mean": -0.0252,
+     "wins": 2,
+     "losses": 10,
+     "p_wilcoxon": 0.0093
+    },
+    "dJ": {
+     "mean": -0.0131,
+     "wins": 2,
+     "losses": 10,
+     "p_wilcoxon": 0.0093
+    }
+   },
+   "sink_norm|Kany - lin1|Kany": {
+    "dPCC": {
+     "mean": 0.0152,
+     "wins": 5,
+     "losses": 7,
+     "p_wilcoxon": 0.9697
+    },
+    "dJ": {
+     "mean": 0.0134,
+     "wins": 5,
+     "losses": 7,
+     "p_wilcoxon": 0.791
+    }
+   },
+   "sink_any|Kany - persist|Kany": {
+    "dPCC": {
+     "mean": 0.5011,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0015
+    },
+    "dJ": {
+     "mean": 0.2381,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0034
+    }
+   },
+   "balanced|Kany - lin1|Kany": {
+    "dPCC": {
+     "mean": 0.0304,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.3394
+    },
+    "dJ": {
+     "mean": 0.0199,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.1763
+    }
+   }
+  },
+  "selection_shares::sink_norm|Kany": {
+   "lam": {
+    "lam0.1": 8,
+    "lam1": 2,
+    "lam0.5": 2
+   },
+   "K": {
+    "K4": 5,
+    "K8": 5,
+    "K16": 2
+   },
+   "L": {
+    "L3": 1,
+    "L1": 11
+   },
+   "R": {
+    "R1": 12
+   },
+   "fam": {
+    "sink_norm": 12
+   }
+  },
+  "selection_shares::sink_abs|Kany": {
+   "lam": {
+    "lam0.1": 11,
+    "lam0.5": 1
+   },
+   "K": {
+    "K4": 5,
+    "K8": 5,
+    "K16": 2
+   },
+   "L": {
+    "L3": 1,
+    "L1": 11
+   },
+   "R": {
+    "R1": 12
+   },
+   "fam": {
+    "sink_abs": 12
+   }
+  },
+  "selection_shares::balanced|Kany": {
+   "lam": {},
+   "K": {
+    "K4": 5,
+    "K8": 4,
+    "K16": 3
+   },
+   "L": {
+    "L3": 1,
+    "L1": 11
+   },
+   "R": {
+    "R1": 12
+   },
+   "fam": {
+    "balanced": 12
+   }
+  },
+  "selection_shares::full|Kany": {
+   "lam": {
+    "lam0.1": 3
+   },
+   "K": {
+    "K4": 5,
+    "K8": 5,
+    "K16": 2
+   },
+   "L": {
+    "L3": 1,
+    "L1": 11
+   },
+   "R": {
+    "R1": 7,
+    "R3": 3
+   },
+   "fam": {
+    "persist": 1,
+    "lin1": 1,
+    "balanced": 4,
+    "kluot_abs": 3,
+    "sink_norm": 1,
+    "sink_abs": 2
+   }
+  }
+ },
+ "orig": {
+  "trend": [
+   -0.3903,
+   0.0396,
+   0.0378
+  ],
+  "persist|Kany": [
+   0.4171,
+   0.2326,
+   0.4194
+  ],
+  "persist|L3|Kany": [
+   0.4171,
+   0.2326,
+   0.4194
+  ],
+  "lin1|Kany": [
+   0.3855,
+   0.215,
+   0.4047
+  ],
+  "balanced|Kany": [
+   0.3877,
+   0.2155,
+   0.4068
+  ],
+  "sink_abs|Kany": [
+   0.4412,
+   0.2586,
+   0.4426
+  ],
+  "sink_norm|Kany": [
+   0.4648,
+   0.2707,
+   0.4366
+  ],
+  "kluot_abs|Kany": [
+   0.3879,
+   0.2144,
+   0.4064
+  ],
+  "full|Kany": [
+   0.4562,
+   0.2607,
+   0.4462
+  ],
+  "sink_any|Kany": [
+   0.449,
+   0.2562,
+   0.4396
+  ],
+  "balanced|K4": [
+   0.3886,
+   0.2133,
+   0.409
+  ],
+  "sink_abs|K4": [
+   0.4284,
+   0.2556,
+   0.4295
+  ],
+  "sink_norm|K4": [
+   0.4445,
+   0.257,
+   0.4294
+  ],
+  "oracle|K4|Lsel": [
+   0.4424,
+   0.2489,
+   0.4369
+  ],
+  "balanced|K8": [
+   0.3943,
+   0.22,
+   0.3997
+  ],
+  "sink_abs|K8": [
+   0.4424,
+   0.2605,
+   0.4435
+  ],
+  "sink_norm|K8": [
+   0.4658,
+   0.2727,
+   0.4388
+  ],
+  "oracle|K8|Lsel": [
+   0.4398,
+   0.2787,
+   0.4207
+  ],
+  "balanced|K16": [
+   0.401,
+   0.2238,
+   0.4014
+  ],
+  "sink_abs|K16": [
+   0.4435,
+   0.2585,
+   0.4435
+  ],
+  "sink_norm|K16": [
+   0.467,
+   0.2746,
+   0.4383
+  ],
+  "oracle|K16|Lsel": [
+   0.4409,
+   0.281,
+   0.4187
+  ],
+  "oracle|Ksel|Lsel": [
+   0.4398,
+   0.278,
+   0.4171
+  ],
+  "paired": {
+   "sink_abs|Kany - balanced|Kany": {
+    "dPCC": {
+     "mean": 0.058,
+     "wins": 10,
+     "losses": 2,
+     "p_wilcoxon": 0.0049
+    },
+    "dJ": {
+     "mean": 0.0478,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.0015
+    }
+   },
+   "sink_norm|Kany - balanced|Kany": {
+    "dPCC": {
+     "mean": 0.0835,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.001
+    },
+    "dJ": {
+     "mean": 0.0585,
+     "wins": 11,
+     "losses": 1,
+     "p_wilcoxon": 0.001
+    }
+   },
+   "kluot_abs|Kany - balanced|Kany": {
+    "dPCC": {
+     "mean": 0.0002,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.791
+    },
+    "dJ": {
+     "mean": -0.0005,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.8501
+    }
+   },
+   "sink_norm|Kany - lin1|Kany": {
+    "dPCC": {
+     "mean": 0.0858,
+     "wins": 12,
+     "losses": 0,
+     "p_wilcoxon": 0.0005
+    },
+    "dJ": {
+     "mean": 0.0602,
+     "wins": 12,
+     "losses": 0,
+     "p_wilcoxon": 0.0005
+    }
+   },
+   "sink_any|Kany - persist|Kany": {
+    "dPCC": {
+     "mean": 0.0346,
+     "wins": 7,
+     "losses": 5,
+     "p_wilcoxon": 0.1514
+    },
+    "dJ": {
+     "mean": 0.0274,
+     "wins": 9,
+     "losses": 3,
+     "p_wilcoxon": 0.0425
+    }
+   },
+   "balanced|Kany - lin1|Kany": {
+    "dPCC": {
+     "mean": 0.0023,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.7334
+    },
+    "dJ": {
+     "mean": 0.0017,
+     "wins": 6,
+     "losses": 6,
+     "p_wilcoxon": 0.791
+    }
+   }
+  },
+  "selection_shares::sink_norm|Kany": {
+   "lam": {
+    "lam0.1": 12
+   },
+   "K": {
+    "K4": 4,
+    "K8": 7,
+    "K16": 1
+   },
+   "L": {
+    "L3": 11,
+    "L1": 1
+   },
+   "R": {
+    "R1": 1,
+    "R3": 11
+   },
+   "fam": {
+    "sink_norm": 12
+   }
+  },
+  "selection_shares::sink_abs|Kany": {
+   "lam": {
+    "lam0.1": 12
+   },
+   "K": {
+    "K4": 4,
+    "K8": 8
+   },
+   "L": {
+    "L3": 5,
+    "L1": 7
+   },
+   "R": {
+    "R1": 1,
+    "R3": 11
+   },
+   "fam": {
+    "sink_abs": 12
+   }
+  },
+  "selection_shares::balanced|Kany": {
+   "lam": {},
+   "K": {
+    "K4": 11,
+    "K16": 1
+   },
+   "L": {
+    "L3": 12
+   },
+   "R": {
+    "R1": 3,
+    "R3": 9
+   },
+   "fam": {
+    "balanced": 12
+   }
+  },
+  "selection_shares::full|Kany": {
+   "lam": {
+    "lam0.1": 11
+   },
+   "K": {
+    "K4": 4,
+    "K8": 7,
+    "K16": 1
+   },
+   "L": {
+    "L3": 8,
+    "L1": 4
+   },
+   "R": {
+    "R3": 11
+   },
+   "fam": {
+    "persist": 1,
+    "sink_abs": 6,
+    "sink_norm": 5
+   }
+  }
+ },
+ "composition_tv_vs_oracle_i>=2": {
+  "persist|K4": {
+   "best_config_hindsight": "persist|K4|L1",
+   "tv_best": 0.048,
+   "tv_median_over_hp": 0.048
+  },
+  "persist|K8": {
+   "best_config_hindsight": "persist|K8|L1",
+   "tv_best": 0.0816,
+   "tv_median_over_hp": 0.0816
+  },
+  "persist|K16": {
+   "best_config_hindsight": "persist|K16|L1",
+   "tv_best": 0.0977,
+   "tv_median_over_hp": 0.0977
+  },
+  "lin1|K4": {
+   "best_config_hindsight": "lin1|K4|L1",
+   "tv_best": 0.0678,
+   "tv_median_over_hp": 0.0678
+  },
+  "lin1|K8": {
+   "best_config_hindsight": "lin1|K8|L1",
+   "tv_best": 0.0818,
+   "tv_median_over_hp": 0.0818
+  },
+  "lin1|K16": {
+   "best_config_hindsight": "lin1|K16|L1",
+   "tv_best": 0.0823,
+   "tv_median_over_hp": 0.0823
+  },
+  "balanced|K4": {
+   "best_config_hindsight": "balanced|K4|L1|R3|eps0.2",
+   "tv_best": 0.0584,
+   "tv_median_over_hp": 0.059
+  },
+  "balanced|K8": {
+   "best_config_hindsight": "balanced|K8|L1|R1|eps0.05",
+   "tv_best": 0.0747,
+   "tv_median_over_hp": 0.0784
+  },
+  "balanced|K16": {
+   "best_config_hindsight": "balanced|K16|L1|R1|eps0.05",
+   "tv_best": 0.0797,
+   "tv_median_over_hp": 0.0837
+  },
+  "sink_abs|K4": {
+   "best_config_hindsight": "sink_abs|K4|L1|R1|eps0.2|lam0.1",
+   "tv_best": 0.0587,
+   "tv_median_over_hp": 0.0835
+  },
+  "sink_abs|K8": {
+   "best_config_hindsight": "sink_abs|K8|L1|R1|eps0.05|lam1",
+   "tv_best": 0.076,
+   "tv_median_over_hp": 0.1286
+  },
+  "sink_abs|K16": {
+   "best_config_hindsight": "sink_abs|K16|L1|R1|eps0.05|lam0.1",
+   "tv_best": 0.0807,
+   "tv_median_over_hp": 0.1399
+  },
+  "sink_norm|K4": {
+   "best_config_hindsight": "sink_norm|K4|L1|R3|eps0.05|lam0.25",
+   "tv_best": 0.0468,
+   "tv_median_over_hp": 0.059
+  },
+  "sink_norm|K8": {
+   "best_config_hindsight": "sink_norm|K8|L1|R1|eps0.05|lam0.1",
+   "tv_best": 0.0744,
+   "tv_median_over_hp": 0.0791
+  },
+  "sink_norm|K16": {
+   "best_config_hindsight": "sink_norm|K16|L1|R1|eps0.05|lam0.1",
+   "tv_best": 0.0785,
+   "tv_median_over_hp": 0.0849
+  },
+  "kluot_abs|K4": {
+   "best_config_hindsight": "kluot_abs|K4|L1|R3|eps0.2|tau1",
+   "tv_best": 0.0536,
+   "tv_median_over_hp": 0.057
+  },
+  "kluot_abs|K8": {
+   "best_config_hindsight": "kluot_abs|K8|L1|R3|eps0.05|tau0.1",
+   "tv_best": 0.0706,
+   "tv_median_over_hp": 0.075
+  },
+  "kluot_abs|K16": {
+   "best_config_hindsight": "kluot_abs|K16|L1|R3|eps0.05|tau0.1",
+   "tv_best": 0.0741,
+   "tv_median_over_hp": 0.0812
+  }
+ },
+ "sink_interpretation_last_fit": {
+  "K4": {
+   "markers": [
+    [
+     "PPP1R1B",
+     "S100B",
+     "ADAMTS16",
+     "CXCL12",
+     "GSTA5",
+     "EHF",
+     "FMO2",
+     "CYR61"
+    ],
+    [
+     "SLC30A8",
+     "GIP",
+     "FRZB",
+     "PRSS50",
+     "GCG",
+     "IAPP",
+     "BC048546",
+     "INS"
+    ],
+    [
+     "NHLH1",
+     "IRS4",
+     "MBOAT4",
+     "SST",
+     "DLL3",
+     "CCK",
+     "ST8SIA2",
+     "GHRL"
+    ],
+    [
+     "NOTUM",
+     "PPP1R14A",
+     "EYA2",
+     "CRYBB1",
+     "SLC39A2",
+     "NKD1",
+     "GADD45A",
+     "KIRREL2"
+    ]
+   ],
+   "sink_abs|lam0.5|eps0.05": {
+    "turnover_share_of_source_mass": 0.2529,
+    "mean_death_frac_by_state": [
+     0.292,
+     0.13,
+     0.147,
+     0.059
+    ],
+    "birth_share_by_state": [
+     0.392,
+     0.384,
+     0.11,
+     0.115
+    ],
+    "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2363,
+    "corr_net_change_vs_cell_count_change": 1.0,
+    "pairs_with_both_death_and_birth_gt_1pct_of_src": 6,
+    "n_pairs": 13,
+    "first_pairs": [
+     {
+      "pair": "111->612 cells (snap 0->1)",
+      "death_total": 0.0,
+      "birth_total": 501.0,
+      "transported": 111.0,
+      "death_frac_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       487.45,
+       1.12,
+       0.87,
+       11.56
+      ]
+     },
+     {
+      "pair": "612->361 cells (snap 1->2)",
+      "death_total": 251.02,
+      "birth_total": 0.02,
+      "transported": 360.98,
+      "death_frac_by_state": [
+       0.42,
+       0.322,
+       0.444,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.02
+      ]
+     },
+     {
+      "pair": "361->116 cells (snap 2->3)",
+      "death_total": 245.04,
+      "birth_total": 0.03,
+      "transported": 115.97,
+      "death_frac_by_state": [
+       0.707,
+       0.657,
+       0.685,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.03
+      ]
+     }
+    ]
+   },
+   "sink_abs|lam1|eps0.05": {
+    "turnover_share_of_source_mass": 0.2454,
+    "mean_death_frac_by_state": [
+     0.183,
+     0.125,
+     0.145,
+     0.05
+    ],
+    "birth_share_by_state": [
+     0.399,
+     0.389,
+     0.105,
+     0.107
+    ],
+    "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2253,
+    "corr_net_change_vs_cell_count_change": 1.0,
+    "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+    "n_pairs": 13,
+    "first_pairs": [
+     {
+      "pair": "111->612 cells (snap 0->1)",
+      "death_total": 0.0,
+      "birth_total": 501.0,
+      "transported": 111.0,
+      "death_frac_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       487.45,
+       1.12,
+       0.87,
+       11.56
+      ]
+     },
+     {
+      "pair": "612->361 cells (snap 1->2)",
+      "death_total": 251.0,
+      "birth_total": 0.0,
+      "transported": 361.0,
+      "death_frac_by_state": [
+       0.42,
+       0.322,
+       0.444,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "pair": "361->116 cells (snap 2->3)",
+      "death_total": 245.0,
+      "birth_total": 0.0,
+      "transported": 116.0,
+      "death_frac_by_state": [
+       0.706,
+       0.657,
+       0.684,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "sink_norm|lam0.5|eps0.05": {
+    "turnover_share_of_source_mass": 0.0699,
+    "mean_death_frac_by_state": [
+     0.266,
+     0.022,
+     0.012,
+     0.099
+    ],
+    "birth_share_by_state": [
+     0.005,
+     0.218,
+     0.337,
+     0.44
+    ],
+    "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2802,
+    "corr_net_change_vs_cell_count_change": null,
+    "pairs_with_both_death_and_birth_gt_1pct_of_src": 11,
+    "n_pairs": 13,
+    "first_pairs": [
+     {
+      "pair": "111->612 cells (snap 0->1)",
+      "death_total": 0.0,
+      "birth_total": 0.0,
+      "transported": 1.0,
+      "death_frac_by_state": [
+       0.002,
+       0.062,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "pair": "612->361 cells (snap 1->2)",
+      "death_total": 0.01,
+      "birth_total": 0.01,
+      "transported": 0.99,
+      "death_frac_by_state": [
+       0.014,
+       0.0,
+       0.032,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.01
+      ]
+     },
+     {
+      "pair": "361->116 cells (snap 2->3)",
+      "death_total": 0.05,
+      "birth_total": 0.05,
+      "transported": 0.95,
+      "death_frac_by_state": [
+       0.054,
+       0.0,
+       0.013,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.05
+      ]
+     }
+    ]
+   },
+   "sink_norm|lam1|eps0.05": {
+    "turnover_share_of_source_mass": 0.0,
+    "mean_death_frac_by_state": [
+     0.001,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "birth_share_by_state": [
+     0.031,
+     0.569,
+     0.376,
+     0.024
+    ],
+    "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2363,
+    "corr_net_change_vs_cell_count_change": null,
+    "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+    "n_pairs": 13,
+    "first_pairs": [
+     {
+      "pair": "111->612 cells (snap 0->1)",
+      "death_total": 0.0,
+      "birth_total": 0.0,
+      "transported": 1.0,
+      "death_frac_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "pair": "612->361 cells (snap 1->2)",
+      "death_total": 0.0,
+      "birth_total": 0.0,
+      "transported": 1.0,
+      "death_frac_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "pair": "361->116 cells (snap 2->3)",
+      "death_total": 0.0,
+      "birth_total": 0.0,
+      "transported": 1.0,
+      "death_frac_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   }
+  },
+  "K8": {
+   "markers": [
+    [
+     "DDIT4L",
+     "VNN1",
+     "TK1",
+     "S100B",
+     "IMPA2",
+     "UNG",
+     "CLDN8",
+     "GAS1"
+    ],
+    [
+     "INS",
+     "NPY",
+     "GCG",
+     "G6PC2",
+     "GIP",
+     "ARHGAP36",
+     "SLC30A8",
+     "PPP1R1A"
+    ],
+    [
+     "TMEM114",
+     "NHLH1",
+     "NEUROD2",
+     "DPYSL4",
+     "ALPL",
+     "TGM7",
+     "GRIN2C",
+     "OLFM1"
+    ],
+    [
+     "SDS",
+     "KCTD14",
+     "DLL1",
+     "SOSTDC1",
+     "ATOH8",
+     "GRIN3A",
+     "TMEM171",
+     "SLC9A9"
+    ],
+    [
+     "SST",
+     "PPP1R14C",
+     "DRC1",
+     "LRPPRC",
+     "RBP4",
+     "PPY",
+     "NXPH1",
+     "NAP1L5"
+    ],
+    [
+     "ADRA2C",
+     "POU3F1",
+     "NPTX2",
+     "TFF3",
+     "LRRN2",
+     "TSPEAR",
+     "CRYBB1",
+     "EYA2"
+    ],
+    [
+     "IRS4",
+     "NAB2",
+     "MBOAT4",
+     "ST8SIA2",
+     "ACSL1",
+     "ARG1",
+     "MAGED2",
+     "SLC35D3"
+    ],
+    [
+     "CEP55",
+     "BUB1",
+     "CENPF",
+     "CDKN3",
+     "CDCA3",
+     "FAM64A",
+     "CDC25C",
+     "CKAP2"
+    ]
+   ],
+   "sink_abs|lam0.5|eps0.05": {
+    "turnover_share_of_source_mass": 0.2513,
+    "mean_death_frac_by_state": [
+     0.389,
+     0.171,
+     0.089,
+     0.189,
+     0.135,
+     0.084,
+     0.132,
+     0.272
+    ],
+    "birth_share_by_state": [
+     0.239,
+     0.262,
+     0.098,
+     0.05,
+     0.187,
+     0.035,
+     0.016,
+     0.113
+    ],
+    "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.1703,
+    "corr_net_change_vs_cell_count_change": 1.0,
+    "pairs_with_both_death_and_birth_gt_1pct_of_src": 3,
+    "n_pairs": 13,
+    "first_pairs": [
+     {
+      "pair": "111->612 cells (snap 0->1)",
+      "death_total": 0.0,
+      "birth_total": 501.0,
+      "transported": 111.0,
+      "death_frac_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       299.26,
+       0.7,
+       0.06,
+       58.24,
+       0.01,
+       3.34,
+       1.28,
+       138.1
+      ]
+     },
+     {
+      "pair": "612->361 cells (snap 1->2)",
+      "death_total": 251.2,
+      "birth_total": 0.19,
+      "transported": 360.81,
+      "death_frac_by_state": [
+       0.539,
+       0.507,
+       0.052,
+       0.521,
+       0.214,
+       0.0,
+       0.412,
+       0.005
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.19,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "pair": "361->116 cells (snap 2->3)",
+      "death_total": 245.06,
+      "birth_total": 0.06,
+      "transported": 115.94,
+      "death_frac_by_state": [
+       0.81,
+       0.738,
+       0.04,
+       0.193,
+       0.941,
+       0.0,
+       0.685,
+       0.694
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.06,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "sink_abs|lam1|eps0.05": {
+    "turnover_share_of_source_mass": 0.2454,
+    "mean_death_frac_by_state": [
+     0.271,
+     0.163,
+     0.084,
+     0.158,
+     0.124,
+     0.084,
+     0.132,
+     0.188
+    ],
+    "birth_share_by_state": [
+     0.243,
+     0.266,
+     0.096,
+     0.05,
+     0.188,
+     0.027,
+     0.016,
+     0.115
+    ],
+    "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2143,
+    "corr_net_change_vs_cell_count_change": 1.0,
+    "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+    "n_pairs": 13,
+    "first_pairs": [
+     {
+      "pair": "111->612 cells (snap 0->1)",
+      "death_total": 0.0,
+      "birth_total": 501.0,
+      "transported": 111.0,
+      "death_frac_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       299.26,
+       0.7,
+       0.06,
+       58.24,
+       0.01,
+       3.34,
+       1.28,
+       138.1
+      ]
+     },
+     {
+      "pair": "612->361 cells (snap 1->2)",
+      "death_total": 251.0,
+      "birth_total": 0.0,
+      "transported": 361.0,
+      "death_frac_by_state": [
+       0.539,
+       0.507,
+       0.043,
+       0.519,
+       0.214,
+       0.0,
+       0.412,
+       0.005
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "pair": "361->116 cells (snap 2->3)",
+      "death_total": 245.0,
+      "birth_total": 0.0,
+      "transported": 116.0,
+      "death_frac_by_state": [
+       0.81,
+       0.738,
+       0.036,
+       0.192,
+       0.941,
+       0.0,
+       0.685,
+       0.694
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "sink_norm|lam0.5|eps0.05": {
+    "turnover_share_of_source_mass": 0.0763,
+    "mean_death_frac_by_state": [
+     0.278,
+     0.118,
+     0.122,
+     0.222,
+     0.112,
+     0.1,
+     0.024,
+     0.188
+    ],
+    "birth_share_by_state": [
+     0.001,
+     0.118,
+     0.303,
+     0.036,
+     0.13,
+     0.321,
+     0.075,
+     0.017
+    ],
+    "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.3297,
+    "corr_net_change_vs_cell_count_change": null,
+    "pairs_with_both_death_and_birth_gt_1pct_of_src": 11,
+    "n_pairs": 13,
+    "first_pairs": [
+     {
+      "pair": "111->612 cells (snap 0->1)",
+      "death_total": 0.01,
+      "birth_total": 0.01,
+      "transported": 0.99,
+      "death_frac_by_state": [
+       0.0,
+       0.208,
+       0.0,
+       0.056,
+       0.337,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.01
+      ]
+     },
+     {
+      "pair": "612->361 cells (snap 1->2)",
+      "death_total": 0.01,
+      "birth_total": 0.01,
+      "transported": 0.99,
+      "death_frac_by_state": [
+       0.0,
+       0.155,
+       0.004,
+       0.081,
+       0.025,
+       0.0,
+       0.004,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.01,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "pair": "361->116 cells (snap 2->3)",
+      "death_total": 0.05,
+      "birth_total": 0.05,
+      "transported": 0.95,
+      "death_frac_by_state": [
+       0.118,
+       0.184,
+       0.0,
+       0.0,
+       0.801,
+       0.0,
+       0.019,
+       0.01
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.02,
+       0.0,
+       0.03,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "sink_norm|lam1|eps0.05": {
+    "turnover_share_of_source_mass": 0.0,
+    "mean_death_frac_by_state": [
+     0.001,
+     0.002,
+     0.0,
+     0.001,
+     0.002,
+     0.001,
+     0.0,
+     0.001
+    ],
+    "birth_share_by_state": [
+     0.008,
+     0.318,
+     0.194,
+     0.004,
+     0.231,
+     0.116,
+     0.082,
+     0.048
+    ],
+    "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.6319,
+    "corr_net_change_vs_cell_count_change": null,
+    "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+    "n_pairs": 13,
+    "first_pairs": [
+     {
+      "pair": "111->612 cells (snap 0->1)",
+      "death_total": 0.0,
+      "birth_total": 0.0,
+      "transported": 1.0,
+      "death_frac_by_state": [
+       0.0,
+       0.006,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "pair": "612->361 cells (snap 1->2)",
+      "death_total": 0.0,
+      "birth_total": 0.0,
+      "transported": 1.0,
+      "death_frac_by_state": [
+       0.0,
+       0.01,
+       0.0,
+       0.0,
+       0.001,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "pair": "361->116 cells (snap 2->3)",
+      "death_total": 0.0,
+      "birth_total": 0.0,
+      "transported": 1.0,
+      "death_frac_by_state": [
+       0.0,
+       0.012,
+       0.0,
+       0.0,
+       0.025,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_by_state": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,73 @@
+==== run_orig 2026-10-24 00:16:15
+== gastrulation-human orig (700s)
+  base[rolling]            ctx i>=1 +0.5993/0.4169/0.5503 | ctx i>=2 +0.6126/0.4311/0.5572 | own i>=2 +0.6110/0.4325/0.5552
+  A_phat[rolling]          ctx i>=1 +0.6064/0.4250/0.5472 | ctx i>=2 +0.6168/0.4375/0.5538 | own i>=2 +0.6166/0.4383/0.5533
+  B_phat+post0[rolling]    ctx i>=1 +0.6073/0.4251/0.5472 | ctx i>=2 +0.6176/0.4376/0.5538 | own i>=2 +0.6173/0.4383/0.5533
+  C_post_all[rolling]      ctx i>=1 +0.6081/0.4250/0.5473 | ctx i>=2 +0.6188/0.4375/0.5539 | own i>=2 +0.6184/0.4383/0.5534
+  D_base+post0[rolling]    ctx i>=1 +0.6071/0.4253/0.5462 | ctx i>=2 +0.6173/0.4379/0.5530 | own i>=2 +0.6170/0.4383/0.5537
+  NASS_full_orig           ctx i>=1 +0.6146/0.4216/0.5525 | ctx i>=2 +0.6276/0.4363/0.5581 | own i>=2 +0.6270/0.4373/0.5578
+  O2_nass+C_head           ctx i>=1 +0.6156/0.4217/0.5512 | ctx i>=2 +0.6286/0.4364/0.5567 | own i>=2 +0.6282/0.4399/0.5575
+  trend                    ctx i>=1 -0.4631/0.0098/0.0097 | ctx i>=2 -0.4710/0.0101/0.0086 | own i>=2 -0.4722/0.0105/0.0089
+  reproduce c12 base[rolling]: PASS (0.5993, 0.4169, 0.5503) vs (0.599, 0.417, 0.55)
+  reproduce c12 C_post_all[rolling]: PASS (0.6081, 0.425, 0.5473) vs (0.608, 0.425, 0.547)
+  paired C_post_all[rolling] - base[rolling]          ctx i>=1 dPCC +0.0088 (20/8 of 28, p=0.0048) dUp +0.0081 (p=0.0041) dDown -0.0030 (p=0.1638)
+                                                      ctx i>=2 dPCC +0.0062 (19/8 of 27, p=0.0089) dUp +0.0064 (p=0.0076) dDown -0.0033 (p=0.1167)
+  paired B_phat+post0[rolling] - base[rolling]        ctx i>=1 dPCC +0.0079 (20/8 of 28, p=0.0191) dUp +0.0082 (p=0.0034) dDown -0.0031 (p=0.1256)
+                                                      ctx i>=2 dPCC +0.0050 (19/8 of 27, p=0.034) dUp +0.0065 (p=0.0065) dDown -0.0034 (p=0.0859)
+  paired A_phat[rolling] - base[rolling]              ctx i>=1 dPCC +0.0071 (18/10 of 28, p=0.0505) dUp +0.0081 (p=0.0044) dDown -0.0031 (p=0.1256)
+                                                      ctx i>=2 dPCC +0.0042 (17/10 of 27, p=0.0859) dUp +0.0064 (p=0.0082) dDown -0.0034 (p=0.0859)
+  paired D_base+post0[rolling] - base[rolling]        ctx i>=1 dPCC +0.0078 (22/6 of 28, p=0.0048) dUp +0.0085 (p=0.0024) dDown -0.0041 (p=0.0984)
+                                                      ctx i>=2 dPCC +0.0048 (21/6 of 27, p=0.0089) dUp +0.0068 (p=0.0046) dDown -0.0043 (p=0.0984)
+  paired O2_nass+C_head - NASS_full_orig              ctx i>=1 dPCC +0.0010 (20/7 of 28, p=0.0385) dUp +0.0001 (p=0.5506) dDown -0.0013 (p=0.5805)
+                                                      ctx i>=2 dPCC +0.0010 (20/7 of 27, p=0.0385) dUp +0.0001 (p=0.5506) dDown -0.0014 (p=0.5805)
+  paired C_post_all[rolling] - O2_nass+C_head         ctx i>=1 dPCC -0.0075 (7/21 of 28, p=0.0089) dUp +0.0033 (p=0.4461) dDown -0.0038 (p=0.2104)
+                                                      ctx i>=2 dPCC -0.0098 (6/21 of 27, p=0.0015) dUp +0.0011 (p=0.6474) dDown -0.0028 (p=0.3246)
+  paired base[rolling] - NASS_full_orig               ctx i>=1 dPCC -0.0153 (3/25 of 28, p=0.0) dUp -0.0048 (p=0.1614) dDown -0.0021 (p=0.0942)
+                                                      ctx i>=2 dPCC -0.0150 (3/24 of 27, p=0.0) dUp -0.0052 (p=0.1101) dDown -0.0008 (p=0.1528)
+  paired A_phat[rolling] - NASS_full_orig             ctx i>=1 dPCC -0.0082 (5/23 of 28, p=0.0016) dUp +0.0034 (p=0.374) dDown -0.0052 (p=0.0342)
+                                                      ctx i>=2 dPCC -0.0108 (4/23 of 27, p=0.0001) dUp +0.0012 (p=0.5506) dDown -0.0043 (p=0.0577)
+  paired B_phat+post0[rolling] - NASS_full_orig       ctx i>=1 dPCC -0.0074 (6/22 of 28, p=0.0024) dUp +0.0035 (p=0.3608) dDown -0.0052 (p=0.0342)
+                                                      ctx i>=2 dPCC -0.0100 (5/22 of 27, p=0.0003) dUp +0.0013 (p=0.5317) dDown -0.0043 (p=0.0577)
+  paired C_post_all[rolling] - NASS_full_orig         ctx i>=1 dPCC -0.0065 (8/20 of 28, p=0.0191) dUp +0.0034 (p=0.4004) dDown -0.0051 (p=0.0382)
+                                                      ctx i>=2 dPCC -0.0088 (7/20 of 27, p=0.0042) dUp +0.0012 (p=0.585) dDown -0.0042 (p=0.0643)
+  paired D_base+post0[rolling] - NASS_full_orig       ctx i>=1 dPCC -0.0075 (4/24 of 28, p=0.0002) dUp +0.0037 (p=0.3187) dDown -0.0062 (p=0.0229)
+                                                      ctx i>=2 dPCC -0.0103 (3/24 of 27, p=0.0) dUp +0.0016 (p=0.477) dDown -0.0051 (p=0.0407)
+  paired trend - NASS_full_orig                       ctx i>=1 dPCC -1.0777 (0/28 of 28, p=0.0) dUp -0.4119 (p=0.0) dDown -0.5427 (p=0.0)
+                                                      ctx i>=2 dPCC -1.0986 (0/27 of 27, p=0.0) dUp -0.4262 (p=0.0) dDown -0.5495 (p=0.0)
+  PREDICTION C - base (ctx i>=1): {'pcc in [+0.005, +0.012]': True, 'up in [+0.005, +0.012]': True, 'down within +-0.005': True}
+== pancreas-human orig (205s)
+  base[rolling]            ctx i>=1 +0.5097/0.3270/0.4417 | ctx i>=2 +0.5071/0.3447/0.4342 | own i>=2 +0.5141/0.3458/0.4395
+  A_phat[rolling]          ctx i>=1 +0.5120/0.3334/0.4518 | ctx i>=2 +0.5207/0.3514/0.4466 | own i>=2 +0.5248/0.3526/0.4538
+  B_phat+post0[rolling]    ctx i>=1 +0.5147/0.3333/0.4518 | ctx i>=2 +0.5215/0.3513/0.4466 | own i>=2 +0.5260/0.3528/0.4538
+  C_post_all[rolling]      ctx i>=1 +0.5282/0.3333/0.4537 | ctx i>=2 +0.5317/0.3513/0.4487 | own i>=2 +0.5367/0.3529/0.4552
+  D_base+post0[rolling]    ctx i>=1 +0.5210/0.3336/0.4524 | ctx i>=2 +0.5254/0.3517/0.4458 | own i>=2 +0.5291/0.3535/0.4464
+  NASS_full_orig           ctx i>=1 +0.5235/0.3307/0.4548 | ctx i>=2 +0.5263/0.3452/0.4493 | own i>=2 +0.5311/0.3462/0.4547
+  O2_nass+C_head           ctx i>=1 +0.5353/0.3340/0.4631 | ctx i>=2 +0.5390/0.3488/0.4582 | own i>=2 +0.5433/0.3506/0.4624
+  trend                    ctx i>=1 -0.3903/0.0396/0.0378 | ctx i>=2 -0.3871/0.0352/0.0267 | own i>=2 -0.3917/0.0364/0.0289
+  reproduce c12 base[rolling]: PASS (0.5097, 0.327, 0.4417) vs (0.51, 0.327, 0.442)
+  reproduce c12 C_post_all[rolling]: PASS (0.5282, 0.3333, 0.4537) vs (0.528, 0.333, 0.454)
+  paired C_post_all[rolling] - base[rolling]          ctx i>=1 dPCC +0.0185 (8/5 of 13, p=0.2439) dUp +0.0063 (p=0.2439) dDown +0.0120 (p=0.1465)
+                                                      ctx i>=2 dPCC +0.0246 (8/4 of 12, p=0.0923) dUp +0.0066 (p=0.2334) dDown +0.0144 (p=0.064)
+  paired B_phat+post0[rolling] - base[rolling]        ctx i>=1 dPCC +0.0050 (7/6 of 13, p=0.7869) dUp +0.0063 (p=0.2439) dDown +0.0102 (p=0.2163)
+                                                      ctx i>=2 dPCC +0.0144 (7/5 of 12, p=0.4697) dUp +0.0066 (p=0.2334) dDown +0.0124 (p=0.1099)
+  paired A_phat[rolling] - base[rolling]              ctx i>=1 dPCC +0.0024 (7/6 of 13, p=0.8926) dUp +0.0064 (p=0.2734) dDown +0.0102 (p=0.2163)
+                                                      ctx i>=2 dPCC +0.0136 (7/5 of 12, p=0.5693) dUp +0.0067 (p=0.2334) dDown +0.0124 (p=0.1099)
+  paired D_base+post0[rolling] - base[rolling]        ctx i>=1 dPCC +0.0113 (9/4 of 13, p=0.4143) dUp +0.0067 (p=0.1763) dDown +0.0107 (p=0.4961)
+                                                      ctx i>=2 dPCC +0.0183 (9/3 of 12, p=0.2036) dUp +0.0070 (p=0.1748) dDown +0.0116 (p=0.4961)
+  paired O2_nass+C_head - NASS_full_orig              ctx i>=1 dPCC +0.0117 (9/3 of 13, p=0.0269) dUp +0.0033 (p=0.2661) dDown +0.0083 (p=0.2036)
+                                                      ctx i>=2 dPCC +0.0127 (9/3 of 12, p=0.0269) dUp +0.0036 (p=0.2661) dDown +0.0090 (p=0.2036)
+  paired C_post_all[rolling] - O2_nass+C_head         ctx i>=1 dPCC -0.0071 (3/10 of 13, p=0.1677) dUp -0.0007 (p=0.7869) dDown -0.0094 (p=0.0215)
+                                                      ctx i>=2 dPCC -0.0073 (3/9 of 12, p=0.2334) dUp +0.0024 (p=0.4238) dDown -0.0096 (p=0.0269)
+  paired base[rolling] - NASS_full_orig               ctx i>=1 dPCC -0.0139 (5/8 of 13, p=0.6848) dUp -0.0037 (p=0.5693) dDown -0.0132 (p=0.1909)
+                                                      ctx i>=2 dPCC -0.0192 (4/8 of 12, p=0.4238) dUp -0.0006 (p=0.8984) dDown -0.0150 (p=0.1514)
+  paired A_phat[rolling] - NASS_full_orig             ctx i>=1 dPCC -0.0115 (4/9 of 13, p=0.2439) dUp +0.0027 (p=0.5195) dDown -0.0030 (p=0.0803)
+                                                      ctx i>=2 dPCC -0.0057 (4/8 of 12, p=0.4238) dUp +0.0061 (p=0.1934) dDown -0.0026 (p=0.1099)
+  paired B_phat+post0[rolling] - NASS_full_orig       ctx i>=1 dPCC -0.0089 (4/9 of 13, p=0.3396) dUp +0.0026 (p=0.5195) dDown -0.0030 (p=0.0803)
+                                                      ctx i>=2 dPCC -0.0048 (4/8 of 12, p=0.5186) dUp +0.0060 (p=0.1934) dDown -0.0026 (p=0.1099)
+  paired C_post_all[rolling] - NASS_full_orig         ctx i>=1 dPCC +0.0046 (5/8 of 13, p=0.946) dUp +0.0026 (p=0.5195) dDown -0.0011 (p=0.0942)
+                                                      ctx i>=2 dPCC +0.0054 (5/7 of 12, p=0.8501) dUp +0.0060 (p=0.1934) dDown -0.0006 (p=0.1294)
+  paired D_base+post0[rolling] - NASS_full_orig       ctx i>=1 dPCC -0.0026 (4/9 of 13, p=0.6355) dUp +0.0029 (p=0.4238) dDown -0.0024 (p=0.5879)
+                                                      ctx i>=2 dPCC -0.0009 (4/8 of 12, p=0.791) dUp +0.0064 (p=0.1475) dDown -0.0034 (p=0.5186)
+  paired trend - NASS_full_orig                       ctx i>=1 dPCC -0.9139 (0/13 of 13, p=0.0002) dUp -0.2911 (p=0.0005) dDown -0.4171 (p=0.0002)
+                                                      ctx i>=2 dPCC -0.9134 (0/12 of 12, p=0.0005) dUp -0.3100 (p=0.001) dDown -0.4225 (p=0.0005)
+  PREDICTION C - base (ctx i>=1): {'pcc not significant (p > 0.05)': True}

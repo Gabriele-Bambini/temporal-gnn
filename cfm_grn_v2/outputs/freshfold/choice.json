@@ -1,0 +1,636 @@
+{
+ "prereg": "docs/superpowers/prereg/2026-09-25-prereg-v02.md",
+ "step": "6 (Job D)",
+ "inputs": [
+  "outputs/freshfold_veres",
+  "outputs/freshfold_ps"
+ ],
+ "smoke": false,
+ "datasets": [
+  "pijuan_sala",
+  "veres"
+ ],
+ "missing": [],
+ "admitted_to_step6": [
+  "base",
+  "noft",
+  "gated",
+  "transfer"
+ ],
+ "m_arm": null,
+ "eligible": [
+  "noft",
+  "gated",
+  "transfer"
+ ],
+ "rule": "r_a(p) = (ED_a - ED_base)/ED_persistence(p) over pairs p = (dataset, fold, prediction, seed); S_a = mean per data set; P_a = mean of S_a over the data sets. a qualifies iff P_a < 0; r_a < 0 in >= 2/3 of the pairs where its prediction differs from base; S_a <= +0.02 in each data set; no non-finite value and no ED_a > 3 x ED_base. Winner: most negative P_a; if the best two differ by < 0.005 the simpler wins (noft < gated < transfer < M); if nothing qualifies, base stays.",
+ "r_sel": {
+  "per_arm": {
+   "noft": {
+    "P": 0.1607896564314818,
+    "S": {
+     "pijuan_sala": 0.09293518052625038,
+     "veres": 0.2286441323367132
+    },
+    "n_pairs": 46,
+    "n_differing": 46,
+    "n_negative_differing": 8,
+    "criteria": {
+     "1_P_below_0": false,
+     "2_r_below_0_in_2_3_of_differing": false,
+     "3_S_at_most_0.02_each_dataset": false,
+     "4_finite_and_within_3x_base": false
+    },
+    "qualifies": false,
+    "r": {
+     "pijuan_sala|P1|1|0": -0.05123080360580786,
+     "pijuan_sala|P1|1|1": 0.04359156940750311,
+     "pijuan_sala|P12|1|0": -0.0590074696694343,
+     "pijuan_sala|P12|1|1": -0.07542272670870245,
+     "pijuan_sala|P12|2|0": 0.07882999266655678,
+     "pijuan_sala|P12|2|1": 0.020350530731208894,
+     "pijuan_sala|P2|2|0": 0.22828278452979012,
+     "pijuan_sala|P2|2|1": 0.13548883722912222,
+     "pijuan_sala|P234|2|0": 0.06637321226113041,
+     "pijuan_sala|P234|2|1": 0.15761323697218102,
+     "pijuan_sala|P234|4|0": 0.664561853896009,
+     "pijuan_sala|P234|4|1": 0.7462222809342397,
+     "pijuan_sala|P3|3|0": -0.4507924633214783,
+     "pijuan_sala|P3|3|1": -0.3130680834863234,
+     "pijuan_sala|P34|3|0": -0.07809750253523236,
+     "pijuan_sala|P34|3|1": -0.17642013223122366,
+     "pijuan_sala|P34|4|0": 0.2372489122941341,
+     "pijuan_sala|P34|4|1": 0.1956591346630747,
+     "pijuan_sala|P4|4|0": 0.2608666627194307,
+     "pijuan_sala|P4|4|1": 0.2478734378143864,
+     "pijuan_sala|P5|5|0": 0.013934029648617908,
+     "pijuan_sala|P5|5|1": -0.023457672416081515,
+     "pijuan_sala|P7|7|0": 0.1217879921456953,
+     "pijuan_sala|P7|7|1": 0.23925671869121257,
+     "veres|V1|1|0": 0.07309659396384934,
+     "veres|V1|1|1": 0.051933408650624374,
+     "veres|V12|1|0": 0.09463220534714731,
+     "veres|V12|1|1": 0.08069710149326108,
+     "veres|V12|2|0": 0.033681473775433485,
+     "veres|V12|2|1": 0.050296274886299334,
+     "veres|V2|2|0": 0.09739988392677326,
+     "veres|V2|2|1": 0.09655868314185961,
+     "veres|V23|2|0": 0.11946486916426291,
+     "veres|V23|2|1": 0.13181259637239648,
+     "veres|V23|3|0": 0.3283803918037298,
+     "veres|V23|3|1": 0.3060570762903342,
+     "veres|V3|3|0": 0.3285509331573564,
+     "veres|V3|3|1": 0.33723778016624395,
+     "veres|V5|5|0": 0.6986739085223466,
+     "veres|V5|5|1": 0.29328319942302594,
+     "veres|V56|5|0": 0.41686262182458755,
+     "veres|V56|5|1": 0.17352966605407336,
+     "veres|V56|6|0": 0.6155193947696758,
+     "veres|V56|6|1": 0.4044181697372034,
+     "veres|V6|6|0": 0.15918975775867358,
+     "veres|V6|6|1": 0.1388949211785328
+    }
+   },
+   "gated": {
+    "P": 0.037320872906322786,
+    "S": {
+     "pijuan_sala": -0.0030613784746717494,
+     "veres": 0.07770312428731732
+    },
+    "n_pairs": 46,
+    "n_differing": 28,
+    "n_negative_differing": 8,
+    "criteria": {
+     "1_P_below_0": false,
+     "2_r_below_0_in_2_3_of_differing": false,
+     "3_S_at_most_0.02_each_dataset": false,
+     "4_finite_and_within_3x_base": true
+    },
+    "qualifies": false,
+    "r": {
+     "pijuan_sala|P1|1|0": -0.05123080360580786,
+     "pijuan_sala|P1|1|1": 0.04359156940750311,
+     "pijuan_sala|P12|1|0": -0.0590074696694343,
+     "pijuan_sala|P12|1|1": -0.07542272670870245,
+     "pijuan_sala|P12|2|0": 0.0,
+     "pijuan_sala|P12|2|1": 0.0,
+     "pijuan_sala|P2|2|0": 0.22828278452979012,
+     "pijuan_sala|P2|2|1": 0.13548883722912222,
+     "pijuan_sala|P234|2|0": 0.06637321226113041,
+     "pijuan_sala|P234|2|1": 0.15761323697218102,
+     "pijuan_sala|P234|4|0": 0.0,
+     "pijuan_sala|P234|4|1": 0.0,
+     "pijuan_sala|P3|3|0": -0.4507924633214783,
+     "pijuan_sala|P3|3|1": -0.3130680834863234,
+     "pijuan_sala|P34|3|0": -0.07809750253523236,
+     "pijuan_sala|P34|3|1": -0.17642013223122366,
+     "pijuan_sala|P34|4|0": 0.0,
+     "pijuan_sala|P34|4|1": 0.0,
+     "pijuan_sala|P4|4|0": 0.2608666627194307,
+     "pijuan_sala|P4|4|1": 0.2478734378143864,
+     "pijuan_sala|P5|5|0": 0.013934029648617908,
+     "pijuan_sala|P5|5|1": -0.023457672416081515,
+     "pijuan_sala|P7|7|0": 0.0,
+     "pijuan_sala|P7|7|1": 0.0,
+     "veres|V1|1|0": 0.07309659396384934,
+     "veres|V1|1|1": 0.051933408650624374,
+     "veres|V12|1|0": 0.09463220534714731,
+     "veres|V12|1|1": 0.08069710149326108,
+     "veres|V12|2|0": 0.0,
+     "veres|V12|2|1": 0.0,
+     "veres|V2|2|0": 0.09739988392677326,
+     "veres|V2|2|1": 0.09655868314185961,
+     "veres|V23|2|0": 0.11946486916426291,
+     "veres|V23|2|1": 0.13181259637239648,
+     "veres|V23|3|0": 0.0,
+     "veres|V23|3|1": 0.0,
+     "veres|V3|3|0": 0.3285509331573564,
+     "veres|V3|3|1": 0.33723778016624395,
+     "veres|V5|5|0": 0.0,
+     "veres|V5|5|1": 0.0,
+     "veres|V56|5|0": 0.0,
+     "veres|V56|5|1": 0.0,
+     "veres|V56|6|0": 0.0,
+     "veres|V56|6|1": 0.0,
+     "veres|V6|6|0": 0.15918975775867358,
+     "veres|V6|6|1": 0.1388949211785328
+    }
+   },
+   "transfer": {
+    "P": 0.005075938794707801,
+    "S": {
+     "pijuan_sala": 0.004040078646126384,
+     "veres": 0.0061117989432892175
+    },
+    "n_pairs": 46,
+    "n_differing": 46,
+    "n_negative_differing": 21,
+    "criteria": {
+     "1_P_below_0": false,
+     "2_r_below_0_in_2_3_of_differing": false,
+     "3_S_at_most_0.02_each_dataset": true,
+     "4_finite_and_within_3x_base": true
+    },
+    "qualifies": false,
+    "r": {
+     "pijuan_sala|P1|1|0": -0.011879250497798515,
+     "pijuan_sala|P1|1|1": 0.08695827776700256,
+     "pijuan_sala|P12|1|0": 0.00892306248755337,
+     "pijuan_sala|P12|1|1": 0.003337367499181284,
+     "pijuan_sala|P12|2|0": -0.0053303715574210845,
+     "pijuan_sala|P12|2|1": -0.010333861340350204,
+     "pijuan_sala|P2|2|0": 0.015467627747436595,
+     "pijuan_sala|P2|2|1": -0.002595640452189376,
+     "pijuan_sala|P234|2|0": -0.005606354579562429,
+     "pijuan_sala|P234|2|1": 0.01351797309354305,
+     "pijuan_sala|P234|4|0": 0.07291569643259832,
+     "pijuan_sala|P234|4|1": 0.022578791287566825,
+     "pijuan_sala|P3|3|0": -0.3769501961308679,
+     "pijuan_sala|P3|3|1": -0.07232114176978696,
+     "pijuan_sala|P34|3|0": -0.10553068327623522,
+     "pijuan_sala|P34|3|1": -0.17265412951982642,
+     "pijuan_sala|P34|4|0": 0.06228868917838936,
+     "pijuan_sala|P34|4|1": 0.07718512503018153,
+     "pijuan_sala|P4|4|0": 0.04054095009776942,
+     "pijuan_sala|P4|4|1": 0.10492888794040475,
+     "pijuan_sala|P5|5|0": 0.013934029648617908,
+     "pijuan_sala|P5|5|1": -0.023457672416081515,
+     "pijuan_sala|P7|7|0": 0.1217879921456953,
+     "pijuan_sala|P7|7|1": 0.23925671869121257,
+     "veres|V1|1|0": -0.0033801756943566937,
+     "veres|V1|1|1": -0.004774068977676151,
+     "veres|V12|1|0": -0.0014384102746744297,
+     "veres|V12|1|1": -0.00295361240976031,
+     "veres|V12|2|0": -0.0008709331415316491,
+     "veres|V12|2|1": 0.0006321419109498347,
+     "veres|V2|2|0": 0.015791284185745595,
+     "veres|V2|2|1": 0.007485404239166143,
+     "veres|V23|2|0": -0.050625642051289076,
+     "veres|V23|2|1": -0.03408509331387891,
+     "veres|V23|3|0": -0.01996952196717167,
+     "veres|V23|3|1": -0.00224812642659799,
+     "veres|V3|3|0": 0.004351312949447882,
+     "veres|V3|3|1": 0.04378988457073156,
+     "veres|V5|5|0": -0.00822751743816418,
+     "veres|V5|5|1": 0.003956197429316373,
+     "veres|V56|5|0": 0.023253430109072,
+     "veres|V56|5|1": -0.0073907016729396575,
+     "veres|V56|6|0": 0.052747792002010505,
+     "veres|V56|6|1": 0.02494476807317092,
+     "veres|V6|6|0": 0.043571475512188436,
+     "veres|V6|6|1": 0.04989968913860426
+    }
+   }
+  },
+  "qualifying": [],
+  "winner": "base",
+  "how": "nothing qualifies: base stays"
+ },
+ "winner": "base",
+ "winner_recipe": {
+  "arm": "base",
+  "training": "v0.1.10",
+  "overrides": {
+   "path_center": "linear"
+  },
+  "weights": "final"
+ },
+ "r_hor": {
+  "d": "ED_noft - ED_base (design source, 20 steps per unit)",
+  "short": {
+   "n": 28,
+   "hits": 8,
+   "meets_2_3": false,
+   "median": 0.04746804311535162
+  },
+  "long": {
+   "n": 18,
+   "hits": 18,
+   "meets_2_3": true,
+   "median": 0.1866541650841871
+  },
+  "medians_by_dataset": {
+   "pijuan_sala": {
+    "short_median": -0.002291116185276082,
+    "long_median": 0.2081222694783911,
+    "ok": true
+   },
+   "veres": {
+    "short_median": 0.0586415531611717,
+    "long_median": 0.16590713521377154,
+    "ok": false
+   }
+  },
+  "medians_ok": false,
+  "verdict": "PARTIAL",
+  "replicated_half": "long",
+  "note": null
+ },
+ "contrasts": {
+  "d": "ED_noft - ED_base (design source, 20 steps per unit)",
+  "H3": {
+   "long_boundary_source": {
+    "n": 4,
+    "median": 0.06792033172691345,
+    "mean": 0.06111917919583655,
+    "frac_positive": 1.0,
+    "frac_nonpositive": 0.0
+   },
+   "long_interior_source": {
+    "n": 14,
+    "median": 0.20813607176286197,
+    "mean": 0.2761053947388624,
+    "frac_positive": 1.0,
+    "frac_nonpositive": 0.0
+   },
+   "pairs_boundary": [
+    "pijuan_sala|P12|2|s0",
+    "pijuan_sala|P12|2|s1",
+    "veres|V12|2|s0",
+    "veres|V12|2|s1"
+   ],
+   "prediction": "H3: d <= 0 for boundary sources; H1: d > 0 for both"
+  },
+  "H2": {
+   "listed_frac_quarter_third": {
+    "n": 8,
+    "median": 0.0586415531611717,
+    "mean": 0.054180013299860004,
+    "frac_positive": 0.875,
+    "frac_nonpositive": 0.125
+   },
+   "listed_pairs": [
+    "pijuan_sala|P234|2|s0",
+    "pijuan_sala|P234|2|s1",
+    "pijuan_sala|P5|5|s0",
+    "pijuan_sala|P5|5|s1",
+    "veres|V23|2|s0",
+    "veres|V23|2|s1",
+    "veres|V3|3|s0",
+    "veres|V3|3|s1"
+   ],
+   "by_criterion_frac_quarter_third": {
+    "n": 10,
+    "median": 0.04286635598369057,
+    "mean": 0.03581891382837875,
+    "frac_positive": 0.7,
+    "frac_nonpositive": 0.3
+   },
+   "criterion_pairs_not_listed": [
+    "pijuan_sala|P34|3|s0",
+    "pijuan_sala|P34|3|s1"
+   ],
+   "frac_half": {
+    "n": 10,
+    "median": 0.04367866520453312,
+    "mean": 0.07362365267704901,
+    "frac_positive": 0.8,
+    "frac_nonpositive": 0.2
+   },
+   "frac_half_pairs": [
+    "pijuan_sala|P2|2|s0",
+    "pijuan_sala|P2|2|s1",
+    "pijuan_sala|P3|3|s0",
+    "pijuan_sala|P3|3|s1",
+    "pijuan_sala|P4|4|s0",
+    "pijuan_sala|P4|4|s1",
+    "veres|V2|2|s0",
+    "veres|V2|2|s1",
+    "veres|V6|6|s0",
+    "veres|V6|6|s1"
+   ],
+   "definition": "h_rel = 1, interior source; frac 1/4-1/3 against frac 1/2"
+  },
+  "H4": {
+   "all": {
+    "n": 46,
+    "spearman_d_vs_path_var_ratio": 0.15658341042244836
+   },
+   "short": {
+    "n": 28,
+    "spearman_d_vs_path_var_ratio": 0.0021893814997263274
+   },
+   "long": {
+    "n": 18,
+    "spearman_d_vs_path_var_ratio": -0.11248710010319916
+   }
+  },
+  "h_span_secondary": {
+   "all": {
+    "n": 46,
+    "spearman_d_vs_h_span": 0.6142226644566979,
+    "spearman_d_vs_h_rel": 0.6169278511863816
+   },
+   "short": {
+    "n": 28,
+    "spearman_d_vs_h_span": 0.35737084494593163,
+    "spearman_d_vs_h_rel": null
+   },
+   "long": {
+    "n": 18,
+    "spearman_d_vs_h_span": 0.3309492795994382,
+    "spearman_d_vs_h_rel": 0.566654091837825
+   },
+   "h_span": "(target - source)/span of the full grid (Veres 7 d, Pijuan-Sala 8 quarter days): the pre-registered secondary horizon measure, reported next to h_rel, not deciding",
+   "d_by_h_span": {
+    "0.125": {
+     "n": 16,
+     "median": -0.002291116185276082,
+     "mean": 0.02759477304146607,
+     "frac_positive": 0.5,
+     "frac_nonpositive": 0.5
+    },
+    "0.1429": {
+     "n": 12,
+     "median": 0.0586415531611717,
+     "mean": 0.06319702801595639,
+     "frac_positive": 1.0,
+     "frac_nonpositive": 0.0
+    },
+    "0.25": {
+     "n": 6,
+     "median": 0.1710047956120882,
+     "mean": 0.17365235279546695,
+     "frac_positive": 1.0,
+     "frac_nonpositive": 0.0
+    },
+    "0.2857": {
+     "n": 8,
+     "median": 0.11266708182777664,
+     "mean": 0.1329210893033803,
+     "frac_positive": 1.0,
+     "frac_nonpositive": 0.0
+    },
+    "0.375": {
+     "n": 2,
+     "median": 0.7549375423052176,
+     "mean": 0.7549375423052176,
+     "frac_positive": 1.0,
+     "frac_nonpositive": 0.0
+    },
+    "0.4286": {
+     "n": 2,
+     "median": 0.24739716365857056,
+     "mean": 0.24739716365857056,
+     "frac_positive": 1.0,
+     "frac_nonpositive": 0.0
+    }
+   }
+  },
+  "H5": {
+   "d8": {
+    "n": 46,
+    "median": 0.07040388597123123,
+    "mean": 0.1154308383201958,
+    "frac_positive": 0.8260869565217391,
+    "frac_nonpositive": 0.17391304347826086
+   },
+   "d20": {
+    "n": 46,
+    "median": 0.07040565985806779,
+    "mean": 0.11543115104309465,
+    "frac_positive": 0.8260869565217391,
+    "frac_nonpositive": 0.17391304347826086
+   },
+   "d8_minus_d20": {
+    "n": 46,
+    "median": -3.918077953746213e-08,
+    "mean": -3.127228988780344e-07,
+    "frac_positive": 0.391304347826087,
+    "frac_nonpositive": 0.6086956521739131
+   },
+   "base_ed20_minus_ed8_short": {
+    "n": 28,
+    "median": -1.8585985875341215e-09,
+    "mean": 1.2032257366894776e-06,
+    "frac_positive": 0.5,
+    "frac_nonpositive": 0.5
+   },
+   "base_ed20_minus_ed8_long": {
+    "n": 18,
+    "median": -5.2930181140831145e-08,
+    "mean": -1.0143094982424199e-06,
+    "frac_positive": 0.3333333333333333,
+    "frac_nonpositive": 0.6666666666666666
+   },
+   "reading": "the 8-vs-20-step mismatch explains part of the short-pair hurt if base improves by > 0.05 on short pairs at 8 steps"
+  },
+  "t0_diagnostic": {
+   "d_from_t0": {
+    "n": 34,
+    "median": 0.2186011111148433,
+    "mean": 0.5930368769213566,
+    "frac_positive": 0.7647058823529411,
+    "frac_nonpositive": 0.23529411764705882
+   },
+   "d_from_design_source": {
+    "n": 34,
+    "median": 0.09744746967643005,
+    "mean": 0.14587944680583387,
+    "frac_positive": 0.8529411764705882,
+    "frac_nonpositive": 0.14705882352941177
+   },
+   "d_t0_minus_d_source": {
+    "n": 34,
+    "median": 0.11848412493737473,
+    "mean": 0.4471574301155227,
+    "frac_positive": 0.6176470588235294,
+    "frac_nonpositive": 0.38235294117647056
+   },
+   "reading": "H1 predicts d grows from t=0; H3 predicts it shrinks"
+  }
+ },
+ "ls_fit": {
+  "y": "(ED_noft - ED_base)/ED_persistence",
+  "coef": {
+   "intercept": 0.4988621913815839,
+   "log_h_rel": 0.5169718668826379,
+   "frac": -0.45293711658275804,
+   "boundary": -0.16783060642145609,
+   "var_ratio": -0.11876114257243853,
+   "dataset_pijuan_sala": -0.1118266166029377
+  },
+  "ci95": {
+   "intercept": [
+    -0.20336447000981628,
+    1.3230905241758921
+   ],
+   "log_h_rel": [
+    -0.06434241876836079,
+    1.1106376027914042
+   ],
+   "frac": [
+    -1.742139471745673,
+    0.782675422988419
+   ],
+   "boundary": [
+    -0.32085356371639406,
+    0.028366563911422102
+   ],
+   "var_ratio": [
+    -0.37857938212767606,
+    0.103642650393381
+   ],
+   "dataset_pijuan_sala": [
+    -0.28240577539168077,
+    0.011318215942494722
+   ]
+  },
+  "rank": 6,
+  "n_columns": 6,
+  "n_pairs": 46,
+  "n_folds": 17,
+  "n_boot": 1000,
+  "note": "fold bootstrap; minimum-norm least squares when the design is rank-deficient; not deciding"
+ },
+ "parameters": {
+  "veres": {
+   "seeds": [
+    0,
+    1
+   ],
+   "n_hvg": 1000,
+   "min_detect": 0.01,
+   "cap": 1500,
+   "min_group_cells": 200,
+   "mlp": {
+    "hidden": 128,
+    "n_iters": 2000
+   },
+   "config": {
+    "hidden": 128,
+    "depth": 3,
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "batch_size": 256,
+    "n_iters": 8000,
+    "sigma_min": 0.01,
+    "coupling": "ot",
+    "n_ode_steps": 20,
+    "ode_method": "rk4",
+    "time_embed_dim": 32,
+    "cond_dim": 8,
+    "time_conditioning": "delta",
+    "eval_every": 250,
+    "patience": 8,
+    "seed": 0,
+    "shuffle_biological_time": false,
+    "ema_decay": 0.999,
+    "grad_clip": 1.0,
+    "pair_mode": "consecutive",
+    "clock": "duration",
+    "path": "spline",
+    "chain": "ot",
+    "spline_kind": "natural",
+    "field_time": "none",
+    "path_center": "linear",
+    "marginal_iters": 1000,
+    "marginal_weight": 1.0,
+    "marginal_prior": 1.0,
+    "marginal_batch": 256,
+    "marginal_steps": 8,
+    "marginal_metric": "energy",
+    "marginal_window": 1.0,
+    "marginal_lr": 0.0003,
+    "marginal_eval_every": 25,
+    "marginal_patience": 10
+   }
+  },
+  "pijuan_sala": {
+   "seeds": [
+    0,
+    1
+   ],
+   "n_hvg": 1000,
+   "min_detect": 0.01,
+   "cap": 3000,
+   "min_group_cells": 200,
+   "mlp": {
+    "hidden": 128,
+    "n_iters": 2000
+   },
+   "config": {
+    "hidden": 128,
+    "depth": 3,
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "batch_size": 256,
+    "n_iters": 8000,
+    "sigma_min": 0.01,
+    "coupling": "ot",
+    "n_ode_steps": 20,
+    "ode_method": "rk4",
+    "time_embed_dim": 32,
+    "cond_dim": 8,
+    "time_conditioning": "delta",
+    "eval_every": 250,
+    "patience": 8,
+    "seed": 0,
+    "shuffle_biological_time": false,
+    "ema_decay": 0.999,
+    "grad_clip": 1.0,
+    "pair_mode": "consecutive",
+    "clock": "duration",
+    "path": "spline",
+    "chain": "ot",
+    "spline_kind": "natural",
+    "field_time": "none",
+    "path_center": "linear",
+    "marginal_iters": 1000,
+    "marginal_weight": 1.0,
+    "marginal_prior": 1.0,
+    "marginal_batch": 256,
+    "marginal_steps": 8,
+    "marginal_metric": "energy",
+    "marginal_window": 1.0,
+    "marginal_lr": 0.0003,
+    "marginal_eval_every": 25,
+    "marginal_patience": 10
+   }
+  }
+ },
+ "dropped_folds": {
+  "veres": {},
+  "pijuan_sala": {}
+ }
+}

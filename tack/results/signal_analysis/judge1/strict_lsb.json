@@ -1,0 +1,54 @@
+{
+ "pancreas-human|k=5": {
+  "nmed_full": 132.0,
+  "nmed_trunc": 111.0,
+  "l1_maxdiff_k0": 1.1173006964071419e-13,
+  "l1_maxdiff_kpos": 0.10325233829854691,
+  "linear_maxdiff_k0": 5.684341886080801e-13,
+  "linear_maxdiff_kpos": 1.5193141783948718,
+  "orig_maxdiff": 2.4831385612487793,
+  "l1_maxdiff_kpos_with_full_nmed": 1.2234657731369225e-13,
+  "orig_maxdiff_with_full_nmed": 0.0,
+  "l1_kpos_pred_corr_full_vs_trunc_min": 0.9884985965891052,
+  "l1_pred_sd": 0.052585498480746715
+ },
+ "pancreas-human|k=11": {
+  "nmed_full": 132.0,
+  "nmed_trunc": 132.0,
+  "l1_maxdiff_k0": 1.6185663920254e-13,
+  "l1_maxdiff_kpos": 5.616618281578667e-12,
+  "linear_maxdiff_k0": 6.650680006714538e-12,
+  "linear_maxdiff_kpos": 5.768185928900493e-11,
+  "orig_maxdiff": 0.0,
+  "l1_maxdiff_kpos_with_full_nmed": 5.616618281578667e-12,
+  "orig_maxdiff_with_full_nmed": 0.0,
+  "l1_kpos_pred_corr_full_vs_trunc_min": 0.9999999999999992,
+  "l1_pred_sd": 0.04459581159168999
+ },
+ "gastrulation-human|k=8": {
+  "nmed_full": 269.5,
+  "nmed_trunc": 294.0,
+  "l1_maxdiff_k0": 1.9562129693895258e-13,
+  "l1_maxdiff_kpos": 0.19658913171912662,
+  "linear_maxdiff_k0": 9.43600753089413e-12,
+  "linear_maxdiff_kpos": 26.637672524575066,
+  "orig_maxdiff": 0.6339149475097656,
+  "l1_maxdiff_kpos_with_full_nmed": 1.766142787573699e-12,
+  "orig_maxdiff_with_full_nmed": 0.0,
+  "l1_kpos_pred_corr_full_vs_trunc_min": 0.9736294782015961,
+  "l1_pred_sd": 0.014988920927731415
+ },
+ "gastrulation-human|k=26": {
+  "nmed_full": 269.5,
+  "nmed_trunc": 282.5,
+  "l1_maxdiff_k0": 8.298917109073045e-13,
+  "l1_maxdiff_kpos": 0.07717081911237278,
+  "linear_maxdiff_k0": 5.5422333389287814e-12,
+  "linear_maxdiff_kpos": 0.6397384136724114,
+  "orig_maxdiff": 0.42194294929504395,
+  "l1_maxdiff_kpos_with_full_nmed": 3.95605770364682e-12,
+  "orig_maxdiff_with_full_nmed": 0.0,
+  "l1_kpos_pred_corr_full_vs_trunc_min": 0.9900653017167328,
+  "l1_pred_sd": 0.0176770848484987
+ }
+}

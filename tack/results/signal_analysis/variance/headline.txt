@@ -1,0 +1,626 @@
+{
+ "gastrulation-human": {
+  "orig": {
+   "(a) zero-crossings": {
+    "ss_share_UP_plus_DN": 0.942,
+    "R2_of_4group_oracle (BZ/UP/DN/EX known, descriptive)": 0.959,
+    "mean_genes_at_+5 / -5 (all genes)": [
+     928,
+     884
+    ],
+    "tie_limited_P@200_max_up/down": [
+     0.895,
+     0.882
+    ]
+   },
+   "(b) global factor": {
+    "oracle_knows_L_next_pearson_i>=1": 0.021,
+    "oracle_k1_k3_k10_scalars_on_past_loadings_pearson_i>=1": [
+     0.031,
+     0.128,
+     0.339
+    ],
+    "descriptive_function_of_level_pearson": 0.443,
+    "strict_function_of_level_pearson_i>=1": 0.408
+   },
+   "(c) finite-sample noise (share of per-transition target variance, mean over transitions; median in brackets)": {
+    "next_bin": "0.396 [0.402]",
+    "current_bin": "0.383 [0.395]",
+    "both_bins": "0.756 [0.767]",
+    "plugin_law_next_bin": 0.226,
+    "second_diff_obs_over_noise_pred_median": 1.25,
+    "true_change_persistence_median": -0.38,
+    "N_eff_genes_median": 1776,
+    "genes_for_50pct_of_SS_median": 835.0
+   },
+   "ceilings (non-causal)": {
+    "pearson_ceiling_sqrt(1-noise_next)": 0.777,
+    "model_world (truth = smoothed law, E[T] vs fresh draws)": {
+     "pearson_nan0": 0.696,
+     "p_at_200_up": 0.464,
+     "p_at_200_down": 0.564
+    },
+    "oracle_next_bin_interpolated_without_bin_t+1 (best of 2), i>=1": {
+     "pearson_nan0": 0.622,
+     "p_at_200_up": 0.422,
+     "p_at_200_down": 0.559
+    },
+    "oracle_knows_n_next (level law, finite-cell obs), i>=1": {
+     "pearson_nan0": 0.595,
+     "p_at_200_up": 0.395,
+     "p_at_200_down": 0.54
+    },
+    "oracle_coef_per_gene_history_by_level (in-sample coefficients), i>=1": {
+     "pearson_nan0": 0.618,
+     "p_at_200_up": 0.395,
+     "p_at_200_down": 0.553
+    }
+   },
+   "strict": {
+    "level4_law_finite_cell_obs_n_t, i>=1": {
+     "pearson_nan0": 0.588,
+     "p_at_200_up": 0.394,
+     "p_at_200_down": 0.54
+    },
+    "repeat_last_change, i>=1": {
+     "pearson_nan0": -0.465,
+     "p_at_200_up": 0.01,
+     "p_at_200_down": 0.009
+    },
+    "lowrank3_projected_last_change, i>=1": {
+     "pearson_nan0": -0.131,
+     "p_at_200_up": 0.104,
+     "p_at_200_down": 0.103
+    },
+    "local_polynomial_rolling_selected, i>=2": {
+     "pearson_nan0": 0.608,
+     "p_at_200_up": 0.423,
+     "p_at_200_down": 0.551
+    },
+    "per_gene_history_pooled_coef_by_level, i>=2": {
+     "pearson_nan0": 0.609,
+     "p_at_200_up": 0.407,
+     "p_at_200_down": 0.556
+    }
+   }
+  },
+  "l1": {
+   "(a) zero-crossings": {
+    "ss_share_UP_plus_DN": 0.036,
+    "R2_of_4group_oracle (BZ/UP/DN/EX known, descriptive)": 0.026
+   },
+   "(b) global factor": {
+    "oracle_knows_L_next_pearson_i>=1": 0.004,
+    "oracle_k1_k3_k10_scalars_on_past_loadings_pearson_i>=1": [
+     0.161,
+     0.25,
+     0.349
+    ],
+    "descriptive_function_of_level_pearson": 0.225,
+    "strict_function_of_level_pearson_i>=1": -0.013
+   },
+   "(c) finite-sample noise (share of per-transition target variance, mean over transitions; median in brackets)": {
+    "next_bin": "0.416 [0.392]",
+    "current_bin": "0.379 [0.417]",
+    "both_bins": "0.795 [0.850]",
+    "plugin_law_next_bin": 0.402,
+    "second_diff_obs_over_noise_pred_median": 0.97,
+    "true_change_persistence_median": 1.36,
+    "N_eff_genes_median": 917,
+    "genes_for_50pct_of_SS_median": 630.0
+   },
+   "ceilings (non-causal)": {
+    "pearson_ceiling_sqrt(1-noise_next)": 0.749,
+    "model_world (truth = smoothed law, E[T] vs fresh draws)": {
+     "pearson_nan0": 0.691,
+     "p_at_200_up": 0.509,
+     "p_at_200_down": 0.501
+    },
+    "oracle_next_bin_interpolated_without_bin_t+1 (best of 2), i>=1": {
+     "pearson_nan0": 0.576,
+     "p_at_200_up": 0.413,
+     "p_at_200_down": 0.419
+    },
+    "oracle_knows_n_next (level law, finite-cell obs), i>=1": {
+     "pearson_nan0": 0.087,
+     "p_at_200_up": 0.241,
+     "p_at_200_down": 0.256
+    },
+    "oracle_coef_per_gene_history_by_level (in-sample coefficients), i>=1": {
+     "pearson_nan0": 0.507,
+     "p_at_200_up": 0.334,
+     "p_at_200_down": 0.347
+    }
+   },
+   "strict": {
+    "level4_law_finite_cell_obs_n_t, i>=1": {
+     "pearson_nan0": 0.088,
+     "p_at_200_up": 0.241,
+     "p_at_200_down": 0.255
+    },
+    "repeat_last_change, i>=1": {
+     "pearson_nan0": -0.173,
+     "p_at_200_up": 0.103,
+     "p_at_200_down": 0.094
+    },
+    "lowrank3_projected_last_change, i>=1": {
+     "pearson_nan0": 0.029,
+     "p_at_200_up": 0.153,
+     "p_at_200_down": 0.137
+    },
+    "local_polynomial_rolling_selected, i>=2": {
+     "pearson_nan0": 0.151,
+     "p_at_200_up": 0.248,
+     "p_at_200_down": 0.252
+    },
+    "per_gene_history_pooled_coef_by_level, i>=2": {
+     "pearson_nan0": 0.171,
+     "p_at_200_up": 0.191,
+     "p_at_200_down": 0.157
+    },
+    "kalman_known_noise_rolling_selected, i>=2": {
+     "pearson_nan0": 0.134,
+     "p_at_200_up": 0.225,
+     "p_at_200_down": 0.206
+    },
+    "per_gene_history_recency_halflife0.5_by_level, i>=2": {
+     "pearson_nan0": 0.319,
+     "p_at_200_up": 0.281,
+     "p_at_200_down": 0.281
+    },
+    "per_gene_history_recency_rolling_selected, i>=3": {
+     "pearson_nan0": 0.339,
+     "p_at_200_up": 0.29,
+     "p_at_200_down": 0.291
+    }
+   }
+  },
+  "linear": {
+   "(a) zero-crossings": {
+    "ss_share_UP_plus_DN": 0.006,
+    "R2_of_4group_oracle (BZ/UP/DN/EX known, descriptive)": 0.008
+   },
+   "(b) global factor": {
+    "oracle_knows_L_next_pearson_i>=1": 0.432,
+    "oracle_k1_k3_k10_scalars_on_past_loadings_pearson_i>=1": [
+     0.357,
+     0.551,
+     0.719
+    ],
+    "descriptive_function_of_level_pearson": 0.611,
+    "strict_function_of_level_pearson_i>=1": -0.025,
+    "oracle_best_scalar_on_m_a_abs_corr": 0.545
+   },
+   "(c) finite-sample noise (share of per-transition target variance, mean over transitions; median in brackets)": {
+    "next_bin": "0.378 [0.169]",
+    "current_bin": "0.266 [0.207]",
+    "both_bins": "0.643 [0.334]",
+    "plugin_law_next_bin": 0.393,
+    "second_diff_obs_over_noise_pred_median": 1.03,
+    "true_change_persistence_median": 1.04,
+    "N_eff_genes_median": 12,
+    "genes_for_50pct_of_SS_median": 5.0
+   },
+   "ceilings (non-causal)": {
+    "pearson_ceiling_sqrt(1-noise_next)": 0.785,
+    "model_world (truth = smoothed law, E[T] vs fresh draws)": {
+     "pearson_nan0": 0.77,
+     "p_at_200_up": 0.588,
+     "p_at_200_down": 0.592
+    },
+    "oracle_next_bin_interpolated_without_bin_t+1 (best of 2), i>=1": {
+     "pearson_nan0": 0.651,
+     "p_at_200_up": 0.5,
+     "p_at_200_down": 0.506
+    },
+    "oracle_knows_n_next (level law, finite-cell obs), i>=1": {
+     "pearson_nan0": -0.192,
+     "p_at_200_up": 0.288,
+     "p_at_200_down": 0.317
+    },
+    "oracle_coef_per_gene_history_by_level (in-sample coefficients), i>=1": {
+     "pearson_nan0": 0.728,
+     "p_at_200_up": 0.434,
+     "p_at_200_down": 0.409
+    }
+   },
+   "strict": {
+    "level4_law_finite_cell_obs_n_t, i>=1": {
+     "pearson_nan0": -0.188,
+     "p_at_200_up": 0.288,
+     "p_at_200_down": 0.315
+    },
+    "repeat_last_change, i>=1": {
+     "pearson_nan0": 0.154,
+     "p_at_200_up": 0.222,
+     "p_at_200_down": 0.196
+    },
+    "lowrank3_projected_last_change, i>=1": {
+     "pearson_nan0": 0.234,
+     "p_at_200_up": 0.187,
+     "p_at_200_down": 0.287
+    },
+    "local_polynomial_rolling_selected, i>=2": {
+     "pearson_nan0": 0.047,
+     "p_at_200_up": 0.25,
+     "p_at_200_down": 0.243
+    },
+    "per_gene_history_pooled_coef_by_level, i>=2": {
+     "pearson_nan0": 0.061,
+     "p_at_200_up": 0.197,
+     "p_at_200_down": 0.217
+    },
+    "kalman_known_noise_rolling_selected, i>=2": {
+     "pearson_nan0": 0.18,
+     "p_at_200_up": 0.208,
+     "p_at_200_down": 0.197
+    },
+    "per_gene_history_recency_halflife0.5_by_level, i>=2": {
+     "pearson_nan0": 0.253,
+     "p_at_200_up": 0.33,
+     "p_at_200_down": 0.315
+    },
+    "per_gene_history_recency_rolling_selected, i>=3": {
+     "pearson_nan0": 0.253,
+     "p_at_200_up": 0.323,
+     "p_at_200_down": 0.327
+    }
+   }
+  },
+  "zero_crossing_counts_vs_pure_sampling": {
+   "DN (>0 -> 0) observed": 25642,
+   "DN expected from (1-f)^n_next, law of t+1 interpolated from t and t+2": 23061,
+   "UP (0 -> >0) observed": 26917,
+   "UP expected, same law": 14953
+  },
+  "lag1_corr_of_consecutive_changes": {
+   "orig": -0.46521208472345565,
+   "l1": -0.1687666934151073,
+   "linear": 0.2823153560193229
+  },
+  "predictable_fraction (R2 = squared Pearson; masks differ between scripts, +/-0.01)": {
+   "orig": {
+    "R2_upper_1_minus_noise_next_mean": 0.604,
+    "R2_upper_1_minus_noise_next_median": 0.598,
+    "R2_model_world_ceiling": 0.484,
+    "R2_noncausal_interp_oracle": 0.387,
+    "R2_best_strict": 0.371,
+    "best_strict": "per_gene_history_pooled_coef_by_level, i>=2",
+    "R2_current_bin_noise_share (recoverable only by denoising m_t)": 0.383,
+    "R2_true_change_share (1 - noise both bins)": 0.244
+   },
+   "l1": {
+    "R2_upper_1_minus_noise_next_mean": 0.584,
+    "R2_upper_1_minus_noise_next_median": 0.608,
+    "R2_model_world_ceiling": 0.477,
+    "R2_noncausal_interp_oracle": 0.332,
+    "R2_best_strict": 0.115,
+    "best_strict": "per_gene_history_recency_rolling_selected, i>=3",
+    "R2_current_bin_noise_share (recoverable only by denoising m_t)": 0.379,
+    "R2_true_change_share (1 - noise both bins)": 0.205
+   },
+   "linear": {
+    "R2_upper_1_minus_noise_next_mean": 0.622,
+    "R2_upper_1_minus_noise_next_median": 0.831,
+    "R2_model_world_ceiling": 0.593,
+    "R2_noncausal_interp_oracle": 0.424,
+    "R2_best_strict": 0.064,
+    "best_strict": "per_gene_history_recency_halflife0.5_by_level, i>=2",
+    "R2_current_bin_noise_share (recoverable only by denoising m_t)": 0.266,
+    "R2_true_change_share (1 - noise both bins)": 0.357
+   }
+  }
+ },
+ "pancreas-human": {
+  "orig": {
+   "(a) zero-crossings": {
+    "ss_share_UP_plus_DN": 0.91,
+    "R2_of_4group_oracle (BZ/UP/DN/EX known, descriptive)": 0.934,
+    "mean_genes_at_+5 / -5 (all genes)": [
+     835,
+     857
+    ],
+    "tie_limited_P@200_max_up/down": [
+     0.843,
+     0.847
+    ]
+   },
+   "(b) global factor": {
+    "oracle_knows_L_next_pearson_i>=1": 0.033,
+    "oracle_k1_k3_k10_scalars_on_past_loadings_pearson_i>=1": [
+     0.112,
+     0.221,
+     0.424
+    ],
+    "descriptive_function_of_level_pearson": 0.457,
+    "strict_function_of_level_pearson_i>=1": 0.383
+   },
+   "(c) finite-sample noise (share of per-transition target variance, mean over transitions; median in brackets)": {
+    "next_bin": "0.376 [0.395]",
+    "current_bin": "0.374 [0.390]",
+    "both_bins": "0.723 [0.717]",
+    "plugin_law_next_bin": 0.223,
+    "second_diff_obs_over_noise_pred_median": 1.24,
+    "true_change_persistence_median": -0.05,
+    "N_eff_genes_median": 1977,
+    "genes_for_50pct_of_SS_median": 895.0
+   },
+   "ceilings (non-causal)": {
+    "pearson_ceiling_sqrt(1-noise_next)": 0.789,
+    "model_world (truth = smoothed law, E[T] vs fresh draws)": {
+     "pearson_nan0": 0.729,
+     "p_at_200_up": 0.491,
+     "p_at_200_down": 0.571
+    },
+    "oracle_next_bin_interpolated_without_bin_t+1 (best of 2), i>=1": {
+     "pearson_nan0": 0.623,
+     "p_at_200_up": 0.402,
+     "p_at_200_down": 0.514
+    },
+    "oracle_knows_n_next (level law, finite-cell obs), i>=1": {
+     "pearson_nan0": 0.518,
+     "p_at_200_up": 0.323,
+     "p_at_200_down": 0.444
+    },
+    "oracle_coef_per_gene_history_by_level (in-sample coefficients), i>=1": {
+     "pearson_nan0": 0.577,
+     "p_at_200_up": 0.327,
+     "p_at_200_down": 0.472
+    }
+   },
+   "strict": {
+    "level4_law_finite_cell_obs_n_t, i>=1": {
+     "pearson_nan0": 0.478,
+     "p_at_200_up": 0.324,
+     "p_at_200_down": 0.449
+    },
+    "repeat_last_change, i>=1": {
+     "pearson_nan0": -0.394,
+     "p_at_200_up": 0.04,
+     "p_at_200_down": 0.038
+    },
+    "lowrank3_projected_last_change, i>=1": {
+     "pearson_nan0": -0.239,
+     "p_at_200_up": 0.07,
+     "p_at_200_down": 0.062
+    },
+    "local_polynomial_rolling_selected, i>=2": {
+     "pearson_nan0": 0.476,
+     "p_at_200_up": 0.324,
+     "p_at_200_down": 0.445
+    },
+    "per_gene_history_pooled_coef_by_level, i>=2": {
+     "pearson_nan0": 0.529,
+     "p_at_200_up": 0.341,
+     "p_at_200_down": 0.455
+    }
+   }
+  },
+  "l1": {
+   "(a) zero-crossings": {
+    "ss_share_UP_plus_DN": 0.015,
+    "R2_of_4group_oracle (BZ/UP/DN/EX known, descriptive)": 0.01
+   },
+   "(b) global factor": {
+    "oracle_knows_L_next_pearson_i>=1": 0.007,
+    "oracle_k1_k3_k10_scalars_on_past_loadings_pearson_i>=1": [
+     0.122,
+     0.229,
+     0.397
+    ],
+    "descriptive_function_of_level_pearson": 0.216,
+    "strict_function_of_level_pearson_i>=1": 0.083
+   },
+   "(c) finite-sample noise (share of per-transition target variance, mean over transitions; median in brackets)": {
+    "next_bin": "0.235 [0.220]",
+    "current_bin": "0.228 [0.150]",
+    "both_bins": "0.463 [0.476]",
+    "plugin_law_next_bin": 0.223,
+    "second_diff_obs_over_noise_pred_median": 1.29,
+    "true_change_persistence_median": 0.77,
+    "N_eff_genes_median": 464,
+    "genes_for_50pct_of_SS_median": 417.0
+   },
+   "ceilings (non-causal)": {
+    "pearson_ceiling_sqrt(1-noise_next)": 0.872,
+    "model_world (truth = smoothed law, E[T] vs fresh draws)": {
+     "pearson_nan0": 0.786,
+     "p_at_200_up": 0.601,
+     "p_at_200_down": 0.591
+    },
+    "oracle_next_bin_interpolated_without_bin_t+1 (best of 2), i>=1": {
+     "pearson_nan0": 0.68,
+     "p_at_200_up": 0.487,
+     "p_at_200_down": 0.521
+    },
+    "oracle_knows_n_next (level law, finite-cell obs), i>=1": {
+     "pearson_nan0": -0.158,
+     "p_at_200_up": 0.098,
+     "p_at_200_down": 0.17
+    },
+    "oracle_coef_per_gene_history_by_level (in-sample coefficients), i>=1": {
+     "pearson_nan0": 0.379,
+     "p_at_200_up": 0.241,
+     "p_at_200_down": 0.299
+    }
+   },
+   "strict": {
+    "level4_law_finite_cell_obs_n_t, i>=1": {
+     "pearson_nan0": -0.159,
+     "p_at_200_up": 0.098,
+     "p_at_200_down": 0.169
+    },
+    "repeat_last_change, i>=1": {
+     "pearson_nan0": 0.164,
+     "p_at_200_up": 0.22,
+     "p_at_200_down": 0.219
+    },
+    "lowrank3_projected_last_change, i>=1": {
+     "pearson_nan0": 0.111,
+     "p_at_200_up": 0.193,
+     "p_at_200_down": 0.205
+    },
+    "local_polynomial_rolling_selected, i>=2": {
+     "pearson_nan0": 0.121,
+     "p_at_200_up": 0.217,
+     "p_at_200_down": 0.194
+    },
+    "per_gene_history_pooled_coef_by_level, i>=2": {
+     "pearson_nan0": 0.211,
+     "p_at_200_up": 0.18,
+     "p_at_200_down": 0.245
+    },
+    "kalman_known_noise_rolling_selected, i>=2": {
+     "pearson_nan0": 0.11,
+     "p_at_200_up": 0.228,
+     "p_at_200_down": 0.213
+    },
+    "per_gene_history_recency_halflife0.5_by_level, i>=2": {
+     "pearson_nan0": 0.241,
+     "p_at_200_up": 0.196,
+     "p_at_200_down": 0.266
+    },
+    "per_gene_history_recency_rolling_selected, i>=3": {
+     "pearson_nan0": 0.268,
+     "p_at_200_up": 0.201,
+     "p_at_200_down": 0.284
+    }
+   }
+  },
+  "linear": {
+   "(a) zero-crossings": {
+    "ss_share_UP_plus_DN": 0.001,
+    "R2_of_4group_oracle (BZ/UP/DN/EX known, descriptive)": 0.005
+   },
+   "(b) global factor": {
+    "oracle_knows_L_next_pearson_i>=1": 0.344,
+    "oracle_k1_k3_k10_scalars_on_past_loadings_pearson_i>=1": [
+     0.293,
+     0.547,
+     0.659
+    ],
+    "descriptive_function_of_level_pearson": 0.534,
+    "strict_function_of_level_pearson_i>=1": 0.193,
+    "oracle_best_scalar_on_m_a_abs_corr": 0.416
+   },
+   "(c) finite-sample noise (share of per-transition target variance, mean over transitions; median in brackets)": {
+    "next_bin": "0.101 [0.063]",
+    "current_bin": "0.106 [0.056]",
+    "both_bins": "0.207 [0.087]",
+    "plugin_law_next_bin": 0.093,
+    "second_diff_obs_over_noise_pred_median": 3.8,
+    "true_change_persistence_median": 0.69,
+    "N_eff_genes_median": 16,
+    "genes_for_50pct_of_SS_median": 10.5
+   },
+   "ceilings (non-causal)": {
+    "pearson_ceiling_sqrt(1-noise_next)": 0.947,
+    "model_world (truth = smoothed law, E[T] vs fresh draws)": {
+     "pearson_nan0": 0.874,
+     "p_at_200_up": 0.639,
+     "p_at_200_down": 0.707
+    },
+    "oracle_next_bin_interpolated_without_bin_t+1 (best of 2), i>=1": {
+     "pearson_nan0": 0.761,
+     "p_at_200_up": 0.529,
+     "p_at_200_down": 0.639
+    },
+    "oracle_knows_n_next (level law, finite-cell obs), i>=1": {
+     "pearson_nan0": -0.343,
+     "p_at_200_up": 0.157,
+     "p_at_200_down": 0.225
+    },
+    "oracle_coef_per_gene_history_by_level (in-sample coefficients), i>=1": {
+     "pearson_nan0": 0.593,
+     "p_at_200_up": 0.285,
+     "p_at_200_down": 0.434
+    }
+   },
+   "strict": {
+    "level4_law_finite_cell_obs_n_t, i>=1": {
+     "pearson_nan0": -0.345,
+     "p_at_200_up": 0.157,
+     "p_at_200_down": 0.222
+    },
+    "repeat_last_change, i>=1": {
+     "pearson_nan0": 0.388,
+     "p_at_200_up": 0.288,
+     "p_at_200_down": 0.358
+    },
+    "lowrank3_projected_last_change, i>=1": {
+     "pearson_nan0": 0.369,
+     "p_at_200_up": 0.271,
+     "p_at_200_down": 0.359
+    },
+    "local_polynomial_rolling_selected, i>=2": {
+     "pearson_nan0": 0.266,
+     "p_at_200_up": 0.289,
+     "p_at_200_down": 0.328
+    },
+    "per_gene_history_pooled_coef_by_level, i>=2": {
+     "pearson_nan0": 0.338,
+     "p_at_200_up": 0.207,
+     "p_at_200_down": 0.39
+    },
+    "kalman_known_noise_rolling_selected, i>=2": {
+     "pearson_nan0": 0.134,
+     "p_at_200_up": 0.298,
+     "p_at_200_down": 0.337
+    },
+    "per_gene_history_recency_halflife0.5_by_level, i>=2": {
+     "pearson_nan0": 0.205,
+     "p_at_200_up": 0.231,
+     "p_at_200_down": 0.333
+    },
+    "per_gene_history_recency_rolling_selected, i>=3": {
+     "pearson_nan0": 0.272,
+     "p_at_200_up": 0.226,
+     "p_at_200_down": 0.373
+    }
+   }
+  },
+  "zero_crossing_counts_vs_pure_sampling": {
+   "DN (>0 -> 0) observed": 11996,
+   "DN expected from (1-f)^n_next, law of t+1 interpolated from t and t+2": 10330,
+   "UP (0 -> >0) observed": 11692,
+   "UP expected, same law": 6796
+  },
+  "lag1_corr_of_consecutive_changes": {
+   "orig": -0.3938844195058659,
+   "l1": 0.15597868270932194,
+   "linear": 0.38691320666779766
+  },
+  "predictable_fraction (R2 = squared Pearson; masks differ between scripts, +/-0.01)": {
+   "orig": {
+    "R2_upper_1_minus_noise_next_mean": 0.624,
+    "R2_upper_1_minus_noise_next_median": 0.605,
+    "R2_model_world_ceiling": 0.531,
+    "R2_noncausal_interp_oracle": 0.388,
+    "R2_best_strict": 0.28,
+    "best_strict": "per_gene_history_pooled_coef_by_level, i>=2",
+    "R2_current_bin_noise_share (recoverable only by denoising m_t)": 0.374,
+    "R2_true_change_share (1 - noise both bins)": 0.277
+   },
+   "l1": {
+    "R2_upper_1_minus_noise_next_mean": 0.765,
+    "R2_upper_1_minus_noise_next_median": 0.78,
+    "R2_model_world_ceiling": 0.618,
+    "R2_noncausal_interp_oracle": 0.462,
+    "R2_best_strict": 0.072,
+    "best_strict": "per_gene_history_recency_rolling_selected, i>=3",
+    "R2_current_bin_noise_share (recoverable only by denoising m_t)": 0.228,
+    "R2_true_change_share (1 - noise both bins)": 0.537
+   },
+   "linear": {
+    "R2_upper_1_minus_noise_next_mean": 0.899,
+    "R2_upper_1_minus_noise_next_median": 0.937,
+    "R2_model_world_ceiling": 0.764,
+    "R2_noncausal_interp_oracle": 0.579,
+    "R2_best_strict": 0.151,
+    "best_strict": "repeat_last_change, i>=1",
+    "R2_current_bin_noise_share (recoverable only by denoising m_t)": 0.106,
+    "R2_true_change_share (1 - noise both bins)": 0.793
+   }
+  }
+ }
+}

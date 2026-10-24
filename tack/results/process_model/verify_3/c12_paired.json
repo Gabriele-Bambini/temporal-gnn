@@ -1,0 +1,150 @@
+{
+ "gastrulation-human": {
+  "A_phat - base pcc": {
+   "mean": 0.0071,
+   "better": 18,
+   "worse": 10,
+   "wilcoxon_p": 0.0505
+  },
+  "A_phat - base up": {
+   "mean": 0.0081,
+   "better": 19,
+   "worse": 9,
+   "wilcoxon_p": 0.0044
+  },
+  "A_phat - base down": {
+   "mean": -0.0031,
+   "better": 12,
+   "worse": 16,
+   "wilcoxon_p": 0.1256
+  },
+  "B_phat+post0 - base pcc": {
+   "mean": 0.0079,
+   "better": 20,
+   "worse": 8,
+   "wilcoxon_p": 0.0191
+  },
+  "B_phat+post0 - base up": {
+   "mean": 0.0082,
+   "better": 19,
+   "worse": 9,
+   "wilcoxon_p": 0.0034
+  },
+  "B_phat+post0 - base down": {
+   "mean": -0.0031,
+   "better": 12,
+   "worse": 16,
+   "wilcoxon_p": 0.1256
+  },
+  "C_post_all - base pcc": {
+   "mean": 0.0088,
+   "better": 20,
+   "worse": 8,
+   "wilcoxon_p": 0.0048
+  },
+  "C_post_all - base up": {
+   "mean": 0.0081,
+   "better": 19,
+   "worse": 9,
+   "wilcoxon_p": 0.0041
+  },
+  "C_post_all - base down": {
+   "mean": -0.003,
+   "better": 14,
+   "worse": 14,
+   "wilcoxon_p": 0.1638
+  },
+  "D_base+post0 - base pcc": {
+   "mean": 0.0078,
+   "better": 22,
+   "worse": 6,
+   "wilcoxon_p": 0.0048
+  },
+  "D_base+post0 - base up": {
+   "mean": 0.0085,
+   "better": 19,
+   "worse": 9,
+   "wilcoxon_p": 0.0024
+  },
+  "D_base+post0 - base down": {
+   "mean": -0.0041,
+   "better": 5,
+   "worse": 12,
+   "wilcoxon_p": 0.0929
+  }
+ },
+ "pancreas-human": {
+  "A_phat - base pcc": {
+   "mean": 0.0024,
+   "better": 7,
+   "worse": 6,
+   "wilcoxon_p": 0.8926
+  },
+  "A_phat - base up": {
+   "mean": 0.0064,
+   "better": 7,
+   "worse": 6,
+   "wilcoxon_p": 0.2734
+  },
+  "A_phat - base down": {
+   "mean": 0.0102,
+   "better": 8,
+   "worse": 5,
+   "wilcoxon_p": 0.2163
+  },
+  "B_phat+post0 - base pcc": {
+   "mean": 0.005,
+   "better": 7,
+   "worse": 6,
+   "wilcoxon_p": 0.7869
+  },
+  "B_phat+post0 - base up": {
+   "mean": 0.0063,
+   "better": 7,
+   "worse": 6,
+   "wilcoxon_p": 0.2439
+  },
+  "B_phat+post0 - base down": {
+   "mean": 0.0102,
+   "better": 8,
+   "worse": 5,
+   "wilcoxon_p": 0.2163
+  },
+  "C_post_all - base pcc": {
+   "mean": 0.0185,
+   "better": 8,
+   "worse": 5,
+   "wilcoxon_p": 0.2439
+  },
+  "C_post_all - base up": {
+   "mean": 0.0063,
+   "better": 7,
+   "worse": 6,
+   "wilcoxon_p": 0.2439
+  },
+  "C_post_all - base down": {
+   "mean": 0.012,
+   "better": 8,
+   "worse": 5,
+   "wilcoxon_p": 0.1465
+  },
+  "D_base+post0 - base pcc": {
+   "mean": 0.0113,
+   "better": 9,
+   "worse": 4,
+   "wilcoxon_p": 0.4143
+  },
+  "D_base+post0 - base up": {
+   "mean": 0.0067,
+   "better": 7,
+   "worse": 5,
+   "wilcoxon_p": 0.1763
+  },
+  "D_base+post0 - base down": {
+   "mean": 0.0107,
+   "better": 5,
+   "worse": 4,
+   "wilcoxon_p": 0.4961
+  }
+ }
+}

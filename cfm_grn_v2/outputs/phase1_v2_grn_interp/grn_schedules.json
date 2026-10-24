@@ -1,0 +1,367 @@
+[
+ {
+  "kind": "switch_off",
+  "t_switch": 2.025445238877033,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 3.1048114267844484,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 3.472906188817687,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.327569487332896,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 2.214652204921278,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 3.034097183134676,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 1.829135997605327,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 1.947474110271135,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.7776507227491356,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.1015368759268207,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 2.6263734890365305,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 3.2931830132209647,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 3.486993719724534,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.372244971385708,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 2.7411223738479666,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 2.356384047001385,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 3.447147622515473,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 1.5178160142079027,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.5215973271033674,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 3.183766557783024,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 2.1234896575213478,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 3.305565950357548,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 3.291946096188238,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 2.460220133230822,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 1.568128441482513,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 3.476616225098687,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 3.5424611979709497,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 3.677172862852435,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 3.124493081427091,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.5171063398618427,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 3.7206586254726743,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 3.900424994187206,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.290433026612745,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 1.6928032120444034,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.488416833410778,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.294782145314475,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 2.738923536250274,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 1.575102946732627,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_off",
+  "t_switch": 3.647488566134646,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 3.4586031852795522,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 1.7361018171681593,
+  "width": 0.30000000000000004
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "constant",
+  "t_switch": 0.0,
+  "width": 1.0
+ },
+ {
+  "kind": "switch_on",
+  "t_switch": 2.7245145003565243,
+  "width": 0.30000000000000004
+ }
+]

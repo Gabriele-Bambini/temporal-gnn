@@ -1,0 +1,76 @@
+  validation fold 1.0 seed 0: persistence 3.580, mean_interp 3.636, ot_interp 4.073, path_linear 3.454, path_spline 4.035, ot_interp+scale 3.494, path_linear+scale 3.515
+  validation fold 1.0 seed 0: t_prev/t_next spread ratio 1.207, held-out/t_prev 1.050
+  validation fold 1.0 seed 1: persistence 3.669, mean_interp 3.722, ot_interp 4.339, path_linear 3.506, path_spline 4.096, ot_interp+scale 3.661, path_linear+scale 3.569
+  validation fold 1.0 seed 1: t_prev/t_next spread ratio 1.207, held-out/t_prev 1.050
+  validation fold 4.0 seed 0: persistence 4.275, mean_interp 1.852, ot_interp 2.054, path_linear 1.130, path_spline 2.014, ot_interp+scale 1.256, path_linear+scale 1.219
+  validation fold 4.0 seed 0: t_prev/t_next spread ratio 1.414, held-out/t_prev 1.618
+  validation fold 4.0 seed 1: persistence 4.278, mean_interp 1.855, ot_interp 2.018, path_linear 1.127, path_spline 1.986, ot_interp+scale 1.254, path_linear+scale 1.220
+  validation fold 4.0 seed 1: t_prev/t_next spread ratio 1.414, held-out/t_prev 1.618
+  test (diagnosis only) fold 2.0 seed 0: persistence 3.106, mean_interp 1.509, ot_interp 1.947, path_linear 1.921, path_spline 3.096, ot_interp+scale 1.440, path_linear+scale 1.448
+  test (diagnosis only) fold 2.0 seed 0: t_prev/t_next spread ratio 1.349, held-out/t_prev 1.001
+  test (diagnosis only) fold 2.0 seed 1: persistence 3.124, mean_interp 1.525, ot_interp 1.975, path_linear 1.981, path_spline 3.140, ot_interp+scale 1.501, path_linear+scale 1.475
+  test (diagnosis only) fold 2.0 seed 1: t_prev/t_next spread ratio 1.349, held-out/t_prev 1.001
+
+                                                       ED  mean_error  var_ratio  nn_ratio
+split                 fold construction                                                   
+test (diagnosis only) 2.0  mean_interp             1.5172      8.4447     0.9986    1.0595
+                           ot_interp               1.9608      8.4447     0.6804    0.9359
+                           ot_interp+bridge0.25    1.9075      8.4440     0.6968    0.9427
+                           ot_interp+bridge0.5     1.7712      8.4434     0.7459    0.9663
+                           ot_interp+bridge1.0     1.4947      8.4494     0.9423    1.0506
+                           ot_interp+scale         1.4706      8.4447     1.0368    1.0721
+                           path_linear             1.9509      8.4448     1.5382    1.2395
+                           path_linear+bridge0.25  1.9852      8.4529     1.5547    1.2463
+                           path_linear+bridge0.5   2.0832      8.4538     1.6035    1.2630
+                           path_linear+bridge1.0   2.5258      8.4584     1.8000    1.3299
+                           path_linear+scale       1.4613      8.4448     1.0368    1.0785
+                           path_spline             3.1178     11.6293     1.5382    1.2570
+                           persistence             3.1151     12.2064     0.9986    1.0817
+validation            1.0  mean_interp             3.6790     13.3282     0.9521    1.0505
+                           ot_interp               4.2063     13.3282     0.6817    0.9423
+                           ot_interp+bridge0.25    4.1543     13.3273     0.6942    0.9479
+                           ot_interp+bridge0.5     4.0117     13.3287     0.7319    0.9667
+                           ot_interp+bridge1.0     3.6394     13.3296     0.8819    1.0336
+                           ot_interp+scale         3.5774     13.3282     0.9615    1.0551
+                           path_linear             3.4803     13.3260     1.1301    1.1238
+                           path_linear+bridge0.25  3.4825     13.3284     1.1427    1.1285
+                           path_linear+bridge0.5   3.4909     13.3290     1.1804    1.1435
+                           path_linear+bridge1.0   3.5953     13.3326     1.3301    1.1983
+                           path_linear+scale       3.5419     13.3260     0.9615    1.0625
+                           path_spline             4.0655     14.4640     1.1301    1.1280
+                           persistence             3.6244     13.2350     0.9521    1.0504
+                      4.0  mean_interp             1.8534      7.3848     0.6179    0.9134
+                           ot_interp               2.0359      7.3847     0.5699    0.8569
+                           ot_interp+bridge0.25    1.9799      7.3873     0.5787    0.8606
+                           ot_interp+bridge0.5     1.8215      7.3880     0.6052    0.8755
+                           ot_interp+bridge1.0     1.3555      7.3944     0.7113    0.9284
+                           ot_interp+scale         1.2551      7.3847     0.7518    0.9275
+                           path_linear             1.1285      7.4405     0.7955    0.9770
+                           path_linear+bridge0.25  1.1091      7.4426     0.8044    0.9813
+                           path_linear+bridge0.5   1.0557      7.4429     0.8308    0.9933
+                           path_linear+bridge1.0   0.9327      7.4720     0.9372    1.0408
+                           path_linear+scale       1.2195      7.4405     0.7518    0.9517
+                           path_spline             2.0000     10.2730     0.7955    0.9868
+                           persistence             4.2762     13.8735     0.6179    0.9026
+{
+ "ot_interp": {
+  "validation_ED": {
+   "ot_interp": 3.1211,
+   "ot_interp+bridge0.25": 3.0671,
+   "ot_interp+bridge0.5": 2.9166,
+   "ot_interp+bridge1.0": 2.4974,
+   "ot_interp+scale": 2.4162
+  },
+  "best": "ot_interp+scale"
+ },
+ "path_linear": {
+  "validation_ED": {
+   "path_linear": 2.3044,
+   "path_linear+bridge0.25": 2.2958,
+   "path_linear+bridge0.5": 2.2733,
+   "path_linear+bridge1.0": 2.264,
+   "path_linear+scale": 2.3807
+  },
+  "best": "path_linear+bridge1.0"
+ }
+}

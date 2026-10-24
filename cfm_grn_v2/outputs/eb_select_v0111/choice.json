@@ -1,0 +1,40 @@
+{
+ "dataset": "eb",
+ "arm_set": "v0111",
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  3.0
+ ],
+ "min_detect": 0.01,
+ "smoke": false,
+ "rule": "improve on base in >= 3 of 4 (fold, seed) pairs and on average; most negative mean change; else base",
+ "per_arm": {
+  "time": {
+   "mean_change": 0.0026301441483003174,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    0.0034512124210763773,
+    0.015065442323020761,
+    -0.000409877266740466,
+    -0.007586200884155403
+   ]
+  },
+  "noft": {
+   "mean_change": 0.2495763503513082,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    -0.1747088659358269,
+    -0.1442022341750544,
+    0.38985765619022317,
+    0.927358845325891
+   ]
+  }
+ },
+ "winner": "base",
+ "overrides": {
+  "path_center": "linear"
+ }
+}

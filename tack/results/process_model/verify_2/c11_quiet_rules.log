@@ -1,0 +1,23 @@
+gastrulation-human 2 {'r(y_i,y_i-1)': -0.3506, 'r(y_i,y_i-2)': -0.4714, 'NASS_pcc_own20masks': -0.1305, 'NASS_pcc_ctx': -0.1059}
+gastrulation-human 5 {'r(y_i,y_i-1)': -0.4163, 'r(y_i,y_i-2)': -0.5244, 'NASS_pcc_own20masks': -0.286, 'NASS_pcc_ctx': -0.2881}
+gastrulation-human share<0.2_at_i_and_i-1 [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 27, 28]
+  0         NASS +0.558 best +rev_box4  +0.546 (wins 3/13) strict +0.527 vs NASS +0.551 SS 0.014 n 10685.1
+  (0,0.1]   NASS +0.511 best +rev_box4  +0.498 (wins 2/13) strict +0.488 vs NASS +0.508 SS 0.106 n 5158.9
+  (0.1,1]   NASS +0.457 best +rev_box2  +0.402 (wins 2/13) strict +0.398 vs NASS +0.459 SS 0.540 n 3933.7
+  (1,10]    NASS +0.372 best -lag1      +0.247 (wins 3/13) strict +0.244 vs NASS +0.377 SS 0.318 n 1490.2
+  (10,100]  NASS +0.444 best -rev_box8  +0.342 (wins 5/13) strict +0.337 vs NASS +0.477 SS 0.021 n 160.9
+   >100 fewer than 10 masked genes
+  NASS all-gene PCC (ctx) mean over these 0.442
+gastrulation-human share<0.2_at_i [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 24, 26, 27, 28]
+  0         NASS +0.490 best +rev_box4  +0.507 (wins 5/17) strict +0.486 vs NASS +0.516 SS 0.013 n 10633.1
+  (0,0.1]   NASS +0.481 best +rev_box4  +0.462 (wins 2/17) strict +0.462 vs NASS +0.491 SS 0.107 n 5172.1
+  (0.1,1]   NASS +0.416 best +rev_box2  +0.369 (wins 4/17) strict +0.369 vs NASS +0.433 SS 0.543 n 3968.0
+  (1,10]    NASS +0.338 best -lag1      +0.201 (wins 4/17) strict +0.202 vs NASS +0.365 SS 0.317 n 1496.1
+  (10,100]  NASS +0.463 best -rev_box8  +0.401 (wins 8/17) strict +0.359 vs NASS +0.446 SS 0.020 n 159.4
+   >100 fewer than 10 masked genes
+  NASS all-gene PCC (ctx) mean over these 0.403
+pancreas-human CP>10 {1: 0.2694, 2: 0.2398, 3: 0.2838, 4: 0.4519, 5: 0.4982, 6: 0.3992, 7: 0.6533, 8: 0.5469, 9: 0.61, 10: 0.5842, 11: 0.1889, 12: 0.5793, 13: 0.6227} slope 0.0209
+pancreas-human CP(10,100] {1: 0.2694, 2: 0.2398, 3: 0.2838, 4: 0.4519, 5: 0.4982, 6: 0.3992, 7: 0.6533, 8: 0.5469, 9: 0.61, 10: 0.6531, 11: 0.1935, 12: 0.5791, 13: 0.7327} slope 0.0265
+pancreas-human NASS_class4(m>=3) {1: 0.4048, 2: 0.1101, 3: 0.4075, 4: 0.4344, 5: 0.3352, 6: 0.3981, 7: 0.6428, 8: 0.5678, 9: 0.6598, 10: 0.5942, 11: 0.2631, 12: 0.5421, 13: 0.7817} slope 0.0329
+pancreas-human CP(1,10] {1: 0.5104, 2: 0.0708, 3: 0.3636, 4: 0.2572, 5: 0.047, 6: 0.0977, 7: 0.2367, 8: 0.4256, 9: 0.4086, 10: 0.3599, 11: 0.5037, 12: 0.4731, 13: 0.6931} slope 0.0428
+pancreas-human CP(0,1] {1: 0.2391, 2: -0.086, 3: -0.0402, 4: -0.1299, 5: -0.2637, 6: -0.2663, 7: -0.1902, 8: 0.09, 9: 0.1499, 10: 0.0375, 11: 0.2423, 12: 0.2739, 13: 0.1229} slope 0.0376

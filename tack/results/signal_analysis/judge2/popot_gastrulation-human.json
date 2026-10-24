@@ -1,0 +1,10587 @@
+{
+ "dataset": "gastrulation-human",
+ "n_genes": 21430,
+ "n_transitions": 29,
+ "n_test": 5358,
+ "cells": [
+  9,
+  182,
+  792,
+  929,
+  982,
+  616,
+  340,
+  217,
+  225,
+  248,
+  290,
+  304,
+  431,
+  440,
+  333,
+  247,
+  246,
+  230,
+  275,
+  316,
+  355,
+  350,
+  264,
+  233,
+  228,
+  306,
+  231,
+  138,
+  46,
+  7
+ ],
+ "protocol": "Population-level OT on cell-state composition for Dileo & Sottoriva Task 2: a STRICT rolling-origin prototype.\n\nTransition i maps snapshot i -> i+1 and reads snapshots 0..i only (gastrulation-human bins 2..31, pancreas-human\nbins 0..14; first N genes of the node files, raw UMI bin statistics m, s, f, n cells).\n\nModel, per transition i\n 1. archetypes: weighted-KL NMF of the CP10k bin profiles of snapshots 0..i (crossgene nmf_kl.fit_subset through\n    forecasts.NMFMix.fit; row weight n_b lib_b / 1e4; K in {3, 6, 8}, K_eff = min(K, i + 1)). Rows of W = UMI\n    fractions P_b of the K archetypes; cost between archetypes C_kl = mean_g (log1p H_kg - log1p H_lg)^2 divided by\n    its mean off-diagonal value (crossgene's cost).\n 2. cell fractions: pi_bk = P_bk lib_b c_k / sum_k' (.), with c_k = 1 / (UMI per cell of archetype k) from a ridge\n    fit of sum_k P_bk lib_b c_k = 1 over the bins (weights n_b, shrunk to 1 / mean library, clipped to [1/4, 4] x).\n 3. archetype count laws: per gene and archetype the triplet A_k = (mean m_k, nonzero fraction f_k, second moment\n    e_k = E[c^2]), fitted with pi fixed by a weighted-KL multiplicative loop on the three raw bin channels. For a\n    mixture of cell populations the identities m_b = sum_k pi_bk m_k, f_b = sum_k pi_bk f_k, e_b = sum_k pi_bk e_k\n    are exact, so a composition change moves the whole count law of every gene, zero fraction included.\n 4. population forecast of pi_{i+1} (the only place OT / SB enters):\n      persist | lin1 (pi_i + (pi_i - pi_{i-1})) | loglin1 (multiplicative)                     -- no OT\n      ot0.05    balanced entropic OT plan between pi_{i-1} and pi_i (eps 0.05 on the normalised cost), its Markov\n                kernel applied once more to pi_i                         (crossgene forecasts.NMFMix.forecast_props)\n      uot0.05t1 unbalanced entropic OT (KL marginal relaxation tau = 1): growth of each archetype kept and\n                extrapolated together with the transport                 (crossgene forecasts.NMFMix.forecast_props)\n      sb3 / sbW static Schroedinger bridge: one time-homogeneous Markov kernel over archetypes = cell-weighted pool\n                of the conditional entropic OT plans of the last 3 / 8 consecutive pairs, applied to pi_i (new here)\n 5. map back by the mixture shift: T_hat = T_state + (pi_hat - pi_state) A for the three channels. T_state is the\n    gene's own law pooled over the last k bins (box k: cell-weighted mixture of the triplets, k in {1, 2, 4}; pi_state\n    pooled with the same weights) or mixavg3 (pi_i A + the residual T_b - pi_b A averaged over 3 bins with weights\n    n / (n + 50)). Optional per-gene residual trend (box1 only): + beta [(T_i - T_{i-1}) - (pi_i - pi_{i-1}) A],\n    beta in {0.5, 1}; lin1 with beta = 1 is exactly the raw-mean per-gene trend, so the two-pathway model nests it.\n    Fix-up: m >= 0, 0 <= f <= min(1, m) (f = 1 - exp(-m) if m > 0 and f = 0), e >= max(m, m^2 / f).\n 6. observation / target: orig -> dist_bridge.expected_target(T_hat, m_i, n_i) (bin i+1 = n_i cells drawn from the\n    forecast law: zero-crossings analytic, the rest Monte Carlo, 256 draws, numpy generator keyed by transition and\n    config); l1 -> plug-in log1p(1e4 m_hat / sum m_hat) - log1p(CP10k_i); linear -> m_hat - m_i.\n 7. selection: rolling origin per transition, the config with the best mean dist_bridge.criterion (Pearson + tie-aware\n    expected P@K up + down, K = 200 / n_test x N, all genes, targets rebuilt from bins <= i) over the last 8 past\n    transitions j >= 1; ties within 1e-3 go to non-OT forecasters, then to the earlier config. No past transition\n    (i <= 1): orig uses box4 persist (= level + observation model), l1 / linear the repeat-last-change trend.\nComparators run here: repeat-last-change trend (all targets); level + observation model (box4 persist; and RO over\nbox2 / box4 persist); RO groups restricted to non-OT / OT forecasters / one forecaster at a time (isolates the OT\nincrement, paired Wilcoxon over transitions); ORACLE next composition (bin i+1 projected on the strict archetypes,\nNOT strict, ceiling of any composition forecaster). Reproduction check: crossgene 'nmf_linear_props' on l1 with\ntheir own pipeline. Diagnostics: turn-on / turn-off AUC on genes at zero / nonzero in bin i, composition forecast\nerror (total variation against the oracle projection).\nScores: crossgene common.masks (10 draws of a random 25 % of genes per transition, seed 20261022), Pearson and\nP@200 up / down with np.argsort (their metric); 'i>=1' = mean over transitions 1..T-1 (NaN Pearson -> 0); 'all' =\nnanmean over all transitions including i = 0 (the convention of the CONTEXT DistBridge numbers).\nUsage: python popot.py <dataset>   ->   popot_<dataset>.json\n",
+ "n_configs": {
+  "orig": 38,
+  "l1": 120,
+  "linear": 120
+ },
+ "targets": {
+  "orig": {
+   "comparators": {
+    "trend_repeat_last_change": {
+     "i>=1": [
+      -0.4648,
+      0.0102,
+      0.0103
+     ],
+     "all": [
+      -0.4648,
+      0.0098,
+      0.0099
+     ],
+     "i>=1_no_last": [
+      -0.4692,
+      0.0094,
+      0.0106
+     ]
+    },
+    "level_obs_box4_persist": {
+     "i>=1": [
+      0.5905,
+      0.3942,
+      0.5452
+     ],
+     "all": [
+      0.5779,
+      0.381,
+      0.5361
+     ],
+     "i>=1_no_last": [
+      0.5922,
+      0.4014,
+      0.557
+     ]
+    }
+   },
+   "groups": {
+    "full": {
+     "i>=1": [
+      0.5897,
+      0.3924,
+      0.5448
+     ],
+     "all": [
+      0.5772,
+      0.3793,
+      0.5357
+     ],
+     "i>=1_no_last": [
+      0.5914,
+      0.3994,
+      0.5565
+     ],
+     "share_transitions_OT_selected": 0.107,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K3|ot0.05",
+      "box4|K3|uot0.05t1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|lin1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7995,
+     "turn_off_auc_mean_i>=1": 0.9647,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4486,
+       0.155,
+       0.462
+      ],
+      [
+       0.5452,
+       0.399,
+       0.5335
+      ],
+      [
+       0.6167,
+       0.3705,
+       0.5195
+      ],
+      [
+       0.6276,
+       0.3515,
+       0.554
+      ],
+      [
+       0.6074,
+       0.3805,
+       0.5225
+      ],
+      [
+       0.6585,
+       0.506,
+       0.667
+      ],
+      [
+       0.6165,
+       0.4435,
+       0.5985
+      ],
+      [
+       0.6237,
+       0.4705,
+       0.5665
+      ],
+      [
+       0.6268,
+       0.471,
+       0.6115
+      ],
+      [
+       0.6161,
+       0.451,
+       0.5275
+      ],
+      [
+       0.587,
+       0.4275,
+       0.5785
+      ],
+      [
+       0.6001,
+       0.3925,
+       0.5745
+      ],
+      [
+       0.6333,
+       0.415,
+       0.6155
+      ],
+      [
+       0.6439,
+       0.4695,
+       0.65
+      ],
+      [
+       0.6574,
+       0.466,
+       0.6475
+      ],
+      [
+       0.6068,
+       0.4395,
+       0.5635
+      ],
+      [
+       0.6201,
+       0.4415,
+       0.602
+      ],
+      [
+       0.5956,
+       0.4625,
+       0.551
+      ],
+      [
+       0.5608,
+       0.412,
+       0.54
+      ],
+      [
+       0.6345,
+       0.385,
+       0.539
+      ],
+      [
+       0.6242,
+       0.466,
+       0.6315
+      ],
+      [
+       0.6064,
+       0.473,
+       0.6005
+      ],
+      [
+       0.6029,
+       0.4505,
+       0.532
+      ],
+      [
+       0.5862,
+       0.3885,
+       0.543
+      ],
+      [
+       0.5788,
+       0.3435,
+       0.4985
+      ],
+      [
+       0.5698,
+       0.328,
+       0.4125
+      ],
+      [
+       0.543,
+       0.203,
+       0.2295
+      ]
+     ]
+    },
+    "noOT": {
+     "i>=1": [
+      0.5897,
+      0.3924,
+      0.5449
+     ],
+     "all": [
+      0.5772,
+      0.3793,
+      0.5358
+     ],
+     "i>=1_no_last": [
+      0.5915,
+      0.3994,
+      0.5566
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7991,
+     "turn_off_auc_mean_i>=1": 0.9647,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4486,
+       0.155,
+       0.462
+      ],
+      [
+       0.5452,
+       0.399,
+       0.5335
+      ],
+      [
+       0.6167,
+       0.3705,
+       0.5195
+      ],
+      [
+       0.6276,
+       0.3515,
+       0.554
+      ],
+      [
+       0.6074,
+       0.3805,
+       0.5225
+      ],
+      [
+       0.6585,
+       0.506,
+       0.667
+      ],
+      [
+       0.6165,
+       0.4435,
+       0.5985
+      ],
+      [
+       0.6237,
+       0.4705,
+       0.5665
+      ],
+      [
+       0.6268,
+       0.471,
+       0.6115
+      ],
+      [
+       0.6161,
+       0.451,
+       0.5275
+      ],
+      [
+       0.587,
+       0.4275,
+       0.5785
+      ],
+      [
+       0.6001,
+       0.3925,
+       0.5745
+      ],
+      [
+       0.6333,
+       0.415,
+       0.6155
+      ],
+      [
+       0.6439,
+       0.4695,
+       0.65
+      ],
+      [
+       0.6574,
+       0.466,
+       0.6475
+      ],
+      [
+       0.6068,
+       0.4395,
+       0.5635
+      ],
+      [
+       0.6201,
+       0.4415,
+       0.602
+      ],
+      [
+       0.5956,
+       0.4625,
+       0.551
+      ],
+      [
+       0.5608,
+       0.412,
+       0.54
+      ],
+      [
+       0.6345,
+       0.385,
+       0.539
+      ],
+      [
+       0.6242,
+       0.4645,
+       0.633
+      ],
+      [
+       0.6063,
+       0.4745,
+       0.6045
+      ],
+      [
+       0.6029,
+       0.4505,
+       0.532
+      ],
+      [
+       0.5862,
+       0.3885,
+       0.543
+      ],
+      [
+       0.5788,
+       0.3435,
+       0.4985
+      ],
+      [
+       0.57,
+       0.3275,
+       0.41
+      ],
+      [
+       0.543,
+       0.203,
+       0.2295
+      ]
+     ]
+    },
+    "OT_only": {
+     "i>=1": [
+      0.5818,
+      0.3885,
+      0.5399
+     ],
+     "all": [
+      0.5696,
+      0.3755,
+      0.531
+     ],
+     "i>=1_no_last": [
+      0.5833,
+      0.3954,
+      0.5514
+     ],
+     "share_transitions_OT_selected": 0.964,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K8|ot0.05",
+      "box4|K8|ot0.05",
+      "box4|K8|ot0.05",
+      "box4|K8|ot0.05",
+      "box4|K8|uot0.05t1",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sb3",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|uot0.05t1",
+      "box4|K3|sb3",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.8119,
+     "turn_off_auc_mean_i>=1": 0.9637,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4312,
+       0.1545,
+       0.449
+      ],
+      [
+       0.5486,
+       0.4335,
+       0.533
+      ],
+      [
+       0.5937,
+       0.364,
+       0.5165
+      ],
+      [
+       0.5567,
+       0.35,
+       0.497
+      ],
+      [
+       0.583,
+       0.282,
+       0.5325
+      ],
+      [
+       0.6615,
+       0.525,
+       0.64
+      ],
+      [
+       0.586,
+       0.4215,
+       0.5765
+      ],
+      [
+       0.6048,
+       0.45,
+       0.5685
+      ],
+      [
+       0.6195,
+       0.4925,
+       0.5965
+      ],
+      [
+       0.6067,
+       0.4525,
+       0.5265
+      ],
+      [
+       0.574,
+       0.3935,
+       0.5665
+      ],
+      [
+       0.5918,
+       0.378,
+       0.5735
+      ],
+      [
+       0.6316,
+       0.4225,
+       0.6215
+      ],
+      [
+       0.6433,
+       0.465,
+       0.6495
+      ],
+      [
+       0.6551,
+       0.4505,
+       0.6395
+      ],
+      [
+       0.6061,
+       0.436,
+       0.5645
+      ],
+      [
+       0.6196,
+       0.46,
+       0.6
+      ],
+      [
+       0.596,
+       0.471,
+       0.5485
+      ],
+      [
+       0.5614,
+       0.4035,
+       0.536
+      ],
+      [
+       0.6351,
+       0.3925,
+       0.539
+      ],
+      [
+       0.6242,
+       0.466,
+       0.6315
+      ],
+      [
+       0.6064,
+       0.473,
+       0.6005
+      ],
+      [
+       0.6029,
+       0.451,
+       0.535
+      ],
+      [
+       0.5862,
+       0.39,
+       0.549
+      ],
+      [
+       0.5788,
+       0.343,
+       0.502
+      ],
+      [
+       0.5698,
+       0.328,
+       0.4125
+      ],
+      [
+       0.543,
+       0.202,
+       0.228
+      ]
+     ]
+    },
+    "persist_only(level_obs_RO)": {
+     "i>=1": [
+      0.5897,
+      0.3924,
+      0.5451
+     ],
+     "all": [
+      0.5772,
+      0.3793,
+      0.536
+     ],
+     "i>=1_no_last": [
+      0.5914,
+      0.3995,
+      0.5569
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7911,
+     "turn_off_auc_mean_i>=1": 0.9647,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4486,
+       0.155,
+       0.462
+      ],
+      [
+       0.5452,
+       0.399,
+       0.5335
+      ],
+      [
+       0.6167,
+       0.3705,
+       0.5195
+      ],
+      [
+       0.6276,
+       0.3515,
+       0.554
+      ],
+      [
+       0.6074,
+       0.3805,
+       0.5225
+      ],
+      [
+       0.6585,
+       0.506,
+       0.667
+      ],
+      [
+       0.6165,
+       0.4435,
+       0.5985
+      ],
+      [
+       0.6237,
+       0.4705,
+       0.5665
+      ],
+      [
+       0.6268,
+       0.471,
+       0.6115
+      ],
+      [
+       0.6161,
+       0.451,
+       0.5275
+      ],
+      [
+       0.587,
+       0.4275,
+       0.5785
+      ],
+      [
+       0.6001,
+       0.3925,
+       0.5745
+      ],
+      [
+       0.6333,
+       0.415,
+       0.6155
+      ],
+      [
+       0.6439,
+       0.4695,
+       0.65
+      ],
+      [
+       0.6574,
+       0.466,
+       0.6475
+      ],
+      [
+       0.6068,
+       0.4395,
+       0.5635
+      ],
+      [
+       0.6201,
+       0.4415,
+       0.602
+      ],
+      [
+       0.5956,
+       0.4625,
+       0.551
+      ],
+      [
+       0.5608,
+       0.412,
+       0.54
+      ],
+      [
+       0.6345,
+       0.385,
+       0.539
+      ],
+      [
+       0.624,
+       0.4685,
+       0.6315
+      ],
+      [
+       0.6063,
+       0.4815,
+       0.609
+      ],
+      [
+       0.6028,
+       0.453,
+       0.531
+      ],
+      [
+       0.586,
+       0.374,
+       0.544
+      ],
+      [
+       0.5792,
+       0.346,
+       0.503
+      ],
+      [
+       0.5699,
+       0.3285,
+       0.4095
+      ],
+      [
+       0.5428,
+       0.2005,
+       0.227
+      ]
+     ]
+    },
+    "composition_only(box_states,beta0)": {
+     "i>=1": [
+      0.5897,
+      0.3924,
+      0.5448
+     ],
+     "all": [
+      0.5772,
+      0.3793,
+      0.5357
+     ],
+     "i>=1_no_last": [
+      0.5914,
+      0.3994,
+      0.5565
+     ],
+     "share_transitions_OT_selected": 0.107,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K3|ot0.05",
+      "box4|K3|uot0.05t1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|lin1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7995,
+     "turn_off_auc_mean_i>=1": 0.9647,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4486,
+       0.155,
+       0.462
+      ],
+      [
+       0.5452,
+       0.399,
+       0.5335
+      ],
+      [
+       0.6167,
+       0.3705,
+       0.5195
+      ],
+      [
+       0.6276,
+       0.3515,
+       0.554
+      ],
+      [
+       0.6074,
+       0.3805,
+       0.5225
+      ],
+      [
+       0.6585,
+       0.506,
+       0.667
+      ],
+      [
+       0.6165,
+       0.4435,
+       0.5985
+      ],
+      [
+       0.6237,
+       0.4705,
+       0.5665
+      ],
+      [
+       0.6268,
+       0.471,
+       0.6115
+      ],
+      [
+       0.6161,
+       0.451,
+       0.5275
+      ],
+      [
+       0.587,
+       0.4275,
+       0.5785
+      ],
+      [
+       0.6001,
+       0.3925,
+       0.5745
+      ],
+      [
+       0.6333,
+       0.415,
+       0.6155
+      ],
+      [
+       0.6439,
+       0.4695,
+       0.65
+      ],
+      [
+       0.6574,
+       0.466,
+       0.6475
+      ],
+      [
+       0.6068,
+       0.4395,
+       0.5635
+      ],
+      [
+       0.6201,
+       0.4415,
+       0.602
+      ],
+      [
+       0.5956,
+       0.4625,
+       0.551
+      ],
+      [
+       0.5608,
+       0.412,
+       0.54
+      ],
+      [
+       0.6345,
+       0.385,
+       0.539
+      ],
+      [
+       0.6242,
+       0.466,
+       0.6315
+      ],
+      [
+       0.6064,
+       0.473,
+       0.6005
+      ],
+      [
+       0.6029,
+       0.4505,
+       0.532
+      ],
+      [
+       0.5862,
+       0.3885,
+       0.543
+      ],
+      [
+       0.5788,
+       0.3435,
+       0.4985
+      ],
+      [
+       0.5698,
+       0.328,
+       0.4125
+      ],
+      [
+       0.543,
+       0.203,
+       0.2295
+      ]
+     ]
+    },
+    "fc=persist": {
+     "i>=1": [
+      0.5897,
+      0.3924,
+      0.5451
+     ],
+     "all": [
+      0.5772,
+      0.3793,
+      0.536
+     ],
+     "i>=1_no_last": [
+      0.5914,
+      0.3995,
+      0.5569
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7911,
+     "turn_off_auc_mean_i>=1": 0.9647,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4486,
+       0.155,
+       0.462
+      ],
+      [
+       0.5452,
+       0.399,
+       0.5335
+      ],
+      [
+       0.6167,
+       0.3705,
+       0.5195
+      ],
+      [
+       0.6276,
+       0.3515,
+       0.554
+      ],
+      [
+       0.6074,
+       0.3805,
+       0.5225
+      ],
+      [
+       0.6585,
+       0.506,
+       0.667
+      ],
+      [
+       0.6165,
+       0.4435,
+       0.5985
+      ],
+      [
+       0.6237,
+       0.4705,
+       0.5665
+      ],
+      [
+       0.6268,
+       0.471,
+       0.6115
+      ],
+      [
+       0.6161,
+       0.451,
+       0.5275
+      ],
+      [
+       0.587,
+       0.4275,
+       0.5785
+      ],
+      [
+       0.6001,
+       0.3925,
+       0.5745
+      ],
+      [
+       0.6333,
+       0.415,
+       0.6155
+      ],
+      [
+       0.6439,
+       0.4695,
+       0.65
+      ],
+      [
+       0.6574,
+       0.466,
+       0.6475
+      ],
+      [
+       0.6068,
+       0.4395,
+       0.5635
+      ],
+      [
+       0.6201,
+       0.4415,
+       0.602
+      ],
+      [
+       0.5956,
+       0.4625,
+       0.551
+      ],
+      [
+       0.5608,
+       0.412,
+       0.54
+      ],
+      [
+       0.6345,
+       0.385,
+       0.539
+      ],
+      [
+       0.624,
+       0.4685,
+       0.6315
+      ],
+      [
+       0.6063,
+       0.4815,
+       0.609
+      ],
+      [
+       0.6028,
+       0.453,
+       0.531
+      ],
+      [
+       0.586,
+       0.374,
+       0.544
+      ],
+      [
+       0.5792,
+       0.346,
+       0.503
+      ],
+      [
+       0.5699,
+       0.3285,
+       0.4095
+      ],
+      [
+       0.5428,
+       0.2005,
+       0.227
+      ]
+     ]
+    },
+    "fc=lin1": {
+     "i>=1": [
+      0.5732,
+      0.3764,
+      0.5373
+     ],
+     "all": [
+      0.5613,
+      0.3639,
+      0.5285
+     ],
+     "i>=1_no_last": [
+      0.5743,
+      0.3829,
+      0.5487
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K6|lin1",
+      "box2|K6|lin1",
+      "box4|K8|lin1",
+      "box4|K8|lin1",
+      "box4|K6|lin1",
+      "box4|K6|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1",
+      "box4|K3|lin1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7996,
+     "turn_off_auc_mean_i>=1": 0.9629,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4203,
+       0.1545,
+       0.4605
+      ],
+      [
+       0.53,
+       0.3925,
+       0.543
+      ],
+      [
+       0.5879,
+       0.3655,
+       0.514
+      ],
+      [
+       0.5582,
+       0.3505,
+       0.4945
+      ],
+      [
+       0.5772,
+       0.29,
+       0.536
+      ],
+      [
+       0.5351,
+       0.323,
+       0.598
+      ],
+      [
+       0.5808,
+       0.4015,
+       0.5675
+      ],
+      [
+       0.584,
+       0.434,
+       0.5605
+      ],
+      [
+       0.6046,
+       0.4485,
+       0.5845
+      ],
+      [
+       0.5941,
+       0.439,
+       0.517
+      ],
+      [
+       0.5633,
+       0.387,
+       0.56
+      ],
+      [
+       0.5851,
+       0.38,
+       0.5745
+      ],
+      [
+       0.6305,
+       0.422,
+       0.6205
+      ],
+      [
+       0.6422,
+       0.464,
+       0.6495
+      ],
+      [
+       0.6537,
+       0.4505,
+       0.6415
+      ],
+      [
+       0.6057,
+       0.4355,
+       0.563
+      ],
+      [
+       0.6195,
+       0.4615,
+       0.601
+      ],
+      [
+       0.5962,
+       0.47,
+       0.546
+      ],
+      [
+       0.5612,
+       0.401,
+       0.543
+      ],
+      [
+       0.635,
+       0.392,
+       0.537
+      ],
+      [
+       0.6242,
+       0.4645,
+       0.633
+      ],
+      [
+       0.6063,
+       0.4745,
+       0.6045
+      ],
+      [
+       0.6029,
+       0.4505,
+       0.532
+      ],
+      [
+       0.5862,
+       0.3885,
+       0.543
+      ],
+      [
+       0.5788,
+       0.3435,
+       0.4985
+      ],
+      [
+       0.57,
+       0.3275,
+       0.41
+      ],
+      [
+       0.543,
+       0.203,
+       0.2295
+      ]
+     ]
+    },
+    "fc=loglin1": {
+     "i>=1": [
+      0.5719,
+      0.3767,
+      0.5335
+     ],
+     "all": [
+      0.5601,
+      0.3641,
+      0.5248
+     ],
+     "i>=1_no_last": [
+      0.573,
+      0.3831,
+      0.5448
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K6|loglin1",
+      "box4|K6|loglin1",
+      "box4|K6|loglin1",
+      "box4|K6|loglin1",
+      "box4|K6|loglin1",
+      "box4|K6|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1",
+      "box4|K3|loglin1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.8013,
+     "turn_off_auc_mean_i>=1": 0.9627,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4297,
+       0.1655,
+       0.446
+      ],
+      [
+       0.5354,
+       0.4305,
+       0.534
+      ],
+      [
+       0.5871,
+       0.3675,
+       0.514
+      ],
+      [
+       0.5405,
+       0.3515,
+       0.4815
+      ],
+      [
+       0.5737,
+       0.2895,
+       0.531
+      ],
+      [
+       0.4764,
+       0.2635,
+       0.5305
+      ],
+      [
+       0.5805,
+       0.4015,
+       0.5685
+      ],
+      [
+       0.5896,
+       0.4335,
+       0.561
+      ],
+      [
+       0.6097,
+       0.4495,
+       0.5865
+      ],
+      [
+       0.5995,
+       0.44,
+       0.5205
+      ],
+      [
+       0.5692,
+       0.3915,
+       0.5675
+      ],
+      [
+       0.5898,
+       0.381,
+       0.5725
+      ],
+      [
+       0.6311,
+       0.4225,
+       0.6205
+      ],
+      [
+       0.6429,
+       0.465,
+       0.6475
+      ],
+      [
+       0.6547,
+       0.4505,
+       0.641
+      ],
+      [
+       0.6061,
+       0.4355,
+       0.564
+      ],
+      [
+       0.6196,
+       0.463,
+       0.6015
+      ],
+      [
+       0.5963,
+       0.471,
+       0.5465
+      ],
+      [
+       0.5615,
+       0.4035,
+       0.532
+      ],
+      [
+       0.6352,
+       0.3935,
+       0.539
+      ],
+      [
+       0.6242,
+       0.4655,
+       0.6315
+      ],
+      [
+       0.6063,
+       0.472,
+       0.5995
+      ],
+      [
+       0.6028,
+       0.4515,
+       0.535
+      ],
+      [
+       0.5861,
+       0.3895,
+       0.548
+      ],
+      [
+       0.579,
+       0.343,
+       0.4975
+      ],
+      [
+       0.57,
+       0.328,
+       0.4095
+      ],
+      [
+       0.5429,
+       0.202,
+       0.228
+      ]
+     ]
+    },
+    "fc=ot0.05": {
+     "i>=1": [
+      0.5736,
+      0.3772,
+      0.5345
+     ],
+     "all": [
+      0.5617,
+      0.3646,
+      0.5258
+     ],
+     "i>=1_no_last": [
+      0.5747,
+      0.3836,
+      0.5459
+     ],
+     "share_transitions_OT_selected": 0.964,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K8|ot0.05",
+      "box4|K8|ot0.05",
+      "box4|K8|ot0.05",
+      "box4|K8|ot0.05",
+      "box4|K8|ot0.05",
+      "box4|K8|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05"
+     ],
+     "turn_on_auc_mean_i>=1": 0.8044,
+     "turn_off_auc_mean_i>=1": 0.9628,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4312,
+       0.1545,
+       0.449
+      ],
+      [
+       0.5486,
+       0.4335,
+       0.533
+      ],
+      [
+       0.5937,
+       0.364,
+       0.5165
+      ],
+      [
+       0.5567,
+       0.35,
+       0.497
+      ],
+      [
+       0.5784,
+       0.2745,
+       0.5285
+      ],
+      [
+       0.4952,
+       0.3195,
+       0.538
+      ],
+      [
+       0.5655,
+       0.3915,
+       0.56
+      ],
+      [
+       0.5897,
+       0.4325,
+       0.562
+      ],
+      [
+       0.6099,
+       0.4485,
+       0.589
+      ],
+      [
+       0.5996,
+       0.4425,
+       0.5205
+      ],
+      [
+       0.5693,
+       0.391,
+       0.5655
+      ],
+      [
+       0.5897,
+       0.383,
+       0.573
+      ],
+      [
+       0.6313,
+       0.423,
+       0.6225
+      ],
+      [
+       0.6429,
+       0.464,
+       0.648
+      ],
+      [
+       0.6549,
+       0.4505,
+       0.6405
+      ],
+      [
+       0.6061,
+       0.4355,
+       0.5645
+      ],
+      [
+       0.6197,
+       0.4625,
+       0.5995
+      ],
+      [
+       0.5962,
+       0.4685,
+       0.548
+      ],
+      [
+       0.5616,
+       0.402,
+       0.538
+      ],
+      [
+       0.6351,
+       0.3925,
+       0.539
+      ],
+      [
+       0.6242,
+       0.466,
+       0.6315
+      ],
+      [
+       0.6061,
+       0.473,
+       0.6035
+      ],
+      [
+       0.603,
+       0.451,
+       0.5325
+      ],
+      [
+       0.5861,
+       0.388,
+       0.5445
+      ],
+      [
+       0.5791,
+       0.343,
+       0.505
+      ],
+      [
+       0.57,
+       0.328,
+       0.4075
+      ],
+      [
+       0.5433,
+       0.2025,
+       0.227
+      ]
+     ]
+    },
+    "fc=uot0.05t1": {
+     "i>=1": [
+      0.5776,
+      0.3799,
+      0.5374
+     ],
+     "all": [
+      0.5655,
+      0.3673,
+      0.5286
+     ],
+     "i>=1_no_last": [
+      0.5789,
+      0.3865,
+      0.5489
+     ],
+     "share_transitions_OT_selected": 0.964,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K8|uot0.05t1",
+      "box4|K8|uot0.05t1",
+      "box4|K8|uot0.05t1",
+      "box4|K8|uot0.05t1",
+      "box4|K8|uot0.05t1",
+      "box4|K8|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.8062,
+     "turn_off_auc_mean_i>=1": 0.9634,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4426,
+       0.1655,
+       0.45
+      ],
+      [
+       0.5531,
+       0.4345,
+       0.5355
+      ],
+      [
+       0.6005,
+       0.3675,
+       0.534
+      ],
+      [
+       0.5709,
+       0.353,
+       0.512
+      ],
+      [
+       0.583,
+       0.282,
+       0.5325
+      ],
+      [
+       0.5338,
+       0.3425,
+       0.5645
+      ],
+      [
+       0.5795,
+       0.3995,
+       0.5675
+      ],
+      [
+       0.5938,
+       0.438,
+       0.559
+      ],
+      [
+       0.6131,
+       0.4515,
+       0.591
+      ],
+      [
+       0.6038,
+       0.4425,
+       0.524
+      ],
+      [
+       0.5728,
+       0.3915,
+       0.564
+      ],
+      [
+       0.5918,
+       0.3875,
+       0.573
+      ],
+      [
+       0.6318,
+       0.422,
+       0.6205
+      ],
+      [
+       0.6432,
+       0.464,
+       0.648
+      ],
+      [
+       0.6553,
+       0.4505,
+       0.643
+      ],
+      [
+       0.6063,
+       0.4355,
+       0.565
+      ],
+      [
+       0.6196,
+       0.4635,
+       0.6025
+      ],
+      [
+       0.5959,
+       0.4695,
+       0.5465
+      ],
+      [
+       0.5615,
+       0.4045,
+       0.537
+      ],
+      [
+       0.6352,
+       0.394,
+       0.538
+      ],
+      [
+       0.6243,
+       0.466,
+       0.633
+      ],
+      [
+       0.6064,
+       0.473,
+       0.6005
+      ],
+      [
+       0.6029,
+       0.4515,
+       0.531
+      ],
+      [
+       0.5862,
+       0.39,
+       0.549
+      ],
+      [
+       0.5788,
+       0.343,
+       0.502
+      ],
+      [
+       0.5698,
+       0.328,
+       0.4125
+      ],
+      [
+       0.543,
+       0.202,
+       0.228
+      ]
+     ]
+    },
+    "fc=sb3": {
+     "i>=1": [
+      0.5727,
+      0.3761,
+      0.534
+     ],
+     "all": [
+      0.5608,
+      0.3635,
+      0.5253
+     ],
+     "i>=1_no_last": [
+      0.5738,
+      0.3825,
+      0.5453
+     ],
+     "share_transitions_OT_selected": 0.964,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K6|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K6|sb3",
+      "box4|K6|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3"
+     ],
+     "turn_on_auc_mean_i>=1": 0.8034,
+     "turn_off_auc_mean_i>=1": 0.9631,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.3969,
+       0.1515,
+       0.419
+      ],
+      [
+       0.5578,
+       0.437,
+       0.5225
+      ],
+      [
+       0.5969,
+       0.375,
+       0.516
+      ],
+      [
+       0.5058,
+       0.2845,
+       0.486
+      ],
+      [
+       0.5762,
+       0.2955,
+       0.522
+      ],
+      [
+       0.5474,
+       0.3245,
+       0.5895
+      ],
+      [
+       0.5551,
+       0.384,
+       0.557
+      ],
+      [
+       0.5913,
+       0.436,
+       0.5595
+      ],
+      [
+       0.6109,
+       0.448,
+       0.5895
+      ],
+      [
+       0.602,
+       0.4425,
+       0.523
+      ],
+      [
+       0.5718,
+       0.391,
+       0.564
+      ],
+      [
+       0.5909,
+       0.3815,
+       0.571
+      ],
+      [
+       0.6314,
+       0.422,
+       0.622
+      ],
+      [
+       0.643,
+       0.464,
+       0.6475
+      ],
+      [
+       0.6549,
+       0.4505,
+       0.6415
+      ],
+      [
+       0.6058,
+       0.436,
+       0.566
+      ],
+      [
+       0.6196,
+       0.461,
+       0.6005
+      ],
+      [
+       0.596,
+       0.47,
+       0.545
+      ],
+      [
+       0.5614,
+       0.4035,
+       0.536
+      ],
+      [
+       0.6351,
+       0.3925,
+       0.536
+      ],
+      [
+       0.6244,
+       0.4665,
+       0.637
+      ],
+      [
+       0.6062,
+       0.472,
+       0.596
+      ],
+      [
+       0.6029,
+       0.451,
+       0.535
+      ],
+      [
+       0.5862,
+       0.39,
+       0.5475
+      ],
+      [
+       0.5789,
+       0.3435,
+       0.502
+      ],
+      [
+       0.57,
+       0.328,
+       0.409
+      ],
+      [
+       0.5435,
+       0.202,
+       0.2285
+      ]
+     ]
+    },
+    "fc=sbW": {
+     "i>=1": [
+      0.5833,
+      0.3905,
+      0.5389
+     ],
+     "all": [
+      0.5711,
+      0.3774,
+      0.5301
+     ],
+     "i>=1_no_last": [
+      0.5848,
+      0.3975,
+      0.5505
+     ],
+     "share_transitions_OT_selected": 0.964,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K8|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW",
+      "box4|K3|sbW"
+     ],
+     "turn_on_auc_mean_i>=1": 0.8128,
+     "turn_off_auc_mean_i>=1": 0.964,
+     "per_transition": [
+      [
+       0.2278,
+       0.012,
+       0.2815
+      ],
+      [
+       0.2743,
+       0.026,
+       0.3835
+      ],
+      [
+       0.4044,
+       0.1655,
+       0.4165
+      ],
+      [
+       0.5524,
+       0.438,
+       0.522
+      ],
+      [
+       0.6086,
+       0.3675,
+       0.5225
+      ],
+      [
+       0.5992,
+       0.355,
+       0.521
+      ],
+      [
+       0.5901,
+       0.315,
+       0.529
+      ],
+      [
+       0.6615,
+       0.525,
+       0.64
+      ],
+      [
+       0.586,
+       0.4215,
+       0.5765
+      ],
+      [
+       0.6048,
+       0.45,
+       0.5685
+      ],
+      [
+       0.6195,
+       0.4925,
+       0.5965
+      ],
+      [
+       0.6067,
+       0.4525,
+       0.5265
+      ],
+      [
+       0.574,
+       0.3935,
+       0.5665
+      ],
+      [
+       0.5918,
+       0.378,
+       0.5735
+      ],
+      [
+       0.6316,
+       0.4225,
+       0.6215
+      ],
+      [
+       0.6433,
+       0.465,
+       0.6495
+      ],
+      [
+       0.6551,
+       0.4505,
+       0.6395
+      ],
+      [
+       0.6061,
+       0.436,
+       0.5645
+      ],
+      [
+       0.6196,
+       0.46,
+       0.6
+      ],
+      [
+       0.596,
+       0.471,
+       0.5485
+      ],
+      [
+       0.5614,
+       0.4035,
+       0.5365
+      ],
+      [
+       0.6351,
+       0.393,
+       0.5355
+      ],
+      [
+       0.6243,
+       0.466,
+       0.631
+      ],
+      [
+       0.6062,
+       0.473,
+       0.605
+      ],
+      [
+       0.6028,
+       0.451,
+       0.5325
+      ],
+      [
+       0.586,
+       0.3895,
+       0.5465
+      ],
+      [
+       0.579,
+       0.3435,
+       0.502
+      ],
+      [
+       0.57,
+       0.3275,
+       0.408
+      ],
+      [
+       0.5431,
+       0.202,
+       0.2275
+      ]
+     ]
+    }
+   },
+   "paired": {
+    "full - noOT": {
+     "pearson": {
+      "mean_delta": -0.0,
+      "n_better": 1,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": null
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0,
+      "n_better": 2,
+      "n_worse": 1,
+      "wilcoxon_two_sided_p": null
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0001,
+      "n_better": 1,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": null
+     },
+     "J": {
+      "mean_delta": -0.0001,
+      "n_better": 1,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": null
+     }
+    },
+    "OT_only - noOT": {
+     "pearson": {
+      "mean_delta": -0.0079,
+      "n_better": 8,
+      "n_worse": 19,
+      "wilcoxon_two_sided_p": 0.0046126991510391235
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0039,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.563998739899573
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0051,
+      "n_better": 8,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.06549369602812788
+     },
+     "J": {
+      "mean_delta": -0.0169,
+      "n_better": 9,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.04910190403461456
+     }
+    },
+    "fc=ot0.05 - fc=lin1": {
+     "pearson": {
+      "mean_delta": 0.0004,
+      "n_better": 20,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.012076601386070251
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0007,
+      "n_better": 11,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.9870186857360448
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0028,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.5969853004999047
+     },
+     "J": {
+      "mean_delta": -0.0017,
+      "n_better": 16,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.31257040798664093
+     }
+    },
+    "fc=ot0.05 - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0161,
+      "n_better": 9,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.003550395369529724
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0152,
+      "n_better": 7,
+      "n_worse": 20,
+      "wilcoxon_two_sided_p": 0.03189583122730255
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0106,
+      "n_better": 6,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.003556549922339792
+     },
+     "J": {
+      "mean_delta": -0.0419,
+      "n_better": 7,
+      "n_worse": 20,
+      "wilcoxon_two_sided_p": 0.005940347909927368
+     }
+    },
+    "fc=uot0.05t1 - fc=loglin1": {
+     "pearson": {
+      "mean_delta": 0.0057,
+      "n_better": 21,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.0005356669425964355
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0033,
+      "n_better": 13,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.10605977877651074
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0039,
+      "n_better": 19,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.0074277017347616535
+     },
+     "J": {
+      "mean_delta": 0.0128,
+      "n_better": 22,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.00038070976734161377
+     }
+    },
+    "fc=sb3 - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.017,
+      "n_better": 9,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.002707734704017639
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0164,
+      "n_better": 8,
+      "n_worse": 19,
+      "wilcoxon_two_sided_p": 0.038534119725227356
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0111,
+      "n_better": 6,
+      "n_worse": 21,
+      "wilcoxon_two_sided_p": 0.0030042622393982835
+     },
+     "J": {
+      "mean_delta": -0.0444,
+      "n_better": 9,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.008215054869651794
+     }
+    },
+    "fc=sbW - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0064,
+      "n_better": 9,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.010378450155258179
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0019,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.7456471054931495
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0061,
+      "n_better": 8,
+      "n_worse": 19,
+      "wilcoxon_two_sided_p": 0.01678653092140582
+     },
+     "J": {
+      "mean_delta": -0.0144,
+      "n_better": 7,
+      "n_worse": 20,
+      "wilcoxon_two_sided_p": 0.02142883837223053
+     }
+    },
+    "fc=sb3 - fc=lin1": {
+     "pearson": {
+      "mean_delta": -0.0005,
+      "n_better": 18,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.07722577452659607
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0004,
+      "n_better": 15,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.15279925612662534
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0033,
+      "n_better": 10,
+      "n_worse": 16,
+      "wilcoxon_two_sided_p": 0.23248039763656037
+     },
+     "J": {
+      "mean_delta": -0.0042,
+      "n_better": 15,
+      "n_worse": 12,
+      "wilcoxon_two_sided_p": 0.39974282681941986
+     }
+    },
+    "full - persist_only(level_obs_RO)": {
+     "pearson": {
+      "mean_delta": 0.0,
+      "n_better": 5,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 0.46875
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0,
+      "n_better": 2,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.703125
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0003,
+      "n_better": 3,
+      "n_worse": 3,
+      "wilcoxon_two_sided_p": 0.71875
+     },
+     "J": {
+      "mean_delta": -0.0002,
+      "n_better": 3,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.9375
+     }
+    },
+    "full - trend": {
+     "pearson": {
+      "mean_delta": 1.0545,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.3822,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.5346,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     },
+     "J": {
+      "mean_delta": 1.9713,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     }
+    },
+    "noOT - trend": {
+     "pearson": {
+      "mean_delta": 1.0545,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.3822,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.5347,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     },
+     "J": {
+      "mean_delta": 1.9714,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     }
+    },
+    "composition_only(box_states,beta0) - trend": {
+     "pearson": {
+      "mean_delta": 1.0545,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.3822,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.5346,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     },
+     "J": {
+      "mean_delta": 1.9713,
+      "n_better": 28,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 7.450580596923828e-09
+     }
+    }
+   },
+   "fixed_configs_hindsight_NOT_strict": {
+    "persist": {
+     "config": "box4|K0|persist",
+     "i>=1": [
+      0.5905,
+      0.3942,
+      0.5452
+     ],
+     "all": [
+      0.5779,
+      0.381,
+      0.5361
+     ],
+     "i>=1_no_last": [
+      0.5922,
+      0.4014,
+      0.557
+     ]
+    },
+    "lin1": {
+     "config": "box4|K3|lin1",
+     "i>=1": [
+      0.5675,
+      0.379,
+      0.5284
+     ],
+     "all": [
+      0.5558,
+      0.3665,
+      0.5197
+     ],
+     "i>=1_no_last": [
+      0.5684,
+      0.3856,
+      0.5395
+     ]
+    },
+    "loglin1": {
+     "config": "box4|K3|loglin1",
+     "i>=1": [
+      0.5661,
+      0.3791,
+      0.5295
+     ],
+     "all": [
+      0.5544,
+      0.3664,
+      0.5205
+     ],
+     "i>=1_no_last": [
+      0.5669,
+      0.3856,
+      0.5407
+     ]
+    },
+    "ot0.05": {
+     "config": "box4|K3|ot0.05",
+     "i>=1": [
+      0.5724,
+      0.3819,
+      0.5334
+     ],
+     "all": [
+      0.5605,
+      0.3691,
+      0.5247
+     ],
+     "i>=1_no_last": [
+      0.5735,
+      0.3886,
+      0.5447
+     ]
+    },
+    "uot0.05t1": {
+     "config": "box4|K3|uot0.05t1",
+     "i>=1": [
+      0.5736,
+      0.3834,
+      0.5335
+     ],
+     "all": [
+      0.5617,
+      0.3706,
+      0.5253
+     ],
+     "i>=1_no_last": [
+      0.5747,
+      0.3901,
+      0.5448
+     ]
+    },
+    "sb3": {
+     "config": "box4|K3|sb3",
+     "i>=1": [
+      0.5728,
+      0.3838,
+      0.532
+     ],
+     "all": [
+      0.5609,
+      0.3709,
+      0.5236
+     ],
+     "i>=1_no_last": [
+      0.5739,
+      0.3906,
+      0.5433
+     ]
+    },
+    "sbW": {
+     "config": "box4|K3|sbW",
+     "i>=1": [
+      0.5785,
+      0.3919,
+      0.5339
+     ],
+     "all": [
+      0.5664,
+      0.3788,
+      0.525
+     ],
+     "i>=1_no_last": [
+      0.5798,
+      0.3989,
+      0.5453
+     ]
+    }
+   },
+   "oracle_next_composition_NOT_strict": {
+    "ORACLE_props|box4|K3": {
+     "i>=1": [
+      0.5748,
+      0.3828,
+      0.5371
+     ],
+     "all": [
+      0.5628,
+      0.37,
+      0.5283
+     ],
+     "i>=1_no_last": [
+      0.576,
+      0.3896,
+      0.5485
+     ]
+    },
+    "ORACLE_props|box4|K6": {
+     "i>=1": [
+      0.5592,
+      0.3683,
+      0.5237
+     ],
+     "all": [
+      0.5478,
+      0.3561,
+      0.5153
+     ],
+     "i>=1_no_last": [
+      0.5603,
+      0.3745,
+      0.5348
+     ]
+    },
+    "ORACLE_props|box4|K8": {
+     "i>=1": [
+      0.5619,
+      0.3674,
+      0.5266
+     ],
+     "all": [
+      0.5504,
+      0.3551,
+      0.5181
+     ],
+     "i>=1_no_last": [
+      0.5627,
+      0.3736,
+      0.5377
+     ]
+    }
+   }
+  },
+  "l1": {
+   "comparators": {
+    "trend_repeat_last_change": {
+     "i>=1": [
+      -0.1707,
+      0.1008,
+      0.0916
+     ],
+     "all": [
+      -0.1707,
+      0.0974,
+      0.0885
+     ],
+     "i>=1_no_last": [
+      -0.164,
+      0.1033,
+      0.093
+     ]
+    },
+    "level_box4_persist_plugin": {
+     "i>=1": [
+      0.0915,
+      0.242,
+      0.2574
+     ],
+     "all": [
+      0.0877,
+      0.234,
+      0.2486
+     ],
+     "i>=1_no_last": [
+      0.0818,
+      0.2404,
+      0.2553
+     ]
+    }
+   },
+   "groups": {
+    "full": {
+     "i>=1": [
+      0.2215,
+      0.2642,
+      0.2711
+     ],
+     "all": [
+      0.2215,
+      0.2551,
+      0.2617
+     ],
+     "i>=1_no_last": [
+      0.2162,
+      0.2629,
+      0.2703
+     ],
+     "share_transitions_OT_selected": 0.704,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "box4|K0|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K6|persist",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "box4|K6|sb3",
+      "box4|K6|sb3",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "box4|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "mixavg3|K8|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.4814,
+       0.0885,
+       0.029
+      ],
+      [
+       -0.2162,
+       0.16,
+       0.1685
+      ],
+      [
+       0.0514,
+       0.2005,
+       0.181
+      ],
+      [
+       -0.5765,
+       0.041,
+       0.0435
+      ],
+      [
+       -0.1477,
+       0.144,
+       0.158
+      ],
+      [
+       0.2786,
+       0.2405,
+       0.204
+      ],
+      [
+       0.3824,
+       0.292,
+       0.329
+      ],
+      [
+       0.3903,
+       0.348,
+       0.3295
+      ],
+      [
+       0.4597,
+       0.384,
+       0.3525
+      ],
+      [
+       0.4796,
+       0.395,
+       0.384
+      ],
+      [
+       0.3445,
+       0.2775,
+       0.317
+      ],
+      [
+       0.3125,
+       0.248,
+       0.284
+      ],
+      [
+       0.4327,
+       0.3235,
+       0.354
+      ],
+      [
+       0.5079,
+       0.3925,
+       0.4155
+      ],
+      [
+       0.4956,
+       0.379,
+       0.3665
+      ],
+      [
+       0.4749,
+       0.361,
+       0.4165
+      ],
+      [
+       0.3614,
+       0.31,
+       0.3255
+      ],
+      [
+       0.2375,
+       0.294,
+       0.3175
+      ],
+      [
+       0.1727,
+       0.21,
+       0.257
+      ],
+      [
+       0.2219,
+       0.231,
+       0.2775
+      ],
+      [
+       0.2708,
+       0.2945,
+       0.2835
+      ],
+      [
+       0.2745,
+       0.2815,
+       0.3665
+      ],
+      [
+       0.2054,
+       0.2485,
+       0.2515
+      ],
+      [
+       0.235,
+       0.246,
+       0.242
+      ],
+      [
+       0.2317,
+       0.248,
+       0.2535
+      ],
+      [
+       0.3308,
+       0.254,
+       0.2775
+      ],
+      [
+       0.3645,
+       0.3,
+       0.292
+      ]
+     ]
+    },
+    "noOT": {
+     "i>=1": [
+      0.2097,
+      0.2579,
+      0.2658
+     ],
+     "all": [
+      0.2097,
+      0.249,
+      0.2567
+     ],
+     "i>=1_no_last": [
+      0.2039,
+      0.2561,
+      0.2647
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "box4|K0|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K3|lin1",
+      "mixavg3|K6|persist",
+      "mixavg3|K8|loglin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K6|persist",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K8|persist",
+      "mixavg3|K6|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.4814,
+       0.0885,
+       0.029
+      ],
+      [
+       -0.2162,
+       0.16,
+       0.1685
+      ],
+      [
+       0.0514,
+       0.2005,
+       0.181
+      ],
+      [
+       -0.6438,
+       0.0215,
+       0.0315
+      ],
+      [
+       -0.1477,
+       0.144,
+       0.158
+      ],
+      [
+       0.0435,
+       0.1605,
+       0.1235
+      ],
+      [
+       0.2731,
+       0.26,
+       0.2665
+      ],
+      [
+       0.3573,
+       0.3385,
+       0.3255
+      ],
+      [
+       0.4054,
+       0.355,
+       0.34
+      ],
+      [
+       0.4789,
+       0.397,
+       0.3785
+      ],
+      [
+       0.36,
+       0.2805,
+       0.3145
+      ],
+      [
+       0.339,
+       0.2385,
+       0.2895
+      ],
+      [
+       0.4449,
+       0.329,
+       0.36
+      ],
+      [
+       0.5157,
+       0.393,
+       0.409
+      ],
+      [
+       0.4956,
+       0.379,
+       0.3665
+      ],
+      [
+       0.4749,
+       0.361,
+       0.4165
+      ],
+      [
+       0.3577,
+       0.296,
+       0.32
+      ],
+      [
+       0.3472,
+       0.323,
+       0.3265
+      ],
+      [
+       0.1727,
+       0.21,
+       0.257
+      ],
+      [
+       0.2219,
+       0.231,
+       0.2775
+      ],
+      [
+       0.2212,
+       0.27,
+       0.2615
+      ],
+      [
+       0.2414,
+       0.2655,
+       0.3265
+      ],
+      [
+       0.2347,
+       0.2435,
+       0.25
+      ],
+      [
+       0.2606,
+       0.26,
+       0.276
+      ],
+      [
+       0.2017,
+       0.2285,
+       0.25
+      ],
+      [
+       0.3882,
+       0.275,
+       0.3295
+      ],
+      [
+       0.3655,
+       0.306,
+       0.2965
+      ]
+     ]
+    },
+    "OT_only": {
+     "i>=1": [
+      0.302,
+      0.2839,
+      0.2914
+     ],
+     "all": [
+      0.302,
+      0.2741,
+      0.2814
+     ],
+     "i>=1_no_last": [
+      0.2997,
+      0.2833,
+      0.2914
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K6|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "box4|K6|sb3",
+      "box4|K6|sb3",
+      "mixavg3|K3|ot0.05",
+      "box4|K8|sbW",
+      "box4|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "mixavg3|K8|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.2647,
+       0.17,
+       0.0285
+      ],
+      [
+       0.5293,
+       0.201,
+       0.4135
+      ],
+      [
+       0.4012,
+       0.2005,
+       0.305
+      ],
+      [
+       -0.5765,
+       0.041,
+       0.0435
+      ],
+      [
+       0.669,
+       0.5365,
+       0.342
+      ],
+      [
+       0.2786,
+       0.2405,
+       0.204
+      ],
+      [
+       0.3824,
+       0.292,
+       0.329
+      ],
+      [
+       0.3903,
+       0.348,
+       0.3295
+      ],
+      [
+       0.4597,
+       0.384,
+       0.3525
+      ],
+      [
+       0.4796,
+       0.395,
+       0.384
+      ],
+      [
+       0.3445,
+       0.2775,
+       0.317
+      ],
+      [
+       0.3125,
+       0.248,
+       0.284
+      ],
+      [
+       0.4327,
+       0.3235,
+       0.354
+      ],
+      [
+       0.5079,
+       0.3925,
+       0.4155
+      ],
+      [
+       0.4957,
+       0.379,
+       0.3665
+      ],
+      [
+       0.4822,
+       0.3605,
+       0.4185
+      ],
+      [
+       0.3614,
+       0.31,
+       0.3255
+      ],
+      [
+       0.2375,
+       0.294,
+       0.3175
+      ],
+      [
+       0.1433,
+       0.21,
+       0.256
+      ],
+      [
+       0.3681,
+       0.267,
+       0.294
+      ],
+      [
+       0.2708,
+       0.2945,
+       0.2835
+      ],
+      [
+       0.2745,
+       0.2815,
+       0.3665
+      ],
+      [
+       0.2054,
+       0.2485,
+       0.2515
+      ],
+      [
+       0.235,
+       0.246,
+       0.242
+      ],
+      [
+       0.2317,
+       0.248,
+       0.2535
+      ],
+      [
+       0.3308,
+       0.254,
+       0.2775
+      ],
+      [
+       0.3645,
+       0.3,
+       0.292
+      ]
+     ]
+    },
+    "persist_only(level_obs_RO)": {
+     "i>=1": [
+      0.1703,
+      0.2485,
+      0.2609
+     ],
+     "all": [
+      0.1703,
+      0.24,
+      0.2519
+     ],
+     "i>=1_no_last": [
+      0.1636,
+      0.2466,
+      0.2596
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       0.3561,
+       0.2835,
+       0.333
+      ],
+      [
+       -0.2162,
+       0.16,
+       0.1685
+      ],
+      [
+       -0.3611,
+       0.084,
+       0.0965
+      ],
+      [
+       0.6207,
+       0.45,
+       0.3505
+      ],
+      [
+       -0.3562,
+       0.1045,
+       0.0905
+      ],
+      [
+       -0.3531,
+       0.097,
+       0.0935
+      ],
+      [
+       -0.0514,
+       0.1555,
+       0.148
+      ],
+      [
+       0.0863,
+       0.2145,
+       0.238
+      ],
+      [
+       0.3876,
+       0.3315,
+       0.3295
+      ],
+      [
+       0.3744,
+       0.3455,
+       0.3495
+      ],
+      [
+       0.2179,
+       0.246,
+       0.2885
+      ],
+      [
+       0.1687,
+       0.2525,
+       0.277
+      ],
+      [
+       0.3001,
+       0.3255,
+       0.347
+      ],
+      [
+       0.4372,
+       0.3655,
+       0.404
+      ],
+      [
+       0.3584,
+       0.315,
+       0.3335
+      ],
+      [
+       0.3451,
+       0.315,
+       0.3795
+      ],
+      [
+       0.2157,
+       0.286,
+       0.3025
+      ],
+      [
+       0.2581,
+       0.3115,
+       0.329
+      ],
+      [
+       0.1493,
+       0.2075,
+       0.2595
+      ],
+      [
+       0.25,
+       0.232,
+       0.278
+      ],
+      [
+       0.2107,
+       0.2695,
+       0.2775
+      ],
+      [
+       0.1741,
+       0.222,
+       0.2515
+      ],
+      [
+       0.0421,
+       0.187,
+       0.1945
+      ],
+      [
+       0.1567,
+       0.2175,
+       0.2435
+      ],
+      [
+       0.2084,
+       0.2395,
+       0.254
+      ],
+      [
+       0.3284,
+       0.2335,
+       0.2795
+      ],
+      [
+       0.3515,
+       0.302,
+       0.296
+      ]
+     ]
+    },
+    "composition_only(box_states,beta0)": {
+     "i>=1": [
+      0.1948,
+      0.2553,
+      0.2619
+     ],
+     "all": [
+      0.1948,
+      0.2465,
+      0.2529
+     ],
+     "i>=1_no_last": [
+      0.1892,
+      0.2538,
+      0.2609
+     ],
+     "share_transitions_OT_selected": 0.815,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1|K3|lin1",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K3|uot0.05t1",
+      "box4|K0|persist",
+      "box4|K8|uot0.05t1",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|loglin1",
+      "box4|K6|sb3",
+      "box4|K6|sb3",
+      "box4|K6|sb3",
+      "box4|K6|sb3",
+      "box4|K8|sbW",
+      "box4|K8|sbW",
+      "box4|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.5435,
+       0.039,
+       0.031
+      ],
+      [
+       -0.2162,
+       0.16,
+       0.1685
+      ],
+      [
+       -0.3611,
+       0.084,
+       0.0965
+      ],
+      [
+       -0.5822,
+       0.0365,
+       0.038
+      ],
+      [
+       -0.3562,
+       0.1045,
+       0.0905
+      ],
+      [
+       0.2573,
+       0.2275,
+       0.1975
+      ],
+      [
+       0.3652,
+       0.3075,
+       0.308
+      ],
+      [
+       0.3677,
+       0.343,
+       0.346
+      ],
+      [
+       0.4562,
+       0.3655,
+       0.342
+      ],
+      [
+       0.4422,
+       0.371,
+       0.375
+      ],
+      [
+       0.312,
+       0.2775,
+       0.316
+      ],
+      [
+       0.3397,
+       0.257,
+       0.2935
+      ],
+      [
+       0.4404,
+       0.3275,
+       0.3505
+      ],
+      [
+       0.4967,
+       0.375,
+       0.397
+      ],
+      [
+       0.4468,
+       0.324,
+       0.3405
+      ],
+      [
+       0.5022,
+       0.3675,
+       0.4085
+      ],
+      [
+       0.3614,
+       0.31,
+       0.3255
+      ],
+      [
+       0.2375,
+       0.294,
+       0.3175
+      ],
+      [
+       0.1528,
+       0.2345,
+       0.2615
+      ],
+      [
+       0.3681,
+       0.267,
+       0.294
+      ],
+      [
+       0.2708,
+       0.2945,
+       0.2835
+      ],
+      [
+       0.2031,
+       0.27,
+       0.3205
+      ],
+      [
+       0.2427,
+       0.262,
+       0.257
+      ],
+      [
+       0.235,
+       0.246,
+       0.242
+      ],
+      [
+       0.2317,
+       0.248,
+       0.2535
+      ],
+      [
+       0.3308,
+       0.254,
+       0.2775
+      ],
+      [
+       0.3455,
+       0.297,
+       0.2885
+      ]
+     ]
+    },
+    "two_pathway(box1+beta)": {
+     "i>=1": [
+      -0.1638,
+      0.1052,
+      0.0948
+     ],
+     "all": [
+      -0.1638,
+      0.1016,
+      0.0916
+     ],
+     "i>=1_no_last": [
+      -0.1574,
+      0.1078,
+      0.0963
+     ],
+     "share_transitions_OT_selected": 0.111,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta0.5|K6|loglin1",
+      "box1+beta0.5|K6|loglin1",
+      "box1+beta0.5|K6|loglin1",
+      "box1+beta0.5|K6|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K6|loglin1",
+      "box1+beta0.5|K6|loglin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K6|sb3",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K8|sbW",
+      "box1+beta0.5|K6|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.4282,
+       0.0535,
+       0.063
+      ],
+      [
+       0.1906,
+       0.1195,
+       0.212
+      ],
+      [
+       0.3784,
+       0.135,
+       0.329
+      ],
+      [
+       -0.4896,
+       0.0525,
+       0.1025
+      ],
+      [
+       0.7032,
+       0.518,
+       0.282
+      ],
+      [
+       0.0331,
+       0.1835,
+       0.131
+      ],
+      [
+       -0.4111,
+       0.058,
+       0.028
+      ],
+      [
+       -0.3834,
+       0.0545,
+       0.0555
+      ],
+      [
+       -0.426,
+       0.04,
+       0.031
+      ],
+      [
+       -0.2809,
+       0.056,
+       0.058
+      ],
+      [
+       -0.1751,
+       0.116,
+       0.078
+      ],
+      [
+       -0.067,
+       0.105,
+       0.081
+      ],
+      [
+       -0.1961,
+       0.05,
+       0.056
+      ],
+      [
+       -0.3871,
+       0.0245,
+       0.04
+      ],
+      [
+       -0.345,
+       0.042,
+       0.0375
+      ],
+      [
+       -0.2849,
+       0.026,
+       0.0335
+      ],
+      [
+       -0.1954,
+       0.0525,
+       0.051
+      ],
+      [
+       -0.2378,
+       0.059,
+       0.051
+      ],
+      [
+       -0.1109,
+       0.1015,
+       0.092
+      ],
+      [
+       -0.2347,
+       0.111,
+       0.1
+      ],
+      [
+       -0.2707,
+       0.092,
+       0.066
+      ],
+      [
+       -0.1266,
+       0.1505,
+       0.09
+      ],
+      [
+       -0.0304,
+       0.1775,
+       0.146
+      ],
+      [
+       -0.1199,
+       0.151,
+       0.1215
+      ],
+      [
+       -0.1518,
+       0.1235,
+       0.0855
+      ],
+      [
+       -0.3113,
+       0.053,
+       0.0655
+      ],
+      [
+       -0.3356,
+       0.036,
+       0.055
+      ]
+     ]
+    },
+    "mixavg3_denoised": {
+     "i>=1": [
+      0.2411,
+      0.2697,
+      0.2808
+     ],
+     "all": [
+      0.2411,
+      0.2604,
+      0.2711
+     ],
+     "i>=1_no_last": [
+      0.2365,
+      0.2686,
+      0.2804
+     ],
+     "share_transitions_OT_selected": 0.704,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K6|persist",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|sb3",
+      "mixavg3|K6|sb3",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.4814,
+       0.0885,
+       0.029
+      ],
+      [
+       0.2306,
+       0.244,
+       0.3325
+      ],
+      [
+       0.0514,
+       0.2005,
+       0.181
+      ],
+      [
+       -0.5765,
+       0.041,
+       0.0435
+      ],
+      [
+       -0.1477,
+       0.144,
+       0.158
+      ],
+      [
+       0.2786,
+       0.2405,
+       0.204
+      ],
+      [
+       0.3824,
+       0.292,
+       0.329
+      ],
+      [
+       0.3903,
+       0.348,
+       0.3295
+      ],
+      [
+       0.4597,
+       0.384,
+       0.3525
+      ],
+      [
+       0.4796,
+       0.395,
+       0.384
+      ],
+      [
+       0.3445,
+       0.2775,
+       0.317
+      ],
+      [
+       0.3125,
+       0.248,
+       0.284
+      ],
+      [
+       0.4327,
+       0.3235,
+       0.354
+      ],
+      [
+       0.5079,
+       0.3925,
+       0.4155
+      ],
+      [
+       0.4956,
+       0.379,
+       0.3665
+      ],
+      [
+       0.4749,
+       0.361,
+       0.4165
+      ],
+      [
+       0.3266,
+       0.296,
+       0.319
+      ],
+      [
+       0.2772,
+       0.3125,
+       0.324
+      ],
+      [
+       0.1727,
+       0.21,
+       0.257
+      ],
+      [
+       0.2219,
+       0.231,
+       0.2775
+      ],
+      [
+       0.2953,
+       0.3025,
+       0.2985
+      ],
+      [
+       0.2745,
+       0.2815,
+       0.3665
+      ],
+      [
+       0.2054,
+       0.2485,
+       0.2515
+      ],
+      [
+       0.2559,
+       0.2755,
+       0.293
+      ],
+      [
+       0.2187,
+       0.247,
+       0.255
+      ],
+      [
+       0.3946,
+       0.283,
+       0.317
+      ],
+      [
+       0.3645,
+       0.3,
+       0.292
+      ]
+     ]
+    },
+    "fc=persist": {
+     "i>=1": [
+      0.2559,
+      0.2758,
+      0.2818
+     ],
+     "all": [
+      0.2559,
+      0.2663,
+      0.272
+     ],
+     "i>=1_no_last": [
+      0.2517,
+      0.2746,
+      0.2809
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|persist",
+      "box4|K0|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K3|persist",
+      "mixavg3|K3|persist",
+      "mixavg3|K3|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.1747,
+       0.083,
+       0.0745
+      ],
+      [
+       -0.2162,
+       0.16,
+       0.1685
+      ],
+      [
+       0.0514,
+       0.2005,
+       0.181
+      ],
+      [
+       0.2317,
+       0.295,
+       0.1795
+      ],
+      [
+       -0.1477,
+       0.144,
+       0.158
+      ],
+      [
+       0.3443,
+       0.301,
+       0.3075
+      ],
+      [
+       0.3984,
+       0.288,
+       0.3585
+      ],
+      [
+       0.4215,
+       0.35,
+       0.3345
+      ],
+      [
+       0.4054,
+       0.355,
+       0.34
+      ],
+      [
+       0.448,
+       0.3875,
+       0.381
+      ],
+      [
+       0.3184,
+       0.288,
+       0.3125
+      ],
+      [
+       0.276,
+       0.2565,
+       0.272
+      ],
+      [
+       0.3818,
+       0.31,
+       0.3525
+      ],
+      [
+       0.4943,
+       0.399,
+       0.4085
+      ],
+      [
+       0.4619,
+       0.378,
+       0.359
+      ],
+      [
+       0.4343,
+       0.357,
+       0.4115
+      ],
+      [
+       0.3044,
+       0.296,
+       0.318
+      ],
+      [
+       0.2862,
+       0.319,
+       0.327
+      ],
+      [
+       0.2211,
+       0.2435,
+       0.266
+      ],
+      [
+       0.361,
+       0.261,
+       0.283
+      ],
+      [
+       0.2212,
+       0.27,
+       0.2615
+      ],
+      [
+       0.1972,
+       0.266,
+       0.294
+      ],
+      [
+       0.1208,
+       0.226,
+       0.2075
+      ],
+      [
+       0.2248,
+       0.2625,
+       0.304
+      ],
+      [
+       0.2253,
+       0.238,
+       0.2705
+      ],
+      [
+       0.3972,
+       0.273,
+       0.341
+      ],
+      [
+       0.3707,
+       0.3085,
+       0.3035
+      ]
+     ]
+    },
+    "fc=lin1": {
+     "i>=1": [
+      0.2813,
+      0.2755,
+      0.2843
+     ],
+     "all": [
+      0.2813,
+      0.266,
+      0.2745
+     ],
+     "i>=1_no_last": [
+      0.2782,
+      0.2744,
+      0.2838
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.4814,
+       0.0885,
+       0.029
+      ],
+      [
+       0.2791,
+       0.138,
+       0.257
+      ],
+      [
+       0.422,
+       0.1805,
+       0.3105
+      ],
+      [
+       -0.6438,
+       0.0215,
+       0.0315
+      ],
+      [
+       0.722,
+       0.551,
+       0.352
+      ],
+      [
+       0.3178,
+       0.275,
+       0.2475
+      ],
+      [
+       0.2731,
+       0.26,
+       0.2665
+      ],
+      [
+       0.3573,
+       0.3385,
+       0.3255
+      ],
+      [
+       0.4526,
+       0.38,
+       0.343
+      ],
+      [
+       0.4789,
+       0.397,
+       0.3785
+      ],
+      [
+       0.36,
+       0.2805,
+       0.3145
+      ],
+      [
+       0.339,
+       0.2385,
+       0.2895
+      ],
+      [
+       0.4449,
+       0.329,
+       0.36
+      ],
+      [
+       0.5157,
+       0.393,
+       0.409
+      ],
+      [
+       0.5054,
+       0.3855,
+       0.3715
+      ],
+      [
+       0.5083,
+       0.3615,
+       0.4235
+      ],
+      [
+       0.3577,
+       0.296,
+       0.32
+      ],
+      [
+       0.3472,
+       0.323,
+       0.3265
+      ],
+      [
+       0.1727,
+       0.21,
+       0.257
+      ],
+      [
+       0.2219,
+       0.231,
+       0.2775
+      ],
+      [
+       0.1271,
+       0.2515,
+       0.2275
+      ],
+      [
+       0.2414,
+       0.2655,
+       0.3265
+      ],
+      [
+       0.2347,
+       0.2435,
+       0.25
+      ],
+      [
+       0.2606,
+       0.26,
+       0.276
+      ],
+      [
+       0.2017,
+       0.2285,
+       0.25
+      ],
+      [
+       0.3882,
+       0.275,
+       0.3295
+      ],
+      [
+       0.3655,
+       0.306,
+       0.2965
+      ]
+     ]
+    },
+    "fc=loglin1": {
+     "i>=1": [
+      0.2707,
+      0.2711,
+      0.2826
+     ],
+     "all": [
+      0.2707,
+      0.2617,
+      0.2728
+     ],
+     "i>=1_no_last": [
+      0.2671,
+      0.2698,
+      0.282
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K8|loglin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K8|loglin1",
+      "mixavg3|K8|loglin1",
+      "mixavg3|K8|loglin1",
+      "box2|K8|loglin1",
+      "mixavg3|K8|loglin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.4841,
+       0.0845,
+       0.034
+      ],
+      [
+       0.3478,
+       0.1435,
+       0.295
+      ],
+      [
+       0.4275,
+       0.1745,
+       0.3165
+      ],
+      [
+       -0.6572,
+       0.01,
+       0.0285
+      ],
+      [
+       0.7177,
+       0.5445,
+       0.3505
+      ],
+      [
+       0.0435,
+       0.1605,
+       0.1235
+      ],
+      [
+       0.2342,
+       0.2465,
+       0.255
+      ],
+      [
+       0.3888,
+       0.348,
+       0.3305
+      ],
+      [
+       0.459,
+       0.3845,
+       0.353
+      ],
+      [
+       0.4798,
+       0.3955,
+       0.3835
+      ],
+      [
+       0.3452,
+       0.276,
+       0.3175
+      ],
+      [
+       0.3133,
+       0.248,
+       0.2845
+      ],
+      [
+       0.4329,
+       0.3235,
+       0.3545
+      ],
+      [
+       0.5066,
+       0.3925,
+       0.416
+      ],
+      [
+       0.4956,
+       0.379,
+       0.3665
+      ],
+      [
+       0.4749,
+       0.361,
+       0.4165
+      ],
+      [
+       0.3393,
+       0.2955,
+       0.32
+      ],
+      [
+       0.3273,
+       0.321,
+       0.3265
+      ],
+      [
+       0.1481,
+       0.2095,
+       0.2565
+      ],
+      [
+       0.2193,
+       0.2305,
+       0.2775
+      ],
+      [
+       0.3007,
+       0.3195,
+       0.308
+      ],
+      [
+       0.2299,
+       0.265,
+       0.316
+      ],
+      [
+       0.2351,
+       0.2455,
+       0.2515
+      ],
+      [
+       0.2581,
+       0.257,
+       0.278
+      ],
+      [
+       0.2038,
+       0.2255,
+       0.25
+      ],
+      [
+       0.317,
+       0.239,
+       0.2905
+      ],
+      [
+       0.3663,
+       0.305,
+       0.298
+      ]
+     ]
+    },
+    "fc=ot0.05": {
+     "i>=1": [
+      0.2818,
+      0.2768,
+      0.2865
+     ],
+     "all": [
+      0.2818,
+      0.2673,
+      0.2766
+     ],
+     "i>=1_no_last": [
+      0.2787,
+      0.2757,
+      0.2861
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K6|ot0.05",
+      "mixavg3|K8|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "box4|K6|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K6|ot0.05",
+      "mixavg3|K6|ot0.05",
+      "mixavg3|K6|ot0.05",
+      "mixavg3|K8|ot0.05",
+      "mixavg3|K8|ot0.05",
+      "mixavg3|K8|ot0.05",
+      "box2|K8|ot0.05",
+      "mixavg3|K8|ot0.05"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.4243,
+       0.1185,
+       0.032
+      ],
+      [
+       0.2506,
+       0.1315,
+       0.2435
+      ],
+      [
+       0.42,
+       0.1905,
+       0.315
+      ],
+      [
+       -0.6367,
+       0.0185,
+       0.0315
+      ],
+      [
+       0.6713,
+       0.502,
+       0.3345
+      ],
+      [
+       0.2462,
+       0.247,
+       0.2045
+      ],
+      [
+       0.3824,
+       0.292,
+       0.329
+      ],
+      [
+       0.3903,
+       0.348,
+       0.3295
+      ],
+      [
+       0.4597,
+       0.384,
+       0.3525
+      ],
+      [
+       0.4796,
+       0.395,
+       0.384
+      ],
+      [
+       0.3445,
+       0.2775,
+       0.317
+      ],
+      [
+       0.3125,
+       0.248,
+       0.284
+      ],
+      [
+       0.4327,
+       0.3235,
+       0.354
+      ],
+      [
+       0.5079,
+       0.3925,
+       0.4155
+      ],
+      [
+       0.4957,
+       0.379,
+       0.3665
+      ],
+      [
+       0.4822,
+       0.3605,
+       0.4185
+      ],
+      [
+       0.3361,
+       0.2955,
+       0.3195
+      ],
+      [
+       0.2393,
+       0.295,
+       0.317
+      ],
+      [
+       0.1433,
+       0.21,
+       0.256
+      ],
+      [
+       0.3341,
+       0.2705,
+       0.3085
+      ],
+      [
+       0.2981,
+       0.3195,
+       0.302
+      ],
+      [
+       0.2282,
+       0.2665,
+       0.317
+      ],
+      [
+       0.2362,
+       0.247,
+       0.2515
+      ],
+      [
+       0.2576,
+       0.2575,
+       0.2825
+      ],
+      [
+       0.2101,
+       0.2265,
+       0.2545
+      ],
+      [
+       0.319,
+       0.2425,
+       0.2905
+      ],
+      [
+       0.3666,
+       0.3065,
+       0.2975
+      ]
+     ]
+    },
+    "fc=uot0.05t1": {
+     "i>=1": [
+      0.2879,
+      0.282,
+      0.2897
+     ],
+     "all": [
+      0.2879,
+      0.2723,
+      0.2797
+     ],
+     "i>=1_no_last": [
+      0.2849,
+      0.2811,
+      0.2892
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K6|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K6|uot0.05t1",
+      "mixavg3|K6|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K6|uot0.05t1",
+      "mixavg3|K6|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K6|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K8|uot0.05t1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.2647,
+       0.17,
+       0.0285
+      ],
+      [
+       0.5293,
+       0.201,
+       0.4135
+      ],
+      [
+       0.4012,
+       0.2005,
+       0.305
+      ],
+      [
+       -0.5765,
+       0.041,
+       0.0435
+      ],
+      [
+       0.669,
+       0.5365,
+       0.342
+      ],
+      [
+       0.2786,
+       0.2405,
+       0.204
+      ],
+      [
+       0.2542,
+       0.249,
+       0.259
+      ],
+      [
+       0.4145,
+       0.3445,
+       0.334
+      ],
+      [
+       0.3839,
+       0.3525,
+       0.338
+      ],
+      [
+       0.4672,
+       0.3935,
+       0.383
+      ],
+      [
+       0.3294,
+       0.29,
+       0.3045
+      ],
+      [
+       0.3127,
+       0.2505,
+       0.2715
+      ],
+      [
+       0.4156,
+       0.3225,
+       0.352
+      ],
+      [
+       0.4916,
+       0.394,
+       0.41
+      ],
+      [
+       0.4769,
+       0.3775,
+       0.3595
+      ],
+      [
+       0.4461,
+       0.359,
+       0.414
+      ],
+      [
+       0.3165,
+       0.295,
+       0.3185
+      ],
+      [
+       0.3122,
+       0.3215,
+       0.3265
+      ],
+      [
+       0.1371,
+       0.2095,
+       0.256
+      ],
+      [
+       0.2175,
+       0.2305,
+       0.2775
+      ],
+      [
+       0.2593,
+       0.3,
+       0.271
+      ],
+      [
+       0.2498,
+       0.2745,
+       0.3455
+      ],
+      [
+       0.2008,
+       0.2405,
+       0.2475
+      ],
+      [
+       0.2431,
+       0.27,
+       0.2905
+      ],
+      [
+       0.2216,
+       0.2455,
+       0.2595
+      ],
+      [
+       0.3975,
+       0.276,
+       0.3395
+      ],
+      [
+       0.3696,
+       0.3045,
+       0.3035
+      ]
+     ]
+    },
+    "fc=sb3": {
+     "i>=1": [
+      0.1769,
+      0.2463,
+      0.2541
+     ],
+     "all": [
+      0.1769,
+      0.2378,
+      0.2453
+     ],
+     "i>=1_no_last": [
+      0.1707,
+      0.2444,
+      0.2526
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|sb3",
+      "box1+beta1|K3|sb3",
+      "mixavg3|K3|sb3",
+      "mixavg3|K3|sb3",
+      "mixavg3|K3|sb3",
+      "box1+beta1|K3|sb3",
+      "box2|K6|sb3",
+      "box2|K6|sb3",
+      "mixavg3|K6|sb3",
+      "mixavg3|K3|sb3",
+      "mixavg3|K6|sb3",
+      "box2|K3|sb3",
+      "mixavg3|K6|sb3",
+      "box2|K3|sb3",
+      "mixavg3|K3|sb3",
+      "mixavg3|K3|sb3",
+      "box4|K6|sb3",
+      "box4|K6|sb3",
+      "mixavg3|K6|sb3",
+      "mixavg3|K6|sb3",
+      "mixavg3|K6|sb3",
+      "box4|K8|sb3",
+      "mixavg3|K8|sb3",
+      "box2|K8|sb3",
+      "box2|K8|sb3",
+      "box2|K8|sb3",
+      "box2|K8|sb3"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.4694,
+       0.1,
+       0.0315
+      ],
+      [
+       -0.4488,
+       0.0455,
+       0.0445
+      ],
+      [
+       0.3012,
+       0.2,
+       0.2535
+      ],
+      [
+       -0.6347,
+       0.016,
+       0.032
+      ],
+      [
+       -0.4661,
+       0.056,
+       0.087
+      ],
+      [
+       -0.3787,
+       0.0675,
+       0.0425
+      ],
+      [
+       0.2261,
+       0.247,
+       0.245
+      ],
+      [
+       0.2442,
+       0.268,
+       0.2655
+      ],
+      [
+       0.4421,
+       0.3395,
+       0.322
+      ],
+      [
+       0.4764,
+       0.3925,
+       0.385
+      ],
+      [
+       0.36,
+       0.283,
+       0.317
+      ],
+      [
+       0.3262,
+       0.2595,
+       0.294
+      ],
+      [
+       0.4358,
+       0.3175,
+       0.3665
+      ],
+      [
+       0.4987,
+       0.375,
+       0.398
+      ],
+      [
+       0.4921,
+       0.3805,
+       0.365
+      ],
+      [
+       0.4772,
+       0.3605,
+       0.4165
+      ],
+      [
+       0.3614,
+       0.31,
+       0.3255
+      ],
+      [
+       0.2375,
+       0.294,
+       0.3175
+      ],
+      [
+       0.2002,
+       0.2395,
+       0.273
+      ],
+      [
+       0.3279,
+       0.266,
+       0.2935
+      ],
+      [
+       0.2985,
+       0.32,
+       0.302
+      ],
+      [
+       0.2133,
+       0.2665,
+       0.328
+      ],
+      [
+       0.2171,
+       0.2395,
+       0.2425
+      ],
+      [
+       0.2254,
+       0.2485,
+       0.2405
+      ],
+      [
+       0.2172,
+       0.254,
+       0.234
+      ],
+      [
+       0.3192,
+       0.2475,
+       0.285
+      ],
+      [
+       0.3459,
+       0.297,
+       0.293
+      ]
+     ]
+    },
+    "fc=sbW": {
+     "i>=1": [
+      0.1942,
+      0.258,
+      0.2604
+     ],
+     "all": [
+      0.1942,
+      0.2491,
+      0.2514
+     ],
+     "i>=1_no_last": [
+      0.1879,
+      0.2564,
+      0.2593
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "mixavg3|K3|sbW",
+      "mixavg3|K3|sbW",
+      "mixavg3|K6|sbW",
+      "box1+beta1|K3|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "mixavg3|K6|sbW",
+      "box4|K8|sbW",
+      "box4|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "mixavg3|K8|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.1079,
+       0.2055,
+       0.114
+      ],
+      [
+       -0.4694,
+       0.1,
+       0.0315
+      ],
+      [
+       -0.4488,
+       0.0455,
+       0.0445
+      ],
+      [
+       -0.2191,
+       0.1385,
+       0.1255
+      ],
+      [
+       -0.1327,
+       0.1535,
+       0.1265
+      ],
+      [
+       0.0384,
+       0.2145,
+       0.161
+      ],
+      [
+       -0.4838,
+       0.049,
+       0.0495
+      ],
+      [
+       0.2231,
+       0.269,
+       0.315
+      ],
+      [
+       0.3596,
+       0.34,
+       0.3285
+      ],
+      [
+       0.246,
+       0.3375,
+       0.331
+      ],
+      [
+       0.4537,
+       0.401,
+       0.3715
+      ],
+      [
+       0.3503,
+       0.287,
+       0.3115
+      ],
+      [
+       0.3334,
+       0.2315,
+       0.275
+      ],
+      [
+       0.4088,
+       0.3235,
+       0.367
+      ],
+      [
+       0.5309,
+       0.406,
+       0.4115
+      ],
+      [
+       0.4743,
+       0.3655,
+       0.3475
+      ],
+      [
+       0.5035,
+       0.357,
+       0.399
+      ],
+      [
+       0.37,
+       0.303,
+       0.3275
+      ],
+      [
+       0.2874,
+       0.3195,
+       0.3255
+      ],
+      [
+       0.2236,
+       0.237,
+       0.2685
+      ],
+      [
+       0.3681,
+       0.267,
+       0.294
+      ],
+      [
+       0.2708,
+       0.2945,
+       0.2835
+      ],
+      [
+       0.2745,
+       0.2815,
+       0.3665
+      ],
+      [
+       0.2054,
+       0.2485,
+       0.2515
+      ],
+      [
+       0.235,
+       0.246,
+       0.242
+      ],
+      [
+       0.2317,
+       0.248,
+       0.2535
+      ],
+      [
+       0.3308,
+       0.254,
+       0.2775
+      ],
+      [
+       0.3645,
+       0.3,
+       0.292
+      ]
+     ]
+    }
+   },
+   "paired": {
+    "full - noOT": {
+     "pearson": {
+      "mean_delta": 0.0118,
+      "n_better": 10,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.4180412292480469
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0063,
+      "n_better": 11,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.12122849317407301
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0053,
+      "n_better": 13,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.21202629374935833
+     },
+     "J": {
+      "mean_delta": 0.0234,
+      "n_better": 10,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.3524589538574219
+     }
+    },
+    "OT_only - noOT": {
+     "pearson": {
+      "mean_delta": 0.0923,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.04355788230895996
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.026,
+      "n_better": 15,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.0157501056787983
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0256,
+      "n_better": 18,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.024570862668015444
+     },
+     "J": {
+      "mean_delta": 0.1439,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.03620612621307373
+     }
+    },
+    "fc=ot0.05 - fc=lin1": {
+     "pearson": {
+      "mean_delta": 0.0005,
+      "n_better": 11,
+      "n_worse": 16,
+      "wilcoxon_two_sided_p": 0.31257040798664093
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0013,
+      "n_better": 11,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.9291613129011792
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0022,
+      "n_better": 14,
+      "n_worse": 12,
+      "wilcoxon_two_sided_p": 0.9797358908492023
+     },
+     "J": {
+      "mean_delta": 0.004,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.4996110200881958
+     }
+    },
+    "fc=ot0.05 - fc=persist": {
+     "pearson": {
+      "mean_delta": 0.0259,
+      "n_better": 16,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.31257040798664093
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.001,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.6109333634376526
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0047,
+      "n_better": 16,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.6789510101079941
+     },
+     "J": {
+      "mean_delta": 0.0317,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.4270208328962326
+     }
+    },
+    "fc=uot0.05t1 - fc=loglin1": {
+     "pearson": {
+      "mean_delta": 0.0173,
+      "n_better": 10,
+      "n_worse": 17,
+      "wilcoxon_two_sided_p": 0.8779177963733673
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0109,
+      "n_better": 14,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.10932131603847789
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0071,
+      "n_better": 10,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.9570757335998334
+     },
+     "J": {
+      "mean_delta": 0.0353,
+      "n_better": 11,
+      "n_worse": 16,
+      "wilcoxon_two_sided_p": 0.9153143465518951
+     }
+    },
+    "fc=sb3 - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.079,
+      "n_better": 14,
+      "n_worse": 13,
+      "wilcoxon_two_sided_p": 0.4846055656671524
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0295,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.09732469389936631
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0277,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.11836309235930739
+     },
+     "J": {
+      "mean_delta": -0.1362,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.2483380287885666
+     }
+    },
+    "fc=sbW - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0617,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.8039880394935608
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0178,
+      "n_better": 12,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.3218609409695571
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0213,
+      "n_better": 10,
+      "n_worse": 17,
+      "wilcoxon_two_sided_p": 0.0774124371019171
+     },
+     "J": {
+      "mean_delta": -0.1008,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.37350593507289886
+     }
+    },
+    "fc=sb3 - fc=lin1": {
+     "pearson": {
+      "mean_delta": -0.1044,
+      "n_better": 8,
+      "n_worse": 19,
+      "wilcoxon_two_sided_p": 0.010378450155258179
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0292,
+      "n_better": 10,
+      "n_worse": 17,
+      "wilcoxon_two_sided_p": 0.23432936321196685
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0302,
+      "n_better": 11,
+      "n_worse": 16,
+      "wilcoxon_two_sided_p": 0.027922983546152483
+     },
+     "J": {
+      "mean_delta": -0.1638,
+      "n_better": 9,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.02142883837223053
+     }
+    },
+    "full - persist_only(level_obs_RO)": {
+     "pearson": {
+      "mean_delta": 0.0512,
+      "n_better": 22,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.0024107694625854492
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0157,
+      "n_better": 19,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.005612879991531372
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0101,
+      "n_better": 17,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.018798525470478483
+     },
+     "J": {
+      "mean_delta": 0.0771,
+      "n_better": 22,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.00266072154045105
+     }
+    },
+    "full - trend": {
+     "pearson": {
+      "mean_delta": 0.3923,
+      "n_better": 21,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.00020888447761535645
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.1634,
+      "n_better": 25,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 1.1354684829711914e-05
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.1794,
+      "n_better": 22,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 3.769993782043457e-06
+     },
+     "J": {
+      "mean_delta": 0.7351,
+      "n_better": 22,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 5.488097667694092e-05
+     }
+    },
+    "noOT - trend": {
+     "pearson": {
+      "mean_delta": 0.3804,
+      "n_better": 21,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.00018434226512908936
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.157,
+      "n_better": 24,
+      "n_worse": 3,
+      "wilcoxon_two_sided_p": 3.0234456062316895e-05
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.1742,
+      "n_better": 22,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 6.660819053649902e-06
+     },
+     "J": {
+      "mean_delta": 0.7117,
+      "n_better": 21,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 4.7460198402404785e-05
+     }
+    },
+    "two_pathway(box1+beta) - trend": {
+     "pearson": {
+      "mean_delta": 0.0069,
+      "n_better": 19,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.219833105802536
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0044,
+      "n_better": 16,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.1866375681327529
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0032,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.10222281923685356
+     },
+     "J": {
+      "mean_delta": 0.0146,
+      "n_better": 19,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.1775200217962265
+     }
+    },
+    "mixavg3_denoised - trend": {
+     "pearson": {
+      "mean_delta": 0.4118,
+      "n_better": 21,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 8.372962474822998e-05
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.1689,
+      "n_better": 25,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 9.5367431640625e-06
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.1891,
+      "n_better": 23,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 1.6391277313232422e-06
+     },
+     "J": {
+      "mean_delta": 0.7698,
+      "n_better": 23,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 2.586841583251953e-05
+     }
+    },
+    "composition_only(box_states,beta0) - trend": {
+     "pearson": {
+      "mean_delta": 0.3656,
+      "n_better": 21,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.0013849586248397827
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.1545,
+      "n_better": 23,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 9.59634780883789e-05
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.1703,
+      "n_better": 22,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 1.5929341316223145e-05
+     },
+     "J": {
+      "mean_delta": 0.6903,
+      "n_better": 22,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.00023631751537322998
+     }
+    }
+   },
+   "fixed_configs_hindsight_NOT_strict": {
+    "persist": {
+     "config": "mixavg3|K8|persist",
+     "i>=1": [
+      0.2851,
+      0.2741,
+      0.2938
+     ],
+     "all": [
+      0.2851,
+      0.2646,
+      0.2837
+     ],
+     "i>=1_no_last": [
+      0.2819,
+      0.2728,
+      0.2934
+     ]
+    },
+    "lin1": {
+     "config": "mixavg3|K6|lin1",
+     "i>=1": [
+      0.2922,
+      0.2752,
+      0.2921
+     ],
+     "all": [
+      0.2922,
+      0.2657,
+      0.282
+     ],
+     "i>=1_no_last": [
+      0.2896,
+      0.2744,
+      0.2909
+     ]
+    },
+    "loglin1": {
+     "config": "mixavg3|K6|loglin1",
+     "i>=1": [
+      0.2872,
+      0.2731,
+      0.2919
+     ],
+     "all": [
+      0.2872,
+      0.2636,
+      0.2819
+     ],
+     "i>=1_no_last": [
+      0.2843,
+      0.2722,
+      0.2907
+     ]
+    },
+    "ot0.05": {
+     "config": "mixavg3|K6|ot0.05",
+     "i>=1": [
+      0.2913,
+      0.2748,
+      0.2926
+     ],
+     "all": [
+      0.2913,
+      0.2653,
+      0.2825
+     ],
+     "i>=1_no_last": [
+      0.2886,
+      0.274,
+      0.2914
+     ]
+    },
+    "uot0.05t1": {
+     "config": "mixavg3|K6|uot0.05t1",
+     "i>=1": [
+      0.2871,
+      0.2806,
+      0.2901
+     ],
+     "all": [
+      0.2871,
+      0.2709,
+      0.2801
+     ],
+     "i>=1_no_last": [
+      0.2841,
+      0.2799,
+      0.2889
+     ]
+    },
+    "sb3": {
+     "config": "mixavg3|K6|sb3",
+     "i>=1": [
+      0.2057,
+      0.2588,
+      0.2647
+     ],
+     "all": [
+      0.2057,
+      0.2499,
+      0.2556
+     ],
+     "i>=1_no_last": [
+      0.1996,
+      0.2571,
+      0.2628
+     ]
+    },
+    "sbW": {
+     "config": "mixavg3|K8|sbW",
+     "i>=1": [
+      0.225,
+      0.2672,
+      0.2686
+     ],
+     "all": [
+      0.225,
+      0.258,
+      0.2594
+     ],
+     "i>=1_no_last": [
+      0.2198,
+      0.266,
+      0.2678
+     ]
+    }
+   },
+   "oracle_next_composition_NOT_strict": {
+    "ORACLE_props|box1|K3": {
+     "i>=1": [
+      0.1845,
+      0.1847,
+      0.1956
+     ],
+     "all": [
+      0.1845,
+      0.1783,
+      0.1888
+     ],
+     "i>=1_no_last": [
+      0.1917,
+      0.1883,
+      0.1969
+     ]
+    },
+    "ORACLE_props|box1|K6": {
+     "i>=1": [
+      0.2076,
+      0.2163,
+      0.2072
+     ],
+     "all": [
+      0.2076,
+      0.2088,
+      0.2001
+     ],
+     "i>=1_no_last": [
+      0.2133,
+      0.2184,
+      0.2095
+     ]
+    },
+    "ORACLE_props|box1|K8": {
+     "i>=1": [
+      0.2396,
+      0.2371,
+      0.2201
+     ],
+     "all": [
+      0.2396,
+      0.2289,
+      0.2125
+     ],
+     "i>=1_no_last": [
+      0.2461,
+      0.2386,
+      0.2233
+     ]
+    },
+    "ORACLE_props|box4|K3": {
+     "i>=1": [
+      0.3373,
+      0.2907,
+      0.3081
+     ],
+     "all": [
+      0.3373,
+      0.2806,
+      0.2975
+     ],
+     "i>=1_no_last": [
+      0.3368,
+      0.2908,
+      0.3079
+     ]
+    },
+    "ORACLE_props|box4|K6": {
+     "i>=1": [
+      0.3875,
+      0.3024,
+      0.3168
+     ],
+     "all": [
+      0.3875,
+      0.292,
+      0.3059
+     ],
+     "i>=1_no_last": [
+      0.3886,
+      0.3031,
+      0.317
+     ]
+    },
+    "ORACLE_props|box4|K8": {
+     "i>=1": [
+      0.4105,
+      0.3122,
+      0.3254
+     ],
+     "all": [
+      0.4105,
+      0.3014,
+      0.3142
+     ],
+     "i>=1_no_last": [
+      0.4123,
+      0.3129,
+      0.326
+     ]
+    },
+    "ORACLE_props|mixavg3|K3": {
+     "i>=1": [
+      0.3631,
+      0.2988,
+      0.3146
+     ],
+     "all": [
+      0.3631,
+      0.2885,
+      0.3037
+     ],
+     "i>=1_no_last": [
+      0.3629,
+      0.2987,
+      0.3143
+     ]
+    },
+    "ORACLE_props|mixavg3|K6": {
+     "i>=1": [
+      0.3966,
+      0.3008,
+      0.3162
+     ],
+     "all": [
+      0.3966,
+      0.2904,
+      0.3053
+     ],
+     "i>=1_no_last": [
+      0.3976,
+      0.3007,
+      0.3167
+     ]
+    },
+    "ORACLE_props|mixavg3|K8": {
+     "i>=1": [
+      0.4166,
+      0.313,
+      0.3228
+     ],
+     "all": [
+      0.4166,
+      0.3022,
+      0.3117
+     ],
+     "i>=1_no_last": [
+      0.4182,
+      0.3132,
+      0.3233
+     ]
+    }
+   }
+  },
+  "linear": {
+   "comparators": {
+    "trend_repeat_last_change": {
+     "i>=1": [
+      0.1742,
+      0.218,
+      0.1928
+     ],
+     "all": [
+      0.1742,
+      0.2105,
+      0.1862
+     ],
+     "i>=1_no_last": [
+      0.1983,
+      0.2217,
+      0.1958
+     ]
+    },
+    "level_box4_persist_plugin": {
+     "i>=1": [
+      -0.1839,
+      0.2859,
+      0.317
+     ],
+     "all": [
+      -0.1789,
+      0.2766,
+      0.3065
+     ],
+     "i>=1_no_last": [
+      -0.2088,
+      0.2777,
+      0.316
+     ]
+    }
+   },
+   "groups": {
+    "full": {
+     "i>=1": [
+      0.2657,
+      0.3067,
+      0.3371
+     ],
+     "all": [
+      0.2657,
+      0.2962,
+      0.3254
+     ],
+     "i>=1_no_last": [
+      0.255,
+      0.299,
+      0.3378
+     ],
+     "share_transitions_OT_selected": 0.63,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta0.5|K8|uot0.05t1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sb3",
+      "mixavg3|K8|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.9307,
+       0.325,
+       0.057
+      ],
+      [
+       0.5706,
+       0.098,
+       0.1385
+      ],
+      [
+       0.8807,
+       0.1115,
+       0.657
+      ],
+      [
+       -0.4023,
+       0.099,
+       0.322
+      ],
+      [
+       0.9337,
+       0.474,
+       0.4035
+      ],
+      [
+       0.6039,
+       0.1475,
+       0.298
+      ],
+      [
+       -0.0493,
+       0.096,
+       0.174
+      ],
+      [
+       0.5521,
+       0.13,
+       0.2165
+      ],
+      [
+       0.3769,
+       0.443,
+       0.387
+      ],
+      [
+       0.845,
+       0.3985,
+       0.513
+      ],
+      [
+       0.299,
+       0.3155,
+       0.267
+      ],
+      [
+       0.0709,
+       0.163,
+       0.1815
+      ],
+      [
+       0.2466,
+       0.226,
+       0.3345
+      ],
+      [
+       0.0425,
+       0.3815,
+       0.3975
+      ],
+      [
+       0.7054,
+       0.3385,
+       0.5665
+      ],
+      [
+       0.354,
+       0.4345,
+       0.388
+      ],
+      [
+       0.1734,
+       0.277,
+       0.433
+      ],
+      [
+       0.1112,
+       0.4595,
+       0.3045
+      ],
+      [
+       -0.2362,
+       0.292,
+       0.3355
+      ],
+      [
+       0.5123,
+       0.171,
+       0.486
+      ],
+      [
+       0.6154,
+       0.57,
+       0.232
+      ],
+      [
+       -0.5631,
+       0.2545,
+       0.28
+      ],
+      [
+       0.3445,
+       0.1895,
+       0.4565
+      ],
+      [
+       0.4499,
+       0.3175,
+       0.417
+      ],
+      [
+       -0.0783,
+       0.3315,
+       0.358
+      ],
+      [
+       0.187,
+       0.3365,
+       0.4235
+      ],
+      [
+       0.5542,
+       0.516,
+       0.316
+      ]
+     ]
+    },
+    "noOT": {
+     "i>=1": [
+      0.2173,
+      0.3156,
+      0.3316
+     ],
+     "all": [
+      0.2173,
+      0.3047,
+      0.3202
+     ],
+     "i>=1_no_last": [
+      0.2043,
+      0.308,
+      0.3321
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K6|loglin1",
+      "box1+beta1|K6|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K8|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box4|K6|lin1",
+      "mixavg3|K6|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.9307,
+       0.325,
+       0.057
+      ],
+      [
+       0.3975,
+       0.0725,
+       0.0215
+      ],
+      [
+       0.8508,
+       0.1245,
+       0.654
+      ],
+      [
+       -0.7155,
+       0.056,
+       0.287
+      ],
+      [
+       0.954,
+       0.5215,
+       0.443
+      ],
+      [
+       0.2427,
+       0.2385,
+       0.1445
+      ],
+      [
+       -0.1167,
+       0.097,
+       0.1665
+      ],
+      [
+       0.0573,
+       0.3925,
+       0.3595
+      ],
+      [
+       0.3769,
+       0.443,
+       0.387
+      ],
+      [
+       0.8218,
+       0.404,
+       0.516
+      ],
+      [
+       0.2239,
+       0.2985,
+       0.2545
+      ],
+      [
+       0.1538,
+       0.1675,
+       0.186
+      ],
+      [
+       0.3386,
+       0.219,
+       0.342
+      ],
+      [
+       0.0425,
+       0.3815,
+       0.3975
+      ],
+      [
+       0.7054,
+       0.3385,
+       0.5665
+      ],
+      [
+       0.354,
+       0.4345,
+       0.388
+      ],
+      [
+       0.1734,
+       0.277,
+       0.433
+      ],
+      [
+       0.1112,
+       0.4595,
+       0.3045
+      ],
+      [
+       -0.2362,
+       0.292,
+       0.3355
+      ],
+      [
+       0.5123,
+       0.171,
+       0.486
+      ],
+      [
+       0.6154,
+       0.57,
+       0.232
+      ],
+      [
+       -0.5311,
+       0.2175,
+       0.268
+      ],
+      [
+       0.2783,
+       0.163,
+       0.4335
+      ],
+      [
+       0.4464,
+       0.304,
+       0.4095
+      ],
+      [
+       -0.0805,
+       0.325,
+       0.369
+      ],
+      [
+       0.1998,
+       0.332,
+       0.431
+      ],
+      [
+       0.5693,
+       0.5195,
+       0.318
+      ]
+     ]
+    },
+    "OT_only": {
+     "i>=1": [
+      0.2352,
+      0.3034,
+      0.3265
+     ],
+     "all": [
+      0.2352,
+      0.2929,
+      0.3152
+     ],
+     "i>=1_no_last": [
+      0.2233,
+      0.2955,
+      0.3269
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box2|K3|ot0.05",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta0.5|K8|uot0.05t1",
+      "box2|K3|ot0.05",
+      "mixavg3|K6|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K8|sb3",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box1|K3|sb3",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sb3",
+      "mixavg3|K8|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.8897,
+       0.385,
+       0.046
+      ],
+      [
+       0.5706,
+       0.098,
+       0.1385
+      ],
+      [
+       0.8807,
+       0.1115,
+       0.657
+      ],
+      [
+       -0.4023,
+       0.099,
+       0.322
+      ],
+      [
+       0.9337,
+       0.474,
+       0.4035
+      ],
+      [
+       0.6039,
+       0.1475,
+       0.298
+      ],
+      [
+       -0.0493,
+       0.096,
+       0.174
+      ],
+      [
+       0.5521,
+       0.13,
+       0.2165
+      ],
+      [
+       0.6749,
+       0.4135,
+       0.4285
+      ],
+      [
+       0.845,
+       0.3985,
+       0.513
+      ],
+      [
+       0.299,
+       0.3155,
+       0.267
+      ],
+      [
+       0.0709,
+       0.163,
+       0.1815
+      ],
+      [
+       0.2466,
+       0.226,
+       0.3345
+      ],
+      [
+       -0.001,
+       0.377,
+       0.4005
+      ],
+      [
+       0.1248,
+       0.277,
+       0.357
+      ],
+      [
+       0.286,
+       0.434,
+       0.385
+      ],
+      [
+       0.1486,
+       0.2755,
+       0.431
+      ],
+      [
+       0.0955,
+       0.458,
+       0.3055
+      ],
+      [
+       -0.2471,
+       0.2925,
+       0.334
+      ],
+      [
+       -0.0446,
+       0.066,
+       0.321
+      ],
+      [
+       0.7208,
+       0.6205,
+       0.2825
+      ],
+      [
+       -0.5631,
+       0.2545,
+       0.28
+      ],
+      [
+       0.3445,
+       0.1895,
+       0.4565
+      ],
+      [
+       0.4499,
+       0.3175,
+       0.417
+      ],
+      [
+       -0.0783,
+       0.3315,
+       0.358
+      ],
+      [
+       0.187,
+       0.3365,
+       0.4235
+      ],
+      [
+       0.5542,
+       0.516,
+       0.316
+      ]
+     ]
+    },
+    "persist_only(level_obs_RO)": {
+     "i>=1": [
+      -0.1179,
+      0.2297,
+      0.2402
+     ],
+     "all": [
+      -0.1179,
+      0.2218,
+      0.2319
+     ],
+     "i>=1_no_last": [
+      -0.1404,
+      0.2195,
+      0.2364
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box1|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.4556,
+       0.077,
+       0.056
+      ],
+      [
+       -0.5354,
+       0.238,
+       0.6125
+      ],
+      [
+       -0.7465,
+       0.0655,
+       0.1785
+      ],
+      [
+       -0.0047,
+       0.071,
+       0.042
+      ],
+      [
+       -0.7406,
+       0.224,
+       0.1125
+      ],
+      [
+       -0.7894,
+       0.2225,
+       0.2335
+      ],
+      [
+       -0.531,
+       0.215,
+       0.3925
+      ],
+      [
+       -0.4232,
+       0.324,
+       0.381
+      ],
+      [
+       -0.4089,
+       0.4515,
+       0.41
+      ],
+      [
+       0.0975,
+       0.0465,
+       0.043
+      ],
+      [
+       -0.0078,
+       0.069,
+       0.0835
+      ],
+      [
+       -0.071,
+       0.044,
+       0.0545
+      ],
+      [
+       -0.1879,
+       0.0395,
+       0.1085
+      ],
+      [
+       0.0379,
+       0.02,
+       0.045
+      ],
+      [
+       -0.1213,
+       0.0225,
+       0.0115
+      ],
+      [
+       0.1312,
+       0.0405,
+       0.0355
+      ],
+      [
+       0.0382,
+       0.2705,
+       0.417
+      ],
+      [
+       0.0624,
+       0.4575,
+       0.3045
+      ],
+      [
+       -0.254,
+       0.292,
+       0.3345
+      ],
+      [
+       0.5078,
+       0.17,
+       0.484
+      ],
+      [
+       0.6153,
+       0.5725,
+       0.2335
+      ],
+      [
+       -0.5309,
+       0.2185,
+       0.2685
+      ],
+      [
+       0.1665,
+       0.196,
+       0.3805
+      ],
+      [
+       -0.0319,
+       0.3175,
+       0.3055
+      ],
+      [
+       -0.0825,
+       0.289,
+       0.3615
+      ],
+      [
+       0.2056,
+       0.2815,
+       0.398
+      ],
+      [
+       0.4881,
+       0.5055,
+       0.343
+      ]
+     ]
+    },
+    "composition_only(box_states,beta0)": {
+     "i>=1": [
+      0.2632,
+      0.334,
+      0.3602
+     ],
+     "all": [
+      0.2632,
+      0.3224,
+      0.3478
+     ],
+     "i>=1_no_last": [
+      0.2535,
+      0.3276,
+      0.3612
+     ],
+     "share_transitions_OT_selected": 0.519,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box2|K3|ot0.05",
+      "box1|K3|uot0.05t1",
+      "box4|K3|lin1",
+      "box4|K6|ot0.05",
+      "box4|K6|ot0.05",
+      "box1|K6|loglin1",
+      "box4|K6|loglin1",
+      "box4|K6|lin1",
+      "box2|K6|lin1",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K8|sbW",
+      "box4|K8|sbW",
+      "box2|K8|sb3",
+      "box2|K8|sbW",
+      "box4|K8|sb3",
+      "box4|K8|sb3"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.8897,
+       0.385,
+       0.046
+      ],
+      [
+       0.8723,
+       0.1625,
+       0.5515
+      ],
+      [
+       0.7216,
+       0.1765,
+       0.5485
+      ],
+      [
+       -0.8509,
+       0.0255,
+       0.275
+      ],
+      [
+       0.9556,
+       0.554,
+       0.495
+      ],
+      [
+       0.7189,
+       0.2625,
+       0.3345
+      ],
+      [
+       0.4526,
+       0.2675,
+       0.3365
+      ],
+      [
+       0.0573,
+       0.3925,
+       0.3595
+      ],
+      [
+       0.4942,
+       0.3925,
+       0.3735
+      ],
+      [
+       0.8195,
+       0.417,
+       0.5165
+      ],
+      [
+       0.299,
+       0.3155,
+       0.267
+      ],
+      [
+       0.0709,
+       0.163,
+       0.1815
+      ],
+      [
+       0.2466,
+       0.226,
+       0.3345
+      ],
+      [
+       0.0425,
+       0.3815,
+       0.3975
+      ],
+      [
+       0.7054,
+       0.3385,
+       0.5665
+      ],
+      [
+       0.354,
+       0.4345,
+       0.388
+      ],
+      [
+       0.1734,
+       0.277,
+       0.433
+      ],
+      [
+       0.1112,
+       0.4595,
+       0.3045
+      ],
+      [
+       -0.2362,
+       0.292,
+       0.3355
+      ],
+      [
+       0.5123,
+       0.171,
+       0.486
+      ],
+      [
+       0.6154,
+       0.57,
+       0.232
+      ],
+      [
+       -0.5631,
+       0.2545,
+       0.28
+      ],
+      [
+       0.3055,
+       0.2085,
+       0.4475
+      ],
+      [
+       0.3737,
+       0.3625,
+       0.369
+      ],
+      [
+       0.0324,
+       0.326,
+       0.3715
+      ],
+      [
+       0.1784,
+       0.3365,
+       0.428
+      ],
+      [
+       0.5272,
+       0.507,
+       0.334
+      ]
+     ]
+    },
+    "two_pathway(box1+beta)": {
+     "i>=1": [
+      0.144,
+      0.2137,
+      0.1902
+     ],
+     "all": [
+      0.144,
+      0.2063,
+      0.1836
+     ],
+     "i>=1_no_last": [
+      0.1677,
+      0.2178,
+      0.1928
+     ],
+     "share_transitions_OT_selected": 0.741,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta0.5|K8|uot0.05t1",
+      "box1+beta1|K8|ot0.05",
+      "box1+beta0.5|K3|ot0.05",
+      "box1+beta0.5|K6|ot0.05",
+      "box1+beta0.5|K3|ot0.05",
+      "box1+beta0.5|K3|ot0.05",
+      "box1+beta0.5|K3|ot0.05",
+      "box1+beta0.5|K6|sb3",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K8|sbW",
+      "box1+beta0.5|K8|sbW",
+      "box1+beta0.5|K8|sb3",
+      "box1+beta0.5|K8|sb3",
+      "box1+beta0.5|K8|sb3",
+      "box1+beta0.5|K8|sb3"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       0.1219,
+       0.4675,
+       0.027
+      ],
+      [
+       0.5706,
+       0.098,
+       0.1385
+      ],
+      [
+       0.8807,
+       0.1115,
+       0.657
+      ],
+      [
+       -0.4023,
+       0.099,
+       0.322
+      ],
+      [
+       0.9337,
+       0.474,
+       0.4035
+      ],
+      [
+       0.6039,
+       0.1475,
+       0.298
+      ],
+      [
+       -0.0493,
+       0.096,
+       0.174
+      ],
+      [
+       0.5521,
+       0.13,
+       0.2165
+      ],
+      [
+       0.173,
+       0.1295,
+       0.138
+      ],
+      [
+       0.3139,
+       0.1465,
+       0.1375
+      ],
+      [
+       -0.1479,
+       0.2655,
+       0.1255
+      ],
+      [
+       0.7248,
+       0.4645,
+       0.077
+      ],
+      [
+       0.5585,
+       0.358,
+       0.048
+      ],
+      [
+       0.2661,
+       0.2165,
+       0.05
+      ],
+      [
+       -0.385,
+       0.079,
+       0.13
+      ],
+      [
+       0.0337,
+       0.053,
+       0.2
+      ],
+      [
+       -0.0581,
+       0.0625,
+       0.248
+      ],
+      [
+       -0.0683,
+       0.0875,
+       0.2215
+      ],
+      [
+       0.2551,
+       0.2785,
+       0.1565
+      ],
+      [
+       -0.5109,
+       0.0775,
+       0.2705
+      ],
+      [
+       -0.6272,
+       0.0635,
+       0.143
+      ],
+      [
+       0.5291,
+       0.419,
+       0.0735
+      ],
+      [
+       -0.1488,
+       0.309,
+       0.145
+      ],
+      [
+       0.2311,
+       0.239,
+       0.271
+      ],
+      [
+       0.138,
+       0.2225,
+       0.203
+      ],
+      [
+       -0.2309,
+       0.0935,
+       0.2375
+      ],
+      [
+       -0.4977,
+       0.102,
+       0.119
+      ]
+     ]
+    },
+    "mixavg3_denoised": {
+     "i>=1": [
+      0.1969,
+      0.3371,
+      0.3624
+     ],
+     "all": [
+      0.1969,
+      0.3255,
+      0.3499
+     ],
+     "i>=1_no_last": [
+      0.1837,
+      0.3305,
+      0.3641
+     ],
+     "share_transitions_OT_selected": 0.481,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|sb3",
+      "mixavg3|K3|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|ot0.05",
+      "mixavg3|K6|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K3|lin1",
+      "mixavg3|K8|sb3",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sb3",
+      "mixavg3|K8|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.9307,
+       0.325,
+       0.057
+      ],
+      [
+       -0.4933,
+       0.2355,
+       0.6905
+      ],
+      [
+       0.6708,
+       0.1695,
+       0.49
+      ],
+      [
+       -0.8544,
+       0.0475,
+       0.253
+      ],
+      [
+       0.9626,
+       0.5645,
+       0.5285
+      ],
+      [
+       0.766,
+       0.315,
+       0.4025
+      ],
+      [
+       0.4891,
+       0.29,
+       0.3675
+      ],
+      [
+       0.1591,
+       0.4055,
+       0.402
+      ],
+      [
+       0.3769,
+       0.443,
+       0.387
+      ],
+      [
+       0.845,
+       0.3985,
+       0.513
+      ],
+      [
+       0.0562,
+       0.3085,
+       0.2845
+      ],
+      [
+       0.0476,
+       0.1585,
+       0.161
+      ],
+      [
+       0.1243,
+       0.1735,
+       0.301
+      ],
+      [
+       -0.145,
+       0.2445,
+       0.382
+      ],
+      [
+       0.6197,
+       0.321,
+       0.471
+      ],
+      [
+       0.3392,
+       0.4425,
+       0.416
+      ],
+      [
+       -0.439,
+       0.2445,
+       0.3125
+      ],
+      [
+       0.0435,
+       0.463,
+       0.3035
+      ],
+      [
+       0.1139,
+       0.367,
+       0.2995
+      ],
+      [
+       0.4488,
+       0.177,
+       0.493
+      ],
+      [
+       0.7019,
+       0.6065,
+       0.2425
+      ],
+      [
+       -0.1167,
+       0.3555,
+       0.3245
+      ],
+      [
+       0.3445,
+       0.1895,
+       0.4565
+      ],
+      [
+       0.4499,
+       0.3175,
+       0.417
+      ],
+      [
+       -0.0783,
+       0.3315,
+       0.358
+      ],
+      [
+       0.187,
+       0.3365,
+       0.4235
+      ],
+      [
+       0.5542,
+       0.516,
+       0.316
+      ]
+     ]
+    },
+    "fc=persist": {
+     "i>=1": [
+      0.1847,
+      0.3047,
+      0.2907
+     ],
+     "all": [
+      0.1847,
+      0.2942,
+      0.2806
+     ],
+     "i>=1_no_last": [
+      0.1709,
+      0.2967,
+      0.289
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta0.5|K3|persist",
+      "box1+beta0.5|K3|persist",
+      "box1+beta0.5|K3|persist",
+      "box1+beta0.5|K3|persist",
+      "mixavg3|K6|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K3|persist",
+      "mixavg3|K3|persist",
+      "mixavg3|K3|persist",
+      "mixavg3|K3|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist",
+      "mixavg3|K8|persist"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       0.844,
+       0.4995,
+       0.0355
+      ],
+      [
+       0.3975,
+       0.0725,
+       0.0215
+      ],
+      [
+       -0.2022,
+       0.101,
+       0.6415
+      ],
+      [
+       0.8313,
+       0.232,
+       0.386
+      ],
+      [
+       0.7685,
+       0.3425,
+       0.3155
+      ],
+      [
+       0.2575,
+       0.113,
+       0.183
+      ],
+      [
+       -0.2678,
+       0.097,
+       0.1595
+      ],
+      [
+       0.2696,
+       0.122,
+       0.219
+      ],
+      [
+       -0.2556,
+       0.153,
+       0.099
+      ],
+      [
+       -0.5431,
+       0.151,
+       0.0865
+      ],
+      [
+       -0.2629,
+       0.308,
+       0.0905
+      ],
+      [
+       0.3389,
+       0.4705,
+       0.0585
+      ],
+      [
+       -0.2596,
+       0.1725,
+       0.3125
+      ],
+      [
+       -0.2296,
+       0.33,
+       0.3905
+      ],
+      [
+       0.7935,
+       0.3755,
+       0.619
+      ],
+      [
+       0.1521,
+       0.4415,
+       0.405
+      ],
+      [
+       -0.4661,
+       0.243,
+       0.3105
+      ],
+      [
+       0.0275,
+       0.463,
+       0.303
+      ],
+      [
+       0.1779,
+       0.3985,
+       0.3105
+      ],
+      [
+       0.7517,
+       0.209,
+       0.5685
+      ],
+      [
+       0.6335,
+       0.574,
+       0.2275
+      ],
+      [
+       -0.0501,
+       0.333,
+       0.3115
+      ],
+      [
+       0.2783,
+       0.163,
+       0.4335
+      ],
+      [
+       0.2589,
+       0.309,
+       0.4
+      ],
+      [
+       -0.1675,
+       0.302,
+       0.366
+      ],
+      [
+       0.2678,
+       0.343,
+       0.455
+      ],
+      [
+       0.5572,
+       0.5215,
+       0.3355
+      ]
+     ]
+    },
+    "fc=lin1": {
+     "i>=1": [
+      0.2294,
+      0.3126,
+      0.3412
+     ],
+     "all": [
+      0.2294,
+      0.3018,
+      0.3294
+     ],
+     "i>=1_no_last": [
+      0.2168,
+      0.3049,
+      0.3421
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K8|lin1",
+      "box1+beta1|K3|lin1",
+      "box4|K6|lin1",
+      "mixavg3|K6|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.9307,
+       0.325,
+       0.057
+      ],
+      [
+       0.6268,
+       0.1135,
+       0.2235
+      ],
+      [
+       0.8566,
+       0.1185,
+       0.652
+      ],
+      [
+       -0.7109,
+       0.0725,
+       0.2885
+      ],
+      [
+       0.9545,
+       0.516,
+       0.4465
+      ],
+      [
+       0.5125,
+       0.11,
+       0.268
+      ],
+      [
+       -0.1419,
+       0.098,
+       0.166
+      ],
+      [
+       0.0573,
+       0.3925,
+       0.3595
+      ],
+      [
+       0.3769,
+       0.443,
+       0.387
+      ],
+      [
+       0.8218,
+       0.404,
+       0.516
+      ],
+      [
+       0.2239,
+       0.2985,
+       0.2545
+      ],
+      [
+       0.1538,
+       0.1675,
+       0.186
+      ],
+      [
+       0.3386,
+       0.219,
+       0.342
+      ],
+      [
+       0.0425,
+       0.3815,
+       0.3975
+      ],
+      [
+       0.7054,
+       0.3385,
+       0.5665
+      ],
+      [
+       0.354,
+       0.4345,
+       0.388
+      ],
+      [
+       0.1734,
+       0.277,
+       0.433
+      ],
+      [
+       0.1112,
+       0.4595,
+       0.3045
+      ],
+      [
+       -0.2362,
+       0.292,
+       0.3355
+      ],
+      [
+       0.5123,
+       0.171,
+       0.486
+      ],
+      [
+       0.6154,
+       0.57,
+       0.232
+      ],
+      [
+       -0.5311,
+       0.2175,
+       0.268
+      ],
+      [
+       0.1318,
+       0.1605,
+       0.3745
+      ],
+      [
+       0.4464,
+       0.304,
+       0.4095
+      ],
+      [
+       -0.0805,
+       0.325,
+       0.369
+      ],
+      [
+       0.1998,
+       0.332,
+       0.431
+      ],
+      [
+       0.5693,
+       0.5195,
+       0.318
+      ]
+     ]
+    },
+    "fc=loglin1": {
+     "i>=1": [
+      0.1956,
+      0.3119,
+      0.3338
+     ],
+     "all": [
+      0.1956,
+      0.3011,
+      0.3222
+     ],
+     "i>=1_no_last": [
+      0.1818,
+      0.3043,
+      0.3344
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K6|loglin1",
+      "box1+beta1|K6|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K8|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box4|K6|loglin1",
+      "box2|K6|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box1|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K8|loglin1",
+      "mixavg3|K8|loglin1",
+      "mixavg3|K8|loglin1",
+      "mixavg3|K8|loglin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.9481,
+       0.244,
+       0.07
+      ],
+      [
+       0.6897,
+       0.13,
+       0.3195
+      ],
+      [
+       0.8508,
+       0.1245,
+       0.654
+      ],
+      [
+       -0.7155,
+       0.056,
+       0.287
+      ],
+      [
+       0.954,
+       0.5215,
+       0.443
+      ],
+      [
+       0.2427,
+       0.2385,
+       0.1445
+      ],
+      [
+       -0.1167,
+       0.097,
+       0.1665
+      ],
+      [
+       -0.0105,
+       0.396,
+       0.359
+      ],
+      [
+       0.4416,
+       0.3985,
+       0.373
+      ],
+      [
+       0.8197,
+       0.417,
+       0.5155
+      ],
+      [
+       0.2973,
+       0.314,
+       0.266
+      ],
+      [
+       0.0735,
+       0.162,
+       0.182
+      ],
+      [
+       0.2495,
+       0.226,
+       0.3355
+      ],
+      [
+       -0.0038,
+       0.377,
+       0.4005
+      ],
+      [
+       0.7211,
+       0.3345,
+       0.557
+      ],
+      [
+       0.2692,
+       0.434,
+       0.384
+      ],
+      [
+       0.1533,
+       0.276,
+       0.4315
+      ],
+      [
+       0.099,
+       0.4585,
+       0.3055
+      ],
+      [
+       -0.2459,
+       0.293,
+       0.3345
+      ],
+      [
+       0.0382,
+       0.109,
+       0.3355
+      ],
+      [
+       0.6159,
+       0.5735,
+       0.232
+      ],
+      [
+       -0.531,
+       0.2185,
+       0.2685
+      ],
+      [
+       0.1318,
+       0.1605,
+       0.3745
+      ],
+      [
+       0.4422,
+       0.3075,
+       0.4075
+      ],
+      [
+       -0.0769,
+       0.3225,
+       0.363
+      ],
+      [
+       0.1957,
+       0.3335,
+       0.426
+      ],
+      [
+       0.5702,
+       0.5175,
+       0.3155
+      ]
+     ]
+    },
+    "fc=ot0.05": {
+     "i>=1": [
+      0.259,
+      0.3025,
+      0.329
+     ],
+     "all": [
+      0.259,
+      0.2921,
+      0.3176
+     ],
+     "i>=1_no_last": [
+      0.2475,
+      0.2945,
+      0.3294
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box2|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K8|ot0.05",
+      "box1+beta1|K8|ot0.05",
+      "box2|K3|ot0.05",
+      "mixavg3|K6|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box1|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "mixavg3|K3|ot0.05",
+      "mixavg3|K8|ot0.05",
+      "mixavg3|K8|ot0.05",
+      "mixavg3|K8|ot0.05",
+      "mixavg3|K8|ot0.05"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.8897,
+       0.385,
+       0.046
+      ],
+      [
+       0.605,
+       0.1055,
+       0.1755
+      ],
+      [
+       0.8649,
+       0.116,
+       0.6575
+      ],
+      [
+       -0.5102,
+       0.078,
+       0.299
+      ],
+      [
+       0.9502,
+       0.5115,
+       0.4355
+      ],
+      [
+       0.4428,
+       0.161,
+       0.2205
+      ],
+      [
+       0.4647,
+       0.124,
+       0.1775
+      ],
+      [
+       0.6194,
+       0.0975,
+       0.2495
+      ],
+      [
+       0.6749,
+       0.4135,
+       0.4285
+      ],
+      [
+       0.845,
+       0.3985,
+       0.513
+      ],
+      [
+       0.299,
+       0.3155,
+       0.267
+      ],
+      [
+       0.0709,
+       0.163,
+       0.1815
+      ],
+      [
+       0.2466,
+       0.226,
+       0.3345
+      ],
+      [
+       -0.001,
+       0.377,
+       0.4005
+      ],
+      [
+       0.7212,
+       0.3345,
+       0.557
+      ],
+      [
+       0.286,
+       0.434,
+       0.385
+      ],
+      [
+       0.1486,
+       0.2755,
+       0.431
+      ],
+      [
+       0.0955,
+       0.458,
+       0.3055
+      ],
+      [
+       -0.2471,
+       0.2925,
+       0.334
+      ],
+      [
+       -0.0469,
+       0.065,
+       0.3235
+      ],
+      [
+       0.616,
+       0.5735,
+       0.232
+      ],
+      [
+       -0.531,
+       0.2185,
+       0.2685
+      ],
+      [
+       0.1318,
+       0.1605,
+       0.3745
+      ],
+      [
+       0.4459,
+       0.3145,
+       0.407
+      ],
+      [
+       -0.0912,
+       0.3275,
+       0.3695
+      ],
+      [
+       0.2013,
+       0.3335,
+       0.4275
+      ],
+      [
+       0.5696,
+       0.519,
+       0.3165
+      ]
+     ]
+    },
+    "fc=uot0.05t1": {
+     "i>=1": [
+      0.2069,
+      0.2674,
+      0.2901
+     ],
+     "all": [
+      0.2069,
+      0.2582,
+      0.2801
+     ],
+     "i>=1_no_last": [
+      0.1935,
+      0.258,
+      0.2889
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box2|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta0.5|K8|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box2|K3|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box1|K6|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box2|K3|uot0.05t1",
+      "box2|K3|uot0.05t1",
+      "mixavg3|K3|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K8|uot0.05t1",
+      "mixavg3|K8|uot0.05t1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.9382,
+       0.245,
+       0.0725
+      ],
+      [
+       0.5706,
+       0.098,
+       0.1385
+      ],
+      [
+       0.8807,
+       0.1115,
+       0.657
+      ],
+      [
+       -0.4023,
+       0.099,
+       0.322
+      ],
+      [
+       0.9337,
+       0.474,
+       0.4035
+      ],
+      [
+       0.6039,
+       0.1475,
+       0.298
+      ],
+      [
+       -0.0493,
+       0.096,
+       0.174
+      ],
+      [
+       0.5521,
+       0.13,
+       0.2165
+      ],
+      [
+       0.4184,
+       0.237,
+       0.3115
+      ],
+      [
+       0.7639,
+       0.273,
+       0.4225
+      ],
+      [
+       -0.0631,
+       0.2475,
+       0.1815
+      ],
+      [
+       -0.0498,
+       0.1675,
+       0.177
+      ],
+      [
+       0.4642,
+       0.2945,
+       0.2585
+      ],
+      [
+       0.0811,
+       0.2595,
+       0.233
+      ],
+      [
+       -0.6101,
+       0.125,
+       0.079
+      ],
+      [
+       0.4084,
+       0.283,
+       0.324
+      ],
+      [
+       0.289,
+       0.2065,
+       0.3865
+      ],
+      [
+       0.3175,
+       0.3895,
+       0.2815
+      ],
+      [
+       0.1268,
+       0.3695,
+       0.2595
+      ],
+      [
+       -0.0381,
+       0.0795,
+       0.451
+      ],
+      [
+       0.6159,
+       0.5735,
+       0.232
+      ],
+      [
+       -0.531,
+       0.2185,
+       0.2685
+      ],
+      [
+       0.1318,
+       0.1605,
+       0.3745
+      ],
+      [
+       0.388,
+       0.321,
+       0.398
+      ],
+      [
+       -0.1208,
+       0.329,
+       0.3705
+      ],
+      [
+       0.211,
+       0.3395,
+       0.4165
+      ],
+      [
+       0.5675,
+       0.521,
+       0.3205
+      ]
+     ]
+    },
+    "fc=sb3": {
+     "i>=1": [
+      0.1271,
+      0.294,
+      0.2831
+     ],
+     "all": [
+      0.1271,
+      0.2839,
+      0.2733
+     ],
+     "i>=1_no_last": [
+      0.1113,
+      0.2858,
+      0.2816
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box2|K3|sb3",
+      "box1+beta1|K3|sb3",
+      "mixavg3|K3|sb3",
+      "box1+beta1|K6|sb3",
+      "box1+beta1|K3|sb3",
+      "box1+beta1|K3|sb3",
+      "box1+beta1|K3|sb3",
+      "box1+beta1|K3|sb3",
+      "box1+beta1|K3|sb3",
+      "mixavg3|K8|sb3",
+      "box4|K6|sb3",
+      "box2|K8|sb3",
+      "box2|K8|sb3",
+      "box2|K8|sb3",
+      "box2|K8|sb3",
+      "box2|K3|sb3",
+      "box2|K3|sb3",
+      "box2|K3|sb3",
+      "box1|K3|sb3",
+      "box1|K3|sb3",
+      "box2|K8|sb3",
+      "box2|K8|sb3",
+      "mixavg3|K8|sb3",
+      "box2|K8|sb3",
+      "mixavg3|K8|sb3",
+      "mixavg3|K8|sb3",
+      "mixavg3|K8|sb3"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.8694,
+       0.439,
+       0.0315
+      ],
+      [
+       -0.7261,
+       0.0415,
+       0.0085
+      ],
+      [
+       0.4439,
+       0.122,
+       0.229
+      ],
+      [
+       -0.8549,
+       0.0445,
+       0.254
+      ],
+      [
+       0.6217,
+       0.3015,
+       0.329
+      ],
+      [
+       -0.4904,
+       0.0825,
+       0.1955
+      ],
+      [
+       0.5767,
+       0.0985,
+       0.2485
+      ],
+      [
+       0.5738,
+       0.117,
+       0.236
+      ],
+      [
+       0.2762,
+       0.148,
+       0.118
+      ],
+      [
+       0.8517,
+       0.4215,
+       0.513
+      ],
+      [
+       -0.0201,
+       0.2705,
+       0.2715
+      ],
+      [
+       0.1072,
+       0.188,
+       0.197
+      ],
+      [
+       0.3019,
+       0.3555,
+       0.31
+      ],
+      [
+       0.1401,
+       0.475,
+       0.3925
+      ],
+      [
+       0.1248,
+       0.277,
+       0.357
+      ],
+      [
+       0.2719,
+       0.434,
+       0.3845
+      ],
+      [
+       0.1345,
+       0.2765,
+       0.43
+      ],
+      [
+       0.0928,
+       0.457,
+       0.3055
+      ],
+      [
+       0.1643,
+       0.339,
+       0.2005
+      ],
+      [
+       -0.0446,
+       0.066,
+       0.321
+      ],
+      [
+       0.7429,
+       0.621,
+       0.288
+      ],
+      [
+       -0.5438,
+       0.2505,
+       0.275
+      ],
+      [
+       0.3425,
+       0.176,
+       0.458
+      ],
+      [
+       0.3737,
+       0.3625,
+       0.369
+      ],
+      [
+       -0.0429,
+       0.3245,
+       0.362
+      ],
+      [
+       0.187,
+       0.3365,
+       0.4235
+      ],
+      [
+       0.551,
+       0.515,
+       0.325
+      ]
+     ]
+    },
+    "fc=sbW": {
+     "i>=1": [
+      0.0144,
+      0.2808,
+      0.2844
+     ],
+     "all": [
+      0.0144,
+      0.2711,
+      0.2746
+     ],
+     "i>=1_no_last": [
+      -0.0055,
+      0.2721,
+      0.2832
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box2|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "mixavg3|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K6|sbW",
+      "mixavg3|K6|sbW",
+      "box2|K6|sbW",
+      "box2|K6|sbW",
+      "box2|K6|sbW",
+      "box2|K6|sbW",
+      "box2|K8|sbW",
+      "box2|K6|sbW",
+      "box2|K6|sbW",
+      "box2|K6|sbW",
+      "box2|K6|sbW",
+      "box1|K3|sbW",
+      "box2|K8|sbW",
+      "box2|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW",
+      "mixavg3|K8|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.2709,
+       0.692,
+       0.094
+      ],
+      [
+       -0.8694,
+       0.439,
+       0.0315
+      ],
+      [
+       -0.7261,
+       0.0415,
+       0.0085
+      ],
+      [
+       -0.8936,
+       0.0665,
+       0.05
+      ],
+      [
+       0.6342,
+       0.2275,
+       0.3825
+      ],
+      [
+       0.8352,
+       0.39,
+       0.3055
+      ],
+      [
+       -0.7733,
+       0.0875,
+       0.1805
+      ],
+      [
+       -0.4643,
+       0.0885,
+       0.212
+      ],
+      [
+       -0.1402,
+       0.103,
+       0.2035
+      ],
+      [
+       -0.6464,
+       0.1025,
+       0.1495
+      ],
+      [
+       0.7599,
+       0.356,
+       0.5205
+      ],
+      [
+       -0.0993,
+       0.2055,
+       0.238
+      ],
+      [
+       0.0782,
+       0.125,
+       0.1855
+      ],
+      [
+       0.2503,
+       0.193,
+       0.3385
+      ],
+      [
+       0.0674,
+       0.3945,
+       0.405
+      ],
+      [
+       0.3792,
+       0.297,
+       0.418
+      ],
+      [
+       0.2733,
+       0.4325,
+       0.3415
+      ],
+      [
+       0.0786,
+       0.264,
+       0.379
+      ],
+      [
+       0.0886,
+       0.4615,
+       0.308
+      ],
+      [
+       -0.2788,
+       0.265,
+       0.3675
+      ],
+      [
+       -0.0489,
+       0.065,
+       0.322
+      ],
+      [
+       0.7208,
+       0.6205,
+       0.2825
+      ],
+      [
+       -0.5631,
+       0.2545,
+       0.28
+      ],
+      [
+       0.3445,
+       0.1895,
+       0.4565
+      ],
+      [
+       0.4499,
+       0.3175,
+       0.417
+      ],
+      [
+       -0.0783,
+       0.3315,
+       0.358
+      ],
+      [
+       0.201,
+       0.3365,
+       0.4115
+      ],
+      [
+       0.5542,
+       0.516,
+       0.316
+      ]
+     ]
+    }
+   },
+   "paired": {
+    "full - noOT": {
+     "pearson": {
+      "mean_delta": 0.0484,
+      "n_better": 11,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.1454315185546875
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0089,
+      "n_better": 9,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.670033053728423
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0055,
+      "n_better": 9,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.4306793212890625
+     },
+     "J": {
+      "mean_delta": 0.045,
+      "n_better": 11,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.1323699951171875
+     }
+    },
+    "OT_only - noOT": {
+     "pearson": {
+      "mean_delta": 0.0178,
+      "n_better": 14,
+      "n_worse": 13,
+      "wilcoxon_two_sided_p": 0.5619325190782547
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0122,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.8007959643619739
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0051,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.8008170753890802
+     },
+     "J": {
+      "mean_delta": 0.0005,
+      "n_better": 14,
+      "n_worse": 13,
+      "wilcoxon_two_sided_p": 0.4698396325111389
+     }
+    },
+    "fc=ot0.05 - fc=lin1": {
+     "pearson": {
+      "mean_delta": 0.0296,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.9528931677341461
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0101,
+      "n_better": 12,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.8389721497066365
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0122,
+      "n_better": 9,
+      "n_worse": 16,
+      "wilcoxon_two_sided_p": 0.11860127849938136
+     },
+     "J": {
+      "mean_delta": 0.0073,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.8407831341028214
+     }
+    },
+    "fc=ot0.05 - fc=persist": {
+     "pearson": {
+      "mean_delta": 0.0743,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.23857179284095764
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0022,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.8593128323554993
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0383,
+      "n_better": 19,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.1414058655500412
+     },
+     "J": {
+      "mean_delta": 0.1104,
+      "n_better": 16,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.3011907488107681
+     }
+    },
+    "fc=uot0.05t1 - fc=loglin1": {
+     "pearson": {
+      "mean_delta": 0.0112,
+      "n_better": 14,
+      "n_worse": 13,
+      "wilcoxon_two_sided_p": 0.41325296461582184
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0444,
+      "n_better": 9,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.019441962242126465
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0437,
+      "n_better": 8,
+      "n_worse": 16,
+      "wilcoxon_two_sided_p": 0.019130578501628717
+     },
+     "J": {
+      "mean_delta": -0.0769,
+      "n_better": 14,
+      "n_worse": 13,
+      "wilcoxon_two_sided_p": 0.7857417166233063
+     }
+    },
+    "fc=sb3 - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0577,
+      "n_better": 15,
+      "n_worse": 12,
+      "wilcoxon_two_sided_p": 0.9153143465518951
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0107,
+      "n_better": 10,
+      "n_worse": 17,
+      "wilcoxon_two_sided_p": 0.31293321811914554
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0076,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.8407831341028214
+     },
+     "J": {
+      "mean_delta": -0.0759,
+      "n_better": 15,
+      "n_worse": 12,
+      "wilcoxon_two_sided_p": 0.9340859353542328
+     }
+    },
+    "fc=sbW - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.1703,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.15513363480567932
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0239,
+      "n_better": 9,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.14605243168132495
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0063,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.6445824354887009
+     },
+     "J": {
+      "mean_delta": -0.2005,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.16235288977622986
+     }
+    },
+    "fc=sb3 - fc=lin1": {
+     "pearson": {
+      "mean_delta": -0.1024,
+      "n_better": 9,
+      "n_worse": 18,
+      "wilcoxon_two_sided_p": 0.19368016719818115
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0186,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.8194552162860118
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0581,
+      "n_better": 8,
+      "n_worse": 19,
+      "wilcoxon_two_sided_p": 0.016818124238002222
+     },
+     "J": {
+      "mean_delta": -0.179,
+      "n_better": 11,
+      "n_worse": 16,
+      "wilcoxon_two_sided_p": 0.27924175560474396
+     }
+    },
+    "full - persist_only(level_obs_RO)": {
+     "pearson": {
+      "mean_delta": 0.3836,
+      "n_better": 23,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.00023631751537322998
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.077,
+      "n_better": 18,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.01923179347311838
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0969,
+      "n_better": 19,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.017553592197817467
+     },
+     "J": {
+      "mean_delta": 0.5575,
+      "n_better": 24,
+      "n_worse": 3,
+      "wilcoxon_two_sided_p": 7.987022399902344e-06
+     }
+    },
+    "full - trend": {
+     "pearson": {
+      "mean_delta": 0.0915,
+      "n_better": 15,
+      "n_worse": 12,
+      "wilcoxon_two_sided_p": 0.39974282681941986
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0887,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.046262577176094055
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.1442,
+      "n_better": 23,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 1.3470649719238281e-05
+     },
+     "J": {
+      "mean_delta": 0.3244,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.05847424268722534
+     }
+    },
+    "noOT - trend": {
+     "pearson": {
+      "mean_delta": 0.0431,
+      "n_better": 13,
+      "n_worse": 14,
+      "wilcoxon_two_sided_p": 0.8779177963733673
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0976,
+      "n_better": 18,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.038534119725227356
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.1388,
+      "n_better": 22,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 8.372962474822998e-05
+     },
+     "J": {
+      "mean_delta": 0.2794,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.1348898708820343
+     }
+    },
+    "two_pathway(box1+beta) - trend": {
+     "pearson": {
+      "mean_delta": -0.0303,
+      "n_better": 10,
+      "n_worse": 17,
+      "wilcoxon_two_sided_p": 0.12860044836997986
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0044,
+      "n_better": 11,
+      "n_worse": 13,
+      "wilcoxon_two_sided_p": 0.8976863920334619
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0026,
+      "n_better": 14,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.6701570369813585
+     },
+     "J": {
+      "mean_delta": -0.0373,
+      "n_better": 12,
+      "n_worse": 15,
+      "wilcoxon_two_sided_p": 0.23857179284095764
+     }
+    },
+    "mixavg3_denoised - trend": {
+     "pearson": {
+      "mean_delta": 0.0227,
+      "n_better": 14,
+      "n_worse": 13,
+      "wilcoxon_two_sided_p": 0.9905734956264496
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.1191,
+      "n_better": 21,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.003550395369529724
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.1696,
+      "n_better": 25,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 1.6391277313232422e-06
+     },
+     "J": {
+      "mean_delta": 0.3113,
+      "n_better": 17,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.05847424268722534
+     }
+    },
+    "composition_only(box_states,beta0) - trend": {
+     "pearson": {
+      "mean_delta": 0.089,
+      "n_better": 15,
+      "n_worse": 12,
+      "wilcoxon_two_sided_p": 0.3864929676055908
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.1159,
+      "n_better": 20,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.0046126991510391235
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.1674,
+      "n_better": 25,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 3.725290298461914e-07
+     },
+     "J": {
+      "mean_delta": 0.3723,
+      "n_better": 18,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.02142883837223053
+     }
+    }
+   },
+   "fixed_configs_hindsight_NOT_strict": {
+    "persist": {
+     "config": "mixavg3|K8|persist",
+     "i>=1": [
+      0.0111,
+      0.3174,
+      0.3424
+     ],
+     "all": [
+      0.0111,
+      0.3064,
+      0.3306
+     ],
+     "i>=1_no_last": [
+      -0.0091,
+      0.3098,
+      0.3427
+     ]
+    },
+    "lin1": {
+     "config": "box2|K3|lin1",
+     "i>=1": [
+      0.2565,
+      0.3306,
+      0.3593
+     ],
+     "all": [
+      0.2463,
+      0.3198,
+      0.3474
+     ],
+     "i>=1_no_last": [
+      0.2484,
+      0.325,
+      0.36
+     ]
+    },
+    "loglin1": {
+     "config": "box2|K3|loglin1",
+     "i>=1": [
+      0.2463,
+      0.33,
+      0.3588
+     ],
+     "all": [
+      0.2364,
+      0.3192,
+      0.3469
+     ],
+     "i>=1_no_last": [
+      0.2378,
+      0.3243,
+      0.3595
+     ]
+    },
+    "ot0.05": {
+     "config": "box2|K6|ot0.05",
+     "i>=1": [
+      0.2536,
+      0.3303,
+      0.3695
+     ],
+     "all": [
+      0.2435,
+      0.3195,
+      0.3572
+     ],
+     "i>=1_no_last": [
+      0.2469,
+      0.325,
+      0.3702
+     ]
+    },
+    "uot0.05t1": {
+     "config": "box2|K3|uot0.05t1",
+     "i>=1": [
+      0.2178,
+      0.3279,
+      0.352
+     ],
+     "all": [
+      0.2089,
+      0.3172,
+      0.3403
+     ],
+     "i>=1_no_last": [
+      0.2083,
+      0.3222,
+      0.3525
+     ]
+    },
+    "sb3": {
+     "config": "mixavg3|K8|sb3",
+     "i>=1": [
+      0.1543,
+      0.3313,
+      0.3443
+     ],
+     "all": [
+      0.1543,
+      0.3199,
+      0.3325
+     ],
+     "i>=1_no_last": [
+      0.1396,
+      0.3245,
+      0.3451
+     ]
+    },
+    "sbW": {
+     "config": "mixavg3|K8|sbW",
+     "i>=1": [
+      0.0236,
+      0.3451,
+      0.3325
+     ],
+     "all": [
+      0.0236,
+      0.3332,
+      0.321
+     ],
+     "i>=1_no_last": [
+      0.004,
+      0.3387,
+      0.3331
+     ]
+    }
+   },
+   "oracle_next_composition_NOT_strict": {
+    "ORACLE_props|box1|K3": {
+     "i>=1": [
+      0.339,
+      0.2634,
+      0.3184
+     ],
+     "all": [
+      0.339,
+      0.2543,
+      0.3074
+     ],
+     "i>=1_no_last": [
+      0.3557,
+      0.2634,
+      0.3223
+     ]
+    },
+    "ORACLE_props|box1|K6": {
+     "i>=1": [
+      0.3809,
+      0.2946,
+      0.3284
+     ],
+     "all": [
+      0.3809,
+      0.2844,
+      0.3171
+     ],
+     "i>=1_no_last": [
+      0.3862,
+      0.2905,
+      0.3349
+     ]
+    },
+    "ORACLE_props|box1|K8": {
+     "i>=1": [
+      0.4442,
+      0.3162,
+      0.329
+     ],
+     "all": [
+      0.4442,
+      0.3053,
+      0.3176
+     ],
+     "i>=1_no_last": [
+      0.4508,
+      0.3099,
+      0.3378
+     ]
+    },
+    "ORACLE_props|box4|K3": {
+     "i>=1": [
+      0.3517,
+      0.3302,
+      0.3684
+     ],
+     "all": [
+      0.3517,
+      0.3188,
+      0.3557
+     ],
+     "i>=1_no_last": [
+      0.3467,
+      0.3237,
+      0.3694
+     ]
+    },
+    "ORACLE_props|box4|K6": {
+     "i>=1": [
+      0.395,
+      0.3314,
+      0.3992
+     ],
+     "all": [
+      0.395,
+      0.32,
+      0.3854
+     ],
+     "i>=1_no_last": [
+      0.3893,
+      0.3245,
+      0.4015
+     ]
+    },
+    "ORACLE_props|box4|K8": {
+     "i>=1": [
+      0.4449,
+      0.3524,
+      0.3989
+     ],
+     "all": [
+      0.4449,
+      0.3403,
+      0.3851
+     ],
+     "i>=1_no_last": [
+      0.4409,
+      0.3461,
+      0.4019
+     ]
+    },
+    "ORACLE_props|mixavg3|K3": {
+     "i>=1": [
+      0.3744,
+      0.3398,
+      0.3793
+     ],
+     "all": [
+      0.3744,
+      0.3281,
+      0.3662
+     ],
+     "i>=1_no_last": [
+      0.369,
+      0.3337,
+      0.3801
+     ]
+    },
+    "ORACLE_props|mixavg3|K6": {
+     "i>=1": [
+      0.3994,
+      0.3394,
+      0.4004
+     ],
+     "all": [
+      0.3994,
+      0.3277,
+      0.3866
+     ],
+     "i>=1_no_last": [
+      0.3936,
+      0.3322,
+      0.4029
+     ]
+    },
+    "ORACLE_props|mixavg3|K8": {
+     "i>=1": [
+      0.4481,
+      0.3613,
+      0.3999
+     ],
+     "all": [
+      0.4481,
+      0.3489,
+      0.3861
+     ],
+     "i>=1_no_last": [
+      0.4431,
+      0.3546,
+      0.4032
+     ]
+    }
+   }
+  }
+ },
+ "composition_forecast_tv_error_vs_oracle_projection_i>=2": {
+  "K3": {
+   "persist": 0.0449,
+   "lin1": 0.0335,
+   "loglin1": 0.0373,
+   "ot0.05": 0.0334,
+   "uot0.05t1": 0.0347,
+   "sb3": 0.0485,
+   "sbW": 0.0548,
+   "archetype_UMI_per_cell_final_fit": [
+    14018.4,
+    10674.1,
+    10536.8
+   ],
+   "bin_scale_s_b_range": [
+    0.779,
+    1.06
+   ],
+   "proportions_final_fit": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.507,
+     0.055,
+     0.438
+    ],
+    [
+     0.458,
+     0.059,
+     0.483
+    ],
+    [
+     0.563,
+     0.042,
+     0.395
+    ],
+    [
+     0.667,
+     0.027,
+     0.306
+    ],
+    [
+     0.743,
+     0.025,
+     0.232
+    ],
+    [
+     0.58,
+     0.073,
+     0.347
+    ],
+    [
+     0.206,
+     0.157,
+     0.638
+    ],
+    [
+     0.111,
+     0.19,
+     0.699
+    ],
+    [
+     0.089,
+     0.214,
+     0.697
+    ],
+    [
+     0.073,
+     0.24,
+     0.687
+    ],
+    [
+     0.053,
+     0.262,
+     0.684
+    ],
+    [
+     0.035,
+     0.303,
+     0.661
+    ],
+    [
+     0.02,
+     0.33,
+     0.65
+    ],
+    [
+     0.012,
+     0.373,
+     0.615
+    ],
+    [
+     0.006,
+     0.397,
+     0.597
+    ],
+    [
+     0.002,
+     0.431,
+     0.567
+    ],
+    [
+     0.001,
+     0.482,
+     0.516
+    ],
+    [
+     0.0,
+     0.551,
+     0.449
+    ],
+    [
+     0.0,
+     0.608,
+     0.392
+    ],
+    [
+     0.0,
+     0.668,
+     0.332
+    ],
+    [
+     0.0,
+     0.763,
+     0.237
+    ],
+    [
+     0.0,
+     0.829,
+     0.171
+    ],
+    [
+     0.0,
+     0.91,
+     0.09
+    ],
+    [
+     0.0,
+     0.978,
+     0.022
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ]
+   ]
+  },
+  "K6": {
+   "persist": 0.0897,
+   "lin1": 0.0755,
+   "loglin1": 0.0729,
+   "ot0.05": 0.0697,
+   "uot0.05t1": 0.0788,
+   "sb3": 0.0888,
+   "sbW": 0.0867,
+   "archetype_UMI_per_cell_final_fit": [
+    14245.6,
+    10229.0,
+    12835.0,
+    10897.6,
+    11841.9,
+    10972.5
+   ],
+   "bin_scale_s_b_range": [
+    0.771,
+    1.07
+   ],
+   "proportions_final_fit": [
+    [
+     0.975,
+     0.0,
+     0.0,
+     0.0,
+     0.003,
+     0.021
+    ],
+    [
+     0.306,
+     0.136,
+     0.281,
+     0.111,
+     0.002,
+     0.165
+    ],
+    [
+     0.229,
+     0.146,
+     0.334,
+     0.114,
+     0.001,
+     0.176
+    ],
+    [
+     0.366,
+     0.117,
+     0.265,
+     0.105,
+     0.001,
+     0.145
+    ],
+    [
+     0.508,
+     0.075,
+     0.186,
+     0.094,
+     0.002,
+     0.134
+    ],
+    [
+     0.653,
+     0.064,
+     0.07,
+     0.088,
+     0.004,
+     0.121
+    ],
+    [
+     0.505,
+     0.183,
+     0.06,
+     0.119,
+     0.002,
+     0.131
+    ],
+    [
+     0.094,
+     0.369,
+     0.182,
+     0.166,
+     0.001,
+     0.189
+    ],
+    [
+     0.011,
+     0.435,
+     0.183,
+     0.182,
+     0.001,
+     0.189
+    ],
+    [
+     0.008,
+     0.476,
+     0.154,
+     0.188,
+     0.001,
+     0.173
+    ],
+    [
+     0.008,
+     0.516,
+     0.127,
+     0.194,
+     0.002,
+     0.153
+    ],
+    [
+     0.004,
+     0.55,
+     0.104,
+     0.2,
+     0.004,
+     0.139
+    ],
+    [
+     0.004,
+     0.595,
+     0.072,
+     0.206,
+     0.009,
+     0.114
+    ],
+    [
+     0.002,
+     0.635,
+     0.049,
+     0.213,
+     0.013,
+     0.089
+    ],
+    [
+     0.002,
+     0.667,
+     0.035,
+     0.212,
+     0.02,
+     0.065
+    ],
+    [
+     0.002,
+     0.681,
+     0.022,
+     0.211,
+     0.024,
+     0.061
+    ],
+    [
+     0.001,
+     0.697,
+     0.016,
+     0.207,
+     0.03,
+     0.048
+    ],
+    [
+     0.002,
+     0.704,
+     0.009,
+     0.2,
+     0.041,
+     0.044
+    ],
+    [
+     0.001,
+     0.714,
+     0.003,
+     0.19,
+     0.056,
+     0.035
+    ],
+    [
+     0.001,
+     0.719,
+     0.001,
+     0.179,
+     0.071,
+     0.028
+    ],
+    [
+     0.0,
+     0.721,
+     0.0,
+     0.164,
+     0.09,
+     0.025
+    ],
+    [
+     0.0,
+     0.721,
+     0.0,
+     0.133,
+     0.12,
+     0.027
+    ],
+    [
+     0.0,
+     0.715,
+     0.0,
+     0.109,
+     0.146,
+     0.03
+    ],
+    [
+     0.0,
+     0.712,
+     0.0,
+     0.08,
+     0.177,
+     0.031
+    ],
+    [
+     0.0,
+     0.697,
+     0.0,
+     0.045,
+     0.216,
+     0.042
+    ],
+    [
+     0.0,
+     0.696,
+     0.0,
+     0.019,
+     0.246,
+     0.039
+    ],
+    [
+     0.0,
+     0.683,
+     0.0,
+     0.002,
+     0.266,
+     0.049
+    ],
+    [
+     0.0,
+     0.673,
+     0.0,
+     0.001,
+     0.276,
+     0.049
+    ],
+    [
+     0.0,
+     0.686,
+     0.0,
+     0.001,
+     0.263,
+     0.051
+    ]
+   ]
+  },
+  "K8": {
+   "persist": 0.0821,
+   "lin1": 0.0777,
+   "loglin1": 0.0828,
+   "ot0.05": 0.0706,
+   "uot0.05t1": 0.0743,
+   "sb3": 0.0826,
+   "sbW": 0.0811,
+   "archetype_UMI_per_cell_final_fit": [
+    14539.4,
+    10351.9,
+    12083.4,
+    10609.4,
+    9982.8,
+    14053.5,
+    11000.3,
+    11815.7
+   ],
+   "bin_scale_s_b_range": [
+    0.756,
+    1.064
+   ],
+   "proportions_final_fit": [
+    [
+     0.9,
+     0.0,
+     0.0,
+     0.001,
+     0.008,
+     0.089,
+     0.0,
+     0.002
+    ],
+    [
+     0.287,
+     0.268,
+     0.097,
+     0.119,
+     0.066,
+     0.16,
+     0.001,
+     0.003
+    ],
+    [
+     0.213,
+     0.318,
+     0.1,
+     0.127,
+     0.053,
+     0.188,
+     0.0,
+     0.001
+    ],
+    [
+     0.345,
+     0.237,
+     0.096,
+     0.11,
+     0.052,
+     0.155,
+     0.004,
+     0.001
+    ],
+    [
+     0.481,
+     0.143,
+     0.086,
+     0.093,
+     0.07,
+     0.12,
+     0.005,
+     0.001
+    ],
+    [
+     0.63,
+     0.044,
+     0.071,
+     0.079,
+     0.106,
+     0.058,
+     0.011,
+     0.001
+    ],
+    [
+     0.482,
+     0.142,
+     0.063,
+     0.111,
+     0.128,
+     0.05,
+     0.023,
+     0.001
+    ],
+    [
+     0.088,
+     0.402,
+     0.069,
+     0.174,
+     0.144,
+     0.098,
+     0.024,
+     0.001
+    ],
+    [
+     0.01,
+     0.453,
+     0.068,
+     0.189,
+     0.15,
+     0.095,
+     0.035,
+     0.0
+    ],
+    [
+     0.007,
+     0.467,
+     0.063,
+     0.191,
+     0.148,
+     0.079,
+     0.046,
+     0.001
+    ],
+    [
+     0.008,
+     0.475,
+     0.059,
+     0.191,
+     0.141,
+     0.064,
+     0.06,
+     0.001
+    ],
+    [
+     0.003,
+     0.483,
+     0.054,
+     0.197,
+     0.138,
+     0.052,
+     0.073,
+     0.001
+    ],
+    [
+     0.003,
+     0.49,
+     0.047,
+     0.196,
+     0.133,
+     0.035,
+     0.093,
+     0.003
+    ],
+    [
+     0.002,
+     0.503,
+     0.043,
+     0.201,
+     0.115,
+     0.023,
+     0.108,
+     0.005
+    ],
+    [
+     0.001,
+     0.509,
+     0.038,
+     0.199,
+     0.101,
+     0.016,
+     0.13,
+     0.007
+    ],
+    [
+     0.002,
+     0.51,
+     0.032,
+     0.2,
+     0.101,
+     0.01,
+     0.137,
+     0.008
+    ],
+    [
+     0.001,
+     0.513,
+     0.028,
+     0.198,
+     0.092,
+     0.007,
+     0.149,
+     0.012
+    ],
+    [
+     0.001,
+     0.505,
+     0.025,
+     0.188,
+     0.1,
+     0.003,
+     0.163,
+     0.014
+    ],
+    [
+     0.001,
+     0.505,
+     0.017,
+     0.182,
+     0.094,
+     0.001,
+     0.179,
+     0.021
+    ],
+    [
+     0.0,
+     0.502,
+     0.011,
+     0.175,
+     0.092,
+     0.0,
+     0.19,
+     0.028
+    ],
+    [
+     0.0,
+     0.498,
+     0.008,
+     0.161,
+     0.096,
+     0.0,
+     0.201,
+     0.036
+    ],
+    [
+     0.0,
+     0.493,
+     0.003,
+     0.136,
+     0.106,
+     0.0,
+     0.206,
+     0.056
+    ],
+    [
+     0.0,
+     0.494,
+     0.002,
+     0.115,
+     0.114,
+     0.0,
+     0.195,
+     0.081
+    ],
+    [
+     0.0,
+     0.489,
+     0.001,
+     0.088,
+     0.124,
+     0.0,
+     0.191,
+     0.107
+    ],
+    [
+     0.0,
+     0.492,
+     0.0,
+     0.06,
+     0.135,
+     0.0,
+     0.157,
+     0.157
+    ],
+    [
+     0.0,
+     0.497,
+     0.0,
+     0.035,
+     0.132,
+     0.0,
+     0.142,
+     0.194
+    ],
+    [
+     0.0,
+     0.496,
+     0.0,
+     0.013,
+     0.151,
+     0.0,
+     0.125,
+     0.215
+    ],
+    [
+     0.0,
+     0.493,
+     0.0,
+     0.008,
+     0.155,
+     0.0,
+     0.116,
+     0.228
+    ],
+    [
+     0.0,
+     0.511,
+     0.0,
+     0.008,
+     0.137,
+     0.0,
+     0.101,
+     0.242
+    ]
+   ]
+  }
+ },
+ "turn_on_auc_history_fraction_of_past_bins_expressed": 0.8622,
+ "reproduction_crossgene_nmf_linear_props_l1": {
+  "i>=1": [
+   0.284,
+   0.2705,
+   0.2912
+  ],
+  "all": [
+   0.284,
+   0.2612,
+   0.2812
+  ],
+  "i>=1_no_last": [
+   0.2809,
+   0.2694,
+   0.291
+  ]
+ },
+ "context_numbers_quoted_not_rerun": {
+  "orig": [
+   0.585,
+   0.406,
+   0.541
+  ]
+ },
+ "seconds": 1153.4,
+ "nmf_and_law_fit_seconds": 340.7
+}

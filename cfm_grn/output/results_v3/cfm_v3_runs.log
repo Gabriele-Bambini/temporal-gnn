@@ -1,0 +1,615 @@
+done cfm__noisy__static_graph__unsigned__v0__f0__s0 in 138s | downstream r 0.062 | mse_dd 1.642
+done cfm__noisy__static_graph__signed__v0__f0__s0 in 138s | downstream r 0.663 | mse_dd 0.829
+done cfm__noisy__static_learned__unsigned__v0__f0__s0 in 138s | downstream r 0.013 | mse_dd 1.554 | edge AUC 0.62
+done cfm__noisy__static_learned__signed__v0__f0__s0 in 138s | downstream r 0.635 | mse_dd 0.873 | edge AUC 0.70
+done cfm__noisy__graph_cfm__signed__v0__f0__s0 in 138s | downstream r 0.463 | mse_dd 1.060 | edge AUC 0.55
+done cfm__noisy__graph_cfm__unsigned__v0__f0__s0 in 139s | downstream r -0.276 | mse_dd 2.161 | edge AUC 0.50
+done cfm__noisy_context__static_graph__unsigned__v0__f0__s0 in 138s | downstream r -0.127 | mse_dd 1.914
+done cfm__noisy_context__static_graph__signed__v0__f0__s0 in 138s | downstream r 0.416 | mse_dd 1.086
+done cfm__noisy_context__static_learned__signed__v0__f0__s0 in 138s | downstream r 0.436 | mse_dd 1.034 | edge AUC 0.70
+done cfm__noisy_context__static_learned__unsigned__v0__f0__s0 in 138s | downstream r -0.117 | mse_dd 1.820 | edge AUC 0.60
+done cfm__noisy_context__graph_cfm__unsigned__v0__f0__s0 in 139s | downstream r -0.203 | mse_dd 2.591 | edge AUC 0.51
+done cfm__noisy_context__graph_cfm__signed__v0__f0__s0 in 139s | downstream r 0.313 | mse_dd 1.466 | edge AUC 0.55
+done mech__oracle__mech_true__unsigned__v0__f0__s0 in 1s | downstream r 0.998 | mse_dd 0.005
+done mech__oracle__mech_mlp__unsigned__v0__f0__s0 in 33s | downstream r -0.249 | mse_dd 11.324
+done mech__oracle__mech_mlp__unsigned__v1__f0__s0 in 33s | downstream r 0.006 | mse_dd 7.979
+done mech__oracle__mech_graph__unsigned__v0__f0__s0 in 34s | downstream r 0.652 | mse_dd 0.118
+done mech__oracle__mech_graph__unsigned__v1__f0__s0 in 34s | downstream r 0.112 | mse_dd 1.203
+done mech__oracle__mech_graph_learned__unsigned__v0__f0__s0 in 34s | downstream r 0.652 | mse_dd 0.069
+done mech__oracle__mech_graph_learned__unsigned__v1__f0__s0 in 23s | downstream r 0.214 | mse_dd 0.634
+done mech__noisy__mech_true__unsigned__v0__f0__s0 in 1s | downstream r 1.000 | mse_dd 0.002
+done mech__noisy__mech_mlp__unsigned__v0__f0__s0 in 32s | downstream r 0.456 | mse_dd 7.965
+done mech__noisy__mech_graph__signed__v0__f0__s0 in 33s | downstream r 0.763 | mse_dd 0.505
+done mech__noisy__mech_graph__unsigned__v0__f0__s0 in 33s | downstream r 0.338 | mse_dd 0.982
+done mech__noisy__mech_graph_learned__unsigned__v0__f0__s0 in 42s | downstream r 0.350 | mse_dd 0.970 | edge AUC 0.74
+done mech__noisy__mech_mlp__unsigned__v1__f0__s0 in 24s | downstream r -0.025 | mse_dd 13.217
+done mech__noisy__mech_graph_learned__signed__v0__f0__s0 in 36s | downstream r 0.679 | mse_dd 0.534 | edge AUC 0.74
+done mech__noisy_context__mech_true__unsigned__v0__f0__s0 in 3s | downstream r 0.999 | mse_dd 0.003
+done mech__noisy__mech_graph__unsigned__v1__f0__s0 in 29s | downstream r 0.285 | mse_dd 1.275
+done mech__noisy__mech_graph__signed__v1__f0__s0 in 31s | downstream r 0.473 | mse_dd 0.999
+done mech__noisy_context__mech_mlp__unsigned__v0__f0__s0 in 27s | downstream r 0.274 | mse_dd 7.589
+done mech__noisy__mech_graph_learned__unsigned__v1__f0__s0 in 40s | downstream r 0.346 | mse_dd 1.200 | edge AUC 0.79
+done mech__noisy__mech_graph_learned__signed__v1__f0__s0 in 34s | downstream r 0.477 | mse_dd 0.998 | edge AUC 0.79
+done mech__noisy_context__mech_graph__unsigned__v0__f0__s0 in 20s | downstream r 0.404 | mse_dd 0.960
+done mech__noisy_context__mech_graph__signed__v0__f0__s0 in 22s | downstream r 0.600 | mse_dd 0.529
+done mech__noisy_context__mech_mlp__unsigned__v1__f0__s0 in 27s | downstream r 0.000 | mse_dd 8.076
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f0__s0 in 36s | downstream r 0.375 | mse_dd 0.829 | edge AUC 0.76
+done mech__noisy_context__mech_graph__unsigned__v1__f0__s0 in 31s | downstream r 0.333 | mse_dd 1.105
+done mech__noisy_context__mech_graph_learned__signed__v0__f0__s0 in 40s | downstream r 0.545 | mse_dd 0.538 | edge AUC 0.72
+done mech__noisy_context__mech_graph__signed__v1__f0__s0 in 27s | downstream r 0.486 | mse_dd 0.959
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f0__s0 in 20s | downstream r 0.253 | mse_dd 1.223 | edge AUC 0.76
+done mech__noisy_context__mech_graph_learned__signed__v1__f0__s0 in 21s | downstream r 0.555 | mse_dd 0.840 | edge AUC 0.74
+done cfm__noisy__static_graph__unsigned__v0__f1__s0 in 114s | downstream r -0.176 | mse_dd 2.123
+done cfm__noisy__static_graph__signed__v0__f1__s0 in 121s | downstream r 0.646 | mse_dd 1.030
+done cfm__noisy__static_learned__unsigned__v0__f1__s0 in 119s | downstream r 0.007 | mse_dd 1.889 | edge AUC 0.65
+done cfm__noisy__static_learned__signed__v0__f1__s0 in 120s | downstream r 0.646 | mse_dd 1.019 | edge AUC 0.71
+done cfm__noisy__graph_cfm__unsigned__v0__f1__s0 in 116s | downstream r 0.059 | mse_dd 1.768 | edge AUC 0.47
+done cfm__noisy__graph_cfm__signed__v0__f1__s0 in 103s | downstream r 0.603 | mse_dd 1.256 | edge AUC 0.59
+done cfm__noisy_context__static_graph__unsigned__v0__f1__s0 in 34s | downstream r -0.443 | mse_dd 2.352
+done mech__oracle__mech_true__unsigned__v0__f1__s0 in 1s | downstream r 0.999 | mse_dd 0.005
+done mech__oracle__mech_mlp__unsigned__v0__f1__s0 in 19s | downstream r -0.180 | mse_dd 29.002
+done cfm__noisy_context__static_graph__signed__v0__f1__s0 in 106s | downstream r 0.674 | mse_dd 0.854
+done cfm__noisy_context__static_learned__unsigned__v0__f1__s0 in 110s | downstream r -0.451 | mse_dd 2.119 | edge AUC 0.63
+done cfm__noisy_context__static_learned__signed__v0__f1__s0 in 111s | downstream r 0.697 | mse_dd 0.810 | edge AUC 0.68
+done mech__oracle__mech_graph__unsigned__v0__f1__s0 in 22s | downstream r 0.033 | mse_dd 0.353
+done cfm__noisy_context__graph_cfm__unsigned__v0__f1__s0 in 115s | downstream r -0.018 | mse_dd 1.937 | edge AUC 0.50
+done cfm__noisy_context__graph_cfm__signed__v0__f1__s0 in 113s | downstream r 0.673 | mse_dd 0.966 | edge AUC 0.59
+done mech__oracle__mech_graph_learned__unsigned__v0__f1__s0 in 20s | downstream r 0.669 | mse_dd 0.119
+done mech__oracle__mech_mlp__unsigned__v1__f1__s0 in 16s | downstream r -0.131 | mse_dd 60.644
+done mech__noisy__mech_true__unsigned__v0__f1__s0 in 1s | downstream r 1.000 | mse_dd 0.003
+done mech__oracle__mech_graph__unsigned__v1__f1__s0 in 20s | downstream r -0.300 | mse_dd 1.893
+done mech__oracle__mech_graph_learned__unsigned__v1__f1__s0 in 19s | downstream r -0.292 | mse_dd 1.304
+done mech__noisy__mech_mlp__unsigned__v0__f1__s0 in 16s | downstream r -0.096 | mse_dd 28.188
+done mech__noisy__mech_graph__unsigned__v0__f1__s0 in 25s | downstream r 0.460 | mse_dd 1.430
+done mech__noisy__mech_graph__signed__v0__f1__s0 in 29s | downstream r 0.722 | mse_dd 0.951
+done mech__noisy__mech_mlp__unsigned__v1__f1__s0 in 29s | downstream r -0.009 | mse_dd 30.822
+done mech__noisy__mech_graph_learned__unsigned__v0__f1__s0 in 45s | downstream r 0.422 | mse_dd 1.428 | edge AUC 0.77
+done mech__noisy__mech_graph__unsigned__v1__f1__s0 in 30s | downstream r 0.108 | mse_dd 1.755
+done mech__noisy__mech_graph_learned__signed__v0__f1__s0 in 40s | downstream r 0.731 | mse_dd 0.935 | edge AUC 0.78
+done mech__noisy__mech_graph__signed__v1__f1__s0 in 20s | downstream r 0.646 | mse_dd 1.175
+done mech__noisy_context__mech_true__unsigned__v0__f1__s0 in 2s | downstream r 1.000 | mse_dd 0.004
+done mech__noisy__mech_graph_learned__unsigned__v1__f1__s0 in 21s | downstream r 0.179 | mse_dd 1.696 | edge AUC 0.75
+done mech__noisy_context__mech_mlp__unsigned__v0__f1__s0 in 21s | downstream r -0.137 | mse_dd 19.298
+done mech__noisy_context__mech_graph__unsigned__v0__f1__s0 in 24s | downstream r 0.244 | mse_dd 1.376
+done mech__noisy__mech_graph_learned__signed__v1__f1__s0 in 28s | downstream r 0.735 | mse_dd 1.042 | edge AUC 0.79
+done mech__noisy_context__mech_graph__signed__v0__f1__s0 in 24s | downstream r 0.733 | mse_dd 0.792
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f1__s0 in 31s | downstream r 0.301 | mse_dd 1.296 | edge AUC 0.73
+done mech__noisy_context__mech_graph_learned__signed__v0__f1__s0 in 28s | downstream r 0.722 | mse_dd 0.830 | edge AUC 0.74
+done mech__noisy_context__mech_mlp__unsigned__v1__f1__s0 in 17s | downstream r 0.042 | mse_dd 26.724
+done mech__noisy_context__mech_graph__unsigned__v1__f1__s0 in 25s | downstream r -0.055 | mse_dd 1.619
+done mech__noisy_context__mech_graph__signed__v1__f1__s0 in 25s | downstream r 0.636 | mse_dd 0.976
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f1__s0 in 22s | downstream r 0.195 | mse_dd 1.620 | edge AUC 0.73
+done mech__noisy_context__mech_graph_learned__signed__v1__f1__s0 in 22s | downstream r 0.628 | mse_dd 0.986 | edge AUC 0.78
+done cfm__noisy__static_graph__unsigned__v0__f2__s0 in 110s | downstream r -0.006 | mse_dd 2.009
+done cfm__noisy__static_graph__signed__v0__f2__s0 in 109s | downstream r 0.542 | mse_dd 0.895
+done cfm__noisy__static_learned__unsigned__v0__f2__s0 in 117s | downstream r -0.118 | mse_dd 2.137 | edge AUC 0.67
+done cfm__noisy__static_learned__signed__v0__f2__s0 in 117s | downstream r 0.518 | mse_dd 0.934 | edge AUC 0.69
+done cfm__noisy__graph_cfm__unsigned__v0__f2__s0 in 115s | downstream r -0.101 | mse_dd 1.996 | edge AUC 0.53
+done cfm__noisy__graph_cfm__signed__v0__f2__s0 in 110s | downstream r 0.488 | mse_dd 1.013 | edge AUC 0.60
+done cfm__noisy_context__static_graph__unsigned__v0__f2__s0 in 89s | downstream r -0.006 | mse_dd 2.197
+done cfm__noisy_context__static_graph__signed__v0__f2__s0 in 93s | downstream r 0.633 | mse_dd 1.009
+done mech__oracle__mech_true__unsigned__v0__f2__s0 in 1s | downstream r 0.998 | mse_dd 0.005
+done mech__oracle__mech_mlp__unsigned__v0__f2__s0 in 18s | downstream r 0.590 | mse_dd 26.081
+done cfm__noisy_context__static_learned__unsigned__v0__f2__s0 in 113s | downstream r 0.122 | mse_dd 2.147 | edge AUC 0.65
+done cfm__noisy_context__static_learned__signed__v0__f2__s0 in 114s | downstream r 0.693 | mse_dd 0.911 | edge AUC 0.64
+done cfm__noisy_context__graph_cfm__unsigned__v0__f2__s0 in 113s | downstream r -0.077 | mse_dd 2.274 | edge AUC 0.53
+done cfm__noisy_context__graph_cfm__signed__v0__f2__s0 in 114s | downstream r 0.658 | mse_dd 0.952 | edge AUC 0.60
+done mech__oracle__mech_graph__unsigned__v0__f2__s0 in 22s | downstream r 0.643 | mse_dd 0.177
+done mech__noisy__mech_true__unsigned__v0__f2__s0 in 4s | downstream r 1.000 | mse_dd 0.002
+done mech__oracle__mech_mlp__unsigned__v1__f2__s0 in 21s | downstream r 0.189 | mse_dd 44.642
+done mech__oracle__mech_graph_learned__unsigned__v0__f2__s0 in 23s | downstream r 0.790 | mse_dd 0.083
+done mech__oracle__mech_graph__unsigned__v1__f2__s0 in 26s | downstream r 0.157 | mse_dd 2.005
+done mech__oracle__mech_graph_learned__unsigned__v1__f2__s0 in 24s | downstream r 0.377 | mse_dd 1.140
+done mech__noisy__mech_mlp__unsigned__v0__f2__s0 in 18s | downstream r -0.122 | mse_dd 5.264
+done mech__noisy__mech_graph__unsigned__v0__f2__s0 in 30s | downstream r 0.464 | mse_dd 1.166
+done mech__noisy__mech_graph__signed__v0__f2__s0 in 32s | downstream r 0.563 | mse_dd 0.984
+done mech__noisy__mech_mlp__unsigned__v1__f2__s0 in 32s | downstream r -0.167 | mse_dd 5.824
+done mech__noisy__mech_graph__unsigned__v1__f2__s0 in 33s | downstream r -0.270 | mse_dd 1.751
+done mech__noisy__mech_graph_learned__unsigned__v0__f2__s0 in 46s | downstream r 0.517 | mse_dd 1.180 | edge AUC 0.76
+done mech__noisy__mech_graph_learned__signed__v0__f2__s0 in 43s | downstream r 0.616 | mse_dd 0.892 | edge AUC 0.79
+done mech__noisy_context__mech_true__unsigned__v0__f2__s0 in 3s | downstream r 1.000 | mse_dd 0.003
+done mech__noisy__mech_graph__signed__v1__f2__s0 in 22s | downstream r 0.495 | mse_dd 1.123
+done mech__noisy__mech_graph_learned__unsigned__v1__f2__s0 in 28s | downstream r -0.324 | mse_dd 1.845 | edge AUC 0.78
+done mech__noisy_context__mech_mlp__unsigned__v0__f2__s0 in 25s | downstream r 0.173 | mse_dd 4.556
+done mech__noisy_context__mech_graph__unsigned__v0__f2__s0 in 25s | downstream r 0.463 | mse_dd 1.558
+done mech__noisy__mech_graph_learned__signed__v1__f2__s0 in 33s | downstream r 0.545 | mse_dd 0.987 | edge AUC 0.76
+done mech__noisy_context__mech_graph__signed__v0__f2__s0 in 21s | downstream r 0.656 | mse_dd 1.204
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f2__s0 in 24s | downstream r 0.546 | mse_dd 1.472 | edge AUC 0.79
+done mech__noisy_context__mech_graph_learned__signed__v0__f2__s0 in 23s | downstream r 0.747 | mse_dd 0.973 | edge AUC 0.76
+done mech__noisy_context__mech_mlp__unsigned__v1__f2__s0 in 23s | downstream r -0.102 | mse_dd 7.296
+done mech__noisy_context__mech_graph__signed__v1__f2__s0 in 27s | downstream r 0.476 | mse_dd 1.371
+done mech__noisy_context__mech_graph__unsigned__v1__f2__s0 in 27s | downstream r -0.125 | mse_dd 1.947
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f2__s0 in 23s | downstream r -0.153 | mse_dd 1.931 | edge AUC 0.77
+done mech__noisy_context__mech_graph_learned__signed__v1__f2__s0 in 22s | downstream r 0.542 | mse_dd 1.232 | edge AUC 0.79
+done cfm__noisy__static_graph__unsigned__v0__f3__s0 in 82s | downstream r -0.344 | mse_dd 2.518
+done cfm__noisy__static_graph__signed__v0__f3__s0 in 111s | downstream r 0.430 | mse_dd 0.914
+done cfm__noisy__static_learned__unsigned__v0__f3__s0 in 119s | downstream r -0.288 | mse_dd 2.284 | edge AUC 0.64
+done cfm__noisy__static_learned__signed__v0__f3__s0 in 119s | downstream r 0.358 | mse_dd 0.999 | edge AUC 0.63
+done cfm__noisy__graph_cfm__unsigned__v0__f3__s0 in 120s | downstream r -0.408 | mse_dd 1.735 | edge AUC 0.52
+done cfm__noisy__graph_cfm__signed__v0__f3__s0 in 116s | downstream r 0.275 | mse_dd 0.888 | edge AUC 0.64
+done cfm__noisy_context__static_graph__unsigned__v0__f3__s0 in 56s | downstream r -0.111 | mse_dd 2.071
+done mech__oracle__mech_true__unsigned__v0__f3__s0 in 1s | downstream r 0.999 | mse_dd 0.006
+done cfm__noisy_context__static_graph__signed__v0__f3__s0 in 59s | downstream r 0.422 | mse_dd 1.078
+done mech__oracle__mech_mlp__unsigned__v0__f3__s0 in 18s | downstream r -0.182 | mse_dd 5.608
+done mech__oracle__mech_graph__unsigned__v0__f3__s0 in 21s | downstream r 0.354 | mse_dd 0.227
+done mech__oracle__mech_graph_learned__unsigned__v0__f3__s0 in 22s | downstream r 0.550 | mse_dd 0.130
+done cfm__noisy_context__static_learned__signed__v0__f3__s0 in 116s | downstream r 0.357 | mse_dd 1.161 | edge AUC 0.65
+done cfm__noisy_context__static_learned__unsigned__v0__f3__s0 in 116s | downstream r 0.013 | mse_dd 1.828 | edge AUC 0.62
+done cfm__noisy_context__graph_cfm__unsigned__v0__f3__s0 in 116s | downstream r -0.074 | mse_dd 1.862 | edge AUC 0.50
+done mech__oracle__mech_mlp__unsigned__v1__f3__s0 in 16s | downstream r -0.045 | mse_dd 2.998
+done cfm__noisy_context__graph_cfm__signed__v0__f3__s0 in 114s | downstream r 0.237 | mse_dd 1.367 | edge AUC 0.62
+done mech__noisy__mech_true__unsigned__v0__f3__s0 in 1s | downstream r 1.000 | mse_dd 0.002
+done mech__oracle__mech_graph__unsigned__v1__f3__s0 in 20s | downstream r 0.069 | mse_dd 1.234
+done mech__oracle__mech_graph_learned__unsigned__v1__f3__s0 in 21s | downstream r 0.162 | mse_dd 0.430
+done mech__noisy__mech_mlp__unsigned__v0__f3__s0 in 27s | downstream r -0.153 | mse_dd 5.155
+done mech__noisy__mech_graph__unsigned__v0__f3__s0 in 28s | downstream r 0.218 | mse_dd 1.174
+done mech__noisy__mech_graph__signed__v0__f3__s0 in 28s | downstream r 0.359 | mse_dd 0.763
+done mech__noisy__mech_graph_learned__unsigned__v0__f3__s0 in 25s | downstream r 0.247 | mse_dd 1.329 | edge AUC 0.78
+done mech__noisy__mech_graph_learned__signed__v0__f3__s0 in 22s | downstream r 0.669 | mse_dd 0.553 | edge AUC 0.78
+done mech__noisy__mech_mlp__unsigned__v1__f3__s0 in 16s | downstream r -0.356 | mse_dd 7.910
+done mech__noisy_context__mech_true__unsigned__v0__f3__s0 in 5s | downstream r 1.000 | mse_dd 0.003
+done mech__noisy__mech_graph__unsigned__v1__f3__s0 in 29s | downstream r 0.330 | mse_dd 1.340
+done mech__noisy__mech_graph__signed__v1__f3__s0 in 29s | downstream r 0.182 | mse_dd 1.245
+done mech__noisy__mech_graph_learned__unsigned__v1__f3__s0 in 37s | downstream r 0.110 | mse_dd 1.551 | edge AUC 0.79
+done mech__noisy__mech_graph_learned__signed__v1__f3__s0 in 32s | downstream r 0.232 | mse_dd 0.963 | edge AUC 0.79
+done mech__noisy_context__mech_mlp__unsigned__v0__f3__s0 in 21s | downstream r 0.089 | mse_dd 8.456
+done mech__noisy_context__mech_graph__unsigned__v0__f3__s0 in 24s | downstream r 0.470 | mse_dd 1.051
+done mech__noisy_context__mech_graph__signed__v0__f3__s0 in 29s | downstream r 0.420 | mse_dd 0.871
+done mech__noisy_context__mech_mlp__unsigned__v1__f3__s0 in 30s | downstream r -0.185 | mse_dd 5.980
+done mech__noisy_context__mech_graph__unsigned__v1__f3__s0 in 31s | downstream r 0.106 | mse_dd 1.839
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f3__s0 in 44s | downstream r 0.403 | mse_dd 0.923 | edge AUC 0.77
+done mech__noisy_context__mech_graph_learned__signed__v0__f3__s0 in 38s | downstream r 0.647 | mse_dd 0.610 | edge AUC 0.76
+done mech__noisy_context__mech_graph__signed__v1__f3__s0 in 20s | downstream r 0.286 | mse_dd 0.985
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f3__s0 in 19s | downstream r 0.189 | mse_dd 1.818 | edge AUC 0.78
+done mech__noisy_context__mech_graph_learned__signed__v1__f3__s0 in 22s | downstream r 0.371 | mse_dd 0.862 | edge AUC 0.77
+done cfm__noisy__static_graph__unsigned__v0__f4__s0 in 122s | downstream r -0.000 | mse_dd 1.793
+done cfm__noisy__static_graph__signed__v0__f4__s0 in 122s | downstream r 0.562 | mse_dd 1.117
+done cfm__noisy__static_learned__unsigned__v0__f4__s0 in 121s | downstream r 0.039 | mse_dd 1.818 | edge AUC 0.69
+done cfm__noisy__static_learned__signed__v0__f4__s0 in 119s | downstream r 0.552 | mse_dd 1.149 | edge AUC 0.65
+done cfm__noisy__graph_cfm__unsigned__v0__f4__s0 in 115s | downstream r -0.217 | mse_dd 2.047 | edge AUC 0.53
+done cfm__noisy__graph_cfm__signed__v0__f4__s0 in 104s | downstream r 0.473 | mse_dd 1.306 | edge AUC 0.63
+done cfm__noisy_context__static_graph__unsigned__v0__f4__s0 in 114s | downstream r 0.277 | mse_dd 1.264
+done cfm__noisy_context__static_graph__signed__v0__f4__s0 in 114s | downstream r 0.431 | mse_dd 1.143
+done cfm__noisy_context__static_learned__unsigned__v0__f4__s0 in 117s | downstream r 0.195 | mse_dd 1.372 | edge AUC 0.67
+done cfm__noisy_context__static_learned__signed__v0__f4__s0 in 120s | downstream r 0.410 | mse_dd 1.228 | edge AUC 0.62
+done mech__oracle__mech_true__unsigned__v0__f4__s0 in 1s | downstream r 0.999 | mse_dd 0.005
+done cfm__noisy_context__graph_cfm__unsigned__v0__f4__s0 in 117s | downstream r -0.193 | mse_dd 1.965 | edge AUC 0.55
+done cfm__noisy_context__graph_cfm__signed__v0__f4__s0 in 115s | downstream r 0.325 | mse_dd 1.238 | edge AUC 0.60
+done mech__oracle__mech_mlp__unsigned__v0__f4__s0 in 15s | downstream r 0.085 | mse_dd 47.553
+done mech__oracle__mech_graph__unsigned__v0__f4__s0 in 19s | downstream r 0.646 | mse_dd 0.173
+done mech__noisy__mech_true__unsigned__v0__f4__s0 in 5s | downstream r 1.000 | mse_dd 0.002
+done mech__oracle__mech_graph_learned__unsigned__v0__f4__s0 in 25s | downstream r 0.807 | mse_dd 0.117
+done mech__oracle__mech_mlp__unsigned__v1__f4__s0 in 23s | downstream r 0.000 | mse_dd 56.760
+done mech__oracle__mech_graph__unsigned__v1__f4__s0 in 27s | downstream r 0.175 | mse_dd 0.810
+done mech__oracle__mech_graph_learned__unsigned__v1__f4__s0 in 27s | downstream r 0.306 | mse_dd 0.262
+done mech__noisy__mech_mlp__unsigned__v0__f4__s0 in 15s | downstream r 0.024 | mse_dd 6.941
+done mech__noisy__mech_graph__unsigned__v0__f4__s0 in 28s | downstream r 0.775 | mse_dd 0.754
+done mech__noisy__mech_graph__signed__v0__f4__s0 in 30s | downstream r 0.684 | mse_dd 0.912
+done mech__noisy__mech_mlp__unsigned__v1__f4__s0 in 29s | downstream r 0.263 | mse_dd 10.778
+done mech__noisy__mech_graph_learned__unsigned__v0__f4__s0 in 44s | downstream r 0.727 | mse_dd 0.879 | edge AUC 0.80
+done mech__noisy__mech_graph__unsigned__v1__f4__s0 in 29s | downstream r -0.405 | mse_dd 1.792
+done mech__noisy__mech_graph_learned__signed__v0__f4__s0 in 40s | downstream r 0.751 | mse_dd 0.860 | edge AUC 0.78
+done mech__noisy_context__mech_true__unsigned__v0__f4__s0 in 3s | downstream r 1.000 | mse_dd 0.003
+done mech__noisy__mech_graph__signed__v1__f4__s0 in 22s | downstream r 0.694 | mse_dd 1.118
+done mech__noisy__mech_graph_learned__unsigned__v1__f4__s0 in 27s | downstream r -0.044 | mse_dd 1.640 | edge AUC 0.80
+done mech__noisy__mech_graph_learned__signed__v1__f4__s0 in 29s | downstream r 0.713 | mse_dd 0.929 | edge AUC 0.76
+done mech__noisy_context__mech_mlp__unsigned__v0__f4__s0 in 22s | downstream r 0.173 | mse_dd 5.785
+done mech__noisy_context__mech_graph__unsigned__v0__f4__s0 in 23s | downstream r 0.647 | mse_dd 0.883
+done mech__noisy_context__mech_graph__signed__v0__f4__s0 in 23s | downstream r 0.768 | mse_dd 0.839
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f4__s0 in 29s | downstream r 0.614 | mse_dd 0.938 | edge AUC 0.77
+done mech__noisy_context__mech_graph_learned__signed__v0__f4__s0 in 25s | downstream r 0.769 | mse_dd 0.767 | edge AUC 0.74
+done mech__noisy_context__mech_mlp__unsigned__v1__f4__s0 in 21s | downstream r 0.220 | mse_dd 8.072
+done mech__noisy_context__mech_graph__unsigned__v1__f4__s0 in 27s | downstream r -0.055 | mse_dd 1.484
+done mech__noisy_context__mech_graph__signed__v1__f4__s0 in 27s | downstream r 0.691 | mse_dd 0.960
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f4__s0 in 20s | downstream r -0.140 | mse_dd 1.492 | edge AUC 0.78
+done mech__noisy_context__mech_graph_learned__signed__v1__f4__s0 in 21s | downstream r 0.738 | mse_dd 0.773 | edge AUC 0.76
+done cfm__noisy__static_graph__unsigned__v0__f0__s1 in 103s | downstream r 0.063 | mse_dd 1.770
+done cfm__noisy__static_graph__signed__v0__f0__s1 in 102s | downstream r 0.727 | mse_dd 0.911
+done cfm__noisy__static_learned__signed__v0__f0__s1 in 115s | downstream r 0.716 | mse_dd 0.935 | edge AUC 0.66
+done cfm__noisy__static_learned__unsigned__v0__f0__s1 in 115s | downstream r 0.042 | mse_dd 1.815 | edge AUC 0.72
+done cfm__noisy__graph_cfm__unsigned__v0__f0__s1 in 115s | downstream r 0.260 | mse_dd 1.578 | edge AUC 0.60
+done cfm__noisy__graph_cfm__signed__v0__f0__s1 in 112s | downstream r 0.450 | mse_dd 1.512 | edge AUC 0.58
+done cfm__noisy_context__static_graph__unsigned__v0__f0__s1 in 94s | downstream r 0.126 | mse_dd 1.359
+done cfm__noisy_context__static_graph__signed__v0__f0__s1 in 95s | downstream r 0.519 | mse_dd 0.846
+done mech__oracle__mech_true__unsigned__v0__f0__s1 in 1s | downstream r 0.998 | mse_dd 0.007
+done mech__oracle__mech_mlp__unsigned__v0__f0__s1 in 17s | downstream r 0.059 | mse_dd 77.109
+done cfm__noisy_context__static_learned__unsigned__v0__f0__s1 in 111s | downstream r 0.105 | mse_dd 1.363 | edge AUC 0.65
+done cfm__noisy_context__static_learned__signed__v0__f0__s1 in 111s | downstream r 0.522 | mse_dd 0.820 | edge AUC 0.66
+done cfm__noisy_context__graph_cfm__unsigned__v0__f0__s1 in 110s | downstream r 0.038 | mse_dd 1.272 | edge AUC 0.61
+done mech__oracle__mech_graph__unsigned__v0__f0__s1 in 20s | downstream r 0.131 | mse_dd 0.218
+done cfm__noisy_context__graph_cfm__signed__v0__f0__s1 in 111s | downstream r 0.660 | mse_dd 0.782 | edge AUC 0.55
+done mech__oracle__mech_graph_learned__unsigned__v0__f0__s1 in 22s | downstream r 0.639 | mse_dd 0.149
+done mech__noisy__mech_true__unsigned__v0__f0__s1 in 3s | downstream r 1.000 | mse_dd 0.002
+done mech__oracle__mech_mlp__unsigned__v1__f0__s1 in 24s | downstream r 0.275 | mse_dd 109.948
+done mech__oracle__mech_graph__unsigned__v1__f0__s1 in 25s | downstream r -0.158 | mse_dd 0.584
+done mech__oracle__mech_graph_learned__unsigned__v1__f0__s1 in 23s | downstream r -0.079 | mse_dd 0.376
+done mech__noisy__mech_mlp__unsigned__v0__f0__s1 in 17s | downstream r -0.275 | mse_dd 6.808
+done mech__noisy__mech_graph__signed__v0__f0__s1 in 31s | downstream r 0.864 | mse_dd 0.903
+done mech__noisy__mech_graph__unsigned__v0__f0__s1 in 31s | downstream r 0.663 | mse_dd 1.151
+done mech__noisy__mech_mlp__unsigned__v1__f0__s1 in 32s | downstream r 0.465 | mse_dd 11.723
+done mech__noisy__mech_graph_learned__unsigned__v0__f0__s1 in 38s | downstream r 0.713 | mse_dd 1.078 | edge AUC 0.66
+done mech__noisy__mech_graph__unsigned__v1__f0__s1 in 32s | downstream r 0.075 | mse_dd 1.880
+done mech__noisy__mech_graph_learned__signed__v0__f0__s1 in 42s | downstream r 0.846 | mse_dd 0.876 | edge AUC 0.71
+done mech__noisy_context__mech_true__unsigned__v0__f0__s1 in 2s | downstream r 0.999 | mse_dd 0.005
+done mech__noisy__mech_graph__signed__v1__f0__s1 in 26s | downstream r 0.826 | mse_dd 0.939
+done mech__noisy__mech_graph_learned__unsigned__v1__f0__s1 in 27s | downstream r 0.203 | mse_dd 1.915 | edge AUC 0.66
+done mech__noisy_context__mech_mlp__unsigned__v0__f0__s1 in 23s | downstream r -0.090 | mse_dd 5.332
+done mech__noisy__mech_graph_learned__signed__v1__f0__s1 in 31s | downstream r 0.825 | mse_dd 0.936 | edge AUC 0.75
+done mech__noisy_context__mech_graph__unsigned__v0__f0__s1 in 25s | downstream r 0.578 | mse_dd 1.020
+done mech__noisy_context__mech_graph__signed__v0__f0__s1 in 20s | downstream r 0.729 | mse_dd 0.768
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f0__s1 in 28s | downstream r 0.626 | mse_dd 0.930 | edge AUC 0.64
+done mech__noisy_context__mech_graph_learned__signed__v0__f0__s1 in 29s | downstream r 0.577 | mse_dd 0.874 | edge AUC 0.69
+done mech__noisy_context__mech_mlp__unsigned__v1__f0__s1 in 22s | downstream r 0.113 | mse_dd 18.590
+done mech__noisy_context__mech_graph__unsigned__v1__f0__s1 in 28s | downstream r 0.126 | mse_dd 1.452
+done mech__noisy_context__mech_graph__signed__v1__f0__s1 in 28s | downstream r 0.513 | mse_dd 0.968
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f0__s1 in 23s | downstream r 0.235 | mse_dd 1.411 | edge AUC 0.64
+done mech__noisy_context__mech_graph_learned__signed__v1__f0__s1 in 21s | downstream r 0.502 | mse_dd 0.969 | edge AUC 0.73
+done cfm__noisy__static_graph__unsigned__v0__f1__s1 in 103s | downstream r -0.206 | mse_dd 1.448
+done cfm__noisy__static_graph__signed__v0__f1__s1 in 111s | downstream r 0.419 | mse_dd 0.914
+done cfm__noisy__static_learned__signed__v0__f1__s1 in 118s | downstream r 0.405 | mse_dd 0.923 | edge AUC 0.66done cfm__noisy__static_learned__unsigned__v0__f1__s1 in 118s | downstream r -0.220 | mse_dd 1.425 | edge AUC 0.67
+
+done cfm__noisy__graph_cfm__unsigned__v0__f1__s1 in 116s | downstream r -0.246 | mse_dd 2.035 | edge AUC 0.57
+done cfm__noisy__graph_cfm__signed__v0__f1__s1 in 107s | downstream r 0.547 | mse_dd 0.915 | edge AUC 0.60
+done cfm__noisy_context__static_graph__unsigned__v0__f1__s1 in 78s | downstream r -0.249 | mse_dd 1.658
+done cfm__noisy_context__static_graph__signed__v0__f1__s1 in 89s | downstream r 0.302 | mse_dd 0.963
+done mech__oracle__mech_true__unsigned__v0__f1__s1 in 1s | downstream r 0.997 | mse_dd 0.008
+done mech__oracle__mech_mlp__unsigned__v0__f1__s1 in 22s | downstream r -0.060 | mse_dd 21.702
+done mech__oracle__mech_graph__unsigned__v0__f1__s1 in 23s | downstream r 0.716 | mse_dd 0.097
+done cfm__noisy_context__static_learned__unsigned__v0__f1__s1 in 117s | downstream r -0.170 | mse_dd 1.461 | edge AUC 0.62
+done cfm__noisy_context__static_learned__signed__v0__f1__s1 in 117s | downstream r 0.334 | mse_dd 0.882 | edge AUC 0.68
+done cfm__noisy_context__graph_cfm__unsigned__v0__f1__s1 in 116s | downstream r -0.222 | mse_dd 1.907 | edge AUC 0.57
+done cfm__noisy_context__graph_cfm__signed__v0__f1__s1 in 108s | downstream r 0.624 | mse_dd 0.600 | edge AUC 0.57
+done mech__noisy__mech_true__unsigned__v0__f1__s1 in 1s | downstream r 0.999 | mse_dd 0.002
+done mech__oracle__mech_mlp__unsigned__v1__f1__s1 in 16s | downstream r -0.193 | mse_dd 57.413
+done mech__oracle__mech_graph_learned__unsigned__v0__f1__s1 in 25s | downstream r 0.634 | mse_dd 0.089
+done mech__oracle__mech_graph_learned__unsigned__v1__f1__s1 in 28s | downstream r 0.294 | mse_dd 0.282done mech__oracle__mech_graph__unsigned__v1__f1__s1 in 28s | downstream r 0.325 | mse_dd 0.667
+
+done mech__noisy__mech_mlp__unsigned__v0__f1__s1 in 23s | downstream r 0.530 | mse_dd 1.415
+done mech__noisy__mech_graph__unsigned__v0__f1__s1 in 21s | downstream r 0.236 | mse_dd 1.150
+done mech__noisy__mech_graph__signed__v0__f1__s1 in 21s | downstream r 0.635 | mse_dd 0.782
+done mech__noisy__mech_graph_learned__unsigned__v0__f1__s1 in 21s | downstream r 0.370 | mse_dd 1.026 | edge AUC 0.68
+done mech__noisy__mech_mlp__unsigned__v1__f1__s1 in 24s | downstream r -0.062 | mse_dd 6.767
+done mech__noisy__mech_graph__unsigned__v1__f1__s1 in 25s | downstream r -0.123 | mse_dd 1.323
+done mech__noisy__mech_graph_learned__signed__v0__f1__s1 in 29s | downstream r 0.662 | mse_dd 0.752 | edge AUC 0.73
+done mech__noisy__mech_graph__signed__v1__f1__s1 in 23s | downstream r 0.523 | mse_dd 0.861
+done mech__noisy_context__mech_true__unsigned__v0__f1__s1 in 1s | downstream r 0.998 | mse_dd 0.004
+done mech__noisy__mech_graph_learned__unsigned__v1__f1__s1 in 23s | downstream r -0.029 | mse_dd 1.279 | edge AUC 0.62
+done mech__noisy__mech_graph_learned__signed__v1__f1__s1 in 21s | downstream r 0.578 | mse_dd 0.839 | edge AUC 0.73
+done mech__noisy_context__mech_mlp__unsigned__v0__f1__s1 in 15s | downstream r 0.436 | mse_dd 3.457
+done mech__noisy_context__mech_graph__unsigned__v0__f1__s1 in 20s | downstream r -0.005 | mse_dd 1.316
+done mech__noisy_context__mech_graph__signed__v0__f1__s1 in 24s | downstream r 0.533 | mse_dd 0.891
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f1__s1 in 30s | downstream r -0.019 | mse_dd 1.269 | edge AUC 0.64
+done mech__noisy_context__mech_graph_learned__signed__v0__f1__s1 in 34s | downstream r 0.443 | mse_dd 0.901 | edge AUC 0.66
+done mech__noisy_context__mech_mlp__unsigned__v1__f1__s1 in 24s | downstream r 0.185 | mse_dd 7.597
+done mech__noisy_context__mech_graph__unsigned__v1__f1__s1 in 24s | downstream r -0.408 | mse_dd 1.695
+done mech__noisy_context__mech_graph__signed__v1__f1__s1 in 21s | downstream r 0.427 | mse_dd 1.010
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f1__s1 in 20s | downstream r -0.399 | mse_dd 1.675 | edge AUC 0.67
+done mech__noisy_context__mech_graph_learned__signed__v1__f1__s1 in 21s | downstream r 0.460 | mse_dd 1.075 | edge AUC 0.71
+done cfm__noisy__static_graph__signed__v0__f2__s1 in 122s | downstream r 0.566 | mse_dd 0.802
+done cfm__noisy__static_graph__unsigned__v0__f2__s1 in 122s | downstream r -0.099 | mse_dd 1.793
+done cfm__noisy__static_learned__unsigned__v0__f2__s1 in 120s | downstream r -0.118 | mse_dd 1.885 | edge AUC 0.71
+done cfm__noisy__static_learned__signed__v0__f2__s1 in 119s | downstream r 0.597 | mse_dd 0.781 | edge AUC 0.72
+done cfm__noisy__graph_cfm__unsigned__v0__f2__s1 in 116s | downstream r 0.044 | mse_dd 2.110 | edge AUC 0.54
+done cfm__noisy__graph_cfm__signed__v0__f2__s1 in 106s | downstream r 0.366 | mse_dd 0.894 | edge AUC 0.62
+done cfm__noisy_context__static_graph__unsigned__v0__f2__s1 in 119s | downstream r 0.099 | mse_dd 1.377
+done cfm__noisy_context__static_graph__signed__v0__f2__s1 in 119s | downstream r 0.570 | mse_dd 0.960
+done cfm__noisy_context__static_learned__unsigned__v0__f2__s1 in 120s | downstream r 0.028 | mse_dd 1.414 | edge AUC 0.64
+done cfm__noisy_context__static_learned__signed__v0__f2__s1 in 123s | downstream r 0.543 | mse_dd 0.958 | edge AUC 0.70
+done cfm__noisy_context__graph_cfm__unsigned__v0__f2__s1 in 121s | downstream r 0.112 | mse_dd 1.507 | edge AUC 0.54
+done cfm__noisy_context__graph_cfm__signed__v0__f2__s1 in 118s | downstream r 0.567 | mse_dd 0.831 | edge AUC 0.59
+done mech__oracle__mech_true__unsigned__v0__f2__s1 in 1s | downstream r 0.999 | mse_dd 0.006
+done mech__oracle__mech_mlp__unsigned__v0__f2__s1 in 16s | downstream r 0.029 | mse_dd 5.359
+done mech__oracle__mech_graph__unsigned__v0__f2__s1 in 20s | downstream r 0.516 | mse_dd 0.160
+done mech__oracle__mech_graph_learned__unsigned__v0__f2__s1 in 25s | downstream r 0.497 | mse_dd 0.140
+done mech__noisy__mech_true__unsigned__v0__f2__s1 in 3s | downstream r 0.999 | mse_dd 0.002
+done mech__oracle__mech_mlp__unsigned__v1__f2__s1 in 26s | downstream r 0.126 | mse_dd 19.869
+done mech__oracle__mech_graph__unsigned__v1__f2__s1 in 27s | downstream r 0.119 | mse_dd 0.340
+done mech__oracle__mech_graph_learned__unsigned__v1__f2__s1 in 25s | downstream r 0.233 | mse_dd 0.266
+done mech__noisy__mech_mlp__unsigned__v0__f2__s1 in 16s | downstream r 0.298 | mse_dd 4.036
+done mech__noisy__mech_graph__unsigned__v0__f2__s1 in 27s | downstream r 0.675 | mse_dd 0.597
+done mech__noisy__mech_graph__signed__v0__f2__s1 in 29s | downstream r 0.663 | mse_dd 0.671
+done mech__noisy__mech_mlp__unsigned__v1__f2__s1 in 27s | downstream r 0.348 | mse_dd 13.993
+done mech__noisy__mech_graph_learned__unsigned__v0__f2__s1 in 38s | downstream r 0.671 | mse_dd 0.622 | edge AUC 0.70
+done mech__noisy__mech_graph_learned__signed__v0__f2__s1 in 39s | downstream r 0.602 | mse_dd 0.695 | edge AUC 0.77
+done mech__noisy__mech_graph__unsigned__v1__f2__s1 in 27s | downstream r 0.505 | mse_dd 0.894
+done mech__noisy_context__mech_true__unsigned__v0__f2__s1 in 3s | downstream r 0.999 | mse_dd 0.004
+done mech__noisy__mech_graph__signed__v1__f2__s1 in 24s | downstream r 0.581 | mse_dd 0.758
+done mech__noisy__mech_graph_learned__unsigned__v1__f2__s1 in 27s | downstream r 0.443 | mse_dd 0.975 | edge AUC 0.69
+done mech__noisy__mech_graph_learned__signed__v1__f2__s1 in 30s | downstream r 0.623 | mse_dd 0.659 | edge AUC 0.75
+done mech__noisy_context__mech_mlp__unsigned__v0__f2__s1 in 22s | downstream r 0.131 | mse_dd 4.721
+done mech__noisy_context__mech_graph__unsigned__v0__f2__s1 in 22s | downstream r 0.590 | mse_dd 0.759
+done mech__noisy_context__mech_graph__signed__v0__f2__s1 in 21s | downstream r 0.573 | mse_dd 0.967
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f2__s1 in 22s | downstream r 0.658 | mse_dd 0.682 | edge AUC 0.67
+done mech__noisy_context__mech_graph_learned__signed__v0__f2__s1 in 29s | downstream r 0.552 | mse_dd 1.081 | edge AUC 0.70
+done mech__noisy_context__mech_mlp__unsigned__v1__f2__s1 in 26s | downstream r -0.068 | mse_dd 11.809
+done mech__noisy_context__mech_graph__unsigned__v1__f2__s1 in 27s | downstream r 0.408 | mse_dd 1.346
+done mech__noisy_context__mech_graph__signed__v1__f2__s1 in 26s | downstream r 0.741 | mse_dd 0.686
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f2__s1 in 22s | downstream r 0.289 | mse_dd 1.507 | edge AUC 0.68
+done mech__noisy_context__mech_graph_learned__signed__v1__f2__s1 in 21s | downstream r 0.748 | mse_dd 0.643 | edge AUC 0.75
+done cfm__noisy__static_graph__unsigned__v0__f3__s1 in 88s | downstream r -0.078 | mse_dd 1.586
+done cfm__noisy__static_graph__signed__v0__f3__s1 in 116s | downstream r 0.668 | mse_dd 0.948
+done cfm__noisy__static_learned__unsigned__v0__f3__s1 in 117s | downstream r -0.154 | mse_dd 1.787 | edge AUC 0.63
+done cfm__noisy__static_learned__signed__v0__f3__s1 in 117s | downstream r 0.680 | mse_dd 0.961 | edge AUC 0.66
+done cfm__noisy__graph_cfm__unsigned__v0__f3__s1 in 117s | downstream r -0.253 | mse_dd 2.136 | edge AUC 0.58
+done cfm__noisy__graph_cfm__signed__v0__f3__s1 in 113s | downstream r 0.411 | mse_dd 1.266 | edge AUC 0.63
+done cfm__noisy_context__static_graph__unsigned__v0__f3__s1 in 38s | downstream r -0.296 | mse_dd 2.522
+done mech__oracle__mech_true__unsigned__v0__f3__s1 in 1s | downstream r 0.996 | mse_dd 0.010
+done mech__oracle__mech_mlp__unsigned__v0__f3__s1 in 19s | downstream r -0.134 | mse_dd 49.706
+done cfm__noisy_context__static_learned__unsigned__v0__f3__s1 in 101s | downstream r -0.207 | mse_dd 2.100 | edge AUC 0.61
+done cfm__noisy_context__static_graph__signed__v0__f3__s1 in 101s | downstream r 0.567 | mse_dd 1.151
+done cfm__noisy_context__static_learned__signed__v0__f3__s1 in 110s | downstream r 0.579 | mse_dd 1.217 | edge AUC 0.59
+done mech__oracle__mech_graph__unsigned__v0__f3__s1 in 23s | downstream r 0.908 | mse_dd 0.120
+done cfm__noisy_context__graph_cfm__unsigned__v0__f3__s1 in 110s | downstream r 0.002 | mse_dd 1.739 | edge AUC 0.55
+done cfm__noisy_context__graph_cfm__signed__v0__f3__s1 in 106s | downstream r 0.460 | mse_dd 0.951 | edge AUC 0.64
+done mech__oracle__mech_mlp__unsigned__v1__f3__s1 in 16s | downstream r -0.106 | mse_dd 83.430
+done mech__oracle__mech_graph_learned__unsigned__v0__f3__s1 in 20s | downstream r 0.815 | mse_dd 0.109
+done mech__noisy__mech_true__unsigned__v0__f3__s1 in 1s | downstream r 1.000 | mse_dd 0.003
+done mech__oracle__mech_graph__unsigned__v1__f3__s1 in 24s | downstream r 0.602 | mse_dd 0.328
+done mech__oracle__mech_graph_learned__unsigned__v1__f3__s1 in 24s | downstream r 0.519 | mse_dd 0.174
+done mech__noisy__mech_mlp__unsigned__v0__f3__s1 in 17s | downstream r -0.231 | mse_dd 18.431
+done mech__noisy__mech_graph__unsigned__v0__f3__s1 in 24s | downstream r 0.128 | mse_dd 1.657
+done mech__noisy__mech_graph__signed__v0__f3__s1 in 26s | downstream r 0.838 | mse_dd 0.406
+done mech__noisy__mech_graph_learned__unsigned__v0__f3__s1 in 27s | downstream r 0.201 | mse_dd 1.455 | edge AUC 0.66
+done mech__noisy__mech_mlp__unsigned__v1__f3__s1 in 23s | downstream r -0.283 | mse_dd 29.399
+done mech__noisy__mech_graph__unsigned__v1__f3__s1 in 24s | downstream r 0.525 | mse_dd 1.114
+done mech__noisy__mech_graph_learned__signed__v0__f3__s1 in 28s | downstream r 0.838 | mse_dd 0.431 | edge AUC 0.72
+done mech__noisy__mech_graph__signed__v1__f3__s1 in 21s | downstream r 0.793 | mse_dd 1.013
+done mech__noisy_context__mech_true__unsigned__v0__f3__s1 in 2s | downstream r 0.999 | mse_dd 0.005
+done mech__noisy__mech_graph_learned__unsigned__v1__f3__s1 in 24s | downstream r 0.694 | mse_dd 1.097 | edge AUC 0.63
+done mech__noisy__mech_graph_learned__signed__v1__f3__s1 in 24s | downstream r 0.732 | mse_dd 0.985 | edge AUC 0.72
+done mech__noisy_context__mech_mlp__unsigned__v0__f3__s1 in 18s | downstream r -0.315 | mse_dd 17.140
+done mech__noisy_context__mech_graph__unsigned__v0__f3__s1 in 19s | downstream r 0.581 | mse_dd 1.054
+done mech__noisy_context__mech_graph__signed__v0__f3__s1 in 27s | downstream r 0.800 | mse_dd 0.536
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f3__s1 in 28s | downstream r 0.695 | mse_dd 0.874 | edge AUC 0.63
+done mech__noisy_context__mech_mlp__unsigned__v1__f3__s1 in 20s | downstream r -0.106 | mse_dd 24.834
+done mech__noisy_context__mech_graph_learned__signed__v0__f3__s1 in 28s | downstream r 0.732 | mse_dd 0.578 | edge AUC 0.68
+done mech__noisy_context__mech_graph__unsigned__v1__f3__s1 in 26s | downstream r 0.086 | mse_dd 1.758
+done mech__noisy_context__mech_graph__signed__v1__f3__s1 in 25s | downstream r 0.653 | mse_dd 1.168
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f3__s1 in 26s | downstream r 0.190 | mse_dd 1.922 | edge AUC 0.64
+done mech__noisy_context__mech_graph_learned__signed__v1__f3__s1 in 27s | downstream r 0.591 | mse_dd 1.123 | edge AUC 0.73
+done cfm__noisy__static_graph__unsigned__v0__f4__s1 in 114s | downstream r -0.135 | mse_dd 1.418
+done cfm__noisy__static_graph__signed__v0__f4__s1 in 113s | downstream r 0.425 | mse_dd 0.534
+done cfm__noisy__static_learned__signed__v0__f4__s1 in 116s | downstream r 0.420 | mse_dd 0.520 | edge AUC 0.68
+done cfm__noisy__static_learned__unsigned__v0__f4__s1 in 116s | downstream r -0.105 | mse_dd 1.438 | edge AUC 0.64
+done cfm__noisy__graph_cfm__unsigned__v0__f4__s1 in 107s | downstream r -0.027 | mse_dd 1.515 | edge AUC 0.55
+done cfm__noisy__graph_cfm__signed__v0__f4__s1 in 106s | downstream r -0.097 | mse_dd 1.125 | edge AUC 0.59
+done cfm__noisy_context__static_graph__unsigned__v0__f4__s1 in 93s | downstream r 0.072 | mse_dd 1.200
+done cfm__noisy_context__static_graph__signed__v0__f4__s1 in 94s | downstream r 0.494 | mse_dd 0.507
+done mech__oracle__mech_true__unsigned__v0__f4__s1 in 1s | downstream r 0.996 | mse_dd 0.010
+done cfm__noisy_context__static_learned__signed__v0__f4__s1 in 112s | downstream r 0.540 | mse_dd 0.497 | edge AUC 0.67
+done cfm__noisy_context__static_learned__unsigned__v0__f4__s1 in 112s | downstream r 0.213 | mse_dd 0.926 | edge AUC 0.55
+done mech__oracle__mech_mlp__unsigned__v0__f4__s1 in 18s | downstream r 0.059 | mse_dd 14.725
+done cfm__noisy_context__graph_cfm__signed__v0__f4__s1 in 110s | downstream r 0.308 | mse_dd 0.932 | edge AUC 0.55
+done cfm__noisy_context__graph_cfm__unsigned__v0__f4__s1 in 110s | downstream r -0.374 | mse_dd 1.647 | edge AUC 0.54
+done mech__oracle__mech_graph__unsigned__v0__f4__s1 in 20s | downstream r 0.937 | mse_dd 0.034
+done mech__noisy__mech_true__unsigned__v0__f4__s1 in 2s | downstream r 0.997 | mse_dd 0.005
+done mech__oracle__mech_mlp__unsigned__v1__f4__s1 in 20s | downstream r 0.004 | mse_dd 14.800
+done mech__oracle__mech_graph_learned__unsigned__v0__f4__s1 in 23s | downstream r 0.938 | mse_dd 0.043
+done mech__oracle__mech_graph__unsigned__v1__f4__s1 in 24s | downstream r 0.638 | mse_dd 0.109
+done mech__oracle__mech_graph_learned__unsigned__v1__f4__s1 in 22s | downstream r 0.768 | mse_dd 0.078
+done mech__noisy__mech_mlp__unsigned__v0__f4__s1 in 15s | downstream r 0.749 | mse_dd 10.259
+done mech__noisy__mech_graph__unsigned__v0__f4__s1 in 21s | downstream r 0.365 | mse_dd 0.535
+done mech__noisy__mech_graph__signed__v0__f4__s1 in 26s | downstream r 0.391 | mse_dd 0.663
+done mech__noisy__mech_graph_learned__unsigned__v0__f4__s1 in 30s | downstream r 0.338 | mse_dd 0.542 | edge AUC 0.66
+done mech__noisy__mech_mlp__unsigned__v1__f4__s1 in 22s | downstream r 0.513 | mse_dd 12.163
+done mech__noisy__mech_graph_learned__signed__v0__f4__s1 in 30s | downstream r 0.386 | mse_dd 0.657 | edge AUC 0.72
+done mech__noisy__mech_graph__unsigned__v1__f4__s1 in 23s | downstream r 0.230 | mse_dd 0.913
+done mech__noisy__mech_graph__signed__v1__f4__s1 in 20s | downstream r 0.358 | mse_dd 0.561
+done mech__noisy_context__mech_true__unsigned__v0__f4__s1 in 1s | downstream r 0.997 | mse_dd 0.007
+done mech__noisy__mech_graph_learned__unsigned__v1__f4__s1 in 22s | downstream r 0.187 | mse_dd 0.838 | edge AUC 0.66
+done mech__noisy__mech_graph_learned__signed__v1__f4__s1 in 23s | downstream r 0.306 | mse_dd 0.680 | edge AUC 0.71
+done mech__noisy_context__mech_mlp__unsigned__v0__f4__s1 in 18s | downstream r 0.743 | mse_dd 8.553
+done mech__noisy_context__mech_graph__unsigned__v0__f4__s1 in 20s | downstream r 0.275 | mse_dd 0.801
+done mech__noisy_context__mech_graph__signed__v0__f4__s1 in 25s | downstream r 0.316 | mse_dd 0.657
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f4__s1 in 26s | downstream r 0.373 | mse_dd 0.675 | edge AUC 0.63
+done mech__noisy_context__mech_graph_learned__signed__v0__f4__s1 in 28s | downstream r 0.362 | mse_dd 0.618 | edge AUC 0.69
+done mech__noisy_context__mech_mlp__unsigned__v1__f4__s1 in 21s | downstream r 0.606 | mse_dd 18.378
+done mech__noisy_context__mech_graph__unsigned__v1__f4__s1 in 24s | downstream r 0.367 | mse_dd 0.813
+done mech__noisy_context__mech_graph__signed__v1__f4__s1 in 21s | downstream r 0.382 | mse_dd 0.689
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f4__s1 in 27s | downstream r 0.180 | mse_dd 0.915 | edge AUC 0.64
+done mech__noisy_context__mech_graph_learned__signed__v1__f4__s1 in 28s | downstream r 0.357 | mse_dd 0.619 | edge AUC 0.73
+done cfm__noisy__static_graph__unsigned__v0__f0__s2 in 117s | downstream r 0.045 | mse_dd 1.450
+done cfm__noisy__static_graph__signed__v0__f0__s2 in 118s | downstream r 0.747 | mse_dd 0.694
+done cfm__noisy__static_learned__unsigned__v0__f0__s2 in 116s | downstream r -0.020 | mse_dd 1.574 | edge AUC 0.62
+done cfm__noisy__static_learned__signed__v0__f0__s2 in 117s | downstream r 0.770 | mse_dd 0.633 | edge AUC 0.61
+done cfm__noisy__graph_cfm__signed__v0__f0__s2 in 108s | downstream r 0.800 | mse_dd 0.530 | edge AUC 0.61
+done cfm__noisy__graph_cfm__unsigned__v0__f0__s2 in 108s | downstream r 0.287 | mse_dd 1.534 | edge AUC 0.55
+done cfm__noisy_context__static_graph__unsigned__v0__f0__s2 in 110s | downstream r 0.250 | mse_dd 1.618
+done cfm__noisy_context__static_graph__signed__v0__f0__s2 in 110s | downstream r 0.698 | mse_dd 1.187
+done cfm__noisy_context__static_learned__unsigned__v0__f0__s2 in 114s | downstream r 0.327 | mse_dd 1.549 | edge AUC 0.60
+done cfm__noisy_context__static_learned__signed__v0__f0__s2 in 117s | downstream r 0.767 | mse_dd 1.015 | edge AUC 0.62
+done mech__oracle__mech_true__unsigned__v0__f0__s2 in 1s | downstream r 0.999 | mse_dd 0.005
+done cfm__noisy_context__graph_cfm__signed__v0__f0__s2 in 112s | downstream r 0.773 | mse_dd 1.225 | edge AUC 0.58
+done cfm__noisy_context__graph_cfm__unsigned__v0__f0__s2 in 112s | downstream r 0.080 | mse_dd 2.490 | edge AUC 0.52
+done mech__oracle__mech_mlp__unsigned__v0__f0__s2 in 15s | downstream r -0.658 | mse_dd 19.860
+done mech__oracle__mech_graph__unsigned__v0__f0__s2 in 19s | downstream r 0.526 | mse_dd 0.143
+done mech__oracle__mech_graph_learned__unsigned__v0__f0__s2 in 20s | downstream r 0.799 | mse_dd 0.078
+done mech__noisy__mech_true__unsigned__v0__f0__s2 in 1s | downstream r 1.000 | mse_dd 0.002
+done mech__oracle__mech_mlp__unsigned__v1__f0__s2 in 17s | downstream r -0.493 | mse_dd 35.616
+done mech__oracle__mech_graph__unsigned__v1__f0__s2 in 25s | downstream r -0.197 | mse_dd 0.785done mech__oracle__mech_graph_learned__unsigned__v1__f0__s2 in 25s | downstream r 0.389 | mse_dd 0.208
+
+done mech__noisy__mech_mlp__unsigned__v0__f0__s2 in 16s | downstream r 0.401 | mse_dd 2.980
+done mech__noisy__mech_graph__unsigned__v0__f0__s2 in 30s | downstream r 0.847 | mse_dd 0.879
+done mech__noisy__mech_graph__signed__v0__f0__s2 in 30s | downstream r 0.894 | mse_dd 0.378
+done mech__noisy__mech_graph_learned__unsigned__v0__f0__s2 in 39s | downstream r 0.807 | mse_dd 0.848 | edge AUC 0.71
+done mech__noisy__mech_mlp__unsigned__v1__f0__s2 in 25s | downstream r 0.248 | mse_dd 3.016
+done mech__noisy__mech_graph_learned__signed__v0__f0__s2 in 32s | downstream r 0.885 | mse_dd 0.398 | edge AUC 0.79
+done mech__noisy__mech_graph__unsigned__v1__f0__s2 in 25s | downstream r -0.132 | mse_dd 1.836
+done mech__noisy_context__mech_true__unsigned__v0__f0__s2 in 1s | downstream r 1.000 | mse_dd 0.002
+done mech__noisy__mech_graph__signed__v1__f0__s2 in 27s | downstream r 0.769 | mse_dd 0.654
+done mech__noisy__mech_graph_learned__unsigned__v1__f0__s2 in 31s | downstream r 0.018 | mse_dd 1.596 | edge AUC 0.74
+done mech__noisy_context__mech_mlp__unsigned__v0__f0__s2 in 23s | downstream r 0.455 | mse_dd 2.798
+done mech__noisy__mech_graph_learned__signed__v1__f0__s2 in 32s | downstream r 0.810 | mse_dd 0.549 | edge AUC 0.75
+done mech__noisy_context__mech_graph__unsigned__v0__f0__s2 in 25s | downstream r 0.797 | mse_dd 1.171
+done mech__noisy_context__mech_graph__signed__v0__f0__s2 in 22s | downstream r 0.914 | mse_dd 0.693
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f0__s2 in 29s | downstream r 0.863 | mse_dd 1.104 | edge AUC 0.72
+done mech__noisy_context__mech_graph_learned__signed__v0__f0__s2 in 38s | downstream r 0.908 | mse_dd 0.685 | edge AUC 0.73
+done mech__noisy_context__mech_mlp__unsigned__v1__f0__s2 in 29s | downstream r 0.419 | mse_dd 3.067
+done mech__noisy_context__mech_graph__unsigned__v1__f0__s2 in 30s | downstream r 0.329 | mse_dd 2.247
+done mech__noisy_context__mech_graph__signed__v1__f0__s2 in 31s | downstream r 0.885 | mse_dd 0.870
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f0__s2 in 29s | downstream r 0.324 | mse_dd 2.245 | edge AUC 0.75
+done mech__noisy_context__mech_graph_learned__signed__v1__f0__s2 in 21s | downstream r 0.871 | mse_dd 0.859 | edge AUC 0.73
+done cfm__noisy__static_graph__unsigned__v0__f1__s2 in 121s | downstream r 0.051 | mse_dd 1.502
+done cfm__noisy__static_graph__signed__v0__f1__s2 in 121s | downstream r 0.255 | mse_dd 0.705
+done cfm__noisy__static_learned__unsigned__v0__f1__s2 in 121s | downstream r 0.074 | mse_dd 1.415 | edge AUC 0.62
+done cfm__noisy__static_learned__signed__v0__f1__s2 in 123s | downstream r 0.261 | mse_dd 0.683 | edge AUC 0.63
+done cfm__noisy__graph_cfm__unsigned__v0__f1__s2 in 121s | downstream r -0.106 | mse_dd 1.274 | edge AUC 0.53
+done cfm__noisy__graph_cfm__signed__v0__f1__s2 in 105s | downstream r 0.287 | mse_dd 0.667 | edge AUC 0.60
+done cfm__noisy_context__static_graph__unsigned__v0__f1__s2 in 127s | downstream r -0.029 | mse_dd 1.521done cfm__noisy_context__static_learned__unsigned__v0__f1__s2 in 127s | downstream r -0.023 | mse_dd 1.456 | edge AUC 0.58
+
+done cfm__noisy_context__static_graph__signed__v0__f1__s2 in 127s | downstream r 0.479 | mse_dd 0.725
+done cfm__noisy_context__static_learned__signed__v0__f1__s2 in 127s | downstream r 0.503 | mse_dd 0.636 | edge AUC 0.62
+done cfm__noisy_context__graph_cfm__unsigned__v0__f1__s2 in 126s | downstream r -0.199 | mse_dd 1.899 | edge AUC 0.50
+done cfm__noisy_context__graph_cfm__signed__v0__f1__s2 in 123s | downstream r 0.361 | mse_dd 0.735 | edge AUC 0.61
+done mech__oracle__mech_true__unsigned__v0__f1__s2 in 1s | downstream r 0.999 | mse_dd 0.004
+done mech__oracle__mech_mlp__unsigned__v0__f1__s2 in 18s | downstream r -0.071 | mse_dd 0.572
+done mech__oracle__mech_graph__unsigned__v0__f1__s2 in 23s | downstream r 0.821 | mse_dd 0.051
+done mech__oracle__mech_graph_learned__unsigned__v0__f1__s2 in 27s | downstream r 0.810 | mse_dd 0.044
+done mech__oracle__mech_mlp__unsigned__v1__f1__s2 in 26s | downstream r 0.164 | mse_dd 0.769
+done mech__oracle__mech_graph__unsigned__v1__f1__s2 in 27s | downstream r 0.071 | mse_dd 0.290
+done mech__noisy__mech_true__unsigned__v0__f1__s2 in 1s | downstream r 0.999 | mse_dd 0.001
+done mech__oracle__mech_graph_learned__unsigned__v1__f1__s2 in 23s | downstream r 0.568 | mse_dd 0.093
+done mech__noisy__mech_mlp__unsigned__v0__f1__s2 in 15s | downstream r -0.077 | mse_dd 6.623
+done mech__noisy__mech_graph__unsigned__v0__f1__s2 in 29s | downstream r 0.309 | mse_dd 0.476
+done mech__noisy__mech_graph__signed__v0__f1__s2 in 30s | downstream r 0.443 | mse_dd 0.310
+done mech__noisy__mech_mlp__unsigned__v1__f1__s2 in 27s | downstream r 0.286 | mse_dd 7.076
+done mech__noisy__mech_graph_learned__unsigned__v0__f1__s2 in 40s | downstream r 0.324 | mse_dd 0.498 | edge AUC 0.76
+done mech__noisy__mech_graph_learned__signed__v0__f1__s2 in 39s | downstream r 0.444 | mse_dd 0.286 | edge AUC 0.78
+done mech__noisy__mech_graph__unsigned__v1__f1__s2 in 24s | downstream r 0.304 | mse_dd 0.752
+done mech__noisy_context__mech_true__unsigned__v0__f1__s2 in 3s | downstream r 0.998 | mse_dd 0.002
+done mech__noisy__mech_graph__signed__v1__f1__s2 in 24s | downstream r 0.430 | mse_dd 0.352
+done mech__noisy__mech_graph_learned__unsigned__v1__f1__s2 in 31s | downstream r 0.154 | mse_dd 0.799 | edge AUC 0.78
+done mech__noisy_context__mech_mlp__unsigned__v0__f1__s2 in 24s | downstream r 0.221 | mse_dd 4.292
+done mech__noisy__mech_graph_learned__signed__v1__f1__s2 in 32s | downstream r 0.443 | mse_dd 0.330 | edge AUC 0.78
+done mech__noisy_context__mech_graph__unsigned__v0__f1__s2 in 23s | downstream r 0.313 | mse_dd 1.012
+done mech__noisy_context__mech_graph__signed__v0__f1__s2 in 20s | downstream r 0.559 | mse_dd 0.357
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f1__s2 in 22s | downstream r 0.362 | mse_dd 0.967 | edge AUC 0.74
+done mech__noisy_context__mech_mlp__unsigned__v1__f1__s2 in 25s | downstream r 0.248 | mse_dd 10.403
+done mech__noisy_context__mech_graph__unsigned__v1__f1__s2 in 26s | downstream r 0.383 | mse_dd 0.881
+done mech__noisy_context__mech_graph_learned__signed__v0__f1__s2 in 34s | downstream r 0.593 | mse_dd 0.378 | edge AUC 0.74
+done mech__noisy_context__mech_graph__signed__v1__f1__s2 in 28s | downstream r 0.390 | mse_dd 0.546
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f1__s2 in 24s | downstream r 0.281 | mse_dd 0.768 | edge AUC 0.77
+done mech__noisy_context__mech_graph_learned__signed__v1__f1__s2 in 21s | downstream r 0.494 | mse_dd 0.491 | edge AUC 0.76
+done cfm__noisy__static_graph__unsigned__v0__f2__s2 in 98s | downstream r 0.485 | mse_dd 1.274
+done cfm__noisy__static_graph__signed__v0__f2__s2 in 115s | downstream r 0.624 | mse_dd 0.830
+done cfm__noisy__static_learned__unsigned__v0__f2__s2 in 117s | downstream r 0.352 | mse_dd 1.223 | edge AUC 0.57
+done cfm__noisy__static_learned__signed__v0__f2__s2 in 118s | downstream r 0.523 | mse_dd 0.905 | edge AUC 0.66
+done cfm__noisy__graph_cfm__unsigned__v0__f2__s2 in 117s | downstream r -0.074 | mse_dd 1.611 | edge AUC 0.55
+done cfm__noisy__graph_cfm__signed__v0__f2__s2 in 114s | downstream r 0.628 | mse_dd 0.996 | edge AUC 0.58
+done cfm__noisy_context__static_graph__unsigned__v0__f2__s2 in 37s | downstream r 0.115 | mse_dd 1.414
+done mech__oracle__mech_true__unsigned__v0__f2__s2 in 1s | downstream r 0.999 | mse_dd 0.005
+done mech__oracle__mech_mlp__unsigned__v0__f2__s2 in 19s | downstream r -0.111 | mse_dd 14.950
+done cfm__noisy_context__static_graph__signed__v0__f2__s2 in 102s | downstream r 0.393 | mse_dd 0.985
+done cfm__noisy_context__static_learned__unsigned__v0__f2__s2 in 109s | downstream r 0.137 | mse_dd 1.327 | edge AUC 0.57
+done mech__oracle__mech_graph__unsigned__v0__f2__s2 in 22s | downstream r 0.733 | mse_dd 0.107
+done cfm__noisy_context__static_learned__signed__v0__f2__s2 in 114s | downstream r 0.367 | mse_dd 1.037 | edge AUC 0.63
+done cfm__noisy_context__graph_cfm__unsigned__v0__f2__s2 in 112s | downstream r 0.068 | mse_dd 1.358 | edge AUC 0.53
+done cfm__noisy_context__graph_cfm__signed__v0__f2__s2 in 109s | downstream r 0.632 | mse_dd 0.937 | edge AUC 0.61
+done mech__oracle__mech_graph_learned__unsigned__v0__f2__s2 in 19s | downstream r 0.857 | mse_dd 0.063
+done mech__oracle__mech_mlp__unsigned__v1__f2__s2 in 14s | downstream r -0.012 | mse_dd 21.455
+done mech__noisy__mech_true__unsigned__v0__f2__s2 in 1s | downstream r 1.000 | mse_dd 0.002
+done mech__oracle__mech_graph__unsigned__v1__f2__s2 in 19s | downstream r 0.202 | mse_dd 0.718
+done mech__oracle__mech_graph_learned__unsigned__v1__f2__s2 in 21s | downstream r 0.535 | mse_dd 0.131
+done mech__noisy__mech_mlp__unsigned__v0__f2__s2 in 16s | downstream r -0.268 | mse_dd 4.048
+done mech__noisy__mech_graph__unsigned__v0__f2__s2 in 24s | downstream r 0.426 | mse_dd 0.762
+done mech__noisy__mech_graph__signed__v0__f2__s2 in 27s | downstream r 0.727 | mse_dd 0.568
+done mech__noisy__mech_graph_learned__unsigned__v0__f2__s2 in 40s | downstream r 0.304 | mse_dd 0.948 | edge AUC 0.73
+done mech__noisy__mech_mlp__unsigned__v1__f2__s2 in 27s | downstream r -0.266 | mse_dd 7.842
+done mech__noisy__mech_graph__unsigned__v1__f2__s2 in 28s | downstream r 0.389 | mse_dd 1.240
+done mech__noisy__mech_graph_learned__signed__v0__f2__s2 in 37s | downstream r 0.694 | mse_dd 0.594 | edge AUC 0.77
+done mech__noisy__mech_graph__signed__v1__f2__s2 in 20s | downstream r 0.433 | mse_dd 0.816
+done mech__noisy_context__mech_true__unsigned__v0__f2__s2 in 1s | downstream r 1.000 | mse_dd 0.002
+done mech__noisy__mech_graph_learned__unsigned__v1__f2__s2 in 20s | downstream r -0.008 | mse_dd 1.665 | edge AUC 0.75
+done mech__noisy__mech_graph_learned__signed__v1__f2__s2 in 27s | downstream r 0.435 | mse_dd 0.840 | edge AUC 0.75
+done mech__noisy_context__mech_mlp__unsigned__v0__f2__s2 in 22s | downstream r 0.658 | mse_dd 0.872
+done mech__noisy_context__mech_graph__unsigned__v0__f2__s2 in 22s | downstream r 0.610 | mse_dd 0.715
+done mech__noisy_context__mech_graph__signed__v0__f2__s2 in 28s | downstream r 0.613 | mse_dd 0.949
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f2__s2 in 30s | downstream r 0.536 | mse_dd 0.836 | edge AUC 0.76
+done mech__noisy_context__mech_graph_learned__signed__v0__f2__s2 in 27s | downstream r 0.635 | mse_dd 0.902 | edge AUC 0.78
+done mech__noisy_context__mech_mlp__unsigned__v1__f2__s2 in 27s | downstream r -0.015 | mse_dd 3.171
+done mech__noisy_context__mech_graph__signed__v1__f2__s2 in 27s | downstream r 0.600 | mse_dd 0.741
+done mech__noisy_context__mech_graph__unsigned__v1__f2__s2 in 27s | downstream r 0.300 | mse_dd 1.196
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f2__s2 in 27s | downstream r 0.489 | mse_dd 1.156 | edge AUC 0.78
+done mech__noisy_context__mech_graph_learned__signed__v1__f2__s2 in 26s | downstream r 0.588 | mse_dd 0.752 | edge AUC 0.74
+done cfm__noisy__static_graph__unsigned__v0__f3__s2 in 48s | downstream r -0.372 | mse_dd 1.453
+done cfm__noisy__static_graph__signed__v0__f3__s2 in 118s | downstream r 0.374 | mse_dd 0.858
+done cfm__noisy__static_learned__signed__v0__f3__s2 in 118s | downstream r 0.335 | mse_dd 0.867 | edge AUC 0.65
+done cfm__noisy__static_learned__unsigned__v0__f3__s2 in 118s | downstream r -0.406 | mse_dd 1.525 | edge AUC 0.59
+done cfm__noisy__graph_cfm__unsigned__v0__f3__s2 in 118s | downstream r 0.089 | mse_dd 1.095 | edge AUC 0.53
+done cfm__noisy__graph_cfm__signed__v0__f3__s2 in 117s | downstream r 0.078 | mse_dd 0.943 | edge AUC 0.60
+done cfm__noisy_context__static_graph__unsigned__v0__f3__s2 in 91s | downstream r -0.438 | mse_dd 1.681
+done mech__oracle__mech_true__unsigned__v0__f3__s2 in 1s | downstream r 0.995 | mse_dd 0.009
+done mech__oracle__mech_mlp__unsigned__v0__f3__s2 in 20s | downstream r 0.409 | mse_dd 1.298
+done mech__oracle__mech_graph__unsigned__v0__f3__s2 in 23s | downstream r 0.859 | mse_dd 0.068
+done cfm__noisy_context__static_learned__signed__v0__f3__s2 in 113s | downstream r 0.437 | mse_dd 0.850 | edge AUC 0.61
+done cfm__noisy_context__static_graph__signed__v0__f3__s2 in 113s | downstream r 0.488 | mse_dd 0.790
+done cfm__noisy_context__static_learned__unsigned__v0__f3__s2 in 114s | downstream r -0.337 | mse_dd 1.389 | edge AUC 0.57
+done cfm__noisy_context__graph_cfm__unsigned__v0__f3__s2 in 111s | downstream r -0.206 | mse_dd 1.285 | edge AUC 0.51
+done cfm__noisy_context__graph_cfm__signed__v0__f3__s2 in 110s | downstream r 0.194 | mse_dd 1.030 | edge AUC 0.56
+done mech__noisy__mech_true__unsigned__v0__f3__s2 in 5s | downstream r 0.999 | mse_dd 0.003
+done mech__oracle__mech_graph_learned__unsigned__v0__f3__s2 in 27s | downstream r 0.963 | mse_dd 0.031
+done mech__oracle__mech_mlp__unsigned__v1__f3__s2 in 29s | downstream r 0.286 | mse_dd 2.906
+done mech__oracle__mech_graph__unsigned__v1__f3__s2 in 30s | downstream r 0.254 | mse_dd 0.357
+done mech__oracle__mech_graph_learned__unsigned__v1__f3__s2 in 30s | downstream r 0.622 | mse_dd 0.123
+done mech__noisy__mech_mlp__unsigned__v0__f3__s2 in 20s | downstream r 0.314 | mse_dd 1.150
+done mech__noisy__mech_graph__unsigned__v0__f3__s2 in 24s | downstream r 0.502 | mse_dd 0.860
+done mech__noisy__mech_graph__signed__v0__f3__s2 in 30s | downstream r 0.830 | mse_dd 0.416
+done mech__noisy__mech_mlp__unsigned__v1__f3__s2 in 31s | downstream r 0.245 | mse_dd 1.406
+done mech__noisy__mech_graph__unsigned__v1__f3__s2 in 31s | downstream r 0.074 | mse_dd 1.208
+done mech__noisy__mech_graph_learned__unsigned__v0__f3__s2 in 41s | downstream r 0.481 | mse_dd 0.906 | edge AUC 0.76
+done mech__noisy__mech_graph_learned__signed__v0__f3__s2 in 41s | downstream r 0.851 | mse_dd 0.401 | edge AUC 0.76
+done mech__noisy__mech_graph__signed__v1__f3__s2 in 20s | downstream r 0.664 | mse_dd 0.676
+done mech__noisy_context__mech_true__unsigned__v0__f3__s2 in 1s | downstream r 0.997 | mse_dd 0.005
+done mech__noisy__mech_graph_learned__unsigned__v1__f3__s2 in 23s | downstream r 0.042 | mse_dd 1.290 | edge AUC 0.76
+done mech__noisy__mech_graph_learned__signed__v1__f3__s2 in 24s | downstream r 0.708 | mse_dd 0.614 | edge AUC 0.79
+done mech__noisy_context__mech_mlp__unsigned__v0__f3__s2 in 20s | downstream r 0.430 | mse_dd 1.663
+done mech__noisy_context__mech_graph__unsigned__v0__f3__s2 in 21s | downstream r 0.332 | mse_dd 1.018
+done mech__noisy_context__mech_graph__signed__v0__f3__s2 in 28s | downstream r 0.713 | mse_dd 0.653
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f3__s2 in 30s | downstream r 0.395 | mse_dd 0.993 | edge AUC 0.73
+done mech__noisy_context__mech_graph_learned__signed__v0__f3__s2 in 26s | downstream r 0.734 | mse_dd 0.637 | edge AUC 0.75
+done mech__noisy_context__mech_mlp__unsigned__v1__f3__s2 in 20s | downstream r 0.030 | mse_dd 2.174
+done mech__noisy_context__mech_graph__unsigned__v1__f3__s2 in 26s | downstream r -0.041 | mse_dd 1.435
+done mech__noisy_context__mech_graph__signed__v1__f3__s2 in 26s | downstream r 0.546 | mse_dd 0.797
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f3__s2 in 28s | downstream r -0.056 | mse_dd 1.328 | edge AUC 0.77
+done mech__noisy_context__mech_graph_learned__signed__v1__f3__s2 in 28s | downstream r 0.598 | mse_dd 0.805 | edge AUC 0.77
+done cfm__noisy__static_graph__signed__v0__f4__s2 in 115s | downstream r 0.499 | mse_dd 0.590
+done cfm__noisy__static_graph__unsigned__v0__f4__s2 in 115s | downstream r 0.269 | mse_dd 1.151
+done cfm__noisy__static_learned__unsigned__v0__f4__s2 in 117s | downstream r 0.087 | mse_dd 1.313 | edge AUC 0.60
+done cfm__noisy__static_learned__signed__v0__f4__s2 in 117s | downstream r 0.519 | mse_dd 0.517 | edge AUC 0.65
+done cfm__noisy__graph_cfm__unsigned__v0__f4__s2 in 109s | downstream r -0.111 | mse_dd 1.395 | edge AUC 0.51
+done cfm__noisy__graph_cfm__signed__v0__f4__s2 in 108s | downstream r 0.359 | mse_dd 0.712 | edge AUC 0.61
+done cfm__noisy_context__static_graph__signed__v0__f4__s2 in 99s | downstream r 0.449 | mse_dd 0.614
+done cfm__noisy_context__static_graph__unsigned__v0__f4__s2 in 99s | downstream r 0.133 | mse_dd 0.914
+done mech__oracle__mech_true__unsigned__v0__f4__s2 in 1s | downstream r 0.999 | mse_dd 0.005
+done cfm__noisy_context__static_learned__signed__v0__f4__s2 in 115s | downstream r 0.431 | mse_dd 0.585 | edge AUC 0.62
+done cfm__noisy_context__static_learned__unsigned__v0__f4__s2 in 115s | downstream r 0.098 | mse_dd 1.006 | edge AUC 0.55
+done mech__oracle__mech_mlp__unsigned__v0__f4__s2 in 18s | downstream r 0.449 | mse_dd 6.058
+done cfm__noisy_context__graph_cfm__signed__v0__f4__s2 in 113s | downstream r 0.377 | mse_dd 0.671 | edge AUC 0.58
+done cfm__noisy_context__graph_cfm__unsigned__v0__f4__s2 in 114s | downstream r 0.105 | mse_dd 1.179 | edge AUC 0.52
+done mech__oracle__mech_graph__unsigned__v0__f4__s2 in 19s | downstream r -0.108 | mse_dd 0.217
+done mech__noisy__mech_true__unsigned__v0__f4__s2 in 1s | downstream r 1.000 | mse_dd 0.001
+done mech__oracle__mech_mlp__unsigned__v1__f4__s2 in 18s | downstream r -0.021 | mse_dd 7.453
+done mech__oracle__mech_graph_learned__unsigned__v0__f4__s2 in 24s | downstream r 0.372 | mse_dd 0.105
+done mech__oracle__mech_graph__unsigned__v1__f4__s2 in 25s | downstream r 0.437 | mse_dd 0.704
+done mech__oracle__mech_graph_learned__unsigned__v1__f4__s2 in 24s | downstream r 0.382 | mse_dd 0.206
+done mech__noisy__mech_mlp__unsigned__v0__f4__s2 in 17s | downstream r -0.303 | mse_dd 7.940
+done mech__noisy__mech_graph__unsigned__v0__f4__s2 in 20s | downstream r 0.471 | mse_dd 0.740
+done mech__noisy__mech_graph__signed__v0__f4__s2 in 23s | downstream r 0.550 | mse_dd 0.464
+done mech__noisy__mech_graph_learned__unsigned__v0__f4__s2 in 28s | downstream r 0.312 | mse_dd 0.885 | edge AUC 0.75
+done mech__noisy__mech_mlp__unsigned__v1__f4__s2 in 22s | downstream r -0.464 | mse_dd 12.601
+done mech__noisy__mech_graph_learned__signed__v0__f4__s2 in 26s | downstream r 0.553 | mse_dd 0.493 | edge AUC 0.79
+done mech__noisy__mech_graph__unsigned__v1__f4__s2 in 23s | downstream r -0.166 | mse_dd 1.558
+done mech__noisy__mech_graph__signed__v1__f4__s2 in 23s | downstream r 0.357 | mse_dd 0.578
+done mech__noisy_context__mech_true__unsigned__v0__f4__s2 in 1s | downstream r 0.999 | mse_dd 0.002
+done mech__noisy__mech_graph_learned__unsigned__v1__f4__s2 in 22s | downstream r -0.375 | mse_dd 1.905 | edge AUC 0.79
+done mech__noisy__mech_graph_learned__signed__v1__f4__s2 in 22s | downstream r 0.528 | mse_dd 0.598 | edge AUC 0.78
+done mech__noisy_context__mech_mlp__unsigned__v0__f4__s2 in 18s | downstream r -0.037 | mse_dd 3.714
+done mech__noisy_context__mech_graph__unsigned__v0__f4__s2 in 22s | downstream r -0.052 | mse_dd 1.298
+done mech__noisy_context__mech_graph__signed__v0__f4__s2 in 27s | downstream r 0.647 | mse_dd 0.508
+done mech__noisy_context__mech_graph_learned__unsigned__v0__f4__s2 in 36s | downstream r 0.072 | mse_dd 1.105 | edge AUC 0.74
+done mech__noisy_context__mech_mlp__unsigned__v1__f4__s2 in 26s | downstream r -0.288 | mse_dd 12.269
+done mech__noisy_context__mech_graph__unsigned__v1__f4__s2 in 27s | downstream r 0.163 | mse_dd 1.291
+done mech__noisy_context__mech_graph_learned__signed__v0__f4__s2 in 37s | downstream r 0.625 | mse_dd 0.506 | edge AUC 0.75
+done mech__noisy_context__mech_graph__signed__v1__f4__s2 in 21s | downstream r 0.372 | mse_dd 0.743
+done mech__noisy_context__mech_graph_learned__unsigned__v1__f4__s2 in 21s | downstream r -0.051 | mse_dd 1.312 | edge AUC 0.74
+done mech__noisy_context__mech_graph_learned__signed__v1__f4__s2 in 22s | downstream r 0.445 | mse_dd 0.651 | edge AUC 0.79

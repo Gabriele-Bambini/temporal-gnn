@@ -1,0 +1,21 @@
+== gastrulation-human (22s)
+  nass_full      own i>=2 (0.3351, 0.2755, 0.2905) | ctx i>=1 (0.3292, 0.2735, 0.2886) | ctx i>=2 (0.3365, 0.2765, 0.2948)
+  nass_full+grn  own i>=2 (0.3345, 0.2741, 0.2905) | ctx i>=1 (0.328, 0.2718, 0.2876) | ctx i>=2 (0.3353, 0.2747, 0.2937)
+  trend          own i>=2 (-0.1793, 0.1011, 0.0916) | ctx i>=1 (-0.1583, 0.1053, 0.0915) | ctx i>=2 (-0.1691, 0.102, 0.0903)
+  check nass_full_own_i>=2       PASS (0.3351, 0.2755, 0.2905) vs (0.3351, 0.2755, 0.2905)
+  check nass_full_ctx_i>=2       PASS (0.3365, 0.2765, 0.2948) vs (0.337, 0.277, 0.295)
+  check trend_ctx_i>=1           PASS (-0.1583,) vs (-0.158,)
+  check node_cache               PASS  vs 
+  check edges                    PASS [24820127, 827338] vs 
+== pancreas-human (9s)
+  nass_full      own i>=2 (0.308, 0.221, 0.283) | ctx i>=1 (0.3203, 0.2213, 0.2809) | ctx i>=2 (0.3223, 0.2212, 0.2798)
+  nass_full+grn  own i>=2 (0.3273, 0.2297, 0.2944) | ctx i>=1 (0.3374, 0.2294, 0.2957) | ctx i>=2 (0.3408, 0.2299, 0.2958)
+  trend          own i>=2 (0.1347, 0.2203, 0.216) | ctx i>=1 (0.1769, 0.2253, 0.2209) | ctx i>=2 (0.1669, 0.2254, 0.2148)
+  check nass_full_own_i>=2       PASS (0.308, 0.221, 0.283) vs (0.308, 0.221, 0.283)
+  check nass_full_ctx_i>=2       PASS (0.3223, 0.2212, 0.2798) vs (0.322, 0.221, 0.28)
+  check nass_full+grn_own_i>=2   PASS (0.3273, 0.2297, 0.2944) vs (0.327, 0.23, 0.294)
+  check trend_ctx_i>=1           PASS (0.1769,) vs (0.177,)
+  check trend_ctx_i>=2           PASS (0.1669,) vs (0.167,)
+  check node_cache               PASS  vs 
+  check edges                    PASS [14139097, 942606] vs 
+ANCHORS ALL PASS

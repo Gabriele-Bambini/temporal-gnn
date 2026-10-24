@@ -1,0 +1,8 @@
+pancreas-human orig {'median_R2_trend': 0.128, 'median_R2_trend+dP0': 0.682, 'median_R2_trend+dP0+lag1+rev4': 0.692, 'mean_R2_trend+dP0+lag1+rev4': 0.703, 'median_R2_all_on_nonzero_inc_genes': 0.74, 'share_genes_nonzero_inc': 0.673, 'median_sd_inc_over_sd_target': 0.1613}
+pancreas-human l1 {'median_R2_trend': 0.714, 'median_R2_trend+dP0': 0.715, 'median_R2_trend+dP0+lag1+rev4': 0.73, 'mean_R2_trend+dP0+lag1+rev4': 0.718, 'median_R2_all_on_nonzero_inc_genes': 0.732, 'share_genes_nonzero_inc': 0.693, 'median_sd_inc_over_sd_target': 0.5201}
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\hpc\dist_bridge.py:120: RuntimeWarning: invalid value encountered in divide
+  out[nb] = stats.nbinom.cdf(e[nb], (lam ** 2 / (var - lam))[nb][:, None], (lam / var)[nb][:, None])
+pancreas-human {'corr': 0.9924, 'max_abs_diff': 0.0814, 'sinkhorn_err': 9.942273115903788e-10, 'n_coupled': 1120}
+gastrulation-human orig {'median_R2_trend': 0.043, 'median_R2_trend+dP0': 0.795, 'median_R2_trend+dP0+lag1+rev4': 0.8, 'mean_R2_trend+dP0+lag1+rev4': 0.78, 'median_R2_all_on_nonzero_inc_genes': 0.822, 'share_genes_nonzero_inc': 0.564, 'median_sd_inc_over_sd_target': 0.103}
+gastrulation-human l1 {'median_R2_trend': 0.738, 'median_R2_trend+dP0': 0.738, 'median_R2_trend+dP0+lag1+rev4': 0.745, 'mean_R2_trend+dP0+lag1+rev4': 0.686, 'median_R2_all_on_nonzero_inc_genes': 0.749, 'share_genes_nonzero_inc': 0.582, 'median_sd_inc_over_sd_target': 0.453}
+gastrulation-human {'corr': 0.9965, 'max_abs_diff': 0.0404, 'sinkhorn_err': 5.358538057720352e-10, 'n_coupled': 20}

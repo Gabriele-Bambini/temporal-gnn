@@ -1,0 +1,7 @@
+arm,energy_distance,mean_error
+default,0.34817,1.00885
+default+refit x1,0.33308,0.98482
+default+refit x2,0.33458,0.98564
+valswap,0.40905,1.08025
+valswap+refit x1,0.36162,0.99329
+valswap+refit x2,0.33532,0.98776

@@ -1,0 +1,194 @@
+
+===== gastrulation-human  genes=21430  transitions=29
+ groups (mean frac genes): {'BZ': 0.455, 'UP': 0.043, 'DN': 0.041, 'EX': 0.46}
+ DN obs 25642  exp(interp,noB) 23061  exp(plugin B) 34625  exp(smooth B) 23287
+ UP obs 26917  exp(interp,noB) 14953  exp(plugin B) 20147  exp(smooth B) 19307
+ lag1 linear: {'sum_cov_obs': 22.7403, 'sum_cov_pred_by_noise': -0.9581, 'mean_corr_obs': 0.2823, 'mean_corr_pred_by_noise': -0.2532}  lag1 corr: {'orig': -0.465, 'l1': -0.169, 'linear': 0.282}
+ --- target orig
+  ss share: {'BZ': 0.009, 'UP': 0.467, 'DN': 0.475, 'EX': 0.048}  R2 zc groups 0.959
+  noise share next(plug) 0.226 next(smooth) 0.396 [median 0.402] now(smooth) 0.383 both 0.756
+  pearson ceiling next(plug) 0.880 next(smooth) 0.777
+  model-world ceiling: {'pearson_nan0': 0.696, 'p_at_200_up': 0.464, 'p_at_200_down': 0.564, 'p_ta_up': 0.458, 'p_ta_down': 0.564, 'p_max_up': 0.946, 'p_max_down': 0.913}
+  ties: {'mean_n_at_+5': 928.207, 'mean_n_at_-5': 884.207, 'mean_n_at_0': 9769.966, 'p_max_up_mean': 0.895, 'p_max_down_mean': 0.882}
+  spearman(noise_next, n_b) -0.34  spearman(ZC share, log nb/na) 0.30
+   descr_level_fn                         i>=1: r=0.449 P@200 up=0.003 dn=0.437 | all: r=0.443 up=0.003 dn=0.432
+   oracle_k10_scalars_looloadings         i>=1: r=0.228 P@200 up=0.247 dn=0.245 | all: r=0.227 up=0.241 dn=0.237
+   oracle_k10_scalars_pastloadings        i>=1: r=0.339 P@200 up=0.296 dn=0.383 | all: r=0.339 up=0.296 dn=0.383
+   oracle_k1_scalars_looloadings          i>=1: r=0.025 P@200 up=0.090 dn=0.108 | all: r=0.029 up=0.089 dn=0.106
+   oracle_k1_scalars_pastloadings         i>=1: r=0.031 P@200 up=0.136 dn=0.137 | all: r=0.031 up=0.136 dn=0.137
+   oracle_k3_scalars_looloadings          i>=1: r=0.092 P@200 up=0.179 dn=0.177 | all: r=0.094 up=0.174 dn=0.173
+   oracle_k3_scalars_pastloadings         i>=1: r=0.128 P@200 up=0.195 dn=0.216 | all: r=0.128 up=0.195 dn=0.216
+   oracle_nL_level_obs                    i>=1: r=0.594 P@200 up=0.397 dn=0.542 | all: r=0.568 up=0.383 dn=0.532
+   oracle_n_level_obs_nb                  i>=1: r=0.595 P@200 up=0.395 dn=0.540 | all: r=0.581 up=0.382 dn=0.530
+   oracle_next_interp1_nb                 i>=1: r=0.556 P@200 up=0.348 dn=0.526 | all: r=0.567 up=0.344 dn=0.538
+   oracle_next_interp2_nb                 i>=1: r=0.622 P@200 up=0.422 dn=0.559 | all: r=0.631 up=0.416 dn=0.570
+   oracle_next_smoothB_point              i>=1: r=0.654 P@200 up=0.628 dn=0.677 | all: r=0.659 up=0.623 dn=0.684
+   oracle_scalar_L                        i>=1: r=0.021 P@200 up=0.001 dn=0.000 | all: r=0.010 up=0.001 dn=0.000
+   oracle_zc_groups                       i>=1: r=0.979 P@200 up=0.810 dn=0.790 | all: r=0.979 up=0.800 dn=0.766
+   strict_extrap_point                    i>=1: r=0.335 P@200 up=0.284 dn=0.422 | all: r=0.335 up=0.284 dn=0.422
+   strict_level_fn                        i>=1: r=0.408 P@200 up=0.003 dn=0.400 | all: r=0.408 up=0.003 dn=0.400
+   strict_level_obs_na                    i>=1: r=0.588 P@200 up=0.394 dn=0.540 | all: r=0.575 up=0.381 dn=0.531
+   strict_level_point                     i>=1: r=0.391 P@200 up=0.296 dn=0.447 | all: r=0.378 up=0.286 dn=0.431
+   strict_lowrank3_trend                  i>=1: r=-0.131 P@200 up=0.104 dn=0.103 | all: r=-0.131 up=0.104 dn=0.103
+   strict_trend1                          i>=1: r=-0.465 P@200 up=0.010 dn=0.009 | all: r=-0.465 up=0.010 dn=0.009
+   strict_trend3                          i>=1: r=-0.439 P@200 up=0.011 dn=0.012 | all: r=-0.439 up=0.011 dn=0.012
+ --- target l1
+  ss share: {'BZ': 0.007, 'UP': 0.016, 'DN': 0.02, 'EX': 0.957}  R2 zc groups 0.026
+  noise share next(plug) 0.402 next(smooth) 0.416 [median 0.392] now(smooth) 0.379 both 0.795
+  pearson ceiling next(plug) 0.759 next(smooth) 0.749
+  model-world ceiling: {'pearson_nan0': 0.691, 'p_at_200_up': 0.509, 'p_at_200_down': 0.501, 'p_ta_up': 0.509, 'p_ta_down': 0.501, 'p_max_up': 1.0, 'p_max_down': 1.0}
+  spearman(noise_next, n_b) -0.38  spearman(ZC share, log nb/na) -0.27
+   descr_level_fn                         i>=1: r=0.218 P@200 up=0.166 dn=0.164 | all: r=0.225 up=0.173 dn=0.159
+   oracle_k10_scalars_looloadings         i>=1: r=0.340 P@200 up=0.266 dn=0.247 | all: r=0.350 up=0.274 dn=0.246
+   oracle_k10_scalars_pastloadings        i>=1: r=0.349 P@200 up=0.282 dn=0.274 | all: r=0.349 up=0.282 dn=0.274
+   oracle_k1_scalars_looloadings          i>=1: r=0.169 P@200 up=0.184 dn=0.168 | all: r=0.165 up=0.184 dn=0.165
+   oracle_k1_scalars_pastloadings         i>=1: r=0.161 P@200 up=0.182 dn=0.165 | all: r=0.161 up=0.182 dn=0.165
+   oracle_k3_scalars_looloadings          i>=1: r=0.212 P@200 up=0.216 dn=0.190 | all: r=0.226 up=0.225 dn=0.191
+   oracle_k3_scalars_pastloadings         i>=1: r=0.250 P@200 up=0.220 dn=0.210 | all: r=0.250 up=0.220 dn=0.210
+   oracle_nL_level_obs                    i>=1: r=0.088 P@200 up=0.240 dn=0.255 | all: r=0.083 up=0.238 dn=0.253
+   oracle_n_level_obs_nb                  i>=1: r=0.087 P@200 up=0.241 dn=0.256 | all: r=0.081 up=0.238 dn=0.253
+   oracle_next_interp1_nb                 i>=1: r=0.576 P@200 up=0.413 dn=0.419 | all: r=0.590 up=0.429 dn=0.434
+   oracle_next_interp2_nb                 i>=1: r=0.558 P@200 up=0.428 dn=0.432 | all: r=0.573 up=0.444 dn=0.447
+   oracle_next_smoothB_point              i>=1: r=0.891 P@200 up=0.714 dn=0.713 | all: r=0.895 up=0.720 dn=0.719
+   oracle_scalar_L                        i>=1: r=0.004 P@200 up=0.122 dn=0.129 | all: r=-0.005 up=0.118 dn=0.129
+   oracle_zc_groups                       i>=1: r=0.125 P@200 up=0.016 dn=0.009 | all: r=0.132 up=0.020 dn=0.012
+   strict_extrap_point                    i>=1: r=0.155 P@200 up=0.246 dn=0.247 | all: r=0.155 up=0.246 dn=0.247
+   strict_level_fn                        i>=1: r=-0.013 P@200 up=0.167 dn=0.007 | all: r=-0.013 up=0.167 dn=0.007
+   strict_level_obs_na                    i>=1: r=0.088 P@200 up=0.241 dn=0.255 | all: r=0.077 up=0.237 dn=0.252
+   strict_level_point                     i>=1: r=0.087 P@200 up=0.242 dn=0.256 | all: r=0.084 up=0.234 dn=0.247
+   strict_lowrank3_trend                  i>=1: r=0.029 P@200 up=0.153 dn=0.137 | all: r=0.029 up=0.153 dn=0.137
+   strict_trend1                          i>=1: r=-0.173 P@200 up=0.103 dn=0.094 | all: r=-0.173 up=0.103 dn=0.094
+   strict_trend3                          i>=1: r=-0.064 P@200 up=0.140 dn=0.112 | all: r=-0.064 up=0.140 dn=0.112
+ --- target linear
+  ss share: {'BZ': 0.002, 'UP': 0.004, 'DN': 0.002, 'EX': 0.992}  R2 zc groups 0.008
+  noise share next(plug) 0.393 next(smooth) 0.378 [median 0.169] now(smooth) 0.266 both 0.643
+  analytic linear noise next 0.398 now 0.256
+  pearson ceiling next(plug) 0.786 next(smooth) 0.785
+  model-world ceiling: {'pearson_nan0': 0.77, 'p_at_200_up': 0.588, 'p_at_200_down': 0.592, 'p_ta_up': 0.588, 'p_ta_down': 0.592, 'p_max_up': 1.0, 'p_max_down': 1.0}
+  spearman(noise_next, n_b) -0.39  spearman(ZC share, log nb/na) -0.24
+   descr_level_fn                         i>=1: r=0.599 P@200 up=0.316 dn=0.236 | all: r=0.611 up=0.327 dn=0.228
+   descr_y_on_m_a                         i>=1: r=-0.042 P@200 up=0.385 dn=0.000 | all: r=-0.063 up=0.394 dn=0.000
+   oracle_k10_scalars_looloadings         i>=1: r=0.796 P@200 up=0.389 dn=0.362 | all: r=0.802 up=0.398 dn=0.355
+   oracle_k10_scalars_pastloadings        i>=1: r=0.719 P@200 up=0.395 dn=0.347 | all: r=0.719 up=0.395 dn=0.347
+   oracle_k1_scalars_looloadings          i>=1: r=0.358 P@200 up=0.353 dn=0.228 | all: r=0.377 up=0.360 dn=0.228
+   oracle_k1_scalars_pastloadings         i>=1: r=0.357 P@200 up=0.350 dn=0.226 | all: r=0.357 up=0.350 dn=0.226
+   oracle_k3_scalars_looloadings          i>=1: r=0.657 P@200 up=0.331 dn=0.323 | all: r=0.668 up=0.344 dn=0.318
+   oracle_k3_scalars_pastloadings         i>=1: r=0.551 P@200 up=0.199 dn=0.368 | all: r=0.551 up=0.199 dn=0.368
+   oracle_nL_level_obs                    i>=1: r=0.074 P@200 up=0.349 dn=0.342 | all: r=0.050 up=0.358 dn=0.331
+   oracle_n_level_obs_nb                  i>=1: r=-0.192 P@200 up=0.288 dn=0.317 | all: r=-0.192 up=0.289 dn=0.313
+   oracle_next_interp1_nb                 i>=1: r=0.651 P@200 up=0.500 dn=0.506 | all: r=0.662 up=0.515 dn=0.516
+   oracle_next_interp2_nb                 i>=1: r=0.524 P@200 up=0.489 dn=0.499 | all: r=0.540 up=0.504 dn=0.509
+   oracle_next_smoothB_point              i>=1: r=0.902 P@200 up=0.751 dn=0.749 | all: r=0.905 up=0.757 dn=0.751
+   oracle_scalar_L                        i>=1: r=0.432 P@200 up=0.245 dn=0.273 | all: r=0.395 up=0.258 dn=0.264
+   oracle_zc_groups                       i>=1: r=0.076 P@200 up=0.023 dn=0.026 | all: r=0.073 up=0.022 dn=0.027
+   strict_extrap_point                    i>=1: r=-0.066 P@200 up=0.329 dn=0.313 | all: r=-0.066 up=0.329 dn=0.313
+   strict_level_fn                        i>=1: r=-0.025 P@200 up=0.380 dn=0.007 | all: r=-0.025 up=0.380 dn=0.007
+   strict_level_obs_na                    i>=1: r=-0.188 P@200 up=0.288 dn=0.315 | all: r=-0.202 up=0.290 dn=0.312
+   strict_level_point                     i>=1: r=-0.192 P@200 up=0.288 dn=0.316 | all: r=-0.183 up=0.279 dn=0.306
+   strict_lowrank3_trend                  i>=1: r=0.234 P@200 up=0.187 dn=0.287 | all: r=0.234 up=0.187 dn=0.287
+   strict_trend1                          i>=1: r=0.154 P@200 up=0.222 dn=0.196 | all: r=0.154 up=0.222 dn=0.196
+   strict_trend3                          i>=1: r=0.146 P@200 up=0.254 dn=0.201 | all: r=0.146 up=0.254 dn=0.201
+  SNR orig by level: [([0, 0.01], 0.848, 0.272), ([0.01, 0.03], 0.08, 0.129), ([0.03, 0.1], 0.051, 0.343), ([0.1, 0.3], 0.014, -0.402), ([0.3, 1], 0.004, -0.078), ([1, 3], 0.001, 0.704), ([3, 10], 0.001, 0.856), ([10, inf], 0.0, 0.909)]
+  SNR orig by n: [([0, 100], 3, 0.345), ([100, 300], 17, 0.238), ([300, inf], 9, 0.231)]
+  SNR l1 by level: [([0, 0.01], 0.021, 0.68), ([0.01, 0.03], 0.008, -1.108), ([0.03, 0.1], 0.064, 0.075), ([0.1, 0.3], 0.16, 0.054), ([0.3, 1], 0.298, 0.115), ([1, 3], 0.26, 0.216), ([3, 10], 0.137, 0.326), ([10, inf], 0.052, 0.491)]
+  SNR l1 by n: [([0, 100], 3, 0.107), ([100, 300], 17, 0.267), ([300, inf], 9, 0.347)]
+  SNR linear by level: [([0, 0.01], 0.0, 0.929), ([0.01, 0.03], 0.0, 0.559), ([0.03, 0.1], 0.0, 0.381), ([0.1, 0.3], 0.0, 0.114), ([0.3, 1], 0.0, 0.127), ([1, 3], 0.001, 0.313), ([3, 10], 0.002, 0.449), ([10, inf], 0.997, 0.957)]
+  SNR linear by n: [([0, 100], 3, 0.954), ([100, 300], 17, 0.961), ([300, inf], 9, 0.946)]
+  linear analytic by level: [([0, 0.01], 0.992), ([0.01, 0.03], 0.831), ([0.03, 0.1], 0.54), ([0.1, 0.3], 0.179), ([0.3, 1], 0.149), ([1, 3], 0.309), ([3, 10], 0.437), ([10, inf], 0.949)]
+
+===== pancreas-human  genes=18561  transitions=14
+ groups (mean frac genes): {'BZ': 0.341, 'UP': 0.045, 'DN': 0.046, 'EX': 0.568}
+ DN obs 11996  exp(interp,noB) 10330  exp(plugin B) 16575  exp(smooth B) 10681
+ UP obs 11692  exp(interp,noB) 6796  exp(plugin B) 8849  exp(smooth B) 9087
+ lag1 linear: {'sum_cov_obs': 1.594, 'sum_cov_pred_by_noise': -0.1293, 'mean_corr_obs': 0.3869, 'mean_corr_pred_by_noise': -0.0825}  lag1 corr: {'orig': -0.394, 'l1': 0.156, 'linear': 0.387}
+ --- target orig
+  ss share: {'BZ': 0.008, 'UP': 0.45, 'DN': 0.46, 'EX': 0.081}  R2 zc groups 0.934
+  noise share next(plug) 0.223 next(smooth) 0.376 [median 0.395] now(smooth) 0.374 both 0.723
+  pearson ceiling next(plug) 0.882 next(smooth) 0.789
+  model-world ceiling: {'pearson_nan0': 0.729, 'p_at_200_up': 0.491, 'p_at_200_down': 0.571, 'p_ta_up': 0.492, 'p_ta_down': 0.57, 'p_max_up': 0.89, 'p_max_down': 0.887}
+  ties: {'mean_n_at_+5': 835.286, 'mean_n_at_-5': 856.857, 'mean_n_at_0': 6336.643, 'p_max_up_mean': 0.843, 'p_max_down_mean': 0.847}
+  spearman(noise_next, n_b) -0.62  spearman(ZC share, log nb/na) -0.08
+   descr_level_fn                         i>=1: r=0.460 P@200 up=0.003 dn=0.390 | all: r=0.457 up=0.003 dn=0.389
+   oracle_k10_scalars_looloadings         i>=1: r=0.547 P@200 up=0.405 dn=0.443 | all: r=0.542 up=0.402 dn=0.420
+   oracle_k10_scalars_pastloadings        i>=1: r=0.424 P@200 up=0.242 dn=0.354 | all: r=0.424 up=0.242 dn=0.354
+   oracle_k1_scalars_looloadings          i>=1: r=0.071 P@200 up=0.130 dn=0.132 | all: r=0.065 up=0.128 dn=0.130
+   oracle_k1_scalars_pastloadings         i>=1: r=0.112 P@200 up=0.151 dn=0.173 | all: r=0.112 up=0.151 dn=0.173
+   oracle_k3_scalars_looloadings          i>=1: r=0.186 P@200 up=0.178 dn=0.196 | all: r=0.178 up=0.174 dn=0.191
+   oracle_k3_scalars_pastloadings         i>=1: r=0.221 P@200 up=0.226 dn=0.254 | all: r=0.221 up=0.226 dn=0.254
+   oracle_nL_level_obs                    i>=1: r=0.520 P@200 up=0.324 dn=0.446 | all: r=0.495 up=0.301 dn=0.440
+   oracle_n_level_obs_nb                  i>=1: r=0.518 P@200 up=0.323 dn=0.444 | all: r=0.495 up=0.300 dn=0.439
+   oracle_next_interp1_nb                 i>=1: r=0.599 P@200 up=0.363 dn=0.512 | all: r=0.603 up=0.367 dn=0.521
+   oracle_next_interp2_nb                 i>=1: r=0.623 P@200 up=0.402 dn=0.514 | all: r=0.626 up=0.401 dn=0.521
+   oracle_next_smoothB_point              i>=1: r=0.642 P@200 up=0.619 dn=0.655 | all: r=0.661 up=0.610 dn=0.669
+   oracle_scalar_L                        i>=1: r=0.033 P@200 up=0.001 dn=0.000 | all: r=0.002 up=0.001 dn=0.000
+   oracle_zc_groups                       i>=1: r=0.966 P@200 up=0.625 dn=0.690 | all: r=0.966 up=0.613 dn=0.657
+   strict_extrap_point                    i>=1: r=0.282 P@200 up=0.228 dn=0.252 | all: r=0.282 up=0.228 dn=0.252
+   strict_level_fn                        i>=1: r=0.383 P@200 up=0.002 dn=0.333 | all: r=0.383 up=0.002 dn=0.333
+   strict_level_obs_na                    i>=1: r=0.478 P@200 up=0.324 dn=0.449 | all: r=0.459 up=0.301 dn=0.444
+   strict_level_point                     i>=1: r=0.335 P@200 up=0.259 dn=0.339 | all: r=0.311 up=0.240 dn=0.315
+   strict_lowrank3_trend                  i>=1: r=-0.239 P@200 up=0.070 dn=0.062 | all: r=-0.239 up=0.070 dn=0.062
+   strict_trend1                          i>=1: r=-0.394 P@200 up=0.040 dn=0.038 | all: r=-0.394 up=0.040 dn=0.038
+   strict_trend3                          i>=1: r=-0.372 P@200 up=0.043 dn=0.045 | all: r=-0.372 up=0.043 dn=0.045
+ --- target l1
+  ss share: {'BZ': 0.001, 'UP': 0.007, 'DN': 0.007, 'EX': 0.984}  R2 zc groups 0.01
+  noise share next(plug) 0.223 next(smooth) 0.235 [median 0.220] now(smooth) 0.228 both 0.463
+  pearson ceiling next(plug) 0.879 next(smooth) 0.872
+  model-world ceiling: {'pearson_nan0': 0.786, 'p_at_200_up': 0.601, 'p_at_200_down': 0.591, 'p_ta_up': 0.6, 'p_ta_down': 0.591, 'p_max_up': 0.999, 'p_max_down': 0.999}
+  spearman(noise_next, n_b) -0.81  spearman(ZC share, log nb/na) 0.12
+   descr_level_fn                         i>=1: r=0.218 P@200 up=0.071 dn=0.210 | all: r=0.216 up=0.075 dn=0.210
+   oracle_k10_scalars_looloadings         i>=1: r=0.367 P@200 up=0.315 dn=0.283 | all: r=0.351 up=0.305 dn=0.273
+   oracle_k10_scalars_pastloadings        i>=1: r=0.397 P@200 up=0.282 dn=0.357 | all: r=0.397 up=0.282 dn=0.357
+   oracle_k1_scalars_looloadings          i>=1: r=0.146 P@200 up=0.223 dn=0.216 | all: r=0.135 up=0.215 dn=0.209
+   oracle_k1_scalars_pastloadings         i>=1: r=0.122 P@200 up=0.189 dn=0.207 | all: r=0.122 up=0.189 dn=0.207
+   oracle_k3_scalars_looloadings          i>=1: r=0.284 P@200 up=0.267 dn=0.259 | all: r=0.269 up=0.257 dn=0.251
+   oracle_k3_scalars_pastloadings         i>=1: r=0.229 P@200 up=0.213 dn=0.259 | all: r=0.229 up=0.213 dn=0.259
+   oracle_nL_level_obs                    i>=1: r=-0.154 P@200 up=0.097 dn=0.170 | all: r=-0.143 up=0.098 dn=0.166
+   oracle_n_level_obs_nb                  i>=1: r=-0.158 P@200 up=0.098 dn=0.170 | all: r=-0.146 up=0.098 dn=0.168
+   oracle_next_interp1_nb                 i>=1: r=0.680 P@200 up=0.487 dn=0.521 | all: r=0.692 up=0.496 dn=0.531
+   oracle_next_interp2_nb                 i>=1: r=0.531 P@200 up=0.429 dn=0.435 | all: r=0.550 up=0.436 dn=0.449
+   oracle_next_smoothB_point              i>=1: r=0.903 P@200 up=0.737 dn=0.768 | all: r=0.908 up=0.744 dn=0.773
+   oracle_scalar_L                        i>=1: r=0.007 P@200 up=0.109 dn=0.115 | all: r=0.002 up=0.110 dn=0.107
+   oracle_zc_groups                       i>=1: r=0.094 P@200 up=0.011 dn=0.011 | all: r=0.092 up=0.010 dn=0.013
+   strict_extrap_point                    i>=1: r=-0.055 P@200 up=0.126 dn=0.175 | all: r=-0.055 up=0.126 dn=0.175
+   strict_level_fn                        i>=1: r=0.083 P@200 up=0.041 dn=0.205 | all: r=0.083 up=0.041 dn=0.205
+   strict_level_obs_na                    i>=1: r=-0.159 P@200 up=0.098 dn=0.169 | all: r=-0.144 up=0.098 dn=0.167
+   strict_level_point                     i>=1: r=-0.159 P@200 up=0.098 dn=0.168 | all: r=-0.148 up=0.092 dn=0.157
+   strict_lowrank3_trend                  i>=1: r=0.111 P@200 up=0.193 dn=0.205 | all: r=0.111 up=0.193 dn=0.205
+   strict_trend1                          i>=1: r=0.164 P@200 up=0.220 dn=0.219 | all: r=0.164 up=0.220 dn=0.219
+   strict_trend3                          i>=1: r=0.107 P@200 up=0.218 dn=0.192 | all: r=0.107 up=0.218 dn=0.192
+ --- target linear
+  ss share: {'BZ': 0.002, 'UP': 0.001, 'DN': 0.0, 'EX': 0.997}  R2 zc groups 0.005
+  noise share next(plug) 0.093 next(smooth) 0.101 [median 0.063] now(smooth) 0.106 both 0.207
+  analytic linear noise next 0.093 now 0.092
+  pearson ceiling next(plug) 0.951 next(smooth) 0.947
+  model-world ceiling: {'pearson_nan0': 0.874, 'p_at_200_up': 0.639, 'p_at_200_down': 0.707, 'p_ta_up': 0.639, 'p_ta_down': 0.707, 'p_max_up': 1.0, 'p_max_down': 1.0}
+  spearman(noise_next, n_b) -0.74  spearman(ZC share, log nb/na) -0.04
+   descr_level_fn                         i>=1: r=0.553 P@200 up=0.189 dn=0.326 | all: r=0.534 up=0.194 dn=0.323
+   descr_y_on_m_a                         i>=1: r=-0.299 P@200 up=0.287 dn=0.000 | all: r=-0.264 up=0.294 dn=0.000
+   oracle_k10_scalars_looloadings         i>=1: r=0.726 P@200 up=0.320 dn=0.416 | all: r=0.698 up=0.325 dn=0.393
+   oracle_k10_scalars_pastloadings        i>=1: r=0.659 P@200 up=0.403 dn=0.354 | all: r=0.659 up=0.403 dn=0.354
+   oracle_k1_scalars_looloadings          i>=1: r=0.155 P@200 up=0.316 dn=0.296 | all: r=0.145 up=0.312 dn=0.287
+   oracle_k1_scalars_pastloadings         i>=1: r=0.293 P@200 up=0.214 dn=0.343 | all: r=0.293 up=0.214 dn=0.343
+   oracle_k3_scalars_looloadings          i>=1: r=0.324 P@200 up=0.330 dn=0.337 | all: r=0.307 up=0.326 dn=0.323
+   oracle_k3_scalars_pastloadings         i>=1: r=0.547 P@200 up=0.279 dn=0.378 | all: r=0.547 up=0.279 dn=0.378
+   oracle_nL_level_obs                    i>=1: r=-0.020 P@200 up=0.157 dn=0.338 | all: r=-0.005 up=0.174 dn=0.316
+   oracle_n_level_obs_nb                  i>=1: r=-0.343 P@200 up=0.157 dn=0.225 | all: r=-0.325 up=0.160 dn=0.225
+   oracle_next_interp1_nb                 i>=1: r=0.761 P@200 up=0.529 dn=0.639 | all: r=0.740 up=0.530 dn=0.641
+   oracle_next_interp2_nb                 i>=1: r=0.543 P@200 up=0.459 dn=0.557 | all: r=0.527 up=0.461 dn=0.562
+   oracle_next_smoothB_point              i>=1: r=0.918 P@200 up=0.750 dn=0.822 | all: r=0.913 up=0.754 dn=0.823
+   oracle_scalar_L                        i>=1: r=0.344 P@200 up=0.188 dn=0.298 | all: r=0.333 up=0.202 dn=0.277
+   oracle_zc_groups                       i>=1: r=0.058 P@200 up=0.027 dn=0.023 | all: r=0.055 up=0.025 dn=0.022
+   strict_extrap_point                    i>=1: r=-0.199 P@200 up=0.175 dn=0.244 | all: r=-0.199 up=0.175 dn=0.244
+   strict_level_fn                        i>=1: r=0.193 P@200 up=0.020 dn=0.424 | all: r=0.193 up=0.020 dn=0.424
+   strict_level_obs_na                    i>=1: r=-0.345 P@200 up=0.157 dn=0.222 | all: r=-0.323 up=0.162 dn=0.222
+   strict_level_point                     i>=1: r=-0.343 P@200 up=0.157 dn=0.224 | all: r=-0.321 up=0.148 dn=0.210
+   strict_lowrank3_trend                  i>=1: r=0.369 P@200 up=0.271 dn=0.359 | all: r=0.369 up=0.271 dn=0.359
+   strict_trend1                          i>=1: r=0.388 P@200 up=0.288 dn=0.358 | all: r=0.388 up=0.288 dn=0.358
+   strict_trend3                          i>=1: r=0.269 P@200 up=0.275 dn=0.336 | all: r=0.269 up=0.275 dn=0.336
+  SNR orig by level: [([0, 0.01], 0.79, 0.357), ([0.01, 0.03], 0.138, -0.053), ([0.03, 0.1], 0.046, -0.279), ([0.1, 0.3], 0.016, 0.42), ([0.3, 1], 0.007, 0.717), ([1, 3], 0.002, 0.871), ([3, 10], 0.001, 0.939), ([10, inf], 0.0, 0.963)]
+  SNR orig by n: [([0, 100], 5, 0.212), ([100, 300], 7, 0.323), ([300, inf], 2, 0.284)]
+  SNR l1 by level: [([0, 0.01], 0.005, -0.215), ([0.01, 0.03], 0.014, 0.042), ([0.03, 0.1], 0.076, 0.218), ([0.1, 0.3], 0.215, 0.343), ([0.3, 1], 0.326, 0.516), ([1, 3], 0.199, 0.713), ([3, 10], 0.1, 0.862), ([10, inf], 0.064, 0.934)]
+  SNR l1 by n: [([0, 100], 5, 0.348), ([100, 300], 7, 0.694), ([300, inf], 2, 0.734)]
+  SNR linear by level: [([0, 0.01], 0.001, 0.953), ([0.01, 0.03], 0.0, -1.245), ([0.03, 0.1], 0.001, 0.335), ([0.1, 0.3], 0.003, 0.213), ([0.3, 1], 0.009, 0.394), ([1, 3], 0.021, 0.696), ([3, 10], 0.064, 0.829), ([10, inf], 0.902, 0.926)]
+  SNR linear by n: [([0, 100], 5, 0.73), ([100, 300], 7, 0.927), ([300, inf], 2, 0.954)]
+  linear analytic by level: [([0, 0.01], 0.972), ([0.01, 0.03], 0.639), ([0.03, 0.1], 0.38), ([0.1, 0.3], 0.343), ([0.3, 1], 0.522), ([1, 3], 0.737), ([3, 10], 0.87), ([10, inf], 0.924)]

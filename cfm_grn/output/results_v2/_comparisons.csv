@@ -1,0 +1,82 @@
+pred,scenario,comparison,metric,n,diff,ci95,verdict,wins,seeds,wilcoxon_p
+P1,oracle,mlp[per-cond OT] vs mlp[global OT],pearson_delta_downstream,15,0.0539,0.1531,n.s.,5/15,+-+,0.8904
+P1,oracle,mlp[per-cond OT] vs mlp[global OT],energy_distance_de,15,1.3907,1.2846,SIG,12/15,+++,0.0479
+P1,oracle,mlp[per-cond OT] vs mlp[global OT],knockdown_fraction,15,0.0119,0.0218,n.s.,9/15,-+-,0.3591
+P1,oracle,static_graph[per-cond OT] vs static_graph[global OT],pearson_delta_downstream,15,-0.1088,0.2309,n.s.,5/15,-+-,0.1205
+P1,oracle,static_graph[per-cond OT] vs static_graph[global OT],energy_distance_de,15,9.2112,1.6207,SIG,15/15,+++,0.0001
+P1,oracle,static_graph[per-cond OT] vs static_graph[global OT],knockdown_fraction,15,0.9783,0.2211,SIG,15/15,+++,0.0001
+P1,oracle,graph_cfm[per-cond OT] vs graph_cfm[global OT],pearson_delta_downstream,15,0.0208,0.1458,n.s.,7/15,++-,0.7197
+P1,oracle,graph_cfm[per-cond OT] vs graph_cfm[global OT],energy_distance_de,15,7.7305,1.3269,SIG,15/15,+++,0.0001
+P1,oracle,graph_cfm[per-cond OT] vs graph_cfm[global OT],knockdown_fraction,15,0.7965,0.1558,SIG,15/15,+++,0.0001
+P2,oracle,graph_cfm vs graph_cfm_dense,pearson_delta_downstream,15,0.0166,0.101,n.s.,9/15,+-+,0.6387
+P2,oracle,graph_cfm vs graph_cfm_dense,energy_distance_de,15,0.4261,0.9697,n.s.,8/15,--+,0.3894
+P2,oracle,graph_cfm vs graph_cfm_dense,knockdown_fraction,15,-0.0095,0.1354,n.s.,7/15,+-+,1.0
+P3,oracle,static_graph vs mlp,pearson_delta_downstream,15,-0.0675,0.2059,n.s.,7/15,-++,0.5614
+P3,oracle,static_graph vs mlp,energy_distance_de,15,9.3938,1.4084,SIG,15/15,+++,0.0001
+P3,oracle,static_graph vs mlp,knockdown_fraction,15,0.9686,0.218,SIG,15/15,+++,0.0001
+P4,oracle,static_learned vs static_graph,pearson_delta_downstream,15,0.0174,0.0348,n.s.,7/15,+++,0.3591
+P4,oracle,static_learned vs static_graph,energy_distance_de,15,-0.1553,0.1361,SIG,2/15,---,0.0084
+P4,oracle,static_learned vs static_graph,knockdown_fraction,15,-0.0201,0.0143,SIG,4/15,---,0.0181
+P5,oracle,graph_cfm vs static_learned,pearson_delta_downstream,15,0.0439,0.1255,n.s.,10/15,++-,0.5245
+P5,oracle,graph_cfm vs static_learned,energy_distance_de,15,-1.6363,1.3939,SIG,4/15,---,0.0256
+P5,oracle,graph_cfm vs static_learned,knockdown_fraction,15,-0.1648,0.1347,SIG,3/15,---,0.0125
+P6,oracle,mlp vs persistence,pearson_delta_downstream,15,0.0527,0.161,n.s.,10/15,-++,0.3894
+P6,oracle,mlp vs persistence,energy_distance_de,15,1.4489,0.2665,SIG,15/15,+++,0.0001
+P6,oracle,mlp vs persistence,knockdown_fraction,15,0.0482,0.016,SIG,15/15,+++,0.0001
+P6,oracle,static_graph vs persistence,pearson_delta_downstream,15,-0.0148,0.1596,n.s.,7/15,-++,0.4543
+P6,oracle,static_graph vs persistence,energy_distance_de,15,10.8428,1.3898,SIG,15/15,+++,0.0001
+P6,oracle,static_graph vs persistence,knockdown_fraction,15,1.0167,0.2154,SIG,15/15,+++,0.0001
+P6,oracle,static_learned vs persistence,pearson_delta_downstream,15,0.0026,0.1597,n.s.,7/15,-++,0.6387
+P6,oracle,static_learned vs persistence,energy_distance_de,15,10.6875,1.3124,SIG,15/15,+++,0.0001
+P6,oracle,static_learned vs persistence,knockdown_fraction,15,0.9966,0.2124,SIG,15/15,+++,0.0001
+P6,oracle,graph_cfm vs persistence,pearson_delta_downstream,15,0.0465,0.1158,n.s.,8/15,-++,0.5995
+P6,oracle,graph_cfm vs persistence,energy_distance_de,15,9.0511,1.134,SIG,15/15,+++,0.0001
+P6,oracle,graph_cfm vs persistence,knockdown_fraction,15,0.8318,0.1636,SIG,15/15,+++,0.0001
+P2,noisy,graph_cfm vs graph_cfm_dense,pearson_delta_downstream,15,-0.0287,0.1556,n.s.,5/15,--+,0.6788
+P2,noisy,graph_cfm vs graph_cfm_dense,energy_distance_de,15,-0.557,0.4701,SIG,4/15,---,0.0302
+P2,noisy,graph_cfm vs graph_cfm_dense,knockdown_fraction,15,0.0049,0.062,n.s.,7/15,+-+,0.804
+P3,noisy,static_graph vs mlp,pearson_delta_downstream,15,-0.0753,0.1806,n.s.,6/15,-+-,0.4543
+P3,noisy,static_graph vs mlp,energy_distance_de,15,4.4994,0.991,SIG,15/15,+++,0.0001
+P3,noisy,static_graph vs mlp,knockdown_fraction,15,0.9483,0.2205,SIG,15/15,+++,0.0001
+P4,noisy,static_learned vs static_graph,pearson_delta_downstream,15,-0.0145,0.0554,n.s.,7/15,+--,0.5995
+P4,noisy,static_learned vs static_graph,energy_distance_de,15,-0.0913,0.2592,n.s.,3/15,+--,0.107
+P4,noisy,static_learned vs static_graph,knockdown_fraction,15,0.0033,0.0266,n.s.,11/15,-+-,0.4212
+P5,noisy,graph_cfm vs static_learned,pearson_delta_downstream,15,-0.0228,0.1371,n.s.,7/15,-+-,0.5995
+P5,noisy,graph_cfm vs static_learned,energy_distance_de,15,-0.1922,0.5534,n.s.,6/15,+-+,0.5245
+P5,noisy,graph_cfm vs static_learned,knockdown_fraction,15,-0.0435,0.1054,n.s.,6/15,+--,0.3028
+P6,noisy,mlp vs persistence,pearson_delta_downstream,15,0.0408,0.1566,n.s.,9/15,+-+,0.5245
+P6,noisy,mlp vs persistence,energy_distance_de,15,0.7403,0.2737,SIG,14/15,+++,0.0002
+P6,noisy,mlp vs persistence,knockdown_fraction,15,0.0455,0.0214,SIG,13/15,+++,0.0006
+P6,noisy,static_graph vs persistence,pearson_delta_downstream,15,-0.0345,0.1227,n.s.,6/15,--+,0.4543
+P6,noisy,static_graph vs persistence,energy_distance_de,15,5.2398,1.0702,SIG,15/15,+++,0.0001
+P6,noisy,static_graph vs persistence,knockdown_fraction,15,0.9937,0.211,SIG,15/15,+++,0.0001
+P6,noisy,static_learned vs persistence,pearson_delta_downstream,15,-0.049,0.0988,n.s.,7/15,--+,0.3028
+P6,noisy,static_learned vs persistence,energy_distance_de,15,5.1485,0.9439,SIG,15/15,+++,0.0001
+P6,noisy,static_learned vs persistence,knockdown_fraction,15,0.9971,0.2249,SIG,15/15,+++,0.0001
+P6,noisy,graph_cfm vs persistence,pearson_delta_downstream,15,-0.0718,0.1078,n.s.,5/15,--+,0.1876
+P6,noisy,graph_cfm vs persistence,energy_distance_de,15,4.9562,1.0159,SIG,15/15,+++,0.0001
+P6,noisy,graph_cfm vs persistence,knockdown_fraction,15,0.9536,0.1755,SIG,15/15,+++,0.0001
+P2,noisy_context,graph_cfm vs graph_cfm_dense,pearson_delta_downstream,15,-0.0681,0.1163,n.s.,5/15,---,0.2078
+P2,noisy_context,graph_cfm vs graph_cfm_dense,energy_distance_de,15,-0.5122,0.4387,SIG,3/15,---,0.0256
+P2,noisy_context,graph_cfm vs graph_cfm_dense,knockdown_fraction,15,0.0258,0.0701,n.s.,8/15,++-,0.7197
+P3,noisy_context,static_graph vs mlp,pearson_delta_downstream,15,-0.0788,0.1569,n.s.,7/15,---,0.3591
+P3,noisy_context,static_graph vs mlp,energy_distance_de,15,4.1399,0.9525,SIG,15/15,+++,0.0001
+P3,noisy_context,static_graph vs mlp,knockdown_fraction,15,0.9809,0.2083,SIG,15/15,+++,0.0001
+P4,noisy_context,static_learned vs static_graph,pearson_delta_downstream,15,0.021,0.0398,n.s.,7/15,++-,0.5995
+P4,noisy_context,static_learned vs static_graph,energy_distance_de,15,0.1976,0.187,SIG,10/15,++-,0.0833
+P4,noisy_context,static_learned vs static_graph,knockdown_fraction,15,0.0219,0.0233,n.s.,10/15,+++,0.107
+P5,noisy_context,graph_cfm vs static_learned,pearson_delta_downstream,15,-0.0658,0.148,n.s.,5/15,---,0.3894
+P5,noisy_context,graph_cfm vs static_learned,energy_distance_de,15,-0.5768,0.5687,SIG,5/15,---,0.0833
+P5,noisy_context,graph_cfm vs static_learned,knockdown_fraction,15,-0.0499,0.1116,n.s.,6/15,---,0.4887
+P6,noisy_context,mlp vs persistence,pearson_delta_downstream,15,0.0436,0.1147,n.s.,9/15,+-+,0.3894
+P6,noisy_context,mlp vs persistence,energy_distance_de,15,1.07,0.2705,SIG,15/15,+++,0.0001
+P6,noisy_context,mlp vs persistence,knockdown_fraction,15,0.0519,0.0176,SIG,14/15,+++,0.0002
+P6,noisy_context,static_graph vs persistence,pearson_delta_downstream,15,-0.0352,0.126,n.s.,8/15,--+,0.804
+P6,noisy_context,static_graph vs persistence,energy_distance_de,15,5.21,0.9849,SIG,15/15,+++,0.0001
+P6,noisy_context,static_graph vs persistence,knockdown_fraction,15,1.0328,0.1991,SIG,15/15,+++,0.0001
+P6,noisy_context,static_learned vs persistence,pearson_delta_downstream,15,-0.0142,0.1264,n.s.,9/15,--+,0.9341
+P6,noisy_context,static_learned vs persistence,energy_distance_de,15,5.4076,0.917,SIG,15/15,+++,0.0001
+P6,noisy_context,static_learned vs persistence,knockdown_fraction,15,1.0546,0.2084,SIG,15/15,+++,0.0001
+P6,noisy_context,graph_cfm vs persistence,pearson_delta_downstream,15,-0.08,0.0873,n.s.,7/15,---,0.1354
+P6,noisy_context,graph_cfm vs persistence,energy_distance_de,15,4.8308,0.9962,SIG,15/15,+++,0.0001
+P6,noisy_context,graph_cfm vs persistence,knockdown_fraction,15,1.0048,0.161,SIG,15/15,+++,0.0001

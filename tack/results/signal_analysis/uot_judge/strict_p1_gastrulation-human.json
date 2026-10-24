@@ -1,0 +1,22 @@
+{
+ "dataset": "gastrulation-human",
+ "A_future_scramble": {
+  "2": {
+   "max_abs_diff_all_configs_targets": 2.6645352591003757e-14,
+   "oracle_max_abs_diff_positive_control": 0.08733583144625812
+  },
+  "7": {
+   "max_abs_diff_all_configs_targets": 1.5987211554602254e-14,
+   "oracle_max_abs_diff_positive_control": 0.49235233227911124
+  },
+  "15": {
+   "max_abs_diff_all_configs_targets": 1.9539925233402755e-14,
+   "oracle_max_abs_diff_positive_control": 0.1552845390925337
+  },
+  "24": {
+   "max_abs_diff_all_configs_targets": 2.3092638912203256e-14,
+   "oracle_max_abs_diff_positive_control": 0.33197092937602074
+  }
+ },
+ "B_truncation": {}
+}

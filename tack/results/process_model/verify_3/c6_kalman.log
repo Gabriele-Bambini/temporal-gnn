@@ -1,0 +1,40 @@
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\process_model\verify_3\c6_kalman.py:72: RuntimeWarning: Mean of empty slice
+  per = {k: np.nanmean(r[:, :, 0], 0) for k, r in rows.items()}
+== gastrulation-human quiet [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 24, 26, 27, 28] quiet(Rfloor) [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 24, 26, 27, 28]
+  Q at floor {'LL pergeneQ[base] Rfloor': {'mean_b>=2': 0.856, 'b=2': 0.872, 'b=last': 0.92}, 'LL pergeneQ[lag1] Rfloor': {'mean_b>=2': 0.833, 'b=2': 0.863, 'b=last': 0.9}, 'LL pergeneQ[ma1] Rfloor': {'mean_b>=2': 0.56, 'b=2': 0.566, 'b=last': 0.815}, 'LL pergeneQ[base] Rnofloor': {'mean_b>=2': 0.279, 'b=2': 0.233, 'b=last': 0.361}}
+  LL pergeneQ[base] Rfloor       i>=2 +0.124/0.198/0.205 | quiet +0.166/0.215/0.227 | quiet(Rfloor) +0.166/0.215/0.227 | share>=0.2 +0.051/0.170/0.169
+  LL pergeneQ[lag1] Rfloor       i>=2 +0.163/0.205/0.196 | quiet +0.217/0.224/0.219 | quiet(Rfloor) +0.217/0.224/0.219 | share>=0.2 +0.070/0.173/0.157
+  LL pergeneQ[ma1] Rfloor        i>=2 +0.212/0.224/0.190 | quiet +0.292/0.258/0.217 | quiet(Rfloor) +0.292/0.258/0.217 | share>=0.2 +0.075/0.167/0.145
+  LL pergeneQ[base] Rnofloor     i>=2 +0.123/0.207/0.209 | quiet +0.169/0.225/0.232 | quiet(Rfloor) +0.169/0.225/0.232 | share>=0.2 +0.043/0.176/0.171
+  LLT ML slope_t|t               i>=2 +0.086/0.178/0.143 | quiet +0.102/0.169/0.129 | quiet(Rfloor) +0.102/0.169/0.129 | share>=0.2 +0.059/0.195/0.167
+  LLT ML level+slope-L_t         i>=2 +0.234/0.243/0.236 | quiet +0.319/0.257/0.262 | quiet(Rfloor) +0.319/0.257/0.262 | share>=0.2 +0.090/0.219/0.191
+  LLT ML(ext grid) slope_t|t     i>=2 +0.084/0.178/0.142 | quiet +0.098/0.169/0.128 | quiet(Rfloor) +0.098/0.169/0.128 | share>=0.2 +0.059/0.193/0.166
+  LLT ML(ext grid) level+slope-L_t i>=2 +0.233/0.239/0.208 | quiet +0.319/0.254/0.229 | quiet(Rfloor) +0.319/0.254/0.229 | share>=0.2 +0.087/0.213/0.173
+  trend                          i>=2 -0.169/0.102/0.090 | quiet -0.267/0.069/0.058 | quiet(Rfloor) -0.267/0.069/0.058 | share>=0.2 -0.002/0.158/0.145
+  NASS full                      i>=2 +0.337/0.277/0.295 | quiet +0.403/0.311/0.316 | quiet(Rfloor) +0.403/0.311/0.316 | share>=0.2 +0.224/0.218/0.259
+  paired LL pergeneQ[base] Rfloor - NASS full {'mean': -0.2129, 'better': 3, 'worse': 24, 'wilcoxon_p': 0.0003}
+  paired LL pergeneQ[base] Rfloor - LLT ML level+slope-L_t {'mean': -0.1106, 'better': 4, 'worse': 23, 'wilcoxon_p': 0.0019}
+  paired LL pergeneQ[lag1] Rfloor - NASS full {'mean': -0.1737, 'better': 3, 'worse': 24, 'wilcoxon_p': 0.0003}
+  paired LL pergeneQ[lag1] Rfloor - LLT ML level+slope-L_t {'mean': -0.0714, 'better': 7, 'worse': 20, 'wilcoxon_p': 0.0089}
+  paired LL pergeneQ[lag1] Rfloor - LL pergeneQ[base] Rfloor {'mean': 0.0392, 'better': 24, 'worse': 3, 'wilcoxon_p': 0.0}
+  paired LLT ML level+slope-L_t - NASS full {'mean': -0.1023, 'better': 4, 'worse': 23, 'wilcoxon_p': 0.0004}
+  paired LLT ML level+slope-L_t - LL pergeneQ[base] Rfloor {'mean': 0.1106, 'better': 23, 'worse': 4, 'wilcoxon_p': 0.0019}
+== pancreas-human quiet [] quiet(Rfloor) [4, 5]
+  Q at floor {'LL pergeneQ[base] Rfloor': {'mean_b>=2': 0.693, 'b=2': 0.735, 'b=last': 0.636}, 'LL pergeneQ[lag1] Rfloor': {'mean_b>=2': 0.359, 'b=2': 0.715, 'b=last': 0.412}, 'LL pergeneQ[ma1] Rfloor': {'mean_b>=2': 0.491, 'b=2': 0.541, 'b=last': 0.441}, 'LL pergeneQ[base] Rnofloor': {'mean_b>=2': 0.325, 'b=2': 0.387, 'b=last': 0.282}}
+  LL pergeneQ[base] Rfloor       i>=2 +0.001/0.117/0.139 | quiet n/a | quiet(Rfloor) +0.126/0.154/0.187 | share>=0.2 +0.001/0.117/0.139
+  LL pergeneQ[lag1] Rfloor       i>=2 +0.016/0.121/0.126 | quiet n/a | quiet(Rfloor) +0.171/0.170/0.209 | share>=0.2 +0.016/0.121/0.126
+  LL pergeneQ[ma1] Rfloor        i>=2 +0.018/0.120/0.128 | quiet n/a | quiet(Rfloor) +0.174/0.173/0.209 | share>=0.2 +0.018/0.120/0.128
+  LL pergeneQ[base] Rnofloor     i>=2 -0.002/0.119/0.139 | quiet n/a | quiet(Rfloor) +0.116/0.159/0.187 | share>=0.2 -0.002/0.119/0.139
+  LLT ML slope_t|t               i>=2 +0.169/0.235/0.203 | quiet n/a | quiet(Rfloor) +0.049/0.185/0.148 | share>=0.2 +0.169/0.235/0.203
+  LLT ML level+slope-L_t         i>=2 +0.159/0.217/0.204 | quiet n/a | quiet(Rfloor) +0.122/0.173/0.169 | share>=0.2 +0.159/0.217/0.204
+  LLT ML(ext grid) slope_t|t     i>=2 +0.169/0.234/0.203 | quiet n/a | quiet(Rfloor) +0.049/0.187/0.148 | share>=0.2 +0.169/0.234/0.203
+  LLT ML(ext grid) level+slope-L_t i>=2 +0.158/0.219/0.205 | quiet n/a | quiet(Rfloor) +0.122/0.177/0.166 | share>=0.2 +0.158/0.219/0.205
+  trend                          i>=2 +0.167/0.225/0.215 | quiet n/a | quiet(Rfloor) -0.074/0.141/0.148 | share>=0.2 +0.167/0.225/0.215
+  NASS full                      i>=2 +0.322/0.221/0.280 | quiet n/a | quiet(Rfloor) +0.270/0.189/0.217 | share>=0.2 +0.322/0.221/0.280
+  paired LL pergeneQ[base] Rfloor - NASS full {'mean': -0.321, 'better': 1, 'worse': 11, 'wilcoxon_p': 0.0015}
+  paired LL pergeneQ[base] Rfloor - LLT ML level+slope-L_t {'mean': -0.1573, 'better': 3, 'worse': 9, 'wilcoxon_p': 0.0269}
+  paired LL pergeneQ[lag1] Rfloor - NASS full {'mean': -0.3062, 'better': 1, 'worse': 11, 'wilcoxon_p': 0.0024}
+  paired LL pergeneQ[lag1] Rfloor - LLT ML level+slope-L_t {'mean': -0.1425, 'better': 4, 'worse': 8, 'wilcoxon_p': 0.0771}
+  paired LL pergeneQ[lag1] Rfloor - LL pergeneQ[base] Rfloor {'mean': 0.0148, 'better': 8, 'worse': 4, 'wilcoxon_p': 0.2661}
+  paired LLT ML level+slope-L_t - NASS full {'mean': -0.1637, 'better': 1, 'worse': 11, 'wilcoxon_p': 0.001}
+  paired LLT ML level+slope-L_t - LL pergeneQ[base] Rfloor {'mean': 0.1573, 'better': 9, 'worse': 3, 'wilcoxon_p': 0.0269}

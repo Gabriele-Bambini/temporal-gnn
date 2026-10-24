@@ -1,0 +1,70 @@
+{
+ "gastrulation-human": {
+  "l1_all": {
+   "n": 29,
+   "intercept": 0.0001246592683175612,
+   "slope": 1.1261636849296899,
+   "corr": 0.941190199312669,
+   "mean_noise_share": 0.8148425040682431,
+   "median_noise_share": 0.8942593119123842
+  },
+  "l1_bins_ge50cells": {
+   "n": 26,
+   "intercept": 0.00024415385158524323,
+   "slope": 0.7730600083246733,
+   "corr": 0.3670104644984091,
+   "mean_noise_share": 0.8046220805708051,
+   "median_noise_share": 0.8719138048843467
+  },
+  "linear_all": {
+   "n": 29,
+   "intercept": -1.0011537906902248,
+   "slope": 32.260707225619974,
+   "corr": 0.9540948368001606,
+   "mean_noise_share": 0.6483250374459396,
+   "median_noise_share": 0.4208170176319718
+  },
+  "linear_bins_ge50cells": {
+   "n": 26,
+   "intercept": -0.921989125203463,
+   "slope": 38.3108067498517,
+   "corr": 0.6633294652600505,
+   "mean_noise_share": 0.5729162495141915,
+   "median_noise_share": 0.37780235794606853
+  }
+ },
+ "pancreas-human": {
+  "l1_all": {
+   "n": 14,
+   "intercept": 0.003062501494698582,
+   "slope": 0.9392847850898203,
+   "corr": 0.6177237987541961,
+   "mean_noise_share": 0.46858148833019353,
+   "median_noise_share": 0.4643836982879038
+  },
+  "l1_bins_ge50cells": {
+   "n": 14,
+   "intercept": 0.003062501494698582,
+   "slope": 0.9392847850898203,
+   "corr": 0.6177237987541961,
+   "mean_noise_share": 0.46858148833019353,
+   "median_noise_share": 0.4643836982879038
+  },
+  "linear_all": {
+   "n": 14,
+   "intercept": -0.17599935148284854,
+   "slope": 16.659137516206375,
+   "corr": 0.8159879798549861,
+   "mean_noise_share": 0.21546312910490367,
+   "median_noise_share": 0.14531748998950325
+  },
+  "linear_bins_ge50cells": {
+   "n": 14,
+   "intercept": -0.17599935148284854,
+   "slope": 16.659137516206375,
+   "corr": 0.8159879798549861,
+   "mean_noise_share": 0.21546312910490367,
+   "median_noise_share": 0.14531748998950325
+  }
+ }
+}

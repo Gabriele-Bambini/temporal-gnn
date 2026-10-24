@@ -1,0 +1,722 @@
+{
+ "pancreas-human|orig|full vs distbridge_strict|all": {
+  "nass_row": [
+   0.5059,
+   0.3084,
+   0.4544
+  ],
+  "distbridge": [
+   0.4921,
+   0.3037,
+   0.4394
+  ],
+  "dPCC": 0.0138,
+  "better/worse": [
+   8,
+   6
+  ],
+  "p_PCC": 0.6257,
+  "dJ": 0.0335,
+  "p_J": 0.104
+ },
+ "pancreas-human|orig|full vs distbridge_strict|i>=2": {
+  "nass_row": [
+   0.5311,
+   0.3463,
+   0.4526
+  ],
+  "distbridge": [
+   0.5104,
+   0.3447,
+   0.436
+  ],
+  "dPCC": 0.0207,
+  "better/worse": [
+   8,
+   4
+  ],
+  "p_PCC": 0.3804,
+  "dJ": 0.0389,
+  "p_J": 0.1294
+ },
+ "pancreas-human|orig|full+grn vs distbridge_strict|all": {
+  "nass_row": [
+   0.5092,
+   0.3084,
+   0.454
+  ],
+  "distbridge": [
+   0.4921,
+   0.3037,
+   0.4394
+  ],
+  "dPCC": 0.0171,
+  "better/worse": [
+   8,
+   6
+  ],
+  "p_PCC": 0.3575,
+  "dJ": 0.0363,
+  "p_J": 0.0676
+ },
+ "pancreas-human|orig|full+grn vs distbridge_strict|i>=2": {
+  "nass_row": [
+   0.5349,
+   0.3463,
+   0.4521
+  ],
+  "distbridge": [
+   0.5104,
+   0.3447,
+   0.436
+  ],
+  "dPCC": 0.0245,
+  "better/worse": [
+   8,
+   4
+  ],
+  "p_PCC": 0.1763,
+  "dJ": 0.0423,
+  "p_J": 0.0923
+ },
+ "pancreas-human|orig|regime vs distbridge_strict|all": {
+  "nass_row": [
+   0.4845,
+   0.2948,
+   0.4294
+  ],
+  "distbridge": [
+   0.4921,
+   0.3037,
+   0.4394
+  ],
+  "dPCC": -0.0076,
+  "better/worse": [
+   6,
+   8
+  ],
+  "p_PCC": 0.6698,
+  "dJ": -0.0265,
+  "p_J": 0.583
+ },
+ "pancreas-human|orig|regime vs distbridge_strict|i>=2": {
+  "nass_row": [
+   0.5061,
+   0.3304,
+   0.4234
+  ],
+  "distbridge": [
+   0.5104,
+   0.3447,
+   0.436
+  ],
+  "dPCC": -0.0042,
+  "better/worse": [
+   6,
+   6
+  ],
+  "p_PCC": 0.9097,
+  "dJ": -0.0311,
+  "p_J": 0.5186
+ },
+ "pancreas-human|orig|trend vs distbridge_strict|all": {
+  "nass_row": [
+   -0.3503,
+   0.0385,
+   0.0647
+  ],
+  "distbridge": [
+   0.4921,
+   0.3037,
+   0.4394
+  ],
+  "dPCC": -0.8423,
+  "better/worse": [
+   0,
+   14
+  ],
+  "p_PCC": 0.0001,
+  "dJ": -1.4823,
+  "p_J": 0.0002
+ },
+ "pancreas-human|orig|trend vs distbridge_strict|i>=2": {
+  "nass_row": [
+   -0.3917,
+   0.0365,
+   0.0287
+  ],
+  "distbridge": [
+   0.5104,
+   0.3447,
+   0.436
+  ],
+  "dPCC": -0.9021,
+  "better/worse": [
+   0,
+   12
+  ],
+  "p_PCC": 0.0005,
+  "dJ": -1.6175,
+  "p_J": 0.0005
+ },
+ "pancreas-human|orig|level(box4+obs) vs distbridge_strict|all": {
+  "nass_row": [
+   0.462,
+   0.2949,
+   0.4469
+  ],
+  "distbridge": [
+   0.4921,
+   0.3037,
+   0.4394
+  ],
+  "dPCC": -0.0301,
+  "better/worse": [
+   2,
+   12
+  ],
+  "p_PCC": 0.0166,
+  "dJ": -0.0315,
+  "p_J": 0.0353
+ },
+ "pancreas-human|orig|level(box4+obs) vs distbridge_strict|i>=2": {
+  "nass_row": [
+   0.4799,
+   0.3305,
+   0.4438
+  ],
+  "distbridge": [
+   0.5104,
+   0.3447,
+   0.436
+  ],
+  "dPCC": -0.0305,
+  "better/worse": [
+   2,
+   10
+  ],
+  "p_PCC": 0.0425,
+  "dJ": -0.0369,
+  "p_J": 0.0342
+ },
+ "pancreas-human|orig|full[h=0.5 fixed] vs distbridge_strict|all": {
+  "nass_row": [
+   0.5037,
+   0.3055,
+   0.4536
+  ],
+  "distbridge": [
+   0.4921,
+   0.3037,
+   0.4394
+  ],
+  "dPCC": 0.0116,
+  "better/worse": [
+   8,
+   6
+  ],
+  "p_PCC": 0.6257,
+  "dJ": 0.0275,
+  "p_J": 0.1353
+ },
+ "pancreas-human|orig|full[h=0.5 fixed] vs distbridge_strict|i>=2": {
+  "nass_row": [
+   0.5285,
+   0.3429,
+   0.4516
+  ],
+  "distbridge": [
+   0.5104,
+   0.3447,
+   0.436
+  ],
+  "dPCC": 0.0181,
+  "better/worse": [
+   8,
+   4
+  ],
+  "p_PCC": 0.3394,
+  "dJ": 0.032,
+  "p_J": 0.1294
+ },
+ "pancreas-human|orig|full vs distbridge_strict_nosb|all": {
+  "nass_row": [
+   0.5059,
+   0.3084,
+   0.4544
+  ],
+  "distbridge": [
+   0.4952,
+   0.3054,
+   0.4412
+  ],
+  "dPCC": 0.0107,
+  "better/worse": [
+   8,
+   6
+  ],
+  "p_PCC": 0.7148,
+  "dJ": 0.027,
+  "p_J": 0.1189
+ },
+ "pancreas-human|orig|full vs distbridge_strict_nosb|i>=2": {
+  "nass_row": [
+   0.5311,
+   0.3463,
+   0.4526
+  ],
+  "distbridge": [
+   0.514,
+   0.3466,
+   0.4381
+  ],
+  "dPCC": 0.0171,
+  "better/worse": [
+   8,
+   4
+  ],
+  "p_PCC": 0.4697,
+  "dJ": 0.0313,
+  "p_J": 0.1514
+ },
+ "pancreas-human|orig|full+grn vs distbridge_strict_nosb|all": {
+  "nass_row": [
+   0.5092,
+   0.3084,
+   0.454
+  ],
+  "distbridge": [
+   0.4952,
+   0.3054,
+   0.4412
+  ],
+  "dPCC": 0.014,
+  "better/worse": [
+   8,
+   6
+  ],
+  "p_PCC": 0.4263,
+  "dJ": 0.0298,
+  "p_J": 0.0785
+ },
+ "pancreas-human|orig|full+grn vs distbridge_strict_nosb|i>=2": {
+  "nass_row": [
+   0.5349,
+   0.3463,
+   0.4521
+  ],
+  "distbridge": [
+   0.514,
+   0.3466,
+   0.4381
+  ],
+  "dPCC": 0.0209,
+  "better/worse": [
+   8,
+   4
+  ],
+  "p_PCC": 0.2036,
+  "dJ": 0.0347,
+  "p_J": 0.1099
+ },
+ "pancreas-human|orig|regime vs distbridge_strict_nosb|all": {
+  "nass_row": [
+   0.4845,
+   0.2948,
+   0.4294
+  ],
+  "distbridge": [
+   0.4952,
+   0.3054,
+   0.4412
+  ],
+  "dPCC": -0.0106,
+  "better/worse": [
+   6,
+   8
+  ],
+  "p_PCC": 0.583,
+  "dJ": -0.033,
+  "p_J": 0.5016
+ },
+ "pancreas-human|orig|regime vs distbridge_strict_nosb|i>=2": {
+  "nass_row": [
+   0.5061,
+   0.3304,
+   0.4234
+  ],
+  "distbridge": [
+   0.514,
+   0.3466,
+   0.4381
+  ],
+  "dPCC": -0.0078,
+  "better/worse": [
+   6,
+   6
+  ],
+  "p_PCC": 0.8501,
+  "dJ": -0.0387,
+  "p_J": 0.4238
+ },
+ "pancreas-human|orig|trend vs distbridge_strict_nosb|all": {
+  "nass_row": [
+   -0.3503,
+   0.0385,
+   0.0647
+  ],
+  "distbridge": [
+   0.4952,
+   0.3054,
+   0.4412
+  ],
+  "dPCC": -0.8454,
+  "better/worse": [
+   0,
+   14
+  ],
+  "p_PCC": 0.0001,
+  "dJ": -1.4888,
+  "p_J": 0.0002
+ },
+ "pancreas-human|orig|trend vs distbridge_strict_nosb|i>=2": {
+  "nass_row": [
+   -0.3917,
+   0.0365,
+   0.0287
+  ],
+  "distbridge": [
+   0.514,
+   0.3466,
+   0.4381
+  ],
+  "dPCC": -0.9057,
+  "better/worse": [
+   0,
+   12
+  ],
+  "p_PCC": 0.0005,
+  "dJ": -1.6251,
+  "p_J": 0.0005
+ },
+ "pancreas-human|orig|level(box4+obs) vs distbridge_strict_nosb|all": {
+  "nass_row": [
+   0.462,
+   0.2949,
+   0.4469
+  ],
+  "distbridge": [
+   0.4952,
+   0.3054,
+   0.4412
+  ],
+  "dPCC": -0.0331,
+  "better/worse": [
+   2,
+   12
+  ],
+  "p_PCC": 0.0023,
+  "dJ": -0.038,
+  "p_J": 0.0017
+ },
+ "pancreas-human|orig|level(box4+obs) vs distbridge_strict_nosb|i>=2": {
+  "nass_row": [
+   0.4799,
+   0.3305,
+   0.4438
+  ],
+  "distbridge": [
+   0.514,
+   0.3466,
+   0.4381
+  ],
+  "dPCC": -0.0341,
+  "better/worse": [
+   2,
+   10
+  ],
+  "p_PCC": 0.0049,
+  "dJ": -0.0445,
+  "p_J": 0.0015
+ },
+ "pancreas-human|orig|full[h=0.5 fixed] vs distbridge_strict_nosb|all": {
+  "nass_row": [
+   0.5037,
+   0.3055,
+   0.4536
+  ],
+  "distbridge": [
+   0.4952,
+   0.3054,
+   0.4412
+  ],
+  "dPCC": 0.0085,
+  "better/worse": [
+   8,
+   6
+  ],
+  "p_PCC": 0.7148,
+  "dJ": 0.021,
+  "p_J": 0.2166
+ },
+ "pancreas-human|orig|full[h=0.5 fixed] vs distbridge_strict_nosb|i>=2": {
+  "nass_row": [
+   0.5285,
+   0.3429,
+   0.4516
+  ],
+  "distbridge": [
+   0.514,
+   0.3466,
+   0.4381
+  ],
+  "dPCC": 0.0145,
+  "better/worse": [
+   8,
+   4
+  ],
+  "p_PCC": 0.4238,
+  "dJ": 0.0244,
+  "p_J": 0.2036
+ },
+ "pancreas-human|l1|full vs distbridge_strict_nosb_l1|all": {
+  "nass_row": [
+   0.2896,
+   0.2119,
+   0.2722
+  ],
+  "distbridge": [
+   -0.0348,
+   0.094,
+   0.1451
+  ],
+  "dPCC": 0.3244,
+  "better/worse": [
+   12,
+   2
+  ],
+  "p_PCC": 0.0006,
+  "dJ": 0.5694,
+  "p_J": 0.0004
+ },
+ "pancreas-human|l1|full vs distbridge_strict_nosb_l1|i>=2": {
+  "nass_row": [
+   0.308,
+   0.221,
+   0.283
+  ],
+  "distbridge": [
+   -0.0124,
+   0.0962,
+   0.1534
+  ],
+  "dPCC": 0.3203,
+  "better/worse": [
+   11,
+   1
+  ],
+  "p_PCC": 0.001,
+  "dJ": 0.5747,
+  "p_J": 0.0005
+ },
+ "pancreas-human|l1|full+grn vs distbridge_strict_nosb_l1|all": {
+  "nass_row": [
+   0.3062,
+   0.2194,
+   0.282
+  ],
+  "distbridge": [
+   -0.0348,
+   0.094,
+   0.1451
+  ],
+  "dPCC": 0.341,
+  "better/worse": [
+   12,
+   2
+  ],
+  "p_PCC": 0.0006,
+  "dJ": 0.6032,
+  "p_J": 0.0004
+ },
+ "pancreas-human|l1|full+grn vs distbridge_strict_nosb_l1|i>=2": {
+  "nass_row": [
+   0.3273,
+   0.2298,
+   0.2944
+  ],
+  "distbridge": [
+   -0.0124,
+   0.0962,
+   0.1534
+  ],
+  "dPCC": 0.3396,
+  "better/worse": [
+   11,
+   1
+  ],
+  "p_PCC": 0.001,
+  "dJ": 0.6142,
+  "p_J": 0.0005
+ },
+ "pancreas-human|l1|regime vs distbridge_strict_nosb_l1|all": {
+  "nass_row": [
+   0.259,
+   0.2098,
+   0.256
+  ],
+  "distbridge": [
+   -0.0348,
+   0.094,
+   0.1451
+  ],
+  "dPCC": 0.2938,
+  "better/worse": [
+   12,
+   2
+  ],
+  "p_PCC": 0.0006,
+  "dJ": 0.5205,
+  "p_J": 0.0004
+ },
+ "pancreas-human|l1|regime vs distbridge_strict_nosb_l1|i>=2": {
+  "nass_row": [
+   0.2722,
+   0.2185,
+   0.2642
+  ],
+  "distbridge": [
+   -0.0124,
+   0.0962,
+   0.1534
+  ],
+  "dPCC": 0.2846,
+  "better/worse": [
+   11,
+   1
+  ],
+  "p_PCC": 0.001,
+  "dJ": 0.5177,
+  "p_J": 0.0005
+ },
+ "pancreas-human|l1|trend vs distbridge_strict_nosb_l1|all": {
+  "nass_row": [
+   0.1411,
+   0.2113,
+   0.2148
+  ],
+  "distbridge": [
+   -0.0348,
+   0.094,
+   0.1451
+  ],
+  "dPCC": 0.1759,
+  "better/worse": [
+   8,
+   6
+  ],
+  "p_PCC": 0.0906,
+  "dJ": 0.3629,
+  "p_J": 0.058
+ },
+ "pancreas-human|l1|trend vs distbridge_strict_nosb_l1|i>=2": {
+  "nass_row": [
+   0.1347,
+   0.2203,
+   0.216
+  ],
+  "distbridge": [
+   -0.0124,
+   0.0962,
+   0.1534
+  ],
+  "dPCC": 0.1471,
+  "better/worse": [
+   7,
+   5
+  ],
+  "p_PCC": 0.1294,
+  "dJ": 0.3338,
+  "p_J": 0.0771
+ },
+ "pancreas-human|l1|level(box4) vs distbridge_strict_nosb_l1|all": {
+  "nass_row": [
+   -0.136,
+   0.0956,
+   0.1633
+  ],
+  "distbridge": [
+   -0.0348,
+   0.094,
+   0.1451
+  ],
+  "dPCC": -0.1012,
+  "better/worse": [
+   5,
+   9
+  ],
+  "p_PCC": 0.0494,
+  "dJ": -0.0814,
+  "p_J": 0.2676
+ },
+ "pancreas-human|l1|level(box4) vs distbridge_strict_nosb_l1|i>=2": {
+  "nass_row": [
+   -0.1318,
+   0.1,
+   0.1723
+  ],
+  "distbridge": [
+   -0.0124,
+   0.0962,
+   0.1534
+  ],
+  "dPCC": -0.1194,
+  "better/worse": [
+   4,
+   8
+  ],
+  "p_PCC": 0.0342,
+  "dJ": -0.0967,
+  "p_J": 0.2334
+ },
+ "pancreas-human|l1|full[h=0.5 fixed] vs distbridge_strict_nosb_l1|all": {
+  "nass_row": [
+   0.2751,
+   0.2177,
+   0.2688
+  ],
+  "distbridge": [
+   -0.0348,
+   0.094,
+   0.1451
+  ],
+  "dPCC": 0.3099,
+  "better/worse": [
+   12,
+   2
+  ],
+  "p_PCC": 0.0012,
+  "dJ": 0.5573,
+  "p_J": 0.0004
+ },
+ "pancreas-human|l1|full[h=0.5 fixed] vs distbridge_strict_nosb_l1|i>=2": {
+  "nass_row": [
+   0.291,
+   0.2277,
+   0.2791
+  ],
+  "distbridge": [
+   -0.0124,
+   0.0962,
+   0.1534
+  ],
+  "dPCC": 0.3034,
+  "better/worse": [
+   11,
+   1
+  ],
+  "p_PCC": 0.0015,
+  "dJ": 0.5606,
+  "p_J": 0.0005
+ }
+}

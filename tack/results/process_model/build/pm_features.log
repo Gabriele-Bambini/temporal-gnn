@@ -1,0 +1,8 @@
+== gastrulation-human: L check 0.00e+00; NaN strictness max diff 0.0 (rows 1..28 exact) (12s)
+  has_reg share mean 0.457, has_regbar 0.494
+  corr(grnbar, grn_lag1) mean 0.755; corr(grnbar, null) mean 0.468
+  fgap sd mean 0.1257, fmom sd mean 0.0335
+== pancreas-human: L check 0.00e+00; NaN strictness max diff 0.0 (rows 1..13 exact) (5s)
+  has_reg share mean 0.585, has_regbar 0.644
+  corr(grnbar, grn_lag1) mean 0.630; corr(grnbar, null) mean 0.224
+  fgap sd mean 0.1017, fmom sd mean 0.0678

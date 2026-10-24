@@ -1,0 +1,78 @@
+{
+ "prereg": "docs/superpowers/prereg/2026-09-25-prereg-v02.md",
+ "dirs": [
+  "outputs/mech_eb",
+  "outputs/mech_argelaguet"
+ ],
+ "reproducibility_gate": {
+  "max_abs_diff": 0.0,
+  "n": 24,
+  "passes": true,
+  "diffs": {
+   "eb|base|1.0|0": 0.0,
+   "eb|base|1.0|1": 0.0,
+   "eb|base|3.0|0": 0.0,
+   "eb|base|3.0|1": 0.0,
+   "eb|noft|1.0|0": 0.0,
+   "eb|noft|1.0|1": 0.0,
+   "eb|noft|3.0|0": 0.0,
+   "eb|noft|3.0|1": 0.0,
+   "eb|time|1.0|0": 0.0,
+   "eb|time|1.0|1": 0.0,
+   "eb|time|3.0|0": 0.0,
+   "eb|time|3.0|1": 0.0,
+   "argelaguet|base|1.0|0": 0.0,
+   "argelaguet|base|1.0|1": 0.0,
+   "argelaguet|base|4.0|0": 0.0,
+   "argelaguet|base|4.0|1": 0.0,
+   "argelaguet|noft|1.0|0": 0.0,
+   "argelaguet|noft|1.0|1": 0.0,
+   "argelaguet|noft|4.0|0": 0.0,
+   "argelaguet|noft|4.0|1": 0.0,
+   "argelaguet|time|1.0|0": 0.0,
+   "argelaguet|time|1.0|1": 0.0,
+   "argelaguet|time|4.0|0": 0.0,
+   "argelaguet|time|4.0|1": 0.0
+  }
+ },
+ "long_folds": [
+  [
+   "eb",
+   [
+    "eb",
+    3.0
+   ]
+  ],
+  [
+   "argelaguet",
+   [
+    "argelaguet",
+    4.0
+   ]
+  ]
+ ],
+ "rule_b": {
+  "time_noft": {
+   "g": [],
+   "n_pairs": 0,
+   "n_ge_0.5": 0,
+   "n_lt_0.25": 0,
+   "verdict": "inconclusive",
+   "median_g": null
+  },
+  "spline_noft": {
+   "g": [],
+   "n_pairs": 0,
+   "n_ge_0.5": 0,
+   "n_lt_0.25": 0,
+   "verdict": "inconclusive",
+   "median_g": null
+  }
+ },
+ "admitted_to_step6": [
+  "base",
+  "noft",
+  "gated",
+  "transfer"
+ ]
+}

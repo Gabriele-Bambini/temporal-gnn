@@ -1,0 +1,30 @@
+== gastrulation-human l1
+  svdkf_all                            0.276 0.267 0.261
+  svdkf_all__HINDSIGHT_not_strict      0.301 0.275 0.267
+  svdkf_zero                           0.279 0.267 0.266
+  svdkf_zero__HINDSIGHT_not_strict     0.277 0.264 0.263
+  svdkf_avg3                           0.290 0.273 0.267
+  svdkf_avg3__HINDSIGHT_not_strict     0.301 0.275 0.267
+  svdkf_last                           0.138 0.200 0.167
+  svdkf_last__HINDSIGHT_not_strict     0.152 0.205 0.176
+  svdkf_all_vs_trend                   dPCC +0.447 (26/2) dJ +0.782 (26/2, p=1.0207295417785645e-06)
+  svdkf_all_vs_pergene_all             dPCC +0.132 (21/7) dJ +0.235 (21/7, p=0.006060026586055756)
+  svdkf_all_vs_svd_all                 dPCC +0.018 (16/12) dJ +0.014 (16/12, p=0.3989470452070236)
+  svdkf_all_vs_nmf_all                 dPCC +0.049 (18/10) dJ +0.070 (16/12, p=0.7281656339764595)
+  svdkf_all_vs_nmf_K8                  dPCC -0.017 (17/11) dJ -0.052 (15/13, p=0.8489041775465012)
+  svdkf_all_vs_nmf_persist_denoise     dPCC -0.004 (17/11) dJ -0.048 (17/11, p=0.6947018131613731)
+== gastrulation-human linear
+  svdkf_all                            0.317 0.354 0.330
+  svdkf_all__HINDSIGHT_not_strict      0.316 0.367 0.355
+  svdkf_zero                           0.307 0.355 0.330
+  svdkf_zero__HINDSIGHT_not_strict     0.306 0.365 0.349
+  svdkf_avg3                           0.320 0.354 0.325
+  svdkf_avg3__HINDSIGHT_not_strict     0.316 0.367 0.355
+  svdkf_last                           0.279 0.316 0.252
+  svdkf_last__HINDSIGHT_not_strict     0.276 0.324 0.286
+  svdkf_all_vs_trend                   dPCC +0.142 (18/10) dJ +0.415 (22/6, p=0.0005833879113197327)
+  svdkf_all_vs_pergene_all             dPCC -0.027 (12/16) dJ +0.047 (17/11, p=0.6136380508542061)
+  svdkf_all_vs_svd_all                 dPCC -0.001 (15/13) dJ -0.016 (14/14, p=0.9018996506929398)
+  svdkf_all_vs_nmf_all                 dPCC +0.001 (16/12) dJ -0.000 (14/14, p=0.7450922578573227)
+  svdkf_all_vs_nmf_K8                  dPCC +0.023 (15/13) dJ +0.033 (16/12, p=0.3989470452070236)
+  svdkf_all_vs_nmf_persist_denoise     dPCC +0.148 (20/8) dJ +0.152 (19/9, p=0.0992795079946518)

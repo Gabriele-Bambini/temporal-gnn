@@ -1,0 +1,188 @@
+{
+ "synthetic_grn": {
+  "dataset": "synthetic_grn",
+  "metric": "energy_distance",
+  "mode": "benchmark",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "linear",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "linear",
+   "metric": "energy_distance",
+   "mean": 5.108516642606498,
+   "ci_low": -3.68892995433918,
+   "ci_high": 13.905963239552175,
+   "n": 5
+  },
+  "uses_time": false,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": 2.795962643654656,
+   "ci_low": -5.9927610535726625,
+   "ci_high": 11.584686340881975,
+   "n": 5
+  },
+  "fm_mean": 5.66763587454389,
+  "noise_floor": 6.054047591239999e-05,
+  "null_q95": 0.021501324549697158,
+  "matches_target": false
+ },
+ "synthetic_grn_interp_t3": {
+  "dataset": "synthetic_grn_interp_t3",
+  "metric": "energy_distance",
+  "mode": "benchmark",
+  "pass": true,
+  "beats_all_controls": true,
+  "best_control": "mean_interp",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "mean_interp",
+   "metric": "energy_distance",
+   "mean": -0.4608291083637782,
+   "ci_low": -0.4628117293623493,
+   "ci_high": -0.4588464873652071,
+   "n": 5
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -3.4762157663055575,
+   "ci_low": -3.5587777315014564,
+   "ci_high": -3.3936538011096586,
+   "n": 5
+  },
+  "fm_mean": 0.6412801339726398,
+  "noise_floor": 4.165433736374991e-05,
+  "null_q95": 0.00398414415207506,
+  "matches_target": false
+ },
+ "toy_bimodal": {
+  "dataset": "toy_bimodal",
+  "metric": "energy_distance",
+  "mode": "sanity",
+  "pass": true,
+  "beats_all_controls": false,
+  "best_control": "freefm_replay",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "freefm_replay",
+   "metric": "energy_distance",
+   "mean": 0.00228860143014986,
+   "ci_low": -0.004729595106454848,
+   "ci_high": 0.009306797966754567,
+   "n": 5
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -1.031914061024964,
+   "ci_low": -1.0450313849434536,
+   "ci_high": -1.0187967371064743,
+   "n": 5
+  },
+  "fm_mean": 0.0020433240110542803,
+  "noise_floor": 0.0019044810759968,
+  "null_q95": 0.0082350129535222,
+  "matches_target": true
+ },
+ "toy_condition_shift": {
+  "dataset": "toy_condition_shift",
+  "metric": "energy_distance",
+  "mode": "sanity",
+  "pass": true,
+  "beats_all_controls": false,
+  "best_control": "mean_shift",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "mean_shift",
+   "metric": "energy_distance",
+   "mean": 0.00082138759543575,
+   "ci_low": -0.00021283050135168131,
+   "ci_high": 0.0018556056922231813,
+   "n": 5
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.7787793978707189,
+   "ci_low": -0.8239263598557722,
+   "ci_high": -0.7336324358856656,
+   "n": 5
+  },
+  "fm_mean": 0.00062499813261729,
+  "noise_floor": -0.00019145681901354492,
+  "null_q95": 0.00276395731856258,
+  "matches_target": true
+ },
+ "toy_translation": {
+  "dataset": "toy_translation",
+  "metric": "energy_distance",
+  "mode": "sanity",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "mean_shift",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "mean_shift",
+   "metric": "energy_distance",
+   "mean": 0.0018838248497051852,
+   "ci_low": -0.0031547301383481265,
+   "ci_high": 0.006922379837758497,
+   "n": 5
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -2.5318091873828794,
+   "ci_low": -2.6096991883577902,
+   "ci_high": -2.4539191864079686,
+   "n": 5
+  },
+  "fm_mean": 0.00311200831431412,
+  "noise_floor": 0.0008777637794290999,
+  "null_q95": 0.002742605934762,
+  "matches_target": false
+ },
+ "toy_variance": {
+  "dataset": "toy_variance",
+  "metric": "energy_distance",
+  "mode": "sanity",
+  "pass": true,
+  "beats_all_controls": false,
+  "best_control": "linear",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "linear",
+   "metric": "energy_distance",
+   "mean": 0.0007384545368973797,
+   "ci_low": -0.0010399949524284103,
+   "ci_high": 0.0025169040262231694,
+   "n": 5
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.08796277790905499,
+   "ci_low": -0.09464064515087085,
+   "ci_high": -0.08128491066723913,
+   "n": 5
+  },
+  "fm_mean": 0.00140521523134114,
+  "noise_floor": 0.001012071307568,
+  "null_q95": 0.0036319413924463797,
+  "matches_target": true
+ }
+}

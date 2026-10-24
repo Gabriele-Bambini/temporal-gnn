@@ -1,0 +1,51 @@
+space,what,value,seed
+genes (1272),"mean error, linear between neighbours",2.6915531158447266,
+genes (1272),"mean error, cubic spline through all observed windows",3.023289442692365,
+genes (1272),"mean error, cubic spline through the fit windows only",4.4601265412729765,
+genes (1272),distance between the two neighbouring means,7.242232799530029,
+genes (1272),"ED, spline path (the model's training target)",0.14989381620166853,0.0
+genes (1272),"ED after moving the centre onto the truth, spline path (the model's training target)",-0.023528436279349307,0.0
+genes (1272),"ED, mean interpolation (control)",0.475506236661019,0.0
+genes (1272),"ED after moving the centre onto the truth, mean interpolation (control)",0.3303873997048328,0.0
+genes (1272),"ED, McCann / OT interpolant (straight chained pairs)",0.7990419075656661,0.0
+genes (1272),"ED after moving the centre onto the truth, McCann / OT interpolant (straight chained pairs)",0.6501959548753291,0.0
+genes (1272),"ED, noise floor (two halves of the true window)",-0.0016669908897455343,0.0
+genes (1272),"ED, spline path (the model's training target)",0.16093920405511852,1.0
+genes (1272),"ED after moving the centre onto the truth, spline path (the model's training target)",-0.02281361934463888,1.0
+genes (1272),"ED, mean interpolation (control)",0.46155881753984573,1.0
+genes (1272),"ED after moving the centre onto the truth, mean interpolation (control)",0.3351720972614345,1.0
+genes (1272),"ED, McCann / OT interpolant (straight chained pairs)",0.8000402541911953,1.0
+genes (1272),"ED after moving the centre onto the truth, McCann / OT interpolant (straight chained pairs)",0.643804136116465,1.0
+genes (1272),"ED, noise floor (two halves of the true window)",0.004929668177972246,1.0
+genes (1272),"ED, spline path (the model's training target)",0.16811778224688112,2.0
+genes (1272),"ED after moving the centre onto the truth, spline path (the model's training target)",-0.02135561002818065,2.0
+genes (1272),"ED, mean interpolation (control)",0.4301893779470589,2.0
+genes (1272),"ED after moving the centre onto the truth, mean interpolation (control)",0.2981446616032244,2.0
+genes (1272),"ED, McCann / OT interpolant (straight chained pairs)",0.8688361283484412,2.0
+genes (1272),"ED after moving the centre onto the truth, McCann / OT interpolant (straight chained pairs)",0.711682354188703,2.0
+genes (1272),"ED, noise floor (two halves of the true window)",0.014074213568498806,2.0
+PCA-50,"mean error, linear between neighbours",0.9672465324401855,
+PCA-50,"mean error, cubic spline through all observed windows",1.0858419349426354,
+PCA-50,"mean error, cubic spline through the fit windows only",1.6872690985003855,
+PCA-50,distance between the two neighbouring means,2.1598949432373047,
+PCA-50,"ED, spline path (the model's training target)",0.1168461742290372,0.0
+PCA-50,"ED after moving the centre onto the truth, spline path (the model's training target)",0.0022155318184484685,0.0
+PCA-50,"ED, mean interpolation (control)",0.1146965057240017,0.0
+PCA-50,"ED after moving the centre onto the truth, mean interpolation (control)",0.01576337147591289,0.0
+PCA-50,"ED, McCann / OT interpolant (straight chained pairs)",0.16176494718669687,0.0
+PCA-50,"ED after moving the centre onto the truth, McCann / OT interpolant (straight chained pairs)",0.061211735271630374,0.0
+PCA-50,"ED, noise floor (two halves of the true window)",-0.001053244712613477,0.0
+PCA-50,"ED, spline path (the model's training target)",0.11633347487280687,1.0
+PCA-50,"ED after moving the centre onto the truth, spline path (the model's training target)",0.0024464832866790687,1.0
+PCA-50,"ED, mean interpolation (control)",0.10674509178482161,1.0
+PCA-50,"ED after moving the centre onto the truth, mean interpolation (control)",0.017529813516585335,1.0
+PCA-50,"ED, McCann / OT interpolant (straight chained pairs)",0.16145054369141043,1.0
+PCA-50,"ED after moving the centre onto the truth, McCann / OT interpolant (straight chained pairs)",0.0618427705801583,1.0
+PCA-50,"ED, noise floor (two halves of the true window)",0.0010011075847700113,1.0
+PCA-50,"ED, spline path (the model's training target)",0.11596571765964292,2.0
+PCA-50,"ED after moving the centre onto the truth, spline path (the model's training target)",0.0023521460699829078,2.0
+PCA-50,"ED, mean interpolation (control)",0.11022206476446073,2.0
+PCA-50,"ED after moving the centre onto the truth, mean interpolation (control)",0.018463502120949826,2.0
+PCA-50,"ED, McCann / OT interpolant (straight chained pairs)",0.16622823062726333,2.0
+PCA-50,"ED after moving the centre onto the truth, McCann / OT interpolant (straight chained pairs)",0.06587753224887116,2.0
+PCA-50,"ED, noise floor (two halves of the true window)",0.0002629735912655917,2.0

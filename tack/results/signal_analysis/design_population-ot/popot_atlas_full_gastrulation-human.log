@@ -1,0 +1,31 @@
+gastrulation-human full transition 1 62.1 s
+gastrulation-human full transition 2 91.5 s
+gastrulation-human full transition 3 117.2 s
+gastrulation-human full transition 4 145.2 s
+gastrulation-human full transition 5 171.5 s
+gastrulation-human full transition 6 195.9 s
+gastrulation-human full transition 7 221.9 s
+gastrulation-human full transition 8 248.7 s
+gastrulation-human full transition 9 275.0 s
+gastrulation-human full transition 10 303.3 s
+gastrulation-human full transition 11 330.1 s
+gastrulation-human full transition 12 358.6 s
+gastrulation-human full transition 13 386.8 s
+gastrulation-human full transition 14 415.5 s
+gastrulation-human full transition 15 442.4 s
+gastrulation-human full transition 16 468.3 s
+gastrulation-human full transition 17 491.1 s
+gastrulation-human full transition 18 516.1 s
+gastrulation-human full transition 19 539.2 s
+gastrulation-human full transition 20 561.1 s
+gastrulation-human full transition 21 585.8 s
+gastrulation-human full transition 22 606.0 s
+gastrulation-human full transition 23 628.9 s
+gastrulation-human full transition 24 650.4 s
+gastrulation-human full transition 25 672.3 s
+gastrulation-human full transition 26 694.9 s
+gastrulation-human full transition 27 717.2 s
+gastrulation-human full transition 28 736.8 s
+gastrulation-human full orig {'trend_repeat_last_change': [-0.4648, 0.0102, 0.0103], 'fc=persist': [0.5905, 0.3927, 0.5437], 'fc=lin1': [0.6309, 0.4484, 0.5698], 'fc=loglin1': [0.6321, 0.4488, 0.5712], 'fc=ot0.05': [0.6313, 0.448, 0.5716], 'fc=uot0.05t1': [0.6306, 0.4474, 0.5717], 'fc=sb3': [0.6263, 0.4459, 0.5677], 'fc=bridge': [0.615, 0.4353, 0.5608], 'fc=oracle': [0.6376, 0.4509, 0.5733]}
+gastrulation-human full l1 {'trend_repeat_last_change': [-0.1707, 0.1008, 0.0916], 'fc=persist': [0.0791, 0.2384, 0.2459], 'fc=lin1': [0.542, 0.4401, 0.4331], 'fc=loglin1': [0.5528, 0.4438, 0.4382], 'fc=ot0.05': [0.5477, 0.4407, 0.4373], 'fc=uot0.05t1': [0.5452, 0.437, 0.4349], 'fc=sb3': [0.4222, 0.3836, 0.3827], 'fc=bridge': [0.4681, 0.3903, 0.4072], 'fc=oracle': [0.6565, 0.4889, 0.4895]}
+gastrulation-human full linear {'trend_repeat_last_change': [0.1742, 0.218, 0.1928], 'fc=persist': [0.0409, 0.2273, 0.2019], 'fc=lin1': [0.5374, 0.4713, 0.451], 'fc=loglin1': [0.5231, 0.4569, 0.4376], 'fc=ot0.05': [0.5092, 0.4354, 0.4214], 'fc=uot0.05t1': [0.4144, 0.3974, 0.38], 'fc=sb3': [0.3522, 0.3861, 0.3811], 'fc=bridge': [0.3935, 0.3959, 0.3924], 'fc=oracle': [0.6037, 0.5126, 0.4828]}

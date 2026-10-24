@@ -1,0 +1,184 @@
+{
+ "version": "0.1.4",
+ "args": {
+  "out": "outputs/phase1_v1_toys",
+  "quick": false,
+  "seeds": 5,
+  "search_seeds": 2,
+  "datasets": "toys",
+  "max_configs": 8,
+  "seed": 0
+ },
+ "base_config": {
+  "hidden": 256,
+  "depth": 3,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "batch_size": 256,
+  "n_iters": 8000,
+  "sigma_min": 0.001,
+  "coupling": "ot",
+  "n_ode_steps": 20,
+  "ode_method": "rk4",
+  "time_embed_dim": 32,
+  "cond_dim": 8,
+  "time_conditioning": "delta",
+  "eval_every": 250,
+  "patience": 8,
+  "seed": 0,
+  "shuffle_biological_time": false,
+  "ema_decay": 0.999,
+  "grad_clip": 1.0,
+  "pair_mode": "consecutive",
+  "clock": "flow"
+ },
+ "grids": {
+  "toys": {
+   "hidden": [
+    128,
+    256
+   ],
+   "lr": [
+    0.001,
+    0.0003
+   ],
+   "sigma_min": [
+    0.001,
+    0.01
+   ],
+   "coupling": [
+    "ot",
+    "independent"
+   ]
+  },
+  "grn": {
+   "hidden": [
+    128,
+    256
+   ],
+   "lr": [
+    0.001,
+    0.0003
+   ],
+   "sigma_min": [
+    0.001,
+    0.01
+   ],
+   "coupling": [
+    "ot",
+    "independent"
+   ],
+   "pair_mode": [
+    "consecutive",
+    "all"
+   ],
+   "clock": [
+    "flow",
+    "duration"
+   ]
+  }
+ },
+ "protocol": {
+  "n_samples": 1000,
+  "seed": 0,
+  "bandwidth": 1.0,
+  "w2_max": 500,
+  "n_perm": 50
+ },
+ "started": "2026-09-18 14:52:58",
+ "best_configs": {
+  "toy_translation": {
+   "hidden": 256,
+   "depth": 3,
+   "lr": 0.0003,
+   "weight_decay": 0.0,
+   "batch_size": 256,
+   "n_iters": 8000,
+   "sigma_min": 0.01,
+   "coupling": "independent",
+   "n_ode_steps": 20,
+   "ode_method": "rk4",
+   "time_embed_dim": 32,
+   "cond_dim": 8,
+   "time_conditioning": "delta",
+   "eval_every": 250,
+   "patience": 8,
+   "seed": 0,
+   "shuffle_biological_time": false,
+   "ema_decay": 0.999,
+   "grad_clip": 1.0,
+   "pair_mode": "consecutive",
+   "clock": "flow"
+  },
+  "toy_variance": {
+   "hidden": 128,
+   "depth": 3,
+   "lr": 0.001,
+   "weight_decay": 0.0,
+   "batch_size": 256,
+   "n_iters": 8000,
+   "sigma_min": 0.01,
+   "coupling": "independent",
+   "n_ode_steps": 20,
+   "ode_method": "rk4",
+   "time_embed_dim": 32,
+   "cond_dim": 8,
+   "time_conditioning": "delta",
+   "eval_every": 250,
+   "patience": 8,
+   "seed": 0,
+   "shuffle_biological_time": false,
+   "ema_decay": 0.999,
+   "grad_clip": 1.0,
+   "pair_mode": "consecutive",
+   "clock": "flow"
+  },
+  "toy_bimodal": {
+   "hidden": 256,
+   "depth": 3,
+   "lr": 0.0003,
+   "weight_decay": 0.0,
+   "batch_size": 256,
+   "n_iters": 8000,
+   "sigma_min": 0.01,
+   "coupling": "independent",
+   "n_ode_steps": 20,
+   "ode_method": "rk4",
+   "time_embed_dim": 32,
+   "cond_dim": 8,
+   "time_conditioning": "delta",
+   "eval_every": 250,
+   "patience": 8,
+   "seed": 0,
+   "shuffle_biological_time": false,
+   "ema_decay": 0.999,
+   "grad_clip": 1.0,
+   "pair_mode": "consecutive",
+   "clock": "flow"
+  },
+  "toy_condition_shift": {
+   "hidden": 256,
+   "depth": 3,
+   "lr": 0.0003,
+   "weight_decay": 0.0,
+   "batch_size": 256,
+   "n_iters": 8000,
+   "sigma_min": 0.01,
+   "coupling": "independent",
+   "n_ode_steps": 20,
+   "ode_method": "rk4",
+   "time_embed_dim": 32,
+   "cond_dim": 8,
+   "time_conditioning": "delta",
+   "eval_every": 250,
+   "patience": 8,
+   "seed": 0,
+   "shuffle_biological_time": false,
+   "ema_decay": 0.999,
+   "grad_clip": 1.0,
+   "pair_mode": "consecutive",
+   "clock": "flow"
+  }
+ },
+ "finished": "2026-09-18 15:56:14"
+}

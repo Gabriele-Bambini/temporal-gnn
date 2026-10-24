@@ -1,0 +1,38 @@
+===== gastrulation-human
+  (1) max |K - round(K)| over expressed = 5.84e-05; max |sum - round(sum)| = 0.00e+00; max |n - round(n)| = 9.11e-06; median K among expressed = 26; frac expressed genes with K<=3: 0.214
+  (2) CV2_lib floor per bin: [0.0, 0.011, 0.077, 0.074, 0.078, 0.08, 0.078, 0.041, 0.049, 0.047, 0.059, 0.064, 0.057, 0.064, 0.053, 0.043, 0.045, 0.035, 0.072, 0.058, 0.068, 0.102, 0.07, 0.06, 0.07, 0.093, 0.067, 0.039, 0.043, 0.0]
+      class   -cov/R (all)  raw -> corrected   | quiet raw -> corrected   | obs var / pred var quiet raw -> corr
+      0-0.1     0.92 ->   0.91   |     0.96 ->   0.94 (k=13)  |   1.04 ->  1.02
+      0.1-1     0.74 ->   0.75   |     0.84 ->   0.85 (k=13)  |   1.01 ->  1.02
+      1-10     0.34 ->   0.38   |     0.59 ->   0.63 (k=13)  |   1.09 ->  1.21
+      10-100    -0.83 ->  -1.18   |    -0.91 ->  -1.28 (k=13)  |   1.95 ->  2.47
+      100-inf      nan ->    nan   |      nan ->    nan (k=0)  |    nan ->   nan
+  (3) rev_f         mean +0.047  positive 18/26  (transitions i>=3)
+  (3) rev_f|full    mean +0.012  positive 16/26  (transitions i>=3)
+  (3) rev_med|full  mean +0.005  positive 14/26  (transitions i>=3)
+  (3) disp|full     mean -0.011  positive 10/26  (transitions i>=3)
+  (4) S_abs (x1e3): [5.19, 0.06, 0.12, 0.13, 0.11, 0.43, 1.67, 0.3, -0.0, 0.0, 0.05, 0.06, 0.07, 0.04, 0.03, 0.02, 0.03, 0.13, 0.04, 0.04, 0.4, 0.36, 0.08, 0.28, 0.12, 0.26, -0.01, -0.11, -2.8]
+      corr(S_abs, log n_geo) -0.04; corr(S_abs, dlog n^2) +0.58; R2 both 0.54; lag-1 corr(S_abs) +0.09
+  (5) LL Q=const c=0: i>=2 +0.091 (NASS +0.335) | quiet +0.162 (NASS +0.445, k=13) | per-t [nan, -0.13, 0.31, 0.04, -0.03, 0.35, -0.19, -0.31, 0.05, 0.17, 0.13, 0.16, 0.01, 0.1, 0.24, 0.29, 0.31, 0.19, 0.07, -0.0, -0.11, 0.3, -0.03, -0.07, -0.08, 0.04, 0.07, 0.15, 0.28]
+  (5) LL Q=const c=1: i>=2 +0.107 (NASS +0.335) | quiet +0.181 (NASS +0.445, k=13) | per-t [nan, -0.13, 0.25, 0.02, 0.01, 0.17, -0.01, -0.38, -0.01, 0.12, 0.12, 0.14, 0.04, 0.15, 0.26, 0.34, 0.34, 0.28, 0.09, -0.01, -0.07, 0.42, 0.03, 0.01, -0.01, 0.05, 0.08, 0.18, 0.31]
+  (5) LL Q=tv    c=0: i>=2 +0.049 (NASS +0.335) | quiet +0.125 (NASS +0.445, k=13) | per-t [nan, -0.13, 0.31, 0.04, -0.16, 0.44, -0.39, -0.38, -0.0, 0.14, 0.17, 0.2, -0.04, 0.01, 0.22, 0.24, 0.29, 0.12, -0.01, -0.09, -0.15, 0.23, -0.06, -0.1, -0.11, 0.0, 0.04, 0.13, 0.25]
+  (5) LL Q=tv    c=1: i>=2 +0.082 (NASS +0.335) | quiet +0.170 (NASS +0.445, k=13) | per-t [nan, -0.13, 0.25, 0.02, -0.1, 0.29, -0.29, -0.41, -0.03, 0.1, 0.18, 0.2, 0.04, 0.11, 0.29, 0.35, 0.36, 0.24, 0.02, -0.09, -0.1, 0.34, 0.0, -0.01, -0.04, 0.03, 0.06, 0.14, 0.27]
+===== pancreas-human
+  (1) max |K - round(K)| over expressed = 4.58e-05; max |sum - round(sum)| = 0.00e+00; max |n - round(n)| = 1.41e-05; median K among expressed = 18; frac expressed genes with K<=3: 0.200
+  (2) CV2_lib floor per bin: [0.0, 0.02, 0.034, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.032, 0.009, 0.0]
+      class   -cov/R (all)  raw -> corrected   | quiet raw -> corrected   | obs var / pred var quiet raw -> corr
+      0-0.1     0.39 ->   0.37   |      nan ->    nan (k=0)  |    nan ->   nan
+      0.1-1    -0.26 ->  -0.25   |      nan ->    nan (k=0)  |    nan ->   nan
+      1-10    -3.11 ->  -3.06   |      nan ->    nan (k=0)  |    nan ->   nan
+      10-100    -7.38 ->  -7.38   |      nan ->    nan (k=0)  |    nan ->   nan
+      100-inf      nan ->    nan   |      nan ->    nan (k=0)  |    nan ->   nan
+  (3) rev_f         mean +0.105  positive 10/11  (transitions i>=3)
+  (3) rev_f|full    mean +0.052  positive 10/11  (transitions i>=3)
+  (3) rev_med|full  mean +0.006  positive 6/11  (transitions i>=3)
+  (3) disp|full     mean -0.028  positive 2/11  (transitions i>=3)
+  (4) S_abs (x1e3): [0.93, 0.83, 1.1, 4.39, 1.86, 1.28, 1.85, 2.18, 4.14, 7.1, 6.94, 4.92, 2.28, 2.27]
+      corr(S_abs, log n_geo) +0.05; corr(S_abs, dlog n^2) -0.22; R2 both 0.06; lag-1 corr(S_abs) +0.63
+  (5) LL Q=const c=0: i>=2 -0.075 (NASS +0.308) | quiet +nan (NASS +nan, k=0) | per-t [nan, -0.45, -0.04, -0.1, -0.01, 0.05, 0.09, -0.06, -0.17, -0.19, -0.1, -0.12, -0.04, -0.2]
+  (5) LL Q=const c=1: i>=2 -0.089 (NASS +0.308) | quiet +nan (NASS +nan, k=0) | per-t [nan, -0.45, -0.08, -0.14, -0.03, 0.07, 0.1, -0.02, -0.2, -0.28, -0.16, -0.04, -0.06, -0.23]
+  (5) LL Q=tv    c=0: i>=2 -0.073 (NASS +0.308) | quiet +nan (NASS +nan, k=0) | per-t [nan, -0.45, -0.04, -0.1, -0.01, 0.05, 0.1, -0.05, -0.17, -0.18, -0.1, -0.1, -0.09, -0.19]
+  (5) LL Q=tv    c=1: i>=2 -0.090 (NASS +0.308) | quiet +nan (NASS +nan, k=0) | per-t [nan, -0.45, -0.08, -0.14, -0.02, 0.07, 0.11, -0.01, -0.2, -0.28, -0.16, -0.03, -0.14, -0.19]

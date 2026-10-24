@@ -1,0 +1,40 @@
+===== gastrulation-human  G=21430 B=30  n=[9, 182, 792, 929, 982, 616, 340, 217, 225, 248, 290, 304, 431, 440, 333, 247, 246, 230, 275, 316, 355, 350, 264, 233, 228, 306, 231, 138, 46, 7]
+  lib (UMI/cell) = [10927, 11252, 12491, 13216, 13070, 12907, 12445, 10982, 10649, 10323, 10164, 10204, 10059, 10353, 10769, 10992, 11238, 10804, 10849, 10388, 10480, 10723, 9873, 10300, 10888, 10873, 10871, 10809, 10421, 11794]
+  n: corr(dlog n_t+1, dlog n_t) = +0.77; RW |dlog n| median 0.18; AR(2-pt trend) |err| median 0.24
+  lib: corr(dlog lib_t+1, dlog lib_t) = +0.19; corr(dlog lib, dlog n) = +0.12; sd dlog lib 0.049
+  class (mean CP10k over the pair)  share SS(y)  noise/SS  lag1 corr obs  lag1 pred by noise
+   (0,0.1]   0.093   0.871   -0.399   -0.433
+   (0.1,1]   0.490   0.847   -0.293   -0.406
+   (1,10]   0.358   0.765   -0.106   -0.372
+   (10,100]   0.042   0.976   +0.306   -0.420
+   (100,inf]   0.010   24.289   +0.683   -inf
+  signal share per transition: [0.52, 0.15, 0.52, 0.58, 0.48, 0.66, 0.81, 0.36, -0.04, -0.03, 0.08, 0.12, 0.17, 0.08, 0.03, 0.01, 0.03, 0.19, 0.04, 0.05, 0.48, 0.41, 0.1, 0.31, 0.15, 0.32, -0.04, -0.06, -0.19]
+  corr(signal share_t, share_t-1) = +0.60; corr(share, log min(n_t,n_t+1)) = +0.30
+  corr(log S_t, log S_t-1) = +0.59
+  within-bin rev_f    : mean +0.040  (+ in 19/28)
+  within-bin disp     : mean -0.036  (+ in 11/28)
+  within-bin rev_med  : mean +0.028  (+ in 18/28)
+  within-bin rev_f_raw: mean +0.047  (+ in 18/28)
+  within-bin rev_box4 : mean +0.080  (+ in 19/28)
+  within-bin lag1     : mean -0.169  (+ in 5/28)
+  frac genes with median>0 per bin: [0.072, 0.09, 0.097, 0.098, 0.095, 0.091, 0.093, 0.094, 0.095, 0.094, 0.093, 0.094, 0.095, 0.097, 0.1, 0.102, 0.106, 0.104, 0.103, 0.101, 0.102, 0.103, 0.099, 0.101, 0.106, 0.105, 0.106, 0.106, 0.102, 0.114]
+===== pancreas-human  G=18561 B=15  n=[111, 612, 361, 116, 50, 53, 68, 79, 191, 218, 132, 286, 698, 616, 105]
+  lib (UMI/cell) = [7780, 7839, 7147, 7062, 6673, 6199, 5938, 6355, 5347, 4750, 4882, 5166, 5360, 5564, 5979]
+  n: corr(dlog n_t+1, dlog n_t) = +0.19; RW |dlog n| median 0.65; AR(2-pt trend) |err| median 0.73
+  lib: corr(dlog lib_t+1, dlog lib_t) = +0.17; corr(dlog lib, dlog n) = -0.13; sd dlog lib 0.073
+  class (mean CP10k over the pair)  share SS(y)  noise/SS  lag1 corr obs  lag1 pred by noise
+   (0,0.1]   0.046   0.799   -0.205   -0.338
+   (0.1,1]   0.468   0.573   +0.008   -0.265
+   (1,10]   0.392   0.313   +0.336   -0.147
+   (10,100]   0.089   0.187   +0.462   -0.077
+   (100,inf]   0.004   0.017   +0.209   -0.057
+  signal share per transition: [0.44, 0.59, 0.42, 0.54, 0.29, 0.24, 0.34, 0.47, 0.71, 0.76, 0.77, 0.84, 0.8, 0.57]
+  corr(signal share_t, share_t-1) = +0.73; corr(share, log min(n_t,n_t+1)) = +0.75
+  corr(log S_t, log S_t-1) = +0.65
+  within-bin rev_f    : mean +0.090  (+ in 12/13)
+  within-bin disp     : mean -0.031  (+ in 4/13)
+  within-bin rev_med  : mean +0.017  (+ in 8/13)
+  within-bin rev_f_raw: mean +0.042  (+ in 8/13)
+  within-bin rev_box4 : mean -0.153  (+ in 3/13)
+  within-bin lag1     : mean +0.156  (+ in 9/13)
+  frac genes with median>0 per bin: [0.103, 0.098, 0.088, 0.089, 0.089, 0.08, 0.078, 0.081, 0.069, 0.064, 0.068, 0.068, 0.071, 0.073, 0.077]

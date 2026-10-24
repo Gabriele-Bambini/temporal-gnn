@@ -1,0 +1,116 @@
+{
+ "pre": [
+  {
+   "mae": 0.6763105392456055,
+   "pearson": 0.05629682168364525,
+   "p_at_200_up": 0.14,
+   "p_at_200_down": 0.0,
+   "state_id": null,
+   "snapshot_idx": 0.0
+  },
+  {
+   "mae": 0.5586945414543152,
+   "pearson": -0.018422840163111687,
+   "p_at_200_up": 0.07,
+   "p_at_200_down": 0.02,
+   "state_id": null,
+   "snapshot_idx": 1.0
+  },
+  {
+   "mae": 0.6864979863166809,
+   "pearson": 0.0535915344953537,
+   "p_at_200_up": 0.04,
+   "p_at_200_down": 0.04,
+   "state_id": null,
+   "snapshot_idx": 2.0
+  },
+  {
+   "mae": 0.7816852927207947,
+   "pearson": 0.2161954939365387,
+   "p_at_200_up": 0.015,
+   "p_at_200_down": 0.095,
+   "state_id": null,
+   "snapshot_idx": 3.0
+  },
+  {
+   "mae": 0.7547130584716797,
+   "pearson": 0.17577967047691345,
+   "p_at_200_up": 0.015,
+   "p_at_200_down": 0.095,
+   "state_id": null,
+   "snapshot_idx": 4.0
+  },
+  {
+   "mae": 0.7042145729064941,
+   "pearson": 0.12209590524435043,
+   "p_at_200_up": 0.025,
+   "p_at_200_down": 0.01,
+   "state_id": null,
+   "snapshot_idx": 5.0
+  },
+  {
+   "mae": 0.7518829703330994,
+   "pearson": 0.14162592589855194,
+   "p_at_200_up": 0.17,
+   "p_at_200_down": 0.045,
+   "state_id": null,
+   "snapshot_idx": 6.0
+  },
+  {
+   "mae": 0.6924536228179932,
+   "pearson": 0.18161541223526,
+   "p_at_200_up": 0.23,
+   "p_at_200_down": 0.035,
+   "state_id": null,
+   "snapshot_idx": 7.0
+  },
+  {
+   "mae": 0.6568581461906433,
+   "pearson": 0.0031807676423341036,
+   "p_at_200_up": 0.04,
+   "p_at_200_down": 0.0,
+   "state_id": null,
+   "snapshot_idx": 8.0
+  },
+  {
+   "mae": 0.6594628691673279,
+   "pearson": 0.02874050848186016,
+   "p_at_200_up": 0.05,
+   "p_at_200_down": 0.04,
+   "state_id": null,
+   "snapshot_idx": 9.0
+  },
+  {
+   "mae": 0.7343461513519287,
+   "pearson": 0.012790877372026443,
+   "p_at_200_up": 0.035,
+   "p_at_200_down": 0.05,
+   "state_id": null,
+   "snapshot_idx": 10.0
+  },
+  {
+   "mae": 0.6850552558898926,
+   "pearson": -0.008006912656128407,
+   "p_at_200_up": 0.035,
+   "p_at_200_down": 0.05,
+   "state_id": null,
+   "snapshot_idx": 11.0
+  },
+  {
+   "mae": 0.5528391003608704,
+   "pearson": 0.003263777820393443,
+   "p_at_200_up": 0.02,
+   "p_at_200_down": 0.045,
+   "state_id": null,
+   "snapshot_idx": 12.0
+  },
+  {
+   "mae": 0.8061835169792175,
+   "pearson": 0.010373690165579319,
+   "p_at_200_up": 0.045,
+   "p_at_200_down": 0.015,
+   "state_id": null,
+   "snapshot_idx": 13.0
+  }
+ ]
+}

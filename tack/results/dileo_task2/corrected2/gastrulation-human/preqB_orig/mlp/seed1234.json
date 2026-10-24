@@ -1,0 +1,207 @@
+{
+ "pre": [
+  {
+   "mae": 1.3610039949417114,
+   "pearson": 0.015525438822805882,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.005,
+   "snapshot_idx": 0.0
+  },
+  {
+   "mae": 1.4030264616012573,
+   "pearson": 0.169748917222023,
+   "p_at_200_up": 0.09,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 1.0
+  },
+  {
+   "mae": 0.7947749495506287,
+   "pearson": 0.03181084617972374,
+   "p_at_200_up": 0.12,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 2.0
+  },
+  {
+   "mae": 0.5212814211845398,
+   "pearson": 0.0033373467158526182,
+   "p_at_200_up": 0.06,
+   "p_at_200_down": 0.07,
+   "snapshot_idx": 3.0
+  },
+  {
+   "mae": 0.49939075112342834,
+   "pearson": -0.00029099578387103975,
+   "p_at_200_up": 0.035,
+   "p_at_200_down": 0.07,
+   "snapshot_idx": 4.0
+  },
+  {
+   "mae": 0.6122817397117615,
+   "pearson": -0.0014743439387530088,
+   "p_at_200_up": 0.095,
+   "p_at_200_down": 0.035,
+   "snapshot_idx": 5.0
+  },
+  {
+   "mae": 0.5735659599304199,
+   "pearson": 0.0020177550613880157,
+   "p_at_200_up": 0.05,
+   "p_at_200_down": 0.045,
+   "snapshot_idx": 6.0
+  },
+  {
+   "mae": 0.5566550493240356,
+   "pearson": -0.0002387376589467749,
+   "p_at_200_up": 0.02,
+   "p_at_200_down": 0.085,
+   "snapshot_idx": 7.0
+  },
+  {
+   "mae": 0.4948553740978241,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 8.0
+  },
+  {
+   "mae": 0.4863322377204895,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 9.0
+  },
+  {
+   "mae": 0.4771004021167755,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 10.0
+  },
+  {
+   "mae": 0.5062463879585266,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 11.0
+  },
+  {
+   "mae": 0.5058443546295166,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 12.0
+  },
+  {
+   "mae": 0.4954593777656555,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 13.0
+  },
+  {
+   "mae": 0.48671725392341614,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 14.0
+  },
+  {
+   "mae": 0.5455257892608643,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 15.0
+  },
+  {
+   "mae": 0.5581106543540955,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 16.0
+  },
+  {
+   "mae": 0.5326489806175232,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 17.0
+  },
+  {
+   "mae": 0.5242765545845032,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 18.0
+  },
+  {
+   "mae": 0.4688313901424408,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 19.0
+  },
+  {
+   "mae": 0.5022695660591125,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 20.0
+  },
+  {
+   "mae": 0.6426189541816711,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 21.0
+  },
+  {
+   "mae": 0.6092559695243835,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 22.0
+  },
+  {
+   "mae": 0.5150124430656433,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 23.0
+  },
+  {
+   "mae": 0.5470812916755676,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 24.0
+  },
+  {
+   "mae": 0.5742359757423401,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 25.0
+  },
+  {
+   "mae": 0.5426759123802185,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 26.0
+  },
+  {
+   "mae": 0.6680011749267578,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 27.0
+  },
+  {
+   "mae": 1.12452232837677,
+   "pearson": NaN,
+   "p_at_200_up": 0.0,
+   "p_at_200_down": 0.0,
+   "snapshot_idx": 28.0
+  }
+ ]
+}

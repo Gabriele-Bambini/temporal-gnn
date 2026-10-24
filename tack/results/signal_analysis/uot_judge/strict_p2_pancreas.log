@@ -1,0 +1,8 @@
+pancreas-human ('pancreas-human', 'uot', 5, 1, 0.0625) max abs diff vs unscrambled 0.0
+pancreas-human ('pancreas-human', 'uot', 5, 3, 1.0) max abs diff vs unscrambled 0.0
+pancreas-human ('pancreas-human', 'bal', 5, 3, 0.0) max abs diff vs unscrambled 0.0
+pancreas-human ('pancreas-human', 'persist', 5, 0, 0.0) max abs diff vs unscrambled 0.0
+pancreas-human ('pancreas-human', 'uot', 10, 1, 0.0625) max abs diff vs unscrambled 0.0
+pancreas-human ('pancreas-human', 'uot', 10, 3, 1.0) max abs diff vs unscrambled 0.0
+pancreas-human ('pancreas-human', 'bal', 10, 3, 0.0) max abs diff vs unscrambled 0.0
+pancreas-human ('pancreas-human', 'persist', 10, 0, 0.0) max abs diff vs unscrambled 0.0

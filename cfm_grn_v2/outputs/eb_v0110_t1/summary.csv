@@ -1,0 +1,10 @@
+model,mean,std,count
+noise_floor,0.0009,0.0,5
+flow_matching,0.4751,0.0184,5
+freefm_replay,0.6467,0.0502,5
+mean_interp,0.7017,0.0253,5
+ot_interp,1.0974,0.0232,5
+flow_matching_shuffled_time,1.328,0.0275,5
+mlp,1.3796,0.0305,5
+persistence,1.3865,0.0331,5
+linear,20.3682,4.0295,5

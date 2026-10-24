@@ -1,0 +1,14 @@
+﻿python : C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\hpc\dist_bridge.py:120: RuntimeWarning: invalid 
+value encountered in divide
+At line:1 char:533
++ ... ocation $j; python db_paired.py pancreas-human orig l1 linear *> "$j\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\Gabrie...tered in divide:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  out[nb] = stats.nbinom.cdf(e[nb], (lam ** 2 / (var - lam))[nb][:, None], (lam / var)[nb][:, None])
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\hpc\dist_bridge.py:120: RuntimeWarning: divide by zero 
+encountered in divide
+  out[nb] = stats.nbinom.cdf(e[nb], (lam ** 2 / (var - lam))[nb][:, None], (lam / var)[nb][:, None])
+pancreas-human orig distbridge_strict {'all': [0.4921, 0.3037, 0.4394], 'i>=1': [0.5124, 0.3271, 0.4433], 'i>=2': [0.5104, 0.3447, 0.436], 'i>=3': [0.5084, 0.3556, 0.4335]} 1318s
+pancreas-human orig distbridge_strict_nosb {'all': [0.4952, 0.3054, 0.4412], 'i>=1': [0.5157, 0.3288, 0.4452], 'i>=2': [0.514, 0.3466, 0.4381], 'i>=3': [0.5123, 0.3577, 0.4358]} 1s

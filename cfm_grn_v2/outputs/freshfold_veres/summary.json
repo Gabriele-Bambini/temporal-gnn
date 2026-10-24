@@ -1,0 +1,663 @@
+{
+ "dataset": "veres",
+ "smoke": false,
+ "prereg": "docs/superpowers/prereg/2026-09-25-prereg-v02.md",
+ "test_time_removed": 4.0,
+ "full_grid": [
+  0.0,
+  1.0,
+  2.0,
+  3.0,
+  4.0,
+  5.0,
+  6.0,
+  7.0
+ ],
+ "grid": [
+  0.0,
+  1.0,
+  2.0,
+  3.0,
+  5.0,
+  6.0,
+  7.0
+ ],
+ "qc_loader": {
+  "dataset": "veres2019_stage5",
+  "inputs": {
+   "counts": {
+    "file": "GSE114412_Stage_5.all.processed_counts.tsv.gz",
+    "bytes": 108394226,
+    "sha256": "9304c5ed767f72af3108e303176c8487737b0ede25965be66e2455b708cfba15",
+    "matches_prereg": true
+   },
+   "meta": {
+    "file": "GSE114412_Stage_5.all.cell_metadata.tsv.gz",
+    "bytes": 1764292,
+    "sha256": "5006773f740191732bc1b4a6c3f086cc63d00a601cdeedc7cfcb4fa126facda7",
+    "matches_prereg": true
+   }
+  },
+  "header_first_field": "# library.barcode",
+  "count_rows": 51274,
+  "genes": 16224,
+  "cells_kept": 51274,
+  "count_rows_without_meta": 0,
+  "count_rows_without_meta_examples": [],
+  "meta_rows_without_counts": 0,
+  "library_label_disagreements": 0,
+  "test_time": 4.0,
+  "non_integer_entries_excl_test": 0,
+  "per_time": {
+   "0": 6190,
+   "1": 6177,
+   "2": 3562,
+   "3": 12477,
+   "4": 6480,
+   "5": 6404,
+   "6": 6013,
+   "7": 3971
+  },
+  "per_replicate_time": {
+   "diff1|0": 4563,
+   "diff1|1": 3406,
+   "diff1|2": 1942,
+   "diff1|3": 2901,
+   "diff1|4": 3337,
+   "diff1|5": 3346,
+   "diff1|6": 2448,
+   "diff1|7": 2141,
+   "diff2|0": 1627,
+   "diff2|1": 2771,
+   "diff2|2": 1620,
+   "diff2|3": 9576,
+   "diff2|4": 3143,
+   "diff2|5": 3058,
+   "diff2|6": 3565,
+   "diff2|7": 1830
+  },
+  "expected_counts": {
+   "ok": true,
+   "mismatches": {},
+   "expected": {
+    "diff1|0": 4563,
+    "diff1|1": 3406,
+    "diff1|2": 1942,
+    "diff1|3": 2901,
+    "diff1|4": 3337,
+    "diff1|5": 3346,
+    "diff1|6": 2448,
+    "diff1|7": 2141,
+    "diff2|0": 1627,
+    "diff2|1": 2771,
+    "diff2|2": 1620,
+    "diff2|3": 9576,
+    "diff2|4": 3143,
+    "diff2|5": 3058,
+    "diff2|6": 3565,
+    "diff2|7": 1830
+   }
+  },
+  "duplicated_gene_symbols": 0,
+  "filters": "none: every cell of the deposit that has metadata, every gene",
+  "replicate": "differentiation (diff1, diff2), biological and linked across days; libraries b1/b2 technical",
+  "time_unit": "Stage-5 day (CellWeek)",
+  "chunk_rows": 2000,
+  "gene_symbols_renamed": [],
+  "qc_gate": {
+   "min_stage_cells": 500,
+   "dropped_times": [],
+   "test_time": 4.0,
+   "test_time_present": true,
+   "test_time_dropped": false
+  }
+ },
+ "qc_gate": {
+  "min_cells": 500,
+  "stage_counts": {
+   "0.0": 6190,
+   "1.0": 6177,
+   "2.0": 3562,
+   "3.0": 12477,
+   "5.0": 6404,
+   "6.0": 6013,
+   "7.0": 3971
+  },
+  "dropped_stages": {}
+ },
+ "folds_requested": null,
+ "dropped_folds": {},
+ "designs": {
+  "V1": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "removed": [
+    1.0
+   ],
+   "obs_times": [
+    0.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "source": 0.0,
+   "t_next": 2.0,
+   "boundary_source": true,
+   "centre": 1.0,
+   "val_time": 6.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    2.0,
+    3.0,
+    5.0,
+    7.0
+   ],
+   "g": 1.0,
+   "span": 7.0,
+   "predictions": [
+    {
+     "target": 1.0,
+     "source": 0.0,
+     "t_next": 2.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.14285714285714285,
+     "frac": 0.5
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "V2": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "removed": [
+    2.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "source": 1.0,
+   "t_next": 3.0,
+   "boundary_source": false,
+   "centre": 2.0,
+   "val_time": 6.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    1.0,
+    3.0,
+    5.0,
+    7.0
+   ],
+   "g": 1.0,
+   "span": 7.0,
+   "predictions": [
+    {
+     "target": 2.0,
+     "source": 1.0,
+     "t_next": 3.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.14285714285714285,
+     "frac": 0.5
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "V3": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "removed": [
+    3.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "source": 2.0,
+   "t_next": 5.0,
+   "boundary_source": false,
+   "centre": 3.0,
+   "val_time": 6.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    7.0
+   ],
+   "g": 1.0,
+   "span": 7.0,
+   "predictions": [
+    {
+     "target": 3.0,
+     "source": 2.0,
+     "t_next": 5.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.14285714285714285,
+     "frac": 0.3333333333333333
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "V5": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "removed": [
+    5.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    6.0,
+    7.0
+   ],
+   "source": 3.0,
+   "t_next": 6.0,
+   "boundary_source": false,
+   "centre": 5.0,
+   "val_time": 1.0,
+   "v_prev": 0.0,
+   "fit_times": [
+    0.0,
+    2.0,
+    3.0,
+    6.0,
+    7.0
+   ],
+   "g": 1.0,
+   "span": 7.0,
+   "predictions": [
+    {
+     "target": 5.0,
+     "source": 3.0,
+     "t_next": 6.0,
+     "kind": "near",
+     "horizon": 2.0,
+     "h_rel": 2.0,
+     "h_span": 0.2857142857142857,
+     "frac": 0.6666666666666666
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "V6": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "removed": [
+    6.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    7.0
+   ],
+   "source": 5.0,
+   "t_next": 7.0,
+   "boundary_source": false,
+   "centre": 6.0,
+   "val_time": 1.0,
+   "v_prev": 0.0,
+   "fit_times": [
+    0.0,
+    2.0,
+    3.0,
+    5.0,
+    7.0
+   ],
+   "g": 1.0,
+   "span": 7.0,
+   "predictions": [
+    {
+     "target": 6.0,
+     "source": 5.0,
+     "t_next": 7.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.14285714285714285,
+     "frac": 0.5
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "V12": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "removed": [
+    1.0,
+    2.0
+   ],
+   "obs_times": [
+    0.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "source": 0.0,
+   "t_next": 3.0,
+   "boundary_source": true,
+   "centre": 1.5,
+   "val_time": 6.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    3.0,
+    5.0,
+    7.0
+   ],
+   "g": 1.0,
+   "span": 7.0,
+   "predictions": [
+    {
+     "target": 1.0,
+     "source": 0.0,
+     "t_next": 3.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.14285714285714285,
+     "frac": 0.3333333333333333
+    },
+    {
+     "target": 2.0,
+     "source": 0.0,
+     "t_next": 3.0,
+     "kind": "far",
+     "horizon": 2.0,
+     "h_rel": 2.0,
+     "h_span": 0.2857142857142857,
+     "frac": 0.6666666666666666
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "V23": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "removed": [
+    2.0,
+    3.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "source": 1.0,
+   "t_next": 5.0,
+   "boundary_source": false,
+   "centre": 2.5,
+   "val_time": 6.0,
+   "v_prev": 5.0,
+   "fit_times": [
+    0.0,
+    1.0,
+    5.0,
+    7.0
+   ],
+   "g": 1.0,
+   "span": 7.0,
+   "predictions": [
+    {
+     "target": 2.0,
+     "source": 1.0,
+     "t_next": 5.0,
+     "kind": "near",
+     "horizon": 1.0,
+     "h_rel": 1.0,
+     "h_span": 0.14285714285714285,
+     "frac": 0.25
+    },
+    {
+     "target": 3.0,
+     "source": 1.0,
+     "t_next": 5.0,
+     "kind": "far",
+     "horizon": 2.0,
+     "h_rel": 2.0,
+     "h_span": 0.2857142857142857,
+     "frac": 0.5
+    }
+   ],
+   "changed_by_qc": false
+  },
+  "V56": {
+   "times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    7.0
+   ],
+   "removed": [
+    5.0,
+    6.0
+   ],
+   "obs_times": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    7.0
+   ],
+   "source": 3.0,
+   "t_next": 7.0,
+   "boundary_source": false,
+   "centre": 5.5,
+   "val_time": 1.0,
+   "v_prev": 0.0,
+   "fit_times": [
+    0.0,
+    2.0,
+    3.0,
+    7.0
+   ],
+   "g": 1.0,
+   "span": 7.0,
+   "predictions": [
+    {
+     "target": 5.0,
+     "source": 3.0,
+     "t_next": 7.0,
+     "kind": "near",
+     "horizon": 2.0,
+     "h_rel": 2.0,
+     "h_span": 0.2857142857142857,
+     "frac": 0.5
+    },
+    {
+     "target": 6.0,
+     "source": 3.0,
+     "t_next": 7.0,
+     "kind": "far",
+     "horizon": 3.0,
+     "h_rel": 3.0,
+     "h_span": 0.42857142857142855,
+     "frac": 0.75
+    }
+   ],
+   "changed_by_qc": false
+  }
+ },
+ "genes": {
+  "V1": {
+   "n_selected": 1216,
+   "n_fit_cells": 32604,
+   "n_prior_regulators": 262
+  },
+  "V2": {
+   "n_selected": 1209,
+   "n_fit_cells": 35219,
+   "n_prior_regulators": 257
+  },
+  "V3": {
+   "n_selected": 1216,
+   "n_fit_cells": 26304,
+   "n_prior_regulators": 261
+  },
+  "V5": {
+   "n_selected": 1213,
+   "n_fit_cells": 32213,
+   "n_prior_regulators": 261
+  },
+  "V6": {
+   "n_selected": 1216,
+   "n_fit_cells": 32604,
+   "n_prior_regulators": 262
+  },
+  "V12": {
+   "n_selected": 1215,
+   "n_fit_cells": 29042,
+   "n_prior_regulators": 261
+  },
+  "V23": {
+   "n_selected": 1217,
+   "n_fit_cells": 22742,
+   "n_prior_regulators": 260
+  },
+  "V56": {
+   "n_selected": 1218,
+   "n_fit_cells": 26200,
+   "n_prior_regulators": 257
+  }
+ },
+ "admitted_to_step6": [
+  "base",
+  "noft",
+  "gated",
+  "transfer"
+ ],
+ "m_arm": null,
+ "m_recipe": null,
+ "config": {
+  "hidden": 128,
+  "depth": 3,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "batch_size": 256,
+  "n_iters": 8000,
+  "sigma_min": 0.01,
+  "coupling": "ot",
+  "n_ode_steps": 20,
+  "ode_method": "rk4",
+  "time_embed_dim": 32,
+  "cond_dim": 8,
+  "time_conditioning": "delta",
+  "eval_every": 250,
+  "patience": 8,
+  "seed": 0,
+  "shuffle_biological_time": false,
+  "ema_decay": 0.999,
+  "grad_clip": 1.0,
+  "pair_mode": "consecutive",
+  "clock": "duration",
+  "path": "spline",
+  "chain": "ot",
+  "spline_kind": "natural",
+  "field_time": "none",
+  "path_center": "linear",
+  "marginal_iters": 1000,
+  "marginal_weight": 1.0,
+  "marginal_prior": 1.0,
+  "marginal_batch": 256,
+  "marginal_steps": 8,
+  "marginal_metric": "energy",
+  "marginal_window": 1.0,
+  "marginal_lr": 0.0003,
+  "marginal_eval_every": 25,
+  "marginal_patience": 10
+ },
+ "seeds": [
+  0,
+  1
+ ],
+ "cap": 1500,
+ "min_group_cells": 200,
+ "n_hvg": 1000,
+ "min_detect": 0.01,
+ "mlp": {
+  "hidden": 128,
+  "n_iters": 2000
+ },
+ "n_kept_cells": 21000,
+ "seconds": 7171.9,
+ "complete": true,
+ "note": "per-data-set run; the rules pool both data sets (--decide)"
+}

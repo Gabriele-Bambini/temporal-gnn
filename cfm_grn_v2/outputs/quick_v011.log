@@ -1,0 +1,33 @@
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\cfm_grn_v2\src\cfm_grn_v2\training\trainer.py:231: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:823.)
+  rec = {"iter": it, "loss": float(loss), "seconds": time.time() - t_start}
+[toy_translation] best config: {'hidden': 128, 'depth': 2, 'lr': 0.001, 'weight_decay': 0.0, 'batch_size': 128, 'n_iters': 400, 'sigma_min': 0.001, 'coupling': 'ot', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'absolute', 'eval_every': 100, 'patience': 3, 'seed': 0, 'shuffle_biological_time': False}
+[toy_translation] flow_matching seed=0 done in 3s
+[toy_translation] flow_matching_shuffled_time seed=0 done in 2s
+[toy_translation] flow_matching seed=1 done in 3s
+[toy_translation] flow_matching_shuffled_time seed=1 done in 1s
+[toy_variance] best config: {'hidden': 64, 'depth': 2, 'lr': 0.001, 'weight_decay': 0.0, 'batch_size': 128, 'n_iters': 400, 'sigma_min': 0.001, 'coupling': 'ot', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'absolute', 'eval_every': 100, 'patience': 3, 'seed': 0, 'shuffle_biological_time': False}
+[toy_variance] flow_matching seed=0 done in 2s
+[toy_variance] flow_matching_shuffled_time seed=0 done in 2s
+[toy_variance] flow_matching seed=1 done in 2s
+[toy_variance] flow_matching_shuffled_time seed=1 done in 1s
+[toy_bimodal] best config: {'hidden': 64, 'depth': 2, 'lr': 0.001, 'weight_decay': 0.0, 'batch_size': 128, 'n_iters': 400, 'sigma_min': 0.001, 'coupling': 'ot', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'absolute', 'eval_every': 100, 'patience': 3, 'seed': 0, 'shuffle_biological_time': False}
+[toy_bimodal] flow_matching seed=0 done in 3s
+[toy_bimodal] flow_matching_shuffled_time seed=0 done in 1s
+[toy_bimodal] flow_matching seed=1 done in 3s
+[toy_bimodal] flow_matching_shuffled_time seed=1 done in 2s
+[toy_condition_shift] best config: {'hidden': 64, 'depth': 2, 'lr': 0.001, 'weight_decay': 0.0, 'batch_size': 128, 'n_iters': 400, 'sigma_min': 0.001, 'coupling': 'ot', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'delta', 'eval_every': 100, 'patience': 3, 'seed': 0, 'shuffle_biological_time': False}
+[toy_condition_shift] flow_matching seed=0 done in 2s
+[toy_condition_shift] flow_matching_shuffled_time seed=0 done in 2s
+[toy_condition_shift] flow_matching seed=1 done in 3s
+[toy_condition_shift] flow_matching_shuffled_time seed=1 done in 1s
+[synthetic_grn] best config: {'hidden': 128, 'depth': 2, 'lr': 0.001, 'weight_decay': 0.0, 'batch_size': 128, 'n_iters': 400, 'sigma_min': 0.001, 'coupling': 'ot', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'delta', 'eval_every': 100, 'patience': 3, 'seed': 0, 'shuffle_biological_time': False}
+[synthetic_grn] flow_matching seed=0 done in 1s
+[synthetic_grn] flow_matching_shuffled_time seed=0 done in 2s
+[synthetic_grn] flow_matching seed=1 done in 1s
+[synthetic_grn] flow_matching_shuffled_time seed=1 done in 1s
+synthetic_grn (benchmark): FAIL fm=1.006 best_control=freefm_replay uses_time=False floor=-0.006
+toy_bimodal (sanity): FAIL fm=0.270 best_control=freefm_replay uses_time=True floor=-0.004
+toy_condition_shift (sanity): FAIL fm=0.004 best_control=mean_shift uses_time=True floor=-0.004
+toy_translation (sanity): FAIL fm=0.013 best_control=mean_shift uses_time=True floor=0.003
+toy_variance (sanity): FAIL fm=0.011 best_control=linear uses_time=True floor=0.002

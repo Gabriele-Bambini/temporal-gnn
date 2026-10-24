@@ -1,0 +1,65 @@
+  pt = np.nanmean(arr, 0)
+== gastrulation-human kalman space=raw (23s)  slope chosen 0.48, damped|slope 0.9932885906040269
+   ML choice last transition by decile: {0: '(0.001, 0.0, 1.0)', 1: '(0.001, 0.0, 1.0)', 2: '(0.001, 0.0, 1.0)', 3: '(0.05, 0.1, 0.5)', 4: '(0.001, 0.1, 0.75)', 5: '(0.001, 0.1, 0.75)', 6: '(0.001, 0.1, 0.75)', 7: '(0.001, 0.1, 0.75)', 8: '(0.05, 0.1, 0.5)', 9: '(0.001, 0.1, 0.5)', 10: '(0.001, 0.0, 1.0)'}
+   RO phi counts l1 {'0.5': 12, '0.75': 2, '1.0': 10} linear {'0.5': 9, '0.75': 2, '1.0': 16}
+   orig   kd_RO                PCC +0.414+-0.003 up 0.226 dn 0.456
+   orig   ml_strat             PCC +0.422+-0.003 up 0.224 dn 0.448
+   orig   ml_gene              PCC +0.417+-0.003 up 0.221 dn 0.475
+   orig   obs_ml_strat         PCC +0.575+-0.003 up 0.406 dn 0.516
+   orig   obs_kd_bestJ_raw_RO  PCC +0.586+-0.003 up 0.416 dn 0.533
+   orig   hindsight (0.2, 0.1, 0.5)    PCC +0.403 up 0.224 dn 0.475
+   l1     kd_RO                PCC +0.050+-0.013 up 0.181 dn 0.132
+   l1     ml_strat             PCC +0.169+-0.012 up 0.234 dn 0.195
+   l1     ml_gene              PCC +0.277+-0.010 up 0.238 dn 0.235
+   l1     hindsight (0.8, 0.1, 1.0)    PCC +0.122 up 0.182 dn 0.112
+   linear kd_RO                PCC +0.255+-0.066 up 0.262 dn 0.204
+   linear ml_strat             PCC +0.192+-0.058 up 0.297 dn 0.252
+   linear ml_gene              PCC +0.275+-0.052 up 0.308 dn 0.286
+   linear hindsight (0.8, 0.1, 1.0)    PCC +0.216 up 0.334 dn 0.166
+== gastrulation-human kalman space=l1 (34s)  slope chosen 0.46, damped|slope 0.9858156028368794
+   ML choice last transition by decile: {0: '(0.001, 0.0, 1.0)', 1: '(0.001, 0.0, 1.0)', 2: '(0.001, 0.0, 1.0)', 3: '(0.001, 0.0, 1.0)', 4: '(0.001, 0.01, 0.5)', 5: '(0.001, 0.01, 0.5)', 6: '(0.001, 0.01, 0.75)', 7: '(0.001, 0.01, 0.75)', 8: '(0.02, 0.03, 0.5)', 9: '(0.001, 0.1, 0.5)', 10: '(0.001, 0.0, 1.0)'}
+   RO phi counts l1 {'0.5': 0, '0.75': 8, '1.0': 17} linear {'0.5': 9, '0.75': 4, '1.0': 13}
+   orig   kd_RO                PCC +0.384+-0.003 up 0.225 dn 0.376
+   orig   ml_strat             PCC +0.391+-0.003 up 0.229 dn 0.430
+   orig   ml_gene              PCC +0.389+-0.003 up 0.229 dn 0.438
+   orig   hindsight (0.001, 0.0, 1.0)  PCC +0.384 up 0.225 dn 0.376
+   l1     kd_RO                PCC +0.080+-0.011 up 0.201 dn 0.208
+   l1     ml_strat             PCC +0.165+-0.009 up 0.231 dn 0.220
+   l1     ml_gene              PCC +0.257+-0.010 up 0.232 dn 0.235
+   l1     hindsight (0.001, 0.01, 1.0) PCC +0.138 up 0.213 dn 0.229
+   linear kd_RO                PCC +0.250+-0.061 up 0.313 dn 0.277
+   linear ml_strat             PCC +0.139+-0.050 up 0.293 dn 0.249
+   linear ml_gene              PCC +0.313+-0.057 up 0.304 dn 0.287
+   linear hindsight (0.4, 0.1, 1.0)    PCC +0.236 up 0.323 dn 0.173
+== pancreas-human kalman space=raw (43s)  slope chosen 0.31, damped|slope 1.0
+   ML choice last transition by decile: {0: '(0.001, 0.0, 1.0)', 1: '(0.05, 0.0, 1.0)', 2: '(0.2, 0.0, 1.0)', 3: '(0.2, 0.1, 0.5)', 4: '(0.2, 0.1, 0.5)', 5: '(0.2, 0.1, 0.5)', 6: '(0.2, 0.0, 1.0)', 7: '(0.2, 0.0, 1.0)', 8: '(0.2, 0.0, 1.0)', 9: '(0.2, 0.0, 1.0)', 10: '(0.001, 0.0, 1.0)'}
+   RO phi counts l1 {'0.5': 0, '0.75': 0, '1.0': 12} linear {'0.5': 0, '0.75': 1, '1.0': 11}
+   orig   kd_RO                PCC +0.350+-0.004 up 0.209 dn 0.333
+   orig   ml_strat             PCC +0.366+-0.004 up 0.211 dn 0.308
+   orig   ml_gene              PCC +0.345+-0.004 up 0.193 dn 0.326
+   orig   obs_ml_strat         PCC +0.499+-0.005 up 0.320 dn 0.409
+   orig   obs_kd_bestJ_raw_RO  PCC +0.517+-0.004 up 0.323 dn 0.436
+   orig   hindsight (0.8, 0.0, 1.0)    PCC +0.348 up 0.211 dn 0.362
+   l1     kd_RO                PCC +0.124+-0.018 up 0.208 dn 0.218
+   l1     ml_strat             PCC -0.097+-0.022 up 0.110 dn 0.141
+   l1     ml_gene              PCC +0.159+-0.022 up 0.177 dn 0.204
+   l1     hindsight (0.8, 10.0, 1.0)   PCC +0.175 up 0.221 dn 0.237
+   linear kd_RO                PCC +0.305+-0.075 up 0.283 dn 0.347
+   linear ml_strat             PCC -0.122+-0.083 up 0.091 dn 0.223
+   linear ml_gene              PCC +0.133+-0.092 up 0.234 dn 0.292
+   linear hindsight (0.8, 10.0, 1.0)   PCC +0.309 up 0.291 dn 0.368
+== pancreas-human kalman space=l1 (47s)  slope chosen 0.60, damped|slope 0.8372093023255814
+   ML choice last transition by decile: {0: '(0.001, 0.0, 1.0)', 1: '(0.001, 0.0, 1.0)', 2: '(0.001, 0.01, 0.5)', 3: '(0.001, 0.01, 0.75)', 4: '(0.001, 0.03, 0.5)', 5: '(0.02, 0.03, 0.5)', 6: '(0.02, 0.03, 0.75)', 7: '(0.001, 0.1, 0.5)', 8: '(0.1, 0.01, 0.75)', 9: '(0.02, 0.1, 0.75)', 10: '(0.001, 0.0, 1.0)'}
+   RO phi counts l1 {'0.5': 1, '0.75': 1, '1.0': 10} linear {'0.5': 0, '0.75': 0, '1.0': 12}
+   orig   kd_RO                PCC +0.346+-0.004 up 0.198 dn 0.234
+   orig   ml_strat             PCC +0.361+-0.004 up 0.208 dn 0.313
+   orig   ml_gene              PCC +0.353+-0.004 up 0.197 dn 0.311
+   orig   hindsight (0.001, 0.0, 1.0)  PCC +0.347 up 0.206 dn 0.239
+   l1     kd_RO                PCC +0.077+-0.015 up 0.218 dn 0.205
+   l1     ml_strat             PCC -0.039+-0.026 up 0.141 dn 0.189
+   l1     ml_gene              PCC +0.092+-0.024 up 0.175 dn 0.190
+   l1     hindsight (0.4, 1.0, 1.0)    PCC +0.141 up 0.229 dn 0.221
+   linear kd_RO                PCC +0.203+-0.081 up 0.291 dn 0.337
+   linear ml_strat             PCC -0.154+-0.089 up 0.219 dn 0.267
+   linear ml_gene              PCC +0.054+-0.073 up 0.235 dn 0.271
+   linear hindsight (0.001, 1.0, 1.0)  PCC +0.219 up 0.301 dn 0.345

@@ -1,0 +1,5073 @@
+{
+ "gastrulation-human": {
+  "table": {
+   "V0_full": {
+    "ctx_i>=1": {
+     "pcc": 0.3292,
+     "up": 0.2735,
+     "down": 0.2886,
+     "spearman": 0.3031
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3365,
+     "up": 0.2765,
+     "down": 0.2948,
+     "spearman": 0.3155
+    },
+    "own_i>=2": {
+     "pcc": 0.3351,
+     "p200_up": 0.2755,
+     "p200_down": 0.2905,
+     "pta_up": 0.2755,
+     "pta_down": 0.2905,
+     "pcc_sd": 0.0084,
+     "p200_up_sd": 0.0037,
+     "p200_down_sd": 0.0035
+    }
+   },
+   "V1_full+grn": {
+    "ctx_i>=1": {
+     "pcc": 0.328,
+     "up": 0.2718,
+     "down": 0.2876,
+     "spearman": 0.3069
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3353,
+     "up": 0.2747,
+     "down": 0.2937,
+     "spearman": 0.3194
+    },
+    "own_i>=2": {
+     "pcc": 0.3345,
+     "p200_up": 0.2741,
+     "p200_down": 0.2906,
+     "pta_up": 0.2741,
+     "pta_down": 0.2905,
+     "pcc_sd": 0.0082,
+     "p200_up_sd": 0.0028,
+     "p200_down_sd": 0.0031
+    }
+   },
+   "V2_V1+grnbar": {
+    "ctx_i>=1": {
+     "pcc": 0.3246,
+     "up": 0.2706,
+     "down": 0.2879,
+     "spearman": 0.3054
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3317,
+     "up": 0.2735,
+     "down": 0.2941,
+     "spearman": 0.3179
+    },
+    "own_i>=2": {
+     "pcc": 0.3316,
+     "p200_up": 0.2727,
+     "p200_down": 0.2905,
+     "pta_up": 0.2727,
+     "pta_down": 0.2905,
+     "pcc_sd": 0.0084,
+     "p200_up_sd": 0.003,
+     "p200_down_sd": 0.0037
+    }
+   },
+   "V2b_full+grnbar": {
+    "ctx_i>=1": {
+     "pcc": 0.3292,
+     "up": 0.2755,
+     "down": 0.2877,
+     "spearman": 0.3035
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3365,
+     "up": 0.2785,
+     "down": 0.2938,
+     "spearman": 0.3159
+    },
+    "own_i>=2": {
+     "pcc": 0.3366,
+     "p200_up": 0.2766,
+     "p200_down": 0.2912,
+     "pta_up": 0.2766,
+     "pta_down": 0.2912,
+     "pcc_sd": 0.0093,
+     "p200_up_sd": 0.0027,
+     "p200_down_sd": 0.004
+    }
+   },
+   "V2n_V1+grnbarnull": {
+    "ctx_i>=1": {
+     "pcc": 0.326,
+     "up": 0.2747,
+     "down": 0.2889,
+     "spearman": 0.3042
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3332,
+     "up": 0.2778,
+     "down": 0.2951,
+     "spearman": 0.3166
+    },
+    "own_i>=2": {
+     "pcc": 0.3325,
+     "p200_up": 0.2754,
+     "p200_down": 0.2911,
+     "pta_up": 0.2755,
+     "pta_down": 0.2911,
+     "pcc_sd": 0.0072,
+     "p200_up_sd": 0.0031,
+     "p200_down_sd": 0.0033
+    }
+   },
+   "Vd_full+fgap+fmom": {
+    "ctx_i>=1": {
+     "pcc": 0.3294,
+     "up": 0.2726,
+     "down": 0.2855,
+     "spearman": 0.3037
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3367,
+     "up": 0.2755,
+     "down": 0.2916,
+     "spearman": 0.3162
+    },
+    "own_i>=2": {
+     "pcc": 0.336,
+     "p200_up": 0.2754,
+     "p200_down": 0.2874,
+     "pta_up": 0.2754,
+     "pta_down": 0.2873,
+     "pcc_sd": 0.008,
+     "p200_up_sd": 0.0033,
+     "p200_down_sd": 0.0035
+    }
+   },
+   "P_primary": {
+    "ctx_i>=1": {
+     "pcc": 0.3247,
+     "up": 0.27,
+     "down": 0.2862,
+     "spearman": 0.3058
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3319,
+     "up": 0.2728,
+     "down": 0.2923,
+     "spearman": 0.3184
+    },
+    "own_i>=2": {
+     "pcc": 0.3319,
+     "p200_up": 0.273,
+     "p200_down": 0.2886,
+     "pta_up": 0.273,
+     "pta_down": 0.2885,
+     "pcc_sd": 0.008,
+     "p200_up_sd": 0.0025,
+     "p200_down_sd": 0.0035
+    }
+   },
+   "Pn_null": {
+    "ctx_i>=1": {
+     "pcc": 0.323,
+     "up": 0.2768,
+     "down": 0.2859,
+     "spearman": 0.2992
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3301,
+     "up": 0.2799,
+     "down": 0.292,
+     "spearman": 0.3114
+    },
+    "own_i>=2": {
+     "pcc": 0.33,
+     "p200_up": 0.2785,
+     "p200_down": 0.2905,
+     "pta_up": 0.2785,
+     "pta_down": 0.2904,
+     "pcc_sd": 0.0071,
+     "p200_up_sd": 0.0033,
+     "p200_down_sd": 0.0036
+    }
+   },
+   "Vm_V1+grnbar_mom": {
+    "ctx_i>=1": {
+     "pcc": 0.3245,
+     "up": 0.27,
+     "down": 0.2874,
+     "spearman": 0.3043
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3317,
+     "up": 0.2729,
+     "down": 0.2935,
+     "spearman": 0.3167
+    },
+    "own_i>=2": {
+     "pcc": 0.3312,
+     "p200_up": 0.2728,
+     "p200_down": 0.2901,
+     "pta_up": 0.2728,
+     "pta_down": 0.2901,
+     "pcc_sd": 0.0083,
+     "p200_up_sd": 0.0024,
+     "p200_down_sd": 0.0035
+    }
+   },
+   "Vauto_V1|V2|P": {
+    "ctx_i>=1": {
+     "pcc": 0.3256,
+     "up": 0.2697,
+     "down": 0.2866,
+     "spearman": 0.3062
+    },
+    "ctx_i>=2": {
+     "pcc": 0.3328,
+     "up": 0.2726,
+     "down": 0.2927,
+     "spearman": 0.3187
+    },
+    "own_i>=2": {
+     "pcc": 0.3327,
+     "p200_up": 0.2725,
+     "p200_down": 0.2891,
+     "pta_up": 0.2725,
+     "pta_down": 0.289,
+     "pcc_sd": 0.0081,
+     "p200_up_sd": 0.0025,
+     "p200_down_sd": 0.0038
+    }
+   },
+   "trend": {
+    "ctx_i>=1": {
+     "pcc": -0.1583,
+     "up": 0.1053,
+     "down": 0.0915,
+     "spearman": -0.2592
+    },
+    "ctx_i>=2": {
+     "pcc": -0.1691,
+     "up": 0.102,
+     "down": 0.0903,
+     "spearman": -0.2676
+    },
+    "own_i>=2": {
+     "pcc": -0.1793,
+     "p200_up": 0.101,
+     "p200_down": 0.0916,
+     "pta_up": 0.1011,
+     "pta_down": 0.0916,
+     "pcc_sd": 0.0116,
+     "p200_up_sd": 0.0038,
+     "p200_down_sd": 0.0028
+    }
+   },
+   "level_obs(DistBridge nosb l1)": {
+    "ctx_i>=1": {
+     "pcc": 0.1387,
+     "up": 0.2246,
+     "down": 0.2401,
+     "spearman": 0.2586
+    },
+    "ctx_i>=2": {
+     "pcc": 0.1467,
+     "up": 0.2272,
+     "down": 0.2414,
+     "spearman": 0.2679
+    },
+    "own_i>=2": {
+     "pcc": 0.1566,
+     "p200_up": 0.226,
+     "p200_down": 0.2358,
+     "pta_up": 0.2261,
+     "pta_down": 0.2358,
+     "pcc_sd": 0.0126,
+     "p200_up_sd": 0.0041,
+     "p200_down_sd": 0.0039
+    }
+   }
+  },
+  "paired": {
+   "P_primary - V1_full+grn": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0034,
+      "better": 11,
+      "worse": 16,
+      "n": 27,
+      "wilcoxon_p": 0.3735
+     },
+     "up": {
+      "mean_delta": -0.0019,
+      "better": 9,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.3534
+     },
+     "down": {
+      "mean_delta": -0.0014,
+      "better": 9,
+      "worse": 15,
+      "n": 27,
+      "wilcoxon_p": 0.4927
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0033,
+      "better": 11,
+      "worse": 16,
+      "n": 28,
+      "wilcoxon_p": 0.3735
+     },
+     "up": {
+      "mean_delta": -0.0018,
+      "better": 9,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.3534
+     },
+     "down": {
+      "mean_delta": -0.0014,
+      "better": 9,
+      "worse": 15,
+      "n": 28,
+      "wilcoxon_p": 0.4927
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0026,
+      "better": 11,
+      "worse": 16,
+      "wilcoxon_p": 0.4553
+     },
+     "J": {
+      "mean_delta": -0.0056,
+      "better": 11,
+      "worse": 16,
+      "wilcoxon_p": 0.4996
+     }
+    }
+   },
+   "P_primary - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0047,
+      "better": 9,
+      "worse": 18,
+      "n": 27,
+      "wilcoxon_p": 0.1482
+     },
+     "up": {
+      "mean_delta": -0.0037,
+      "better": 11,
+      "worse": 16,
+      "n": 27,
+      "wilcoxon_p": 0.5088
+     },
+     "down": {
+      "mean_delta": -0.0025,
+      "better": 12,
+      "worse": 13,
+      "n": 27,
+      "wilcoxon_p": 0.5811
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0045,
+      "better": 9,
+      "worse": 18,
+      "n": 28,
+      "wilcoxon_p": 0.1482
+     },
+     "up": {
+      "mean_delta": -0.0035,
+      "better": 11,
+      "worse": 16,
+      "n": 28,
+      "wilcoxon_p": 0.5088
+     },
+     "down": {
+      "mean_delta": -0.0024,
+      "better": 12,
+      "worse": 13,
+      "n": 28,
+      "wilcoxon_p": 0.5811
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0032,
+      "better": 10,
+      "worse": 17,
+      "wilcoxon_p": 0.2792
+     },
+     "J": {
+      "mean_delta": -0.0076,
+      "better": 8,
+      "worse": 19,
+      "wilcoxon_p": 0.2584
+     }
+    }
+   },
+   "V2_V1+grnbar - V1_full+grn": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0035,
+      "better": 12,
+      "worse": 15,
+      "n": 27,
+      "wilcoxon_p": 0.2386
+     },
+     "up": {
+      "mean_delta": -0.0012,
+      "better": 12,
+      "worse": 12,
+      "n": 27,
+      "wilcoxon_p": 0.7639
+     },
+     "down": {
+      "mean_delta": 0.0004,
+      "better": 12,
+      "worse": 13,
+      "n": 27,
+      "wilcoxon_p": 0.8929
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0034,
+      "better": 12,
+      "worse": 15,
+      "n": 28,
+      "wilcoxon_p": 0.2386
+     },
+     "up": {
+      "mean_delta": -0.0012,
+      "better": 12,
+      "worse": 12,
+      "n": 28,
+      "wilcoxon_p": 0.7639
+     },
+     "down": {
+      "mean_delta": 0.0004,
+      "better": 12,
+      "worse": 13,
+      "n": 28,
+      "wilcoxon_p": 0.8929
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0029,
+      "better": 11,
+      "worse": 16,
+      "wilcoxon_p": 0.2483
+     },
+     "J": {
+      "mean_delta": -0.0043,
+      "better": 13,
+      "worse": 14,
+      "wilcoxon_p": 0.5781
+     }
+    }
+   },
+   "V2b_full+grnbar - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": 0.0,
+      "better": 9,
+      "worse": 18,
+      "n": 27,
+      "wilcoxon_p": 0.3997
+     },
+     "up": {
+      "mean_delta": 0.002,
+      "better": 13,
+      "worse": 12,
+      "n": 27,
+      "wilcoxon_p": 0.6473
+     },
+     "down": {
+      "mean_delta": -0.001,
+      "better": 10,
+      "worse": 15,
+      "n": 27,
+      "wilcoxon_p": 0.6963
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": 0.0,
+      "better": 9,
+      "worse": 18,
+      "n": 28,
+      "wilcoxon_p": 0.3997
+     },
+     "up": {
+      "mean_delta": 0.002,
+      "better": 13,
+      "worse": 12,
+      "n": 28,
+      "wilcoxon_p": 0.6473
+     },
+     "down": {
+      "mean_delta": -0.0009,
+      "better": 10,
+      "worse": 15,
+      "n": 28,
+      "wilcoxon_p": 0.6963
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": 0.0015,
+      "better": 11,
+      "worse": 16,
+      "wilcoxon_p": 0.5944
+     },
+     "J": {
+      "mean_delta": 0.0032,
+      "better": 10,
+      "worse": 17,
+      "wilcoxon_p": 0.546
+     }
+    }
+   },
+   "V2n_V1+grnbarnull - V1_full+grn": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.002,
+      "better": 15,
+      "worse": 12,
+      "n": 27,
+      "wilcoxon_p": 0.8408
+     },
+     "up": {
+      "mean_delta": 0.003,
+      "better": 14,
+      "worse": 11,
+      "n": 27,
+      "wilcoxon_p": 0.3814
+     },
+     "down": {
+      "mean_delta": 0.0014,
+      "better": 18,
+      "worse": 7,
+      "n": 27,
+      "wilcoxon_p": 0.236
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.002,
+      "better": 15,
+      "worse": 12,
+      "n": 28,
+      "wilcoxon_p": 0.8408
+     },
+     "up": {
+      "mean_delta": 0.0029,
+      "better": 14,
+      "worse": 11,
+      "n": 28,
+      "wilcoxon_p": 0.3814
+     },
+     "down": {
+      "mean_delta": 0.0013,
+      "better": 18,
+      "worse": 7,
+      "n": 28,
+      "wilcoxon_p": 0.236
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0021,
+      "better": 15,
+      "worse": 12,
+      "wilcoxon_p": 1.0
+     },
+     "J": {
+      "mean_delta": -0.0001,
+      "better": 16,
+      "worse": 11,
+      "wilcoxon_p": 0.5944
+     }
+    }
+   },
+   "Vd_full+fgap+fmom - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": 0.0002,
+      "better": 13,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.9717
+     },
+     "up": {
+      "mean_delta": -0.001,
+      "better": 10,
+      "worse": 12,
+      "n": 27,
+      "wilcoxon_p": 0.2423
+     },
+     "down": {
+      "mean_delta": -0.0032,
+      "better": 10,
+      "worse": 16,
+      "n": 27,
+      "wilcoxon_p": 0.151
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": 0.0002,
+      "better": 13,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.9717
+     },
+     "up": {
+      "mean_delta": -0.001,
+      "better": 10,
+      "worse": 12,
+      "n": 28,
+      "wilcoxon_p": 0.2423
+     },
+     "down": {
+      "mean_delta": -0.0031,
+      "better": 10,
+      "worse": 16,
+      "n": 28,
+      "wilcoxon_p": 0.151
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": 0.0009,
+      "better": 14,
+      "worse": 13,
+      "wilcoxon_p": 0.6277
+     },
+     "J": {
+      "mean_delta": -0.0024,
+      "better": 14,
+      "worse": 13,
+      "wilcoxon_p": 0.6446
+     }
+    }
+   },
+   "Pn_null - V1_full+grn": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0052,
+      "better": 13,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.8593
+     },
+     "up": {
+      "mean_delta": 0.0052,
+      "better": 15,
+      "worse": 11,
+      "n": 27,
+      "wilcoxon_p": 0.2583
+     },
+     "down": {
+      "mean_delta": -0.0017,
+      "better": 11,
+      "worse": 15,
+      "n": 27,
+      "wilcoxon_p": 0.6844
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.005,
+      "better": 13,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.8593
+     },
+     "up": {
+      "mean_delta": 0.005,
+      "better": 15,
+      "worse": 11,
+      "n": 28,
+      "wilcoxon_p": 0.2583
+     },
+     "down": {
+      "mean_delta": -0.0017,
+      "better": 11,
+      "worse": 15,
+      "n": 28,
+      "wilcoxon_p": 0.6844
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0046,
+      "better": 12,
+      "worse": 15,
+      "wilcoxon_p": 0.9153
+     },
+     "J": {
+      "mean_delta": -0.0002,
+      "better": 13,
+      "worse": 14,
+      "wilcoxon_p": 0.9906
+     }
+    }
+   },
+   "Vm_V1+grnbar_mom - V1_full+grn": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0036,
+      "better": 9,
+      "worse": 18,
+      "n": 27,
+      "wilcoxon_p": 0.1775
+     },
+     "up": {
+      "mean_delta": -0.0019,
+      "better": 9,
+      "worse": 13,
+      "n": 27,
+      "wilcoxon_p": 0.2911
+     },
+     "down": {
+      "mean_delta": -0.0002,
+      "better": 9,
+      "worse": 13,
+      "n": 27,
+      "wilcoxon_p": 0.7086
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0035,
+      "better": 9,
+      "worse": 18,
+      "n": 28,
+      "wilcoxon_p": 0.1775
+     },
+     "up": {
+      "mean_delta": -0.0018,
+      "better": 9,
+      "worse": 13,
+      "n": 28,
+      "wilcoxon_p": 0.2911
+     },
+     "down": {
+      "mean_delta": -0.0002,
+      "better": 9,
+      "worse": 13,
+      "n": 28,
+      "wilcoxon_p": 0.7086
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0033,
+      "better": 11,
+      "worse": 16,
+      "wilcoxon_p": 0.2198
+     },
+     "J": {
+      "mean_delta": -0.005,
+      "better": 12,
+      "worse": 15,
+      "wilcoxon_p": 0.546
+     }
+    }
+   },
+   "Vauto_V1|V2|P - V1_full+grn": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0025,
+      "better": 10,
+      "worse": 10,
+      "n": 27,
+      "wilcoxon_p": 0.9273
+     },
+     "up": {
+      "mean_delta": -0.0022,
+      "better": 8,
+      "worse": 10,
+      "n": 27,
+      "wilcoxon_p": 0.4074
+     },
+     "down": {
+      "mean_delta": -0.001,
+      "better": 9,
+      "worse": 11,
+      "n": 27,
+      "wilcoxon_p": 0.7936
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0024,
+      "better": 10,
+      "worse": 10,
+      "n": 28,
+      "wilcoxon_p": 0.9273
+     },
+     "up": {
+      "mean_delta": -0.0021,
+      "better": 8,
+      "worse": 10,
+      "n": 28,
+      "wilcoxon_p": 0.4074
+     },
+     "down": {
+      "mean_delta": -0.001,
+      "better": 9,
+      "worse": 11,
+      "n": 28,
+      "wilcoxon_p": 0.7936
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0018,
+      "better": 9,
+      "worse": 11,
+      "wilcoxon_p": 0.9563
+     },
+     "J": {
+      "mean_delta": -0.0049,
+      "better": 9,
+      "worse": 11,
+      "wilcoxon_p": 0.6215
+     }
+    }
+   },
+   "V1_full+grn - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0012,
+      "better": 11,
+      "worse": 16,
+      "n": 27,
+      "wilcoxon_p": 0.6617
+     },
+     "up": {
+      "mean_delta": -0.0018,
+      "better": 12,
+      "worse": 15,
+      "n": 27,
+      "wilcoxon_p": 0.6829
+     },
+     "down": {
+      "mean_delta": -0.0011,
+      "better": 11,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.8823
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0012,
+      "better": 11,
+      "worse": 16,
+      "n": 28,
+      "wilcoxon_p": 0.6617
+     },
+     "up": {
+      "mean_delta": -0.0017,
+      "better": 12,
+      "worse": 15,
+      "n": 28,
+      "wilcoxon_p": 0.6829
+     },
+     "down": {
+      "mean_delta": -0.0011,
+      "better": 11,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.8823
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0006,
+      "better": 13,
+      "worse": 14,
+      "wilcoxon_p": 0.714
+     },
+     "J": {
+      "mean_delta": -0.002,
+      "better": 11,
+      "worse": 16,
+      "wilcoxon_p": 0.546
+     }
+    }
+   },
+   "P_primary - Pn_null": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": 0.0018,
+      "better": 12,
+      "worse": 15,
+      "n": 27,
+      "wilcoxon_p": 0.6964
+     },
+     "up": {
+      "mean_delta": -0.0071,
+      "better": 12,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.2276
+     },
+     "down": {
+      "mean_delta": 0.0003,
+      "better": 14,
+      "worse": 11,
+      "n": 27,
+      "wilcoxon_p": 0.7775
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": 0.0017,
+      "better": 12,
+      "worse": 15,
+      "n": 28,
+      "wilcoxon_p": 0.6964
+     },
+     "up": {
+      "mean_delta": -0.0068,
+      "better": 12,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.2276
+     },
+     "down": {
+      "mean_delta": 0.0003,
+      "better": 14,
+      "worse": 11,
+      "n": 28,
+      "wilcoxon_p": 0.7775
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": 0.002,
+      "better": 13,
+      "worse": 14,
+      "wilcoxon_p": 0.9906
+     },
+     "J": {
+      "mean_delta": -0.0054,
+      "better": 12,
+      "worse": 15,
+      "wilcoxon_p": 0.7496
+     }
+    }
+   },
+   "V2_V1+grnbar - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0048,
+      "better": 8,
+      "worse": 19,
+      "n": 27,
+      "wilcoxon_p": 0.2021
+     },
+     "up": {
+      "mean_delta": -0.003,
+      "better": 13,
+      "worse": 13,
+      "n": 27,
+      "wilcoxon_p": 0.6025
+     },
+     "down": {
+      "mean_delta": -0.0007,
+      "better": 13,
+      "worse": 12,
+      "n": 27,
+      "wilcoxon_p": 0.8823
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0046,
+      "better": 8,
+      "worse": 19,
+      "n": 28,
+      "wilcoxon_p": 0.2021
+     },
+     "up": {
+      "mean_delta": -0.0029,
+      "better": 13,
+      "worse": 13,
+      "n": 28,
+      "wilcoxon_p": 0.6025
+     },
+     "down": {
+      "mean_delta": -0.0007,
+      "better": 13,
+      "worse": 12,
+      "n": 28,
+      "wilcoxon_p": 0.8823
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0035,
+      "better": 10,
+      "worse": 17,
+      "wilcoxon_p": 0.3361
+     },
+     "J": {
+      "mean_delta": -0.0062,
+      "better": 11,
+      "worse": 16,
+      "wilcoxon_p": 0.5781
+     }
+    }
+   },
+   "V2n_V1+grnbarnull - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0033,
+      "better": 12,
+      "worse": 15,
+      "n": 27,
+      "wilcoxon_p": 0.7317
+     },
+     "up": {
+      "mean_delta": 0.0013,
+      "better": 12,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.9899
+     },
+     "down": {
+      "mean_delta": 0.0003,
+      "better": 14,
+      "worse": 12,
+      "n": 27,
+      "wilcoxon_p": 0.5677
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0032,
+      "better": 12,
+      "worse": 15,
+      "n": 28,
+      "wilcoxon_p": 0.7317
+     },
+     "up": {
+      "mean_delta": 0.0012,
+      "better": 12,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.9899
+     },
+     "down": {
+      "mean_delta": 0.0003,
+      "better": 14,
+      "worse": 12,
+      "n": 28,
+      "wilcoxon_p": 0.5677
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0027,
+      "better": 14,
+      "worse": 13,
+      "wilcoxon_p": 0.8779
+     },
+     "J": {
+      "mean_delta": -0.0021,
+      "better": 13,
+      "worse": 14,
+      "wilcoxon_p": 0.9906
+     }
+    }
+   },
+   "Pn_null - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0065,
+      "better": 11,
+      "worse": 16,
+      "n": 27,
+      "wilcoxon_p": 0.2584
+     },
+     "up": {
+      "mean_delta": 0.0034,
+      "better": 11,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.9678
+     },
+     "down": {
+      "mean_delta": -0.0028,
+      "better": 13,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.5011
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0062,
+      "better": 11,
+      "worse": 16,
+      "n": 28,
+      "wilcoxon_p": 0.2584
+     },
+     "up": {
+      "mean_delta": 0.0033,
+      "better": 11,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.9678
+     },
+     "down": {
+      "mean_delta": -0.0027,
+      "better": 13,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.5011
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0051,
+      "better": 13,
+      "worse": 14,
+      "wilcoxon_p": 0.6109
+     },
+     "J": {
+      "mean_delta": -0.0022,
+      "better": 12,
+      "worse": 15,
+      "wilcoxon_p": 0.3997
+     }
+    }
+   },
+   "Vm_V1+grnbar_mom - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0048,
+      "better": 9,
+      "worse": 18,
+      "n": 27,
+      "wilcoxon_p": 0.1937
+     },
+     "up": {
+      "mean_delta": -0.0036,
+      "better": 11,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.5812
+     },
+     "down": {
+      "mean_delta": -0.0013,
+      "better": 11,
+      "worse": 14,
+      "n": 27,
+      "wilcoxon_p": 0.8086
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0047,
+      "better": 9,
+      "worse": 18,
+      "n": 28,
+      "wilcoxon_p": 0.1937
+     },
+     "up": {
+      "mean_delta": -0.0035,
+      "better": 11,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.5812
+     },
+     "down": {
+      "mean_delta": -0.0012,
+      "better": 11,
+      "worse": 14,
+      "n": 28,
+      "wilcoxon_p": 0.8086
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0039,
+      "better": 12,
+      "worse": 15,
+      "wilcoxon_p": 0.427
+     },
+     "J": {
+      "mean_delta": -0.007,
+      "better": 14,
+      "worse": 13,
+      "wilcoxon_p": 0.546
+     }
+    }
+   },
+   "Vauto_V1|V2|P - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0037,
+      "better": 9,
+      "worse": 18,
+      "n": 27,
+      "wilcoxon_p": 0.2386
+     },
+     "up": {
+      "mean_delta": -0.0039,
+      "better": 11,
+      "worse": 16,
+      "n": 27,
+      "wilcoxon_p": 0.5322
+     },
+     "down": {
+      "mean_delta": -0.0021,
+      "better": 11,
+      "worse": 13,
+      "n": 27,
+      "wilcoxon_p": 0.6475
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.0036,
+      "better": 9,
+      "worse": 18,
+      "n": 28,
+      "wilcoxon_p": 0.2386
+     },
+     "up": {
+      "mean_delta": -0.0038,
+      "better": 11,
+      "worse": 16,
+      "n": 28,
+      "wilcoxon_p": 0.5322
+     },
+     "down": {
+      "mean_delta": -0.0021,
+      "better": 11,
+      "worse": 13,
+      "n": 28,
+      "wilcoxon_p": 0.6475
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.0024,
+      "better": 11,
+      "worse": 16,
+      "wilcoxon_p": 0.3012
+     },
+     "J": {
+      "mean_delta": -0.0069,
+      "better": 8,
+      "worse": 19,
+      "wilcoxon_p": 0.2901
+     }
+    }
+   },
+   "trend - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.5056,
+      "better": 2,
+      "worse": 25,
+      "n": 27,
+      "wilcoxon_p": 0.0
+     },
+     "up": {
+      "mean_delta": -0.1745,
+      "better": 3,
+      "worse": 24,
+      "n": 27,
+      "wilcoxon_p": 0.0
+     },
+     "down": {
+      "mean_delta": -0.2045,
+      "better": 0,
+      "worse": 27,
+      "n": 27,
+      "wilcoxon_p": 0.0
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.4875,
+      "better": 2,
+      "worse": 25,
+      "n": 28,
+      "wilcoxon_p": 0.0
+     },
+     "up": {
+      "mean_delta": -0.1682,
+      "better": 3,
+      "worse": 24,
+      "n": 28,
+      "wilcoxon_p": 0.0
+     },
+     "down": {
+      "mean_delta": -0.1972,
+      "better": 0,
+      "worse": 27,
+      "n": 28,
+      "wilcoxon_p": 0.0
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.5144,
+      "better": 2,
+      "worse": 25,
+      "wilcoxon_p": 0.0
+     },
+     "J": {
+      "mean_delta": -0.8878,
+      "better": 2,
+      "worse": 25,
+      "wilcoxon_p": 0.0
+     }
+    }
+   },
+   "level_obs(DistBridge nosb l1) - V0_full": {
+    "ctx_i>=2": {
+     "pcc": {
+      "mean_delta": -0.1898,
+      "better": 5,
+      "worse": 22,
+      "n": 27,
+      "wilcoxon_p": 0.0005
+     },
+     "up": {
+      "mean_delta": -0.0492,
+      "better": 6,
+      "worse": 21,
+      "n": 27,
+      "wilcoxon_p": 0.0014
+     },
+     "down": {
+      "mean_delta": -0.0534,
+      "better": 6,
+      "worse": 21,
+      "n": 27,
+      "wilcoxon_p": 0.0006
+     }
+    },
+    "ctx_i>=1": {
+     "pcc": {
+      "mean_delta": -0.1905,
+      "better": 5,
+      "worse": 23,
+      "n": 28,
+      "wilcoxon_p": 0.0003
+     },
+     "up": {
+      "mean_delta": -0.0489,
+      "better": 6,
+      "worse": 22,
+      "n": 28,
+      "wilcoxon_p": 0.0009
+     },
+     "down": {
+      "mean_delta": -0.0485,
+      "better": 7,
+      "worse": 21,
+      "n": 28,
+      "wilcoxon_p": 0.0023
+     }
+    },
+    "nass_masks_i>=2": {
+     "pcc": {
+      "mean_delta": -0.1785,
+      "better": 5,
+      "worse": 22,
+      "wilcoxon_p": 0.0014
+     },
+     "J": {
+      "mean_delta": -0.2827,
+      "better": 7,
+      "worse": 20,
+      "wilcoxon_p": 0.0008
+     }
+    }
+   }
+  },
+  "gains": {
+   "P_primary - V1_full+grn": {
+    "per_transition_i>=2": [
+     -0.0014,
+     0.0122,
+     0.031,
+     -0.0519,
+     -0.0054,
+     0.0021,
+     0.0029,
+     -0.0115,
+     0.006,
+     -0.0017,
+     -0.0075,
+     0.0009,
+     -0.0023,
+     -0.0065,
+     -0.0013,
+     -0.002,
+     -0.0029,
+     0.001,
+     -0.0014,
+     0.0003,
+     0.011,
+     -0.0074,
+     -0.0043,
+     0.0145,
+     0.019,
+     -0.0492,
+     -0.0364
+    ],
+    "mean_i>=2": -0.0034,
+    "n_pos_i>=2": 11,
+    "n_neg_i>=2": 16,
+    "n_i>=2": 27,
+    "pearson_with_signal_share": 0.1085,
+    "spearman_with_signal_share": 0.1435,
+    "sum_i>=2": -0.0922,
+    "share_of_net_gain_at_i_in_{2,5}": null,
+    "share_of_positive_gain_at_i_in_{2,5}": 0.0
+   },
+   "P_primary - V0_full": {
+    "per_transition_i>=2": [
+     -0.1212,
+     0.1893,
+     -0.0784,
+     0.0157,
+     -0.0356,
+     -0.0114,
+     -0.0961,
+     -0.0066,
+     0.0938,
+     -0.0086,
+     0.0009,
+     0.0065,
+     -0.0183,
+     -0.0105,
+     -0.0013,
+     -0.0053,
+     -0.003,
+     0.0006,
+     -0.0024,
+     0.0088,
+     -0.0025,
+     -0.0092,
+     -0.001,
+     0.0183,
+     0.032,
+     -0.037,
+     -0.0431
+    ],
+    "mean_i>=2": -0.0047,
+    "n_pos_i>=2": 9,
+    "n_neg_i>=2": 18,
+    "n_i>=2": 27,
+    "pearson_with_signal_share": 0.0998,
+    "spearman_with_signal_share": 0.1581,
+    "sum_i>=2": -0.1256,
+    "share_of_net_gain_at_i_in_{2,5}": null,
+    "share_of_positive_gain_at_i_in_{2,5}": 0.0428
+   },
+   "V2_V1+grnbar - V1_full+grn": {
+    "per_transition_i>=2": [
+     -0.0124,
+     0.0055,
+     0.0029,
+     -0.0361,
+     0.0039,
+     0.0115,
+     0.0043,
+     -0.0097,
+     0.0008,
+     -0.0078,
+     -0.0037,
+     0.0014,
+     -0.0031,
+     -0.005,
+     -0.0007,
+     -0.0032,
+     -0.0024,
+     0.0002,
+     -0.0064,
+     0.0005,
+     0.0095,
+     -0.0087,
+     -0.0072,
+     0.0091,
+     0.0095,
+     -0.0358,
+     -0.012
+    ],
+    "mean_i>=2": -0.0035,
+    "n_pos_i>=2": 12,
+    "n_neg_i>=2": 15,
+    "n_i>=2": 27,
+    "pearson_with_signal_share": 0.0085,
+    "spearman_with_signal_share": 0.1032,
+    "sum_i>=2": -0.0953,
+    "share_of_net_gain_at_i_in_{2,5}": null,
+    "share_of_positive_gain_at_i_in_{2,5}": 0.0
+   },
+   "Vd_full+fgap+fmom - V0_full": {
+    "per_transition_i>=2": [
+     0.0039,
+     0.0163,
+     0.034,
+     -0.014,
+     -0.0137,
+     -0.0178,
+     0.0028,
+     -0.0051,
+     0.0138,
+     0.0056,
+     -0.0043,
+     0.0004,
+     -0.0003,
+     -0.0012,
+     -0.0007,
+     0.0003,
+     -0.0004,
+     0.001,
+     -0.0015,
+     -0.0,
+     -0.0,
+     0.0003,
+     0.0027,
+     0.0043,
+     0.0152,
+     -0.0271,
+     -0.0088
+    ],
+    "mean_i>=2": 0.0002,
+    "n_pos_i>=2": 13,
+    "n_neg_i>=2": 14,
+    "n_i>=2": 27,
+    "pearson_with_signal_share": 0.0648,
+    "spearman_with_signal_share": 0.102,
+    "sum_i>=2": 0.0057,
+    "share_of_net_gain_at_i_in_{2,5}": -1.7762,
+    "share_of_positive_gain_at_i_in_{2,5}": 0.0384
+   }
+  },
+  "audits": {
+   "nan_strictness_max_diff": 0.0,
+   "lag1_rows_equal_Y_prev": true,
+   "ctx_masks_identical_on_regeneration": true,
+   "nass_masks_identical_on_regeneration": true,
+   "V0_vs_independent_Stacker(full)_max_abs_diff": 1.0761669333447799e-11,
+   "V0_chosen_equal": true
+  },
+  "chosen": {
+   "V0_full": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ]
+   ],
+   "V1_full+grn": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ]
+   ],
+   "V2_V1+grnbar": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "2.0",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ]
+   ],
+   "V2b_full+grnbar": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     1
+    ]
+   ],
+   "V2n_V1+grnbarnull": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ]
+   ],
+   "Vd_full+fgap+fmom": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ]
+   ],
+   "P_primary": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     1
+    ]
+   ],
+   "Pn_null": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ]
+   ],
+   "Vm_V1+grnbar_mom": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "4.0",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     1
+    ],
+    [
+     0,
+     "1.0",
+     0.001,
+     1
+    ]
+   ],
+   "Vauto_V1|V2|P": [
+    null,
+    null,
+    [
+     0,
+     "1.0",
+     0.001,
+     0
+    ],
+    [
+     2,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     2,
+     "inf",
+     0.001,
+     1
+    ],
+    [
+     2,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "inf",
+     0.001,
+     0
+    ],
+    [
+     1,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     1,
+     "inf",
+     0.1,
+     0
+    ],
+    [
+     2,
+     "0.5",
+     0.001,
+     0
+    ],
+    [
+     2,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     2,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     2,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     2,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     2,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     2,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     2,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     0,
+     "0.5",
+     0.1,
+     0
+    ],
+    [
+     1,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     1,
+     "1.0",
+     0.1,
+     0
+    ],
+    [
+     1,
+     "0.5",
+     0.1,
+     1
+    ],
+    [
+     0,
+     "0.5",
+     0.001,
+     1
+    ],
+    [
+     2,
+     "1.0",
+     0.1,
+     1
+    ],
+    [
+     2,
+     "1.0",
+     0.001,
+     1
+    ],
+    [
+     2,
+     "1.0",
+     0.001,
+     1
+    ],
+    [
+     2,
+     "1.0",
+     0.001,
+     1
+    ]
+   ]
+  },
+  "level_obs_selected": [
+   "('kalman', 0.2, 0.0)",
+   "('kalman', 0.2, 0.0)",
+   "('kalman', 0.2, 0.0)",
+   "('box', 4, 0.0)",
+   "('box', 4, 0.0)",
+   "('kalman', 0.2, 0.0)",
+   "('box', 4, 0.0)",
+   "('box', 4, 0.0)",
+   "('box', 1, 0.0)",
+   "('kalman', 0.2, 0.0)",
+   "('kalman', 0.2, 0.0)",
+   "('kalman', 0.2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)",
+   "('box', 2, 0.0)"
+  ],
+  "signal_share": [
+   0.5204,
+   0.1506,
+   0.5221,
+   0.5848,
+   0.482,
+   0.6591,
+   0.8069,
+   0.3624,
+   -0.042,
+   -0.0281,
+   0.0765,
+   0.1165,
+   0.1687,
+   0.0838,
+   0.0349,
+   0.0079,
+   0.0334,
+   0.1895,
+   0.0402,
+   0.0513,
+   0.4849,
+   0.4107,
+   0.0963,
+   0.3054,
+   0.1493,
+   0.316,
+   -0.0423,
+   -0.0638,
+   -0.1907
+  ],
+  "per_transition_ctx_pcc_up_down": {
+   "V0_full": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.1059,
+     0.1433,
+     0.13
+    ],
+    [
+     0.3522,
+     0.0675,
+     0.3433
+    ],
+    [
+     0.3493,
+     0.1183,
+     0.3633
+    ],
+    [
+     -0.2881,
+     0.0617,
+     0.1967
+    ],
+    [
+     0.5735,
+     0.4633,
+     0.2783
+    ],
+    [
+     0.0536,
+     0.1917,
+     0.1567
+    ],
+    [
+     0.0949,
+     0.1467,
+     0.1283
+    ],
+    [
+     0.3714,
+     0.2367,
+     0.2467
+    ],
+    [
+     0.3791,
+     0.3242,
+     0.2983
+    ],
+    [
+     0.5301,
+     0.425,
+     0.37
+    ],
+    [
+     0.4219,
+     0.3117,
+     0.3317
+    ],
+    [
+     0.4476,
+     0.2933,
+     0.2833
+    ],
+    [
+     0.3699,
+     0.3083,
+     0.3
+    ],
+    [
+     0.5488,
+     0.4,
+     0.3717
+    ],
+    [
+     0.5114,
+     0.36,
+     0.3583
+    ],
+    [
+     0.5456,
+     0.3667,
+     0.4217
+    ],
+    [
+     0.5591,
+     0.3667,
+     0.3883
+    ],
+    [
+     0.3755,
+     0.3367,
+     0.3617
+    ],
+    [
+     0.3012,
+     0.2667,
+     0.2783
+    ],
+    [
+     0.3407,
+     0.2933,
+     0.2967
+    ],
+    [
+     0.423,
+     0.365,
+     0.3317
+    ],
+    [
+     0.4014,
+     0.3117,
+     0.2933
+    ],
+    [
+     0.3693,
+     0.3058,
+     0.295
+    ],
+    [
+     0.2568,
+     0.26,
+     0.255
+    ],
+    [
+     0.2181,
+     0.24,
+     0.2767
+    ],
+    [
+     0.3155,
+     0.2283,
+     0.3
+    ],
+    [
+     0.3697,
+     0.2727,
+     0.305
+    ]
+   ],
+   "V1_full+grn": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.2258,
+     0.1183,
+     0.0417
+    ],
+    [
+     0.5293,
+     0.0167,
+     0.4017
+    ],
+    [
+     0.2399,
+     0.16,
+     0.3467
+    ],
+    [
+     -0.2205,
+     0.1067,
+     0.2183
+    ],
+    [
+     0.5434,
+     0.3933,
+     0.2304
+    ],
+    [
+     0.0401,
+     0.175,
+     0.1533
+    ],
+    [
+     -0.0041,
+     0.1767,
+     0.1167
+    ],
+    [
+     0.3763,
+     0.24,
+     0.25
+    ],
+    [
+     0.467,
+     0.3608,
+     0.3483
+    ],
+    [
+     0.5232,
+     0.42,
+     0.3817
+    ],
+    [
+     0.4302,
+     0.3083,
+     0.3433
+    ],
+    [
+     0.4532,
+     0.3033,
+     0.3083
+    ],
+    [
+     0.354,
+     0.3,
+     0.2933
+    ],
+    [
+     0.5448,
+     0.39,
+     0.3867
+    ],
+    [
+     0.5113,
+     0.3667,
+     0.3617
+    ],
+    [
+     0.5422,
+     0.3633,
+     0.4083
+    ],
+    [
+     0.559,
+     0.365,
+     0.3833
+    ],
+    [
+     0.3752,
+     0.3283,
+     0.36
+    ],
+    [
+     0.3003,
+     0.2733,
+     0.2783
+    ],
+    [
+     0.3492,
+     0.3067,
+     0.3
+    ],
+    [
+     0.4096,
+     0.3533,
+     0.325
+    ],
+    [
+     0.3995,
+     0.3233,
+     0.2933
+    ],
+    [
+     0.3727,
+     0.2725,
+     0.2917
+    ],
+    [
+     0.2606,
+     0.2583,
+     0.2533
+    ],
+    [
+     0.2311,
+     0.23,
+     0.255
+    ],
+    [
+     0.3276,
+     0.23,
+     0.305
+    ],
+    [
+     0.363,
+     0.2777,
+     0.295
+    ]
+   ],
+   "V2_V1+grnbar": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.2381,
+     0.1183,
+     0.0367
+    ],
+    [
+     0.5348,
+     0.015,
+     0.4167
+    ],
+    [
+     0.2428,
+     0.1567,
+     0.3467
+    ],
+    [
+     -0.2566,
+     0.0617,
+     0.2283
+    ],
+    [
+     0.5472,
+     0.3883,
+     0.2204
+    ],
+    [
+     0.0516,
+     0.1717,
+     0.1617
+    ],
+    [
+     0.0002,
+     0.1783,
+     0.11
+    ],
+    [
+     0.3666,
+     0.2317,
+     0.2483
+    ],
+    [
+     0.4677,
+     0.3625,
+     0.345
+    ],
+    [
+     0.5154,
+     0.4067,
+     0.3767
+    ],
+    [
+     0.4265,
+     0.3133,
+     0.3383
+    ],
+    [
+     0.4546,
+     0.3067,
+     0.305
+    ],
+    [
+     0.3509,
+     0.3033,
+     0.2933
+    ],
+    [
+     0.5398,
+     0.3767,
+     0.3967
+    ],
+    [
+     0.5106,
+     0.3667,
+     0.3583
+    ],
+    [
+     0.539,
+     0.3633,
+     0.41
+    ],
+    [
+     0.5566,
+     0.3683,
+     0.3817
+    ],
+    [
+     0.3754,
+     0.3267,
+     0.365
+    ],
+    [
+     0.2939,
+     0.265,
+     0.2883
+    ],
+    [
+     0.3496,
+     0.31,
+     0.3033
+    ],
+    [
+     0.4191,
+     0.36,
+     0.3317
+    ],
+    [
+     0.3908,
+     0.315,
+     0.2867
+    ],
+    [
+     0.3655,
+     0.2958,
+     0.2933
+    ],
+    [
+     0.2697,
+     0.27,
+     0.26
+    ],
+    [
+     0.2406,
+     0.2417,
+     0.25
+    ],
+    [
+     0.2918,
+     0.2367,
+     0.2917
+    ],
+    [
+     0.351,
+     0.2743,
+     0.2967
+    ]
+   ],
+   "V2b_full+grnbar": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.1581,
+     0.1217,
+     0.1083
+    ],
+    [
+     0.5058,
+     0.0392,
+     0.3933
+    ],
+    [
+     0.2343,
+     0.1567,
+     0.3483
+    ],
+    [
+     -0.2431,
+     0.0833,
+     0.2117
+    ],
+    [
+     0.6301,
+     0.485,
+     0.2571
+    ],
+    [
+     0.0308,
+     0.1883,
+     0.155
+    ],
+    [
+     0.1155,
+     0.1883,
+     0.1467
+    ],
+    [
+     0.3713,
+     0.24,
+     0.2567
+    ],
+    [
+     0.375,
+     0.3308,
+     0.2883
+    ],
+    [
+     0.5202,
+     0.4083,
+     0.3783
+    ],
+    [
+     0.4169,
+     0.3117,
+     0.3333
+    ],
+    [
+     0.4532,
+     0.2933,
+     0.305
+    ],
+    [
+     0.3566,
+     0.315,
+     0.2917
+    ],
+    [
+     0.5363,
+     0.37,
+     0.3933
+    ],
+    [
+     0.5102,
+     0.3667,
+     0.3517
+    ],
+    [
+     0.5378,
+     0.3567,
+     0.41
+    ],
+    [
+     0.5587,
+     0.37,
+     0.3817
+    ],
+    [
+     0.3775,
+     0.3317,
+     0.3617
+    ],
+    [
+     0.2942,
+     0.2617,
+     0.2783
+    ],
+    [
+     0.3521,
+     0.305,
+     0.3217
+    ],
+    [
+     0.4183,
+     0.3483,
+     0.3167
+    ],
+    [
+     0.3889,
+     0.3067,
+     0.2867
+    ],
+    [
+     0.3647,
+     0.3025,
+     0.2933
+    ],
+    [
+     0.269,
+     0.2783,
+     0.2567
+    ],
+    [
+     0.2448,
+     0.26,
+     0.255
+    ],
+    [
+     0.2857,
+     0.2417,
+     0.255
+    ],
+    [
+     0.3399,
+     0.2593,
+     0.2983
+    ]
+   ],
+   "V2n_V1+grnbarnull": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.2326,
+     0.1217,
+     0.0383
+    ],
+    [
+     0.5091,
+     0.0183,
+     0.4033
+    ],
+    [
+     0.2422,
+     0.1617,
+     0.3533
+    ],
+    [
+     -0.2298,
+     0.105,
+     0.21
+    ],
+    [
+     0.5771,
+     0.4067,
+     0.2454
+    ],
+    [
+     0.0345,
+     0.1767,
+     0.1633
+    ],
+    [
+     0.0932,
+     0.1667,
+     0.125
+    ],
+    [
+     0.222,
+     0.2967,
+     0.2283
+    ],
+    [
+     0.4674,
+     0.3625,
+     0.345
+    ],
+    [
+     0.5263,
+     0.42,
+     0.3783
+    ],
+    [
+     0.4298,
+     0.3117,
+     0.3433
+    ],
+    [
+     0.4507,
+     0.3117,
+     0.31
+    ],
+    [
+     0.3549,
+     0.2983,
+     0.2983
+    ],
+    [
+     0.5448,
+     0.3883,
+     0.3883
+    ],
+    [
+     0.5131,
+     0.3583,
+     0.3633
+    ],
+    [
+     0.5372,
+     0.36,
+     0.4117
+    ],
+    [
+     0.5591,
+     0.365,
+     0.385
+    ],
+    [
+     0.3743,
+     0.3267,
+     0.3633
+    ],
+    [
+     0.2945,
+     0.2583,
+     0.2933
+    ],
+    [
+     0.3417,
+     0.3,
+     0.2933
+    ],
+    [
+     0.4118,
+     0.355,
+     0.325
+    ],
+    [
+     0.4004,
+     0.3183,
+     0.295
+    ],
+    [
+     0.3729,
+     0.2792,
+     0.295
+    ],
+    [
+     0.2714,
+     0.2667,
+     0.265
+    ],
+    [
+     0.2412,
+     0.255,
+     0.2417
+    ],
+    [
+     0.3263,
+     0.235,
+     0.3067
+    ],
+    [
+     0.3633,
+     0.276,
+     0.2983
+    ]
+   ],
+   "Vd_full+fgap+fmom": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.102,
+     0.14,
+     0.12
+    ],
+    [
+     0.3685,
+     0.0608,
+     0.315
+    ],
+    [
+     0.3833,
+     0.12,
+     0.365
+    ],
+    [
+     -0.3021,
+     0.0633,
+     0.1883
+    ],
+    [
+     0.5598,
+     0.46,
+     0.265
+    ],
+    [
+     0.0358,
+     0.1833,
+     0.16
+    ],
+    [
+     0.0977,
+     0.145,
+     0.1333
+    ],
+    [
+     0.3662,
+     0.2417,
+     0.2567
+    ],
+    [
+     0.3929,
+     0.3175,
+     0.2967
+    ],
+    [
+     0.5357,
+     0.4333,
+     0.3767
+    ],
+    [
+     0.4175,
+     0.3117,
+     0.3233
+    ],
+    [
+     0.448,
+     0.2883,
+     0.2917
+    ],
+    [
+     0.3697,
+     0.3083,
+     0.3033
+    ],
+    [
+     0.5476,
+     0.395,
+     0.3683
+    ],
+    [
+     0.5106,
+     0.3617,
+     0.355
+    ],
+    [
+     0.5459,
+     0.3667,
+     0.4183
+    ],
+    [
+     0.5587,
+     0.3583,
+     0.3833
+    ],
+    [
+     0.3765,
+     0.3367,
+     0.3633
+    ],
+    [
+     0.2997,
+     0.27,
+     0.275
+    ],
+    [
+     0.3407,
+     0.29,
+     0.2967
+    ],
+    [
+     0.423,
+     0.3583,
+     0.3467
+    ],
+    [
+     0.4016,
+     0.3117,
+     0.2917
+    ],
+    [
+     0.372,
+     0.3092,
+     0.29
+    ],
+    [
+     0.2611,
+     0.2567,
+     0.2583
+    ],
+    [
+     0.2334,
+     0.245,
+     0.2467
+    ],
+    [
+     0.2884,
+     0.2317,
+     0.29
+    ],
+    [
+     0.361,
+     0.2743,
+     0.295
+    ]
+   ],
+   "P_primary": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.2272,
+     0.1267,
+     0.0417
+    ],
+    [
+     0.5415,
+     0.0183,
+     0.4083
+    ],
+    [
+     0.2709,
+     0.1617,
+     0.345
+    ],
+    [
+     -0.2724,
+     0.0683,
+     0.2083
+    ],
+    [
+     0.538,
+     0.3833,
+     0.2221
+    ],
+    [
+     0.0421,
+     0.1683,
+     0.1617
+    ],
+    [
+     -0.0012,
+     0.175,
+     0.115
+    ],
+    [
+     0.3648,
+     0.235,
+     0.2483
+    ],
+    [
+     0.4729,
+     0.3608,
+     0.3417
+    ],
+    [
+     0.5215,
+     0.4117,
+     0.38
+    ],
+    [
+     0.4228,
+     0.31,
+     0.335
+    ],
+    [
+     0.4541,
+     0.3017,
+     0.3033
+    ],
+    [
+     0.3516,
+     0.3,
+     0.3
+    ],
+    [
+     0.5383,
+     0.3717,
+     0.3983
+    ],
+    [
+     0.5101,
+     0.365,
+     0.3533
+    ],
+    [
+     0.5403,
+     0.36,
+     0.405
+    ],
+    [
+     0.5561,
+     0.365,
+     0.3833
+    ],
+    [
+     0.3762,
+     0.3283,
+     0.3633
+    ],
+    [
+     0.2988,
+     0.27,
+     0.2783
+    ],
+    [
+     0.3494,
+     0.3083,
+     0.3067
+    ],
+    [
+     0.4206,
+     0.36,
+     0.3233
+    ],
+    [
+     0.3921,
+     0.3167,
+     0.2883
+    ],
+    [
+     0.3684,
+     0.2942,
+     0.2883
+    ],
+    [
+     0.2752,
+     0.27,
+     0.26
+    ],
+    [
+     0.2501,
+     0.255,
+     0.2617
+    ],
+    [
+     0.2784,
+     0.2233,
+     0.275
+    ],
+    [
+     0.3266,
+     0.2577,
+     0.2967
+    ]
+   ],
+   "Pn_null": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.112,
+     0.1183,
+     0.1433
+    ],
+    [
+     0.111,
+     0.0617,
+     0.2017
+    ],
+    [
+     0.2062,
+     0.1492,
+     0.325
+    ],
+    [
+     0.0379,
+     0.1567,
+     0.3283
+    ],
+    [
+     0.5496,
+     0.4217,
+     0.2438
+    ],
+    [
+     0.0568,
+     0.1883,
+     0.1517
+    ],
+    [
+     0.1067,
+     0.1683,
+     0.13
+    ],
+    [
+     0.2337,
+     0.2633,
+     0.2583
+    ],
+    [
+     0.4692,
+     0.3592,
+     0.3267
+    ],
+    [
+     0.5381,
+     0.44,
+     0.375
+    ],
+    [
+     0.4218,
+     0.31,
+     0.325
+    ],
+    [
+     0.4382,
+     0.285,
+     0.2883
+    ],
+    [
+     0.3669,
+     0.31,
+     0.3083
+    ],
+    [
+     0.5458,
+     0.3933,
+     0.365
+    ],
+    [
+     0.5129,
+     0.3517,
+     0.3617
+    ],
+    [
+     0.5472,
+     0.3783,
+     0.4233
+    ],
+    [
+     0.5559,
+     0.3667,
+     0.38
+    ],
+    [
+     0.372,
+     0.3333,
+     0.3567
+    ],
+    [
+     0.3001,
+     0.2683,
+     0.2883
+    ],
+    [
+     0.3374,
+     0.27,
+     0.2983
+    ],
+    [
+     0.4048,
+     0.3417,
+     0.32
+    ],
+    [
+     0.4027,
+     0.3133,
+     0.285
+    ],
+    [
+     0.3739,
+     0.3042,
+     0.28
+    ],
+    [
+     0.2578,
+     0.2533,
+     0.2683
+    ],
+    [
+     0.2228,
+     0.24,
+     0.2617
+    ],
+    [
+     0.2915,
+     0.2267,
+     0.2933
+    ],
+    [
+     0.3625,
+     0.2843,
+     0.2967
+    ]
+   ],
+   "Vm_V1+grnbar_mom": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.2363,
+     0.1183,
+     0.0367
+    ],
+    [
+     0.5419,
+     0.0133,
+     0.4167
+    ],
+    [
+     0.2513,
+     0.1567,
+     0.3467
+    ],
+    [
+     -0.2617,
+     0.0617,
+     0.2183
+    ],
+    [
+     0.5355,
+     0.39,
+     0.2238
+    ],
+    [
+     0.0492,
+     0.17,
+     0.1583
+    ],
+    [
+     0.002,
+     0.1767,
+     0.115
+    ],
+    [
+     0.3836,
+     0.2667,
+     0.2717
+    ],
+    [
+     0.4703,
+     0.3625,
+     0.3483
+    ],
+    [
+     0.5167,
+     0.41,
+     0.3833
+    ],
+    [
+     0.427,
+     0.31,
+     0.3417
+    ],
+    [
+     0.4552,
+     0.3083,
+     0.2967
+    ],
+    [
+     0.3443,
+     0.3017,
+     0.2883
+    ],
+    [
+     0.5396,
+     0.3783,
+     0.395
+    ],
+    [
+     0.5107,
+     0.3667,
+     0.3583
+    ],
+    [
+     0.5382,
+     0.3583,
+     0.4133
+    ],
+    [
+     0.5583,
+     0.3667,
+     0.385
+    ],
+    [
+     0.3747,
+     0.325,
+     0.3583
+    ],
+    [
+     0.2998,
+     0.27,
+     0.2783
+    ],
+    [
+     0.3516,
+     0.3067,
+     0.305
+    ],
+    [
+     0.4218,
+     0.3683,
+     0.3233
+    ],
+    [
+     0.3854,
+     0.315,
+     0.285
+    ],
+    [
+     0.3695,
+     0.2958,
+     0.2917
+    ],
+    [
+     0.2554,
+     0.2583,
+     0.2567
+    ],
+    [
+     0.2246,
+     0.2267,
+     0.2517
+    ],
+    [
+     0.3089,
+     0.2367,
+     0.285
+    ],
+    [
+     0.3375,
+     0.2493,
+     0.2933
+    ]
+   ],
+   "Vauto_V1|V2|P": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.2258,
+     0.1183,
+     0.0417
+    ],
+    [
+     0.5415,
+     0.0183,
+     0.4083
+    ],
+    [
+     0.2709,
+     0.1617,
+     0.345
+    ],
+    [
+     -0.2724,
+     0.0683,
+     0.2083
+    ],
+    [
+     0.5434,
+     0.3933,
+     0.2304
+    ],
+    [
+     0.0516,
+     0.1717,
+     0.1617
+    ],
+    [
+     0.0002,
+     0.1783,
+     0.11
+    ],
+    [
+     0.3648,
+     0.235,
+     0.2483
+    ],
+    [
+     0.4729,
+     0.3608,
+     0.3417
+    ],
+    [
+     0.5215,
+     0.4117,
+     0.38
+    ],
+    [
+     0.4228,
+     0.31,
+     0.335
+    ],
+    [
+     0.4541,
+     0.3017,
+     0.3033
+    ],
+    [
+     0.3516,
+     0.3,
+     0.3
+    ],
+    [
+     0.5383,
+     0.3717,
+     0.3983
+    ],
+    [
+     0.5101,
+     0.365,
+     0.3533
+    ],
+    [
+     0.5422,
+     0.3633,
+     0.4083
+    ],
+    [
+     0.559,
+     0.365,
+     0.3833
+    ],
+    [
+     0.3752,
+     0.3283,
+     0.36
+    ],
+    [
+     0.3003,
+     0.2733,
+     0.2783
+    ],
+    [
+     0.3496,
+     0.31,
+     0.3033
+    ],
+    [
+     0.4191,
+     0.36,
+     0.3317
+    ],
+    [
+     0.3908,
+     0.315,
+     0.2867
+    ],
+    [
+     0.3727,
+     0.2725,
+     0.2917
+    ],
+    [
+     0.2752,
+     0.27,
+     0.26
+    ],
+    [
+     0.2501,
+     0.255,
+     0.2617
+    ],
+    [
+     0.2784,
+     0.2233,
+     0.275
+    ],
+    [
+     0.3266,
+     0.2577,
+     0.2967
+    ]
+   ],
+   "trend": [
+    [
+     -0.2903,
+     0.0976,
+     0.1617
+    ],
+    [
+     0.1322,
+     0.1933,
+     0.1217
+    ],
+    [
+     -0.3202,
+     0.0867,
+     0.0733
+    ],
+    [
+     0.2664,
+     0.1333,
+     0.265
+    ],
+    [
+     0.2843,
+     0.1067,
+     0.295
+    ],
+    [
+     -0.4496,
+     0.0583,
+     0.0933
+    ],
+    [
+     0.6197,
+     0.4967,
+     0.2483
+    ],
+    [
+     0.221,
+     0.205,
+     0.1033
+    ],
+    [
+     -0.0124,
+     0.085,
+     0.0567
+    ],
+    [
+     -0.3846,
+     0.0683,
+     0.06
+    ],
+    [
+     -0.3666,
+     0.055,
+     0.0517
+    ],
+    [
+     -0.3599,
+     0.045,
+     0.0483
+    ],
+    [
+     -0.2257,
+     0.105,
+     0.0867
+    ],
+    [
+     -0.1351,
+     0.0917,
+     0.0833
+    ],
+    [
+     -0.3854,
+     0.0533,
+     0.0383
+    ],
+    [
+     -0.4286,
+     0.0283,
+     0.0283
+    ],
+    [
+     -0.3678,
+     0.05,
+     0.0317
+    ],
+    [
+     -0.3436,
+     0.0333,
+     0.04
+    ],
+    [
+     -0.1871,
+     0.0633,
+     0.0483
+    ],
+    [
+     -0.2119,
+     0.055,
+     0.0517
+    ],
+    [
+     -0.1066,
+     0.11,
+     0.0783
+    ],
+    [
+     -0.2297,
+     0.1133,
+     0.1033
+    ],
+    [
+     -0.1696,
+     0.13,
+     0.0667
+    ],
+    [
+     -0.135,
+     0.1367,
+     0.095
+    ],
+    [
+     -0.0607,
+     0.1417,
+     0.1217
+    ],
+    [
+     -0.1747,
+     0.1317,
+     0.0967
+    ],
+    [
+     -0.1835,
+     0.0933,
+     0.0792
+    ],
+    [
+     -0.3315,
+     0.0575,
+     0.0617
+    ],
+    [
+     -0.3868,
+     0.02,
+     0.0333
+    ]
+   ],
+   "level_obs(DistBridge nosb l1)": [
+    [
+     -0.2912,
+     0.086,
+     0.1583
+    ],
+    [
+     -0.0776,
+     0.1533,
+     0.205
+    ],
+    [
+     0.2229,
+     0.215,
+     0.0833
+    ],
+    [
+     -0.1974,
+     0.1425,
+     0.185
+    ],
+    [
+     -0.3416,
+     0.1033,
+     0.0933
+    ],
+    [
+     0.262,
+     0.0983,
+     0.1633
+    ],
+    [
+     -0.3841,
+     0.0983,
+     0.0983
+    ],
+    [
+     -0.2939,
+     0.1083,
+     0.1117
+    ],
+    [
+     0.0167,
+     0.1283,
+     0.14
+    ],
+    [
+     0.2482,
+     0.2133,
+     0.18
+    ],
+    [
+     0.179,
+     0.2292,
+     0.1983
+    ],
+    [
+     0.2749,
+     0.235,
+     0.1917
+    ],
+    [
+     0.2223,
+     0.2433,
+     0.3017
+    ],
+    [
+     0.128,
+     0.24,
+     0.2683
+    ],
+    [
+     0.3841,
+     0.32,
+     0.36
+    ],
+    [
+     0.423,
+     0.36,
+     0.4117
+    ],
+    [
+     0.3627,
+     0.3267,
+     0.3433
+    ],
+    [
+     0.3365,
+     0.3183,
+     0.3717
+    ],
+    [
+     0.1645,
+     0.2983,
+     0.31
+    ],
+    [
+     0.19,
+     0.3033,
+     0.3233
+    ],
+    [
+     0.1012,
+     0.21,
+     0.245
+    ],
+    [
+     0.2273,
+     0.2617,
+     0.295
+    ],
+    [
+     0.1643,
+     0.2533,
+     0.2817
+    ],
+    [
+     0.1377,
+     0.235,
+     0.2333
+    ],
+    [
+     0.062,
+     0.2225,
+     0.215
+    ],
+    [
+     0.1744,
+     0.2067,
+     0.2617
+    ],
+    [
+     0.1807,
+     0.2283,
+     0.215
+    ],
+    [
+     0.3298,
+     0.235,
+     0.3033
+    ],
+    [
+     0.3861,
+     0.3013,
+     0.3333
+    ]
+   ]
+  },
+  "seconds": 243
+ }
+}

@@ -1,0 +1,49 @@
+
+=== fold t=1: knots [0.0, 2.0, 4.0, 6.0] -> refit knots [0.0, 2.0, 4.0, 5.0, 6.0] ===
+  seed 0  base      ED 0.2762  mean_err 0.997   (18s)
+  seed 0  refit     ED 0.2629  mean_err 0.972   (25s)
+  seed 0  ft        ED 0.2726  mean_err 0.989   (65s)
+  seed 0  ft_refit  ED 0.2595  mean_err 0.966   (133s)
+  seed 1  base      ED 0.2801  mean_err 1.001   (156s)
+  seed 1  refit     ED 0.2667  mean_err 0.977   (168s)
+  seed 1  ft        ED 0.2563  mean_err 0.957   (224s)
+  seed 1  ft_refit  ED 0.2608  mean_err 0.968   (305s)
+  seed 2  base      ED 0.2769  mean_err 0.999   (317s)
+  seed 2  refit     ED 0.2642  mean_err 0.977   (320s)
+  seed 2  ft        ED 0.2678  mean_err 0.982   (403s)
+  seed 2  ft_refit  ED 0.2596  mean_err 0.967   (466s)
+
+=== fold t=5: knots [0.0, 2.0, 4.0, 6.0] -> refit knots [0.0, 1.0, 2.0, 4.0, 6.0] ===
+  seed 0  base      ED 0.4177  mean_err 1.017   (479s)
+  seed 0  refit     ED 0.4017  mean_err 0.993   (484s)
+  seed 0  ft        ED 0.4262  mean_err 1.028   (528s)
+  seed 0  ft_refit  ED 0.3846  mean_err 0.971   (594s)
+  seed 1  base      ED 0.4177  mean_err 1.018   (606s)
+  seed 1  refit     ED 0.4024  mean_err 0.997   (609s)
+  seed 1  ft        ED 0.4219  mean_err 1.023   (659s)
+  seed 1  ft_refit  ED 0.3928  mean_err 0.983   (721s)
+  seed 2  base      ED 0.4205  mean_err 1.021   (735s)
+  seed 2  refit     ED 0.4006  mean_err 0.993   (740s)
+  seed 2  ft        ED 0.4134  mean_err 1.012   (787s)
+  seed 2  ft_refit  ED 0.3988  mean_err 0.991   (853s)
+
+         energy_distance         mean_error        
+fold                 1.0     5.0        1.0     5.0
+arm                                                
+base              0.2777  0.4186     0.9991  1.0186
+ft                0.2656  0.4205     0.9763  1.0208
+ft_refit          0.2600  0.3921     0.9670  0.9818
+refit             0.2646  0.4016     0.9755  0.9942
+
+         energy_distance         mean_error        
+                    mean     std       mean     std
+arm                                                
+base              0.3482  0.0772     1.0089  0.0109
+ft                0.3430  0.0851     0.9986  0.0272
+ft_refit          0.3260  0.0725     0.9744  0.0103
+refit             0.3331  0.0750     0.9848  0.0105
+
+paired change versus base (negative = better):
+  refit     -0.0151  sd 0.0027  n 6
+  ft        -0.0051  sd 0.0113  n 6
+  ft_refit  -0.0222  sd 0.0062  n 6

@@ -1,0 +1,176 @@
+{
+ "l1": {
+  "sink_norm|lam0.1": {
+   "mean_dJ_over_cells": -0.0389,
+   "cells_with_mean_dJ>0": "6/24",
+   "pooled_wins": 96,
+   "pooled_losses": 192,
+   "pooled_sign_p": 0.0
+  },
+  "sink_norm|lam0.25": {
+   "mean_dJ_over_cells": -0.0338,
+   "cells_with_mean_dJ>0": "8/24",
+   "pooled_wins": 112,
+   "pooled_losses": 176,
+   "pooled_sign_p": 0.0002
+  },
+  "sink_norm|lam0.5": {
+   "mean_dJ_over_cells": -0.0179,
+   "cells_with_mean_dJ>0": "13/24",
+   "pooled_wins": 136,
+   "pooled_losses": 152,
+   "pooled_sign_p": 0.3768
+  },
+  "sink_norm|lam1": {
+   "mean_dJ_over_cells": -0.0006,
+   "cells_with_mean_dJ>0": "13/24",
+   "pooled_wins": 138,
+   "pooled_losses": 150,
+   "pooled_sign_p": 0.5169
+  },
+  "sink_abs|lam0.1": {
+   "mean_dJ_over_cells": -0.039,
+   "cells_with_mean_dJ>0": "8/24",
+   "pooled_wins": 111,
+   "pooled_losses": 177,
+   "pooled_sign_p": 0.0001
+  },
+  "sink_abs|lam0.25": {
+   "mean_dJ_over_cells": -0.0387,
+   "cells_with_mean_dJ>0": "6/24",
+   "pooled_wins": 117,
+   "pooled_losses": 171,
+   "pooled_sign_p": 0.0017
+  },
+  "sink_abs|lam0.5": {
+   "mean_dJ_over_cells": -0.0316,
+   "cells_with_mean_dJ>0": "9/24",
+   "pooled_wins": 125,
+   "pooled_losses": 163,
+   "pooled_sign_p": 0.0291
+  },
+  "sink_abs|lam1": {
+   "mean_dJ_over_cells": -0.0289,
+   "cells_with_mean_dJ>0": "7/24",
+   "pooled_wins": 119,
+   "pooled_losses": 169,
+   "pooled_sign_p": 0.0038
+  }
+ },
+ "linear": {
+  "sink_norm|lam0.1": {
+   "mean_dJ_over_cells": -0.0954,
+   "cells_with_mean_dJ>0": "4/24",
+   "pooled_wins": 65,
+   "pooled_losses": 223,
+   "pooled_sign_p": 0.0
+  },
+  "sink_norm|lam0.25": {
+   "mean_dJ_over_cells": -0.0843,
+   "cells_with_mean_dJ>0": "5/24",
+   "pooled_wins": 80,
+   "pooled_losses": 208,
+   "pooled_sign_p": 0.0
+  },
+  "sink_norm|lam0.5": {
+   "mean_dJ_over_cells": -0.0536,
+   "cells_with_mean_dJ>0": "9/24",
+   "pooled_wins": 109,
+   "pooled_losses": 179,
+   "pooled_sign_p": 0.0
+  },
+  "sink_norm|lam1": {
+   "mean_dJ_over_cells": -0.0107,
+   "cells_with_mean_dJ>0": "7/24",
+   "pooled_wins": 125,
+   "pooled_losses": 163,
+   "pooled_sign_p": 0.0291
+  },
+  "sink_abs|lam0.1": {
+   "mean_dJ_over_cells": -0.0993,
+   "cells_with_mean_dJ>0": "5/24",
+   "pooled_wins": 62,
+   "pooled_losses": 226,
+   "pooled_sign_p": 0.0
+  },
+  "sink_abs|lam0.25": {
+   "mean_dJ_over_cells": -0.0925,
+   "cells_with_mean_dJ>0": "5/24",
+   "pooled_wins": 82,
+   "pooled_losses": 206,
+   "pooled_sign_p": 0.0
+  },
+  "sink_abs|lam0.5": {
+   "mean_dJ_over_cells": -0.0748,
+   "cells_with_mean_dJ>0": "7/24",
+   "pooled_wins": 101,
+   "pooled_losses": 187,
+   "pooled_sign_p": 0.0
+  },
+  "sink_abs|lam1": {
+   "mean_dJ_over_cells": -0.0605,
+   "cells_with_mean_dJ>0": "6/24",
+   "pooled_wins": 118,
+   "pooled_losses": 170,
+   "pooled_sign_p": 0.0026
+  }
+ },
+ "orig": {
+  "sink_norm|lam0.1": {
+   "mean_dJ_over_cells": 0.0485,
+   "cells_with_mean_dJ>0": "18/24",
+   "pooled_wins": 194,
+   "pooled_losses": 94,
+   "pooled_sign_p": 0.0
+  },
+  "sink_norm|lam0.25": {
+   "mean_dJ_over_cells": 0.0454,
+   "cells_with_mean_dJ>0": "18/24",
+   "pooled_wins": 211,
+   "pooled_losses": 77,
+   "pooled_sign_p": 0.0
+  },
+  "sink_norm|lam0.5": {
+   "mean_dJ_over_cells": 0.032,
+   "cells_with_mean_dJ>0": "19/24",
+   "pooled_wins": 195,
+   "pooled_losses": 93,
+   "pooled_sign_p": 0.0
+  },
+  "sink_norm|lam1": {
+   "mean_dJ_over_cells": 0.0074,
+   "cells_with_mean_dJ>0": "22/24",
+   "pooled_wins": 187,
+   "pooled_losses": 101,
+   "pooled_sign_p": 0.0
+  },
+  "sink_abs|lam0.1": {
+   "mean_dJ_over_cells": 0.0516,
+   "cells_with_mean_dJ>0": "18/24",
+   "pooled_wins": 208,
+   "pooled_losses": 80,
+   "pooled_sign_p": 0.0
+  },
+  "sink_abs|lam0.25": {
+   "mean_dJ_over_cells": 0.0464,
+   "cells_with_mean_dJ>0": "19/24",
+   "pooled_wins": 206,
+   "pooled_losses": 82,
+   "pooled_sign_p": 0.0
+  },
+  "sink_abs|lam0.5": {
+   "mean_dJ_over_cells": 0.0329,
+   "cells_with_mean_dJ>0": "20/24",
+   "pooled_wins": 195,
+   "pooled_losses": 93,
+   "pooled_sign_p": 0.0
+  },
+  "sink_abs|lam1": {
+   "mean_dJ_over_cells": 0.0247,
+   "cells_with_mean_dJ>0": "20/24",
+   "pooled_wins": 186,
+   "pooled_losses": 102,
+   "pooled_sign_p": 0.0
+  }
+ }
+}

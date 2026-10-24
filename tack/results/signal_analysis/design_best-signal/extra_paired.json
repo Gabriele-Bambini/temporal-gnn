@@ -1,0 +1,1122 @@
+{
+ "pancreas-human|orig|i>=2|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0225,
+   "better": 11,
+   "worse": 1,
+   "wilcoxon_p": 0.0049
+  },
+  "J": {
+   "mean_delta": 0.0699,
+   "better": 11,
+   "worse": 1,
+   "wilcoxon_p": 0.001
+  }
+ },
+ "pancreas-human|orig|i>=2|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0263,
+   "better": 11,
+   "worse": 1,
+   "wilcoxon_p": 0.001
+  },
+  "J": {
+   "mean_delta": 0.0733,
+   "better": 12,
+   "worse": 0,
+   "wilcoxon_p": 0.0005
+  }
+ },
+ "pancreas-human|orig|i>=2|full vs trend": {
+  "pcc": {
+   "mean_delta": 0.9228,
+   "better": 12,
+   "worse": 0,
+   "wilcoxon_p": 0.0005
+  },
+  "J": {
+   "mean_delta": 1.6565,
+   "better": 12,
+   "worse": 0,
+   "wilcoxon_p": 0.0005
+  }
+ },
+ "pancreas-human|orig|i>=2|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 0.9266,
+   "better": 12,
+   "worse": 0,
+   "wilcoxon_p": 0.0005
+  },
+  "J": {
+   "mean_delta": 1.6599,
+   "better": 12,
+   "worse": 0,
+   "wilcoxon_p": 0.0005
+  }
+ },
+ "pancreas-human|orig|i>=2|full+grn vs full": {
+  "pcc": {
+   "mean_delta": 0.0038,
+   "better": 7,
+   "worse": 4,
+   "wilcoxon_p": 0.2783
+  },
+  "J": {
+   "mean_delta": 0.0034,
+   "better": 6,
+   "worse": 6,
+   "wilcoxon_p": 0.4697
+  }
+ },
+ "pancreas-human|orig|i>=2|full+ot vs full": {
+  "pcc": {
+   "mean_delta": -0.0103,
+   "better": 8,
+   "worse": 3,
+   "wilcoxon_p": 0.6221
+  },
+  "J": {
+   "mean_delta": -0.0175,
+   "better": 3,
+   "worse": 9,
+   "wilcoxon_p": 0.2661
+  }
+ },
+ "pancreas-human|orig|i>=2|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": 0.0005,
+   "better": 4,
+   "worse": 8,
+   "wilcoxon_p": 0.3921
+  },
+  "J": {
+   "mean_delta": 0.0001,
+   "better": 5,
+   "worse": 7,
+   "wilcoxon_p": 0.8057
+  }
+ },
+ "pancreas-human|orig|i>=3|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0235,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.0068
+  },
+  "J": {
+   "mean_delta": 0.0714,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.002
+  }
+ },
+ "pancreas-human|orig|i>=3|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0255,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.002
+  },
+  "J": {
+   "mean_delta": 0.0731,
+   "better": 11,
+   "worse": 0,
+   "wilcoxon_p": 0.001
+  }
+ },
+ "pancreas-human|orig|i>=3|full vs trend": {
+  "pcc": {
+   "mean_delta": 0.9298,
+   "better": 11,
+   "worse": 0,
+   "wilcoxon_p": 0.001
+  },
+  "J": {
+   "mean_delta": 1.6835,
+   "better": 11,
+   "worse": 0,
+   "wilcoxon_p": 0.001
+  }
+ },
+ "pancreas-human|orig|i>=3|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 0.9318,
+   "better": 11,
+   "worse": 0,
+   "wilcoxon_p": 0.001
+  },
+  "J": {
+   "mean_delta": 1.6853,
+   "better": 11,
+   "worse": 0,
+   "wilcoxon_p": 0.001
+  }
+ },
+ "pancreas-human|orig|i>=3|full+grn vs full": {
+  "pcc": {
+   "mean_delta": 0.002,
+   "better": 6,
+   "worse": 4,
+   "wilcoxon_p": 0.4922
+  },
+  "J": {
+   "mean_delta": 0.0017,
+   "better": 5,
+   "worse": 6,
+   "wilcoxon_p": 0.7646
+  }
+ },
+ "pancreas-human|orig|i>=3|full+ot vs full": {
+  "pcc": {
+   "mean_delta": 0.001,
+   "better": 8,
+   "worse": 2,
+   "wilcoxon_p": 0.2637
+  },
+  "J": {
+   "mean_delta": 0.0018,
+   "better": 3,
+   "worse": 8,
+   "wilcoxon_p": 0.4648
+  }
+ },
+ "pancreas-human|orig|i>=3|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": 0.0009,
+   "better": 4,
+   "worse": 7,
+   "wilcoxon_p": 0.5938
+  },
+  "J": {
+   "mean_delta": 0.0006,
+   "better": 5,
+   "worse": 6,
+   "wilcoxon_p": 0.915
+  }
+ },
+ "pancreas-human|l1|i>=2|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0368,
+   "better": 10,
+   "worse": 2,
+   "wilcoxon_p": 0.0122
+  },
+  "J": {
+   "mean_delta": 0.0607,
+   "better": 10,
+   "worse": 2,
+   "wilcoxon_p": 0.0034
+  }
+ },
+ "pancreas-human|l1|i>=2|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0561,
+   "better": 10,
+   "worse": 2,
+   "wilcoxon_p": 0.0024
+  },
+  "J": {
+   "mean_delta": 0.1002,
+   "better": 11,
+   "worse": 1,
+   "wilcoxon_p": 0.0015
+  }
+ },
+ "pancreas-human|l1|i>=2|full vs trend": {
+  "pcc": {
+   "mean_delta": 0.1733,
+   "better": 10,
+   "worse": 2,
+   "wilcoxon_p": 0.0024
+  },
+  "J": {
+   "mean_delta": 0.2409,
+   "better": 11,
+   "worse": 1,
+   "wilcoxon_p": 0.0049
+  }
+ },
+ "pancreas-human|l1|i>=2|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 0.1926,
+   "better": 11,
+   "worse": 1,
+   "wilcoxon_p": 0.001
+  },
+  "J": {
+   "mean_delta": 0.2804,
+   "better": 11,
+   "worse": 1,
+   "wilcoxon_p": 0.0024
+  }
+ },
+ "pancreas-human|l1|i>=2|full+grn vs full": {
+  "pcc": {
+   "mean_delta": 0.0193,
+   "better": 8,
+   "worse": 4,
+   "wilcoxon_p": 0.2036
+  },
+  "J": {
+   "mean_delta": 0.0395,
+   "better": 8,
+   "worse": 4,
+   "wilcoxon_p": 0.2036
+  }
+ },
+ "pancreas-human|l1|i>=2|full+ot vs full": {
+  "pcc": {
+   "mean_delta": 0.0028,
+   "better": 6,
+   "worse": 6,
+   "wilcoxon_p": 1.0
+  },
+  "J": {
+   "mean_delta": 0.0129,
+   "better": 5,
+   "worse": 7,
+   "wilcoxon_p": 0.6772
+  }
+ },
+ "pancreas-human|l1|i>=2|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": 0.0189,
+   "better": 8,
+   "worse": 4,
+   "wilcoxon_p": 0.2036
+  },
+  "J": {
+   "mean_delta": 0.0346,
+   "better": 7,
+   "worse": 5,
+   "wilcoxon_p": 0.2661
+  }
+ },
+ "pancreas-human|l1|i>=3|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0426,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.0029
+  },
+  "J": {
+   "mean_delta": 0.0672,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.002
+  }
+ },
+ "pancreas-human|l1|i>=3|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0615,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.002
+  },
+  "J": {
+   "mean_delta": 0.1092,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.002
+  }
+ },
+ "pancreas-human|l1|i>=3|full vs trend": {
+  "pcc": {
+   "mean_delta": 0.1866,
+   "better": 9,
+   "worse": 2,
+   "wilcoxon_p": 0.0049
+  },
+  "J": {
+   "mean_delta": 0.2583,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.0068
+  }
+ },
+ "pancreas-human|l1|i>=3|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 0.2056,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.002
+  },
+  "J": {
+   "mean_delta": 0.3004,
+   "better": 10,
+   "worse": 1,
+   "wilcoxon_p": 0.0029
+  }
+ },
+ "pancreas-human|l1|i>=3|full+grn vs full": {
+  "pcc": {
+   "mean_delta": 0.0189,
+   "better": 7,
+   "worse": 4,
+   "wilcoxon_p": 0.3203
+  },
+  "J": {
+   "mean_delta": 0.042,
+   "better": 7,
+   "worse": 4,
+   "wilcoxon_p": 0.2402
+  }
+ },
+ "pancreas-human|l1|i>=3|full+ot vs full": {
+  "pcc": {
+   "mean_delta": 0.0042,
+   "better": 6,
+   "worse": 5,
+   "wilcoxon_p": 0.8311
+  },
+  "J": {
+   "mean_delta": 0.0152,
+   "better": 5,
+   "worse": 6,
+   "wilcoxon_p": 0.5195
+  }
+ },
+ "pancreas-human|l1|i>=3|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": 0.0187,
+   "better": 7,
+   "worse": 4,
+   "wilcoxon_p": 0.3203
+  },
+  "J": {
+   "mean_delta": 0.0371,
+   "better": 6,
+   "worse": 5,
+   "wilcoxon_p": 0.3203
+  }
+ },
+ "pancreas-human|linear|i>=2|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.161,
+   "better": 8,
+   "worse": 4,
+   "wilcoxon_p": 0.1763
+  },
+  "J": {
+   "mean_delta": 0.1363,
+   "better": 6,
+   "worse": 6,
+   "wilcoxon_p": 0.9697
+  }
+ },
+ "pancreas-human|linear|i>=2|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0624,
+   "better": 5,
+   "worse": 7,
+   "wilcoxon_p": 0.6221
+  },
+  "J": {
+   "mean_delta": 0.0246,
+   "better": 4,
+   "worse": 8,
+   "wilcoxon_p": 0.2661
+  }
+ },
+ "pancreas-human|linear|i>=2|full vs trend": {
+  "pcc": {
+   "mean_delta": -0.1263,
+   "better": 2,
+   "worse": 10,
+   "wilcoxon_p": 0.0068
+  },
+  "J": {
+   "mean_delta": -0.2475,
+   "better": 2,
+   "worse": 10,
+   "wilcoxon_p": 0.0034
+  }
+ },
+ "pancreas-human|linear|i>=2|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": -0.2249,
+   "better": 2,
+   "worse": 10,
+   "wilcoxon_p": 0.0024
+  },
+  "J": {
+   "mean_delta": -0.3592,
+   "better": 2,
+   "worse": 10,
+   "wilcoxon_p": 0.0024
+  }
+ },
+ "pancreas-human|linear|i>=2|full+grn vs full": {
+  "pcc": {
+   "mean_delta": -0.0987,
+   "better": 1,
+   "worse": 11,
+   "wilcoxon_p": 0.0024
+  },
+  "J": {
+   "mean_delta": -0.1117,
+   "better": 2,
+   "worse": 10,
+   "wilcoxon_p": 0.0161
+  }
+ },
+ "pancreas-human|linear|i>=2|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": -0.0925,
+   "better": 4,
+   "worse": 8,
+   "wilcoxon_p": 0.0771
+  },
+  "J": {
+   "mean_delta": -0.1226,
+   "better": 5,
+   "worse": 7,
+   "wilcoxon_p": 0.2334
+  }
+ },
+ "pancreas-human|linear|i>=3|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.1688,
+   "better": 7,
+   "worse": 4,
+   "wilcoxon_p": 0.2783
+  },
+  "J": {
+   "mean_delta": 0.132,
+   "better": 5,
+   "worse": 6,
+   "wilcoxon_p": 0.9658
+  }
+ },
+ "pancreas-human|linear|i>=3|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.1072,
+   "better": 5,
+   "worse": 6,
+   "wilcoxon_p": 0.8984
+  },
+  "J": {
+   "mean_delta": 0.0639,
+   "better": 4,
+   "worse": 7,
+   "wilcoxon_p": 0.4131
+  }
+ },
+ "pancreas-human|linear|i>=3|full vs trend": {
+  "pcc": {
+   "mean_delta": -0.1337,
+   "better": 2,
+   "worse": 9,
+   "wilcoxon_p": 0.0098
+  },
+  "J": {
+   "mean_delta": -0.2657,
+   "better": 2,
+   "worse": 9,
+   "wilcoxon_p": 0.0049
+  }
+ },
+ "pancreas-human|linear|i>=3|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": -0.1954,
+   "better": 2,
+   "worse": 9,
+   "wilcoxon_p": 0.0049
+  },
+  "J": {
+   "mean_delta": -0.3338,
+   "better": 2,
+   "worse": 9,
+   "wilcoxon_p": 0.0049
+  }
+ },
+ "pancreas-human|linear|i>=3|full+grn vs full": {
+  "pcc": {
+   "mean_delta": -0.0616,
+   "better": 1,
+   "worse": 10,
+   "wilcoxon_p": 0.0049
+  },
+  "J": {
+   "mean_delta": -0.0681,
+   "better": 2,
+   "worse": 9,
+   "wilcoxon_p": 0.0322
+  }
+ },
+ "pancreas-human|linear|i>=3|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": -0.0546,
+   "better": 4,
+   "worse": 7,
+   "wilcoxon_p": 0.1475
+  },
+  "J": {
+   "mean_delta": -0.079,
+   "better": 5,
+   "worse": 6,
+   "wilcoxon_p": 0.4131
+  }
+ },
+ "gastrulation-human|orig|i>=2|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.035,
+   "better": 27,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 0.1011,
+   "better": 27,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|orig|i>=2|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0345,
+   "better": 27,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 0.1001,
+   "better": 27,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|orig|i>=2|full vs trend": {
+  "pcc": {
+   "mean_delta": 1.0992,
+   "better": 27,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 2.0727,
+   "better": 27,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|orig|i>=2|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 1.0987,
+   "better": 27,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 2.0717,
+   "better": 27,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|orig|i>=2|full+grn vs full": {
+  "pcc": {
+   "mean_delta": -0.0005,
+   "better": 12,
+   "worse": 15,
+   "wilcoxon_p": 0.81
+  },
+  "J": {
+   "mean_delta": -0.001,
+   "better": 11,
+   "worse": 16,
+   "wilcoxon_p": 0.6394
+  }
+ },
+ "gastrulation-human|orig|i>=2|full+ot vs full": {
+  "pcc": {
+   "mean_delta": -0.0008,
+   "better": 8,
+   "worse": 17,
+   "wilcoxon_p": 0.2523
+  },
+  "J": {
+   "mean_delta": -0.0016,
+   "better": 12,
+   "worse": 15,
+   "wilcoxon_p": 0.3129
+  }
+ },
+ "gastrulation-human|orig|i>=2|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": -0.0001,
+   "better": 10,
+   "worse": 14,
+   "wilcoxon_p": 0.4149
+  },
+  "J": {
+   "mean_delta": -0.0007,
+   "better": 9,
+   "worse": 17,
+   "wilcoxon_p": 0.0841
+  }
+ },
+ "gastrulation-human|orig|i>=3|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0356,
+   "better": 26,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 0.1039,
+   "better": 26,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|orig|i>=3|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0352,
+   "better": 26,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 0.1029,
+   "better": 26,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|orig|i>=3|full vs trend": {
+  "pcc": {
+   "mean_delta": 1.1098,
+   "better": 26,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 2.1007,
+   "better": 26,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|orig|i>=3|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 1.1094,
+   "better": 26,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 2.0996,
+   "better": 26,
+   "worse": 0,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|orig|i>=3|full+grn vs full": {
+  "pcc": {
+   "mean_delta": -0.0004,
+   "better": 12,
+   "worse": 14,
+   "wilcoxon_p": 0.9493
+  },
+  "J": {
+   "mean_delta": -0.0011,
+   "better": 10,
+   "worse": 16,
+   "wilcoxon_p": 0.5938
+  }
+ },
+ "gastrulation-human|orig|i>=3|full+ot vs full": {
+  "pcc": {
+   "mean_delta": -0.0008,
+   "better": 8,
+   "worse": 16,
+   "wilcoxon_p": 0.36
+  },
+  "J": {
+   "mean_delta": -0.0017,
+   "better": 12,
+   "worse": 14,
+   "wilcoxon_p": 0.3473
+  }
+ },
+ "gastrulation-human|orig|i>=3|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": -0.0002,
+   "better": 9,
+   "worse": 14,
+   "wilcoxon_p": 0.2471
+  },
+  "J": {
+   "mean_delta": -0.0007,
+   "better": 9,
+   "worse": 16,
+   "wilcoxon_p": 0.1035
+  }
+ },
+ "gastrulation-human|l1|i>=2|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0134,
+   "better": 17,
+   "worse": 10,
+   "wilcoxon_p": 0.2109
+  },
+  "J": {
+   "mean_delta": 0.0176,
+   "better": 16,
+   "worse": 11,
+   "wilcoxon_p": 0.4846
+  }
+ },
+ "gastrulation-human|l1|i>=2|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0128,
+   "better": 18,
+   "worse": 9,
+   "wilcoxon_p": 0.1349
+  },
+  "J": {
+   "mean_delta": 0.0156,
+   "better": 18,
+   "worse": 9,
+   "wilcoxon_p": 0.2483
+  }
+ },
+ "gastrulation-human|l1|i>=2|full vs trend": {
+  "pcc": {
+   "mean_delta": 0.5144,
+   "better": 25,
+   "worse": 2,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 0.8878,
+   "better": 25,
+   "worse": 2,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|l1|i>=2|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 0.5138,
+   "better": 24,
+   "worse": 3,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 0.8858,
+   "better": 25,
+   "worse": 2,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|l1|i>=2|full+grn vs full": {
+  "pcc": {
+   "mean_delta": -0.0006,
+   "better": 13,
+   "worse": 13,
+   "wilcoxon_p": 0.6938
+  },
+  "J": {
+   "mean_delta": -0.002,
+   "better": 11,
+   "worse": 16,
+   "wilcoxon_p": 0.546
+  }
+ },
+ "gastrulation-human|l1|i>=2|full+ot vs full": {
+  "pcc": {
+   "mean_delta": -0.0015,
+   "better": 18,
+   "worse": 9,
+   "wilcoxon_p": 0.1528
+  },
+  "J": {
+   "mean_delta": 0.0009,
+   "better": 18,
+   "worse": 9,
+   "wilcoxon_p": 0.1414
+  }
+ },
+ "gastrulation-human|l1|i>=2|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": 0.0117,
+   "better": 13,
+   "worse": 14,
+   "wilcoxon_p": 0.5619
+  },
+  "J": {
+   "mean_delta": 0.0116,
+   "better": 10,
+   "worse": 17,
+   "wilcoxon_p": 0.8223
+  }
+ },
+ "gastrulation-human|l1|i>=3|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0026,
+   "better": 16,
+   "worse": 10,
+   "wilcoxon_p": 0.3276
+  },
+  "J": {
+   "mean_delta": 0.0018,
+   "better": 15,
+   "worse": 11,
+   "wilcoxon_p": 0.6893
+  }
+ },
+ "gastrulation-human|l1|i>=3|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": 0.0067,
+   "better": 17,
+   "worse": 9,
+   "wilcoxon_p": 0.2079
+  },
+  "J": {
+   "mean_delta": 0.0083,
+   "better": 17,
+   "worse": 9,
+   "wilcoxon_p": 0.3533
+  }
+ },
+ "gastrulation-human|l1|i>=3|full vs trend": {
+  "pcc": {
+   "mean_delta": 0.526,
+   "better": 24,
+   "worse": 2,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 0.9093,
+   "better": 24,
+   "worse": 2,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|l1|i>=3|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 0.5301,
+   "better": 23,
+   "worse": 3,
+   "wilcoxon_p": 0.0
+  },
+  "J": {
+   "mean_delta": 0.9159,
+   "better": 24,
+   "worse": 2,
+   "wilcoxon_p": 0.0
+  }
+ },
+ "gastrulation-human|l1|i>=3|full+grn vs full": {
+  "pcc": {
+   "mean_delta": 0.0041,
+   "better": 13,
+   "worse": 12,
+   "wilcoxon_p": 0.925
+  },
+  "J": {
+   "mean_delta": 0.0066,
+   "better": 11,
+   "worse": 15,
+   "wilcoxon_p": 0.7644
+  }
+ },
+ "gastrulation-human|l1|i>=3|full+ot vs full": {
+  "pcc": {
+   "mean_delta": -0.0043,
+   "better": 17,
+   "worse": 9,
+   "wilcoxon_p": 0.2326
+  },
+  "J": {
+   "mean_delta": -0.0037,
+   "better": 17,
+   "worse": 9,
+   "wilcoxon_p": 0.2173
+  }
+ },
+ "gastrulation-human|l1|i>=3|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": 0.0172,
+   "better": 13,
+   "worse": 13,
+   "wilcoxon_p": 0.3666
+  },
+  "J": {
+   "mean_delta": 0.0211,
+   "better": 10,
+   "worse": 16,
+   "wilcoxon_p": 0.9801
+  }
+ },
+ "gastrulation-human|linear|i>=2|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": -0.068,
+   "better": 12,
+   "worse": 15,
+   "wilcoxon_p": 0.6277
+  },
+  "J": {
+   "mean_delta": -0.0507,
+   "better": 15,
+   "worse": 12,
+   "wilcoxon_p": 0.9521
+  }
+ },
+ "gastrulation-human|linear|i>=2|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": -0.0849,
+   "better": 16,
+   "worse": 11,
+   "wilcoxon_p": 1.0
+  },
+  "J": {
+   "mean_delta": -0.0862,
+   "better": 15,
+   "worse": 12,
+   "wilcoxon_p": 0.8223
+  }
+ },
+ "gastrulation-human|linear|i>=2|full vs trend": {
+  "pcc": {
+   "mean_delta": 0.0544,
+   "better": 14,
+   "worse": 13,
+   "wilcoxon_p": 0.441
+  },
+  "J": {
+   "mean_delta": 0.3541,
+   "better": 22,
+   "worse": 5,
+   "wilcoxon_p": 0.0017
+  }
+ },
+ "gastrulation-human|linear|i>=2|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 0.0374,
+   "better": 15,
+   "worse": 12,
+   "wilcoxon_p": 0.4996
+  },
+  "J": {
+   "mean_delta": 0.3187,
+   "better": 21,
+   "worse": 6,
+   "wilcoxon_p": 0.0076
+  }
+ },
+ "gastrulation-human|linear|i>=2|full+grn vs full": {
+  "pcc": {
+   "mean_delta": -0.017,
+   "better": 12,
+   "worse": 15,
+   "wilcoxon_p": 0.7496
+  },
+  "J": {
+   "mean_delta": -0.0354,
+   "better": 11,
+   "worse": 16,
+   "wilcoxon_p": 0.2901
+  }
+ },
+ "gastrulation-human|linear|i>=2|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": 0.0107,
+   "better": 11,
+   "worse": 16,
+   "wilcoxon_p": 0.714
+  },
+  "J": {
+   "mean_delta": 0.0187,
+   "better": 14,
+   "worse": 13,
+   "wilcoxon_p": 0.8408
+  }
+ },
+ "gastrulation-human|linear|i>=3|full vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": -0.0896,
+   "better": 11,
+   "worse": 15,
+   "wilcoxon_p": 0.4374
+  },
+  "J": {
+   "mean_delta": -0.0738,
+   "better": 14,
+   "worse": 12,
+   "wilcoxon_p": 0.839
+  }
+ },
+ "gastrulation-human|linear|i>=3|full+grn vs regime[h=0.5 fixed]": {
+  "pcc": {
+   "mean_delta": -0.0993,
+   "better": 15,
+   "worse": 11,
+   "wilcoxon_p": 0.8222
+  },
+  "J": {
+   "mean_delta": -0.1034,
+   "better": 14,
+   "worse": 12,
+   "wilcoxon_p": 0.6528
+  }
+ },
+ "gastrulation-human|linear|i>=3|full vs trend": {
+  "pcc": {
+   "mean_delta": 0.0449,
+   "better": 13,
+   "worse": 13,
+   "wilcoxon_p": 0.5651
+  },
+  "J": {
+   "mean_delta": 0.3531,
+   "better": 21,
+   "worse": 5,
+   "wilcoxon_p": 0.0027
+  }
+ },
+ "gastrulation-human|linear|i>=3|full+grn vs trend": {
+  "pcc": {
+   "mean_delta": 0.0352,
+   "better": 14,
+   "worse": 12,
+   "wilcoxon_p": 0.5483
+  },
+  "J": {
+   "mean_delta": 0.3235,
+   "better": 20,
+   "worse": 6,
+   "wilcoxon_p": 0.0086
+  }
+ },
+ "gastrulation-human|linear|i>=3|full+grn vs full": {
+  "pcc": {
+   "mean_delta": -0.0097,
+   "better": 12,
+   "worse": 14,
+   "wilcoxon_p": 1.0
+  },
+  "J": {
+   "mean_delta": -0.0296,
+   "better": 11,
+   "worse": 15,
+   "wilcoxon_p": 0.4374
+  }
+ },
+ "gastrulation-human|linear|i>=3|full+grn vs full+grn_null": {
+  "pcc": {
+   "mean_delta": -0.0049,
+   "better": 10,
+   "worse": 16,
+   "wilcoxon_p": 0.4678
+  },
+  "J": {
+   "mean_delta": 0.0037,
+   "better": 13,
+   "worse": 13,
+   "wilcoxon_p": 0.9205
+  }
+ }
+}

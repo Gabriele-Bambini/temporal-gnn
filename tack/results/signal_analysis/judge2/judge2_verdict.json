@@ -1,0 +1,2162 @@
+{
+ "what": "adversarial judge 2: reproduction, truncation strictness, paired DistBridge, independent re-implementation, robustness builds",
+ "files": [
+  "assemble_verdict.py",
+  "compare_lsb.py",
+  "compare_nass.py",
+  "db_paired.py",
+  "dsdata.py",
+  "indep_core.py",
+  "lsb_common.py",
+  "lsb_model.py",
+  "make_merged.py",
+  "nass.py",
+  "nass_heldout.py",
+  "ot_feature.py",
+  "ot_spot.py",
+  "pair_db.py",
+  "popot.py",
+  "run_lsb.py",
+  "run_lsb_causal.py",
+  "trunc_test.py"
+ ],
+ "reproduction": {
+  "NASS (nass.py copy, both builds)": "1728 + 1728 table cells and all paired deltas within 0.0025 of design results.json ('full', 'trend', 'level', 'regime' rows identical; only grn/ot variants differ <=0.002)",
+  "LatentSB (run_lsb.py copy, both builds)": "1428 + 1938 method cells and 5334 + 5355 paired cells: max |diff| 0.0",
+  "PopOT (popot.py copy, both builds)": "3139 + 4944 target leaves, composition TV and crossgene reproduction: max |diff| 0.0",
+  "caches": "_node_*.npz (NASS) and _cache_*.npz (LatentSB) equal the node CSVs exactly; l1 target equals dileo_protocol.TARGET_NP to 1e-7"
+ },
+ "truncation": [
+  {
+   "design": "popot",
+   "dataset": "pancreas-human",
+   "i": 7,
+   "result": {
+    "box4|K6|ot0.05": {
+     "orig": 0.0,
+     "l1": 0.0,
+     "linear": 0.0
+    },
+    "mixavg3|K8|sb3": {
+     "orig": 0.0,
+     "l1": 0.0,
+     "linear": 0.0
+    },
+    "box1+beta0.5|K3|uot0.05t1": {
+     "orig": 0.0,
+     "l1": 0.0,
+     "linear": 0.0
+    },
+    "box2|K8|lin1": {
+     "orig": 0.0,
+     "l1": 0.0,
+     "linear": 0.0
+    },
+    "box4|K3|sbW": {
+     "orig": 0.0,
+     "l1": 0.0,
+     "linear": 0.0
+    }
+   },
+   "seconds": 26.1
+  },
+  {
+   "design": "nass",
+   "dataset": "pancreas-human",
+   "i": 7,
+   "result": {
+    "l1": {
+     "pred_maxabs_diff_at_i": 0.0,
+     "pred_diff_at_i+1 (should be >0, garbage visible)": 8.079127715939297,
+     "label_diff_at_i (garbage label)": 4.625270366668701,
+     "feature_maxabs_diff_at_i": 0.0,
+     "chosen_same": true
+    },
+    "orig": {
+     "pred_maxabs_diff_at_i": 0.0,
+     "pred_diff_at_i+1 (should be >0, garbage visible)": 3.4414406772553936,
+     "label_diff_at_i (garbage label)": 10.0,
+     "feature_maxabs_diff_at_i": 0.0,
+     "chosen_same": true
+    },
+    "linear": {
+     "pred_maxabs_diff_at_i": 0.0,
+     "pred_diff_at_i+1 (should be >0, garbage visible)": 19.72125791192307,
+     "label_diff_at_i (garbage label)": 179.36034688353539,
+     "feature_maxabs_diff_at_i": 0.0,
+     "chosen_same": true
+    }
+   },
+   "seconds": 60.1
+  },
+  {
+   "design": "lsb",
+   "dataset": "pancreas-human",
+   "i": 7,
+   "result": {
+    "nmed_real": 132.0,
+    "nmed_garbage": 361.0,
+    "R_diff_bins<=i": 0.0,
+    "l1_head_maxdiff_all_cfgs": 0.7179512734059847,
+    "l1_head_maxdiff_k0_cfgs": 0.0,
+    "worst_cfg": "(2, 'cur', 'ar', None, None, 'none')",
+    "orig_head_alpha1_diff": 4.8320857882499695,
+    "orig_head_alpha0_diff": 0.0,
+    "l1_head_maxdiff_all_cfgs_with_causal_nmed": 0.0
+   },
+   "seconds": 11.7
+  }
+ ],
+ "ot_feature_spot_check": [
+  {
+   "dataset": "pancreas-human",
+   "i": 7,
+   "coupled_genes": 11612,
+   "orig": {
+    "stored_vs_recomputed_maxdiff": 0.0,
+    "real_vs_garbage_future_maxdiff": 0.0,
+    "mean_abs_inc": 0.1610807329416275,
+    "frac_nonzero": 0.6330477883734713,
+    "corr_with_last_change": null
+   },
+   "l1": {
+    "stored_vs_recomputed_maxdiff": 0.0,
+    "real_vs_garbage_future_maxdiff": 0.0,
+    "mean_abs_inc": 0.01961209438741207,
+    "frac_nonzero": 0.638112170680459,
+    "corr_with_last_change": 0.18097798830342846,
+    "corr_with_truth": 0.10755725577634208
+   }
+  }
+ ],
+ "independent_nass_core_l1": {
+  "pancreas-human": {
+   "checks": {
+    "nass_cache_mean_maxdiff": 0.0,
+    "nass_cache_sd_maxdiff": 0.0,
+    "lsb_cache_mean_maxdiff": 0.0,
+    "l1_target_vs_TARGET_NP_maxdiff": 1.2099298718482032e-07
+   },
+   "table": {
+    "trend": {
+     "i>=2": [
+      0.1398,
+      0.2227,
+      0.217,
+      0.021
+     ],
+     "all": [
+      0.1434,
+      0.2076,
+      0.2055,
+      0.0187
+     ]
+    },
+    "core_h1": {
+     "i>=2": [
+      0.3102,
+      0.2155,
+      0.2884,
+      0.0252
+     ],
+     "all": [
+      0.2894,
+      0.2014,
+      0.2667,
+      0.0222
+     ]
+    },
+    "core_h0.5": {
+     "i>=2": [
+      0.3102,
+      0.2231,
+      0.2914,
+      0.0246
+     ],
+     "all": [
+      0.2895,
+      0.208,
+      0.2693,
+      0.0216
+     ]
+    },
+    "kal_reversion_only": {
+     "i>=2": [
+      0.0214,
+      0.1121,
+      0.1523,
+      0.0092
+     ],
+     "all": [
+      0.0004,
+      0.1023,
+      0.1368,
+      0.0088
+     ]
+    }
+   },
+   "paired_i>=2": {
+    "core_h1 - trend": {
+     "dPCC": 0.1704,
+     "better": 10,
+     "worse": 2,
+     "wilcoxon_p": 0.00342
+    },
+    "core_h0.5 - trend": {
+     "dPCC": 0.1705,
+     "better": 10,
+     "worse": 2,
+     "wilcoxon_p": 0.00342
+    },
+    "kal_reversion_only - trend": {
+     "dPCC": -0.1184,
+     "better": 5,
+     "worse": 7,
+     "wilcoxon_p": 0.20361
+    }
+   }
+  },
+  "gastrulation-human": {
+   "checks": {
+    "nass_cache_mean_maxdiff": 0.0,
+    "nass_cache_sd_maxdiff": 0.0,
+    "lsb_cache_mean_maxdiff": 0.0,
+    "l1_target_vs_TARGET_NP_maxdiff": 5.5763890838278485e-08
+   },
+   "table": {
+    "trend": {
+     "i>=2": [
+      -0.1823,
+      0.0984,
+      0.0904,
+      0.0103
+     ],
+     "all": [
+      -0.1658,
+      0.0986,
+      0.0884,
+      0.0095
+     ]
+    },
+    "core_h1": {
+     "i>=2": [
+      0.3206,
+      0.2711,
+      0.2838,
+      0.0083
+     ],
+     "all": [
+      0.3024,
+      0.2594,
+      0.2685,
+      0.0081
+     ]
+    },
+    "core_h0.5": {
+     "i>=2": [
+      0.3252,
+      0.2752,
+      0.2852,
+      0.0071
+     ],
+     "all": [
+      0.3067,
+      0.2632,
+      0.2698,
+      0.007
+     ]
+    },
+    "kal_reversion_only": {
+     "i>=2": [
+      0.1217,
+      0.2025,
+      0.195,
+      0.0101
+     ],
+     "all": [
+      0.1125,
+      0.1934,
+      0.1884,
+      0.0095
+     ]
+    }
+   },
+   "paired_i>=2": {
+    "core_h1 - trend": {
+     "dPCC": 0.5029,
+     "better": 23,
+     "worse": 4,
+     "wilcoxon_p": 0.0
+    },
+    "core_h0.5 - trend": {
+     "dPCC": 0.5075,
+     "better": 23,
+     "worse": 4,
+     "wilcoxon_p": 0.0
+    },
+    "kal_reversion_only - trend": {
+     "dPCC": 0.3039,
+     "better": 22,
+     "worse": 5,
+     "wilcoxon_p": 0.00074
+    }
+   }
+  }
+ },
+ "nass_frozen_other_builds": {
+  "gastr-merged2-off0_seed20261022": {
+   "n_cells": [
+    191.0,
+    1721.0,
+    1598.0,
+    557.0,
+    473.0,
+    594.0,
+    871.0,
+    580.0,
+    476.0,
+    591.0,
+    705.0,
+    497.0,
+    534.0,
+    369.0,
+    53.0
+   ],
+   "T": 14,
+   "orig": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      -0.4611,
+      0.02,
+      0.0129
+     ],
+     "full": [
+      0.5865,
+      0.3968,
+      0.5132
+     ],
+     "regime": [
+      0.5525,
+      0.3689,
+      0.4828
+     ],
+     "level(box4+obs)": [
+      0.5728,
+      0.391,
+      0.5119
+     ],
+     "full[h=0.5 fixed]": [
+      0.5889,
+      0.3937,
+      0.5138
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": 1.0476,
+      "better": 12,
+      "worse": 0,
+      "wilcoxon_p": 0.0005
+     },
+     "full vs regime": {
+      "mean_delta": 0.034,
+      "better": 12,
+      "worse": 0,
+      "wilcoxon_p": 0.0005
+     },
+     "full vs level(box4+obs)": {
+      "mean_delta": 0.0136,
+      "better": 9,
+      "worse": 3,
+      "wilcoxon_p": 0.064
+     }
+    }
+   },
+   "l1": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.1958,
+      0.2453,
+      0.1973
+     ],
+     "full": [
+      0.2435,
+      0.2506,
+      0.2535
+     ],
+     "regime": [
+      0.2254,
+      0.241,
+      0.2679
+     ],
+     "level(box4)": [
+      -0.2996,
+      0.1245,
+      0.1414
+     ],
+     "full[h=0.5 fixed]": [
+      0.263,
+      0.2521,
+      0.2555
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": 0.0477,
+      "better": 9,
+      "worse": 3,
+      "wilcoxon_p": 0.3013
+     },
+     "full vs regime": {
+      "mean_delta": 0.0181,
+      "better": 8,
+      "worse": 4,
+      "wilcoxon_p": 0.1763
+     }
+    }
+   },
+   "linear": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.3097,
+      0.3183,
+      0.3124
+     ],
+     "full": [
+      0.0421,
+      0.2763,
+      0.2706
+     ],
+     "regime": [
+      -0.0581,
+      0.304,
+      0.2582
+     ],
+     "level(box4)": [
+      -0.329,
+      0.1952,
+      0.2146
+     ],
+     "full[h=0.5 fixed]": [
+      0.109,
+      0.2761,
+      0.2636
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": -0.2677,
+      "better": 3,
+      "worse": 9,
+      "wilcoxon_p": 0.0425
+     },
+     "full vs regime": {
+      "mean_delta": 0.1001,
+      "better": 7,
+      "worse": 5,
+      "wilcoxon_p": 0.4697
+     }
+    }
+   }
+  },
+  "gastr-merged2-off1_seed20261022": {
+   "n_cells": [
+    974.0,
+    1911.0,
+    956.0,
+    442.0,
+    538.0,
+    735.0,
+    773.0,
+    493.0,
+    505.0,
+    671.0,
+    614.0,
+    461.0,
+    537.0,
+    184.0
+   ],
+   "T": 13,
+   "orig": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      -0.4681,
+      0.0166,
+      0.0137
+     ],
+     "full": [
+      0.5925,
+      0.4375,
+      0.5328
+     ],
+     "regime": [
+      0.5621,
+      0.3922,
+      0.4986
+     ],
+     "level(box4+obs)": [
+      0.5826,
+      0.4207,
+      0.5341
+     ],
+     "full[h=0.5 fixed]": [
+      0.5892,
+      0.4385,
+      0.5241
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": 1.0606,
+      "better": 11,
+      "worse": 0,
+      "wilcoxon_p": 0.001
+     },
+     "full vs regime": {
+      "mean_delta": 0.0304,
+      "better": 11,
+      "worse": 0,
+      "wilcoxon_p": 0.001
+     },
+     "full vs level(box4+obs)": {
+      "mean_delta": 0.0099,
+      "better": 9,
+      "worse": 2,
+      "wilcoxon_p": 0.2783
+     }
+    }
+   },
+   "l1": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.2533,
+      0.2555,
+      0.1982
+     ],
+     "full": [
+      0.3945,
+      0.315,
+      0.2636
+     ],
+     "regime": [
+      0.3658,
+      0.3134,
+      0.2726
+     ],
+     "level(box4)": [
+      -0.3447,
+      0.1188,
+      0.1265
+     ],
+     "full[h=0.5 fixed]": [
+      0.3937,
+      0.3125,
+      0.2634
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": 0.1412,
+      "better": 9,
+      "worse": 2,
+      "wilcoxon_p": 0.123
+     },
+     "full vs regime": {
+      "mean_delta": 0.0287,
+      "better": 7,
+      "worse": 4,
+      "wilcoxon_p": 0.3652
+     }
+    }
+   },
+   "linear": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.4865,
+      0.3489,
+      0.3287
+     ],
+     "full": [
+      0.2729,
+      0.3442,
+      0.2792
+     ],
+     "regime": [
+      0.1269,
+      0.3238,
+      0.2601
+     ],
+     "level(box4)": [
+      -0.3739,
+      0.1876,
+      0.2015
+     ],
+     "full[h=0.5 fixed]": [
+      0.2449,
+      0.3402,
+      0.2883
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": -0.2137,
+      "better": 4,
+      "worse": 7,
+      "wilcoxon_p": 0.2402
+     },
+     "full vs regime": {
+      "mean_delta": 0.146,
+      "better": 6,
+      "worse": 5,
+      "wilcoxon_p": 0.2402
+     }
+    }
+   }
+  },
+  "gastrulation_seed20261022": {
+   "n_cells": [
+    5.0,
+    63.0,
+    569.0,
+    775.0,
+    922.0,
+    810.0,
+    462.0,
+    279.0,
+    195.0,
+    203.0,
+    225.0,
+    253.0,
+    276.0,
+    361.0,
+    409.0,
+    377.0,
+    249.0,
+    224.0,
+    218.0,
+    216.0,
+    258.0,
+    291.0,
+    310.0,
+    335.0,
+    261.0,
+    225.0,
+    198.0,
+    238.0,
+    256.0,
+    204.0,
+    103.0,
+    33.0,
+    7.0
+   ],
+   "T": 32,
+   "orig": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.2203,
+      0.3915,
+      0.3553
+     ],
+     "full": [
+      0.3178,
+      0.4011,
+      0.3227
+     ],
+     "regime": [
+      0.3334,
+      0.3949,
+      0.3267
+     ],
+     "level(box4+obs)": [
+      0.0374,
+      0.3559,
+      0.0161
+     ],
+     "full[h=0.5 fixed]": [
+      0.2348,
+      0.3716,
+      0.3163
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": 0.0975,
+      "better": 20,
+      "worse": 10,
+      "wilcoxon_p": 0.0128
+     },
+     "full vs regime": {
+      "mean_delta": -0.0157,
+      "better": 13,
+      "worse": 17,
+      "wilcoxon_p": 0.3285
+     },
+     "full vs level(box4+obs)": {
+      "mean_delta": 0.2803,
+      "better": 28,
+      "worse": 2,
+      "wilcoxon_p": 0.0
+     }
+    }
+   },
+   "l1": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.5335,
+      0.4159,
+      0.379
+     ],
+     "full": [
+      0.5114,
+      0.405,
+      0.3727
+     ],
+     "regime": [
+      0.5395,
+      0.4091,
+      0.3783
+     ],
+     "level(box4)": [
+      -0.4814,
+      0.0824,
+      0.0896
+     ],
+     "full[h=0.5 fixed]": [
+      0.4928,
+      0.387,
+      0.3607
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": -0.0221,
+      "better": 21,
+      "worse": 9,
+      "wilcoxon_p": 0.3387
+     },
+     "full vs regime": {
+      "mean_delta": -0.0281,
+      "better": 13,
+      "worse": 17,
+      "wilcoxon_p": 0.2206
+     }
+    }
+   },
+   "linear": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.6558,
+      0.5106,
+      0.4669
+     ],
+     "full": [
+      0.5579,
+      0.4637,
+      0.4003
+     ],
+     "regime": [
+      0.5676,
+      0.479,
+      0.4221
+     ],
+     "level(box4)": [
+      -0.5953,
+      0.1334,
+      0.1554
+     ],
+     "full[h=0.5 fixed]": [
+      0.543,
+      0.4707,
+      0.4205
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": -0.098,
+      "better": 11,
+      "worse": 19,
+      "wilcoxon_p": 0.0636
+     },
+     "full vs regime": {
+      "mean_delta": -0.0097,
+      "better": 11,
+      "worse": 19,
+      "wilcoxon_p": 0.3707
+     }
+    }
+   }
+  },
+  "pancreas-human_seed99": {
+   "n_cells": [
+    111.0,
+    612.0,
+    361.0,
+    116.0,
+    50.0,
+    53.0,
+    68.0,
+    79.0,
+    191.0,
+    218.0,
+    132.0,
+    286.0,
+    698.0,
+    616.0,
+    105.0
+   ],
+   "T": 14,
+   "orig": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      -0.3886,
+      0.035,
+      0.0277
+     ],
+     "full": [
+      0.53,
+      0.346,
+      0.4505
+     ],
+     "regime": [
+      0.5048,
+      0.3283,
+      0.4219
+     ],
+     "level(box4+obs)": [
+      0.4779,
+      0.3292,
+      0.4413
+     ],
+     "full[h=0.5 fixed]": [
+      0.5271,
+      0.3419,
+      0.4499
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": 0.9186,
+      "better": 12,
+      "worse": 0,
+      "wilcoxon_p": 0.0005
+     },
+     "full vs regime": {
+      "mean_delta": 0.0252,
+      "better": 11,
+      "worse": 1,
+      "wilcoxon_p": 0.0034
+     },
+     "full vs level(box4+obs)": {
+      "mean_delta": 0.0521,
+      "better": 11,
+      "worse": 1,
+      "wilcoxon_p": 0.0024
+     }
+    }
+   },
+   "l1": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.1441,
+      0.2237,
+      0.2167
+     ],
+     "full": [
+      0.3183,
+      0.2241,
+      0.2821
+     ],
+     "regime": [
+      0.2838,
+      0.2217,
+      0.2656
+     ],
+     "level(box4)": [
+      -0.1413,
+      0.1003,
+      0.1703
+     ],
+     "full[h=0.5 fixed]": [
+      0.3013,
+      0.2313,
+      0.279
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": 0.1742,
+      "better": 11,
+      "worse": 1,
+      "wilcoxon_p": 0.001
+     },
+     "full vs regime": {
+      "mean_delta": 0.0345,
+      "better": 10,
+      "worse": 2,
+      "wilcoxon_p": 0.0093
+     }
+    }
+   },
+   "linear": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.3787,
+      0.3005,
+      0.3615
+     ],
+     "full": [
+      0.2933,
+      0.1659,
+      0.3716
+     ],
+     "regime": [
+      0.3292,
+      0.1932,
+      0.3817
+     ],
+     "level(box4)": [
+      -0.3421,
+      0.1654,
+      0.2151
+     ],
+     "full[h=0.5 fixed]": [
+      0.1794,
+      0.2255,
+      0.334
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": -0.0853,
+      "better": 4,
+      "worse": 8,
+      "wilcoxon_p": 0.0771
+     },
+     "full vs regime": {
+      "mean_delta": -0.0359,
+      "better": 6,
+      "worse": 6,
+      "wilcoxon_p": 0.8501
+     }
+    }
+   }
+  },
+  "pancreas_seed20261022": {
+   "n_cells": [
+    612.0,
+    361.0,
+    116.0,
+    50.0,
+    53.0,
+    68.0,
+    79.0,
+    191.0,
+    218.0,
+    132.0,
+    286.0,
+    698.0
+   ],
+   "T": 11,
+   "orig": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.1364,
+      0.3587,
+      0.3502
+     ],
+     "full": [
+      0.3895,
+      0.3704,
+      0.3512
+     ],
+     "regime": [
+      0.3898,
+      0.3549,
+      0.3463
+     ],
+     "level(box4+obs)": [
+      0.0202,
+      0.3533,
+      0.0233
+     ],
+     "full[h=0.5 fixed]": [
+      0.3698,
+      0.3649,
+      0.3551
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": 0.2531,
+      "better": 8,
+      "worse": 1,
+      "wilcoxon_p": 0.0273
+     },
+     "full vs regime": {
+      "mean_delta": -0.0004,
+      "better": 7,
+      "worse": 2,
+      "wilcoxon_p": 0.1641
+     },
+     "full vs level(box4+obs)": {
+      "mean_delta": 0.3692,
+      "better": 9,
+      "worse": 0,
+      "wilcoxon_p": 0.0039
+     }
+    }
+   },
+   "l1": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.4965,
+      0.3907,
+      0.4024
+     ],
+     "full": [
+      0.4802,
+      0.3583,
+      0.421
+     ],
+     "regime": [
+      0.505,
+      0.3701,
+      0.4249
+     ],
+     "level(box4)": [
+      -0.3937,
+      0.06,
+      0.1258
+     ],
+     "full[h=0.5 fixed]": [
+      0.4654,
+      0.3461,
+      0.4084
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": -0.0163,
+      "better": 8,
+      "worse": 1,
+      "wilcoxon_p": 0.1289
+     },
+     "full vs regime": {
+      "mean_delta": -0.0248,
+      "better": 8,
+      "worse": 1,
+      "wilcoxon_p": 0.1289
+     }
+    }
+   },
+   "linear": {
+    "i>=2 [pcc, up, down]": {
+     "trend": [
+      0.5311,
+      0.4697,
+      0.4917
+     ],
+     "full": [
+      0.5177,
+      0.4322,
+      0.523
+     ],
+     "regime": [
+      0.5387,
+      0.4554,
+      0.5121
+     ],
+     "level(box4)": [
+      -0.4253,
+      0.1068,
+      0.1993
+     ],
+     "full[h=0.5 fixed]": [
+      0.4974,
+      0.3974,
+      0.4887
+     ]
+    },
+    "paired_i>=2": {
+     "full vs trend": {
+      "mean_delta": -0.0134,
+      "better": 5,
+      "worse": 4,
+      "wilcoxon_p": 0.4258
+     },
+     "full vs regime": {
+      "mean_delta": -0.021,
+      "better": 6,
+      "worse": 3,
+      "wilcoxon_p": 0.8203
+     }
+    }
+   }
+  }
+ },
+ "nass_frozen_other_builds_note": "'pancreas'/'gastrulation' (Dileo mouse builds) hold smoothed non-count values (non-integer sums, 98-99 % nonzero, sd/sqrt(m) ~0.15 vs ~1.0 on '-human'), so the count noise model and the finite-cell head are invalid there: NOT a valid held-out. gastr-merged2-off0/off1 = '-human' gastrulation with consecutive bins merged in pairs (same cells, half the sampling noise): a different noise regime, not a replicate. pancreas-human_seed99 = same build, different 25 % masks.",
+ "latentsb_nmed_noncausal_vs_causal": {
+  "pancreas-human": {
+   "l1|lsb_full|i>=1 pcc": [
+    0.0804,
+    0.0848
+   ],
+   "l1|regime+lsb|i>=1 pcc": [
+    0.1928,
+    0.2041
+   ],
+   "l1|lsb_stack|i>=1 pcc": [
+    0.2085,
+    0.2042
+   ],
+   "l1|k4_var_fixed|i>=1 pcc": [
+    0.0738,
+    0.0618
+   ],
+   "linear|lsb_full|i>=1 pcc": [
+    0.1193,
+    0.0848
+   ],
+   "linear|regime+lsb|i>=1 pcc": [
+    0.2425,
+    0.2566
+   ],
+   "linear|lsb_stack|i>=1 pcc": [
+    0.2034,
+    0.2119
+   ],
+   "linear|k4_var_fixed|i>=1 pcc": [
+    0.1004,
+    0.1085
+   ],
+   "orig|lsb_obs|i>=1 pcc": [
+    0.4895,
+    0.4935
+   ],
+   "l1|regime+lsb_vs_regime_i>=3": [
+    {
+     "mean_delta": -0.0057,
+     "better": 7,
+     "worse": 4,
+     "wilcoxon_p": 0.8311
+    },
+    {
+     "mean_delta": 0.0076,
+     "better": 6,
+     "worse": 5,
+     "wilcoxon_p": 0.7002
+    }
+   ],
+   "l1|lsb_full_vs_trend_i>=1": [
+    {
+     "mean_delta": -0.0808,
+     "better": 5,
+     "worse": 8,
+     "wilcoxon_p": 0.4548
+    },
+    {
+     "mean_delta": -0.0764,
+     "better": 5,
+     "worse": 8,
+     "wilcoxon_p": 0.4973
+    }
+   ]
+  },
+  "gastrulation-human": {
+   "l1|lsb_full|i>=1 pcc": [
+    0.2763,
+    0.2999
+   ],
+   "l1|regime+lsb|i>=1 pcc": [
+    0.3363,
+    0.3217
+   ],
+   "l1|lsb_stack|i>=1 pcc": [
+    0.3015,
+    0.2887
+   ],
+   "l1|k4_var_fixed|i>=1 pcc": [
+    0.2902,
+    0.2925
+   ],
+   "linear|lsb_full|i>=1 pcc": [
+    0.3052,
+    0.2764
+   ],
+   "linear|regime+lsb|i>=1 pcc": [
+    0.3051,
+    0.232
+   ],
+   "linear|lsb_stack|i>=1 pcc": [
+    0.1799,
+    0.1842
+   ],
+   "linear|k4_var_fixed|i>=1 pcc": [
+    0.2092,
+    0.1849
+   ],
+   "orig|lsb_obs|i>=1 pcc": [
+    0.6016,
+    0.6016
+   ],
+   "l1|regime+lsb_vs_regime_i>=3": [
+    {
+     "mean_delta": 0.016,
+     "better": 17,
+     "worse": 9,
+     "wilcoxon_p": 0.0435
+    },
+    {
+     "mean_delta": 0.0002,
+     "better": 16,
+     "worse": 10,
+     "wilcoxon_p": 0.5483
+    }
+   ],
+   "l1|lsb_full_vs_trend_i>=1": [
+    {
+     "mean_delta": 0.4462,
+     "better": 23,
+     "worse": 5,
+     "wilcoxon_p": 0.0
+    },
+    {
+     "mean_delta": 0.4699,
+     "better": 24,
+     "worse": 4,
+     "wilcoxon_p": 0.0
+    }
+   ]
+  }
+ },
+ "paired_vs_distbridge_same_masks": {
+  "pancreas-human|orig|full vs distbridge_strict|all": {
+   "nass_row": [
+    0.5059,
+    0.3084,
+    0.4544
+   ],
+   "distbridge": [
+    0.4921,
+    0.3037,
+    0.4394
+   ],
+   "dPCC": 0.0138,
+   "better/worse": [
+    8,
+    6
+   ],
+   "p_PCC": 0.6257,
+   "dJ": 0.0335,
+   "p_J": 0.104
+  },
+  "pancreas-human|orig|full vs distbridge_strict|i>=2": {
+   "nass_row": [
+    0.5311,
+    0.3463,
+    0.4526
+   ],
+   "distbridge": [
+    0.5104,
+    0.3447,
+    0.436
+   ],
+   "dPCC": 0.0207,
+   "better/worse": [
+    8,
+    4
+   ],
+   "p_PCC": 0.3804,
+   "dJ": 0.0389,
+   "p_J": 0.1294
+  },
+  "pancreas-human|orig|full+grn vs distbridge_strict|all": {
+   "nass_row": [
+    0.5092,
+    0.3084,
+    0.454
+   ],
+   "distbridge": [
+    0.4921,
+    0.3037,
+    0.4394
+   ],
+   "dPCC": 0.0171,
+   "better/worse": [
+    8,
+    6
+   ],
+   "p_PCC": 0.3575,
+   "dJ": 0.0363,
+   "p_J": 0.0676
+  },
+  "pancreas-human|orig|full+grn vs distbridge_strict|i>=2": {
+   "nass_row": [
+    0.5349,
+    0.3463,
+    0.4521
+   ],
+   "distbridge": [
+    0.5104,
+    0.3447,
+    0.436
+   ],
+   "dPCC": 0.0245,
+   "better/worse": [
+    8,
+    4
+   ],
+   "p_PCC": 0.1763,
+   "dJ": 0.0423,
+   "p_J": 0.0923
+  },
+  "pancreas-human|orig|regime vs distbridge_strict|all": {
+   "nass_row": [
+    0.4845,
+    0.2948,
+    0.4294
+   ],
+   "distbridge": [
+    0.4921,
+    0.3037,
+    0.4394
+   ],
+   "dPCC": -0.0076,
+   "better/worse": [
+    6,
+    8
+   ],
+   "p_PCC": 0.6698,
+   "dJ": -0.0265,
+   "p_J": 0.583
+  },
+  "pancreas-human|orig|regime vs distbridge_strict|i>=2": {
+   "nass_row": [
+    0.5061,
+    0.3304,
+    0.4234
+   ],
+   "distbridge": [
+    0.5104,
+    0.3447,
+    0.436
+   ],
+   "dPCC": -0.0042,
+   "better/worse": [
+    6,
+    6
+   ],
+   "p_PCC": 0.9097,
+   "dJ": -0.0311,
+   "p_J": 0.5186
+  },
+  "pancreas-human|orig|trend vs distbridge_strict|all": {
+   "nass_row": [
+    -0.3503,
+    0.0385,
+    0.0647
+   ],
+   "distbridge": [
+    0.4921,
+    0.3037,
+    0.4394
+   ],
+   "dPCC": -0.8423,
+   "better/worse": [
+    0,
+    14
+   ],
+   "p_PCC": 0.0001,
+   "dJ": -1.4823,
+   "p_J": 0.0002
+  },
+  "pancreas-human|orig|trend vs distbridge_strict|i>=2": {
+   "nass_row": [
+    -0.3917,
+    0.0365,
+    0.0287
+   ],
+   "distbridge": [
+    0.5104,
+    0.3447,
+    0.436
+   ],
+   "dPCC": -0.9021,
+   "better/worse": [
+    0,
+    12
+   ],
+   "p_PCC": 0.0005,
+   "dJ": -1.6175,
+   "p_J": 0.0005
+  },
+  "pancreas-human|orig|level(box4+obs) vs distbridge_strict|all": {
+   "nass_row": [
+    0.462,
+    0.2949,
+    0.4469
+   ],
+   "distbridge": [
+    0.4921,
+    0.3037,
+    0.4394
+   ],
+   "dPCC": -0.0301,
+   "better/worse": [
+    2,
+    12
+   ],
+   "p_PCC": 0.0166,
+   "dJ": -0.0315,
+   "p_J": 0.0353
+  },
+  "pancreas-human|orig|level(box4+obs) vs distbridge_strict|i>=2": {
+   "nass_row": [
+    0.4799,
+    0.3305,
+    0.4438
+   ],
+   "distbridge": [
+    0.5104,
+    0.3447,
+    0.436
+   ],
+   "dPCC": -0.0305,
+   "better/worse": [
+    2,
+    10
+   ],
+   "p_PCC": 0.0425,
+   "dJ": -0.0369,
+   "p_J": 0.0342
+  },
+  "pancreas-human|orig|full[h=0.5 fixed] vs distbridge_strict|all": {
+   "nass_row": [
+    0.5037,
+    0.3055,
+    0.4536
+   ],
+   "distbridge": [
+    0.4921,
+    0.3037,
+    0.4394
+   ],
+   "dPCC": 0.0116,
+   "better/worse": [
+    8,
+    6
+   ],
+   "p_PCC": 0.6257,
+   "dJ": 0.0275,
+   "p_J": 0.1353
+  },
+  "pancreas-human|orig|full[h=0.5 fixed] vs distbridge_strict|i>=2": {
+   "nass_row": [
+    0.5285,
+    0.3429,
+    0.4516
+   ],
+   "distbridge": [
+    0.5104,
+    0.3447,
+    0.436
+   ],
+   "dPCC": 0.0181,
+   "better/worse": [
+    8,
+    4
+   ],
+   "p_PCC": 0.3394,
+   "dJ": 0.032,
+   "p_J": 0.1294
+  },
+  "pancreas-human|orig|full vs distbridge_strict_nosb|all": {
+   "nass_row": [
+    0.5059,
+    0.3084,
+    0.4544
+   ],
+   "distbridge": [
+    0.4952,
+    0.3054,
+    0.4412
+   ],
+   "dPCC": 0.0107,
+   "better/worse": [
+    8,
+    6
+   ],
+   "p_PCC": 0.7148,
+   "dJ": 0.027,
+   "p_J": 0.1189
+  },
+  "pancreas-human|orig|full vs distbridge_strict_nosb|i>=2": {
+   "nass_row": [
+    0.5311,
+    0.3463,
+    0.4526
+   ],
+   "distbridge": [
+    0.514,
+    0.3466,
+    0.4381
+   ],
+   "dPCC": 0.0171,
+   "better/worse": [
+    8,
+    4
+   ],
+   "p_PCC": 0.4697,
+   "dJ": 0.0313,
+   "p_J": 0.1514
+  },
+  "pancreas-human|orig|full+grn vs distbridge_strict_nosb|all": {
+   "nass_row": [
+    0.5092,
+    0.3084,
+    0.454
+   ],
+   "distbridge": [
+    0.4952,
+    0.3054,
+    0.4412
+   ],
+   "dPCC": 0.014,
+   "better/worse": [
+    8,
+    6
+   ],
+   "p_PCC": 0.4263,
+   "dJ": 0.0298,
+   "p_J": 0.0785
+  },
+  "pancreas-human|orig|full+grn vs distbridge_strict_nosb|i>=2": {
+   "nass_row": [
+    0.5349,
+    0.3463,
+    0.4521
+   ],
+   "distbridge": [
+    0.514,
+    0.3466,
+    0.4381
+   ],
+   "dPCC": 0.0209,
+   "better/worse": [
+    8,
+    4
+   ],
+   "p_PCC": 0.2036,
+   "dJ": 0.0347,
+   "p_J": 0.1099
+  },
+  "pancreas-human|orig|regime vs distbridge_strict_nosb|all": {
+   "nass_row": [
+    0.4845,
+    0.2948,
+    0.4294
+   ],
+   "distbridge": [
+    0.4952,
+    0.3054,
+    0.4412
+   ],
+   "dPCC": -0.0106,
+   "better/worse": [
+    6,
+    8
+   ],
+   "p_PCC": 0.583,
+   "dJ": -0.033,
+   "p_J": 0.5016
+  },
+  "pancreas-human|orig|regime vs distbridge_strict_nosb|i>=2": {
+   "nass_row": [
+    0.5061,
+    0.3304,
+    0.4234
+   ],
+   "distbridge": [
+    0.514,
+    0.3466,
+    0.4381
+   ],
+   "dPCC": -0.0078,
+   "better/worse": [
+    6,
+    6
+   ],
+   "p_PCC": 0.8501,
+   "dJ": -0.0387,
+   "p_J": 0.4238
+  },
+  "pancreas-human|orig|trend vs distbridge_strict_nosb|all": {
+   "nass_row": [
+    -0.3503,
+    0.0385,
+    0.0647
+   ],
+   "distbridge": [
+    0.4952,
+    0.3054,
+    0.4412
+   ],
+   "dPCC": -0.8454,
+   "better/worse": [
+    0,
+    14
+   ],
+   "p_PCC": 0.0001,
+   "dJ": -1.4888,
+   "p_J": 0.0002
+  },
+  "pancreas-human|orig|trend vs distbridge_strict_nosb|i>=2": {
+   "nass_row": [
+    -0.3917,
+    0.0365,
+    0.0287
+   ],
+   "distbridge": [
+    0.514,
+    0.3466,
+    0.4381
+   ],
+   "dPCC": -0.9057,
+   "better/worse": [
+    0,
+    12
+   ],
+   "p_PCC": 0.0005,
+   "dJ": -1.6251,
+   "p_J": 0.0005
+  },
+  "pancreas-human|orig|level(box4+obs) vs distbridge_strict_nosb|all": {
+   "nass_row": [
+    0.462,
+    0.2949,
+    0.4469
+   ],
+   "distbridge": [
+    0.4952,
+    0.3054,
+    0.4412
+   ],
+   "dPCC": -0.0331,
+   "better/worse": [
+    2,
+    12
+   ],
+   "p_PCC": 0.0023,
+   "dJ": -0.038,
+   "p_J": 0.0017
+  },
+  "pancreas-human|orig|level(box4+obs) vs distbridge_strict_nosb|i>=2": {
+   "nass_row": [
+    0.4799,
+    0.3305,
+    0.4438
+   ],
+   "distbridge": [
+    0.514,
+    0.3466,
+    0.4381
+   ],
+   "dPCC": -0.0341,
+   "better/worse": [
+    2,
+    10
+   ],
+   "p_PCC": 0.0049,
+   "dJ": -0.0445,
+   "p_J": 0.0015
+  },
+  "pancreas-human|orig|full[h=0.5 fixed] vs distbridge_strict_nosb|all": {
+   "nass_row": [
+    0.5037,
+    0.3055,
+    0.4536
+   ],
+   "distbridge": [
+    0.4952,
+    0.3054,
+    0.4412
+   ],
+   "dPCC": 0.0085,
+   "better/worse": [
+    8,
+    6
+   ],
+   "p_PCC": 0.7148,
+   "dJ": 0.021,
+   "p_J": 0.2166
+  },
+  "pancreas-human|orig|full[h=0.5 fixed] vs distbridge_strict_nosb|i>=2": {
+   "nass_row": [
+    0.5285,
+    0.3429,
+    0.4516
+   ],
+   "distbridge": [
+    0.514,
+    0.3466,
+    0.4381
+   ],
+   "dPCC": 0.0145,
+   "better/worse": [
+    8,
+    4
+   ],
+   "p_PCC": 0.4238,
+   "dJ": 0.0244,
+   "p_J": 0.2036
+  },
+  "pancreas-human|l1|full vs distbridge_strict_nosb_l1|all": {
+   "nass_row": [
+    0.2896,
+    0.2119,
+    0.2722
+   ],
+   "distbridge": [
+    -0.0348,
+    0.094,
+    0.1451
+   ],
+   "dPCC": 0.3244,
+   "better/worse": [
+    12,
+    2
+   ],
+   "p_PCC": 0.0006,
+   "dJ": 0.5694,
+   "p_J": 0.0004
+  },
+  "pancreas-human|l1|full vs distbridge_strict_nosb_l1|i>=2": {
+   "nass_row": [
+    0.308,
+    0.221,
+    0.283
+   ],
+   "distbridge": [
+    -0.0124,
+    0.0962,
+    0.1534
+   ],
+   "dPCC": 0.3203,
+   "better/worse": [
+    11,
+    1
+   ],
+   "p_PCC": 0.001,
+   "dJ": 0.5747,
+   "p_J": 0.0005
+  },
+  "pancreas-human|l1|full+grn vs distbridge_strict_nosb_l1|all": {
+   "nass_row": [
+    0.3062,
+    0.2194,
+    0.282
+   ],
+   "distbridge": [
+    -0.0348,
+    0.094,
+    0.1451
+   ],
+   "dPCC": 0.341,
+   "better/worse": [
+    12,
+    2
+   ],
+   "p_PCC": 0.0006,
+   "dJ": 0.6032,
+   "p_J": 0.0004
+  },
+  "pancreas-human|l1|full+grn vs distbridge_strict_nosb_l1|i>=2": {
+   "nass_row": [
+    0.3273,
+    0.2298,
+    0.2944
+   ],
+   "distbridge": [
+    -0.0124,
+    0.0962,
+    0.1534
+   ],
+   "dPCC": 0.3396,
+   "better/worse": [
+    11,
+    1
+   ],
+   "p_PCC": 0.001,
+   "dJ": 0.6142,
+   "p_J": 0.0005
+  },
+  "pancreas-human|l1|regime vs distbridge_strict_nosb_l1|all": {
+   "nass_row": [
+    0.259,
+    0.2098,
+    0.256
+   ],
+   "distbridge": [
+    -0.0348,
+    0.094,
+    0.1451
+   ],
+   "dPCC": 0.2938,
+   "better/worse": [
+    12,
+    2
+   ],
+   "p_PCC": 0.0006,
+   "dJ": 0.5205,
+   "p_J": 0.0004
+  },
+  "pancreas-human|l1|regime vs distbridge_strict_nosb_l1|i>=2": {
+   "nass_row": [
+    0.2722,
+    0.2185,
+    0.2642
+   ],
+   "distbridge": [
+    -0.0124,
+    0.0962,
+    0.1534
+   ],
+   "dPCC": 0.2846,
+   "better/worse": [
+    11,
+    1
+   ],
+   "p_PCC": 0.001,
+   "dJ": 0.5177,
+   "p_J": 0.0005
+  },
+  "pancreas-human|l1|trend vs distbridge_strict_nosb_l1|all": {
+   "nass_row": [
+    0.1411,
+    0.2113,
+    0.2148
+   ],
+   "distbridge": [
+    -0.0348,
+    0.094,
+    0.1451
+   ],
+   "dPCC": 0.1759,
+   "better/worse": [
+    8,
+    6
+   ],
+   "p_PCC": 0.0906,
+   "dJ": 0.3629,
+   "p_J": 0.058
+  },
+  "pancreas-human|l1|trend vs distbridge_strict_nosb_l1|i>=2": {
+   "nass_row": [
+    0.1347,
+    0.2203,
+    0.216
+   ],
+   "distbridge": [
+    -0.0124,
+    0.0962,
+    0.1534
+   ],
+   "dPCC": 0.1471,
+   "better/worse": [
+    7,
+    5
+   ],
+   "p_PCC": 0.1294,
+   "dJ": 0.3338,
+   "p_J": 0.0771
+  },
+  "pancreas-human|l1|level(box4) vs distbridge_strict_nosb_l1|all": {
+   "nass_row": [
+    -0.136,
+    0.0956,
+    0.1633
+   ],
+   "distbridge": [
+    -0.0348,
+    0.094,
+    0.1451
+   ],
+   "dPCC": -0.1012,
+   "better/worse": [
+    5,
+    9
+   ],
+   "p_PCC": 0.0494,
+   "dJ": -0.0814,
+   "p_J": 0.2676
+  },
+  "pancreas-human|l1|level(box4) vs distbridge_strict_nosb_l1|i>=2": {
+   "nass_row": [
+    -0.1318,
+    0.1,
+    0.1723
+   ],
+   "distbridge": [
+    -0.0124,
+    0.0962,
+    0.1534
+   ],
+   "dPCC": -0.1194,
+   "better/worse": [
+    4,
+    8
+   ],
+   "p_PCC": 0.0342,
+   "dJ": -0.0967,
+   "p_J": 0.2334
+  },
+  "pancreas-human|l1|full[h=0.5 fixed] vs distbridge_strict_nosb_l1|all": {
+   "nass_row": [
+    0.2751,
+    0.2177,
+    0.2688
+   ],
+   "distbridge": [
+    -0.0348,
+    0.094,
+    0.1451
+   ],
+   "dPCC": 0.3099,
+   "better/worse": [
+    12,
+    2
+   ],
+   "p_PCC": 0.0012,
+   "dJ": 0.5573,
+   "p_J": 0.0004
+  },
+  "pancreas-human|l1|full[h=0.5 fixed] vs distbridge_strict_nosb_l1|i>=2": {
+   "nass_row": [
+    0.291,
+    0.2277,
+    0.2791
+   ],
+   "distbridge": [
+    -0.0124,
+    0.0962,
+    0.1534
+   ],
+   "dPCC": 0.3034,
+   "better/worse": [
+    11,
+    1
+   ],
+   "p_PCC": 0.0015,
+   "dJ": 0.5606,
+   "p_J": 0.0005
+  }
+ },
+ "distbridge_on_nass_masks": {
+  "db_pancreas-human.json": {
+   "orig|distbridge_strict": {
+    "table": {
+     "all": {
+      "pcc": 0.4921,
+      "p200_up": 0.3037,
+      "p200_down": 0.4394,
+      "pta_up": 0.303,
+      "pta_down": 0.4413,
+      "pcc_sd": 0.0037,
+      "p200_up_sd": 0.0082,
+      "p200_down_sd": 0.0061
+     },
+     "i>=1": {
+      "pcc": 0.5124,
+      "p200_up": 0.3271,
+      "p200_down": 0.4433,
+      "pta_up": 0.3261,
+      "pta_down": 0.4452,
+      "pcc_sd": 0.0041,
+      "p200_up_sd": 0.0088,
+      "p200_down_sd": 0.0072
+     },
+     "i>=2": {
+      "pcc": 0.5104,
+      "p200_up": 0.3447,
+      "p200_down": 0.436,
+      "pta_up": 0.3436,
+      "pta_down": 0.4376,
+      "pcc_sd": 0.004,
+      "p200_up_sd": 0.0094,
+      "p200_down_sd": 0.007
+     },
+     "i>=3": {
+      "pcc": 0.5084,
+      "p200_up": 0.3556,
+      "p200_down": 0.4335,
+      "pta_up": 0.3545,
+      "pta_down": 0.4349,
+      "pcc_sd": 0.0041,
+      "p200_up_sd": 0.0094,
+      "p200_down_sd": 0.0082
+     }
+    },
+    "selected": [
+     "('kalman', 0.2, 0.0)",
+     "('kalman', 0.2, 0.0)",
+     "('kalman', 0.2, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.5)",
+     "('kalman', 0.35, 0.5)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)"
+    ]
+   },
+   "orig|distbridge_strict_nosb": {
+    "table": {
+     "all": {
+      "pcc": 0.4952,
+      "p200_up": 0.3054,
+      "p200_down": 0.4412,
+      "pta_up": 0.3049,
+      "pta_down": 0.4431,
+      "pcc_sd": 0.0037,
+      "p200_up_sd": 0.0079,
+      "p200_down_sd": 0.0057
+     },
+     "i>=1": {
+      "pcc": 0.5157,
+      "p200_up": 0.3288,
+      "p200_down": 0.4452,
+      "pta_up": 0.3281,
+      "pta_down": 0.4472,
+      "pcc_sd": 0.0041,
+      "p200_up_sd": 0.0085,
+      "p200_down_sd": 0.0069
+     },
+     "i>=2": {
+      "pcc": 0.514,
+      "p200_up": 0.3466,
+      "p200_down": 0.4381,
+      "pta_up": 0.3458,
+      "pta_down": 0.4397,
+      "pcc_sd": 0.0039,
+      "p200_up_sd": 0.0091,
+      "p200_down_sd": 0.0067
+     },
+     "i>=3": {
+      "pcc": 0.5123,
+      "p200_up": 0.3577,
+      "p200_down": 0.4358,
+      "pta_up": 0.3569,
+      "pta_down": 0.4372,
+      "pcc_sd": 0.0041,
+      "p200_up_sd": 0.0088,
+      "p200_down_sd": 0.0079
+     }
+    },
+    "selected": [
+     "('kalman', 0.2, 0.0)",
+     "('kalman', 0.2, 0.0)",
+     "('kalman', 0.2, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)",
+     "('kalman', 0.35, 0.0)"
+    ]
+   }
+  },
+  "db_pancreas-human_l1nosb.json": {
+   "l1|distbridge_strict_nosb_l1": {
+    "table": {
+     "all": {
+      "pcc": -0.0348,
+      "p200_up": 0.094,
+      "p200_down": 0.1451,
+      "pta_up": 0.094,
+      "pta_down": 0.1451,
+      "pcc_sd": 0.0159,
+      "p200_up_sd": 0.0036,
+      "p200_down_sd": 0.0046
+     },
+     "i>=1": {
+      "pcc": -0.0403,
+      "p200_up": 0.0932,
+      "p200_down": 0.1449,
+      "pta_up": 0.0932,
+      "pta_down": 0.1449,
+      "pcc_sd": 0.0175,
+      "p200_up_sd": 0.0039,
+      "p200_down_sd": 0.0052
+     },
+     "i>=2": {
+      "pcc": -0.0124,
+      "p200_up": 0.0962,
+      "p200_down": 0.1534,
+      "pta_up": 0.0962,
+      "pta_down": 0.1534,
+      "pcc_sd": 0.0186,
+      "p200_up_sd": 0.0042,
+      "p200_down_sd": 0.0055
+     },
+     "i>=3": {
+      "pcc": -0.015,
+      "p200_up": 0.0948,
+      "p200_down": 0.1585,
+      "pta_up": 0.0949,
+      "pta_down": 0.1584,
+      "pcc_sd": 0.0177,
+      "p200_up_sd": 0.0047,
+      "p200_down_sd": 0.0058
+     }
+    },
+    "selected": [
+     "('kalman', 0.2, 0.0)",
+     "('kalman', 0.2, 0.0)",
+     "('kalman', 0.2, 0.0)",
+     "('box', 1, 0.0)",
+     "('box', 1, 0.0)",
+     "('box', 1, 0.0)",
+     "('box', 1, 0.0)",
+     "('box', 1, 0.0)",
+     "('box', 2, 0.0)",
+     "('box', 1, 0.0)",
+     "('box', 2, 0.0)",
+     "('box', 1, 0.0)",
+     "('box', 1, 0.0)",
+     "('box', 1, 0.0)"
+    ]
+   }
+  }
+ },
+ "distbridge_orig_pancreas_OT_selected": {
+  "transitions": 14,
+  "delta>0": 2,
+  "configs": [
+   "('kalman', 0.2, 0.0)",
+   "('kalman', 0.2, 0.0)",
+   "('kalman', 0.2, 0.0)",
+   "('kalman', 0.35, 0.0)",
+   "('kalman', 0.35, 0.0)",
+   "('kalman', 0.35, 0.0)",
+   "('kalman', 0.35, 0.0)",
+   "('kalman', 0.35, 0.0)",
+   "('kalman', 0.35, 0.0)",
+   "('kalman', 0.35, 0.0)",
+   "('kalman', 0.35, 0.5)",
+   "('kalman', 0.35, 0.5)",
+   "('kalman', 0.35, 0.0)",
+   "('kalman', 0.35, 0.0)"
+  ]
+ },
+ "nass_sinkhorn_err_claim_check": "NASS summary claims Sinkhorn error <= 5e-4; design ot_feature.log shows 7.5e-3 at gastr i=1, 4.4e-4 at i=2, 5.4e-4 at i=9 (minor, claim inaccurate)",
+ "distbridge_l1_with_OT_paired": "not completed (killed after ~55 min); paired DistBridge-without-OT l1 pancreas = -0.035/0.094/0.145 (all), CONTEXT with-OT 0.10/0.17/0.21"
+}

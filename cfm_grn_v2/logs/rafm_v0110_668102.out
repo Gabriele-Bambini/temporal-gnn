@@ -1,0 +1,207 @@
+[Fri Sep 25 02:11:18 AM CEST 2026] argelaguet on gnode01, steps: smoke select chosen 
+argelaguet: test time 2.0 removed: 58970 cells, times [0.0, 1.0, 4.0, 5.0], folds [1.0, 4.0]
+
+=== fold 1.0: predicted from 0.0, bracketing 0.0->4.0; validation 4.0; fit [0.0, 5.0]; 607 genes (5s) ===
+  path family, no network: {'linear': 3.3335, 'spline': 3.8704}
+  seed 0  base         ED 4.0158  mean_err 11.633  (35s, total 1 min)
+  seed 0  center       ED 3.6960  mean_err 11.150  (25s, total 1 min)
+  seed 0  wide         ED 4.2080  mean_err 11.872  (49s, total 2 min)
+  seed 0  wide_center  ED 3.7747  mean_err 11.223  (51s, total 3 min)
+  seed 1  base         ED 4.0085  mean_err 11.624  (24s, total 3 min)
+  seed 1  center       ED 3.7987  mean_err 11.304  (26s, total 4 min)
+  seed 1  wide         ED 4.2232  mean_err 11.889  (51s, total 4 min)
+  seed 1  wide_center  ED 3.9011  mean_err 11.404  (53s, total 5 min)
+
+=== fold 4.0: predicted from 1.0, bracketing 1.0->5.0; validation 1.0; fit [0.0, 5.0]; 607 genes (324s) ===
+  path family, no network: {'linear': 1.017, 'spline': 1.889}
+  seed 0  base         ED 2.1112  mean_err 8.278  (23s, total 6 min)
+  seed 0  center       ED 1.2610  mean_err 6.042  (25s, total 6 min)
+  seed 0  wide         ED 1.5692  mean_err 7.133  (48s, total 7 min)
+  seed 0  wide_center  ED 1.1570  mean_err 6.146  (51s, total 8 min)
+  seed 1  base         ED 2.3761  mean_err 8.897  (22s, total 8 min)
+  seed 1  center       ED 1.3359  mean_err 6.255  (25s, total 9 min)
+  seed 1  wide         ED 1.8597  mean_err 8.087  (46s, total 9 min)
+  seed 1  wide_center  ED 1.2242  mean_err 6.430  (48s, total 10 min)
+
+fold            1.0     4.0
+arm                        
+base         4.0121  2.2436
+center       3.7473  1.2984
+wide         4.2156  1.7145
+wide_center  3.8379  1.1906
+{
+ "dataset": "argelaguet",
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  4.0
+ ],
+ "min_detect": 0.01,
+ "smoke": true,
+ "rule": "improve on base in >= 3 of 4 (fold, seed) pairs and on average; most negative mean change; else base",
+ "per_arm": {
+  "center": {
+   "mean_change": -0.6049819684733553,
+   "n_better": 4,
+   "n": 4,
+   "changes": [
+    -0.31974628865336996,
+    -0.2098303010596112,
+    -0.8501581056082941,
+    -1.0401931785721459
+   ]
+  },
+  "wide": {
+   "mean_change": -0.16283783041825473,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    0.1922542897288082,
+    0.21469446333333053,
+    -0.5419714429339564,
+    -0.5163286318012013
+   ]
+  },
+  "wide_center": {
+   "mean_change": -0.613614541196764,
+   "n_better": 4,
+   "n": 4,
+   "changes": [
+    -0.24102142640657576,
+    -0.1073849703432117,
+    -0.954151115739748,
+    -1.1519006522975204
+   ]
+  }
+ },
+ "winner": "wide_center",
+ "overrides": {
+  "hidden": 512,
+  "path_center": "linear"
+ }
+}
+done in 10.2 min
+[Fri Sep 25 02:22:14 AM CEST 2026] smoke done
+argelaguet: test time 2.0 removed: 58970 cells, times [0.0, 1.0, 4.0, 5.0], folds [1.0, 4.0]
+
+=== fold 1.0: predicted from 0.0, bracketing 0.0->4.0; validation 4.0; fit [0.0, 5.0]; 1427 genes (6s) ===
+  path family, no network: {'linear': 3.4475, 'spline': 4.0252}
+  seed 0  base         ED 3.9902  mean_err 14.183  (389s, total 7 min)
+  seed 0  center       ED 3.6128  mean_err 13.479  (416s, total 14 min)
+  seed 0  wide         ED 4.3394  mean_err 14.781  (787s, total 27 min)
+  seed 0  wide_center  ED 3.8353  mean_err 13.875  (828s, total 41 min)
+  seed 1  base         ED 4.1396  mean_err 14.476  (411s, total 47 min)
+  seed 1  center       ED 3.7250  mean_err 13.723  (469s, total 55 min)
+  seed 1  wide         ED 4.5846  mean_err 15.207  (838s, total 69 min)
+  seed 1  wide_center  ED 3.9753  mean_err 14.147  (888s, total 84 min)
+
+=== fold 4.0: predicted from 1.0, bracketing 1.0->5.0; validation 1.0; fit [0.0, 5.0]; 1427 genes (5053s) ===
+  path family, no network: {'linear': 1.0913, 'spline': 1.9486}
+  seed 0  base         ED 1.9222  mean_err 9.528  (361s, total 90 min)
+  seed 0  center       ED 1.3526  mean_err 7.658  (401s, total 97 min)
+  seed 0  wide         ED 1.4828  mean_err 8.634  (1105s, total 115 min)
+  seed 0  wide_center  ED 1.2859  mean_err 7.874  (1145s, total 135 min)
+  seed 1  base         ED 1.8853  mean_err 9.809  (568s, total 144 min)
+  seed 1  center       ED 1.3343  mean_err 7.999  (720s, total 156 min)
+  seed 1  wide         ED 1.5690  mean_err 8.825  (860s, total 170 min)
+  seed 1  wide_center  ED 1.3253  mean_err 8.011  (897s, total 185 min)
+
+fold            1.0     4.0
+arm                        
+base         4.0649  1.9037
+center       3.6689  1.3435
+wide         4.4620  1.5259
+wide_center  3.9053  1.3056
+{
+ "dataset": "argelaguet",
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  4.0
+ ],
+ "min_detect": 0.01,
+ "smoke": false,
+ "rule": "improve on base in >= 3 of 4 (fold, seed) pairs and on average; most negative mean change; else base",
+ "per_arm": {
+  "center": {
+   "mean_change": -0.4781512595355455,
+   "n_better": 4,
+   "n": 4,
+   "changes": [
+    -0.3774170232427849,
+    -0.4146319426853253,
+    -0.5695870988649006,
+    -0.5509689733491712
+   ]
+  },
+  "wide": {
+   "mean_change": 0.009639813979324785,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    0.3492392865809819,
+    0.4450292384089991,
+    -0.43936264612913334,
+    -0.31634662294354854
+   ]
+  },
+  "wide_center": {
+   "mean_change": -0.37884337818727154,
+   "n_better": 4,
+   "n": 4,
+   "changes": [
+    -0.15487423432183078,
+    -0.1642612728978179,
+    -0.6362219001571532,
+    -0.5600161053722843
+   ]
+  }
+ },
+ "winner": "center",
+ "overrides": {
+  "path_center": "linear"
+ }
+}
+done in 185.3 min
+[Fri Sep 25 05:28:14 AM CEST 2026] selection done
+wild-type time course: 71176 cells, stages {'E7.5': 22117, 'E7.75': 5257, 'E8.0': 12206, 'E8.5': 22322, 'E8.75': 9274} (11s)
+design: test E8.0 from E7.75 (horizon 0.25 d); bracketing E7.75 -> E8.5 observed; validation E8.5 from E7.75; fit ['E7.5', 'E7.75', 'E8.75']
+genes: 1428 selected on the 36648 fit cells (1000 HVG union the expressed prior regulators), of which 465 are prior regulators (23s)
+prior coverage: {'prior_edges_within_selected_genes': 1587, 'prior_regulators_present': 331}
+replicate yardstick (energy distance between the two biological replicates): {'E7.5': 0.552, 'E8.0': 0.0265, 'E8.5': 0.2364, 'E8.75': 0.1701}
+snapshots: 15000 cells, 1428 genes, times [0.0, 1.0, 2.0, 4.0, 5.0] (31s)
+configuration chosen on the validation folds: {'path_center': 'linear'}
+[argelaguet2022] flow_matching seed=0 done in 426s
+[argelaguet2022] flow_matching_shuffled_time seed=0 done in 349s
+[argelaguet2022] flow_matching seed=1 done in 384s
+[argelaguet2022] flow_matching_shuffled_time seed=1 done in 332s
+[argelaguet2022] flow_matching seed=2 done in 389s
+[argelaguet2022] flow_matching_shuffled_time seed=2 done in 325s
+[argelaguet2022] flow_matching seed=3 done in 463s
+[argelaguet2022] flow_matching_shuffled_time seed=3 done in 324s
+[argelaguet2022] flow_matching seed=4 done in 380s
+[argelaguet2022] flow_matching_shuffled_time seed=4 done in 356s
+
+                                mean     std  count
+model                                              
+noise_floor                  -0.0021  0.0000      5
+mean_interp                   1.5131  0.0256      5
+ot_interp                     1.9867  0.0150      5
+flow_matching                 2.0296  0.0744      5
+flow_matching_shuffled_time   2.8480  0.0850      5
+persistence                   3.1162  0.0339      5
+mlp                           4.3195  0.1312      5
+linear                        8.8911  0.5610      5
+freefm_replay                11.2297  0.8085      5
+
+flow_vs_mean_interp                  mean +0.5165  CI95 [+0.4362, +0.5969]  n=5
+flow_vs_ot_interp                    mean +0.0430  CI95 [-0.0317, +0.1177]  n=5
+flow_vs_linear                       mean -6.8614  CI95 [-7.5535, -6.1694]  n=5
+flow_vs_mlp                          mean -2.2899  CI95 [-2.4251, -2.1546]  n=5
+flow_vs_persistence                  mean -1.0866  CI95 [-1.1571, -1.0160]  n=5
+flow_vs_freefm_replay                mean -9.2001  CI95 [-10.1677, -8.2325]  n=5
+flow_vs_flow_matching_shuffled_time  mean -0.8183  CI95 [-0.9354, -0.7013]  n=5
+
+done in 141.2 min -> outputs/argelaguet_v0110
+[Fri Sep 25 07:49:54 AM CEST 2026] chosen-configuration measurement done
+[Fri Sep 25 07:49:54 AM CEST 2026] all steps done

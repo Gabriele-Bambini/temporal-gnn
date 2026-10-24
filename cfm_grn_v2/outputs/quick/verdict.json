@@ -1,0 +1,147 @@
+{
+ "synthetic_grn": {
+  "dataset": "synthetic_grn",
+  "metric": "energy_distance",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "mean_shift",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "mean_shift",
+   "metric": "energy_distance",
+   "mean": 4.022344973985139,
+   "ci_low": -0.31475849701947567,
+   "ci_high": 8.359448444989754,
+   "n": 2
+  },
+  "uses_time": false,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": 1.8389714538181638,
+   "ci_low": -2.296323614053106,
+   "ci_high": 5.974266521689433,
+   "n": 2
+  },
+  "fm_mean": 4.392796006874258,
+  "noise_floor": 0.080157621950864,
+  "within_3x_noise_floor": false
+ },
+ "toy_bimodal": {
+  "dataset": "toy_bimodal",
+  "metric": "energy_distance",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "freefm_replay",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "freefm_replay",
+   "metric": "energy_distance",
+   "mean": 0.24132510510826233,
+   "ci_low": 0.20080613705069048,
+   "ci_high": 0.28184407316583415,
+   "n": 2
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.7842341830679378,
+   "ci_low": -0.8172817211371171,
+   "ci_high": -0.7511866449987585,
+   "n": 2
+  },
+  "fm_mean": 0.24321505152042144,
+  "noise_floor": 0.022930067010963652,
+  "within_3x_noise_floor": false
+ },
+ "toy_condition_shift": {
+  "dataset": "toy_condition_shift",
+  "metric": "energy_distance",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "mean_shift",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "mean_shift",
+   "metric": "energy_distance",
+   "mean": 0.0112652010707468,
+   "ci_low": -0.08783073178257755,
+   "ci_high": 0.11036113392407115,
+   "n": 2
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.8433227071158005,
+   "ci_low": -1.194105194397913,
+   "ci_high": -0.49254021983368795,
+   "n": 2
+  },
+  "fm_mean": 0.02312790028028311,
+  "noise_floor": 0.015212522512001048,
+  "within_3x_noise_floor": true
+ },
+ "toy_translation": {
+  "dataset": "toy_translation",
+  "metric": "energy_distance",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "mean_shift",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "mean_shift",
+   "metric": "energy_distance",
+   "mean": 0.014219558728664428,
+   "ci_low": -0.20391828519442312,
+   "ci_high": 0.23235740265175198,
+   "n": 2
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -2.514243618856129,
+   "ci_low": -3.2132287189119833,
+   "ci_high": -1.8152585188002748,
+   "n": 2
+  },
+  "fm_mean": 0.030208013001405964,
+  "noise_floor": 0.018781146595068864,
+  "within_3x_noise_floor": true
+ },
+ "toy_variance": {
+  "dataset": "toy_variance",
+  "metric": "energy_distance",
+  "pass": false,
+  "beats_all_controls": true,
+  "best_control": "linear",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "linear",
+   "metric": "energy_distance",
+   "mean": -0.00013609464677000194,
+   "ci_low": -0.07142475256818687,
+   "ci_high": 0.07115256327464686,
+   "n": 2
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.1117814669170728,
+   "ci_low": -0.1386972284191618,
+   "ci_high": -0.08486570541498381,
+   "n": 2
+  },
+  "fm_mean": 0.0216611464168599,
+  "noise_floor": 0.025282051007359252,
+  "within_3x_noise_floor": true
+ }
+}

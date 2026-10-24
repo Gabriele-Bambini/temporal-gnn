@@ -1,0 +1,30 @@
+== pancreas-human l1
+  svdkf_all                            0.165 0.231 0.213
+  svdkf_all__HINDSIGHT_not_strict      0.151 0.224 0.215
+  svdkf_zero                           0.167 0.226 0.210
+  svdkf_zero__HINDSIGHT_not_strict     0.141 0.221 0.209
+  svdkf_avg3                           0.166 0.225 0.211
+  svdkf_avg3__HINDSIGHT_not_strict     0.142 0.216 0.212
+  svdkf_last                           0.159 0.233 0.214
+  svdkf_last__HINDSIGHT_not_strict     0.151 0.224 0.215
+  svdkf_all_vs_trend                   dPCC +0.005 (7/6) dJ +0.009 (7/6, p=0.946044921875)
+  svdkf_all_vs_pergene_all             dPCC +0.007 (7/6) dJ +0.018 (7/6, p=0.83935546875)
+  svdkf_all_vs_svd_all                 dPCC -0.007 (5/8) dJ -0.002 (6/7, p=0.83935546875)
+  svdkf_all_vs_nmf_all                 dPCC +0.101 (11/2) dJ +0.164 (11/2, p=0.004638671875)
+  svdkf_all_vs_nmf_K8                  dPCC +0.078 (10/3) dJ +0.125 (9/4, p=0.057373046875)
+  svdkf_all_vs_nmf_persist_denoise     dPCC +0.245 (11/2) dJ +0.402 (10/3, p=0.021484375)
+== pancreas-human linear
+  svdkf_all                            0.344 0.287 0.337
+  svdkf_all__HINDSIGHT_not_strict      0.401 0.290 0.361
+  svdkf_zero                           0.346 0.287 0.336
+  svdkf_zero__HINDSIGHT_not_strict     0.395 0.285 0.359
+  svdkf_avg3                           0.342 0.286 0.336
+  svdkf_avg3__HINDSIGHT_not_strict     0.395 0.285 0.359
+  svdkf_last                           0.356 0.295 0.341
+  svdkf_last__HINDSIGHT_not_strict     0.401 0.290 0.361
+  svdkf_all_vs_trend                   dPCC -0.057 (7/6) dJ -0.084 (7/6, p=0.635498046875)
+  svdkf_all_vs_pergene_all             dPCC -0.032 (5/8) dJ -0.053 (5/8, p=0.243896484375)
+  svdkf_all_vs_svd_all                 dPCC +0.027 (7/6) dJ +0.035 (6/7, p=0.635498046875)
+  svdkf_all_vs_nmf_all                 dPCC +0.163 (11/2) dJ +0.236 (10/3, p=0.026611328125)
+  svdkf_all_vs_nmf_K8                  dPCC +0.044 (9/4) dJ +0.082 (9/4, p=0.2734375)
+  svdkf_all_vs_nmf_persist_denoise     dPCC +0.520 (11/2) dJ +0.714 (11/2, p=0.00244140625)

@@ -1,0 +1,43 @@
+{
+ "c_true": 17.857898520913313,
+ "scan": {
+  "0.6": {
+   "c_label": 8.455148793793361,
+   "at_edge": false
+  },
+  "0.7": {
+   "c_label": 10.644401677007263,
+   "at_edge": false
+  },
+  "0.8": {
+   "c_label": 13.400507764528896,
+   "at_edge": false
+  },
+  "0.9": {
+   "c_label": 15.035617008818173,
+   "at_edge": false
+  },
+  "1.0": {
+   "c_label": 16.87023975571047,
+   "at_edge": false
+  },
+  "1.1": {
+   "c_label": 21.23837353152414,
+   "at_edge": false
+  },
+  "1.25": {
+   "c_label": 23.82984704172845,
+   "at_edge": false
+  },
+  "1.4": {
+   "c_label": 29.999999999999996,
+   "at_edge": false
+  },
+  "1.6": {
+   "c_label": 37.76776235382502,
+   "at_edge": false
+  }
+ },
+ "slope_dlogc_dlogalpha": 1.4923026597777984,
+ "note": "decoder-oracle world; labels generated with the true alpha, scored with alpha x s"
+}

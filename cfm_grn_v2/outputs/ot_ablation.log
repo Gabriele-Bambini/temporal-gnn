@@ -1,0 +1,49 @@
+[grn_interp_t3] flow_matching seed=0 done in 17s
+[grn_interp_t3] flow_matching_shuffled_time seed=0 done in 21s
+[grn_interp_t3] flow_matching seed=1 done in 19s
+[grn_interp_t3] flow_matching_shuffled_time seed=1 done in 12s
+[grn_interp_t3] flow_matching seed=2 done in 17s
+[grn_interp_t3] flow_matching_shuffled_time seed=2 done in 11s
+[grn_interp_t3] flow_matching seed=3 done in 13s
+[grn_interp_t3] flow_matching_shuffled_time seed=3 done in 13s
+[grn_interp_t3] flow_matching seed=4 done in 44s
+[grn_interp_t3] flow_matching_shuffled_time seed=4 done in 34s
+[spline_ot] done, 318s elapsed
+[grn_interp_t3] flow_matching seed=0 done in 48s
+[grn_interp_t3] flow_matching seed=1 done in 45s
+[grn_interp_t3] flow_matching seed=2 done in 51s
+[grn_interp_t3] flow_matching seed=3 done in 48s
+[grn_interp_t3] flow_matching seed=4 done in 52s
+[spline_random] done, 738s elapsed
+[grn_interp_t3] flow_matching seed=0 done in 83s
+[grn_interp_t3] flow_matching seed=1 done in 91s
+[grn_interp_t3] flow_matching seed=2 done in 177s
+[grn_interp_t3] flow_matching seed=3 done in 86s
+[grn_interp_t3] flow_matching seed=4 done in 75s
+[linear_ot] done, 1429s elapsed
+[grn_interp_t3] flow_matching seed=0 done in 46s
+[grn_interp_t3] flow_matching seed=1 done in 40s
+[grn_interp_t3] flow_matching seed=2 done in 40s
+[grn_interp_t3] flow_matching seed=3 done in 41s
+[grn_interp_t3] flow_matching seed=4 done in 33s
+[linear_indep] done, 1806s elapsed
+                          mean    std  count
+model                                       
+noise_floor              0.000  0.000      5
+spline_random            0.625  0.007      5
+spline_ot                0.643  0.003      5
+linear_indep             1.061  0.033      5
+linear_ot                1.071  0.006      5
+mean_interp              1.102  0.000      5
+ot_interp                1.171  0.000      5
+linear                   2.747  0.000      5
+mlp                      2.908  0.148      5
+spline_ot_shuffled_time  4.117  0.048      5
+persistence              4.155  0.000      5
+freefm_replay            4.402  0.000      5
+spline_ot_vs_spline_random: mean 0.018 CI95 [0.007, 0.029] n=5
+spline_ot_vs_linear_ot: mean -0.427 CI95 [-0.434, -0.421] n=5
+linear_ot_vs_linear_indep: mean 0.009 CI95 [-0.031, 0.050] n=5
+spline_ot_vs_ot_interp: mean -0.527 CI95 [-0.531, -0.523] n=5
+spline_ot_vs_mean_interp: mean -0.459 CI95 [-0.463, -0.455] n=5
+spline_ot_vs_shuffled_time: mean -3.474 CI95 [-3.532, -3.416] n=5

@@ -1,0 +1,12 @@
+﻿python : C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\hpc\dist_bridge.py:120: RuntimeWarning: invalid 
+value encountered in divide
+At line:1 char:551
++ ... ocation $j; python db_paired.py pancreas-human l1 *> "$j\db_pancr_l1. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\Gabrie...tered in divide:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  out[nb] = stats.nbinom.cdf(e[nb], (lam ** 2 / (var - lam))[nb][:, None], (lam / var)[nb][:, None])
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\hpc\dist_bridge.py:120: RuntimeWarning: divide by zero 
+encountered in divide
+  out[nb] = stats.nbinom.cdf(e[nb], (lam ** 2 / (var - lam))[nb][:, None], (lam / var)[nb][:, None])

@@ -1,0 +1,187 @@
+{
+ "protocol": "Side probe for the orig observation head (strict): does a long-memory law for genes at zero in bin i help?\n\npopot.py found that the turn-on AUC (genes with m_i = 0, label m_{i+1} > 0) of the 4-bin pooled law's nonzero\nfraction is 0.79 / 0.72 (gastr / pancr), below the 0.86 / 0.81 of the plain 'fraction of past bins expressed'.\nHere the orig prediction is dist_bridge.expected_target on the box4 law (= level + observation model, the popot\nbaseline), except that genes at zero in bin i take the law pooled over a longer past: box8, all past bins, or a\nrecency-weighted pool (weights n_b * 0.5^((i - b) / h), h in {2, 4}). Everything reads snapshots <= i only.\nScores as popot.py (crossgene common.masks, Pearson and P@200 with np.argsort). Output turnon_probe.json.\n",
+ "gastrulation-human": {
+  "box4 (baseline)": {
+   "i>=1": [
+    0.5905,
+    0.3933,
+    0.545
+   ],
+   "all": [
+    0.578,
+    0.3801,
+    0.5358
+   ],
+   "i>=1_no_last": [
+    0.5923,
+    0.4004,
+    0.5567
+   ],
+   "turn_on_auc_i>=1": 0.792
+  },
+  "zeros<-box8": {
+   "i>=1": [
+    0.6033,
+    0.418,
+    0.5465
+   ],
+   "all": [
+    0.5903,
+    0.4039,
+    0.5364
+   ],
+   "i>=1_no_last": [
+    0.6055,
+    0.4261,
+    0.5583
+   ],
+   "turn_on_auc_i>=1": 0.8418
+  },
+  "zeros<-all_past": {
+   "i>=1": [
+    0.6006,
+    0.4144,
+    0.5445
+   ],
+   "all": [
+    0.5877,
+    0.4006,
+    0.5348
+   ],
+   "i>=1_no_last": [
+    0.6031,
+    0.4228,
+    0.5562
+   ],
+   "turn_on_auc_i>=1": 0.863
+  },
+  "zeros<-recency_h2": {
+   "i>=1": [
+    0.6021,
+    0.4147,
+    0.5436
+   ],
+   "all": [
+    0.5892,
+    0.4008,
+    0.5342
+   ],
+   "i>=1_no_last": [
+    0.6042,
+    0.4225,
+    0.5553
+   ],
+   "turn_on_auc_i>=1": 0.8627
+  },
+  "zeros<-recency_h4": {
+   "i>=1": [
+    0.6048,
+    0.4221,
+    0.5452
+   ],
+   "all": [
+    0.5918,
+    0.408,
+    0.5366
+   ],
+   "i>=1_no_last": [
+    0.6071,
+    0.4305,
+    0.557
+   ],
+   "turn_on_auc_i>=1": 0.8643
+  }
+ },
+ "pancreas-human": {
+  "box4 (baseline)": {
+   "i>=1": [
+    0.4811,
+    0.3199,
+    0.4537
+   ],
+   "all": [
+    0.4635,
+    0.2971,
+    0.4484
+   ],
+   "i>=1_no_last": [
+    0.4848,
+    0.3377,
+    0.4642
+   ],
+   "turn_on_auc_i>=1": 0.7529
+  },
+  "zeros<-box8": {
+   "i>=1": [
+    0.493,
+    0.33,
+    0.4543
+   ],
+   "all": [
+    0.4745,
+    0.3064,
+    0.4496
+   ],
+   "i>=1_no_last": [
+    0.4994,
+    0.3481,
+    0.4645
+   ],
+   "turn_on_auc_i>=1": 0.7915
+  },
+  "zeros<-all_past": {
+   "i>=1": [
+    0.4967,
+    0.3313,
+    0.4546
+   ],
+   "all": [
+    0.478,
+    0.3076,
+    0.4505
+   ],
+   "i>=1_no_last": [
+    0.5058,
+    0.3509,
+    0.465
+   ],
+   "turn_on_auc_i>=1": 0.8103
+  },
+  "zeros<-recency_h2": {
+   "i>=1": [
+    0.4978,
+    0.332,
+    0.4536
+   ],
+   "all": [
+    0.479,
+    0.3083,
+    0.4495
+   ],
+   "i>=1_no_last": [
+    0.5031,
+    0.3506,
+    0.4639
+   ],
+   "turn_on_auc_i>=1": 0.8127
+  },
+  "zeros<-recency_h4": {
+   "i>=1": [
+    0.4991,
+    0.3315,
+    0.4541
+   ],
+   "all": [
+    0.4802,
+    0.3079,
+    0.4487
+   ],
+   "i>=1_no_last": [
+    0.5065,
+    0.3507,
+    0.4643
+   ],
+   "turn_on_auc_i>=1": 0.8121
+  }
+ }
+}

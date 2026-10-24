@@ -1,0 +1,1453 @@
+{
+ "gastrulation-human": {
+  "filter_setting_per_t": [
+   "tau=0.05,mu0=-4.0",
+   "tau=1.0,mu0=-6.0",
+   "tau=0.2,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.2,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.1,mu0=-6.0",
+   "tau=0.2,mu0=-6.0",
+   "tau=0.2,mu0=-6.0",
+   "tau=0.2,mu0=-6.0",
+   "tau=0.2,mu0=-6.0",
+   "tau=0.2,mu0=-6.0"
+  ],
+  "invariance_per_t": {
+   "0": {
+    "sigma_med": 0.5,
+    "sigma_sd": 0.5,
+    "n_genes_K>0": 5250,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "3": {
+    "sigma_med": 1.471,
+    "sigma_sd": 1.935,
+    "n_genes_K>0": 11805,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.1574,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.998073,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 0.999958,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.998049,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999957,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999549,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 0.999989
+   },
+   "4": {
+    "sigma_med": 0.815,
+    "sigma_sd": 1.676,
+    "n_genes_K>0": 11796,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.1646,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.998082,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 0.999943,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.997767,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999938,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.998495,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 0.999957
+   },
+   "5": {
+    "sigma_med": 0.466,
+    "sigma_sd": 1.513,
+    "n_genes_K>0": 11256,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.1147,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999445,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 0.999989,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999246,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.99998,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999387,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 0.999989
+   },
+   "6": {
+    "sigma_med": 0.53,
+    "sigma_sd": 1.403,
+    "n_genes_K>0": 10676,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.068,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999864,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 0.999998,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999843,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999989,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999871,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 0.999999
+   },
+   "7": {
+    "sigma_med": 0.466,
+    "sigma_sd": 1.31,
+    "n_genes_K>0": 10194,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0404,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999967,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 0.999999,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999967,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.99999,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999997,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "8": {
+    "sigma_med": 0.458,
+    "sigma_sd": 1.225,
+    "n_genes_K>0": 10293,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0403,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999968,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 0.999999,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999968,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999993,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999985,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "10": {
+    "sigma_med": 0.304,
+    "sigma_sd": 1.097,
+    "n_genes_K>0": 10555,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0575,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.99993,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999905,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999996,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999985,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "11": {
+    "sigma_med": 0.16,
+    "sigma_sd": 1.046,
+    "n_genes_K>0": 10661,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0595,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999951,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999895,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999996,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999786,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "12": {
+    "sigma_med": 0.254,
+    "sigma_sd": 1.007,
+    "n_genes_K>0": 11072,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0837,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999843,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999707,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999996,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999981,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "13": {
+    "sigma_med": 0.16,
+    "sigma_sd": 0.967,
+    "n_genes_K>0": 11238,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0863,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999872,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999679,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999995,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999819,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "14": {
+    "sigma_med": 0.219,
+    "sigma_sd": 0.935,
+    "n_genes_K>0": 11018,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0678,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999915,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999844,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999994,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999891,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "15": {
+    "sigma_med": 0.279,
+    "sigma_sd": 0.907,
+    "n_genes_K>0": 10748,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0478,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999962,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999946,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999994,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999999,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "16": {
+    "sigma_med": 0.219,
+    "sigma_sd": 0.878,
+    "n_genes_K>0": 10755,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0488,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999964,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999942,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999995,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999983,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "17": {
+    "sigma_med": 0.16,
+    "sigma_sd": 0.852,
+    "n_genes_K>0": 10707,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0445,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999979,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999956,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999995,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999944,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "18": {
+    "sigma_med": 0.169,
+    "sigma_sd": 0.829,
+    "n_genes_K>0": 11057,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0561,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999953,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999912,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999996,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999944,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "19": {
+    "sigma_med": 0.16,
+    "sigma_sd": 0.807,
+    "n_genes_K>0": 11216,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0649,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999938,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999863,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999996,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999945,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "20": {
+    "sigma_med": 0.158,
+    "sigma_sd": 0.787,
+    "n_genes_K>0": 11340,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0712,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999932,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.99982,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999996,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999989,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "21": {
+    "sigma_med": 0.156,
+    "sigma_sd": 0.768,
+    "n_genes_K>0": 11664,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0664,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999948,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999854,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999995,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999909,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "22": {
+    "sigma_med": 0.158,
+    "sigma_sd": 0.753,
+    "n_genes_K>0": 11073,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0487,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999973,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999942,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999994,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999977,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "23": {
+    "sigma_med": 0.156,
+    "sigma_sd": 0.737,
+    "n_genes_K>0": 11053,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0411,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999984,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999965,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999995,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999998,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "2": {
+    "sigma_med": 2.239,
+    "sigma_sd": 2.367,
+    "n_genes_K>0": 11605,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.1399,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.998629,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.998629,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999375,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "9": {
+    "sigma_med": 0.449,
+    "sigma_sd": 1.155,
+    "n_genes_K>0": 10365,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0452,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999959,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999954,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999947,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "24": {
+    "sigma_med": 0.148,
+    "sigma_sd": 0.722,
+    "n_genes_K>0": 11200,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0387,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999986,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999971,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999921,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "25": {
+    "sigma_med": 0.156,
+    "sigma_sd": 0.709,
+    "n_genes_K>0": 11670,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.057,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999956,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999908,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999937,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "26": {
+    "sigma_med": 0.158,
+    "sigma_sd": 0.698,
+    "n_genes_K>0": 11297,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.041,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999982,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999966,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999966,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "27": {
+    "sigma_med": 0.16,
+    "sigma_sd": 0.692,
+    "n_genes_K>0": 10709,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "28": {
+    "sigma_med": 0.169,
+    "sigma_sd": 0.71,
+    "n_genes_K>0": 9583,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "1": {
+    "sigma_med": 3.007,
+    "sigma_sd": 3.007,
+    "n_genes_K>0": 9799,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 0.999994,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999994,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 0.999994,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999994,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.998321,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   }
+  },
+  "invariance_summary_t>=1": {
+   "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": {
+    "min": 0.999994,
+    "mean": 1.0
+   },
+   "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": {
+    "min": 0.998073,
+    "mean": 0.999752
+   },
+   "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": {
+    "min": 0.999943,
+    "mean": 0.999996
+   },
+   "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": {
+    "min": 0.999994,
+    "mean": 1.0
+   },
+   "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": {
+    "min": 0.997767,
+    "mean": 0.999696
+   },
+   "spearman posterior p, lognormal(sd_past) vs n_t": {
+    "min": 0.999938,
+    "mean": 0.999992
+   },
+   "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": {
+    "min": 1.0,
+    "mean": 1.0
+   },
+   "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": {
+    "min": 0.998321,
+    "mean": 0.999782
+   },
+   "spearman posterior p, oracle n_{t+1} vs n_t": {
+    "min": 0.999957,
+    "mean": 0.999998
+   }
+  },
+  "check_base_equals_dist_bridge.expected_target (max abs diff, same rng)": 1.8879308516517312e-07,
+  "scores": {
+   "base [rolling]": {
+    "i>=1": {
+     "pcc": 0.5993,
+     "up": 0.4169,
+     "down": 0.5503,
+     "spearman": 0.3153
+    },
+    "i>=2": {
+     "pcc": 0.6126,
+     "up": 0.4311,
+     "down": 0.5572,
+     "spearman": 0.3262
+    }
+   },
+   "base [box4]": {
+    "i>=1": {
+     "pcc": 0.5916,
+     "up": 0.3966,
+     "down": 0.5441,
+     "spearman": 0.3426
+    },
+    "i>=2": {
+     "pcc": 0.6037,
+     "up": 0.4104,
+     "down": 0.5498,
+     "spearman": 0.3535
+    }
+   },
+   "base [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.5971,
+     "up": 0.4214,
+     "down": 0.5443,
+     "spearman": 0.3148
+    },
+    "i>=2": {
+     "pcc": 0.6102,
+     "up": 0.4358,
+     "down": 0.551,
+     "spearman": 0.3257
+    }
+   },
+   "A_phat [rolling]": {
+    "i>=1": {
+     "pcc": 0.6064,
+     "up": 0.425,
+     "down": 0.5472,
+     "spearman": 0.2917
+    },
+    "i>=2": {
+     "pcc": 0.6168,
+     "up": 0.4375,
+     "down": 0.5538,
+     "spearman": 0.3058
+    }
+   },
+   "A_phat [box4]": {
+    "i>=1": {
+     "pcc": 0.6061,
+     "up": 0.425,
+     "down": 0.5479,
+     "spearman": 0.2914
+    },
+    "i>=2": {
+     "pcc": 0.6165,
+     "up": 0.4375,
+     "down": 0.5541,
+     "spearman": 0.3055
+    }
+   },
+   "A_phat [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.6062,
+     "up": 0.425,
+     "down": 0.5476,
+     "spearman": 0.287
+    },
+    "i>=2": {
+     "pcc": 0.6166,
+     "up": 0.4376,
+     "down": 0.5542,
+     "spearman": 0.301
+    }
+   },
+   "B_phat+post0 [rolling]": {
+    "i>=1": {
+     "pcc": 0.6073,
+     "up": 0.4251,
+     "down": 0.5472,
+     "spearman": 0.2924
+    },
+    "i>=2": {
+     "pcc": 0.6176,
+     "up": 0.4376,
+     "down": 0.5538,
+     "spearman": 0.3065
+    }
+   },
+   "B_phat+post0 [box4]": {
+    "i>=1": {
+     "pcc": 0.6069,
+     "up": 0.4248,
+     "down": 0.5479,
+     "spearman": 0.2922
+    },
+    "i>=2": {
+     "pcc": 0.6172,
+     "up": 0.4374,
+     "down": 0.5541,
+     "spearman": 0.3064
+    }
+   },
+   "B_phat+post0 [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.6071,
+     "up": 0.4249,
+     "down": 0.5476,
+     "spearman": 0.2877
+    },
+    "i>=2": {
+     "pcc": 0.6174,
+     "up": 0.4374,
+     "down": 0.5542,
+     "spearman": 0.3016
+    }
+   },
+   "C_post_all [rolling]": {
+    "i>=1": {
+     "pcc": 0.6081,
+     "up": 0.425,
+     "down": 0.5473,
+     "spearman": 0.2912
+    },
+    "i>=2": {
+     "pcc": 0.6188,
+     "up": 0.4375,
+     "down": 0.5539,
+     "spearman": 0.3038
+    }
+   },
+   "C_post_all [box4]": {
+    "i>=1": {
+     "pcc": 0.6078,
+     "up": 0.425,
+     "down": 0.5481,
+     "spearman": 0.2909
+    },
+    "i>=2": {
+     "pcc": 0.6185,
+     "up": 0.4376,
+     "down": 0.5542,
+     "spearman": 0.3035
+    }
+   },
+   "C_post_all [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.6079,
+     "up": 0.4251,
+     "down": 0.5477,
+     "spearman": 0.2864
+    },
+    "i>=2": {
+     "pcc": 0.6186,
+     "up": 0.4376,
+     "down": 0.5543,
+     "spearman": 0.2989
+    }
+   },
+   "D_base+post0 [rolling]": {
+    "i>=1": {
+     "pcc": 0.6071,
+     "up": 0.4253,
+     "down": 0.5462,
+     "spearman": 0.2894
+    },
+    "i>=2": {
+     "pcc": 0.6173,
+     "up": 0.4379,
+     "down": 0.553,
+     "spearman": 0.3006
+    }
+   },
+   "D_base+post0 [box4]": {
+    "i>=1": {
+     "pcc": 0.6077,
+     "up": 0.4262,
+     "down": 0.5441,
+     "spearman": 0.3087
+    },
+    "i>=2": {
+     "pcc": 0.6179,
+     "up": 0.4388,
+     "down": 0.5498,
+     "spearman": 0.3206
+    }
+   },
+   "D_base+post0 [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.6068,
+     "up": 0.4254,
+     "down": 0.5443,
+     "spearman": 0.2643
+    },
+    "i>=2": {
+     "pcc": 0.617,
+     "up": 0.4379,
+     "down": 0.551,
+     "spearman": 0.2746
+    }
+   }
+  },
+  "selected_pools": {
+   "base": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box4",
+    "box4",
+    "box4",
+    "box4",
+    "box6",
+    "box8",
+    "box8",
+    "box8",
+    "kalman0.1",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box8",
+    "box8",
+    "box8",
+    "box8",
+    "box8",
+    "box8",
+    "box8",
+    "box8",
+    "box8",
+    "box6",
+    "box6"
+   ],
+   "A_phat": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box8",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2"
+   ],
+   "B_phat+post0": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box8",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2"
+   ],
+   "C_post_all": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box8",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2"
+   ],
+   "D_base+post0": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box2",
+    "box4",
+    "box4",
+    "box4",
+    "box4",
+    "box4",
+    "box4",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box6",
+    "box6",
+    "box6",
+    "box6",
+    "box6",
+    "box6",
+    "box6",
+    "box4",
+    "box4",
+    "box4",
+    "box4"
+   ]
+  },
+  "p_hat_vs_f_t": {
+   "median_abs_logit_diff_K>0": 0.123,
+   "mean P0_post among K_t=0 genes (t>=1)": 0.9069
+  },
+  "seconds": 346
+ },
+ "pancreas-human": {
+  "filter_setting_per_t": [
+   "tau=0.05,mu0=-4.0",
+   "tau=0.2,mu0=-4.0",
+   "tau=0.2,mu0=-4.0",
+   "tau=0.2,mu0=-4.0",
+   "tau=0.2,mu0=-4.0",
+   "tau=0.35,mu0=-4.0",
+   "tau=0.35,mu0=-4.0",
+   "tau=0.35,mu0=-4.0",
+   "tau=0.35,mu0=-4.0",
+   "tau=0.35,mu0=-4.0",
+   "tau=0.35,mu0=-4.0",
+   "tau=0.35,mu0=-4.0",
+   "tau=0.35,mu0=-4.0",
+   "tau=0.35,mu0=-4.0"
+  ],
+  "invariance_per_t": {
+   "0": {
+    "sigma_med": 0.5,
+    "sigma_sd": 0.5,
+    "n_genes_K>0": 11335,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.99959,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "1": {
+    "sigma_med": 1.707,
+    "sigma_sd": 1.707,
+    "n_genes_K>0": 12842,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0758,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999782,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999782,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999812,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "2": {
+    "sigma_med": 1.118,
+    "sigma_sd": 1.264,
+    "n_genes_K>0": 12214,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0373,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999974,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999974,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999999,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999974,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "3": {
+    "sigma_med": 1.135,
+    "sigma_sd": 1.222,
+    "n_genes_K>0": 11203,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999999,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "4": {
+    "sigma_med": 0.988,
+    "sigma_sd": 1.139,
+    "n_genes_K>0": 10111,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "5": {
+    "sigma_med": 0.842,
+    "sigma_sd": 1.019,
+    "n_genes_K>0": 10030,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 0.999999,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999999,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "6": {
+    "sigma_med": 0.685,
+    "sigma_sd": 0.936,
+    "n_genes_K>0": 10167,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999999,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "7": {
+    "sigma_med": 0.528,
+    "sigma_sd": 0.868,
+    "n_genes_K>0": 10435,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999999,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999998,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 0.999998
+   },
+   "8": {
+    "sigma_med": 0.685,
+    "sigma_sd": 0.87,
+    "n_genes_K>0": 11229,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0135,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999999,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999999,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 0.999999,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999999,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "9": {
+    "sigma_med": 0.528,
+    "sigma_sd": 0.822,
+    "n_genes_K>0": 11098,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0151,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999998,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999998,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999998,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "10": {
+    "sigma_med": 0.515,
+    "sigma_sd": 0.795,
+    "n_genes_K>0": 10691,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 1.0,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999995,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 0.999999
+   },
+   "11": {
+    "sigma_med": 0.528,
+    "sigma_sd": 0.793,
+    "n_genes_K>0": 12036,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0174,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999998,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999997,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999874,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 0.999999
+   },
+   "12": {
+    "sigma_med": 0.651,
+    "sigma_sd": 0.802,
+    "n_genes_K>0": 13159,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0596,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999901,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999894,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999964,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   },
+   "13": {
+    "sigma_med": 0.528,
+    "sigma_sd": 0.771,
+    "n_genes_K>0": 12946,
+    "n_t: frac P0 == 0 in float64 (plug)": 0.0558,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": 0.999923,
+    "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": 0.999913,
+    "spearman posterior p, lognormal(sd_past) vs n_t": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": 1.0,
+    "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": 0.999913,
+    "spearman posterior p, oracle n_{t+1} vs n_t": 1.0
+   }
+  },
+  "invariance_summary_t>=1": {
+   "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": {
+    "min": 1.0,
+    "mean": 1.0
+   },
+   "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": {
+    "min": 0.999782,
+    "mean": 0.999967
+   },
+   "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": {
+    "min": 0.999999,
+    "mean": 1.0
+   },
+   "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": {
+    "min": 1.0,
+    "mean": 1.0
+   },
+   "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": {
+    "min": 0.999782,
+    "mean": 0.999966
+   },
+   "spearman posterior p, lognormal(sd_past) vs n_t": {
+    "min": 0.999999,
+    "mean": 1.0
+   },
+   "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": {
+    "min": 1.0,
+    "mean": 1.0
+   },
+   "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": {
+    "min": 0.999812,
+    "mean": 0.999964
+   },
+   "spearman posterior p, oracle n_{t+1} vs n_t": {
+    "min": 0.999998,
+    "mean": 1.0
+   }
+  },
+  "check_base_equals_dist_bridge.expected_target (max abs diff, same rng)": 2.2961377688091034e-07,
+  "scores": {
+   "base [rolling]": {
+    "i>=1": {
+     "pcc": 0.5097,
+     "up": 0.327,
+     "down": 0.4417,
+     "spearman": 0.2478
+    },
+    "i>=2": {
+     "pcc": 0.5071,
+     "up": 0.3447,
+     "down": 0.4342,
+     "spearman": 0.2554
+    }
+   },
+   "base [box4]": {
+    "i>=1": {
+     "pcc": 0.4773,
+     "up": 0.3155,
+     "down": 0.4464,
+     "spearman": 0.2101
+    },
+    "i>=2": {
+     "pcc": 0.4762,
+     "up": 0.3285,
+     "down": 0.4401,
+     "spearman": 0.216
+    }
+   },
+   "base [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.5067,
+     "up": 0.3275,
+     "down": 0.4282,
+     "spearman": 0.2537
+    },
+    "i>=2": {
+     "pcc": 0.5039,
+     "up": 0.3452,
+     "down": 0.4196,
+     "spearman": 0.2618
+    }
+   },
+   "A_phat [rolling]": {
+    "i>=1": {
+     "pcc": 0.512,
+     "up": 0.3334,
+     "down": 0.4518,
+     "spearman": 0.2718
+    },
+    "i>=2": {
+     "pcc": 0.5207,
+     "up": 0.3514,
+     "down": 0.4466,
+     "spearman": 0.2651
+    }
+   },
+   "A_phat [box4]": {
+    "i>=1": {
+     "pcc": 0.5101,
+     "up": 0.3332,
+     "down": 0.4521,
+     "spearman": 0.2651
+    },
+    "i>=2": {
+     "pcc": 0.5187,
+     "up": 0.3512,
+     "down": 0.4468,
+     "spearman": 0.2579
+    }
+   },
+   "A_phat [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.5117,
+     "up": 0.3335,
+     "down": 0.4504,
+     "spearman": 0.2774
+    },
+    "i>=2": {
+     "pcc": 0.5203,
+     "up": 0.3515,
+     "down": 0.4451,
+     "spearman": 0.2711
+    }
+   },
+   "B_phat+post0 [rolling]": {
+    "i>=1": {
+     "pcc": 0.5147,
+     "up": 0.3333,
+     "down": 0.4518,
+     "spearman": 0.2719
+    },
+    "i>=2": {
+     "pcc": 0.5215,
+     "up": 0.3513,
+     "down": 0.4466,
+     "spearman": 0.2651
+    }
+   },
+   "B_phat+post0 [box4]": {
+    "i>=1": {
+     "pcc": 0.5125,
+     "up": 0.3326,
+     "down": 0.4521,
+     "spearman": 0.2651
+    },
+    "i>=2": {
+     "pcc": 0.5193,
+     "up": 0.3505,
+     "down": 0.4468,
+     "spearman": 0.2578
+    }
+   },
+   "B_phat+post0 [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.5143,
+     "up": 0.3332,
+     "down": 0.4504,
+     "spearman": 0.2774
+    },
+    "i>=2": {
+     "pcc": 0.5212,
+     "up": 0.3512,
+     "down": 0.4451,
+     "spearman": 0.2711
+    }
+   },
+   "C_post_all [rolling]": {
+    "i>=1": {
+     "pcc": 0.5282,
+     "up": 0.3333,
+     "down": 0.4537,
+     "spearman": 0.2671
+    },
+    "i>=2": {
+     "pcc": 0.5317,
+     "up": 0.3513,
+     "down": 0.4487,
+     "spearman": 0.26
+    }
+   },
+   "C_post_all [box4]": {
+    "i>=1": {
+     "pcc": 0.5262,
+     "up": 0.3328,
+     "down": 0.4533,
+     "spearman": 0.2604
+    },
+    "i>=2": {
+     "pcc": 0.5296,
+     "up": 0.3507,
+     "down": 0.4481,
+     "spearman": 0.2527
+    }
+   },
+   "C_post_all [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.5279,
+     "up": 0.3334,
+     "down": 0.4533,
+     "spearman": 0.2726
+    },
+    "i>=2": {
+     "pcc": 0.5314,
+     "up": 0.3514,
+     "down": 0.4482,
+     "spearman": 0.2659
+    }
+   },
+   "D_base+post0 [rolling]": {
+    "i>=1": {
+     "pcc": 0.521,
+     "up": 0.3336,
+     "down": 0.4524,
+     "spearman": 0.2659
+    },
+    "i>=2": {
+     "pcc": 0.5254,
+     "up": 0.3517,
+     "down": 0.4458,
+     "spearman": 0.2594
+    }
+   },
+   "D_base+post0 [box4]": {
+    "i>=1": {
+     "pcc": 0.5032,
+     "up": 0.3281,
+     "down": 0.4464,
+     "spearman": 0.2587
+    },
+    "i>=2": {
+     "pcc": 0.5061,
+     "up": 0.3457,
+     "down": 0.4401,
+     "spearman": 0.2512
+    }
+   },
+   "D_base+post0 [kalman0.2]": {
+    "i>=1": {
+     "pcc": 0.5113,
+     "up": 0.3337,
+     "down": 0.4282,
+     "spearman": 0.2826
+    },
+    "i>=2": {
+     "pcc": 0.515,
+     "up": 0.3517,
+     "down": 0.4196,
+     "spearman": 0.2775
+    }
+   }
+  },
+  "selected_pools": {
+   "base": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.35",
+    "kalman0.35",
+    "kalman0.35",
+    "kalman0.35",
+    "kalman0.35",
+    "kalman0.35",
+    "kalman0.35",
+    "kalman0.35",
+    "kalman0.35",
+    "kalman0.35",
+    "kalman0.35"
+   ],
+   "A_phat": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box4",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2"
+   ],
+   "B_phat+post0": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box4",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2"
+   ],
+   "C_post_all": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box4",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2"
+   ],
+   "D_base+post0": [
+    "kalman0.2",
+    "kalman0.2",
+    "kalman0.2",
+    "box4",
+    "kalman0.35",
+    "kalman0.35",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2",
+    "box2"
+   ]
+  },
+  "p_hat_vs_f_t": {
+   "median_abs_logit_diff_K>0": 0.092,
+   "mean P0_post among K_t=0 genes (t>=1)": 0.8372
+  },
+  "seconds": 172
+ }
+}

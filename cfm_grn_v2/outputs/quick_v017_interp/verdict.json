@@ -1,0 +1,33 @@
+{
+ "synthetic_grn_interp_t3": {
+  "dataset": "synthetic_grn_interp_t3",
+  "metric": "energy_distance",
+  "mode": "benchmark",
+  "pass": true,
+  "beats_all_controls": true,
+  "best_control": "mean_interp",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "mean_interp",
+   "metric": "energy_distance",
+   "mean": -0.15083863120269414,
+   "ci_low": -0.1685274914431104,
+   "ci_high": -0.13314977096227787,
+   "n": 2
+  },
+  "uses_time": true,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.8450089818969958,
+   "ci_low": -1.4827815609124388,
+   "ci_high": -0.20723640288155287,
+   "n": 2
+  },
+  "fm_mean": 0.07340993178195943,
+  "noise_floor": -0.001806934967137241,
+  "null_q95": 0.014043484267304092,
+  "matches_target": false
+ }
+}

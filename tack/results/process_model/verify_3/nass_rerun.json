@@ -1,0 +1,56 @@
+{
+ "gastrulation-human": {
+  "reproduce_on_nass_masks_i>=2": {
+   "rerun": [
+    0.3351,
+    0.2755,
+    0.2905
+   ],
+   "results.json": [
+    0.3351,
+    0.2755,
+    0.2905
+   ]
+  },
+  "on_1000s+i_masks_i>=2": {
+   "pcc": 0.3365,
+   "up": 0.2765,
+   "down": 0.2948,
+   "spearman": 0.3155
+  },
+  "on_1000s+i_masks_i>=1": {
+   "pcc": 0.3292,
+   "up": 0.2735,
+   "down": 0.2886,
+   "spearman": 0.3031
+  },
+  "seconds": 4
+ },
+ "pancreas-human": {
+  "reproduce_on_nass_masks_i>=2": {
+   "rerun": [
+    0.308,
+    0.221,
+    0.283
+   ],
+   "results.json": [
+    0.308,
+    0.221,
+    0.283
+   ]
+  },
+  "on_1000s+i_masks_i>=2": {
+   "pcc": 0.3223,
+   "up": 0.2212,
+   "down": 0.2798,
+   "spearman": 0.192
+  },
+  "on_1000s+i_masks_i>=1": {
+   "pcc": 0.3203,
+   "up": 0.2213,
+   "down": 0.2809,
+   "spearman": 0.1785
+  },
+  "seconds": 2
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "gastrulation-human": {
+  "mean_share_noise_bin_t": 0.374,
+  "mean_share_noise_bin_t+1": 0.42,
+  "median_share_t": 0.407,
+  "median_share_t+1": 0.398,
+  "implied_signal_share_mean": 0.206,
+  "lag1_corr_observed_l1_changes": -0.169,
+  "pure_noise_expected_lag1": -0.374
+ },
+ "pancreas-human": {
+  "mean_share_noise_bin_t": 0.199,
+  "mean_share_noise_bin_t+1": 0.235,
+  "median_share_t": 0.143,
+  "median_share_t+1": 0.268,
+  "implied_signal_share_mean": 0.566,
+  "lag1_corr_observed_l1_changes": 0.156,
+  "pure_noise_expected_lag1": -0.199
+ }
+}

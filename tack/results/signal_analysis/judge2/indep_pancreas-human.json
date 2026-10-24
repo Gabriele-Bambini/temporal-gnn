@@ -1,0 +1,87 @@
+{
+ "dataset": "pancreas-human",
+ "checks": {
+  "nass_cache_mean_maxdiff": 0.0,
+  "nass_cache_sd_maxdiff": 0.0,
+  "lsb_cache_mean_maxdiff": 0.0,
+  "l1_target_vs_TARGET_NP_maxdiff": 1.2099298718482032e-07
+ },
+ "table": {
+  "trend": {
+   "i>=2": [
+    0.1398,
+    0.2227,
+    0.217,
+    0.021
+   ],
+   "all": [
+    0.1434,
+    0.2076,
+    0.2055,
+    0.0187
+   ]
+  },
+  "core_h1": {
+   "i>=2": [
+    0.3102,
+    0.2155,
+    0.2884,
+    0.0252
+   ],
+   "all": [
+    0.2894,
+    0.2014,
+    0.2667,
+    0.0222
+   ]
+  },
+  "core_h0.5": {
+   "i>=2": [
+    0.3102,
+    0.2231,
+    0.2914,
+    0.0246
+   ],
+   "all": [
+    0.2895,
+    0.208,
+    0.2693,
+    0.0216
+   ]
+  },
+  "kal_reversion_only": {
+   "i>=2": [
+    0.0214,
+    0.1121,
+    0.1523,
+    0.0092
+   ],
+   "all": [
+    0.0004,
+    0.1023,
+    0.1368,
+    0.0088
+   ]
+  }
+ },
+ "paired_i>=2": {
+  "core_h1 - trend": {
+   "dPCC": 0.1704,
+   "better": 10,
+   "worse": 2,
+   "wilcoxon_p": 0.00342
+  },
+  "core_h0.5 - trend": {
+   "dPCC": 0.1705,
+   "better": 10,
+   "worse": 2,
+   "wilcoxon_p": 0.00342
+  },
+  "kal_reversion_only - trend": {
+   "dPCC": -0.1184,
+   "better": 5,
+   "worse": 7,
+   "wilcoxon_p": 0.20361
+  }
+ }
+}

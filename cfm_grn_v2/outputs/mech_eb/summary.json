@@ -1,0 +1,86 @@
+{
+ "dataset": "eb",
+ "smoke": false,
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  3.0
+ ],
+ "long_folds": [
+  [
+   "eb",
+   3.0
+  ]
+ ],
+ "grid_gap": 1.0,
+ "reference": "outputs/eb_select_v0111/results.csv",
+ "prereg": "docs/superpowers/prereg/2026-09-25-prereg-v02.md",
+ "note": "per-data-set view only; the pre-registered rules pool both data sets (--combine)",
+ "reproducibility_gate": {
+  "max_abs_diff": 2.220446049250313e-16,
+  "n": 12,
+  "passes": true,
+  "diffs": {
+   "eb|base|1.0|0": 0.0,
+   "eb|base|1.0|1": 0.0,
+   "eb|base|3.0|0": 0.0,
+   "eb|base|3.0|1": 0.0,
+   "eb|noft|1.0|0": 0.0,
+   "eb|noft|1.0|1": 0.0,
+   "eb|noft|3.0|0": 0.0,
+   "eb|noft|3.0|1": -2.220446049250313e-16,
+   "eb|time|1.0|0": 0.0,
+   "eb|time|1.0|1": 0.0,
+   "eb|time|3.0|0": 0.0,
+   "eb|time|3.0|1": 0.0
+  }
+ },
+ "rule_b": {
+  "time_noft": {
+   "g": [
+    0.0019835896602141776,
+    0.39437517128653754,
+    -0.11463231515710638
+   ],
+   "n_pairs": 3,
+   "n_ge_0.5": 0,
+   "n_lt_0.25": 2,
+   "verdict": "inconclusive",
+   "median_g": 0.0019835896602141776
+  },
+  "spline_noft": {
+   "g": [
+    -0.32384431184749857,
+    0.32556253568810944,
+    0.23451239753002553
+   ],
+   "n_pairs": 3,
+   "n_ge_0.5": 0,
+   "n_lt_0.25": 2,
+   "verdict": "inconclusive",
+   "median_g": 0.23451239753002553
+  }
+ },
+ "admitted_to_step6": [
+  "base",
+  "noft",
+  "gated",
+  "transfer"
+ ],
+ "mean_by_fold_arm": {
+  "1.0|base": 0.7171708998431138,
+  "1.0|gated": 0.5597215863321168,
+  "1.0|noft": 0.5597215863321168,
+  "1.0|spline_noft": 0.578904908619478,
+  "1.0|time": 0.7273434808013283,
+  "1.0|time_noft": 0.5641560820003116,
+  "1.0|transfer": 0.5597215863321168,
+  "3.0|base": 0.4961716940161101,
+  "3.0|gated": 0.4961716940161101,
+  "3.0|noft": 1.1518838590256877,
+  "3.0|spline_noft": 1.042525722802009,
+  "3.0|time": 0.4984537995062084,
+  "3.0|time_noft": 1.0545509298383493,
+  "3.0|transfer": 1.02193130696228
+ }
+}

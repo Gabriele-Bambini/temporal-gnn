@@ -1,0 +1,12 @@
+[synthetic_grn] best config: {'hidden': 256, 'depth': 3, 'lr': 0.0003, 'weight_decay': 0.0, 'batch_size': 256, 'n_iters': 8000, 'sigma_min': 0.001, 'coupling': 'independent', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'delta', 'eval_every': 250, 'patience': 8, 'seed': 0, 'shuffle_biological_time': False, 'ema_decay': 0.999, 'grad_clip': 1.0, 'pair_mode': 'all', 'clock': 'flow'}
+[synthetic_grn] flow_matching seed=0 done in 80s
+[synthetic_grn] flow_matching_shuffled_time seed=0 done in 32s
+[synthetic_grn] flow_matching seed=1 done in 84s
+[synthetic_grn] flow_matching_shuffled_time seed=1 done in 17s
+[synthetic_grn] flow_matching seed=2 done in 15s
+[synthetic_grn] flow_matching_shuffled_time seed=2 done in 80s
+[synthetic_grn] flow_matching seed=3 done in 78s
+[synthetic_grn] flow_matching_shuffled_time seed=3 done in 28s
+[synthetic_grn] flow_matching seed=4 done in 19s
+[synthetic_grn] flow_matching_shuffled_time seed=4 done in 18s
+synthetic_grn (benchmark): FAIL fm=5.668 best_control=linear uses_time=False null_q95=0.022 matches=False

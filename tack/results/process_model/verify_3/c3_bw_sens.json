@@ -1,0 +1,258 @@
+{
+ "gastrulation-human": {
+  "h=0.5 bw=0.5 analog(share)": {
+   "pcc": 0.1747,
+   "up": 0.198,
+   "down": 0.2109,
+   "spearman": 0.2414
+  },
+  "h=0.5 bw=0.5 analog(log|S|)": {
+   "pcc": 0.2315,
+   "up": 0.2077,
+   "down": 0.2238,
+   "spearman": 0.2836
+  },
+  "h=0.5 bw=1.0 recency": {
+   "pcc": 0.2476,
+   "up": 0.2161,
+   "down": 0.232,
+   "spearman": 0.2927
+  },
+  "h=0.5 bw=1.0 analog(share)": {
+   "pcc": 0.2382,
+   "up": 0.2165,
+   "down": 0.2305,
+   "spearman": 0.2873
+  },
+  "h=0.5 bw=1.0 analog(log|S|)": {
+   "pcc": 0.2504,
+   "up": 0.2143,
+   "down": 0.229,
+   "spearman": 0.2946
+  },
+  "h=0.5 bw=2.0 analog(share)": {
+   "pcc": 0.245,
+   "up": 0.2144,
+   "down": 0.2307,
+   "spearman": 0.2926
+  },
+  "h=0.5 bw=2.0 analog(log|S|)": {
+   "pcc": 0.2483,
+   "up": 0.2155,
+   "down": 0.2317,
+   "spearman": 0.2938
+  },
+  "h=1.0 bw=0.5 analog(share)": {
+   "pcc": 0.1702,
+   "up": 0.1949,
+   "down": 0.2119,
+   "spearman": 0.2339
+  },
+  "h=1.0 bw=0.5 analog(log|S|)": {
+   "pcc": 0.2122,
+   "up": 0.1991,
+   "down": 0.2119,
+   "spearman": 0.2688
+  },
+  "h=1.0 bw=1.0 recency": {
+   "pcc": 0.2432,
+   "up": 0.2092,
+   "down": 0.2232,
+   "spearman": 0.2811
+  },
+  "h=1.0 bw=1.0 analog(share)": {
+   "pcc": 0.2255,
+   "up": 0.2067,
+   "down": 0.2243,
+   "spearman": 0.2731
+  },
+  "h=1.0 bw=1.0 analog(log|S|)": {
+   "pcc": 0.2368,
+   "up": 0.2093,
+   "down": 0.2251,
+   "spearman": 0.2828
+  },
+  "h=1.0 bw=2.0 analog(share)": {
+   "pcc": 0.238,
+   "up": 0.2081,
+   "down": 0.2242,
+   "spearman": 0.2809
+  },
+  "h=1.0 bw=2.0 analog(log|S|)": {
+   "pcc": 0.2417,
+   "up": 0.2087,
+   "down": 0.223,
+   "spearman": 0.2826
+  },
+  "h=2.0 bw=0.5 analog(share)": {
+   "pcc": 0.1526,
+   "up": 0.1882,
+   "down": 0.1957,
+   "spearman": 0.2207
+  },
+  "h=2.0 bw=0.5 analog(log|S|)": {
+   "pcc": 0.1999,
+   "up": 0.1866,
+   "down": 0.2006,
+   "spearman": 0.2533
+  },
+  "h=2.0 bw=1.0 recency": {
+   "pcc": 0.2234,
+   "up": 0.1899,
+   "down": 0.2012,
+   "spearman": 0.2593
+  },
+  "h=2.0 bw=1.0 analog(share)": {
+   "pcc": 0.2025,
+   "up": 0.199,
+   "down": 0.2108,
+   "spearman": 0.2589
+  },
+  "h=2.0 bw=1.0 analog(log|S|)": {
+   "pcc": 0.2224,
+   "up": 0.1926,
+   "down": 0.2059,
+   "spearman": 0.2642
+  },
+  "h=2.0 bw=2.0 analog(share)": {
+   "pcc": 0.223,
+   "up": 0.1939,
+   "down": 0.2051,
+   "spearman": 0.2629
+  },
+  "h=2.0 bw=2.0 analog(log|S|)": {
+   "pcc": 0.2227,
+   "up": 0.1901,
+   "down": 0.2028,
+   "spearman": 0.2609
+  }
+ },
+ "pancreas-human": {
+  "h=0.5 bw=0.5 analog(share)": {
+   "pcc": 0.2462,
+   "up": 0.2018,
+   "down": 0.2522,
+   "spearman": 0.1615
+  },
+  "h=0.5 bw=0.5 analog(log|S|)": {
+   "pcc": 0.2688,
+   "up": 0.2052,
+   "down": 0.2576,
+   "spearman": 0.1712
+  },
+  "h=0.5 bw=1.0 recency": {
+   "pcc": 0.2634,
+   "up": 0.1919,
+   "down": 0.2551,
+   "spearman": 0.177
+  },
+  "h=0.5 bw=1.0 analog(share)": {
+   "pcc": 0.2523,
+   "up": 0.2004,
+   "down": 0.2536,
+   "spearman": 0.166
+  },
+  "h=0.5 bw=1.0 analog(log|S|)": {
+   "pcc": 0.2697,
+   "up": 0.1969,
+   "down": 0.2601,
+   "spearman": 0.1767
+  },
+  "h=0.5 bw=2.0 analog(share)": {
+   "pcc": 0.2624,
+   "up": 0.1947,
+   "down": 0.2583,
+   "spearman": 0.1744
+  },
+  "h=0.5 bw=2.0 analog(log|S|)": {
+   "pcc": 0.265,
+   "up": 0.1918,
+   "down": 0.2579,
+   "spearman": 0.1763
+  },
+  "h=1.0 bw=0.5 analog(share)": {
+   "pcc": 0.2349,
+   "up": 0.1847,
+   "down": 0.2486,
+   "spearman": 0.1517
+  },
+  "h=1.0 bw=0.5 analog(log|S|)": {
+   "pcc": 0.2609,
+   "up": 0.1979,
+   "down": 0.2551,
+   "spearman": 0.1688
+  },
+  "h=1.0 bw=1.0 recency": {
+   "pcc": 0.2672,
+   "up": 0.1797,
+   "down": 0.254,
+   "spearman": 0.1814
+  },
+  "h=1.0 bw=1.0 analog(share)": {
+   "pcc": 0.2555,
+   "up": 0.1956,
+   "down": 0.2536,
+   "spearman": 0.1694
+  },
+  "h=1.0 bw=1.0 analog(log|S|)": {
+   "pcc": 0.2698,
+   "up": 0.192,
+   "down": 0.2603,
+   "spearman": 0.1782
+  },
+  "h=1.0 bw=2.0 analog(share)": {
+   "pcc": 0.2663,
+   "up": 0.1915,
+   "down": 0.2592,
+   "spearman": 0.1767
+  },
+  "h=1.0 bw=2.0 analog(log|S|)": {
+   "pcc": 0.2696,
+   "up": 0.1831,
+   "down": 0.2589,
+   "spearman": 0.181
+  },
+  "h=2.0 bw=0.5 analog(share)": {
+   "pcc": 0.2326,
+   "up": 0.1853,
+   "down": 0.2382,
+   "spearman": 0.1472
+  },
+  "h=2.0 bw=0.5 analog(log|S|)": {
+   "pcc": 0.2483,
+   "up": 0.1919,
+   "down": 0.2477,
+   "spearman": 0.1609
+  },
+  "h=2.0 bw=1.0 recency": {
+   "pcc": 0.2641,
+   "up": 0.1698,
+   "down": 0.2543,
+   "spearman": 0.1797
+  },
+  "h=2.0 bw=1.0 analog(share)": {
+   "pcc": 0.259,
+   "up": 0.1858,
+   "down": 0.257,
+   "spearman": 0.1657
+  },
+  "h=2.0 bw=1.0 analog(log|S|)": {
+   "pcc": 0.2664,
+   "up": 0.1813,
+   "down": 0.2556,
+   "spearman": 0.1757
+  },
+  "h=2.0 bw=2.0 analog(share)": {
+   "pcc": 0.2678,
+   "up": 0.1798,
+   "down": 0.2566,
+   "spearman": 0.1763
+  },
+  "h=2.0 bw=2.0 analog(log|S|)": {
+   "pcc": 0.2669,
+   "up": 0.1733,
+   "down": 0.2556,
+   "spearman": 0.1796
+  }
+ }
+}

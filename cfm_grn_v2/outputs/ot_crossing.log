@@ -1,0 +1,22 @@
+[spline_ot] done, 173s elapsed
+[spline_random] done, 240s elapsed
+[linear_ot] done, 514s elapsed
+[linear_indep] done, 610s elapsed
+                          mean    std  count
+model                                       
+ot_interp               -0.006  0.000      5
+linear_ot               -0.005  0.000      5
+spline_ot               -0.005  0.000      5
+linear                  -0.005  0.000      5
+mlp                     -0.003  0.000      5
+freefm_replay           -0.003  0.000      5
+noise_floor              0.001  0.000      5
+linear_indep             0.006  0.002      5
+spline_random            0.081  0.012      5
+mean_interp              0.169  0.000      5
+spline_ot_shuffled_time  0.169  0.004      5
+persistence              0.169  0.000      5
+spline_ot_vs_spline_random: mean -0.086 CI95 [-0.101, -0.071] n=5
+linear_ot_vs_linear_indep: mean -0.012 CI95 [-0.014, -0.010] n=5
+spline_ot_vs_ot_interp: mean 0.001 CI95 [0.001, 0.001] n=5
+spline_ot_vs_mean_interp: mean -0.174 CI95 [-0.174, -0.174] n=5

@@ -1,0 +1,30 @@
+# data and model artefacts (never committed)
+*.npz
+*.npy
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.zip
+*.gz
+*.tar
+*.h5ad
+*.h5
+*.loom
+*.parquet
+*.feather
+*.mtx
+*.bam
+*.fastq
+*.ckpt
+*.prof
+GRN/
+edge_cache/
+
+# local state and caches
+.projectos/.runtime/
+__pycache__/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+.env*

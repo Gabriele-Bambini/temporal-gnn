@@ -1,0 +1,132 @@
+{
+ "summary": [
+  {
+   "model": "noise_floor",
+   "mean": 4.1654337363761186e-05,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "spline_random",
+   "mean": 0.6251380009885096,
+   "std": 0.00653920787864305,
+   "count": 5
+  },
+  {
+   "model": "spline_ot",
+   "mean": 0.6431658017894992,
+   "std": 0.0032050246676194522,
+   "count": 5
+  },
+  {
+   "model": "linear_indep",
+   "mean": 1.0612440731822432,
+   "std": 0.03266725846089501,
+   "count": 5
+  },
+  {
+   "model": "linear_ot",
+   "mean": 1.070595151687816,
+   "std": 0.006149247481848845,
+   "count": 5
+  },
+  {
+   "model": "mean_interp",
+   "mean": 1.102109242336418,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "ot_interp",
+   "mean": 1.1706128074859845,
+   "std": 1.5700924586837752e-16,
+   "count": 5
+  },
+  {
+   "model": "linear",
+   "mean": 2.746998736804307,
+   "std": 7.709505268484252e-06,
+   "count": 5
+  },
+  {
+   "model": "mlp",
+   "mean": 2.907716412038042,
+   "std": 0.14777286760002492,
+   "count": 5
+  },
+  {
+   "model": "spline_ot_shuffled_time",
+   "mean": 4.117063658341776,
+   "std": 0.04827288637024574,
+   "count": 5
+  },
+  {
+   "model": "persistence",
+   "mean": 4.155408630788941,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "freefm_replay",
+   "mean": 4.402292026117652,
+   "std": 0.0,
+   "count": 5
+  }
+ ],
+ "paired": {
+  "spline_ot_vs_spline_random": {
+   "model": "spline_ot",
+   "reference": "spline_random",
+   "metric": "energy_distance",
+   "mean": 0.018027800800989625,
+   "ci_low": 0.006948491162135577,
+   "ci_high": 0.029107110439843674,
+   "n": 5
+  },
+  "spline_ot_vs_linear_ot": {
+   "model": "spline_ot",
+   "reference": "linear_ot",
+   "metric": "energy_distance",
+   "mean": -0.42742934989831693,
+   "ci_low": -0.43431436936916357,
+   "ci_high": -0.4205443304274703,
+   "n": 5
+  },
+  "linear_ot_vs_linear_indep": {
+   "model": "linear_ot",
+   "reference": "linear_indep",
+   "metric": "energy_distance",
+   "mean": 0.009351078505572907,
+   "ci_low": -0.03108090181703222,
+   "ci_high": 0.04978305882817804,
+   "n": 5
+  },
+  "spline_ot_vs_ot_interp": {
+   "model": "spline_ot",
+   "reference": "ot_interp",
+   "metric": "energy_distance",
+   "mean": -0.5274470056964853,
+   "ci_low": -0.5314265694396233,
+   "ci_high": -0.5234674419533473,
+   "n": 5
+  },
+  "spline_ot_vs_mean_interp": {
+   "model": "spline_ot",
+   "reference": "mean_interp",
+   "metric": "energy_distance",
+   "mean": -0.4589434405469189,
+   "ci_low": -0.46292300429005695,
+   "ci_high": -0.4549638768037808,
+   "n": 5
+  },
+  "spline_ot_vs_shuffled_time": {
+   "model": "spline_ot",
+   "reference": "spline_ot_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -3.4738978565522762,
+   "ci_low": -3.531612731379181,
+   "ci_high": -3.4161829817253713,
+   "n": 5
+  }
+ }
+}

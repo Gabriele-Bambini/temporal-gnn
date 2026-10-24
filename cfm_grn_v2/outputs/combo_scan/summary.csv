@@ -1,0 +1,7 @@
+,energy_distance,energy_distance,mean_error,mean_error
+,mean,std,mean,std
+arm,,,,
+base,0.3482,0.0772,1.0089,0.0109
+ft,0.343,0.0851,0.9986,0.0272
+ft_refit,0.326,0.0725,0.9744,0.0103
+refit,0.3331,0.075,0.9848,0.0105

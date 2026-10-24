@@ -1,0 +1,133 @@
+==== run 2026-10-22 21:00:45
+== pancreas-human orig  (31s)
+  trend                  i>=2 -0.392/0.036/0.029 (sd 0.004) | all -0.350/0.038/0.065 | i>=2 big -0.361/0.052/0.048
+  level(box4+obs)        i>=2 0.480/0.331/0.444 (sd 0.005) | all 0.462/0.295/0.447 | i>=2 big 0.454/0.281/0.444
+  regime_unstd           i>=2 0.482/0.331/0.414 (sd 0.004) | all 0.464/0.295/0.421 | i>=2 big 0.433/0.288/0.379
+  regime                 i>=2 0.506/0.330/0.423 (sd 0.003) | all 0.484/0.295/0.429 | i>=2 big 0.476/0.288/0.394
+  full                   i>=2 0.531/0.346/0.453 (sd 0.004) | all 0.506/0.308/0.454 | i>=2 big 0.505/0.300/0.439
+  full-cg                i>=2 0.531/0.347/0.453 (sd 0.004) | all 0.506/0.309/0.455 | i>=2 big 0.505/0.300/0.438
+  full-snr               i>=2 0.518/0.347/0.443 (sd 0.004) | all 0.495/0.309/0.447 | i>=2 big 0.482/0.302/0.422
+  full-kal               i>=2 0.541/0.346/0.460 (sd 0.004) | all 0.514/0.309/0.461 | i>=2 big 0.520/0.300/0.449
+  full+grn               i>=2 0.535/0.346/0.452 (sd 0.004) | all 0.509/0.308/0.454 | i>=2 big 0.510/0.300/0.437
+  full+grn_null          i>=2 0.534/0.346/0.452 (sd 0.004) | all 0.509/0.309/0.454 | i>=2 big 0.509/0.300/0.438
+  auto(full|full-cg)     i>=2 0.531/0.346/0.452 (sd 0.004) | all 0.506/0.308/0.454 | i>=2 big 0.504/0.299/0.437
+  full-obs               i>=2 0.522/0.346/0.438 (sd 0.004) | all 0.498/0.308/0.442 | i>=2 big 0.496/0.301/0.409
+  regime+obs             i>=2 0.531/0.348/0.456 (sd 0.004) | all 0.506/0.310/0.457 | i>=2 big 0.504/0.302/0.443
+  full+ot                i>=2 0.521/0.338/0.453 (sd 0.004) | all 0.497/0.302/0.455 | i>=2 big 0.485/0.286/0.438
+  full+grn+ot            i>=2 0.523/0.338/0.452 (sd 0.004) | all 0.499/0.302/0.454 | i>=2 big 0.489/0.286/0.436
+  regime[h=0.5 fixed]    i>=2 0.509/0.331/0.421 (sd 0.003) | all 0.487/0.295/0.427 | i>=2 big 0.482/0.288/0.390
+  full[h=0.5 fixed]      i>=2 0.528/0.343/0.452 (sd 0.004) | all 0.504/0.305/0.454 | i>=2 big 0.502/0.301/0.438
+  full+grn[h=0.5 fixed]  i>=2 0.530/0.344/0.451 (sd 0.004) | all 0.505/0.306/0.453 | i>=2 big 0.505/0.302/0.436
+  full[RO h in 0.5,1,2]  i>=2 0.527/0.342/0.451 (sd 0.004) | all 0.503/0.305/0.453 | i>=2 big 0.501/0.300/0.437
+  auto(full|full-cg|trend) i>=2 0.531/0.346/0.452 (sd 0.004) | all 0.506/0.308/0.454 | i>=2 big 0.504/0.299/0.437
+  paired full vs regime                     dPCC +0.025 (11/1, p=0.0049) dJ +0.070 (11/1, p=0.001)
+  paired full vs trend                      dPCC +0.923 (12/0, p=0.0005) dJ +1.657 (12/0, p=0.0005)
+  paired auto(full|full-cg) vs regime       dPCC +0.025 (11/1, p=0.0049) dJ +0.069 (11/1, p=0.001)
+  paired auto(full|full-cg) vs trend        dPCC +0.922 (12/0, p=0.0005) dJ +1.655 (12/0, p=0.0005)
+  paired full vs full-cg                    dPCC -0.000 (8/4, p=0.4238) dJ -0.001 (6/6, p=0.9697)
+  paired full vs full-snr                   dPCC +0.013 (7/5, p=0.6221) dJ +0.021 (8/4, p=0.1763)
+  paired full vs full-kal                   dPCC -0.010 (5/7, p=0.4238) dJ -0.017 (3/9, p=0.0342)
+  paired full+grn vs full                   dPCC +0.004 (7/5, p=0.2661) dJ +0.003 (6/6, p=0.5186)
+  paired full+grn_null vs full              dPCC +0.003 (8/4, p=0.2661) dJ +0.003 (8/4, p=0.3394)
+  paired full+grn vs full+grn_null          dPCC +0.001 (4/8, p=0.3804) dJ +0.000 (5/7, p=0.791)
+  paired full+ot vs full                    dPCC -0.010 (9/3, p=0.5186) dJ -0.018 (3/9, p=0.2661)
+  paired auto(full|full-cg|trend) vs trend  dPCC +0.922 (12/0, p=0.0005) dJ +1.655 (12/0, p=0.0005)
+  paired auto(full|full-cg|trend) vs regime dPCC +0.025 (11/1, p=0.0049) dJ +0.069 (11/1, p=0.001)
+  paired full vs full-obs                   dPCC +0.009 (10/2, p=0.0342) dJ +0.023 (8/4, p=0.0771)
+  paired regime vs regime_unstd             dPCC +0.024 (7/5, p=0.5693) dJ +0.033 (7/5, p=0.7334)
+  paired full vs level(box4+obs)            dPCC +0.051 (11/1, p=0.0034) dJ +0.076 (11/1, p=0.0122)
+  paired full[h=0.5 fixed] vs regime[h=0.5 fixed] dPCC +0.020 (11/1, p=0.021) dJ +0.063 (11/1, p=0.0024)
+  paired full[h=0.5 fixed] vs trend         dPCC +0.920 (12/0, p=0.0005) dJ +1.649 (12/0, p=0.0005)
+  paired full+grn[h=0.5 fixed] vs full[h=0.5 fixed] dPCC +0.002 (6/6, p=0.791) dJ +0.002 (7/5, p=0.4697)
+  paired full[h=0.5 fixed] vs full          dPCC -0.003 (4/7, p=0.2402) dJ -0.007 (4/7, p=0.1748)
+  paired full[RO h in 0.5,1,2] vs full      dPCC -0.004 (3/8, p=0.123) dJ -0.010 (2/9, p=0.0674)
+  paired full[h=0.5 fixed] vs level(box4+obs) dPCC +0.049 (10/2, p=0.0068) dJ +0.069 (11/1, p=0.021)
+  partial corr | full: ot_inc     +0.0083 (8/12 > 0)
+  partial corr | full: grn_lag1   +0.0088 (7/12 > 0)
+  partial corr | full: grnnull_lag1 -0.0047 (6/12 > 0)
+  partial corr | full: rev_svd3   +0.0188 (5/12 > 0)
+  partial corr | full: rev_svd8   -0.0029 (2/12 > 0)
+== pancreas-human l1  (44s)
+  trend                  i>=2 0.135/0.220/0.216 (sd 0.025) | all 0.141/0.211/0.215 | i>=2 big 0.260/0.272/0.271
+  level(box4)            i>=2 -0.132/0.100/0.172 (sd 0.020) | all -0.136/0.096/0.163 | i>=2 big -0.205/0.075/0.148
+  regime_unstd           i>=2 0.239/0.206/0.264 (sd 0.028) | all 0.230/0.199/0.256 | i>=2 big 0.293/0.239/0.304
+  regime                 i>=2 0.272/0.218/0.264 (sd 0.027) | all 0.259/0.210/0.256 | i>=2 big 0.309/0.252/0.312
+  full                   i>=2 0.308/0.221/0.283 (sd 0.025) | all 0.290/0.212/0.272 | i>=2 big 0.331/0.247/0.323
+  full-cg                i>=2 0.310/0.224/0.288 (sd 0.026) | all 0.292/0.214/0.276 | i>=2 big 0.334/0.248/0.329
+  full-snr               i>=2 0.309/0.229/0.286 (sd 0.026) | all 0.290/0.219/0.275 | i>=2 big 0.331/0.253/0.323
+  full-kal               i>=2 0.267/0.209/0.267 (sd 0.027) | all 0.254/0.202/0.259 | i>=2 big 0.311/0.243/0.310
+  full+grn               i>=2 0.327/0.230/0.294 (sd 0.023) | all 0.306/0.219/0.282 | i>=2 big 0.342/0.249/0.331
+  full+grn_null          i>=2 0.308/0.224/0.284 (sd 0.025) | all 0.290/0.215/0.273 | i>=2 big 0.332/0.247/0.322
+  auto(full|full-cg)     i>=2 0.310/0.222/0.287 (sd 0.026) | all 0.292/0.213/0.276 | i>=2 big 0.333/0.248/0.329
+  full+ot                i>=2 0.310/0.223/0.292 (sd 0.023) | all 0.291/0.213/0.280 | i>=2 big 0.332/0.249/0.330
+  full+grn+ot            i>=2 0.325/0.231/0.299 (sd 0.022) | all 0.304/0.220/0.285 | i>=2 big 0.343/0.253/0.336
+  regime[h=0.5 fixed]    i>=2 0.271/0.210/0.270 (sd 0.026) | all 0.258/0.203/0.261 | i>=2 big 0.312/0.247/0.317
+  full[h=0.5 fixed]      i>=2 0.291/0.228/0.279 (sd 0.023) | all 0.275/0.218/0.269 | i>=2 big 0.322/0.255/0.310
+  full+grn[h=0.5 fixed]  i>=2 0.308/0.237/0.288 (sd 0.022) | all 0.290/0.226/0.276 | i>=2 big 0.330/0.262/0.315
+  full[RO h in 0.5,1,2]  i>=2 0.291/0.228/0.279 (sd 0.023) | all 0.275/0.218/0.269 | i>=2 big 0.322/0.255/0.310
+  auto(full|full-cg|trend) i>=2 0.310/0.222/0.287 (sd 0.026) | all 0.292/0.213/0.276 | i>=2 big 0.333/0.248/0.329
+  paired full vs regime                     dPCC +0.036 (10/2, p=0.0049) dJ +0.057 (8/4, p=0.021)
+  paired full vs trend                      dPCC +0.173 (10/2, p=0.0024) dJ +0.241 (11/1, p=0.0049)
+  paired auto(full|full-cg) vs regime       dPCC +0.038 (10/2, p=0.0068) dJ +0.065 (9/3, p=0.0122)
+  paired auto(full|full-cg) vs trend        dPCC +0.176 (10/2, p=0.0024) dJ +0.249 (11/1, p=0.0034)
+  paired full vs full-cg                    dPCC -0.003 (4/8, p=0.1763) dJ -0.010 (1/11, p=0.0068)
+  paired full vs full-snr                   dPCC -0.001 (5/7, p=0.6221) dJ -0.012 (3/9, p=0.0771)
+  paired full vs full-kal                   dPCC +0.041 (11/1, p=0.0093) dJ +0.069 (11/1, p=0.0068)
+  paired full+grn vs full                   dPCC +0.019 (8/4, p=0.2036) dJ +0.040 (8/4, p=0.2036)
+  paired full+grn_null vs full              dPCC +0.000 (6/6, p=0.791) dJ +0.005 (5/7, p=0.5186)
+  paired full+grn vs full+grn_null          dPCC +0.019 (8/4, p=0.2036) dJ +0.035 (7/5, p=0.2661)
+  paired full+ot vs full                    dPCC +0.002 (6/6, p=0.9697) dJ +0.013 (5/7, p=0.6772)
+  paired auto(full|full-cg|trend) vs trend  dPCC +0.176 (10/2, p=0.0024) dJ +0.249 (11/1, p=0.0034)
+  paired auto(full|full-cg|trend) vs regime dPCC +0.038 (10/2, p=0.0068) dJ +0.065 (9/3, p=0.0122)
+  paired regime vs regime_unstd             dPCC +0.034 (11/1, p=0.0049) dJ +0.046 (11/1, p=0.0049)
+  paired full[h=0.5 fixed] vs regime[h=0.5 fixed] dPCC +0.020 (7/5, p=0.3013) dJ +0.047 (8/4, p=0.0923)
+  paired full[h=0.5 fixed] vs trend         dPCC +0.156 (9/3, p=0.0122) dJ +0.227 (9/3, p=0.021)
+  paired full+grn[h=0.5 fixed] vs full[h=0.5 fixed] dPCC +0.017 (7/5, p=0.2661) dJ +0.035 (7/5, p=0.2661)
+  paired full[h=0.5 fixed] vs full          dPCC -0.017 (5/6, p=0.2783) dJ -0.014 (5/6, p=0.5195)
+  paired full[RO h in 0.5,1,2] vs full      dPCC -0.017 (5/6, p=0.2783) dJ -0.014 (5/6, p=0.5195)
+  partial corr | full: ot_inc     -0.0201 (7/12 > 0)
+  partial corr | full: grn_lag1   +0.1019 (11/12 > 0)
+  partial corr | full: grnnull_lag1 -0.0016 (6/12 > 0)
+  partial corr | full: rev_svd3   -0.0413 (4/12 > 0)
+  partial corr | full: rev_svd8   -0.0491 (2/12 > 0)
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\judge1\rerun_nass_p\nass.py:443: RuntimeWarning: Mean of empty slice
+  per_t = {k: np.round(np.nanmean(S[k], 0)[:, :3], 4).tolist() for k in S}
+== pancreas-human linear  (53s)
+  trend                  i>=2 0.407/0.298/0.361 (sd 0.066) | all 0.369/0.269/0.336 | i>=2 big 0.541/0.377/0.417
+  level(box4)            i>=2 -0.375/0.163/0.215 (sd 0.060) | all -0.340/0.144/0.207 | i>=2 big -0.441/0.145/0.174
+  regime_unstd           i>=2 0.310/0.203/0.378 (sd 0.066) | all 0.280/0.187/0.350 | i>=2 big 0.434/0.250/0.425
+  regime                 i>=2 0.315/0.192/0.383 (sd 0.064) | all 0.285/0.177/0.354 | i>=2 big 0.448/0.218/0.432
+  full                   i>=2 0.281/0.164/0.374 (sd 0.094) | all 0.253/0.153/0.347 | i>=2 big 0.426/0.179/0.402
+  full-cg                i>=2 0.265/0.157/0.375 (sd 0.096) | all 0.238/0.148/0.347 | i>=2 big 0.389/0.175/0.400
+  full-snr               i>=2 0.292/0.156/0.371 (sd 0.069) | all 0.264/0.147/0.344 | i>=2 big 0.453/0.155/0.420
+  full-kal               i>=2 0.265/0.171/0.371 (sd 0.104) | all 0.238/0.160/0.344 | i>=2 big 0.384/0.199/0.409
+  full+grn               i>=2 0.182/0.149/0.375 (sd 0.107) | all 0.162/0.140/0.348 | i>=2 big 0.270/0.150/0.414
+  full+grn_null          i>=2 0.276/0.164/0.391 (sd 0.079) | all 0.248/0.153/0.362 | i>=2 big 0.413/0.182/0.418
+  auto(full|full-cg)     i>=2 0.268/0.160/0.376 (sd 0.096) | all 0.241/0.150/0.348 | i>=2 big 0.400/0.177/0.403
+  regime[h=0.5 fixed]    i>=2 0.120/0.232/0.331 (sd 0.084) | all 0.104/0.212/0.310 | i>=2 big 0.169/0.293/0.350
+  full[h=0.5 fixed]      i>=2 0.174/0.225/0.335 (sd 0.082) | all 0.155/0.206/0.314 | i>=2 big 0.245/0.274/0.341
+  full+grn[h=0.5 fixed]  i>=2 0.095/0.229/0.337 (sd 0.080) | all 0.081/0.209/0.315 | i>=2 big 0.127/0.277/0.349
+  full[RO h in 0.5,1,2]  i>=2 0.303/0.223/0.347 (sd 0.096) | all 0.273/0.204/0.323 | i>=2 big 0.416/0.276/0.338
+  auto(full|full-cg|trend) i>=2 0.386/0.260/0.372 (sd 0.062) | all 0.350/0.235/0.345 | i>=2 big 0.505/0.311/0.435
+  paired full vs regime                     dPCC -0.035 (6/6, p=0.8501) dJ -0.071 (5/7, p=0.5186)
+  paired full vs trend                      dPCC -0.126 (2/10, p=0.0068) dJ -0.247 (2/10, p=0.0034)
+  paired auto(full|full-cg) vs regime       dPCC -0.047 (5/7, p=0.3804) dJ -0.086 (5/7, p=0.3394)
+  paired auto(full|full-cg) vs trend        dPCC -0.139 (1/11, p=0.001) dJ -0.263 (2/10, p=0.0034)
+  paired full vs full-cg                    dPCC +0.016 (6/6, p=0.9697) dJ +0.022 (7/5, p=0.4238)
+  paired full vs full-snr                   dPCC -0.011 (7/5, p=0.9097) dJ -0.000 (7/5, p=0.791)
+  paired full vs full-kal                   dPCC +0.016 (8/4, p=0.6221) dJ +0.012 (8/4, p=0.5186)
+  paired full+grn vs full                   dPCC -0.098 (1/11, p=0.0024) dJ -0.113 (2/10, p=0.0161)
+  paired full+grn_null vs full              dPCC -0.005 (5/7, p=0.7334) dJ +0.012 (5/7, p=0.5693)
+  paired full+grn vs full+grn_null          dPCC -0.093 (4/8, p=0.0771) dJ -0.125 (5/7, p=0.1763)
+  paired auto(full|full-cg|trend) vs trend  dPCC -0.021 (0/3, p=None) dJ -0.049 (0/3, p=None)
+  paired auto(full|full-cg|trend) vs regime dPCC +0.071 (11/1, p=0.0015) dJ +0.128 (9/3, p=0.0122)
+  paired regime vs regime_unstd             dPCC +0.006 (5/7, p=0.7334) dJ -0.002 (6/6, p=0.9097)
+  paired full[h=0.5 fixed] vs regime[h=0.5 fixed] dPCC +0.055 (8/4, p=0.7334) dJ +0.052 (7/5, p=0.9097)
+  paired full[h=0.5 fixed] vs trend         dPCC -0.233 (1/11, p=0.0015) dJ -0.332 (1/11, p=0.0024)
+  paired full+grn[h=0.5 fixed] vs full[h=0.5 fixed] dPCC -0.080 (3/9, p=0.1099) dJ -0.074 (6/6, p=0.7334)
+  paired full[h=0.5 fixed] vs full          dPCC -0.106 (3/7, p=0.1309) dJ -0.084 (3/7, p=0.1934)
+  paired full[RO h in 0.5,1,2] vs full      dPCC +0.022 (6/4, p=0.6953) dJ +0.054 (6/4, p=0.6953)
+  partial corr | full: grn_lag1   +0.0372 (10/12 > 0)
+  partial corr | full: grnnull_lag1 +0.0040 (6/12 > 0)
+  partial corr | full: rev_svd3   -0.0864 (4/12 > 0)
+  partial corr | full: rev_svd8   -0.1848 (1/12 > 0)

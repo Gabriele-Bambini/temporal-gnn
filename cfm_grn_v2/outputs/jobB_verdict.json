@@ -1,0 +1,99 @@
+{
+ "eb_v0110_t1": {
+  "flow": 0.4751,
+  "best_control": "freefm_replay",
+  "best_control_ed": 0.6467,
+  "diff_best": -0.1716,
+  "upper_ci_best": -0.1066,
+  "margin": -0.04,
+  "shuffled": 1.328,
+  "upper_ci_shuffled": -0.826,
+  "below_every_control": true,
+  "passes": true,
+  "all_means": {
+   "noise_floor": 0.0009,
+   "flow_matching": 0.4751,
+   "freefm_replay": 0.6467,
+   "mean_interp": 0.7017,
+   "ot_interp": 1.0974,
+   "flow_matching_shuffled_time": 1.328,
+   "mlp": 1.3796,
+   "persistence": 1.3865,
+   "linear": 20.3682
+  },
+  "n_seeds": 5
+ },
+ "eb_v0110_t3": {
+  "flow": 0.199,
+  "best_control": "mean_interp",
+  "best_control_ed": 0.2847,
+  "diff_best": -0.0857,
+  "upper_ci_best": -0.0559,
+  "margin": -0.04,
+  "shuffled": 0.3015,
+  "upper_ci_shuffled": -0.0795,
+  "below_every_control": true,
+  "passes": true,
+  "all_means": {
+   "noise_floor": -0.0003,
+   "flow_matching": 0.199,
+   "mean_interp": 0.2847,
+   "flow_matching_shuffled_time": 0.3015,
+   "persistence": 0.3251,
+   "ot_interp": 0.8084,
+   "mlp": 1.1589,
+   "freefm_replay": 3.9809,
+   "linear": 9.0147
+  },
+  "n_seeds": 5
+ },
+ "eb_v0110_pca50_t1": {
+  "flow": 0.2329,
+  "best_control": "freefm_replay",
+  "best_control_ed": 0.2973,
+  "diff_best": -0.0644,
+  "upper_ci_best": -0.0495,
+  "margin": 0.0,
+  "shuffled": 0.6032,
+  "upper_ci_shuffled": -0.3354,
+  "below_every_control": true,
+  "passes": true,
+  "all_means": {
+   "noise_floor": -0.0004,
+   "flow_matching": 0.2329,
+   "freefm_replay": 0.2973,
+   "ot_interp": 0.3283,
+   "mean_interp": 0.3616,
+   "flow_matching_shuffled_time": 0.6032,
+   "persistence": 0.6054,
+   "mlp": 1.0749,
+   "linear": 1.9433
+  },
+  "n_seeds": 5
+ },
+ "eb_v0110_pca50_t3": {
+  "flow": 0.1541,
+  "best_control": "mean_interp",
+  "best_control_ed": 0.1633,
+  "diff_best": -0.0091,
+  "upper_ci_best": -0.0069,
+  "margin": 0.0,
+  "shuffled": 0.1763,
+  "upper_ci_shuffled": -0.0077,
+  "below_every_control": true,
+  "passes": true,
+  "all_means": {
+   "noise_floor": -0.0008,
+   "flow_matching": 0.1541,
+   "mean_interp": 0.1633,
+   "persistence": 0.1735,
+   "flow_matching_shuffled_time": 0.1763,
+   "ot_interp": 0.2107,
+   "mlp": 0.2649,
+   "linear": 0.7248,
+   "freefm_replay": 1.0003
+  },
+  "n_seeds": 5
+ },
+ "wording_gene_space": "beats every control on each inner EB window in gene space (windows 1 and 3 were earlier selection folds)"
+}

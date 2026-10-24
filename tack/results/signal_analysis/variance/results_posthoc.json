@@ -1,0 +1,1139 @@
+{
+ "gastrulation-human": {
+  "orig": {
+   "by_level_per_transition_normalised": [
+    {
+     "level_range": [
+      0,
+      0.01
+     ],
+     "mean_share_of_target_ss": 0.8950297432210992,
+     "median_signal_fraction": 0.26501711581654774
+    },
+    {
+     "level_range": [
+      0.01,
+      0.03
+     ],
+     "mean_share_of_target_ss": 0.0599893924679678,
+     "median_signal_fraction": -0.669656239262207
+    },
+    {
+     "level_range": [
+      0.03,
+      0.1
+     ],
+     "mean_share_of_target_ss": 0.0317781175866325,
+     "median_signal_fraction": 0.06932018389634964
+    },
+    {
+     "level_range": [
+      0.1,
+      0.3
+     ],
+     "mean_share_of_target_ss": 0.00896401587772761,
+     "median_signal_fraction": 0.11733585147106584
+    },
+    {
+     "level_range": [
+      0.3,
+      1
+     ],
+     "mean_share_of_target_ss": 0.0027431086414067686,
+     "median_signal_fraction": 0.30821310231627297
+    },
+    {
+     "level_range": [
+      1,
+      3
+     ],
+     "mean_share_of_target_ss": 0.0009807964454401855,
+     "median_signal_fraction": 0.5299946187785527
+    },
+    {
+     "level_range": [
+      3,
+      10
+     ],
+     "mean_share_of_target_ss": 0.00038652424878031304,
+     "median_signal_fraction": 0.6948166983607826
+    },
+    {
+     "level_range": [
+      10,
+      Infinity
+     ],
+     "mean_share_of_target_ss": 0.0001283015109457657,
+     "median_signal_fraction": 0.8341845218294037
+    }
+   ],
+   "N_eff_genes_median": 1776.2908616379157,
+   "N_eff_genes_per_transition": [
+    7311.0,
+    2722.9,
+    1630.9,
+    1691.7,
+    1805.4,
+    1831.0,
+    1816.5,
+    1776.3,
+    1669.0,
+    1710.0,
+    1658.7,
+    1714.9,
+    1685.0,
+    1720.1,
+    1734.8,
+    1757.9,
+    1783.7,
+    1793.4,
+    1728.9,
+    1621.7,
+    1814.0,
+    1929.7,
+    1725.4,
+    1743.3,
+    1792.8,
+    1802.4,
+    1833.9,
+    2366.3,
+    4704.6
+   ],
+   "genes_for_50pct_ss_median": 835.0,
+   "genes_for_80pct_ss_median": 1361.0,
+   "true_change_persistence_median": -0.3765658788861869,
+   "true_change_persistence_per_pair": [
+    0.094,
+    -0.278,
+    -0.356,
+    -0.557,
+    -0.2,
+    -0.164,
+    -0.449,
+    -0.37,
+    -0.431,
+    -0.45,
+    -0.377,
+    -0.395,
+    -0.472,
+    -0.432,
+    -0.407,
+    -0.525,
+    -0.348,
+    -0.376,
+    -0.378,
+    -0.248,
+    -0.526,
+    -0.376,
+    -0.415,
+    -0.3,
+    -0.516,
+    -0.24,
+    -0.235,
+    -0.012
+   ],
+   "lag1_corr_predicted_by_noise_only_median": -0.3969248802474409,
+   "lag1_corr_observed_median": -0.4849628143477598,
+   "second_diff_obs_over_noise_median": 1.2479231545762062,
+   "second_diff_obs_over_noise_per_pair": [
+    1.383,
+    1.309,
+    1.234,
+    1.306,
+    1.212,
+    1.19,
+    1.252,
+    1.226,
+    1.235,
+    1.248,
+    1.227,
+    1.262,
+    1.286,
+    1.256,
+    1.247,
+    1.297,
+    1.255,
+    1.257,
+    1.222,
+    1.216,
+    1.345,
+    1.261,
+    1.231,
+    1.235,
+    1.325,
+    1.236,
+    1.232,
+    1.238
+   ],
+   "per_gene_history": {
+    "oracle_coef_plain": {
+     "n_transitions": 28,
+     "first_i": 1,
+     "pearson_nan0": 0.6027501105622335,
+     "p_at_200_up": 0.39735714285714285,
+     "p_at_200_down": 0.5461071428571429
+    },
+    "oracle_coef_by_level": {
+     "n_transitions": 28,
+     "first_i": 1,
+     "pearson_nan0": 0.6179193344931546,
+     "p_at_200_up": 0.39494642857142853,
+     "p_at_200_down": 0.5526607142857143
+    },
+    "strict_coef_plain": {
+     "n_transitions": 27,
+     "first_i": 2,
+     "pearson_nan0": 0.6064392920847782,
+     "p_at_200_up": 0.405,
+     "p_at_200_down": 0.5520925925925926
+    },
+    "strict_coef_by_level": {
+     "n_transitions": 27,
+     "first_i": 2,
+     "pearson_nan0": 0.6087309558847741,
+     "p_at_200_up": 0.40659259259259267,
+     "p_at_200_down": 0.555574074074074
+    },
+    "ref_strict_level_obs_na_i>=2": {
+     "pearson_nan0": 0.5995439694241367,
+     "p_at_200_up": 0.4078703703703703,
+     "p_at_200_down": 0.5460370370370371
+    },
+    "ref_strict_trend1_i>=2": {
+     "pearson_nan0": -0.47336479258279446,
+     "p_at_200_up": 0.010333333333333335,
+     "p_at_200_down": 0.008055555555555555
+    },
+    "ref_oracle_next_interp1_nb_i>=2": {
+     "pearson_nan0": 0.5518193483090138,
+     "p_at_200_up": 0.34775925925925927,
+     "p_at_200_down": 0.5203148148148148
+    }
+   }
+  },
+  "l1": {
+   "by_level_per_transition_normalised": [
+    {
+     "level_range": [
+      0,
+      0.01
+     ],
+     "mean_share_of_target_ss": 0.014228247887790476,
+     "median_signal_fraction": 0.11272956775292164
+    },
+    {
+     "level_range": [
+      0.01,
+      0.03
+     ],
+     "mean_share_of_target_ss": 0.013963576427382995,
+     "median_signal_fraction": 0.04593373563299408
+    },
+    {
+     "level_range": [
+      0.03,
+      0.1
+     ],
+     "mean_share_of_target_ss": 0.0647652811510459,
+     "median_signal_fraction": 0.07812125041915818
+    },
+    {
+     "level_range": [
+      0.1,
+      0.3
+     ],
+     "mean_share_of_target_ss": 0.1669670520166194,
+     "median_signal_fraction": 0.07420521396948965
+    },
+    {
+     "level_range": [
+      0.3,
+      1
+     ],
+     "mean_share_of_target_ss": 0.3050522767645737,
+     "median_signal_fraction": 0.09123408933001065
+    },
+    {
+     "level_range": [
+      1,
+      3
+     ],
+     "mean_share_of_target_ss": 0.24993579333759416,
+     "median_signal_fraction": 0.13952081951305162
+    },
+    {
+     "level_range": [
+      3,
+      10
+     ],
+     "mean_share_of_target_ss": 0.12729906256901583,
+     "median_signal_fraction": 0.22981249599308218
+    },
+    {
+     "level_range": [
+      10,
+      Infinity
+     ],
+     "mean_share_of_target_ss": 0.05778870984597758,
+     "median_signal_fraction": 0.3726220765616196
+    }
+   ],
+   "N_eff_genes_median": 916.8295867276489,
+   "N_eff_genes_per_transition": [
+    1308.7,
+    1151.8,
+    339.9,
+    867.0,
+    1292.0,
+    916.8,
+    207.1,
+    15.5,
+    1586.9,
+    1801.5,
+    244.5,
+    963.9,
+    486.7,
+    783.1,
+    948.6,
+    1116.2,
+    831.5,
+    109.9,
+    307.6,
+    591.5,
+    19.0,
+    21.1,
+    1736.9,
+    855.1,
+    1405.6,
+    1228.9,
+    1838.4,
+    1805.0,
+    2285.5
+   ],
+   "genes_for_50pct_ss_median": 630.0,
+   "genes_for_80pct_ss_median": 2022.0,
+   "true_change_persistence_median": 1.3583349070939756,
+   "true_change_persistence_per_pair": [
+    0.749,
+    -0.48,
+    0.899,
+    0.945,
+    -0.398,
+    0.996,
+    0.964,
+    null,
+    null,
+    null,
+    1.294,
+    1.423,
+    1.967,
+    2.62,
+    55.729,
+    76.525,
+    2.093,
+    2.459,
+    null,
+    null,
+    -0.446,
+    2.225,
+    2.86,
+    1.706,
+    0.719,
+    null,
+    null,
+    null
+   ],
+   "lag1_corr_predicted_by_noise_only_median": -0.399237580719483,
+   "lag1_corr_observed_median": -0.20790232196259384,
+   "second_diff_obs_over_noise_median": 0.9687361247701236,
+   "second_diff_obs_over_noise_per_pair": [
+    1.718,
+    1.545,
+    1.084,
+    1.044,
+    2.463,
+    1.489,
+    1.447,
+    0.979,
+    0.876,
+    0.953,
+    0.98,
+    0.949,
+    0.91,
+    0.94,
+    0.944,
+    0.936,
+    0.989,
+    0.926,
+    0.854,
+    1.025,
+    1.649,
+    1.003,
+    0.944,
+    0.898,
+    1.078,
+    0.948,
+    0.958,
+    0.812
+   ],
+   "per_gene_history": {
+    "oracle_coef_plain": {
+     "n_transitions": 28,
+     "first_i": 1,
+     "pearson_nan0": 0.4595902398553138,
+     "p_at_200_up": 0.3275,
+     "p_at_200_down": 0.33324999999999994
+    },
+    "oracle_coef_by_level": {
+     "n_transitions": 28,
+     "first_i": 1,
+     "pearson_nan0": 0.5072308467327677,
+     "p_at_200_up": 0.33396428571428577,
+     "p_at_200_down": 0.34714285714285714
+    },
+    "strict_coef_plain": {
+     "n_transitions": 27,
+     "first_i": 2,
+     "pearson_nan0": 0.03688265323847018,
+     "p_at_200_up": 0.17044444444444445,
+     "p_at_200_down": 0.15564814814814815
+    },
+    "strict_coef_by_level": {
+     "n_transitions": 27,
+     "first_i": 2,
+     "pearson_nan0": 0.17132526323393596,
+     "p_at_200_up": 0.1908518518518519,
+     "p_at_200_down": 0.15735185185185185
+    },
+    "ref_strict_level_obs_na_i>=2": {
+     "pearson_nan0": 0.09517768420509434,
+     "p_at_200_up": 0.24607407407407408,
+     "p_at_200_down": 0.2590925925925926
+    },
+    "ref_strict_trend1_i>=2": {
+     "pearson_nan0": -0.1834763041712943,
+     "p_at_200_up": 0.09909259259259261,
+     "p_at_200_down": 0.0927592592592593
+    },
+    "ref_oracle_next_interp1_nb_i>=2": {
+     "pearson_nan0": 0.5702327483225558,
+     "p_at_200_up": 0.4063148148148148,
+     "p_at_200_down": 0.41385185185185186
+    }
+   }
+  },
+  "linear": {
+   "by_level_per_transition_normalised": [
+    {
+     "level_range": [
+      0,
+      0.01
+     ],
+     "mean_share_of_target_ss": 0.00313700917734711,
+     "median_signal_fraction": 0.9588208090486162
+    },
+    {
+     "level_range": [
+      0.01,
+      0.03
+     ],
+     "mean_share_of_target_ss": 0.0007405998571891688,
+     "median_signal_fraction": 0.5127701124149175
+    },
+    {
+     "level_range": [
+      0.03,
+      0.1
+     ],
+     "mean_share_of_target_ss": 0.002318028078592849,
+     "median_signal_fraction": 0.2391115594225689
+    },
+    {
+     "level_range": [
+      0.1,
+      0.3
+     ],
+     "mean_share_of_target_ss": 0.006101029001106638,
+     "median_signal_fraction": 0.1379192065482654
+    },
+    {
+     "level_range": [
+      0.3,
+      1
+     ],
+     "mean_share_of_target_ss": 0.018750827308296088,
+     "median_signal_fraction": 0.10945298328529263
+    },
+    {
+     "level_range": [
+      1,
+      3
+     ],
+     "mean_share_of_target_ss": 0.04236205528182624,
+     "median_signal_fraction": 0.21610474542375602
+    },
+    {
+     "level_range": [
+      3,
+      10
+     ],
+     "mean_share_of_target_ss": 0.10177326122910167,
+     "median_signal_fraction": 0.3103708070759402
+    },
+    {
+     "level_range": [
+      10,
+      Infinity
+     ],
+     "mean_share_of_target_ss": 0.8248171900665404,
+     "median_signal_fraction": 0.7064591860562763
+    }
+   ],
+   "N_eff_genes_median": 12.313586460948644,
+   "N_eff_genes_per_transition": [
+    1.7,
+    4.5,
+    2.7,
+    2.3,
+    1.6,
+    3.6,
+    3.5,
+    3.5,
+    3.5,
+    3.0,
+    2.6,
+    2.9,
+    3.7,
+    8.3,
+    12.3,
+    26.5,
+    39.6,
+    17.7,
+    53.9,
+    28.3,
+    42.8,
+    69.3,
+    49.0,
+    38.8,
+    96.6,
+    66.5,
+    127.8,
+    122.2,
+    105.9
+   ],
+   "genes_for_50pct_ss_median": 5.0,
+   "genes_for_80pct_ss_median": 46.0,
+   "true_change_persistence_median": 1.0420047707352744,
+   "true_change_persistence_per_pair": [
+    0.4,
+    -0.037,
+    1.023,
+    1.031,
+    -0.781,
+    1.042,
+    1.153,
+    1.262,
+    1.45,
+    1.209,
+    1.078,
+    0.909,
+    1.206,
+    1.518,
+    7.217,
+    -0.102,
+    null,
+    null,
+    null,
+    null,
+    -0.717,
+    -0.898,
+    1.885,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "lag1_corr_predicted_by_noise_only_median": -0.18811199247394983,
+   "lag1_corr_observed_median": 0.251203436915427,
+   "second_diff_obs_over_noise_median": 1.0299660087870925,
+   "second_diff_obs_over_noise_per_pair": [
+    21.849,
+    14.877,
+    1.571,
+    0.764,
+    17.417,
+    8.775,
+    12.537,
+    2.143,
+    0.294,
+    0.474,
+    0.751,
+    1.581,
+    0.677,
+    0.635,
+    0.505,
+    1.472,
+    0.996,
+    1.064,
+    1.098,
+    0.598,
+    3.257,
+    3.014,
+    0.755,
+    1.341,
+    0.513,
+    0.413,
+    0.403,
+    0.453
+   ],
+   "per_gene_history": {
+    "oracle_coef_plain": {
+     "n_transitions": 28,
+     "first_i": 1,
+     "pearson_nan0": 0.6829334167910586,
+     "p_at_200_up": 0.3621785714285714,
+     "p_at_200_down": 0.3464107142857142
+    },
+    "oracle_coef_by_level": {
+     "n_transitions": 28,
+     "first_i": 1,
+     "pearson_nan0": 0.7276291551381274,
+     "p_at_200_up": 0.43428571428571433,
+     "p_at_200_down": 0.4089285714285715
+    },
+    "strict_coef_plain": {
+     "n_transitions": 27,
+     "first_i": 2,
+     "pearson_nan0": 0.04943764961880124,
+     "p_at_200_up": 0.20611111111111113,
+     "p_at_200_down": 0.19055555555555553
+    },
+    "strict_coef_by_level": {
+     "n_transitions": 27,
+     "first_i": 2,
+     "pearson_nan0": 0.06064810010821037,
+     "p_at_200_up": 0.19725925925925925,
+     "p_at_200_down": 0.2167407407407408
+    },
+    "ref_strict_level_obs_na_i>=2": {
+     "pearson_nan0": -0.18065056061054813,
+     "p_at_200_up": 0.29598148148148146,
+     "p_at_200_down": 0.3258888888888889
+    },
+    "ref_strict_trend1_i>=2": {
+     "pearson_nan0": 0.14427879613454764,
+     "p_at_200_up": 0.20357407407407407,
+     "p_at_200_down": 0.19929629629629633
+    },
+    "ref_oracle_next_interp1_nb_i>=2": {
+     "pearson_nan0": 0.6473478022907152,
+     "p_at_200_up": 0.4864074074074074,
+     "p_at_200_down": 0.5028333333333334
+    }
+   },
+   "oracle_abs_corr_y_m_a_mean": 0.5445782325808615
+  }
+ },
+ "pancreas-human": {
+  "orig": {
+   "by_level_per_transition_normalised": [
+    {
+     "level_range": [
+      0,
+      0.01
+     ],
+     "mean_share_of_target_ss": 0.798571679203002,
+     "median_signal_fraction": 0.35942138937581986
+    },
+    {
+     "level_range": [
+      0.01,
+      0.03
+     ],
+     "mean_share_of_target_ss": 0.13229090290103193,
+     "median_signal_fraction": 0.05481017566778035
+    },
+    {
+     "level_range": [
+      0.03,
+      0.1
+     ],
+     "mean_share_of_target_ss": 0.043928942888265564,
+     "median_signal_fraction": 0.013608514868802324
+    },
+    {
+     "level_range": [
+      0.1,
+      0.3
+     ],
+     "mean_share_of_target_ss": 0.01527743908213419,
+     "median_signal_fraction": 0.5686037780694378
+    },
+    {
+     "level_range": [
+      0.3,
+      1
+     ],
+     "mean_share_of_target_ss": 0.006960462194728857,
+     "median_signal_fraction": 0.754783153984005
+    },
+    {
+     "level_range": [
+      1,
+      3
+     ],
+     "mean_share_of_target_ss": 0.0020358787881560843,
+     "median_signal_fraction": 0.8861959273189559
+    },
+    {
+     "level_range": [
+      3,
+      10
+     ],
+     "mean_share_of_target_ss": 0.0006605537446557453,
+     "median_signal_fraction": 0.936226924762111
+    },
+    {
+     "level_range": [
+      10,
+      Infinity
+     ],
+     "mean_share_of_target_ss": 0.00027414119802560713,
+     "median_signal_fraction": 0.958701897405595
+    }
+   ],
+   "N_eff_genes_median": 1976.5801113070656,
+   "N_eff_genes_per_transition": [
+    2304.5,
+    1487.5,
+    1937.9,
+    2258.7,
+    1960.1,
+    2018.9,
+    1974.6,
+    1978.6,
+    1780.1,
+    1891.9,
+    2391.9,
+    2084.6,
+    1448.0,
+    2870.5
+   ],
+   "genes_for_50pct_ss_median": 895.0,
+   "genes_for_80pct_ss_median": 1464.0,
+   "true_change_persistence_median": -0.0500748493781066,
+   "true_change_persistence_per_pair": [
+    -0.567,
+    -0.013,
+    0.068,
+    0.092,
+    -0.136,
+    -0.394,
+    0.056,
+    -0.182,
+    -0.05,
+    -0.033,
+    0.171,
+    -0.306,
+    -0.054
+   ],
+   "lag1_corr_predicted_by_noise_only_median": -0.35303932007539757,
+   "lag1_corr_observed_median": -0.40338146788488405,
+   "second_diff_obs_over_noise_median": 1.2380376343854085,
+   "second_diff_obs_over_noise_per_pair": [
+    1.52,
+    1.248,
+    1.201,
+    1.13,
+    1.145,
+    1.215,
+    1.141,
+    1.265,
+    1.255,
+    1.232,
+    1.238,
+    1.386,
+    1.325
+   ],
+   "per_gene_history": {
+    "oracle_coef_plain": {
+     "n_transitions": 13,
+     "first_i": 1,
+     "pearson_nan0": 0.5174117076310624,
+     "p_at_200_up": 0.32915384615384624,
+     "p_at_200_down": 0.4552307692307692
+    },
+    "oracle_coef_by_level": {
+     "n_transitions": 13,
+     "first_i": 1,
+     "pearson_nan0": 0.5767198129622163,
+     "p_at_200_up": 0.3273076923076923,
+     "p_at_200_down": 0.47219230769230774
+    },
+    "strict_coef_plain": {
+     "n_transitions": 12,
+     "first_i": 2,
+     "pearson_nan0": 0.4805384230102589,
+     "p_at_200_up": 0.33416666666666667,
+     "p_at_200_down": 0.44162499999999993
+    },
+    "strict_coef_by_level": {
+     "n_transitions": 12,
+     "first_i": 2,
+     "pearson_nan0": 0.5288202569810734,
+     "p_at_200_up": 0.3410416666666667,
+     "p_at_200_down": 0.455125
+    },
+    "ref_strict_level_obs_na_i>=2": {
+     "pearson_nan0": 0.4770902897035992,
+     "p_at_200_up": 0.3363333333333332,
+     "p_at_200_down": 0.4426666666666667
+    },
+    "ref_strict_trend1_i>=2": {
+     "pearson_nan0": -0.39021851943757774,
+     "p_at_200_up": 0.034583333333333334,
+     "p_at_200_down": 0.02766666666666667
+    },
+    "ref_oracle_next_interp1_nb_i>=2": {
+     "pearson_nan0": 0.6069547156166523,
+     "p_at_200_up": 0.37354166666666666,
+     "p_at_200_down": 0.5101666666666667
+    }
+   }
+  },
+  "l1": {
+   "by_level_per_transition_normalised": [
+    {
+     "level_range": [
+      0,
+      0.01
+     ],
+     "mean_share_of_target_ss": 0.004852733388978363,
+     "median_signal_fraction": 0.05310995098883359
+    },
+    {
+     "level_range": [
+      0.01,
+      0.03
+     ],
+     "mean_share_of_target_ss": 0.013379704225813888,
+     "median_signal_fraction": 0.05085809158995386
+    },
+    {
+     "level_range": [
+      0.03,
+      0.1
+     ],
+     "mean_share_of_target_ss": 0.07353891704097013,
+     "median_signal_fraction": 0.2055784637531059
+    },
+    {
+     "level_range": [
+      0.1,
+      0.3
+     ],
+     "mean_share_of_target_ss": 0.21614059156820384,
+     "median_signal_fraction": 0.3202372820056422
+    },
+    {
+     "level_range": [
+      0.3,
+      1
+     ],
+     "mean_share_of_target_ss": 0.33278190953084746,
+     "median_signal_fraction": 0.4924146695647493
+    },
+    {
+     "level_range": [
+      1,
+      3
+     ],
+     "mean_share_of_target_ss": 0.20795399279156654,
+     "median_signal_fraction": 0.7245185288218139
+    },
+    {
+     "level_range": [
+      3,
+      10
+     ],
+     "mean_share_of_target_ss": 0.0963729796002066,
+     "median_signal_fraction": 0.808043906669818
+    },
+    {
+     "level_range": [
+      10,
+      Infinity
+     ],
+     "mean_share_of_target_ss": 0.0549791718534132,
+     "median_signal_fraction": 0.8071047330926223
+    }
+   ],
+   "N_eff_genes_median": 463.7287306656252,
+   "N_eff_genes_per_transition": [
+    825.5,
+    323.5,
+    440.5,
+    791.6,
+    1388.8,
+    1668.7,
+    862.5,
+    572.9,
+    486.9,
+    75.7,
+    77.8,
+    46.1,
+    58.0,
+    163.4
+   ],
+   "genes_for_50pct_ss_median": 417.0,
+   "genes_for_80pct_ss_median": 1907.0,
+   "true_change_persistence_median": 0.7693889900742429,
+   "true_change_persistence_per_pair": [
+    0.91,
+    0.319,
+    0.777,
+    1.03,
+    1.018,
+    0.786,
+    1.011,
+    0.746,
+    0.544,
+    0.497,
+    0.545,
+    0.598,
+    0.769
+   ],
+   "lag1_corr_predicted_by_noise_only_median": -0.16797733442671908,
+   "lag1_corr_observed_median": 0.2144150687132347,
+   "second_diff_obs_over_noise_median": 1.2854246083485084,
+   "second_diff_obs_over_noise_per_pair": [
+    1.069,
+    1.482,
+    1.259,
+    1.025,
+    0.998,
+    1.054,
+    0.997,
+    1.285,
+    1.911,
+    1.935,
+    2.218,
+    2.556,
+    1.332
+   ],
+   "per_gene_history": {
+    "oracle_coef_plain": {
+     "n_transitions": 13,
+     "first_i": 1,
+     "pearson_nan0": 0.28570967628078775,
+     "p_at_200_up": 0.2518076923076923,
+     "p_at_200_down": 0.26626923076923076
+    },
+    "oracle_coef_by_level": {
+     "n_transitions": 13,
+     "first_i": 1,
+     "pearson_nan0": 0.37922789825063413,
+     "p_at_200_up": 0.24142307692307693,
+     "p_at_200_down": 0.29911538461538456
+    },
+    "strict_coef_plain": {
+     "n_transitions": 12,
+     "first_i": 2,
+     "pearson_nan0": 0.10368252190746126,
+     "p_at_200_up": 0.19970833333333335,
+     "p_at_200_down": 0.2245
+    },
+    "strict_coef_by_level": {
+     "n_transitions": 12,
+     "first_i": 2,
+     "pearson_nan0": 0.2114776778460616,
+     "p_at_200_up": 0.18037499999999998,
+     "p_at_200_down": 0.24479166666666666
+    },
+    "ref_strict_level_obs_na_i>=2": {
+     "pearson_nan0": -0.14587963454783856,
+     "p_at_200_up": 0.10041666666666667,
+     "p_at_200_down": 0.17541666666666667
+    },
+    "ref_strict_trend1_i>=2": {
+     "pearson_nan0": 0.15056117918390968,
+     "p_at_200_up": 0.21883333333333335,
+     "p_at_200_down": 0.21416666666666664
+    },
+    "ref_oracle_next_interp1_nb_i>=2": {
+     "pearson_nan0": 0.6902467715622441,
+     "p_at_200_up": 0.49787500000000007,
+     "p_at_200_down": 0.5317500000000001
+    }
+   }
+  },
+  "linear": {
+   "by_level_per_transition_normalised": [
+    {
+     "level_range": [
+      0,
+      0.01
+     ],
+     "mean_share_of_target_ss": 0.0026096839078492084,
+     "median_signal_fraction": 0.9111667555579404
+    },
+    {
+     "level_range": [
+      0.01,
+      0.03
+     ],
+     "mean_share_of_target_ss": 0.0006792936228094487,
+     "median_signal_fraction": 0.37347784153811026
+    },
+    {
+     "level_range": [
+      0.03,
+      0.1
+     ],
+     "mean_share_of_target_ss": 0.002483337914921503,
+     "median_signal_fraction": 0.2935349618205253
+    },
+    {
+     "level_range": [
+      0.1,
+      0.3
+     ],
+     "mean_share_of_target_ss": 0.008692435630506255,
+     "median_signal_fraction": 0.3296062968988373
+    },
+    {
+     "level_range": [
+      0.3,
+      1
+     ],
+     "mean_share_of_target_ss": 0.027344286503827902,
+     "median_signal_fraction": 0.4581387240498493
+    },
+    {
+     "level_range": [
+      1,
+      3
+     ],
+     "mean_share_of_target_ss": 0.05936638316635715,
+     "median_signal_fraction": 0.7514914123639945
+    },
+    {
+     "level_range": [
+      3,
+      10
+     ],
+     "mean_share_of_target_ss": 0.1273202726997076,
+     "median_signal_fraction": 0.8529977915156643
+    },
+    {
+     "level_range": [
+      10,
+      Infinity
+     ],
+     "mean_share_of_target_ss": 0.7715043065540211,
+     "median_signal_fraction": 0.9263770184858302
+    }
+   ],
+   "N_eff_genes_median": 16.260411241821554,
+   "N_eff_genes_per_transition": [
+    20.2,
+    36.4,
+    46.5,
+    40.6,
+    17.8,
+    10.2,
+    14.7,
+    54.2,
+    24.4,
+    2.8,
+    2.8,
+    5.3,
+    2.3,
+    2.6
+   ],
+   "genes_for_50pct_ss_median": 10.5,
+   "genes_for_80pct_ss_median": 61.0,
+   "true_change_persistence_median": 0.6853720788775586,
+   "true_change_persistence_per_pair": [
+    0.024,
+    0.677,
+    0.864,
+    1.05,
+    1.243,
+    0.685,
+    -0.15,
+    0.915,
+    0.437,
+    0.598,
+    0.189,
+    0.697,
+    0.898
+   ],
+   "lag1_corr_predicted_by_noise_only_median": -0.05962923517054211,
+   "lag1_corr_observed_median": 0.3793988858411124,
+   "second_diff_obs_over_noise_median": 3.801499737579485,
+   "second_diff_obs_over_noise_per_pair": [
+    4.273,
+    2.229,
+    1.271,
+    0.988,
+    0.829,
+    1.528,
+    5.109,
+    1.818,
+    6.503,
+    3.801,
+    7.898,
+    4.995,
+    4.152
+   ],
+   "per_gene_history": {
+    "oracle_coef_plain": {
+     "n_transitions": 13,
+     "first_i": 1,
+     "pearson_nan0": 0.5191622604717828,
+     "p_at_200_up": 0.2628076923076923,
+     "p_at_200_down": 0.3770769230769231
+    },
+    "oracle_coef_by_level": {
+     "n_transitions": 13,
+     "first_i": 1,
+     "pearson_nan0": 0.5934253123139454,
+     "p_at_200_up": 0.2848076923076923,
+     "p_at_200_down": 0.4336538461538461
+    },
+    "strict_coef_plain": {
+     "n_transitions": 12,
+     "first_i": 2,
+     "pearson_nan0": 0.23573740034382432,
+     "p_at_200_up": 0.2880416666666667,
+     "p_at_200_down": 0.306375
+    },
+    "strict_coef_by_level": {
+     "n_transitions": 12,
+     "first_i": 2,
+     "pearson_nan0": 0.33753342862600016,
+     "p_at_200_up": 0.207125,
+     "p_at_200_down": 0.3900833333333333
+    },
+    "ref_strict_level_obs_na_i>=2": {
+     "pearson_nan0": -0.36950626985950724,
+     "p_at_200_up": 0.16404166666666667,
+     "p_at_200_down": 0.2144583333333333
+    },
+    "ref_strict_trend1_i>=2": {
+     "pearson_nan0": 0.41700668121287027,
+     "p_at_200_up": 0.2974583333333333,
+     "p_at_200_down": 0.357375
+    },
+    "ref_oracle_next_interp1_nb_i>=2": {
+     "pearson_nan0": 0.7505382022337607,
+     "p_at_200_up": 0.5453749999999999,
+     "p_at_200_down": 0.636
+    }
+   },
+   "oracle_abs_corr_y_m_a_mean": 0.4156841538929033
+  }
+ }
+}

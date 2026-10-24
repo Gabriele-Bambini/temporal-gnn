@@ -1,0 +1,38 @@
+== gastrulation-human filter ['tau=0.05,mu0=-4.0', 'tau=1.0,mu0=-6.0', 'tau=0.2,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.2,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.1,mu0=-6.0', 'tau=0.2,mu0=-6.0', 'tau=0.2,mu0=-6.0', 'tau=0.2,mu0=-6.0', 'tau=0.2,mu0=-6.0', 'tau=0.2,mu0=-6.0']
+  check 1.8879308516517312e-07
+  base [rolling]                     i>=1 +0.599/0.417/0.550 | i>=2 +0.613/0.431/0.557
+  base [box4]                        i>=1 +0.592/0.397/0.544 | i>=2 +0.604/0.410/0.550
+  base [kalman0.2]                   i>=1 +0.597/0.421/0.544 | i>=2 +0.610/0.436/0.551
+  A_phat [rolling]                   i>=1 +0.606/0.425/0.547 | i>=2 +0.617/0.438/0.554
+  A_phat [box4]                      i>=1 +0.606/0.425/0.548 | i>=2 +0.617/0.438/0.554
+  A_phat [kalman0.2]                 i>=1 +0.606/0.425/0.548 | i>=2 +0.617/0.438/0.554
+  B_phat+post0 [rolling]             i>=1 +0.607/0.425/0.547 | i>=2 +0.618/0.438/0.554
+  B_phat+post0 [box4]                i>=1 +0.607/0.425/0.548 | i>=2 +0.617/0.437/0.554
+  B_phat+post0 [kalman0.2]           i>=1 +0.607/0.425/0.548 | i>=2 +0.617/0.437/0.554
+  C_post_all [rolling]               i>=1 +0.608/0.425/0.547 | i>=2 +0.619/0.438/0.554
+  C_post_all [box4]                  i>=1 +0.608/0.425/0.548 | i>=2 +0.619/0.438/0.554
+  C_post_all [kalman0.2]             i>=1 +0.608/0.425/0.548 | i>=2 +0.619/0.438/0.554
+  D_base+post0 [rolling]             i>=1 +0.607/0.425/0.546 | i>=2 +0.617/0.438/0.553
+  D_base+post0 [box4]                i>=1 +0.608/0.426/0.544 | i>=2 +0.618/0.439/0.550
+  D_base+post0 [kalman0.2]           i>=1 +0.607/0.425/0.544 | i>=2 +0.617/0.438/0.551
+  invariance {"spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": {"min": 0.999994, "mean": 1.0}, "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": {"min": 0.998073, "mean": 0.999752}, "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": {"min": 0.999943, "mean": 0.999996}, "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": {"min": 0.999994, "mean": 1.0}, "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": {"min": 0.997767, "mean": 0.999696}, "spearman posterior p, lognormal(sd_past) vs n_t": {"min": 0.999938, "mean": 0.999992}, "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": {"min": 1.0, "mean": 1.0}, "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": {"min": 0.998321, "mean": 0.999782}, "spearman posterior p, oracle n_{t+1} vs n_t": {"min": 0.999957, "mean": 0.999998}}
+  diag {'median_abs_logit_diff_K>0': 0.123, 'mean P0_post among K_t=0 genes (t>=1)': 0.9069} sec 346
+== pancreas-human filter ['tau=0.05,mu0=-4.0', 'tau=0.2,mu0=-4.0', 'tau=0.2,mu0=-4.0', 'tau=0.2,mu0=-4.0', 'tau=0.2,mu0=-4.0', 'tau=0.35,mu0=-4.0', 'tau=0.35,mu0=-4.0', 'tau=0.35,mu0=-4.0', 'tau=0.35,mu0=-4.0', 'tau=0.35,mu0=-4.0', 'tau=0.35,mu0=-4.0', 'tau=0.35,mu0=-4.0', 'tau=0.35,mu0=-4.0', 'tau=0.35,mu0=-4.0']
+  check 2.2961377688091034e-07
+  base [rolling]                     i>=1 +0.510/0.327/0.442 | i>=2 +0.507/0.345/0.434
+  base [box4]                        i>=1 +0.477/0.316/0.446 | i>=2 +0.476/0.329/0.440
+  base [kalman0.2]                   i>=1 +0.507/0.328/0.428 | i>=2 +0.504/0.345/0.420
+  A_phat [rolling]                   i>=1 +0.512/0.333/0.452 | i>=2 +0.521/0.351/0.447
+  A_phat [box4]                      i>=1 +0.510/0.333/0.452 | i>=2 +0.519/0.351/0.447
+  A_phat [kalman0.2]                 i>=1 +0.512/0.334/0.450 | i>=2 +0.520/0.351/0.445
+  B_phat+post0 [rolling]             i>=1 +0.515/0.333/0.452 | i>=2 +0.521/0.351/0.447
+  B_phat+post0 [box4]                i>=1 +0.512/0.333/0.452 | i>=2 +0.519/0.350/0.447
+  B_phat+post0 [kalman0.2]           i>=1 +0.514/0.333/0.450 | i>=2 +0.521/0.351/0.445
+  C_post_all [rolling]               i>=1 +0.528/0.333/0.454 | i>=2 +0.532/0.351/0.449
+  C_post_all [box4]                  i>=1 +0.526/0.333/0.453 | i>=2 +0.530/0.351/0.448
+  C_post_all [kalman0.2]             i>=1 +0.528/0.333/0.453 | i>=2 +0.531/0.351/0.448
+  D_base+post0 [rolling]             i>=1 +0.521/0.334/0.452 | i>=2 +0.525/0.352/0.446
+  D_base+post0 [box4]                i>=1 +0.503/0.328/0.446 | i>=2 +0.506/0.346/0.440
+  D_base+post0 [kalman0.2]           i>=1 +0.511/0.334/0.428 | i>=2 +0.515/0.352/0.420
+  invariance {"spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (log space)": {"min": 1.0, "mean": 1.0}, "spearman plug-in p_hat, n_t*exp(+-sigma_med) vs n_t (float64 naive, ties)": {"min": 0.999782, "mean": 0.999967}, "spearman posterior p, n_t*exp(+-sigma_med) vs n_t": {"min": 0.999999, "mean": 1.0}, "spearman plug-in p_hat, lognormal(sd_past) vs n_t (log space)": {"min": 1.0, "mean": 1.0}, "spearman plug-in p_hat, lognormal(sd_past) vs n_t (float64 naive, ties)": {"min": 0.999782, "mean": 0.999966}, "spearman posterior p, lognormal(sd_past) vs n_t": {"min": 0.999999, "mean": 1.0}, "spearman plug-in p_hat, oracle n_{t+1} vs n_t (log space)": {"min": 1.0, "mean": 1.0}, "spearman plug-in p_hat, oracle n_{t+1} vs n_t (float64 naive, ties)": {"min": 0.999812, "mean": 0.999964}, "spearman posterior p, oracle n_{t+1} vs n_t": {"min": 0.999998, "mean": 1.0}}
+  diag {'median_abs_logit_diff_K>0': 0.092, 'mean P0_post among K_t=0 genes (t>=1)': 0.8372} sec 172

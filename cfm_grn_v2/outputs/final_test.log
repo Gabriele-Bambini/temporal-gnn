@@ -1,0 +1,30 @@
+[grn_interp_t3] flow_matching seed=0 done in 86s
+[grn_interp_t3] flow_matching_shuffled_time seed=0 done in 80s
+[grn_interp_t3] flow_matching seed=1 done in 88s
+[grn_interp_t3] flow_matching_shuffled_time seed=1 done in 82s
+[grn_interp_t3] flow_matching seed=2 done in 98s
+[grn_interp_t3] flow_matching_shuffled_time seed=2 done in 86s
+[grn_interp_t3] flow_matching seed=3 done in 82s
+[grn_interp_t3] flow_matching_shuffled_time seed=3 done in 74s
+[grn_interp_t3] flow_matching seed=4 done in 120s
+[grn_interp_t3] flow_matching_shuffled_time seed=4 done in 98s
+improved model done in 981s
+
+                           mean     std  count
+model                                         
+noise_floor              0.0000  0.0000      5
+flow_v019                0.4280  0.0057      5
+flow_v018                0.6413  0.0016      5
+mean_interp              1.1021  0.0000      5
+ot_interp                1.1706  0.0000      5
+linear                   2.7470  0.0000      5
+mlp                      2.9077  0.1478      5
+flow_v018_shuffled_time  4.1175  0.0673      5
+flow_v019_shuffled_time  4.1408  0.1071      5
+persistence              4.1554  0.0000      5
+freefm_replay            4.4023  0.0000      5
+
+v019_vs_v018             mean -0.2133  CI95 [-0.2209, -0.2057]  n=5
+v019_vs_mean_interp      mean -0.6741  CI95 [-0.6812, -0.6671]  n=5
+v019_vs_ot_interp        mean -0.7426  CI95 [-0.7497, -0.7356]  n=5
+v019_vs_shuffled_time    mean -3.7129  CI95 [-3.8509, -3.5749]  n=5

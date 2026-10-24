@@ -1,0 +1,76 @@
+gastrulation-human features built in 177.4 s
+gastrulation-human A done
+gastrulation-human B done
+  orig A: {'raw_grn': -0.062, 'partial_grn': 0.002, 'raw_grn_top10': -0.059, 'partial_grn_top10': -0.0, 'raw_grn_regrev': 0.054, 'partial_grn_regrev': -0.011, 'raw_shuf': 0.001, 'partial_shuf': 0.004, 'raw_prof': -0.367, 'partial_prof': -0.028, 'raw_knn': -0.397, 'partial_knn': -0.032, 'raw_own_last': -0.438, 'lag0_raw_g': 0.089, 'lag0_partial_g': 0.036, 'lag0_raw_shuf': 0.0, 'lag0_partial_shuf': -0.001, 'lag0_raw_prof': 0.391, 'lag0_partial_prof': 0.066, 'lag0_raw_knn': 0.451, 'lag0_partial_knn': 0.098}
+  orig B own            pcc=0.610 up=0.424 down=0.549
+  orig B own+grn        pcc=0.611 up=0.424 down=0.550
+  orig B own+shuf       pcc=0.611 up=0.424 down=0.550
+  orig B own+deg_only   pcc=0.611 up=0.424 down=0.550
+  orig B own+prof       pcc=0.610 up=0.428 down=0.549
+  orig B own+knn        pcc=0.611 up=0.432 down=0.549
+  orig B own+grn+knn    pcc=0.611 up=0.432 down=0.549
+  orig B grn_only       pcc=0.128 up=0.003 down=0.088
+  orig B raw_o_last     pcc=-0.479 up=0.009 down=0.006
+  orig B raw_o_rev      pcc=0.408 up=0.315 down=0.476
+  orig B raw_o_obs      pcc=0.608 up=0.425 down=0.548
+  l1 A: {'raw_grn': 0.058, 'partial_grn': 0.055, 'raw_grn_top10': 0.053, 'partial_grn_top10': 0.044, 'raw_grn_regrev': -0.057, 'partial_grn_regrev': -0.054, 'raw_shuf': 0.003, 'partial_shuf': 0.003, 'raw_prof': -0.136, 'partial_prof': -0.053, 'raw_knn': -0.133, 'partial_knn': -0.022, 'raw_own_last': -0.187, 'lag0_raw_g': 0.169, 'lag0_partial_g': 0.108, 'lag0_raw_shuf': 0.001, 'lag0_partial_shuf': 0.001, 'lag0_raw_prof': 0.259, 'lag0_partial_prof': 0.133, 'lag0_raw_knn': 0.346, 'lag0_partial_knn': 0.21}
+  l1 B own            pcc=0.154 up=0.188 down=0.226
+  l1 B own+grn        pcc=0.164 up=0.182 down=0.221
+  l1 B own+shuf       pcc=0.152 up=0.180 down=0.224
+  l1 B own+deg_only   pcc=0.153 up=0.185 down=0.227
+  l1 B own+prof       pcc=0.150 up=0.168 down=0.207
+  l1 B own+knn        pcc=0.146 up=0.172 down=0.209
+  l1 B own+grn+knn    pcc=0.161 up=0.168 down=0.208
+  l1 B grn_only       pcc=0.015 up=0.099 down=0.094
+  l1 B raw_o_last     pcc=-0.172 up=0.100 down=0.093
+  l1 B raw_o_rev      pcc=0.073 up=0.246 down=0.255
+  linear A: {'raw_grn': -0.015, 'partial_grn': -0.006, 'raw_grn_top10': -0.012, 'partial_grn_top10': -0.007, 'raw_grn_regrev': 0.009, 'partial_grn_regrev': 0.001, 'raw_shuf': -0.001, 'partial_shuf': 0.002, 'raw_prof': -0.021, 'partial_prof': -0.064, 'raw_knn': 0.059, 'partial_knn': -0.018, 'raw_own_last': 0.282, 'lag0_raw_g': 0.219, 'lag0_partial_g': 0.046, 'lag0_raw_shuf': 0.002, 'lag0_partial_shuf': 0.003, 'lag0_raw_prof': 0.117, 'lag0_partial_prof': 0.036, 'lag0_raw_knn': 0.276, 'lag0_partial_knn': 0.067}
+  linear B own            pcc=0.102 up=0.163 down=0.240
+  linear B own+grn        pcc=0.085 up=0.152 down=0.209
+  linear B own+shuf       pcc=0.102 up=0.160 down=0.236
+  linear B own+deg_only   pcc=0.102 up=0.162 down=0.237
+  linear B own+prof       pcc=0.101 up=0.165 down=0.223
+  linear B own+knn        pcc=0.103 up=0.164 down=0.246
+  linear B own+grn+knn    pcc=0.087 up=0.155 down=0.214
+  linear B grn_only       pcc=-0.043 up=0.151 down=0.170
+  linear B raw_o_last     pcc=0.167 up=0.192 down=0.203
+  linear B raw_o_rev      pcc=-0.231 up=0.302 down=0.327
+  C: {'own': {'mean_auc': 0.8859748711141748, 'n_transitions': 26}, 'own+graph': {'mean_auc': 0.8861296265409856, 'n_transitions': 26}, 'own+shuf': {'mean_auc': 0.8861253994632459, 'n_transitions': 26}} {'frac_turn_on': 0.0757618448597325, 'auc_ever': 0.8098433468783534, 'auc_frac_past': 0.8621598500999786, 'auc_since': 0.15017774477336565, 'auc_f_prevbin': 0.6918544321290906, 'auc_u_reg': 0.6077889808165425, 'auc_u_has': 0.7331978445523583, 'auc_u_shuf': 0.6088543397360258}
+pancreas-human features built in 51.8 s
+pancreas-human A done
+pancreas-human B done
+  orig A: {'raw_grn': -0.009, 'partial_grn': 0.021, 'raw_grn_top10': -0.009, 'partial_grn_top10': 0.017, 'raw_grn_regrev': -0.034, 'partial_grn_regrev': -0.035, 'raw_shuf': -0.0, 'partial_shuf': 0.0, 'raw_prof': -0.168, 'partial_prof': -0.024, 'raw_knn': -0.22, 'partial_knn': -0.029, 'raw_own_last': -0.301, 'lag0_raw_g': 0.081, 'lag0_partial_g': 0.053, 'lag0_raw_shuf': 0.004, 'lag0_partial_shuf': 0.005, 'lag0_raw_prof': 0.188, 'lag0_partial_prof': 0.065, 'lag0_raw_knn': 0.281, 'lag0_partial_knn': 0.104}
+  orig B own            pcc=0.501 up=0.345 down=0.444
+  orig B own+grn        pcc=0.510 up=0.343 down=0.441
+  orig B own+shuf       pcc=0.513 up=0.346 down=0.440
+  orig B own+deg_only   pcc=0.513 up=0.346 down=0.440
+  orig B own+prof       pcc=0.502 up=0.349 down=0.444
+  orig B own+knn        pcc=0.502 up=0.351 down=0.443
+  orig B own+grn+knn    pcc=0.512 up=0.354 down=0.441
+  orig B grn_only       pcc=0.208 up=0.006 down=0.166
+  orig B raw_o_last     pcc=-0.394 up=0.033 down=0.030
+  orig B raw_o_rev      pcc=0.360 up=0.264 down=0.347
+  orig B raw_o_obs      pcc=0.478 up=0.340 down=0.440
+  l1 A: {'raw_grn': 0.145, 'partial_grn': 0.113, 'raw_grn_top10': 0.122, 'partial_grn_top10': 0.094, 'raw_grn_regrev': -0.112, 'partial_grn_regrev': -0.08, 'raw_shuf': 0.0, 'partial_shuf': 0.0, 'raw_prof': 0.03, 'partial_prof': -0.085, 'raw_knn': 0.056, 'partial_knn': -0.083, 'raw_own_last': 0.146, 'lag0_raw_g': 0.22, 'lag0_partial_g': 0.19, 'lag0_raw_shuf': 0.002, 'lag0_partial_shuf': 0.003, 'lag0_raw_prof': 0.191, 'lag0_partial_prof': 0.123, 'lag0_raw_knn': 0.257, 'lag0_partial_knn': 0.18}
+  l1 B own            pcc=0.158 up=0.146 down=0.254
+  l1 B own+grn        pcc=0.202 up=0.133 down=0.253
+  l1 B own+shuf       pcc=0.157 up=0.109 down=0.255
+  l1 B own+deg_only   pcc=0.158 up=0.112 down=0.254
+  l1 B own+prof       pcc=0.190 up=0.098 down=0.205
+  l1 B own+knn        pcc=0.182 up=0.100 down=0.200
+  l1 B own+grn+knn    pcc=0.215 up=0.128 down=0.226
+  l1 B grn_only       pcc=0.160 up=0.126 down=0.182
+  l1 B raw_o_last     pcc=0.152 up=0.229 down=0.223
+  l1 B raw_o_rev      pcc=-0.150 up=0.092 down=0.169
+  linear A: {'raw_grn': 0.127, 'partial_grn': 0.033, 'raw_grn_top10': 0.092, 'partial_grn_top10': 0.026, 'raw_grn_regrev': -0.131, 'partial_grn_regrev': -0.023, 'raw_shuf': 0.003, 'partial_shuf': 0.006, 'raw_prof': 0.054, 'partial_prof': -0.044, 'raw_knn': 0.076, 'partial_knn': -0.038, 'raw_own_last': 0.423, 'lag0_raw_g': 0.207, 'lag0_partial_g': 0.075, 'lag0_raw_shuf': 0.005, 'lag0_partial_shuf': 0.005, 'lag0_raw_prof': 0.08, 'lag0_partial_prof': 0.019, 'lag0_raw_knn': 0.112, 'lag0_partial_knn': 0.038}
+  linear B own            pcc=0.360 up=0.149 down=0.412
+  linear B own+grn        pcc=0.343 up=0.100 down=0.380
+  linear B own+shuf       pcc=0.360 up=0.109 down=0.405
+  linear B own+deg_only   pcc=0.361 up=0.111 down=0.406
+  linear B own+prof       pcc=0.354 up=0.095 down=0.381
+  linear B own+knn        pcc=0.355 up=0.114 down=0.388
+  linear B own+grn+knn    pcc=0.338 up=0.093 down=0.356
+  linear B grn_only       pcc=0.119 up=0.124 down=0.208
+  linear B raw_o_last     pcc=0.419 up=0.312 down=0.359
+  linear B raw_o_rev      pcc=-0.397 up=0.154 down=0.217
+  C: {'own': {'mean_auc': 0.8336822796609531, 'n_transitions': 11}, 'own+graph': {'mean_auc': 0.8345400679368976, 'n_transitions': 11}, 'own+shuf': {'mean_auc': 0.8344482106800932, 'n_transitions': 11}} {'frac_turn_on': 0.10455284225675648, 'auc_ever': 0.7611353030649733, 'auc_frac_past': 0.8087806803304866, 'auc_since': 0.1994774022256699, 'auc_f_prevbin': 0.6760761660262026, 'auc_u_reg': 0.4484910717451853, 'auc_u_has': 0.7471813232173645, 'auc_u_shuf': 0.502963718359191}

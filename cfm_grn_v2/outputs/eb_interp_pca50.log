@@ -1,0 +1,39 @@
+loaded 31054 cells x 17619 genes (1s)
+design: test 2.0 (days 12-15) from 1.0, horizon 1.0, bracketing 1.0->3.0 observed; validation 3.0 from 1.0; fit [0.0, 1.0, 4.0]
+genes: 1272 selected on the 18258 fit cells (1000 HVG union the expressed prior regulators), of which 316 are prior regulators (3s)
+PCA control: 50 components, 48.0 % of the variance of the selected genes (4s)
+snapshots: 10000 cells, 50 genes, timepoints [0.0, 1.0, 2.0, 3.0, 4.0] (4s)
+prior coverage: {'prior_error': 'prior coverage is reported for the gene space only'}
+space: 50 dimensions (PCA control)
+[moon2019_eb] flow_matching seed=0 done in 171s
+[moon2019_eb] flow_matching_shuffled_time seed=0 done in 133s
+[moon2019_eb] flow_matching seed=1 done in 137s
+[moon2019_eb] flow_matching_shuffled_time seed=1 done in 140s
+[moon2019_eb] flow_matching seed=2 done in 279s
+[moon2019_eb] flow_matching_shuffled_time seed=2 done in 338s
+[moon2019_eb] flow_matching seed=3 done in 118s
+[moon2019_eb] flow_matching_shuffled_time seed=3 done in 127s
+[moon2019_eb] flow_matching seed=4 done in 134s
+[moon2019_eb] flow_matching_shuffled_time seed=4 done in 111s
+
+                               mean     std  count
+model                                             
+noise_floor                 -0.0015  0.0000      5
+mean_interp                  0.1345  0.0068      5
+flow_matching                0.1411  0.0078      5
+ot_interp                    0.1799  0.0080      5
+flow_matching_shuffled_time  0.3070  0.0065      5
+persistence                  0.3211  0.0097      5
+mlp                          0.5156  0.0498      5
+linear                       1.0596  0.0318      5
+freefm_replay                1.2167  0.0232      5
+
+flow_vs_mean_interp                  mean +0.0066  CI95 [+0.0003, +0.0128]  n=5
+flow_vs_ot_interp                    mean -0.0388  CI95 [-0.0496, -0.0280]  n=5
+flow_vs_linear                       mean -0.9185  CI95 [-0.9513, -0.8857]  n=5
+flow_vs_mlp                          mean -0.3745  CI95 [-0.4291, -0.3199]  n=5
+flow_vs_persistence                  mean -0.1800  CI95 [-0.1944, -0.1657]  n=5
+flow_vs_freefm_replay                mean -1.0756  CI95 [-1.0977, -1.0535]  n=5
+flow_vs_flow_matching_shuffled_time  mean -0.1659  CI95 [-0.1744, -0.1574]  n=5
+
+done in 31.8 min -> outputs\eb_interp_pca50

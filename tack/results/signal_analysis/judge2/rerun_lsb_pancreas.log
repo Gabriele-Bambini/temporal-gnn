@@ -1,0 +1,115 @@
+﻿[pancreas-human] t=0 cfg=(0, '-', '-', None, None, 'none') orig=(4, 0.0, '-') 8.7s
+[pancreas-human] t=1 cfg=(0, '-', '-', None, None, 'none') orig=(4, 0.0, '-') 11.0s
+[pancreas-human] t=2 cfg=(0, '-', '-', 6, 4.0, 'mom') orig=(8, 0.5, 'next') 11.2s
+[pancreas-human] t=3 cfg=(2, 'cur', 'level', 6, 4.0, 'none') orig=(2, 1.0, 'now') 10.0s
+[pancreas-human] t=4 cfg=(2, 'cur', 'var', 6, 4.0, 'mom') orig=(8, 0.5, 'next') 8.7s
+[pancreas-human] t=5 cfg=(0, '-', '-', 6, 4.0, 'mom') orig=(4, 0.5, 'now') 8.5s
+[pancreas-human] t=6 cfg=(0, '-', '-', 6, 4.0, 'mom') orig=(4, 0.5, 'now') 9.1s
+[pancreas-human] t=7 cfg=(4, 'lag', 'var', 6, 4.0, 'mom') orig=(4, 0.5, 'now') 9.9s
+[pancreas-human] t=8 cfg=(8, 'lag', 'var', 6, 4.0, 'mom') orig=(4, 0.5, 'now') 10.5s
+[pancreas-human] t=9 cfg=(0, '-', '-', 6, 4.0, 'mom') orig=(4, 0.5, 'now') 11.1s
+[pancreas-human] t=10 cfg=(0, '-', '-', 6, 4.0, 'mom') orig=(4, 0.5, 'now') 12.0s
+[pancreas-human] t=11 cfg=(0, '-', '-', 6, 4.0, 'mom') orig=(4, 0.5, 'now') 15.7s
+[pancreas-human] t=12 cfg=(8, 'cur', 'var', None, 4.0, 'none') orig=(8, 0.5, 'now') 16.0s
+[pancreas-human] t=13 cfg=(8, 'cur', 'var', None, 4.0, 'none') orig=(8, 0.5, 'now') 14.8s
+
+==== pancreas-human  (228s)   PCC / P@200 up / down  [mask sd of PCC]
+-- orig
+  levelobs               all: 0.463/0.295/0.447  i>=1: 0.481/0.318/0.454  i>=3: 0.478/0.338/0.445  [sd 0.005]
+  lsb_obs                all: 0.470/0.297/0.443  i>=1: 0.489/0.320/0.449  i>=3: 0.485/0.342/0.440  [sd 0.004]
+  trend                  all: -0.367/0.040/0.037  i>=1: -0.396/0.043/0.039  i>=3: -0.395/0.034/0.032  [sd 0.003]
+    levelobs_vs_trend_i>=1                   dPCC +0.877 (13/0, p=0.0002)  dUp +0.274  dDn +0.414
+    lsb_obs_vs_trend_i>=1                    dPCC +0.885 (13/0, p=0.0002)  dUp +0.277  dDn +0.410
+    lsb_obs_vs_levelobs_i>=1                 dPCC +0.008 (7/5, p=0.1763)  dUp +0.002  dDn -0.004
+    trend_vs_levelobs_i>=1                   dPCC -0.877 (0/13, p=0.0002)  dUp -0.274  dDn -0.414
+-- l1
+  pergene                all: 0.141/0.164/0.193  i>=1: 0.150/0.177/0.208  i>=3: 0.214/0.192/0.232  [sd 0.024]
+  pergene_nomom          all: -0.027/0.084/0.115  i>=1: -0.030/0.090/0.123  i>=3: -0.003/0.091/0.128  [sd 0.014]
+  lsb_nodrift            all: 0.116/0.166/0.184  i>=1: 0.124/0.178/0.198  i>=3: 0.183/0.194/0.221  [sd 0.023]
+  lsb_full               all: 0.076/0.144/0.176  i>=1: 0.080/0.155/0.190  i>=3: 0.132/0.166/0.211  [sd 0.018]
+  lsb_forced             all: 0.074/0.149/0.182  i>=1: 0.079/0.160/0.196  i>=3: 0.128/0.170/0.211  [sd 0.013]
+  pergene_fixed          all: 0.141/0.159/0.186  i>=1: 0.151/0.171/0.201  i>=3: 0.200/0.184/0.221  [sd 0.021]
+  k4_level_fixed         all: -0.083/0.099/0.127  i>=1: -0.090/0.106/0.136  i>=3: -0.086/0.105/0.138  [sd 0.017]
+  lsb_fixed_k4ar         all: 0.047/0.172/0.175  i>=1: 0.050/0.185/0.188  i>=3: 0.082/0.200/0.205  [sd 0.015]
+  k4_var_fixed           all: 0.070/0.161/0.190  i>=1: 0.074/0.173/0.204  i>=3: 0.108/0.183/0.223  [sd 0.013]
+  k4_lagbasis_ar_fixed   all: 0.073/0.123/0.167  i>=1: 0.077/0.132/0.179  i>=3: 0.114/0.139/0.196  [sd 0.009]
+  regime                 all: 0.234/0.187/0.251  i>=1: 0.252/0.202/0.271  i>=3: 0.270/0.203/0.284  [sd 0.018]
+  lsb_stack              all: 0.195/0.167/0.217  i>=1: 0.208/0.180/0.234  i>=3: 0.283/0.196/0.263  [sd 0.026]
+  regime+lsb             all: 0.180/0.173/0.233  i>=1: 0.193/0.185/0.250  i>=3: 0.264/0.203/0.282  [sd 0.024]
+  HINDSIGHT_fixed_cfg    all: 0.162/0.168/0.195  i>=1: 0.173/0.181/0.209  i>=3: 0.227/0.196/0.232  [sd 0.023]
+  trend                  all: 0.150/0.207/0.207  i>=1: 0.161/0.223/0.223  i>=3: 0.162/0.228/0.227  [sd 0.022]
+    pergene_vs_trend_i>=1                    dPCC -0.011 (5/8, p=0.946)  dUp -0.046  dDn -0.015
+    pergene_vs_regime_i>=3                   dPCC -0.056 (1/10, p=0.042)  dUp -0.011  dDn -0.052
+    pergene_nomom_vs_trend_i>=1              dPCC -0.191 (5/8, p=0.1099)  dUp -0.133  dDn -0.099
+    pergene_nomom_vs_regime_i>=3             dPCC -0.273 (1/10, p=0.0068)  dUp -0.112  dDn -0.156
+    lsb_nodrift_vs_trend_i>=1                dPCC -0.037 (5/8, p=0.8394)  dUp -0.044  dDn -0.024
+    lsb_nodrift_vs_regime_i>=3               dPCC -0.087 (1/10, p=0.042)  dUp -0.009  dDn -0.064
+    lsb_full_vs_trend_i>=1                   dPCC -0.081 (5/8, p=0.4548)  dUp -0.068  dDn -0.033
+    lsb_full_vs_regime_i>=3                  dPCC -0.139 (1/10, p=0.0244)  dUp -0.037  dDn -0.073
+    lsb_forced_vs_trend_i>=1                 dPCC -0.083 (6/7, p=0.5417)  dUp -0.063  dDn -0.027
+    lsb_forced_vs_regime_i>=3                dPCC -0.142 (2/9, p=0.0098)  dUp -0.033  dDn -0.072
+    pergene_fixed_vs_trend_i>=1              dPCC -0.011 (6/7, p=1.0)  dUp -0.052  dDn -0.022
+    pergene_fixed_vs_regime_i>=3             dPCC -0.070 (2/9, p=0.1016)  dUp -0.019  dDn -0.063
+    k4_level_fixed_vs_trend_i>=1             dPCC -0.251 (4/9, p=0.0171)  dUp -0.117  dDn -0.086
+    k4_level_fixed_vs_regime_i>=3            dPCC -0.356 (0/11, p=0.001)  dUp -0.097  dDn -0.146
+    lsb_fixed_k4ar_vs_trend_i>=1             dPCC -0.111 (4/9, p=0.1909)  dUp -0.038  dDn -0.035
+    lsb_fixed_k4ar_vs_regime_i>=3            dPCC -0.189 (0/11, p=0.001)  dUp -0.002  dDn -0.079
+    k4_var_fixed_vs_trend_i>=1               dPCC -0.087 (5/8, p=0.3054)  dUp -0.050  dDn -0.018
+    k4_var_fixed_vs_regime_i>=3              dPCC -0.162 (2/9, p=0.0049)  dUp -0.019  dDn -0.061
+    k4_lagbasis_ar_fixed_vs_trend_i>=1       dPCC -0.084 (5/8, p=0.4548)  dUp -0.090  dDn -0.043
+    k4_lagbasis_ar_fixed_vs_regime_i>=3      dPCC -0.156 (3/8, p=0.0244)  dUp -0.064  dDn -0.088
+    regime_vs_trend_i>=1                     dPCC +0.091 (9/2, p=0.0322)  dUp -0.021  dDn +0.048
+    lsb_stack_vs_trend_i>=1                  dPCC +0.047 (9/4, p=0.1272)  dUp -0.043  dDn +0.011
+    lsb_stack_vs_regime_i>=3                 dPCC +0.013 (7/4, p=0.6377)  dUp -0.007  dDn -0.021
+    regime+lsb_vs_trend_i>=1                 dPCC +0.032 (9/4, p=0.1677)  dUp -0.037  dDn +0.028
+    regime+lsb_vs_regime_i>=3                dPCC -0.006 (7/4, p=0.8311)  dUp -0.000  dDn -0.002
+    HINDSIGHT_fixed_cfg_vs_trend_i>=1        dPCC +0.012 (6/7, p=0.8394)  dUp -0.042  dDn -0.013
+    HINDSIGHT_fixed_cfg_vs_regime_i>=3       dPCC -0.043 (3/8, p=0.2061)  dUp -0.007  dDn -0.052
+    trend_vs_regime_i>=3                     dPCC -0.108 (2/9, p=0.0322)  dUp +0.025  dDn -0.057
+-- linear
+  pergene                all: 0.201/0.258/0.268  i>=1: 0.217/0.250/0.289  i>=3: 0.284/0.272/0.305  [sd 0.064]
+  pergene_nomom          all: -0.133/0.181/0.174  i>=1: -0.143/0.167/0.187  i>=3: -0.149/0.176/0.176  [sd 0.051]
+  lsb_nodrift            all: 0.201/0.258/0.268  i>=1: 0.217/0.250/0.289  i>=3: 0.284/0.272/0.305  [sd 0.064]
+  lsb_full               all: 0.111/0.254/0.274  i>=1: 0.119/0.245/0.295  i>=3: 0.169/0.267/0.312  [sd 0.111]
+  lsb_forced             all: 0.099/0.271/0.291  i>=1: 0.107/0.264/0.313  i>=3: 0.159/0.287/0.323  [sd 0.098]
+  lsb_full_beta0         all: 0.124/0.259/0.271  i>=1: 0.133/0.250/0.291  i>=3: 0.185/0.273/0.308  [sd 0.083]
+  pergene_fixed          all: 0.222/0.261/0.270  i>=1: 0.240/0.253/0.291  i>=3: 0.305/0.277/0.303  [sd 0.074]
+  k4_level_fixed         all: -0.249/0.174/0.211  i>=1: -0.268/0.160/0.227  i>=3: -0.290/0.164/0.217  [sd 0.058]
+  lsb_fixed_k4ar         all: 0.091/0.268/0.273  i>=1: 0.098/0.260/0.294  i>=3: 0.156/0.284/0.305  [sd 0.087]
+  k4_var_fixed           all: 0.093/0.250/0.298  i>=1: 0.100/0.241/0.321  i>=3: 0.153/0.261/0.331  [sd 0.090]
+  k4_lagbasis_ar_fixed   all: 0.090/0.203/0.270  i>=1: 0.097/0.190/0.290  i>=3: 0.137/0.202/0.302  [sd 0.055]
+  regime                 all: 0.217/0.199/0.347  i>=1: 0.233/0.214/0.374  i>=3: 0.247/0.223/0.374  [sd 0.066]
+  lsb_stack              all: 0.189/0.226/0.291  i>=1: 0.203/0.215/0.313  i>=3: 0.268/0.232/0.334  [sd 0.051]
+  regime+lsb             all: 0.225/0.235/0.295  i>=1: 0.242/0.225/0.318  i>=3: 0.314/0.243/0.339  [sd 0.061]
+  HINDSIGHT_fixed_cfg    all: 0.282/0.238/0.308  i>=1: 0.304/0.229/0.332  i>=3: 0.408/0.258/0.352  [sd 0.057]
+  trend                  all: 0.339/0.267/0.337  i>=1: 0.365/0.288/0.362  i>=3: 0.402/0.309/0.361  [sd 0.055]
+    pergene_vs_trend_i>=1                    dPCC -0.148 (2/11, p=0.0327)  dUp -0.038  dDn -0.074
+    pergene_vs_regime_i>=3                   dPCC +0.037 (5/6, p=0.9658)  dUp +0.050  dDn -0.070
+    pergene_nomom_vs_trend_i>=1              dPCC -0.508 (0/13, p=0.0002)  dUp -0.121  dDn -0.175
+    pergene_nomom_vs_regime_i>=3             dPCC -0.395 (1/10, p=0.0322)  dUp -0.046  dDn -0.198
+    lsb_nodrift_vs_trend_i>=1                dPCC -0.148 (2/11, p=0.0327)  dUp -0.038  dDn -0.074
+    lsb_nodrift_vs_regime_i>=3               dPCC +0.037 (5/6, p=0.9658)  dUp +0.050  dDn -0.070
+    lsb_full_vs_trend_i>=1                   dPCC -0.246 (1/12, p=0.0005)  dUp -0.043  dDn -0.068
+    lsb_full_vs_regime_i>=3                  dPCC -0.078 (4/7, p=0.2783)  dUp +0.044  dDn -0.063
+    lsb_forced_vs_trend_i>=1                 dPCC -0.258 (3/10, p=0.0046)  dUp -0.024  dDn -0.049
+    lsb_forced_vs_regime_i>=3                dPCC -0.088 (4/7, p=0.2783)  dUp +0.064  dDn -0.051
+    lsb_full_beta0_vs_trend_i>=1             dPCC -0.232 (2/11, p=0.0215)  dUp -0.038  dDn -0.071
+    lsb_full_beta0_vs_regime_i>=3            dPCC -0.062 (3/8, p=0.6377)  dUp +0.050  dDn -0.067
+    pergene_fixed_vs_trend_i>=1              dPCC -0.125 (2/11, p=0.0942)  dUp -0.035  dDn -0.071
+    pergene_fixed_vs_regime_i>=3             dPCC +0.058 (4/7, p=1.0)  dUp +0.054  dDn -0.071
+    k4_level_fixed_vs_trend_i>=1             dPCC -0.633 (1/12, p=0.0005)  dUp -0.128  dDn -0.135
+    k4_level_fixed_vs_regime_i>=3            dPCC -0.537 (2/9, p=0.0068)  dUp -0.059  dDn -0.157
+    lsb_fixed_k4ar_vs_trend_i>=1             dPCC -0.267 (2/11, p=0.0215)  dUp -0.028  dDn -0.068
+    lsb_fixed_k4ar_vs_regime_i>=3            dPCC -0.091 (3/8, p=0.4648)  dUp +0.061  dDn -0.070
+    k4_var_fixed_vs_trend_i>=1               dPCC -0.265 (1/12, p=0.0105)  dUp -0.046  dDn -0.042
+    k4_var_fixed_vs_regime_i>=3              dPCC -0.094 (4/7, p=0.4648)  dUp +0.038  dDn -0.044
+    k4_lagbasis_ar_fixed_vs_trend_i>=1       dPCC -0.268 (3/10, p=0.0105)  dUp -0.098  dDn -0.072
+    k4_lagbasis_ar_fixed_vs_regime_i>=3      dPCC -0.110 (5/6, p=0.5195)  dUp -0.021  dDn -0.072
+    regime_vs_trend_i>=1                     dPCC -0.132 (3/8, p=0.042)  dUp -0.073  dDn +0.012
+    lsb_stack_vs_trend_i>=1                  dPCC -0.162 (4/9, p=0.2163)  dUp -0.073  dDn -0.049
+    lsb_stack_vs_regime_i>=3                 dPCC +0.021 (8/3, p=0.4648)  dUp +0.009  dDn -0.041
+    regime+lsb_vs_trend_i>=1                 dPCC -0.122 (4/9, p=0.0803)  dUp -0.063  dDn -0.045
+    regime+lsb_vs_regime_i>=3                dPCC +0.067 (7/4, p=0.5195)  dUp +0.020  dDn -0.035
+    HINDSIGHT_fixed_cfg_vs_trend_i>=1        dPCC -0.061 (3/10, p=0.3054)  dUp -0.059  dDn -0.030
+    HINDSIGHT_fixed_cfg_vs_regime_i>=3       dPCC +0.162 (7/4, p=0.042)  dUp +0.035  dDn -0.023
+    trend_vs_regime_i>=3                     dPCC +0.156 (8/3, p=0.042)  dUp +0.087  dDn -0.014

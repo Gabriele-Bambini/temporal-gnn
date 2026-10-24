@@ -1,0 +1,72 @@
+gastrulation-human orig 21s
+gastrulation-human l1 32s
+gastrulation-human linear 43s
+pancreas-human orig 7s
+pancreas-human l1 10s
+pancreas-human linear 12s
+
+===== gastrulation-human
+ -- orig: N_eff median 1776, genes for 50% SS 835, 80% 1361
+   by level (per-transition normalised): [([0, 0.01], 0.895, 0.27), ([0.01, 0.03], 0.06, -0.67), ([0.03, 0.1], 0.032, 0.07), ([0.1, 0.3], 0.009, 0.12), ([0.3, 1], 0.003, 0.31), ([1, 3], 0.001, 0.53), ([3, 10], 0.0, 0.69), ([10, inf], 0.0, 0.83)]
+   true-change persistence median -0.377; lag1 obs -0.485 vs noise-only -0.397; 2nd diff obs/noise 1.25
+   oracle_coef_plain                        r=0.603 up=0.397 dn=0.546
+   oracle_coef_by_level                     r=0.618 up=0.395 dn=0.553
+   strict_coef_plain                        r=0.606 up=0.405 dn=0.552
+   strict_coef_by_level                     r=0.609 up=0.407 dn=0.556
+   ref_strict_level_obs_na_i>=2             r=0.600 up=0.408 dn=0.546
+   ref_strict_trend1_i>=2                   r=-0.473 up=0.010 dn=0.008
+   ref_oracle_next_interp1_nb_i>=2          r=0.552 up=0.348 dn=0.520
+ -- l1: N_eff median 917, genes for 50% SS 630, 80% 2022
+   by level (per-transition normalised): [([0, 0.01], 0.014, 0.11), ([0.01, 0.03], 0.014, 0.05), ([0.03, 0.1], 0.065, 0.08), ([0.1, 0.3], 0.167, 0.07), ([0.3, 1], 0.305, 0.09), ([1, 3], 0.25, 0.14), ([3, 10], 0.127, 0.23), ([10, inf], 0.058, 0.37)]
+   true-change persistence median 1.358; lag1 obs -0.208 vs noise-only -0.399; 2nd diff obs/noise 0.97
+   oracle_coef_plain                        r=0.460 up=0.328 dn=0.333
+   oracle_coef_by_level                     r=0.507 up=0.334 dn=0.347
+   strict_coef_plain                        r=0.037 up=0.170 dn=0.156
+   strict_coef_by_level                     r=0.171 up=0.191 dn=0.157
+   ref_strict_level_obs_na_i>=2             r=0.095 up=0.246 dn=0.259
+   ref_strict_trend1_i>=2                   r=-0.183 up=0.099 dn=0.093
+   ref_oracle_next_interp1_nb_i>=2          r=0.570 up=0.406 dn=0.414
+ -- linear: N_eff median 12, genes for 50% SS 5, 80% 46
+   by level (per-transition normalised): [([0, 0.01], 0.003, 0.96), ([0.01, 0.03], 0.001, 0.51), ([0.03, 0.1], 0.002, 0.24), ([0.1, 0.3], 0.006, 0.14), ([0.3, 1], 0.019, 0.11), ([1, 3], 0.042, 0.22), ([3, 10], 0.102, 0.31), ([10, inf], 0.825, 0.71)]
+   true-change persistence median 1.042; lag1 obs 0.251 vs noise-only -0.188; 2nd diff obs/noise 1.03
+   oracle_coef_plain                        r=0.683 up=0.362 dn=0.346
+   oracle_coef_by_level                     r=0.728 up=0.434 dn=0.409
+   strict_coef_plain                        r=0.049 up=0.206 dn=0.191
+   strict_coef_by_level                     r=0.061 up=0.197 dn=0.217
+   ref_strict_level_obs_na_i>=2             r=-0.181 up=0.296 dn=0.326
+   ref_strict_trend1_i>=2                   r=0.144 up=0.204 dn=0.199
+   ref_oracle_next_interp1_nb_i>=2          r=0.647 up=0.486 dn=0.503
+   |corr(y, m_a)| mean 0.545
+
+===== pancreas-human
+ -- orig: N_eff median 1977, genes for 50% SS 895, 80% 1464
+   by level (per-transition normalised): [([0, 0.01], 0.799, 0.36), ([0.01, 0.03], 0.132, 0.05), ([0.03, 0.1], 0.044, 0.01), ([0.1, 0.3], 0.015, 0.57), ([0.3, 1], 0.007, 0.75), ([1, 3], 0.002, 0.89), ([3, 10], 0.001, 0.94), ([10, inf], 0.0, 0.96)]
+   true-change persistence median -0.050; lag1 obs -0.403 vs noise-only -0.353; 2nd diff obs/noise 1.24
+   oracle_coef_plain                        r=0.517 up=0.329 dn=0.455
+   oracle_coef_by_level                     r=0.577 up=0.327 dn=0.472
+   strict_coef_plain                        r=0.481 up=0.334 dn=0.442
+   strict_coef_by_level                     r=0.529 up=0.341 dn=0.455
+   ref_strict_level_obs_na_i>=2             r=0.477 up=0.336 dn=0.443
+   ref_strict_trend1_i>=2                   r=-0.390 up=0.035 dn=0.028
+   ref_oracle_next_interp1_nb_i>=2          r=0.607 up=0.374 dn=0.510
+ -- l1: N_eff median 464, genes for 50% SS 417, 80% 1907
+   by level (per-transition normalised): [([0, 0.01], 0.005, 0.05), ([0.01, 0.03], 0.013, 0.05), ([0.03, 0.1], 0.074, 0.21), ([0.1, 0.3], 0.216, 0.32), ([0.3, 1], 0.333, 0.49), ([1, 3], 0.208, 0.72), ([3, 10], 0.096, 0.81), ([10, inf], 0.055, 0.81)]
+   true-change persistence median 0.769; lag1 obs 0.214 vs noise-only -0.168; 2nd diff obs/noise 1.29
+   oracle_coef_plain                        r=0.286 up=0.252 dn=0.266
+   oracle_coef_by_level                     r=0.379 up=0.241 dn=0.299
+   strict_coef_plain                        r=0.104 up=0.200 dn=0.225
+   strict_coef_by_level                     r=0.211 up=0.180 dn=0.245
+   ref_strict_level_obs_na_i>=2             r=-0.146 up=0.100 dn=0.175
+   ref_strict_trend1_i>=2                   r=0.151 up=0.219 dn=0.214
+   ref_oracle_next_interp1_nb_i>=2          r=0.690 up=0.498 dn=0.532
+ -- linear: N_eff median 16, genes for 50% SS 10, 80% 61
+   by level (per-transition normalised): [([0, 0.01], 0.003, 0.91), ([0.01, 0.03], 0.001, 0.37), ([0.03, 0.1], 0.002, 0.29), ([0.1, 0.3], 0.009, 0.33), ([0.3, 1], 0.027, 0.46), ([1, 3], 0.059, 0.75), ([3, 10], 0.127, 0.85), ([10, inf], 0.772, 0.93)]
+   true-change persistence median 0.685; lag1 obs 0.379 vs noise-only -0.060; 2nd diff obs/noise 3.80
+   oracle_coef_plain                        r=0.519 up=0.263 dn=0.377
+   oracle_coef_by_level                     r=0.593 up=0.285 dn=0.434
+   strict_coef_plain                        r=0.236 up=0.288 dn=0.306
+   strict_coef_by_level                     r=0.338 up=0.207 dn=0.390
+   ref_strict_level_obs_na_i>=2             r=-0.370 up=0.164 dn=0.214
+   ref_strict_trend1_i>=2                   r=0.417 up=0.297 dn=0.357
+   ref_oracle_next_interp1_nb_i>=2          r=0.751 up=0.545 dn=0.636
+   |corr(y, m_a)| mean 0.416

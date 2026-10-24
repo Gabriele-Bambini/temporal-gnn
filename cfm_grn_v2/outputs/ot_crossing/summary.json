@@ -1,0 +1,114 @@
+{
+ "summary": [
+  {
+   "model": "ot_interp",
+   "mean": -0.0060576993451667786,
+   "std": 2.531507829327914e-16,
+   "count": 5
+  },
+  {
+   "model": "linear_ot",
+   "mean": -0.0053707424478015575,
+   "std": 0.0002640082566015667,
+   "count": 5
+  },
+  {
+   "model": "spline_ot",
+   "mean": -0.005303312227652146,
+   "std": 2.6203675260284408e-05,
+   "count": 5
+  },
+  {
+   "model": "linear",
+   "mean": -0.004754787017316376,
+   "std": 8.807581885990652e-09,
+   "count": 5
+  },
+  {
+   "model": "mlp",
+   "mean": -0.003191161683954924,
+   "std": 0.00042687026089562524,
+   "count": 5
+  },
+  {
+   "model": "freefm_replay",
+   "mean": -0.003178010352697491,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "noise_floor",
+   "mean": 0.0005582887508923217,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "linear_indep",
+   "mean": 0.006393324701132986,
+   "std": 0.0017240123505745484,
+   "count": 5
+  },
+  {
+   "model": "spline_random",
+   "mean": 0.08079112826189092,
+   "std": 0.011978436993730891,
+   "count": 5
+  },
+  {
+   "model": "mean_interp",
+   "mean": 0.16857342116915042,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "spline_ot_shuffled_time",
+   "mean": 0.1686628916458333,
+   "std": 0.004140414177068519,
+   "count": 5
+  },
+  {
+   "model": "persistence",
+   "mean": 0.16866967788489629,
+   "std": 0.0,
+   "count": 5
+  }
+ ],
+ "paired": {
+  "spline_ot_vs_spline_random": {
+   "model": "spline_ot",
+   "reference": "spline_random",
+   "metric": "energy_distance",
+   "mean": -0.08609444048954307,
+   "ci_low": -0.10097829486323044,
+   "ci_high": -0.07121058611585569,
+   "n": 5
+  },
+  "linear_ot_vs_linear_indep": {
+   "model": "linear_ot",
+   "reference": "linear_indep",
+   "metric": "energy_distance",
+   "mean": -0.011764067148934543,
+   "ci_low": -0.013700293126146155,
+   "ci_high": -0.009827841171722931,
+   "n": 5
+  },
+  "spline_ot_vs_ot_interp": {
+   "model": "spline_ot",
+   "reference": "ot_interp",
+   "metric": "energy_distance",
+   "mean": 0.0007543871175146322,
+   "ci_low": 0.0007218509573233928,
+   "ci_high": 0.0007869232777058716,
+   "n": 5
+  },
+  "spline_ot_vs_mean_interp": {
+   "model": "spline_ot",
+   "reference": "mean_interp",
+   "metric": "energy_distance",
+   "mean": -0.17387673339680257,
+   "ci_low": -0.17390926955699387,
+   "ci_high": -0.17384419723661126,
+   "n": 5
+  }
+ }
+}

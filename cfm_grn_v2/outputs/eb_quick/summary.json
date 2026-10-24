@@ -1,0 +1,218 @@
+{
+ "summary": [
+  {
+   "model": "noise_floor",
+   "mean": -0.0018727737617084018,
+   "std": NaN,
+   "count": 1
+  },
+  {
+   "model": "flow_matching",
+   "mean": 0.14243456016151157,
+   "std": NaN,
+   "count": 1
+  },
+  {
+   "model": "mean_interp",
+   "mean": 0.17753717011487424,
+   "std": NaN,
+   "count": 1
+  },
+  {
+   "model": "ot_interp",
+   "mean": 0.36722415158624244,
+   "std": NaN,
+   "count": 1
+  },
+  {
+   "model": "flow_matching_shuffled_time",
+   "mean": 0.4740832228836851,
+   "std": NaN,
+   "count": 1
+  },
+  {
+   "model": "mlp",
+   "mean": 0.5125138355599574,
+   "std": NaN,
+   "count": 1
+  },
+  {
+   "model": "persistence",
+   "mean": 0.5277318404824882,
+   "std": NaN,
+   "count": 1
+  },
+  {
+   "model": "linear",
+   "mean": 0.6677209912606017,
+   "std": NaN,
+   "count": 1
+  },
+  {
+   "model": "freefm_replay",
+   "mean": 2.3877915861305397,
+   "std": NaN,
+   "count": 1
+  }
+ ],
+ "paired": {
+  "flow_vs_mean_interp": {
+   "model": "flow_matching",
+   "reference": "mean_interp",
+   "metric": "energy_distance",
+   "mean": -0.03510260995336267,
+   "ci_low": NaN,
+   "ci_high": NaN,
+   "n": 1
+  },
+  "flow_vs_ot_interp": {
+   "model": "flow_matching",
+   "reference": "ot_interp",
+   "metric": "energy_distance",
+   "mean": -0.22478959142473087,
+   "ci_low": NaN,
+   "ci_high": NaN,
+   "n": 1
+  },
+  "flow_vs_linear": {
+   "model": "flow_matching",
+   "reference": "linear",
+   "metric": "energy_distance",
+   "mean": -0.5252864310990901,
+   "ci_low": NaN,
+   "ci_high": NaN,
+   "n": 1
+  },
+  "flow_vs_mlp": {
+   "model": "flow_matching",
+   "reference": "mlp",
+   "metric": "energy_distance",
+   "mean": -0.3700792753984459,
+   "ci_low": NaN,
+   "ci_high": NaN,
+   "n": 1
+  },
+  "flow_vs_persistence": {
+   "model": "flow_matching",
+   "reference": "persistence",
+   "metric": "energy_distance",
+   "mean": -0.38529728032097665,
+   "ci_low": NaN,
+   "ci_high": NaN,
+   "n": 1
+  },
+  "flow_vs_freefm_replay": {
+   "model": "flow_matching",
+   "reference": "freefm_replay",
+   "metric": "energy_distance",
+   "mean": -2.245357025969028,
+   "ci_low": NaN,
+   "ci_high": NaN,
+   "n": 1
+  },
+  "flow_vs_flow_matching_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.3316486627221735,
+   "ci_low": NaN,
+   "ci_high": NaN,
+   "n": 1
+  }
+ },
+ "design": {
+  "times": [
+   0.0,
+   1.0,
+   2.0,
+   3.0,
+   4.0
+  ],
+  "test_time": 2.0,
+  "t_prev": 1.0,
+  "t_next": 3.0,
+  "obs_times": [
+   0.0,
+   1.0,
+   3.0,
+   4.0
+  ],
+  "val_time": 3.0,
+  "v_prev": 1.0,
+  "fit_times": [
+   0.0,
+   1.0,
+   4.0
+  ],
+  "horizon": 1.0,
+  "frac": 0.5
+ },
+ "genes": {
+  "n_selected": 608,
+  "n_hvg_requested": 300,
+  "n_prior_regulators": 316,
+  "prior_edges_within_selected_genes": 423,
+  "prior_regulators_present": 152
+ },
+ "qc": {
+  "cells_raw": 31161,
+  "cells_kept": 31054,
+  "genes_raw": 33694,
+  "genes_kept": 17619,
+  "filters": {
+   "min_counts": 1000,
+   "min_genes": 500,
+   "max_mito": 0.2,
+   "min_cells": 20
+  },
+  "per_sample": {
+   "T0_1A": 4636,
+   "T2_3B": 7375,
+   "T4_5C": 6241,
+   "T6_7D": 6555,
+   "T8_9E": 6247
+  },
+  "median_counts": 4151.5,
+  "median_genes": 1513.0
+ },
+ "config": {
+  "hidden": 128,
+  "depth": 3,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "batch_size": 256,
+  "n_iters": 1200,
+  "sigma_min": 0.01,
+  "coupling": "ot",
+  "n_ode_steps": 20,
+  "ode_method": "rk4",
+  "time_embed_dim": 32,
+  "cond_dim": 8,
+  "time_conditioning": "delta",
+  "eval_every": 150,
+  "patience": 4,
+  "seed": 0,
+  "shuffle_biological_time": false,
+  "ema_decay": 0.999,
+  "grad_clip": 1.0,
+  "pair_mode": "consecutive",
+  "clock": "duration",
+  "path": "spline",
+  "chain": "ot",
+  "spline_kind": "natural",
+  "marginal_iters": 200,
+  "marginal_weight": 1.0,
+  "marginal_prior": 1.0,
+  "marginal_batch": 256,
+  "marginal_steps": 8,
+  "marginal_metric": "energy",
+  "marginal_window": 1.0,
+  "marginal_lr": 0.0003,
+  "marginal_eval_every": 25,
+  "marginal_patience": 10
+ },
+ "null_q95": 0.006514709589533197,
+ "quick": true,
+ "max_cells_per_group": 2000,
+ "seconds": 574.2
+}

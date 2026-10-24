@@ -1,0 +1,34 @@
+===== pancreas-human  (transitions i>=3, k=11)
+  G_avg3        partial +0.098 (pos 10/11)   raw corr +0.148
+  G_avg3_2hop   partial +0.060 (pos 10/11)   raw corr +0.085
+  G_cur         partial +0.094 (pos 11/11)   raw corr +0.131
+  G_prev        partial +0.062 (pos 10/11)   raw corr +0.111
+  G_mom2        partial +0.056 (pos 10/11)   raw corr +0.086
+  G_sym         partial +0.091 (pos 11/11)   raw corr +0.126
+  G_2hop        partial +0.088 (pos 11/11)   raw corr +0.097
+  G_rev         partial -0.064 (pos 0/11)   raw corr -0.097
+  G_null        partial -0.006 (pos 6/11)   raw corr -0.009
+  G_avg3|G_cur  partial +0.050 (pos 9/11)   raw corr +nan
+  G_cur|G_avg3  partial +0.041 (pos 10/11)   raw corr +nan
+  G_cur|G_prev  partial +0.087 (pos 11/11)   raw corr +nan
+  G_prev|G_cur  partial +0.052 (pos 10/11)   raw corr +nan
+  G_mom2|G_cur  partial -0.045 (pos 2/11)   raw corr +nan
+  G_2hop|G_cur  partial +0.032 (pos 9/11)   raw corr +nan
+  G_sym|G_cur   partial +0.005 (pos 7/11)   raw corr +nan
+===== gastrulation-human  (transitions i>=3, k=26)
+  G_avg3        partial +0.070 (pos 21/26)   raw corr +0.082
+  G_avg3_2hop   partial +0.042 (pos 21/26)   raw corr +0.057
+  G_cur         partial +0.050 (pos 21/26)   raw corr +0.072
+  G_prev        partial +0.047 (pos 21/26)   raw corr +0.073
+  G_mom2        partial +0.045 (pos 21/26)   raw corr +0.065
+  G_sym         partial +0.045 (pos 21/26)   raw corr +0.071
+  G_2hop        partial +0.034 (pos 21/26)   raw corr +0.053
+  G_rev         partial -0.051 (pos 4/26)   raw corr -0.076
+  G_null        partial +0.002 (pos 14/26)   raw corr +0.045
+  G_avg3|G_cur  partial +0.049 (pos 23/26)   raw corr +nan
+  G_cur|G_avg3  partial +0.005 (pos 16/26)   raw corr +nan
+  G_cur|G_prev  partial +0.042 (pos 21/26)   raw corr +nan
+  G_prev|G_cur  partial +0.039 (pos 20/26)   raw corr +nan
+  G_mom2|G_cur  partial +0.009 (pos 17/26)   raw corr +nan
+  G_2hop|G_cur  partial -0.000 (pos 15/26)   raw corr +nan
+  G_sym|G_cur   partial +0.002 (pos 13/26)   raw corr +nan

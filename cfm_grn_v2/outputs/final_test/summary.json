@@ -1,0 +1,145 @@
+{
+ "summary": [
+  {
+   "model": "noise_floor",
+   "mean": 4.1654337363761186e-05,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "flow_v019",
+   "mean": 0.42796824698051894,
+   "std": 0.005705367606452495,
+   "count": 5
+  },
+  {
+   "model": "flow_v018",
+   "mean": 0.6412801339726398,
+   "std": 0.001596745175376941,
+   "count": 5
+  },
+  {
+   "model": "mean_interp",
+   "mean": 1.102109242336418,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "ot_interp",
+   "mean": 1.1706128074859845,
+   "std": 1.5700924586837752e-16,
+   "count": 5
+  },
+  {
+   "model": "linear",
+   "mean": 2.746998736804307,
+   "std": 7.709505268484252e-06,
+   "count": 5
+  },
+  {
+   "model": "mlp",
+   "mean": 2.907716412038042,
+   "std": 0.14777286760002492,
+   "count": 5
+  },
+  {
+   "model": "flow_v018_shuffled_time",
+   "mean": 4.117495900278198,
+   "std": 0.06730299471880437,
+   "count": 5
+  },
+  {
+   "model": "flow_v019_shuffled_time",
+   "mean": 4.1408437166106875,
+   "std": 0.10711152502205526,
+   "count": 5
+  },
+  {
+   "model": "persistence",
+   "mean": 4.155408630788941,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "model": "freefm_replay",
+   "mean": 4.402292026117652,
+   "std": 0.0,
+   "count": 5
+  }
+ ],
+ "paired": {
+  "v019_vs_v018": {
+   "model": "flow_v019",
+   "reference": "flow_v018",
+   "metric": "energy_distance",
+   "mean": -0.2133118869921208,
+   "ci_low": -0.22091002247457367,
+   "ci_high": -0.20571375150966795,
+   "n": 5
+  },
+  "v019_vs_mean_interp": {
+   "model": "flow_v019",
+   "reference": "mean_interp",
+   "metric": "energy_distance",
+   "mean": -0.674140995355899,
+   "ci_low": -0.681225144909349,
+   "ci_high": -0.667056845802449,
+   "n": 5
+  },
+  "v019_vs_ot_interp": {
+   "model": "flow_v019",
+   "reference": "ot_interp",
+   "metric": "energy_distance",
+   "mean": -0.7426445605054656,
+   "ci_low": -0.7497287100589155,
+   "ci_high": -0.7355604109520156,
+   "n": 5
+  },
+  "v019_vs_shuffled_time": {
+   "model": "flow_v019",
+   "reference": "flow_v019_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -3.712875469630169,
+   "ci_low": -3.8508530262812473,
+   "ci_high": -3.5748979129790905,
+   "n": 5
+  }
+ },
+ "config": {
+  "hidden": 128,
+  "depth": 3,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "batch_size": 256,
+  "n_iters": 8000,
+  "sigma_min": 0.01,
+  "coupling": "ot",
+  "n_ode_steps": 20,
+  "ode_method": "rk4",
+  "time_embed_dim": 32,
+  "cond_dim": 8,
+  "time_conditioning": "delta",
+  "eval_every": 250,
+  "patience": 8,
+  "seed": 0,
+  "shuffle_biological_time": false,
+  "ema_decay": 0.999,
+  "grad_clip": 1.0,
+  "pair_mode": "consecutive",
+  "clock": "duration",
+  "path": "spline",
+  "chain": "ot",
+  "spline_kind": "natural",
+  "marginal_iters": 1000,
+  "marginal_weight": 1.0,
+  "marginal_prior": 1.0,
+  "marginal_batch": 256,
+  "marginal_steps": 8,
+  "marginal_metric": "energy",
+  "marginal_window": 1.0,
+  "marginal_lr": 0.0003,
+  "marginal_eval_every": 25,
+  "marginal_patience": 10
+ },
+ "refit_on_all": true
+}

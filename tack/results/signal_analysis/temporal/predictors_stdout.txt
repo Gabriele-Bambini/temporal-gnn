@@ -1,0 +1,93 @@
+gastrulation-human: families done 123s
+  pt = np.nanmean(arr, 0)
+== gastrulation-human target=orig
+  trend       RO  PCC -0.466+-0.004  up 0.010  dn 0.010   | hindsight         last PCC -0.466 up 0.010 dn 0.010   | agree 1.00
+  level_box   RO  PCC +0.396+-0.004  up 0.273  dn 0.467   | hindsight            6 PCC +0.399 up 0.271 dn 0.463   | agree 0.19
+  lpoly_raw   RO  PCC +0.301+-0.004  up 0.246  dn 0.365   | hindsight       (1, 8) PCC +0.305 up 0.250 dn 0.366   | agree 0.78
+  lpoly_l1    RO  PCC +0.395+-0.004  up 0.283  dn 0.458   | hindsight       (0, 6) PCC +0.399 up 0.270 dn 0.458   | agree 0.33
+  holt_raw    RO  PCC +0.375+-0.003  up 0.252  dn 0.455   | hindsight   (0.2, 0.0) PCC +0.389 up 0.222 dn 0.462   | agree 0.15
+  holt_l1     RO  PCC +0.381+-0.003  up 0.241  dn 0.463   | hindsight   (0.2, 0.0) PCC +0.389 up 0.223 dn 0.461   | agree 0.26
+  kalman_raw  RO  PCC +0.414+-0.003  up 0.226  dn 0.448   | hindsight   (0.1, 0.0) PCC +0.415 up 0.224 dn 0.455   | agree 0.19
+  kalman_l1   RO  PCC +0.307+-0.004  up 0.364  dn 0.022   | hindsight   (0.4, 0.0) PCC +0.291 up 0.374 dn 0.009   | agree 0.15
+  ar_pooled   RO  PCC +0.546+-0.003  up 0.402  dn 0.508   | hindsight       (5, 8) PCC +0.550 up 0.402 dn 0.510   | agree 0.26
+  ar_strat    RO  PCC +0.510+-0.003  up 0.384  dn 0.513   | hindsight       (5, 0) PCC +0.519 up 0.390 dn 0.518   | agree 0.56
+  obs_level   RO  PCC +0.600+-0.003  up 0.417  dn 0.548   | hindsight            8 PCC +0.600 up 0.418 dn 0.548   | agree 0.56
+  obs_kalman  RO  PCC +0.593+-0.003  up 0.419  dn 0.541   | hindsight   (0.2, 0.0) PCC +0.593 up 0.419 dn 0.541   | agree 0.30
+  META        RO  PCC +0.594+-0.003  up 0.417  dn 0.534
+== gastrulation-human target=l1
+  trend       RO  PCC -0.172+-0.013  up 0.102  dn 0.092   | hindsight         last PCC -0.172 up 0.102 dn 0.092   | agree 1.00
+  level_box   RO  PCC +0.147+-0.014  up 0.241  dn 0.255   | hindsight            2 PCC +0.167 up 0.247 dn 0.264   | agree 0.59
+  lpoly_raw   RO  PCC +0.145+-0.014  up 0.212  dn 0.224   | hindsight       (1, 6) PCC +0.178 up 0.237 dn 0.233   | agree 0.19
+  lpoly_l1    RO  PCC +0.162+-0.011  up 0.220  dn 0.229   | hindsight       (1, 6) PCC +0.181 up 0.232 dn 0.228   | agree 0.19
+  holt_raw    RO  PCC +0.180+-0.009  up 0.237  dn 0.235   | hindsight  (0.5, 0.25) PCC +0.246 up 0.276 dn 0.264   | agree 0.07
+  holt_l1     RO  PCC +0.199+-0.012  up 0.247  dn 0.245   | hindsight  (0.35, 0.5) PCC +0.272 up 0.276 dn 0.266   | agree 0.00
+  kalman_raw  RO  PCC +0.062+-0.012  up 0.188  dn 0.152   | hindsight (0.05, 0.02) PCC +0.188 up 0.232 dn 0.217   | agree 0.11
+  kalman_l1   RO  PCC +0.039+-0.010  up 0.190  dn 0.194   | hindsight (0.02, 0.01) PCC +0.127 up 0.214 dn 0.224   | agree 0.33
+  ar_pooled   RO  PCC +0.113+-0.011  up 0.200  dn 0.202   | hindsight       (5, 8) PCC +0.119 up 0.209 dn 0.209   | agree 0.52
+  ar_strat    RO  PCC +0.166+-0.010  up 0.187  dn 0.166   | hindsight       (5, 0) PCC +0.170 up 0.211 dn 0.162   | agree 0.52
+  META        RO  PCC +0.118+-0.013  up 0.196  dn 0.206
+== gastrulation-human target=linear
+  trend       RO  PCC +0.199+-0.052  up 0.219  dn 0.194   | hindsight         last PCC +0.199 up 0.219 dn 0.194   | agree 1.00
+  level_box   RO  PCC -0.196+-0.046  up 0.288  dn 0.314   | hindsight            3 PCC -0.194 up 0.299 dn 0.325   | agree 0.37
+  lpoly_raw   RO  PCC +0.212+-0.065  up 0.313  dn 0.271   | hindsight       (2, 8) PCC +0.216 up 0.294 dn 0.291   | agree 0.19
+  lpoly_l1    RO  PCC +0.258+-0.057  up 0.288  dn 0.297   | hindsight       (2, 8) PCC +0.268 up 0.279 dn 0.295   | agree 0.19
+  holt_raw    RO  PCC +0.244+-0.065  up 0.289  dn 0.244   | hindsight  (0.9, 0.25) PCC +0.178 up 0.330 dn 0.200   | agree 0.00
+  holt_l1     RO  PCC +0.131+-0.061  up 0.290  dn 0.265   | hindsight  (0.9, 0.25) PCC +0.251 up 0.343 dn 0.192   | agree 0.11
+  kalman_raw  RO  PCC +0.177+-0.063  up 0.266  dn 0.217   | hindsight   (0.8, 0.1) PCC +0.216 up 0.334 dn 0.166   | agree 0.07
+  kalman_l1   RO  PCC +0.252+-0.060  up 0.311  dn 0.268   | hindsight   (0.4, 0.1) PCC +0.236 up 0.323 dn 0.173   | agree 0.15
+  ar_pooled   RO  PCC +0.247+-0.066  up 0.254  dn 0.229   | hindsight       (5, 8) PCC +0.276 up 0.275 dn 0.247   | agree 0.22
+  ar_strat    RO  PCC +0.139+-0.054  up 0.248  dn 0.247   | hindsight       (5, 0) PCC +0.219 up 0.295 dn 0.280   | agree 0.41
+  META        RO  PCC +0.342+-0.061  up 0.297  dn 0.262
+  kalman raw: ML config (0.05, 0.02) mean z^2 0.74 median z^2 0.19 |z|>3 0.006 lag1 acf +0.202
+     mean z2 by decile 0.03 0.10 0.27 0.58 0.91 1.06 1.15 1.13 1.14 0.98
+     lag1 acf by decile -0.02 +0.03 +0.08 +0.20 +0.25 +0.24 +0.24 +0.19 +0.19 +0.16
+  kalman l1: ML config (0.02, 0.0) mean z^2 0.68 median z^2 0.06 |z|>3 0.009 lag1 acf +0.377
+     mean z2 by decile 0.00 0.01 0.03 0.10 0.23 0.39 0.57 0.84 1.29 3.30
+     lag1 acf by decile -0.47 -0.44 -0.40 -0.34 -0.24 -0.15 -0.01 +0.18 +0.37 +0.63
+gastrulation-human: done 146s
+pancreas-human: families done 186s
+== pancreas-human target=orig
+  trend       RO  PCC -0.392+-0.003  up 0.040  dn 0.038   | hindsight         last PCC -0.392 up 0.040 dn 0.038   | agree 1.00
+  level_box   RO  PCC +0.327+-0.006  up 0.284  dn 0.341   | hindsight            8 PCC +0.334 up 0.221 dn 0.302   | agree 0.17
+  lpoly_raw   RO  PCC +0.214+-0.005  up 0.198  dn 0.165   | hindsight       (1, 8) PCC +0.228 up 0.201 dn 0.171   | agree 0.33
+  lpoly_l1    RO  PCC +0.328+-0.005  up 0.281  dn 0.340   | hindsight       (0, 4) PCC +0.334 up 0.257 dn 0.333   | agree 0.42
+  holt_raw    RO  PCC +0.345+-0.004  up 0.218  dn 0.327   | hindsight   (0.2, 0.0) PCC +0.353 up 0.210 dn 0.305   | agree 0.00
+  holt_l1     RO  PCC +0.349+-0.004  up 0.210  dn 0.316   | hindsight   (0.2, 0.0) PCC +0.357 up 0.206 dn 0.301   | agree 0.17
+  kalman_raw  RO  PCC +0.357+-0.004  up 0.209  dn 0.324   | hindsight   (0.4, 0.0) PCC +0.359 up 0.210 dn 0.337   | agree 0.08
+  kalman_l1   RO  PCC +0.319+-0.005  up 0.248  dn 0.063   | hindsight  (0.02, 0.0) PCC +0.327 up 0.228 dn 0.132   | agree 0.17
+  ar_pooled   RO  PCC +0.368+-0.005  up 0.285  dn 0.367   | hindsight       (5, 0) PCC +0.378 up 0.300 dn 0.373   | agree 0.58
+  ar_strat    RO  PCC +0.370+-0.005  up 0.292  dn 0.385   | hindsight       (5, 0) PCC +0.390 up 0.295 dn 0.390   | agree 0.67
+  obs_level   RO  PCC +0.476+-0.005  up 0.316  dn 0.450   | hindsight            4 PCC +0.477 up 0.318 dn 0.448   | agree 0.42
+  obs_kalman  RO  PCC +0.510+-0.005  up 0.323  dn 0.444   | hindsight   (0.4, 0.0) PCC +0.511 up 0.323 dn 0.445   | agree 0.42
+  META        RO  PCC +0.480+-0.005  up 0.331  dn 0.410
+== pancreas-human target=l1
+  trend       RO  PCC +0.159+-0.020  up 0.224  dn 0.221   | hindsight         last PCC +0.159 up 0.224 dn 0.221   | agree 1.00
+  level_box   RO  PCC -0.083+-0.014  up 0.112  dn 0.191   | hindsight            8 PCC -0.086 up 0.106 dn 0.200   | agree 0.50
+  lpoly_raw   RO  PCC +0.190+-0.016  up 0.212  dn 0.245   | hindsight       (2, 4) PCC +0.205 up 0.222 dn 0.246   | agree 0.50
+  lpoly_l1    RO  PCC +0.127+-0.016  up 0.212  dn 0.213   | hindsight       (2, 4) PCC +0.182 up 0.225 dn 0.231   | agree 0.33
+  holt_raw    RO  PCC +0.136+-0.018  up 0.219  dn 0.225   | hindsight   (0.9, 1.0) PCC +0.192 up 0.235 dn 0.243   | agree 0.08
+  holt_l1     RO  PCC +0.114+-0.017  up 0.222  dn 0.210   | hindsight   (0.9, 1.0) PCC +0.162 up 0.235 dn 0.227   | agree 0.25
+  kalman_raw  RO  PCC +0.034+-0.020  up 0.192  dn 0.206   | hindsight   (0.1, 0.4) PCC +0.084 up 0.204 dn 0.226   | agree 0.08
+  kalman_l1   RO  PCC +0.056+-0.016  up 0.223  dn 0.200   | hindsight  (0.02, 0.3) PCC +0.114 up 0.230 dn 0.216   | agree 0.17
+  ar_pooled   RO  PCC +0.103+-0.019  up 0.199  dn 0.207   | hindsight       (1, 0) PCC +0.125 up 0.214 dn 0.214   | agree 0.42
+  ar_strat    RO  PCC +0.175+-0.022  up 0.164  dn 0.230   | hindsight       (1, 0) PCC +0.178 up 0.168 dn 0.228   | agree 0.33
+  META        RO  PCC +0.157+-0.015  up 0.201  dn 0.223
+== pancreas-human target=linear
+  trend       RO  PCC +0.348+-0.069  up 0.292  dn 0.361   | hindsight         last PCC +0.348 up 0.292 dn 0.361   | agree 1.00
+  level_box   RO  PCC -0.327+-0.074  up 0.176  dn 0.229   | hindsight            8 PCC -0.280 up 0.176 dn 0.249   | agree 0.42
+  lpoly_raw   RO  PCC +0.266+-0.073  up 0.304  dn 0.365   | hindsight       (2, 4) PCC +0.291 up 0.296 dn 0.363   | agree 0.25
+  lpoly_l1    RO  PCC +0.260+-0.072  up 0.296  dn 0.355   | hindsight       (2, 4) PCC +0.278 up 0.301 dn 0.365   | agree 0.58
+  holt_raw    RO  PCC +0.342+-0.077  up 0.287  dn 0.360   | hindsight   (1.0, 1.0) PCC +0.349 up 0.292 dn 0.368   | agree 0.17
+  holt_l1     RO  PCC +0.256+-0.085  up 0.291  dn 0.335   | hindsight   (1.0, 1.0) PCC +0.290 up 0.299 dn 0.347   | agree 0.25
+  kalman_raw  RO  PCC +0.156+-0.096  up 0.246  dn 0.323   | hindsight  (0.05, 0.4) PCC +0.145 up 0.273 dn 0.361   | agree 0.08
+  kalman_l1   RO  PCC +0.144+-0.089  up 0.296  dn 0.328   | hindsight  (0.02, 0.3) PCC +0.154 up 0.305 dn 0.337   | agree 0.17
+  ar_pooled   RO  PCC +0.281+-0.073  up 0.298  dn 0.344   | hindsight       (1, 0) PCC +0.281 up 0.298 dn 0.344   | agree 0.50
+  ar_strat    RO  PCC +0.294+-0.076  up 0.148  dn 0.373   | hindsight       (1, 0) PCC +0.310 up 0.151 dn 0.384   | agree 0.33
+  META        RO  PCC +0.311+-0.073  up 0.288  dn 0.328
+  kalman raw: ML config (0.2, 0.0) mean z^2 0.93 median z^2 0.17 |z|>3 0.014 lag1 acf +0.485
+     mean z2 by decile 0.06 0.21 0.58 0.92 1.03 1.14 1.13 1.25 1.31 1.68
+     lag1 acf by decile +0.06 +0.24 +0.42 +0.44 +0.44 +0.44 +0.43 +0.48 +0.52 +0.65
+  kalman l1: ML config (0.02, 0.03) mean z^2 0.86 median z^2 0.13 |z|>3 0.013 lag1 acf +0.227
+     mean z2 by decile 0.01 0.04 0.14 0.31 0.49 0.66 0.84 1.12 1.64 3.38
+     lag1 acf by decile -0.48 -0.41 -0.30 -0.16 -0.05 +0.00 +0.08 +0.17 +0.28 +0.40
+pancreas-human: done 195s

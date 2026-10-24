@@ -1,0 +1,267 @@
+gastrulation-human {
+ "n_cells_rounded": [
+  2,
+  3,
+  9,
+  182,
+  792,
+  929,
+  982,
+  616,
+  340,
+  217,
+  225,
+  248,
+  290,
+  304,
+  431,
+  440,
+  333,
+  247,
+  246,
+  230,
+  275,
+  316,
+  355,
+  350,
+  264,
+  233,
+  228,
+  306,
+  231,
+  138,
+  46,
+  7
+ ],
+ "lib_per_cell": [
+  12383.0,
+  12314.0,
+  10926.9,
+  11251.6,
+  12491.3,
+  13216.4,
+  13069.5,
+  12907.2,
+  12445.3,
+  10981.6,
+  10649.4,
+  10323.1,
+  10164.4,
+  10204.1,
+  10059.5,
+  10352.9,
+  10769.3,
+  10991.9,
+  11237.6,
+  10804.2,
+  10849.1,
+  10387.9,
+  10479.6,
+  10723.2,
+  9872.7,
+  10300.5,
+  10887.6,
+  10873.2,
+  10870.7,
+  10809.2,
+  10421.1,
+  11794.3
+ ],
+ "median_abs_err_dlogn[all scored with bin t-1 available]": {
+  "n_transitions": 29,
+  "persistence": 0.1787,
+  "trend_2pt": 0.2459,
+  "mean_persistence": 0.4313,
+  "mean_trend_2pt": 0.384,
+  "trend_better_count": 14
+ },
+ "median_abs_err_dlogn[t-1 inside scored range]": {
+  "n_transitions": 28,
+  "persistence": 0.1691,
+  "trend_2pt": 0.24,
+  "mean_persistence": 0.3393,
+  "mean_trend_2pt": 0.3296,
+  "trend_better_count": 13
+ },
+ "median_abs_err_persistence_all_scored": {
+  "n": 29,
+  "median": 0.1787
+ },
+ "corr(dlogn_{t+1}, dlogn_t) [pearson, spearman, pairs]": [
+  0.766,
+  0.597,
+  28
+ ],
+ "corr(dlogn_{t+1}, dlogn_t) pairs with all 3 bins >= 100 cells": [
+  0.422,
+  0.437,
+  25
+ ],
+ "median_abs_err_dlogn bins>=100 (t-1,t,t+1)": {
+  "n": 25,
+  "persistence": 0.1565,
+  "trend_2pt": 0.1571
+ },
+ "dlog_lib lag1 autocorr, bins>=100": [
+  0.276,
+  0.222,
+  25
+ ],
+ "corr(dlog lib, dlog n) same t, bins>=100": [
+  0.279,
+  0.117,
+  25
+ ],
+ "corr(dlogn_{t+1}, dlogn_t) incl. change into first scored bin": [
+  0.697,
+  0.634,
+  29
+ ],
+ "dlog_lib": {
+  "sd": 0.05,
+  "mean": 0.0026,
+  "lag1_autocorr [pearson, spearman, pairs]": [
+   0.192,
+   0.166,
+   28
+  ],
+  "corr_with_dlogn_same_t": [
+   0.118,
+   0.186,
+   29
+  ],
+  "corr(dlog lib_t, dlog n_{t+1})": [
+   0.202,
+   0.149,
+   28
+  ],
+  "corr(dlog n_t, dlog lib_{t+1})": [
+   0.36,
+   0.203,
+   28
+  ]
+ },
+ "dlog_n": {
+  "sd": 0.7945,
+  "mean": -0.0087
+ },
+ "corr(log lib_b, log n_b) over scored bins": [
+  0.21,
+  0.07,
+  30
+ ]
+}
+pancreas-human {
+ "n_cells_rounded": [
+  111,
+  612,
+  361,
+  116,
+  50,
+  53,
+  68,
+  79,
+  191,
+  218,
+  132,
+  286,
+  698,
+  616,
+  105
+ ],
+ "lib_per_cell": [
+  7780.2,
+  7838.9,
+  7147.2,
+  7061.7,
+  6673.3,
+  6199.3,
+  5937.6,
+  6354.7,
+  5347.4,
+  4749.8,
+  4882.4,
+  5166.3,
+  5359.9,
+  5564.3,
+  5979.0
+ ],
+ "median_abs_err_dlogn[all scored with bin t-1 available]": {
+  "n_transitions": 13,
+  "persistence": 0.5279,
+  "trend_2pt": 0.7329,
+  "mean_persistence": 0.6184,
+  "mean_trend_2pt": 0.8076,
+  "trend_better_count": 7
+ },
+ "median_abs_err_dlogn[t-1 inside scored range]": {
+  "n_transitions": 13,
+  "persistence": 0.5279,
+  "trend_2pt": 0.7329,
+  "mean_persistence": 0.6184,
+  "mean_trend_2pt": 0.8076,
+  "trend_better_count": 7
+ },
+ "median_abs_err_persistence_all_scored": {
+  "n": 14,
+  "median": 0.6505
+ },
+ "corr(dlogn_{t+1}, dlogn_t) [pearson, spearman, pairs]": [
+  0.195,
+  0.269,
+  13
+ ],
+ "corr(dlogn_{t+1}, dlogn_t) pairs with all 3 bins >= 100 cells": [
+  0.178,
+  0.25,
+  7
+ ],
+ "median_abs_err_dlogn bins>=100 (t-1,t,t+1)": {
+  "n": 7,
+  "persistence": 0.7732,
+  "trend_2pt": 1.0172
+ },
+ "dlog_lib lag1 autocorr, bins>=100": [
+  0.246,
+  0.607,
+  7
+ ],
+ "corr(dlog lib, dlog n) same t, bins>=100": [
+  0.114,
+  0.107,
+  7
+ ],
+ "dlog_lib": {
+  "sd": 0.0757,
+  "mean": -0.0188,
+  "lag1_autocorr [pearson, spearman, pairs]": [
+   0.168,
+   0.22,
+   13
+  ],
+  "corr_with_dlogn_same_t": [
+   -0.134,
+   -0.064,
+   14
+  ],
+  "corr(dlog lib_t, dlog n_{t+1})": [
+   0.189,
+   0.28,
+   13
+  ],
+  "corr(dlog n_t, dlog lib_{t+1})": [
+   -0.104,
+   -0.082,
+   13
+  ]
+ },
+ "dlog_n": {
+  "sd": 0.9143,
+  "mean": -0.004
+ },
+ "corr(log lib_b, log n_b) over scored bins": [
+  -0.126,
+  -0.204,
+  15
+ ]
+}

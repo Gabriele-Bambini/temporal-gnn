@@ -1,0 +1,8465 @@
+{
+ "what": "adversarial judge of uot_pop_sink (population sink, p1) and uot_gene_sink (gene sink, p2)",
+ "reproduction_reruns_vs_prototype_outputs": {
+  "pancreas-human": {
+   "p1_json": {
+    "max": 0.0,
+    "argmax": null,
+    "n_num": 5986,
+    "big": [],
+    "missing": [],
+    "n_big": 0,
+    "n_str_mismatch": 0
+   },
+   "p1_scores_npz": {
+    "max_abs_diff_over_arrays": 0.0,
+    "n_arrays_nonzero_diff": 0
+   },
+   "p2_json": {
+    "max": 7.099999999999998,
+    "argmax": "/convergence/seconds_per_job_mean",
+    "n_num": 3296,
+    "big": [
+     [
+      "/convergence/seconds_per_job_mean",
+      16.1,
+      23.2
+     ]
+    ],
+    "missing": [],
+    "n_big": 1,
+    "n_str_mismatch": 0
+   },
+   "p2_sel_preds_npz": {
+    "max_abs_diff_over_arrays": 0.0,
+    "n_arrays_nonzero_diff": 0
+   }
+  },
+  "gastrulation-human": {
+   "p1_json": {
+    "max": 0.0,
+    "argmax": null,
+    "n_num": 9864,
+    "big": [],
+    "missing": [],
+    "n_big": 0,
+    "n_str_mismatch": 0
+   },
+   "p1_scores_npz": {
+    "max_abs_diff_over_arrays": 0.0,
+    "n_arrays_nonzero_diff": 0
+   },
+   "p2_json": {
+    "max": 6.199999999999996,
+    "argmax": "/convergence/seconds_per_job_mean",
+    "n_num": 5141,
+    "big": [
+     [
+      "/convergence/seconds_per_job_mean",
+      35.2,
+      41.4
+     ]
+    ],
+    "missing": [],
+    "n_big": 1,
+    "n_str_mismatch": 0
+   },
+   "p2_sel_preds_npz": {
+    "max_abs_diff_over_arrays": 0.0,
+    "n_arrays_nonzero_diff": 0
+   }
+  }
+ },
+ "strictness": {
+  "strict_p1_gastrulation-human": {
+   "dataset": "gastrulation-human",
+   "A_future_scramble": {
+    "2": {
+     "max_abs_diff_all_configs_targets": 2.6645352591003757e-14,
+     "oracle_max_abs_diff_positive_control": 0.08733583144625812
+    },
+    "7": {
+     "max_abs_diff_all_configs_targets": 1.5987211554602254e-14,
+     "oracle_max_abs_diff_positive_control": 0.49235233227911124
+    },
+    "15": {
+     "max_abs_diff_all_configs_targets": 1.9539925233402755e-14,
+     "oracle_max_abs_diff_positive_control": 0.1552845390925337
+    },
+    "24": {
+     "max_abs_diff_all_configs_targets": 2.3092638912203256e-14,
+     "oracle_max_abs_diff_positive_control": 0.33197092937602074
+    }
+   },
+   "B_truncation": {}
+  },
+  "strict_p1_pancreas-human": {
+   "dataset": "pancreas-human",
+   "A_future_scramble": {
+    "2": {
+     "max_abs_diff_all_configs_targets": 7.105427357601002e-15,
+     "oracle_max_abs_diff_positive_control": 0.3076773421379058
+    },
+    "5": {
+     "max_abs_diff_all_configs_targets": 1.509903313490213e-14,
+     "oracle_max_abs_diff_positive_control": 0.7187996769330525
+    },
+    "9": {
+     "max_abs_diff_all_configs_targets": 4.440892098500626e-15,
+     "oracle_max_abs_diff_positive_control": 0.7428859715016771
+    },
+    "12": {
+     "max_abs_diff_all_configs_targets": 5.329070518200751e-15,
+     "oracle_max_abs_diff_positive_control": 0.5627054251808423
+    }
+   },
+   "B_truncation": {
+    "cut_last_bin": 8,
+    "transitions_compared": "1..7",
+    "score_arrays_compared": 117,
+    "max_abs_diff_scores": 0.0,
+    "max_abs_diff_J_all_configs": 0.0
+   }
+  },
+  "strict_p2_gastrulation-human": {
+   "positive_control_i7_persist": 5.019492283463478,
+   "i6_uot_Le1_lam0.0625": 0.0,
+   "i6_uot_Le3_lam1": 0.0,
+   "i6_bal_Le3_lam0": 0.0,
+   "i6_persist_Le0_lam0": 0.0,
+   "positive_control_i21_persist": 5.012771543115377,
+   "i20_uot_Le1_lam0.0625": 0.0,
+   "i20_uot_Le3_lam1": 0.0,
+   "i20_bal_Le3_lam0": 0.0,
+   "i20_persist_Le0_lam0": 0.0
+  },
+  "strict_p2_pancreas-human": {
+   "i5_uot_Le1_lam0.0625": 0.0,
+   "i5_uot_Le3_lam1": 0.0,
+   "i5_bal_Le3_lam0": 0.0,
+   "i5_persist_Le0_lam0": 0.0,
+   "i10_uot_Le1_lam0.0625": 0.0,
+   "i10_uot_Le3_lam1": 0.0,
+   "i10_bal_Le3_lam0": 0.0,
+   "i10_persist_Le0_lam0": 0.0
+  },
+  "strict_p2_pancreas-human_poscontrol": {
+   "positive_control_i6_persist": 5.011827740818262,
+   "positive_control_i11_persist": 5.01378061901778
+  }
+ },
+ "independent_data_and_scores": {
+  "pancreas-human": {
+   "G": 18561,
+   "B": 15,
+   "cache_vs_csv::design_best-signal (read by uot_gene_sink)": {
+    "shape": [
+     15,
+     18561,
+     5
+    ],
+    "same_shape": true,
+    "max_abs_diff": 0.0,
+    "genes_equal": "no genes array"
+   },
+   "cache_vs_csv::uot_pop_sink own cache": {
+    "shape": [
+     15,
+     18561,
+     5
+    ],
+    "same_shape": true,
+    "max_abs_diff": 0.0,
+    "genes_equal": true
+   },
+   "cache_vs_csv::judge p1 rebuilt cache": {
+    "shape": [
+     15,
+     18561,
+     5
+    ],
+    "same_shape": true,
+    "max_abs_diff": 0.0,
+    "genes_equal": true
+   },
+   "cells_rounded": [
+    111,
+    612,
+    361,
+    116,
+    50,
+    53,
+    68,
+    79,
+    191,
+    218,
+    132,
+    286,
+    698,
+    616,
+    105
+   ],
+   "cells_match_context": true,
+   "trend_own_code": {
+    "l1": {
+     "i>=1": [
+      0.1769,
+      0.2253,
+      0.2209
+     ],
+     "i>=2": [
+      0.1669,
+      0.2254,
+      0.2148
+     ],
+     "allgene_pcc_i>=1": 0.156
+    },
+    "linear": {
+     "i>=1": [
+      0.4255,
+      0.2916,
+      0.3584
+     ],
+     "i>=2": [
+      0.4616,
+      0.3014,
+      0.3562
+     ],
+     "allgene_pcc_i>=1": 0.3869
+    }
+   },
+   "gene_sink_saved_preds_rescored_own_metrics": {
+    "uot__l1": {
+     "i>=1": [
+      0.1529,
+      0.2204,
+      0.235
+     ],
+     "i>=2": [
+      0.1432,
+      0.2211,
+      0.2297
+     ]
+    },
+    "uot__linear": {
+     "i>=1": [
+      0.3728,
+      0.2108,
+      0.4215
+     ],
+     "i>=2": [
+      0.4065,
+      0.2139,
+      0.4264
+     ]
+    },
+    "uot_forced__l1": {
+     "i>=1": [
+      0.1673,
+      0.2249,
+      0.2384
+     ],
+     "i>=2": [
+      0.1589,
+      0.2261,
+      0.2335
+     ]
+    },
+    "uot_forced__linear": {
+     "i>=1": [
+      0.3735,
+      0.2997,
+      0.3494
+     ],
+     "i>=2": [
+      0.4064,
+      0.3099,
+      0.3478
+     ]
+    },
+    "bal__l1": {
+     "i>=1": [
+      0.1843,
+      0.2012,
+      0.2579
+     ],
+     "i>=2": [
+      0.177,
+      0.2037,
+      0.2528
+     ]
+    },
+    "bal__linear": {
+     "i>=1": [
+      0.4093,
+      0.2826,
+      0.3637
+     ],
+     "i>=2": [
+      0.4437,
+      0.2909,
+      0.3611
+     ]
+    },
+    "persist__l1": {
+     "i>=1": [
+      0.0199,
+      0.0967,
+      0.1572
+     ],
+     "i>=2": [
+      0.0233,
+      0.0967,
+      0.1604
+     ]
+    },
+    "persist__linear": {
+     "i>=1": [
+      NaN,
+      0.0431,
+      0.0431
+     ],
+     "i>=2": [
+      NaN,
+      0.0431,
+      0.0431
+     ]
+    }
+   }
+  },
+  "gastrulation-human": {
+   "G": 21430,
+   "B": 30,
+   "cache_vs_csv::design_best-signal (read by uot_gene_sink)": {
+    "shape": [
+     30,
+     21430,
+     5
+    ],
+    "same_shape": true,
+    "max_abs_diff": 0.0,
+    "genes_equal": "no genes array"
+   },
+   "cache_vs_csv::uot_pop_sink own cache": "missing",
+   "cache_vs_csv::judge p1 rebuilt cache": "missing",
+   "cells_rounded": [
+    9,
+    182,
+    792,
+    929,
+    982,
+    616,
+    340,
+    217,
+    225,
+    248,
+    290,
+    304,
+    431,
+    440,
+    333,
+    247,
+    246,
+    230,
+    275,
+    316,
+    355,
+    350,
+    264,
+    233,
+    228,
+    306,
+    231,
+    138,
+    46,
+    7
+   ],
+   "cells_match_context": true,
+   "trend_own_code": {
+    "l1": {
+     "i>=1": [
+      -0.1583,
+      0.1053,
+      0.0915
+     ],
+     "i>=2": [
+      -0.1691,
+      0.102,
+      0.0903
+     ],
+     "allgene_pcc_i>=1": -0.1688
+    },
+    "linear": {
+     "i>=1": [
+      0.1089,
+      0.2174,
+      0.1927
+     ],
+     "i>=2": [
+      0.1234,
+      0.2002,
+      0.1961
+     ],
+     "allgene_pcc_i>=1": 0.2823
+    }
+   },
+   "gene_sink_saved_preds_rescored_own_metrics": {
+    "uot__l1": {
+     "i>=1": [
+      -0.017,
+      0.1208,
+      0.1473
+     ],
+     "i>=2": [
+      -0.0223,
+      0.1179,
+      0.1459
+     ]
+    },
+    "uot__linear": {
+     "i>=1": [
+      0.1285,
+      0.23,
+      0.2283
+     ],
+     "i>=2": [
+      0.1464,
+      0.2143,
+      0.2318
+     ]
+    },
+    "uot_forced__l1": {
+     "i>=1": [
+      -0.0156,
+      0.14,
+      0.1396
+     ],
+     "i>=2": [
+      -0.0215,
+      0.1374,
+      0.1374
+     ]
+    },
+    "uot_forced__linear": {
+     "i>=1": [
+      0.1784,
+      0.2563,
+      0.2104
+     ],
+     "i>=2": [
+      0.2019,
+      0.2418,
+      0.213
+     ]
+    },
+    "bal__l1": {
+     "i>=1": [
+      -0.0018,
+      0.1206,
+      0.1424
+     ],
+     "i>=2": [
+      -0.0061,
+      0.1185,
+      0.1399
+     ]
+    },
+    "bal__linear": {
+     "i>=1": [
+      0.1856,
+      0.2459,
+      0.2077
+     ],
+     "i>=2": [
+      0.2093,
+      0.2332,
+      0.2102
+     ]
+    },
+    "persist__l1": {
+     "i>=1": [
+      0.012,
+      0.1387,
+      0.1676
+     ],
+     "i>=2": [
+      0.0118,
+      0.1382,
+      0.1674
+     ]
+    },
+    "persist__linear": {
+     "i>=1": [
+      NaN,
+      0.0373,
+      0.0373
+     ],
+     "i>=2": [
+      NaN,
+      0.0373,
+      0.0373
+     ]
+    }
+   }
+  }
+ },
+ "p1_closed_form_hybrid": {
+  "pancreas-human": {
+   "tv_sinknorm_lam0.1_R1_vs_hyb": {
+    "K4_eps0.05": {
+     "median": 0.0033,
+     "max": 0.0065
+    },
+    "K4_eps0.2": {
+     "median": 0.0068,
+     "max": 0.0393
+    },
+    "K8_eps0.05": {
+     "median": 0.0038,
+     "max": 0.0116
+    },
+    "K8_eps0.2": {
+     "median": 0.0213,
+     "max": 0.0795
+    },
+    "K16_eps0.05": {
+     "median": 0.0035,
+     "max": 0.0116
+    },
+    "K16_eps0.2": {
+     "median": 0.0243,
+     "max": 0.086
+    }
+   },
+   "selected_sink_norm_lambda_counts": {
+    "l1": {
+     "0.1": 6,
+     "1.0": 1,
+     "0.25": 4,
+     "0.5": 1
+    },
+    "linear": {
+     "0.1": 8,
+     "1.0": 2,
+     "0.5": 2
+    }
+   },
+   "scores": {
+    "l1": {
+     "HYB_closed_form|Kany(strict sel)": {
+      "i>=1": {
+       "pearson_nan0": 0.1095,
+       "p_ta_up": 0.2049,
+       "p_ta_down": 0.2203,
+       "pcc_seed_sd": 0.0067,
+       "spearman": -0.0511
+      },
+      "i>=2": {
+       "pearson_nan0": 0.0939,
+       "p_ta_up": 0.2034,
+       "p_ta_down": 0.2141,
+       "pcc_seed_sd": 0.0071,
+       "spearman": -0.0568
+      }
+     },
+     "sink_norm_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.1403,
+       "p_ta_up": 0.2242,
+       "p_ta_down": 0.2093,
+       "pcc_seed_sd": 0.0034,
+       "spearman": -0.0344
+      }
+     },
+     "balanced_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.1506,
+       "p_ta_up": 0.232,
+       "p_ta_down": 0.2115,
+       "pcc_seed_sd": 0.0026,
+       "spearman": -0.0485
+      }
+     },
+     "persist_L3_Kany": {
+      "i>=1": {
+       "pearson_nan0": -0.0522,
+       "p_ta_up": 0.1142,
+       "p_ta_down": 0.1597,
+       "pcc_seed_sd": 0.0169,
+       "spearman": 0.076
+      }
+     },
+     "lin1_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.109,
+       "p_ta_up": 0.2054,
+       "p_ta_down": 0.2204,
+       "pcc_seed_sd": 0.0058,
+       "spearman": -0.0517
+      }
+     },
+     "sink_abs_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.0974,
+       "p_ta_up": 0.1956,
+       "p_ta_down": 0.2174,
+       "pcc_seed_sd": 0.0171,
+       "spearman": 0.0205
+      }
+     }
+    },
+    "linear": {
+     "HYB_closed_form|Kany(strict sel)": {
+      "i>=1": {
+       "pearson_nan0": 0.2862,
+       "p_ta_up": 0.2788,
+       "p_ta_down": 0.3335,
+       "pcc_seed_sd": 0.0361,
+       "spearman": -0.0519
+      },
+      "i>=2": {
+       "pearson_nan0": 0.3107,
+       "p_ta_up": 0.2875,
+       "p_ta_down": 0.3292,
+       "pcc_seed_sd": 0.0211,
+       "spearman": -0.0546
+      }
+     },
+     "sink_norm_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.3009,
+       "p_ta_up": 0.2893,
+       "p_ta_down": 0.3442,
+       "pcc_seed_sd": 0.0457,
+       "spearman": -0.0532
+      }
+     },
+     "balanced_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.3149,
+       "p_ta_up": 0.2937,
+       "p_ta_down": 0.3437,
+       "pcc_seed_sd": 0.0491,
+       "spearman": -0.0552
+      }
+     },
+     "persist_L3_Kany": {
+      "i>=1": {
+       "pearson_nan0": -0.1611,
+       "p_ta_up": 0.1599,
+       "p_ta_down": 0.2759,
+       "pcc_seed_sd": 0.0872,
+       "spearman": 0.0683
+      }
+     },
+     "lin1_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.2868,
+       "p_ta_up": 0.2749,
+       "p_ta_down": 0.3355,
+       "pcc_seed_sd": 0.0465,
+       "spearman": -0.0516
+      }
+     },
+     "sink_abs_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.3126,
+       "p_ta_up": 0.2926,
+       "p_ta_down": 0.346,
+       "pcc_seed_sd": 0.054,
+       "spearman": -0.0494
+      }
+     }
+    }
+   },
+   "paired": {
+    "l1: HYB - sink_norm_Kany": {
+     "dPCC": {
+      "mean": -0.0333,
+      "wins": 6,
+      "losses": 6,
+      "p_wilcoxon": 0.4697
+     },
+     "dJ": {
+      "mean": -0.0141,
+      "wins": 6,
+      "losses": 6,
+      "p_wilcoxon": 0.5693
+     }
+    },
+    "l1: HYB - balanced_Kany": {
+     "dPCC": {
+      "mean": -0.0445,
+      "wins": 3,
+      "losses": 9,
+      "p_wilcoxon": 0.0771
+     },
+     "dJ": {
+      "mean": -0.0214,
+      "wins": 4,
+      "losses": 8,
+      "p_wilcoxon": 0.1763
+     }
+    },
+    "l1: HYB - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.1751,
+      "wins": 8,
+      "losses": 4,
+      "p_wilcoxon": 0.0522
+     },
+     "dJ": {
+      "mean": 0.113,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0342
+     }
+    },
+    "l1: HYB - lin1_Kany": {
+     "dPCC": {
+      "mean": 0.0005,
+      "wins": 5,
+      "losses": 7,
+      "p_wilcoxon": 0.9097
+     },
+     "dJ": {
+      "mean": -0.0001,
+      "wins": 6,
+      "losses": 6,
+      "p_wilcoxon": 0.9697
+     }
+    },
+    "l1: HYB - sink_abs_Kany": {
+     "dPCC": {
+      "mean": 0.0131,
+      "wins": 6,
+      "losses": 6,
+      "p_wilcoxon": 1.0
+     },
+     "dJ": {
+      "mean": 0.0088,
+      "wins": 5,
+      "losses": 7,
+      "p_wilcoxon": 0.9097
+     }
+    },
+    "linear: HYB - sink_norm_Kany": {
+     "dPCC": {
+      "mean": -0.0159,
+      "wins": 7,
+      "losses": 5,
+      "p_wilcoxon": 0.5186
+     },
+     "dJ": {
+      "mean": -0.013,
+      "wins": 6,
+      "losses": 6,
+      "p_wilcoxon": 0.4238
+     }
+    },
+    "linear: HYB - balanced_Kany": {
+     "dPCC": {
+      "mean": -0.0311,
+      "wins": 4,
+      "losses": 8,
+      "p_wilcoxon": 0.2661
+     },
+     "dJ": {
+      "mean": -0.0194,
+      "wins": 3,
+      "losses": 9,
+      "p_wilcoxon": 0.0342
+     }
+    },
+    "linear: HYB - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.4846,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0122
+     },
+     "dJ": {
+      "mean": 0.2252,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0122
+     }
+    },
+    "linear: HYB - lin1_Kany": {
+     "dPCC": {
+      "mean": -0.0007,
+      "wins": 4,
+      "losses": 8,
+      "p_wilcoxon": 0.4238
+     },
+     "dJ": {
+      "mean": 0.0004,
+      "wins": 4,
+      "losses": 8,
+      "p_wilcoxon": 0.4238
+     }
+    },
+    "linear: HYB - sink_abs_Kany": {
+     "dPCC": {
+      "mean": -0.0286,
+      "wins": 7,
+      "losses": 5,
+      "p_wilcoxon": 0.791
+     },
+     "dJ": {
+      "mean": -0.0191,
+      "wins": 4,
+      "losses": 8,
+      "p_wilcoxon": 0.1294
+     }
+    }
+   }
+  },
+  "gastrulation-human": {
+   "tv_sinknorm_lam0.1_R1_vs_hyb": {
+    "K4_eps0.05": {
+     "median": 0.007,
+     "max": 0.0129
+    },
+    "K4_eps0.2": {
+     "median": 0.0317,
+     "max": 0.0766
+    },
+    "K8_eps0.05": {
+     "median": 0.0131,
+     "max": 0.0215
+    },
+    "K8_eps0.2": {
+     "median": 0.051,
+     "max": 0.1147
+    },
+    "K16_eps0.05": {
+     "median": 0.012,
+     "max": 0.0304
+    },
+    "K16_eps0.2": {
+     "median": 0.0553,
+     "max": 0.117
+    }
+   },
+   "selected_sink_norm_lambda_counts": {
+    "l1": {
+     "0.1": 13,
+     "1.0": 8,
+     "0.5": 2,
+     "0.25": 4
+    },
+    "linear": {
+     "0.1": 5,
+     "1.0": 16,
+     "0.25": 4,
+     "0.5": 2
+    }
+   },
+   "scores": {
+    "l1": {
+     "HYB_closed_form|Kany(strict sel)": {
+      "i>=1": {
+       "pearson_nan0": 0.2675,
+       "p_ta_up": 0.2634,
+       "p_ta_down": 0.2723,
+       "pcc_seed_sd": 0.0032,
+       "spearman": 0.2401
+      },
+      "i>=2": {
+       "pearson_nan0": 0.2725,
+       "p_ta_up": 0.266,
+       "p_ta_down": 0.2779,
+       "pcc_seed_sd": 0.0029,
+       "spearman": 0.2502
+      }
+     },
+     "sink_norm_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.2688,
+       "p_ta_up": 0.2658,
+       "p_ta_down": 0.2789,
+       "pcc_seed_sd": 0.0031,
+       "spearman": 0.2594
+      }
+     },
+     "balanced_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.2576,
+       "p_ta_up": 0.2582,
+       "p_ta_down": 0.2677,
+       "pcc_seed_sd": 0.0048,
+       "spearman": 0.2377
+      }
+     },
+     "persist_L3_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.255,
+       "p_ta_up": 0.2682,
+       "p_ta_down": 0.2842,
+       "pcc_seed_sd": 0.0027,
+       "spearman": 0.2823
+      }
+     },
+     "lin1_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.2582,
+       "p_ta_up": 0.2587,
+       "p_ta_down": 0.2648,
+       "pcc_seed_sd": 0.0049,
+       "spearman": 0.223
+      }
+     },
+     "sink_abs_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.2502,
+       "p_ta_up": 0.2665,
+       "p_ta_down": 0.2724,
+       "pcc_seed_sd": 0.0038,
+       "spearman": 0.2546
+      }
+     }
+    },
+    "linear": {
+     "HYB_closed_form|Kany(strict sel)": {
+      "i>=1": {
+       "pearson_nan0": 0.192,
+       "p_ta_up": 0.3173,
+       "p_ta_down": 0.3087,
+       "pcc_seed_sd": 0.0225,
+       "spearman": 0.0674
+      },
+      "i>=2": {
+       "pearson_nan0": 0.2096,
+       "p_ta_up": 0.3038,
+       "p_ta_down": 0.3164,
+       "pcc_seed_sd": 0.0176,
+       "spearman": 0.062
+      }
+     },
+     "sink_norm_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.1392,
+       "p_ta_up": 0.3074,
+       "p_ta_down": 0.2828,
+       "pcc_seed_sd": 0.0239,
+       "spearman": 0.0443
+      }
+     },
+     "balanced_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.141,
+       "p_ta_up": 0.3083,
+       "p_ta_down": 0.2806,
+       "pcc_seed_sd": 0.0225,
+       "spearman": 0.0317
+      }
+     },
+     "persist_L3_Kany": {
+      "i>=1": {
+       "pearson_nan0": -0.0192,
+       "p_ta_up": 0.3114,
+       "p_ta_down": 0.3349,
+       "pcc_seed_sd": 0.0287,
+       "spearman": 0.2464
+      }
+     },
+     "lin1_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.2216,
+       "p_ta_up": 0.3243,
+       "p_ta_down": 0.318,
+       "pcc_seed_sd": 0.0362,
+       "spearman": 0.0986
+      }
+     },
+     "sink_abs_Kany": {
+      "i>=1": {
+       "pearson_nan0": 0.1076,
+       "p_ta_up": 0.313,
+       "p_ta_down": 0.2944,
+       "pcc_seed_sd": 0.0431,
+       "spearman": 0.0636
+      }
+     }
+    }
+   },
+   "paired": {
+    "l1: HYB - sink_norm_Kany": {
+     "dPCC": {
+      "mean": -0.0014,
+      "wins": 15,
+      "losses": 12,
+      "p_wilcoxon": 0.9717
+     },
+     "dJ": {
+      "mean": -0.0036,
+      "wins": 14,
+      "losses": 13,
+      "p_wilcoxon": 0.4553
+     }
+    },
+    "l1: HYB - balanced_Kany": {
+     "dPCC": {
+      "mean": 0.0103,
+      "wins": 16,
+      "losses": 11,
+      "p_wilcoxon": 0.3361
+     },
+     "dJ": {
+      "mean": 0.0068,
+      "wins": 15,
+      "losses": 12,
+      "p_wilcoxon": 0.6446
+     }
+    },
+    "l1: HYB - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.013,
+      "wins": 20,
+      "losses": 7,
+      "p_wilcoxon": 0.2109
+     },
+     "dJ": {
+      "mean": -0.0015,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.4698
+     }
+    },
+    "l1: HYB - lin1_Kany": {
+     "dPCC": {
+      "mean": 0.0096,
+      "wins": 14,
+      "losses": 13,
+      "p_wilcoxon": 0.427
+     },
+     "dJ": {
+      "mean": 0.0074,
+      "wins": 14,
+      "losses": 13,
+      "p_wilcoxon": 0.1937
+     }
+    },
+    "l1: HYB - sink_abs_Kany": {
+     "dPCC": {
+      "mean": 0.0179,
+      "wins": 14,
+      "losses": 13,
+      "p_wilcoxon": 1.0
+     },
+     "dJ": {
+      "mean": 0.0049,
+      "wins": 13,
+      "losses": 14,
+      "p_wilcoxon": 0.5944
+     }
+    },
+    "linear: HYB - sink_norm_Kany": {
+     "dPCC": {
+      "mean": 0.0547,
+      "wins": 14,
+      "losses": 13,
+      "p_wilcoxon": 0.3242
+     },
+     "dJ": {
+      "mean": 0.0306,
+      "wins": 15,
+      "losses": 12,
+      "p_wilcoxon": 0.2021
+     }
+    },
+    "linear: HYB - balanced_Kany": {
+     "dPCC": {
+      "mean": 0.0528,
+      "wins": 15,
+      "losses": 12,
+      "p_wilcoxon": 0.3242
+     },
+     "dJ": {
+      "mean": 0.0304,
+      "wins": 15,
+      "losses": 12,
+      "p_wilcoxon": 0.2901
+     }
+    },
+    "linear: HYB - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.219,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.0655
+     },
+     "dJ": {
+      "mean": 0.066,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.0692
+     }
+    },
+    "linear: HYB - lin1_Kany": {
+     "dPCC": {
+      "mean": -0.0307,
+      "wins": 11,
+      "losses": 16,
+      "p_wilcoxon": 0.0731
+     },
+     "dJ": {
+      "mean": -0.0158,
+      "wins": 11,
+      "losses": 16,
+      "p_wilcoxon": 0.0906
+     }
+    },
+    "linear: HYB - sink_abs_Kany": {
+     "dPCC": {
+      "mean": 0.0875,
+      "wins": 14,
+      "losses": 13,
+      "p_wilcoxon": 0.4846
+     },
+     "dJ": {
+      "mean": 0.0356,
+      "wins": 13,
+      "losses": 14,
+      "p_wilcoxon": 0.5303
+     }
+    }
+   }
+  }
+ },
+ "p1_matched_config_profile": {
+  "pancreas-human": {
+   "l1": {
+    "sink_norm|lam0.1": {
+     "mean_dJ_over_cells": -0.0389,
+     "cells_with_mean_dJ>0": "6/24",
+     "pooled_wins": 96,
+     "pooled_losses": 192,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam0.25": {
+     "mean_dJ_over_cells": -0.0338,
+     "cells_with_mean_dJ>0": "8/24",
+     "pooled_wins": 112,
+     "pooled_losses": 176,
+     "pooled_sign_p": 0.0002
+    },
+    "sink_norm|lam0.5": {
+     "mean_dJ_over_cells": -0.0179,
+     "cells_with_mean_dJ>0": "13/24",
+     "pooled_wins": 136,
+     "pooled_losses": 152,
+     "pooled_sign_p": 0.3768
+    },
+    "sink_norm|lam1": {
+     "mean_dJ_over_cells": -0.0006,
+     "cells_with_mean_dJ>0": "13/24",
+     "pooled_wins": 138,
+     "pooled_losses": 150,
+     "pooled_sign_p": 0.5169
+    },
+    "sink_abs|lam0.1": {
+     "mean_dJ_over_cells": -0.039,
+     "cells_with_mean_dJ>0": "8/24",
+     "pooled_wins": 111,
+     "pooled_losses": 177,
+     "pooled_sign_p": 0.0001
+    },
+    "sink_abs|lam0.25": {
+     "mean_dJ_over_cells": -0.0387,
+     "cells_with_mean_dJ>0": "6/24",
+     "pooled_wins": 117,
+     "pooled_losses": 171,
+     "pooled_sign_p": 0.0017
+    },
+    "sink_abs|lam0.5": {
+     "mean_dJ_over_cells": -0.0316,
+     "cells_with_mean_dJ>0": "9/24",
+     "pooled_wins": 125,
+     "pooled_losses": 163,
+     "pooled_sign_p": 0.0291
+    },
+    "sink_abs|lam1": {
+     "mean_dJ_over_cells": -0.0289,
+     "cells_with_mean_dJ>0": "7/24",
+     "pooled_wins": 119,
+     "pooled_losses": 169,
+     "pooled_sign_p": 0.0038
+    }
+   },
+   "linear": {
+    "sink_norm|lam0.1": {
+     "mean_dJ_over_cells": -0.0954,
+     "cells_with_mean_dJ>0": "4/24",
+     "pooled_wins": 65,
+     "pooled_losses": 223,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam0.25": {
+     "mean_dJ_over_cells": -0.0843,
+     "cells_with_mean_dJ>0": "5/24",
+     "pooled_wins": 80,
+     "pooled_losses": 208,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam0.5": {
+     "mean_dJ_over_cells": -0.0536,
+     "cells_with_mean_dJ>0": "9/24",
+     "pooled_wins": 109,
+     "pooled_losses": 179,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam1": {
+     "mean_dJ_over_cells": -0.0107,
+     "cells_with_mean_dJ>0": "7/24",
+     "pooled_wins": 125,
+     "pooled_losses": 163,
+     "pooled_sign_p": 0.0291
+    },
+    "sink_abs|lam0.1": {
+     "mean_dJ_over_cells": -0.0993,
+     "cells_with_mean_dJ>0": "5/24",
+     "pooled_wins": 62,
+     "pooled_losses": 226,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam0.25": {
+     "mean_dJ_over_cells": -0.0925,
+     "cells_with_mean_dJ>0": "5/24",
+     "pooled_wins": 82,
+     "pooled_losses": 206,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam0.5": {
+     "mean_dJ_over_cells": -0.0748,
+     "cells_with_mean_dJ>0": "7/24",
+     "pooled_wins": 101,
+     "pooled_losses": 187,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam1": {
+     "mean_dJ_over_cells": -0.0605,
+     "cells_with_mean_dJ>0": "6/24",
+     "pooled_wins": 118,
+     "pooled_losses": 170,
+     "pooled_sign_p": 0.0026
+    }
+   },
+   "orig": {
+    "sink_norm|lam0.1": {
+     "mean_dJ_over_cells": 0.0485,
+     "cells_with_mean_dJ>0": "18/24",
+     "pooled_wins": 194,
+     "pooled_losses": 94,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam0.25": {
+     "mean_dJ_over_cells": 0.0454,
+     "cells_with_mean_dJ>0": "18/24",
+     "pooled_wins": 211,
+     "pooled_losses": 77,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam0.5": {
+     "mean_dJ_over_cells": 0.032,
+     "cells_with_mean_dJ>0": "19/24",
+     "pooled_wins": 195,
+     "pooled_losses": 93,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam1": {
+     "mean_dJ_over_cells": 0.0074,
+     "cells_with_mean_dJ>0": "22/24",
+     "pooled_wins": 187,
+     "pooled_losses": 101,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam0.1": {
+     "mean_dJ_over_cells": 0.0516,
+     "cells_with_mean_dJ>0": "18/24",
+     "pooled_wins": 208,
+     "pooled_losses": 80,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam0.25": {
+     "mean_dJ_over_cells": 0.0464,
+     "cells_with_mean_dJ>0": "19/24",
+     "pooled_wins": 206,
+     "pooled_losses": 82,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam0.5": {
+     "mean_dJ_over_cells": 0.0329,
+     "cells_with_mean_dJ>0": "20/24",
+     "pooled_wins": 195,
+     "pooled_losses": 93,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam1": {
+     "mean_dJ_over_cells": 0.0247,
+     "cells_with_mean_dJ>0": "20/24",
+     "pooled_wins": 186,
+     "pooled_losses": 102,
+     "pooled_sign_p": 0.0
+    }
+   }
+  },
+  "gastrulation-human": {
+   "l1": {
+    "sink_norm|lam0.1": {
+     "mean_dJ_over_cells": -0.0091,
+     "cells_with_mean_dJ>0": "8/24",
+     "pooled_wins": 296,
+     "pooled_losses": 352,
+     "pooled_sign_p": 0.0306
+    },
+    "sink_norm|lam0.25": {
+     "mean_dJ_over_cells": -0.0088,
+     "cells_with_mean_dJ>0": "10/24",
+     "pooled_wins": 297,
+     "pooled_losses": 351,
+     "pooled_sign_p": 0.0373
+    },
+    "sink_norm|lam0.5": {
+     "mean_dJ_over_cells": -0.0055,
+     "cells_with_mean_dJ>0": "2/24",
+     "pooled_wins": 291,
+     "pooled_losses": 357,
+     "pooled_sign_p": 0.0106
+    },
+    "sink_norm|lam1": {
+     "mean_dJ_over_cells": 0.0002,
+     "cells_with_mean_dJ>0": "10/24",
+     "pooled_wins": 317,
+     "pooled_losses": 331,
+     "pooled_sign_p": 0.6096
+    },
+    "sink_abs|lam0.1": {
+     "mean_dJ_over_cells": 0.002,
+     "cells_with_mean_dJ>0": "13/24",
+     "pooled_wins": 298,
+     "pooled_losses": 350,
+     "pooled_sign_p": 0.045
+    },
+    "sink_abs|lam0.25": {
+     "mean_dJ_over_cells": 0.0023,
+     "cells_with_mean_dJ>0": "14/24",
+     "pooled_wins": 305,
+     "pooled_losses": 343,
+     "pooled_sign_p": 0.146
+    },
+    "sink_abs|lam0.5": {
+     "mean_dJ_over_cells": 0.0064,
+     "cells_with_mean_dJ>0": "16/24",
+     "pooled_wins": 315,
+     "pooled_losses": 333,
+     "pooled_sign_p": 0.5043
+    },
+    "sink_abs|lam1": {
+     "mean_dJ_over_cells": 0.0111,
+     "cells_with_mean_dJ>0": "18/24",
+     "pooled_wins": 337,
+     "pooled_losses": 311,
+     "pooled_sign_p": 0.3261
+    }
+   },
+   "linear": {
+    "sink_norm|lam0.1": {
+     "mean_dJ_over_cells": -0.0771,
+     "cells_with_mean_dJ>0": "0/24",
+     "pooled_wins": 205,
+     "pooled_losses": 437,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam0.25": {
+     "mean_dJ_over_cells": -0.0533,
+     "cells_with_mean_dJ>0": "1/24",
+     "pooled_wins": 250,
+     "pooled_losses": 392,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam0.5": {
+     "mean_dJ_over_cells": -0.0273,
+     "cells_with_mean_dJ>0": "0/24",
+     "pooled_wins": 265,
+     "pooled_losses": 377,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam1": {
+     "mean_dJ_over_cells": -0.0026,
+     "cells_with_mean_dJ>0": "5/24",
+     "pooled_wins": 281,
+     "pooled_losses": 358,
+     "pooled_sign_p": 0.0026
+    },
+    "sink_abs|lam0.1": {
+     "mean_dJ_over_cells": -0.0614,
+     "cells_with_mean_dJ>0": "0/24",
+     "pooled_wins": 219,
+     "pooled_losses": 423,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam0.25": {
+     "mean_dJ_over_cells": -0.0476,
+     "cells_with_mean_dJ>0": "5/24",
+     "pooled_wins": 259,
+     "pooled_losses": 383,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam0.5": {
+     "mean_dJ_over_cells": -0.0178,
+     "cells_with_mean_dJ>0": "5/24",
+     "pooled_wins": 271,
+     "pooled_losses": 371,
+     "pooled_sign_p": 0.0001
+    },
+    "sink_abs|lam1": {
+     "mean_dJ_over_cells": 0.0002,
+     "cells_with_mean_dJ>0": "10/24",
+     "pooled_wins": 295,
+     "pooled_losses": 347,
+     "pooled_sign_p": 0.0441
+    }
+   },
+   "orig": {
+    "sink_norm|lam0.1": {
+     "mean_dJ_over_cells": 0.0199,
+     "cells_with_mean_dJ>0": "21/24",
+     "pooled_wins": 524,
+     "pooled_losses": 124,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam0.25": {
+     "mean_dJ_over_cells": 0.01,
+     "cells_with_mean_dJ>0": "19/24",
+     "pooled_wins": 402,
+     "pooled_losses": 246,
+     "pooled_sign_p": 0.0
+    },
+    "sink_norm|lam0.5": {
+     "mean_dJ_over_cells": 0.0045,
+     "cells_with_mean_dJ>0": "21/24",
+     "pooled_wins": 374,
+     "pooled_losses": 274,
+     "pooled_sign_p": 0.0001
+    },
+    "sink_norm|lam1": {
+     "mean_dJ_over_cells": 0.0023,
+     "cells_with_mean_dJ>0": "19/24",
+     "pooled_wins": 370,
+     "pooled_losses": 278,
+     "pooled_sign_p": 0.0003
+    },
+    "sink_abs|lam0.1": {
+     "mean_dJ_over_cells": 0.0199,
+     "cells_with_mean_dJ>0": "21/24",
+     "pooled_wins": 529,
+     "pooled_losses": 119,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam0.25": {
+     "mean_dJ_over_cells": 0.0118,
+     "cells_with_mean_dJ>0": "18/24",
+     "pooled_wins": 417,
+     "pooled_losses": 231,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam0.5": {
+     "mean_dJ_over_cells": 0.0068,
+     "cells_with_mean_dJ>0": "19/24",
+     "pooled_wins": 405,
+     "pooled_losses": 243,
+     "pooled_sign_p": 0.0
+    },
+    "sink_abs|lam1": {
+     "mean_dJ_over_cells": 0.0049,
+     "cells_with_mean_dJ>0": "18/24",
+     "pooled_wins": 374,
+     "pooled_losses": 274,
+     "pooled_sign_p": 0.0001
+    }
+   }
+  }
+ },
+ "p1_claims_extracted": {
+  "pancreas-human": {
+   "l1": {
+    "trend": [
+     0.1769,
+     0.2253,
+     0.2209
+    ],
+    "persist|Kany": [
+     -0.0364,
+     0.101,
+     0.1383
+    ],
+    "persist|L3|Kany": [
+     -0.0522,
+     0.1142,
+     0.1597
+    ],
+    "lin1|Kany": [
+     0.109,
+     0.2054,
+     0.2204
+    ],
+    "balanced|Kany": [
+     0.1506,
+     0.232,
+     0.2115
+    ],
+    "sink_abs|Kany": [
+     0.0974,
+     0.1956,
+     0.2174
+    ],
+    "sink_norm|Kany": [
+     0.1403,
+     0.2242,
+     0.2093
+    ],
+    "kluot_abs|Kany": [
+     0.1297,
+     0.2271,
+     0.2077
+    ],
+    "full|Kany": [
+     0.083,
+     0.1897,
+     0.2022
+    ],
+    "sink_any|Kany": [
+     0.0949,
+     0.2001,
+     0.2107
+    ],
+    "balanced|K4": [
+     0.0863,
+     0.2137,
+     0.1937
+    ],
+    "sink_abs|K4": [
+     0.0284,
+     0.1746,
+     0.2076
+    ],
+    "sink_norm|K4": [
+     0.0762,
+     0.2013,
+     0.2043
+    ],
+    "oracle|K4|Lsel": [
+     0.0524,
+     0.1595,
+     0.2415
+    ],
+    "balanced|K8": [
+     0.1468,
+     0.2301,
+     0.2124
+    ],
+    "sink_abs|K8": [
+     0.0916,
+     0.1955,
+     0.2174
+    ],
+    "sink_norm|K8": [
+     0.0742,
+     0.2001,
+     0.2011
+    ],
+    "oracle|K8|Lsel": [
+     0.1467,
+     0.1954,
+     0.25
+    ],
+    "balanced|K16": [
+     0.1629,
+     0.2325,
+     0.2203
+    ],
+    "sink_abs|K16": [
+     0.1044,
+     0.1985,
+     0.2196
+    ],
+    "sink_norm|K16": [
+     0.0882,
+     0.2019,
+     0.2086
+    ],
+    "oracle|K16|Lsel": [
+     0.1636,
+     0.2025,
+     0.2564
+    ],
+    "oracle|Ksel|Lsel": [
+     0.1626,
+     0.2004,
+     0.2552
+    ],
+    "paired": {
+     "sink_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": -0.0576,
+       "wins": 4,
+       "losses": 8,
+       "p_wilcoxon": 0.2334
+      },
+      "dJ": {
+       "mean": -0.0302,
+       "wins": 3,
+       "losses": 9,
+       "p_wilcoxon": 0.1099
+      }
+     },
+     "sink_norm|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": -0.0112,
+       "wins": 6,
+       "losses": 6,
+       "p_wilcoxon": 0.791
+      },
+      "dJ": {
+       "mean": -0.0073,
+       "wins": 7,
+       "losses": 5,
+       "p_wilcoxon": 0.8501
+      }
+     },
+     "kluot_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": -0.0226,
+       "wins": 5,
+       "losses": 7,
+       "p_wilcoxon": 0.5693
+      },
+      "dJ": {
+       "mean": -0.0107,
+       "wins": 6,
+       "losses": 6,
+       "p_wilcoxon": 0.6772
+      }
+     },
+     "sink_norm|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": 0.0339,
+       "wins": 6,
+       "losses": 6,
+       "p_wilcoxon": 0.4238
+      },
+      "dJ": {
+       "mean": 0.014,
+       "wins": 6,
+       "losses": 6,
+       "p_wilcoxon": 0.5693
+      }
+     },
+     "sink_any|Kany - persist|Kany": {
+      "dPCC": {
+       "mean": 0.1422,
+       "wins": 6,
+       "losses": 6,
+       "p_wilcoxon": 0.2661
+      },
+      "dJ": {
+       "mean": 0.1093,
+       "wins": 9,
+       "losses": 3,
+       "p_wilcoxon": 0.0342
+      }
+     },
+     "balanced|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": 0.045,
+       "wins": 8,
+       "losses": 4,
+       "p_wilcoxon": 0.064
+      },
+      "dJ": {
+       "mean": 0.0214,
+       "wins": 8,
+       "losses": 4,
+       "p_wilcoxon": 0.1294
+      }
+     }
+    },
+    "selection_shares::sink_norm|Kany": {
+     "lam": {
+      "lam0.1": 6,
+      "lam1": 1,
+      "lam0.25": 4,
+      "lam0.5": 1
+     },
+     "K": {
+      "K4": 9,
+      "K8": 1,
+      "K16": 2
+     },
+     "L": {
+      "L1": 12
+     },
+     "R": {
+      "R1": 7,
+      "R3": 5
+     },
+     "fam": {
+      "sink_norm": 12
+     }
+    },
+    "selection_shares::sink_abs|Kany": {
+     "lam": {
+      "lam0.1": 8,
+      "lam0.5": 4
+     },
+     "K": {
+      "K4": 5,
+      "K8": 5,
+      "K16": 2
+     },
+     "L": {
+      "L1": 12
+     },
+     "R": {
+      "R1": 7,
+      "R3": 5
+     },
+     "fam": {
+      "sink_abs": 12
+     }
+    },
+    "selection_shares::balanced|Kany": {
+     "lam": {},
+     "K": {
+      "K4": 7,
+      "K8": 1,
+      "K16": 4
+     },
+     "L": {
+      "L1": 12
+     },
+     "R": {
+      "R1": 7,
+      "R3": 5
+     },
+     "fam": {
+      "balanced": 12
+     }
+    },
+    "selection_shares::full|Kany": {
+     "lam": {
+      "lam0.1": 1,
+      "lam0.5": 3,
+      "lam0.25": 3
+     },
+     "K": {
+      "K4": 7,
+      "K8": 2,
+      "K16": 3
+     },
+     "L": {
+      "L1": 12
+     },
+     "R": {
+      "R3": 6,
+      "R1": 3
+     },
+     "fam": {
+      "persist": 1,
+      "sink_abs": 5,
+      "lin1": 2,
+      "sink_norm": 2,
+      "kluot_abs": 2
+     }
+    }
+   },
+   "linear": {
+    "trend": [
+     0.4255,
+     0.2916,
+     0.3584
+    ],
+    "persist|Kany": [
+     -0.1611,
+     0.1599,
+     0.2759
+    ],
+    "persist|L3|Kany": [
+     -0.1611,
+     0.1599,
+     0.2759
+    ],
+    "lin1|Kany": [
+     0.2868,
+     0.2749,
+     0.3355
+    ],
+    "balanced|Kany": [
+     0.3149,
+     0.2937,
+     0.3437
+    ],
+    "sink_abs|Kany": [
+     0.3126,
+     0.2926,
+     0.346
+    ],
+    "sink_norm|Kany": [
+     0.3009,
+     0.2893,
+     0.3442
+    ],
+    "kluot_abs|Kany": [
+     0.2917,
+     0.2844,
+     0.3399
+    ],
+    "full|Kany": [
+     0.2797,
+     0.288,
+     0.3326
+    ],
+    "sink_any|Kany": [
+     0.3015,
+     0.2887,
+     0.3441
+    ],
+    "balanced|K4": [
+     0.2173,
+     0.2656,
+     0.3313
+    ],
+    "sink_abs|K4": [
+     0.1487,
+     0.2589,
+     0.3254
+    ],
+    "sink_norm|K4": [
+     0.1879,
+     0.2585,
+     0.3229
+    ],
+    "oracle|K4|Lsel": [
+     -0.1088,
+     0.2354,
+     0.2558
+    ],
+    "balanced|K8": [
+     0.3484,
+     0.2856,
+     0.3469
+    ],
+    "sink_abs|K8": [
+     0.3596,
+     0.287,
+     0.3521
+    ],
+    "sink_norm|K8": [
+     0.3467,
+     0.2856,
+     0.3497
+    ],
+    "oracle|K8|Lsel": [
+     0.1395,
+     0.2715,
+     0.3122
+    ],
+    "balanced|K16": [
+     0.366,
+     0.2924,
+     0.3513
+    ],
+    "sink_abs|K16": [
+     0.3747,
+     0.2907,
+     0.3531
+    ],
+    "sink_norm|K16": [
+     0.3614,
+     0.2898,
+     0.3517
+    ],
+    "oracle|K16|Lsel": [
+     0.1583,
+     0.28,
+     0.317
+    ],
+    "oracle|Ksel|Lsel": [
+     0.1576,
+     0.2769,
+     0.3153
+    ],
+    "paired": {
+     "sink_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": -0.0025,
+       "wins": 7,
+       "losses": 5,
+       "p_wilcoxon": 0.9097
+      },
+      "dJ": {
+       "mean": -0.0004,
+       "wins": 7,
+       "losses": 5,
+       "p_wilcoxon": 1.0
+      }
+     },
+     "sink_norm|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": -0.0152,
+       "wins": 5,
+       "losses": 7,
+       "p_wilcoxon": 0.1763
+      },
+      "dJ": {
+       "mean": -0.0065,
+       "wins": 4,
+       "losses": 8,
+       "p_wilcoxon": 0.2334
+      }
+     },
+     "kluot_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": -0.0252,
+       "wins": 2,
+       "losses": 10,
+       "p_wilcoxon": 0.0093
+      },
+      "dJ": {
+       "mean": -0.0131,
+       "wins": 2,
+       "losses": 10,
+       "p_wilcoxon": 0.0093
+      }
+     },
+     "sink_norm|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": 0.0152,
+       "wins": 5,
+       "losses": 7,
+       "p_wilcoxon": 0.9697
+      },
+      "dJ": {
+       "mean": 0.0134,
+       "wins": 5,
+       "losses": 7,
+       "p_wilcoxon": 0.791
+      }
+     },
+     "sink_any|Kany - persist|Kany": {
+      "dPCC": {
+       "mean": 0.5011,
+       "wins": 11,
+       "losses": 1,
+       "p_wilcoxon": 0.0015
+      },
+      "dJ": {
+       "mean": 0.2381,
+       "wins": 11,
+       "losses": 1,
+       "p_wilcoxon": 0.0034
+      }
+     },
+     "balanced|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": 0.0304,
+       "wins": 7,
+       "losses": 5,
+       "p_wilcoxon": 0.3394
+      },
+      "dJ": {
+       "mean": 0.0199,
+       "wins": 7,
+       "losses": 5,
+       "p_wilcoxon": 0.1763
+      }
+     }
+    },
+    "selection_shares::sink_norm|Kany": {
+     "lam": {
+      "lam0.1": 8,
+      "lam1": 2,
+      "lam0.5": 2
+     },
+     "K": {
+      "K4": 5,
+      "K8": 5,
+      "K16": 2
+     },
+     "L": {
+      "L3": 1,
+      "L1": 11
+     },
+     "R": {
+      "R1": 12
+     },
+     "fam": {
+      "sink_norm": 12
+     }
+    },
+    "selection_shares::sink_abs|Kany": {
+     "lam": {
+      "lam0.1": 11,
+      "lam0.5": 1
+     },
+     "K": {
+      "K4": 5,
+      "K8": 5,
+      "K16": 2
+     },
+     "L": {
+      "L3": 1,
+      "L1": 11
+     },
+     "R": {
+      "R1": 12
+     },
+     "fam": {
+      "sink_abs": 12
+     }
+    },
+    "selection_shares::balanced|Kany": {
+     "lam": {},
+     "K": {
+      "K4": 5,
+      "K8": 4,
+      "K16": 3
+     },
+     "L": {
+      "L3": 1,
+      "L1": 11
+     },
+     "R": {
+      "R1": 12
+     },
+     "fam": {
+      "balanced": 12
+     }
+    },
+    "selection_shares::full|Kany": {
+     "lam": {
+      "lam0.1": 3
+     },
+     "K": {
+      "K4": 5,
+      "K8": 5,
+      "K16": 2
+     },
+     "L": {
+      "L3": 1,
+      "L1": 11
+     },
+     "R": {
+      "R1": 7,
+      "R3": 3
+     },
+     "fam": {
+      "persist": 1,
+      "lin1": 1,
+      "balanced": 4,
+      "kluot_abs": 3,
+      "sink_norm": 1,
+      "sink_abs": 2
+     }
+    }
+   },
+   "orig": {
+    "trend": [
+     -0.3903,
+     0.0396,
+     0.0378
+    ],
+    "persist|Kany": [
+     0.4171,
+     0.2326,
+     0.4194
+    ],
+    "persist|L3|Kany": [
+     0.4171,
+     0.2326,
+     0.4194
+    ],
+    "lin1|Kany": [
+     0.3855,
+     0.215,
+     0.4047
+    ],
+    "balanced|Kany": [
+     0.3877,
+     0.2155,
+     0.4068
+    ],
+    "sink_abs|Kany": [
+     0.4412,
+     0.2586,
+     0.4426
+    ],
+    "sink_norm|Kany": [
+     0.4648,
+     0.2707,
+     0.4366
+    ],
+    "kluot_abs|Kany": [
+     0.3879,
+     0.2144,
+     0.4064
+    ],
+    "full|Kany": [
+     0.4562,
+     0.2607,
+     0.4462
+    ],
+    "sink_any|Kany": [
+     0.449,
+     0.2562,
+     0.4396
+    ],
+    "balanced|K4": [
+     0.3886,
+     0.2133,
+     0.409
+    ],
+    "sink_abs|K4": [
+     0.4284,
+     0.2556,
+     0.4295
+    ],
+    "sink_norm|K4": [
+     0.4445,
+     0.257,
+     0.4294
+    ],
+    "oracle|K4|Lsel": [
+     0.4424,
+     0.2489,
+     0.4369
+    ],
+    "balanced|K8": [
+     0.3943,
+     0.22,
+     0.3997
+    ],
+    "sink_abs|K8": [
+     0.4424,
+     0.2605,
+     0.4435
+    ],
+    "sink_norm|K8": [
+     0.4658,
+     0.2727,
+     0.4388
+    ],
+    "oracle|K8|Lsel": [
+     0.4398,
+     0.2787,
+     0.4207
+    ],
+    "balanced|K16": [
+     0.401,
+     0.2238,
+     0.4014
+    ],
+    "sink_abs|K16": [
+     0.4435,
+     0.2585,
+     0.4435
+    ],
+    "sink_norm|K16": [
+     0.467,
+     0.2746,
+     0.4383
+    ],
+    "oracle|K16|Lsel": [
+     0.4409,
+     0.281,
+     0.4187
+    ],
+    "oracle|Ksel|Lsel": [
+     0.4398,
+     0.278,
+     0.4171
+    ],
+    "paired": {
+     "sink_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": 0.058,
+       "wins": 10,
+       "losses": 2,
+       "p_wilcoxon": 0.0049
+      },
+      "dJ": {
+       "mean": 0.0478,
+       "wins": 11,
+       "losses": 1,
+       "p_wilcoxon": 0.0015
+      }
+     },
+     "sink_norm|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": 0.0835,
+       "wins": 11,
+       "losses": 1,
+       "p_wilcoxon": 0.001
+      },
+      "dJ": {
+       "mean": 0.0585,
+       "wins": 11,
+       "losses": 1,
+       "p_wilcoxon": 0.001
+      }
+     },
+     "kluot_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": 0.0002,
+       "wins": 6,
+       "losses": 6,
+       "p_wilcoxon": 0.791
+      },
+      "dJ": {
+       "mean": -0.0005,
+       "wins": 6,
+       "losses": 6,
+       "p_wilcoxon": 0.8501
+      }
+     },
+     "sink_norm|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": 0.0858,
+       "wins": 12,
+       "losses": 0,
+       "p_wilcoxon": 0.0005
+      },
+      "dJ": {
+       "mean": 0.0602,
+       "wins": 12,
+       "losses": 0,
+       "p_wilcoxon": 0.0005
+      }
+     },
+     "sink_any|Kany - persist|Kany": {
+      "dPCC": {
+       "mean": 0.0346,
+       "wins": 7,
+       "losses": 5,
+       "p_wilcoxon": 0.1514
+      },
+      "dJ": {
+       "mean": 0.0274,
+       "wins": 9,
+       "losses": 3,
+       "p_wilcoxon": 0.0425
+      }
+     },
+     "balanced|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": 0.0023,
+       "wins": 6,
+       "losses": 6,
+       "p_wilcoxon": 0.7334
+      },
+      "dJ": {
+       "mean": 0.0017,
+       "wins": 6,
+       "losses": 6,
+       "p_wilcoxon": 0.791
+      }
+     }
+    },
+    "selection_shares::sink_norm|Kany": {
+     "lam": {
+      "lam0.1": 12
+     },
+     "K": {
+      "K4": 4,
+      "K8": 7,
+      "K16": 1
+     },
+     "L": {
+      "L3": 11,
+      "L1": 1
+     },
+     "R": {
+      "R1": 1,
+      "R3": 11
+     },
+     "fam": {
+      "sink_norm": 12
+     }
+    },
+    "selection_shares::sink_abs|Kany": {
+     "lam": {
+      "lam0.1": 12
+     },
+     "K": {
+      "K4": 4,
+      "K8": 8
+     },
+     "L": {
+      "L3": 5,
+      "L1": 7
+     },
+     "R": {
+      "R1": 1,
+      "R3": 11
+     },
+     "fam": {
+      "sink_abs": 12
+     }
+    },
+    "selection_shares::balanced|Kany": {
+     "lam": {},
+     "K": {
+      "K4": 11,
+      "K16": 1
+     },
+     "L": {
+      "L3": 12
+     },
+     "R": {
+      "R1": 3,
+      "R3": 9
+     },
+     "fam": {
+      "balanced": 12
+     }
+    },
+    "selection_shares::full|Kany": {
+     "lam": {
+      "lam0.1": 11
+     },
+     "K": {
+      "K4": 4,
+      "K8": 7,
+      "K16": 1
+     },
+     "L": {
+      "L3": 8,
+      "L1": 4
+     },
+     "R": {
+      "R3": 11
+     },
+     "fam": {
+      "persist": 1,
+      "sink_abs": 6,
+      "sink_norm": 5
+     }
+    }
+   },
+   "composition_tv_vs_oracle_i>=2": {
+    "persist|K4": {
+     "best_config_hindsight": "persist|K4|L1",
+     "tv_best": 0.048,
+     "tv_median_over_hp": 0.048
+    },
+    "persist|K8": {
+     "best_config_hindsight": "persist|K8|L1",
+     "tv_best": 0.0816,
+     "tv_median_over_hp": 0.0816
+    },
+    "persist|K16": {
+     "best_config_hindsight": "persist|K16|L1",
+     "tv_best": 0.0977,
+     "tv_median_over_hp": 0.0977
+    },
+    "lin1|K4": {
+     "best_config_hindsight": "lin1|K4|L1",
+     "tv_best": 0.0678,
+     "tv_median_over_hp": 0.0678
+    },
+    "lin1|K8": {
+     "best_config_hindsight": "lin1|K8|L1",
+     "tv_best": 0.0818,
+     "tv_median_over_hp": 0.0818
+    },
+    "lin1|K16": {
+     "best_config_hindsight": "lin1|K16|L1",
+     "tv_best": 0.0823,
+     "tv_median_over_hp": 0.0823
+    },
+    "balanced|K4": {
+     "best_config_hindsight": "balanced|K4|L1|R3|eps0.2",
+     "tv_best": 0.0584,
+     "tv_median_over_hp": 0.059
+    },
+    "balanced|K8": {
+     "best_config_hindsight": "balanced|K8|L1|R1|eps0.05",
+     "tv_best": 0.0747,
+     "tv_median_over_hp": 0.0784
+    },
+    "balanced|K16": {
+     "best_config_hindsight": "balanced|K16|L1|R1|eps0.05",
+     "tv_best": 0.0797,
+     "tv_median_over_hp": 0.0837
+    },
+    "sink_abs|K4": {
+     "best_config_hindsight": "sink_abs|K4|L1|R1|eps0.2|lam0.1",
+     "tv_best": 0.0587,
+     "tv_median_over_hp": 0.0835
+    },
+    "sink_abs|K8": {
+     "best_config_hindsight": "sink_abs|K8|L1|R1|eps0.05|lam1",
+     "tv_best": 0.076,
+     "tv_median_over_hp": 0.1286
+    },
+    "sink_abs|K16": {
+     "best_config_hindsight": "sink_abs|K16|L1|R1|eps0.05|lam0.1",
+     "tv_best": 0.0807,
+     "tv_median_over_hp": 0.1399
+    },
+    "sink_norm|K4": {
+     "best_config_hindsight": "sink_norm|K4|L1|R3|eps0.05|lam0.25",
+     "tv_best": 0.0468,
+     "tv_median_over_hp": 0.059
+    },
+    "sink_norm|K8": {
+     "best_config_hindsight": "sink_norm|K8|L1|R1|eps0.05|lam0.1",
+     "tv_best": 0.0744,
+     "tv_median_over_hp": 0.0791
+    },
+    "sink_norm|K16": {
+     "best_config_hindsight": "sink_norm|K16|L1|R1|eps0.05|lam0.1",
+     "tv_best": 0.0785,
+     "tv_median_over_hp": 0.0849
+    },
+    "kluot_abs|K4": {
+     "best_config_hindsight": "kluot_abs|K4|L1|R3|eps0.2|tau1",
+     "tv_best": 0.0536,
+     "tv_median_over_hp": 0.057
+    },
+    "kluot_abs|K8": {
+     "best_config_hindsight": "kluot_abs|K8|L1|R3|eps0.05|tau0.1",
+     "tv_best": 0.0706,
+     "tv_median_over_hp": 0.075
+    },
+    "kluot_abs|K16": {
+     "best_config_hindsight": "kluot_abs|K16|L1|R3|eps0.05|tau0.1",
+     "tv_best": 0.0741,
+     "tv_median_over_hp": 0.0812
+    }
+   },
+   "sink_interpretation_last_fit": {
+    "K4": {
+     "markers": [
+      [
+       "PPP1R1B",
+       "S100B",
+       "ADAMTS16",
+       "CXCL12",
+       "GSTA5",
+       "EHF",
+       "FMO2",
+       "CYR61"
+      ],
+      [
+       "SLC30A8",
+       "GIP",
+       "FRZB",
+       "PRSS50",
+       "GCG",
+       "IAPP",
+       "BC048546",
+       "INS"
+      ],
+      [
+       "NHLH1",
+       "IRS4",
+       "MBOAT4",
+       "SST",
+       "DLL3",
+       "CCK",
+       "ST8SIA2",
+       "GHRL"
+      ],
+      [
+       "NOTUM",
+       "PPP1R14A",
+       "EYA2",
+       "CRYBB1",
+       "SLC39A2",
+       "NKD1",
+       "GADD45A",
+       "KIRREL2"
+      ]
+     ],
+     "sink_abs|lam0.5|eps0.05": {
+      "turnover_share_of_source_mass": 0.2529,
+      "mean_death_frac_by_state": [
+       0.292,
+       0.13,
+       0.147,
+       0.059
+      ],
+      "birth_share_by_state": [
+       0.392,
+       0.384,
+       0.11,
+       0.115
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2363,
+      "corr_net_change_vs_cell_count_change": 1.0,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 6,
+      "n_pairs": 13,
+      "first_pairs": [
+       {
+        "pair": "111->612 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 501.0,
+        "transported": 111.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         487.45,
+         1.12,
+         0.87,
+         11.56
+        ]
+       },
+       {
+        "pair": "612->361 cells (snap 1->2)",
+        "death_total": 251.02,
+        "birth_total": 0.02,
+        "transported": 360.98,
+        "death_frac_by_state": [
+         0.42,
+         0.322,
+         0.444,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.02
+        ]
+       },
+       {
+        "pair": "361->116 cells (snap 2->3)",
+        "death_total": 245.04,
+        "birth_total": 0.03,
+        "transported": 115.97,
+        "death_frac_by_state": [
+         0.707,
+         0.657,
+         0.685,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.03
+        ]
+       }
+      ]
+     },
+     "sink_abs|lam1|eps0.05": {
+      "turnover_share_of_source_mass": 0.2454,
+      "mean_death_frac_by_state": [
+       0.183,
+       0.125,
+       0.145,
+       0.05
+      ],
+      "birth_share_by_state": [
+       0.399,
+       0.389,
+       0.105,
+       0.107
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2253,
+      "corr_net_change_vs_cell_count_change": 1.0,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+      "n_pairs": 13,
+      "first_pairs": [
+       {
+        "pair": "111->612 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 501.0,
+        "transported": 111.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         487.45,
+         1.12,
+         0.87,
+         11.56
+        ]
+       },
+       {
+        "pair": "612->361 cells (snap 1->2)",
+        "death_total": 251.0,
+        "birth_total": 0.0,
+        "transported": 361.0,
+        "death_frac_by_state": [
+         0.42,
+         0.322,
+         0.444,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "361->116 cells (snap 2->3)",
+        "death_total": 245.0,
+        "birth_total": 0.0,
+        "transported": 116.0,
+        "death_frac_by_state": [
+         0.706,
+         0.657,
+         0.684,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     },
+     "sink_norm|lam0.5|eps0.05": {
+      "turnover_share_of_source_mass": 0.0699,
+      "mean_death_frac_by_state": [
+       0.266,
+       0.022,
+       0.012,
+       0.099
+      ],
+      "birth_share_by_state": [
+       0.005,
+       0.218,
+       0.337,
+       0.44
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2802,
+      "corr_net_change_vs_cell_count_change": null,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 11,
+      "n_pairs": 13,
+      "first_pairs": [
+       {
+        "pair": "111->612 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.002,
+         0.062,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "612->361 cells (snap 1->2)",
+        "death_total": 0.01,
+        "birth_total": 0.01,
+        "transported": 0.99,
+        "death_frac_by_state": [
+         0.014,
+         0.0,
+         0.032,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.01
+        ]
+       },
+       {
+        "pair": "361->116 cells (snap 2->3)",
+        "death_total": 0.05,
+        "birth_total": 0.05,
+        "transported": 0.95,
+        "death_frac_by_state": [
+         0.054,
+         0.0,
+         0.013,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.05
+        ]
+       }
+      ]
+     },
+     "sink_norm|lam1|eps0.05": {
+      "turnover_share_of_source_mass": 0.0,
+      "mean_death_frac_by_state": [
+       0.001,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "birth_share_by_state": [
+       0.031,
+       0.569,
+       0.376,
+       0.024
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2363,
+      "corr_net_change_vs_cell_count_change": null,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+      "n_pairs": 13,
+      "first_pairs": [
+       {
+        "pair": "111->612 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "612->361 cells (snap 1->2)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "361->116 cells (snap 2->3)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     }
+    },
+    "K8": {
+     "markers": [
+      [
+       "DDIT4L",
+       "VNN1",
+       "TK1",
+       "S100B",
+       "IMPA2",
+       "UNG",
+       "CLDN8",
+       "GAS1"
+      ],
+      [
+       "INS",
+       "NPY",
+       "GCG",
+       "G6PC2",
+       "GIP",
+       "ARHGAP36",
+       "SLC30A8",
+       "PPP1R1A"
+      ],
+      [
+       "TMEM114",
+       "NHLH1",
+       "NEUROD2",
+       "DPYSL4",
+       "ALPL",
+       "TGM7",
+       "GRIN2C",
+       "OLFM1"
+      ],
+      [
+       "SDS",
+       "KCTD14",
+       "DLL1",
+       "SOSTDC1",
+       "ATOH8",
+       "GRIN3A",
+       "TMEM171",
+       "SLC9A9"
+      ],
+      [
+       "SST",
+       "PPP1R14C",
+       "DRC1",
+       "LRPPRC",
+       "RBP4",
+       "PPY",
+       "NXPH1",
+       "NAP1L5"
+      ],
+      [
+       "ADRA2C",
+       "POU3F1",
+       "NPTX2",
+       "TFF3",
+       "LRRN2",
+       "TSPEAR",
+       "CRYBB1",
+       "EYA2"
+      ],
+      [
+       "IRS4",
+       "NAB2",
+       "MBOAT4",
+       "ST8SIA2",
+       "ACSL1",
+       "ARG1",
+       "MAGED2",
+       "SLC35D3"
+      ],
+      [
+       "CEP55",
+       "BUB1",
+       "CENPF",
+       "CDKN3",
+       "CDCA3",
+       "FAM64A",
+       "CDC25C",
+       "CKAP2"
+      ]
+     ],
+     "sink_abs|lam0.5|eps0.05": {
+      "turnover_share_of_source_mass": 0.2513,
+      "mean_death_frac_by_state": [
+       0.389,
+       0.171,
+       0.089,
+       0.189,
+       0.135,
+       0.084,
+       0.132,
+       0.272
+      ],
+      "birth_share_by_state": [
+       0.239,
+       0.262,
+       0.098,
+       0.05,
+       0.187,
+       0.035,
+       0.016,
+       0.113
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.1703,
+      "corr_net_change_vs_cell_count_change": 1.0,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 3,
+      "n_pairs": 13,
+      "first_pairs": [
+       {
+        "pair": "111->612 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 501.0,
+        "transported": 111.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         299.26,
+         0.7,
+         0.06,
+         58.24,
+         0.01,
+         3.34,
+         1.28,
+         138.1
+        ]
+       },
+       {
+        "pair": "612->361 cells (snap 1->2)",
+        "death_total": 251.2,
+        "birth_total": 0.19,
+        "transported": 360.81,
+        "death_frac_by_state": [
+         0.539,
+         0.507,
+         0.052,
+         0.521,
+         0.214,
+         0.0,
+         0.412,
+         0.005
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.19,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "361->116 cells (snap 2->3)",
+        "death_total": 245.06,
+        "birth_total": 0.06,
+        "transported": 115.94,
+        "death_frac_by_state": [
+         0.81,
+         0.738,
+         0.04,
+         0.193,
+         0.941,
+         0.0,
+         0.685,
+         0.694
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.06,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     },
+     "sink_abs|lam1|eps0.05": {
+      "turnover_share_of_source_mass": 0.2454,
+      "mean_death_frac_by_state": [
+       0.271,
+       0.163,
+       0.084,
+       0.158,
+       0.124,
+       0.084,
+       0.132,
+       0.188
+      ],
+      "birth_share_by_state": [
+       0.243,
+       0.266,
+       0.096,
+       0.05,
+       0.188,
+       0.027,
+       0.016,
+       0.115
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2143,
+      "corr_net_change_vs_cell_count_change": 1.0,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+      "n_pairs": 13,
+      "first_pairs": [
+       {
+        "pair": "111->612 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 501.0,
+        "transported": 111.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         299.26,
+         0.7,
+         0.06,
+         58.24,
+         0.01,
+         3.34,
+         1.28,
+         138.1
+        ]
+       },
+       {
+        "pair": "612->361 cells (snap 1->2)",
+        "death_total": 251.0,
+        "birth_total": 0.0,
+        "transported": 361.0,
+        "death_frac_by_state": [
+         0.539,
+         0.507,
+         0.043,
+         0.519,
+         0.214,
+         0.0,
+         0.412,
+         0.005
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "361->116 cells (snap 2->3)",
+        "death_total": 245.0,
+        "birth_total": 0.0,
+        "transported": 116.0,
+        "death_frac_by_state": [
+         0.81,
+         0.738,
+         0.036,
+         0.192,
+         0.941,
+         0.0,
+         0.685,
+         0.694
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     },
+     "sink_norm|lam0.5|eps0.05": {
+      "turnover_share_of_source_mass": 0.0763,
+      "mean_death_frac_by_state": [
+       0.278,
+       0.118,
+       0.122,
+       0.222,
+       0.112,
+       0.1,
+       0.024,
+       0.188
+      ],
+      "birth_share_by_state": [
+       0.001,
+       0.118,
+       0.303,
+       0.036,
+       0.13,
+       0.321,
+       0.075,
+       0.017
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.3297,
+      "corr_net_change_vs_cell_count_change": null,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 11,
+      "n_pairs": 13,
+      "first_pairs": [
+       {
+        "pair": "111->612 cells (snap 0->1)",
+        "death_total": 0.01,
+        "birth_total": 0.01,
+        "transported": 0.99,
+        "death_frac_by_state": [
+         0.0,
+         0.208,
+         0.0,
+         0.056,
+         0.337,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.01
+        ]
+       },
+       {
+        "pair": "612->361 cells (snap 1->2)",
+        "death_total": 0.01,
+        "birth_total": 0.01,
+        "transported": 0.99,
+        "death_frac_by_state": [
+         0.0,
+         0.155,
+         0.004,
+         0.081,
+         0.025,
+         0.0,
+         0.004,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.01,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "361->116 cells (snap 2->3)",
+        "death_total": 0.05,
+        "birth_total": 0.05,
+        "transported": 0.95,
+        "death_frac_by_state": [
+         0.118,
+         0.184,
+         0.0,
+         0.0,
+         0.801,
+         0.0,
+         0.019,
+         0.01
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.02,
+         0.0,
+         0.03,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     },
+     "sink_norm|lam1|eps0.05": {
+      "turnover_share_of_source_mass": 0.0,
+      "mean_death_frac_by_state": [
+       0.001,
+       0.002,
+       0.0,
+       0.001,
+       0.002,
+       0.001,
+       0.0,
+       0.001
+      ],
+      "birth_share_by_state": [
+       0.008,
+       0.318,
+       0.194,
+       0.004,
+       0.231,
+       0.116,
+       0.082,
+       0.048
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.6319,
+      "corr_net_change_vs_cell_count_change": null,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+      "n_pairs": 13,
+      "first_pairs": [
+       {
+        "pair": "111->612 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.006,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "612->361 cells (snap 1->2)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.01,
+         0.0,
+         0.0,
+         0.001,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "361->116 cells (snap 2->3)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.012,
+         0.0,
+         0.0,
+         0.025,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     }
+    }
+   }
+  },
+  "gastrulation-human": {
+   "l1": {
+    "trend": [
+     -0.1583,
+     0.1053,
+     0.0915
+    ],
+    "persist|Kany": [
+     0.255,
+     0.2682,
+     0.2842
+    ],
+    "persist|L3|Kany": [
+     0.255,
+     0.2682,
+     0.2842
+    ],
+    "lin1|Kany": [
+     0.2582,
+     0.2587,
+     0.2648
+    ],
+    "balanced|Kany": [
+     0.2576,
+     0.2582,
+     0.2677
+    ],
+    "sink_abs|Kany": [
+     0.2502,
+     0.2665,
+     0.2724
+    ],
+    "sink_norm|Kany": [
+     0.2688,
+     0.2658,
+     0.2789
+    ],
+    "kluot_abs|Kany": [
+     0.2713,
+     0.2658,
+     0.2764
+    ],
+    "full|Kany": [
+     0.2302,
+     0.2539,
+     0.2685
+    ],
+    "sink_any|Kany": [
+     0.2486,
+     0.2662,
+     0.2725
+    ],
+    "balanced|K4": [
+     0.2675,
+     0.2659,
+     0.2737
+    ],
+    "sink_abs|K4": [
+     0.2586,
+     0.2724,
+     0.2779
+    ],
+    "sink_norm|K4": [
+     0.2759,
+     0.2714,
+     0.2829
+    ],
+    "oracle|K4|Lsel": [
+     0.3919,
+     0.3064,
+     0.3215
+    ],
+    "balanced|K8": [
+     0.2069,
+     0.2321,
+     0.2449
+    ],
+    "sink_abs|K8": [
+     0.1879,
+     0.2355,
+     0.2436
+    ],
+    "sink_norm|K8": [
+     0.2022,
+     0.2324,
+     0.2457
+    ],
+    "oracle|K8|Lsel": [
+     0.4081,
+     0.3079,
+     0.3246
+    ],
+    "balanced|K16": [
+     0.1158,
+     0.1984,
+     0.1949
+    ],
+    "sink_abs|K16": [
+     0.0875,
+     0.2104,
+     0.2115
+    ],
+    "sink_norm|K16": [
+     0.1031,
+     0.2092,
+     0.2164
+    ],
+    "oracle|K16|Lsel": [
+     0.4137,
+     0.3138,
+     0.3244
+    ],
+    "oracle|Ksel|Lsel": [
+     0.4162,
+     0.318,
+     0.3273
+    ],
+    "paired": {
+     "sink_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": -0.0077,
+       "wins": 19,
+       "losses": 8,
+       "p_wilcoxon": 0.2198
+      },
+      "dJ": {
+       "mean": 0.0019,
+       "wins": 19,
+       "losses": 8,
+       "p_wilcoxon": 0.0436
+      }
+     },
+     "sink_norm|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": 0.0117,
+       "wins": 19,
+       "losses": 8,
+       "p_wilcoxon": 0.0906
+      },
+      "dJ": {
+       "mean": 0.0104,
+       "wins": 20,
+       "losses": 7,
+       "p_wilcoxon": 0.0096
+      }
+     },
+     "kluot_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": 0.0142,
+       "wins": 20,
+       "losses": 7,
+       "p_wilcoxon": 0.0121
+      },
+      "dJ": {
+       "mean": 0.0104,
+       "wins": 20,
+       "losses": 7,
+       "p_wilcoxon": 0.0059
+      }
+     },
+     "sink_norm|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": 0.011,
+       "wins": 13,
+       "losses": 14,
+       "p_wilcoxon": 0.804
+      },
+      "dJ": {
+       "mean": 0.011,
+       "wins": 13,
+       "losses": 14,
+       "p_wilcoxon": 0.427
+      }
+     },
+     "sink_any|Kany - persist|Kany": {
+      "dPCC": {
+       "mean": -0.0066,
+       "wins": 18,
+       "losses": 9,
+       "p_wilcoxon": 0.6109
+      },
+      "dJ": {
+       "mean": -0.0069,
+       "wins": 17,
+       "losses": 10,
+       "p_wilcoxon": 0.9341
+      }
+     },
+     "balanced|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": -0.0007,
+       "wins": 11,
+       "losses": 16,
+       "p_wilcoxon": 0.7496
+      },
+      "dJ": {
+       "mean": 0.0006,
+       "wins": 11,
+       "losses": 16,
+       "p_wilcoxon": 0.8779
+      }
+     }
+    },
+    "selection_shares::sink_norm|Kany": {
+     "lam": {
+      "lam0.1": 13,
+      "lam1": 8,
+      "lam0.5": 2,
+      "lam0.25": 4
+     },
+     "K": {
+      "K4": 24,
+      "K8": 3
+     },
+     "L": {
+      "L3": 27
+     },
+     "R": {
+      "R1": 19,
+      "R3": 8
+     },
+     "fam": {
+      "sink_norm": 27
+     }
+    },
+    "selection_shares::sink_abs|Kany": {
+     "lam": {
+      "lam0.1": 13,
+      "lam1": 7,
+      "lam0.5": 3,
+      "lam0.25": 4
+     },
+     "K": {
+      "K4": 24,
+      "K8": 3
+     },
+     "L": {
+      "L3": 26,
+      "L1": 1
+     },
+     "R": {
+      "R1": 16,
+      "R3": 11
+     },
+     "fam": {
+      "sink_abs": 27
+     }
+    },
+    "selection_shares::balanced|Kany": {
+     "lam": {},
+     "K": {
+      "K4": 23,
+      "K8": 4
+     },
+     "L": {
+      "L3": 27
+     },
+     "R": {
+      "R1": 18,
+      "R3": 9
+     },
+     "fam": {
+      "balanced": 27
+     }
+    },
+    "selection_shares::full|Kany": {
+     "lam": {
+      "lam0.1": 10,
+      "lam1": 2,
+      "lam0.5": 3
+     },
+     "K": {
+      "K4": 24,
+      "K8": 3
+     },
+     "L": {
+      "L3": 26,
+      "L1": 1
+     },
+     "R": {
+      "R3": 11,
+      "R1": 9
+     },
+     "fam": {
+      "persist": 3,
+      "sink_abs": 14,
+      "sink_norm": 1,
+      "kluot_abs": 5,
+      "lin1": 4
+     }
+    }
+   },
+   "linear": {
+    "trend": [
+     0.1089,
+     0.2174,
+     0.1927
+    ],
+    "persist|Kany": [
+     0.0017,
+     0.2961,
+     0.2717
+    ],
+    "persist|L3|Kany": [
+     -0.0192,
+     0.3114,
+     0.3349
+    ],
+    "lin1|Kany": [
+     0.2216,
+     0.3243,
+     0.318
+    ],
+    "balanced|Kany": [
+     0.141,
+     0.3083,
+     0.2806
+    ],
+    "sink_abs|Kany": [
+     0.1076,
+     0.313,
+     0.2944
+    ],
+    "sink_norm|Kany": [
+     0.1392,
+     0.3074,
+     0.2828
+    ],
+    "kluot_abs|Kany": [
+     0.1879,
+     0.3184,
+     0.3166
+    ],
+    "full|Kany": [
+     0.1744,
+     0.3024,
+     0.311
+    ],
+    "sink_any|Kany": [
+     0.1016,
+     0.3072,
+     0.2849
+    ],
+    "balanced|K4": [
+     0.211,
+     0.3181,
+     0.3113
+    ],
+    "sink_abs|K4": [
+     0.1627,
+     0.3187,
+     0.3069
+    ],
+    "sink_norm|K4": [
+     0.2123,
+     0.3184,
+     0.3119
+    ],
+    "oracle|K4|Lsel": [
+     0.3788,
+     0.3221,
+     0.3497
+    ],
+    "balanced|K8": [
+     0.2073,
+     0.3092,
+     0.3068
+    ],
+    "sink_abs|K8": [
+     0.1334,
+     0.2991,
+     0.29
+    ],
+    "sink_norm|K8": [
+     0.213,
+     0.3018,
+     0.3015
+    ],
+    "oracle|K8|Lsel": [
+     0.393,
+     0.3178,
+     0.3774
+    ],
+    "balanced|K16": [
+     0.1809,
+     0.2921,
+     0.2702
+    ],
+    "sink_abs|K16": [
+     0.1194,
+     0.2885,
+     0.2797
+    ],
+    "sink_norm|K16": [
+     0.1671,
+     0.2896,
+     0.2678
+    ],
+    "oracle|K16|Lsel": [
+     0.4178,
+     0.3479,
+     0.4014
+    ],
+    "oracle|Ksel|Lsel": [
+     0.42,
+     0.3448,
+     0.3975
+    ],
+    "paired": {
+     "sink_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": -0.0346,
+       "wins": 14,
+       "losses": 13,
+       "p_wilcoxon": 0.9906
+      },
+      "dJ": {
+       "mean": -0.0051,
+       "wins": 12,
+       "losses": 15,
+       "p_wilcoxon": 0.714
+      }
+     },
+     "sink_norm|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": -0.0019,
+       "wins": 13,
+       "losses": 14,
+       "p_wilcoxon": 0.5149
+      },
+      "dJ": {
+       "mean": -0.0002,
+       "wins": 14,
+       "losses": 13,
+       "p_wilcoxon": 0.9341
+      }
+     },
+     "kluot_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": 0.0486,
+       "wins": 17,
+       "losses": 10,
+       "p_wilcoxon": 0.0319
+      },
+      "dJ": {
+       "mean": 0.0322,
+       "wins": 20,
+       "losses": 7,
+       "p_wilcoxon": 0.0046
+      }
+     },
+     "sink_norm|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": -0.0854,
+       "wins": 9,
+       "losses": 18,
+       "p_wilcoxon": 0.0174
+      },
+      "dJ": {
+       "mean": -0.0465,
+       "wins": 9,
+       "losses": 18,
+       "p_wilcoxon": 0.0262
+      }
+     },
+     "sink_any|Kany - persist|Kany": {
+      "dPCC": {
+       "mean": 0.1036,
+       "wins": 17,
+       "losses": 10,
+       "p_wilcoxon": 0.3361
+      },
+      "dJ": {
+       "mean": 0.0429,
+       "wins": 16,
+       "losses": 11,
+       "p_wilcoxon": 0.4846
+      }
+     },
+     "balanced|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": -0.0835,
+       "wins": 9,
+       "losses": 18,
+       "p_wilcoxon": 0.02
+      },
+      "dJ": {
+       "mean": -0.0463,
+       "wins": 10,
+       "losses": 17,
+       "p_wilcoxon": 0.028
+      }
+     }
+    },
+    "selection_shares::sink_norm|Kany": {
+     "lam": {
+      "lam0.1": 5,
+      "lam1": 16,
+      "lam0.25": 4,
+      "lam0.5": 2
+     },
+     "K": {
+      "K4": 16,
+      "K8": 5,
+      "K16": 6
+     },
+     "L": {
+      "L1": 17,
+      "L3": 10
+     },
+     "R": {
+      "R1": 15,
+      "R3": 12
+     },
+     "fam": {
+      "sink_norm": 27
+     }
+    },
+    "selection_shares::sink_abs|Kany": {
+     "lam": {
+      "lam0.1": 5,
+      "lam0.5": 11,
+      "lam1": 6,
+      "lam0.25": 5
+     },
+     "K": {
+      "K4": 18,
+      "K8": 3,
+      "K16": 6
+     },
+     "L": {
+      "L1": 17,
+      "L3": 10
+     },
+     "R": {
+      "R1": 15,
+      "R3": 12
+     },
+     "fam": {
+      "sink_abs": 27
+     }
+    },
+    "selection_shares::balanced|Kany": {
+     "lam": {},
+     "K": {
+      "K4": 17,
+      "K8": 5,
+      "K16": 5
+     },
+     "L": {
+      "L1": 18,
+      "L3": 9
+     },
+     "R": {
+      "R1": 16,
+      "R3": 11
+     },
+     "fam": {
+      "balanced": 27
+     }
+    },
+    "selection_shares::full|Kany": {
+     "lam": {
+      "lam0.1": 5,
+      "lam0.25": 1
+     },
+     "K": {
+      "K4": 19,
+      "K8": 3,
+      "K16": 5
+     },
+     "L": {
+      "L1": 13,
+      "L3": 14
+     },
+     "R": {
+      "R3": 10,
+      "R1": 12
+     },
+     "fam": {
+      "persist": 1,
+      "sink_abs": 6,
+      "balanced": 2,
+      "lin1": 4,
+      "kluot_abs": 14
+     }
+    }
+   },
+   "orig": {
+    "trend": [
+     -0.4631,
+     0.0098,
+     0.0097
+    ],
+    "persist|Kany": [
+     0.5547,
+     0.364,
+     0.5252
+    ],
+    "persist|L3|Kany": [
+     0.557,
+     0.3681,
+     0.5265
+    ],
+    "lin1|Kany": [
+     0.507,
+     0.3454,
+     0.4916
+    ],
+    "balanced|Kany": [
+     0.5406,
+     0.3527,
+     0.5192
+    ],
+    "sink_abs|Kany": [
+     0.5579,
+     0.3581,
+     0.5314
+    ],
+    "sink_norm|Kany": [
+     0.5567,
+     0.3589,
+     0.5307
+    ],
+    "kluot_abs|Kany": [
+     0.5408,
+     0.3519,
+     0.5199
+    ],
+    "full|Kany": [
+     0.5591,
+     0.3607,
+     0.5286
+    ],
+    "sink_any|Kany": [
+     0.5587,
+     0.3585,
+     0.5317
+    ],
+    "balanced|K4": [
+     0.5385,
+     0.3491,
+     0.5209
+    ],
+    "sink_abs|K4": [
+     0.5573,
+     0.3612,
+     0.5308
+    ],
+    "sink_norm|K4": [
+     0.5558,
+     0.3603,
+     0.5307
+    ],
+    "oracle|K4|Lsel": [
+     0.5457,
+     0.3558,
+     0.5245
+    ],
+    "balanced|K8": [
+     0.534,
+     0.3444,
+     0.5145
+    ],
+    "sink_abs|K8": [
+     0.5555,
+     0.3555,
+     0.5267
+    ],
+    "sink_norm|K8": [
+     0.5545,
+     0.3551,
+     0.5265
+    ],
+    "oracle|K8|Lsel": [
+     0.5437,
+     0.3527,
+     0.5196
+    ],
+    "balanced|K16": [
+     0.5332,
+     0.3496,
+     0.5113
+    ],
+    "sink_abs|K16": [
+     0.5568,
+     0.3564,
+     0.5279
+    ],
+    "sink_norm|K16": [
+     0.5542,
+     0.3558,
+     0.5277
+    ],
+    "oracle|K16|Lsel": [
+     0.547,
+     0.3569,
+     0.5213
+    ],
+    "oracle|Ksel|Lsel": [
+     0.5463,
+     0.3576,
+     0.5224
+    ],
+    "paired": {
+     "sink_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": 0.018,
+       "wins": 26,
+       "losses": 1,
+       "p_wilcoxon": 0.0
+      },
+      "dJ": {
+       "mean": 0.0121,
+       "wins": 26,
+       "losses": 1,
+       "p_wilcoxon": 0.0
+      }
+     },
+     "sink_norm|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": 0.0168,
+       "wins": 26,
+       "losses": 1,
+       "p_wilcoxon": 0.0
+      },
+      "dJ": {
+       "mean": 0.0117,
+       "wins": 26,
+       "losses": 1,
+       "p_wilcoxon": 0.0
+      }
+     },
+     "kluot_abs|Kany - balanced|Kany": {
+      "dPCC": {
+       "mean": 0.0003,
+       "wins": 10,
+       "losses": 17,
+       "p_wilcoxon": 0.8966
+      },
+      "dJ": {
+       "mean": 0.0001,
+       "wins": 13,
+       "losses": 14,
+       "p_wilcoxon": 0.7676
+      }
+     },
+     "sink_norm|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": 0.0516,
+       "wins": 27,
+       "losses": 0,
+       "p_wilcoxon": 0.0
+      },
+      "dJ": {
+       "mean": 0.0354,
+       "wins": 26,
+       "losses": 1,
+       "p_wilcoxon": 0.0
+      }
+     },
+     "sink_any|Kany - persist|Kany": {
+      "dPCC": {
+       "mean": 0.0042,
+       "wins": 16,
+       "losses": 11,
+       "p_wilcoxon": 0.0954
+      },
+      "dJ": {
+       "mean": 0.0017,
+       "wins": 14,
+       "losses": 13,
+       "p_wilcoxon": 0.546
+      }
+     },
+     "balanced|Kany - lin1|Kany": {
+      "dPCC": {
+       "mean": 0.0348,
+       "wins": 24,
+       "losses": 3,
+       "p_wilcoxon": 0.0
+      },
+      "dJ": {
+       "mean": 0.0237,
+       "wins": 23,
+       "losses": 4,
+       "p_wilcoxon": 0.0001
+      }
+     }
+    },
+    "selection_shares::sink_norm|Kany": {
+     "lam": {
+      "lam0.1": 27
+     },
+     "K": {
+      "K4": 19,
+      "K8": 8
+     },
+     "L": {
+      "L1": 1,
+      "L3": 26
+     },
+     "R": {
+      "R1": 4,
+      "R3": 23
+     },
+     "fam": {
+      "sink_norm": 27
+     }
+    },
+    "selection_shares::sink_abs|Kany": {
+     "lam": {
+      "lam0.1": 27
+     },
+     "K": {
+      "K4": 17,
+      "K8": 9,
+      "K16": 1
+     },
+     "L": {
+      "L1": 1,
+      "L3": 26
+     },
+     "R": {
+      "R1": 2,
+      "R3": 25
+     },
+     "fam": {
+      "sink_abs": 27
+     }
+    },
+    "selection_shares::balanced|Kany": {
+     "lam": {},
+     "K": {
+      "K4": 14,
+      "K8": 9,
+      "K16": 4
+     },
+     "L": {
+      "L1": 1,
+      "L3": 26
+     },
+     "R": {
+      "R1": 6,
+      "R3": 21
+     },
+     "fam": {
+      "balanced": 27
+     }
+    },
+    "selection_shares::full|Kany": {
+     "lam": {
+      "lam0.1": 17
+     },
+     "K": {
+      "K4": 13,
+      "K8": 8,
+      "K16": 6
+     },
+     "L": {
+      "L1": 1,
+      "L3": 26
+     },
+     "R": {
+      "R3": 17
+     },
+     "fam": {
+      "persist": 10,
+      "sink_abs": 8,
+      "sink_norm": 9
+     }
+    }
+   },
+   "composition_tv_vs_oracle_i>=2": {
+    "persist|K4": {
+     "best_config_hindsight": "persist|K4|L1",
+     "tv_best": 0.059,
+     "tv_median_over_hp": 0.059
+    },
+    "persist|K8": {
+     "best_config_hindsight": "persist|K8|L1",
+     "tv_best": 0.1099,
+     "tv_median_over_hp": 0.1099
+    },
+    "persist|K16": {
+     "best_config_hindsight": "persist|K16|L1",
+     "tv_best": 0.154,
+     "tv_median_over_hp": 0.154
+    },
+    "lin1|K4": {
+     "best_config_hindsight": "lin1|K4|L1",
+     "tv_best": 0.0841,
+     "tv_median_over_hp": 0.0841
+    },
+    "lin1|K8": {
+     "best_config_hindsight": "lin1|K8|L1",
+     "tv_best": 0.1823,
+     "tv_median_over_hp": 0.1823
+    },
+    "lin1|K16": {
+     "best_config_hindsight": "lin1|K16|L1",
+     "tv_best": 0.2547,
+     "tv_median_over_hp": 0.2547
+    },
+    "balanced|K4": {
+     "best_config_hindsight": "balanced|K4|L1|R1|eps0.2",
+     "tv_best": 0.0614,
+     "tv_median_over_hp": 0.0635
+    },
+    "balanced|K8": {
+     "best_config_hindsight": "balanced|K8|L1|R3|eps0.2",
+     "tv_best": 0.1011,
+     "tv_median_over_hp": 0.137
+    },
+    "balanced|K16": {
+     "best_config_hindsight": "balanced|K16|L1|R3|eps0.2",
+     "tv_best": 0.1344,
+     "tv_median_over_hp": 0.2006
+    },
+    "sink_abs|K4": {
+     "best_config_hindsight": "sink_abs|K4|L1|R1|eps0.2|lam0.1",
+     "tv_best": 0.0512,
+     "tv_median_over_hp": 0.0646
+    },
+    "sink_abs|K8": {
+     "best_config_hindsight": "sink_abs|K8|L1|R3|eps0.2|lam0.25",
+     "tv_best": 0.0951,
+     "tv_median_over_hp": 0.1275
+    },
+    "sink_abs|K16": {
+     "best_config_hindsight": "sink_abs|K16|L1|R3|eps0.2|lam0.25",
+     "tv_best": 0.1176,
+     "tv_median_over_hp": 0.1832
+    },
+    "sink_norm|K4": {
+     "best_config_hindsight": "sink_norm|K4|L1|R1|eps0.2|lam0.1",
+     "tv_best": 0.0517,
+     "tv_median_over_hp": 0.0647
+    },
+    "sink_norm|K8": {
+     "best_config_hindsight": "sink_norm|K8|L1|R3|eps0.2|lam0.25",
+     "tv_best": 0.0949,
+     "tv_median_over_hp": 0.1283
+    },
+    "sink_norm|K16": {
+     "best_config_hindsight": "sink_norm|K16|L1|R3|eps0.2|lam0.25",
+     "tv_best": 0.1168,
+     "tv_median_over_hp": 0.1869
+    },
+    "kluot_abs|K4": {
+     "best_config_hindsight": "kluot_abs|K4|L1|R3|eps0.2|tau1",
+     "tv_best": 0.0571,
+     "tv_median_over_hp": 0.0624
+    },
+    "kluot_abs|K8": {
+     "best_config_hindsight": "kluot_abs|K8|L1|R3|eps0.2|tau1",
+     "tv_best": 0.0968,
+     "tv_median_over_hp": 0.1419
+    },
+    "kluot_abs|K16": {
+     "best_config_hindsight": "kluot_abs|K16|L1|R3|eps0.2|tau1",
+     "tv_best": 0.1318,
+     "tv_median_over_hp": 0.2085
+    }
+   },
+   "sink_interpretation_last_fit": {
+    "K4": {
+     "markers": [
+      [
+       "PRSS50",
+       "USP51",
+       "CPNE7",
+       "SMOX",
+       "CHCHD10",
+       "ICAM4",
+       "BLVRB",
+       "SLC38A5"
+      ],
+      [
+       "FLI1",
+       "GATA2",
+       "ETV2",
+       "GZMH",
+       "VIM",
+       "SPARC",
+       "RSPO3",
+       "CYR61"
+      ],
+      [
+       "MT1F",
+       "ADGRG1",
+       "THEM6",
+       "PSMB10",
+       "NOMO3",
+       "NOMO1",
+       "NOMO2",
+       "ITGA2B"
+      ],
+      [
+       "SLC4A1",
+       "HBE1",
+       "HEBP1",
+       "HEMGN",
+       "RHAG",
+       "HESX1",
+       "ERMAP",
+       "GMPR"
+      ]
+     ],
+     "sink_abs|lam0.5|eps0.05": {
+      "turnover_share_of_source_mass": 0.141,
+      "mean_death_frac_by_state": [
+       0.211,
+       0.079,
+       0.13,
+       0.323
+      ],
+      "birth_share_by_state": [
+       0.332,
+       0.148,
+       0.256,
+       0.264
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": 0.1615,
+      "corr_net_change_vs_cell_count_change": 1.0,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 2,
+      "n_pairs": 28,
+      "first_pairs": [
+       {
+        "pair": "9->182 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 173.0,
+        "transported": 9.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         90.58,
+         4.3,
+         22.04,
+         56.09
+        ]
+       },
+       {
+        "pair": "182->792 cells (snap 1->2)",
+        "death_total": 0.0,
+        "birth_total": 610.0,
+        "transported": 182.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         377.22,
+         10.97,
+         59.28,
+         162.53
+        ]
+       },
+       {
+        "pair": "792->929 cells (snap 2->3)",
+        "death_total": 0.02,
+        "birth_total": 137.02,
+        "transported": 791.98,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.03,
+         0.05,
+         30.11,
+         106.84
+        ]
+       }
+      ]
+     },
+     "sink_abs|lam1|eps0.05": {
+      "turnover_share_of_source_mass": 0.1396,
+      "mean_death_frac_by_state": [
+       0.205,
+       0.079,
+       0.13,
+       0.189
+      ],
+      "birth_share_by_state": [
+       0.335,
+       0.147,
+       0.251,
+       0.267
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": 0.1571,
+      "corr_net_change_vs_cell_count_change": 1.0,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+      "n_pairs": 28,
+      "first_pairs": [
+       {
+        "pair": "9->182 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 173.0,
+        "transported": 9.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         90.58,
+         4.3,
+         22.04,
+         56.09
+        ]
+       },
+       {
+        "pair": "182->792 cells (snap 1->2)",
+        "death_total": 0.0,
+        "birth_total": 610.0,
+        "transported": 182.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         377.22,
+         10.97,
+         59.28,
+         162.53
+        ]
+       },
+       {
+        "pair": "792->929 cells (snap 2->3)",
+        "death_total": 0.0,
+        "birth_total": 137.0,
+        "transported": 792.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.03,
+         0.05,
+         30.11,
+         106.82
+        ]
+       }
+      ]
+     },
+     "sink_norm|lam0.5|eps0.05": {
+      "turnover_share_of_source_mass": 0.0205,
+      "mean_death_frac_by_state": [
+       0.154,
+       0.007,
+       0.004,
+       0.261
+      ],
+      "birth_share_by_state": [
+       0.01,
+       0.357,
+       0.622,
+       0.01
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": 0.0088,
+      "corr_net_change_vs_cell_count_change": null,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 7,
+      "n_pairs": 28,
+      "first_pairs": [
+       {
+        "pair": "9->182 cells (snap 0->1)",
+        "death_total": 0.14,
+        "birth_total": 0.14,
+        "transported": 0.86,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.14
+        ],
+        "birth_by_state": [
+         0.0,
+         0.02,
+         0.12,
+         0.0
+        ]
+       },
+       {
+        "pair": "182->792 cells (snap 1->2)",
+        "death_total": 0.01,
+        "birth_total": 0.01,
+        "transported": 0.99,
+        "death_frac_by_state": [
+         0.0,
+         0.188,
+         0.002,
+         0.002
+        ],
+        "birth_by_state": [
+         0.01,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "792->929 cells (snap 2->3)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.005,
+         0.015,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     },
+     "sink_norm|lam1|eps0.05": {
+      "turnover_share_of_source_mass": 0.0007,
+      "mean_death_frac_by_state": [
+       0.001,
+       0.0,
+       0.0,
+       0.038
+      ],
+      "birth_share_by_state": [
+       0.0,
+       0.999,
+       0.001,
+       0.0
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": 0.0323,
+      "corr_net_change_vs_cell_count_change": null,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 1,
+      "n_pairs": 28,
+      "first_pairs": [
+       {
+        "pair": "9->182 cells (snap 0->1)",
+        "death_total": 0.02,
+        "birth_total": 0.02,
+        "transported": 0.98,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.018
+        ],
+        "birth_by_state": [
+         0.0,
+         0.02,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "182->792 cells (snap 1->2)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "792->929 cells (snap 2->3)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     }
+    },
+    "K8": {
+     "markers": [
+      [
+       "ADD2",
+       "RRAGD",
+       "SLC25A21",
+       "HBQ1",
+       "MRAP",
+       "HBZ",
+       "MLLT3",
+       "ALAD"
+      ],
+      [
+       "HAPLN1",
+       "CDH5",
+       "ESAM",
+       "ECSCR",
+       "HOXB2",
+       "IGFBP4",
+       "IGF1",
+       "VIM"
+      ],
+      [
+       "MT1F",
+       "BNIP3",
+       "UGCG",
+       "RANGRF",
+       "NUDT1",
+       "PRELID2",
+       "MRI1",
+       "COPS7A"
+      ],
+      [
+       "HBE1",
+       "SLC4A1",
+       "AQP3",
+       "HEMGN",
+       "HEBP1",
+       "RHAG",
+       "CLDN4",
+       "HBA1"
+      ],
+      [
+       "RAB27B",
+       "SLC6A13",
+       "ABCG1",
+       "ARHGDIB",
+       "KCNS3",
+       "PTPRE",
+       "TMSB4Y",
+       "STC2"
+      ],
+      [
+       "SNRPN",
+       "PRSS50",
+       "EMILIN2",
+       "ASB17",
+       "SPEF1",
+       "PGM1",
+       "ICAM4",
+       "UGCG"
+      ],
+      [
+       "SPP1",
+       "GZMH",
+       "GZMB",
+       "FGF3",
+       "F2RL3",
+       "SLC32A1",
+       "PARM1",
+       "LAT"
+      ],
+      [
+       "UBE2O",
+       "PGM2",
+       "PPP1R9B",
+       "PPP6R3",
+       "ANKRD13A",
+       "RGS10",
+       "SMAD7",
+       "RCOR2"
+      ]
+     ],
+     "sink_abs|lam0.5|eps0.05": {
+      "turnover_share_of_source_mass": 0.1477,
+      "mean_death_frac_by_state": [
+       0.326,
+       0.07,
+       0.143,
+       0.309,
+       0.108,
+       0.164,
+       0.074,
+       0.127
+      ],
+      "birth_share_by_state": [
+       0.228,
+       0.084,
+       0.121,
+       0.21,
+       0.083,
+       0.118,
+       0.077,
+       0.079
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": 0.1702,
+      "corr_net_change_vs_cell_count_change": 1.0,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 7,
+      "n_pairs": 28,
+      "first_pairs": [
+       {
+        "pair": "9->182 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 173.0,
+        "transported": 9.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         65.6,
+         2.16,
+         17.53,
+         36.16,
+         7.58,
+         31.93,
+         1.45,
+         10.6
+        ]
+       },
+       {
+        "pair": "182->792 cells (snap 1->2)",
+        "death_total": 0.0,
+        "birth_total": 610.0,
+        "transported": 182.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         270.66,
+         4.55,
+         57.62,
+         100.57,
+         24.95,
+         104.69,
+         5.5,
+         41.45
+        ]
+       },
+       {
+        "pair": "792->929 cells (snap 2->3)",
+        "death_total": 0.42,
+        "birth_total": 137.42,
+        "transported": 791.59,
+        "death_frac_by_state": [
+         0.0,
+         0.001,
+         0.0,
+         0.0,
+         0.0,
+         0.003,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         1.15,
+         0.0,
+         13.83,
+         116.2,
+         3.46,
+         0.0,
+         0.53,
+         2.25
+        ]
+       }
+      ]
+     },
+     "sink_abs|lam1|eps0.05": {
+      "turnover_share_of_source_mass": 0.1396,
+      "mean_death_frac_by_state": [
+       0.262,
+       0.07,
+       0.127,
+       0.177,
+       0.103,
+       0.138,
+       0.074,
+       0.12
+      ],
+      "birth_share_by_state": [
+       0.241,
+       0.079,
+       0.123,
+       0.219,
+       0.083,
+       0.117,
+       0.066,
+       0.072
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": 0.1565,
+      "corr_net_change_vs_cell_count_change": 1.0,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 0,
+      "n_pairs": 28,
+      "first_pairs": [
+       {
+        "pair": "9->182 cells (snap 0->1)",
+        "death_total": 0.0,
+        "birth_total": 173.0,
+        "transported": 9.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         65.6,
+         2.16,
+         17.53,
+         36.16,
+         7.58,
+         31.93,
+         1.45,
+         10.6
+        ]
+       },
+       {
+        "pair": "182->792 cells (snap 1->2)",
+        "death_total": 0.0,
+        "birth_total": 610.0,
+        "transported": 182.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         270.66,
+         4.55,
+         57.62,
+         100.57,
+         24.95,
+         104.69,
+         5.5,
+         41.45
+        ]
+       },
+       {
+        "pair": "792->929 cells (snap 2->3)",
+        "death_total": 0.0,
+        "birth_total": 137.0,
+        "transported": 792.01,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         1.15,
+         0.0,
+         13.43,
+         116.19,
+         3.45,
+         0.0,
+         0.52,
+         2.25
+        ]
+       }
+      ]
+     },
+     "sink_norm|lam0.5|eps0.05": {
+      "turnover_share_of_source_mass": 0.0514,
+      "mean_death_frac_by_state": [
+       0.267,
+       0.016,
+       0.046,
+       0.247,
+       0.038,
+       0.11,
+       0.005,
+       0.026
+      ],
+      "birth_share_by_state": [
+       0.002,
+       0.12,
+       0.096,
+       0.042,
+       0.12,
+       0.256,
+       0.256,
+       0.109
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.1374,
+      "corr_net_change_vs_cell_count_change": null,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 26,
+      "n_pairs": 28,
+      "first_pairs": [
+       {
+        "pair": "9->182 cells (snap 0->1)",
+        "death_total": 0.33,
+        "birth_total": 0.33,
+        "transported": 0.67,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.353,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.09,
+         0.0,
+         0.03,
+         0.15,
+         0.0,
+         0.05
+        ]
+       },
+       {
+        "pair": "182->792 cells (snap 1->2)",
+        "death_total": 0.01,
+        "birth_total": 0.01,
+        "transported": 0.99,
+        "death_frac_by_state": [
+         0.0,
+         0.226,
+         0.0,
+         0.001,
+         0.0,
+         0.016,
+         0.001,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "792->929 cells (snap 2->3)",
+        "death_total": 0.04,
+        "birth_total": 0.04,
+        "transported": 0.96,
+        "death_frac_by_state": [
+         0.0,
+         0.197,
+         0.0,
+         0.0,
+         0.043,
+         0.19,
+         0.039,
+         0.003
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.04,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     },
+     "sink_norm|lam1|eps0.05": {
+      "turnover_share_of_source_mass": 0.0017,
+      "mean_death_frac_by_state": [
+       0.016,
+       0.001,
+       0.0,
+       0.088,
+       0.0,
+       0.0,
+       0.001,
+       0.0
+      ],
+      "birth_share_by_state": [
+       0.0,
+       0.109,
+       0.001,
+       0.011,
+       0.219,
+       0.001,
+       0.632,
+       0.026
+      ],
+      "corr_gross_turnover_vs_abs_log_cellcount_ratio": -0.2463,
+      "corr_net_change_vs_cell_count_change": null,
+      "pairs_with_both_death_and_birth_gt_1pct_of_src": 1,
+      "n_pairs": 28,
+      "first_pairs": [
+       {
+        "pair": "9->182 cells (snap 0->1)",
+        "death_total": 0.01,
+        "birth_total": 0.01,
+        "transported": 0.99,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.015,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.01,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "182->792 cells (snap 1->2)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       },
+       {
+        "pair": "792->929 cells (snap 2->3)",
+        "death_total": 0.0,
+        "birth_total": 0.0,
+        "transported": 1.0,
+        "death_frac_by_state": [
+         0.0,
+         0.022,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.008,
+         0.0
+        ],
+        "birth_by_state": [
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ "p1_free_turnover": {
+  "pancreas-human": {
+   "K4|sink_abs|lam0.5|eps0.05": {
+    "free_turnover_share_median": 0.0072,
+    "free_turnover_share_max": 0.0682,
+    "free_turnover_share_mean": 0.0144,
+    "pairs_free_gt_1pct": 6,
+    "n_pairs": 13,
+    "total_turnover_share": 0.2529,
+    "spearman_turnover_vs_abs_dlogn": -0.2363
+   },
+   "K4|sink_abs|lam1|eps0.05": {
+    "free_turnover_share_median": 0.0,
+    "free_turnover_share_max": 0.0,
+    "free_turnover_share_mean": 0.0,
+    "pairs_free_gt_1pct": 0,
+    "n_pairs": 13,
+    "total_turnover_share": 0.2454,
+    "spearman_turnover_vs_abs_dlogn": -0.2253
+   },
+   "K4|sink_norm|lam0.5|eps0.05": {
+    "free_turnover_share_median": 0.08,
+    "free_turnover_share_max": 0.17,
+    "free_turnover_share_mean": 0.0692,
+    "pairs_free_gt_1pct": 11,
+    "n_pairs": 13,
+    "total_turnover_share": 0.0699,
+    "spearman_turnover_vs_abs_dlogn": -0.2802
+   },
+   "K4|sink_norm|lam1|eps0.05": {
+    "free_turnover_share_median": 0.0,
+    "free_turnover_share_max": 0.0,
+    "free_turnover_share_mean": 0.0,
+    "pairs_free_gt_1pct": 0,
+    "n_pairs": 13,
+    "total_turnover_share": 0.0,
+    "spearman_turnover_vs_abs_dlogn": -0.2363
+   },
+   "K8|sink_abs|lam0.5|eps0.05": {
+    "free_turnover_share_median": 0.0047,
+    "free_turnover_share_max": 0.0954,
+    "free_turnover_share_mean": 0.0191,
+    "pairs_free_gt_1pct": 3,
+    "n_pairs": 13,
+    "total_turnover_share": 0.2513,
+    "spearman_turnover_vs_abs_dlogn": -0.1703
+   },
+   "K8|sink_abs|lam1|eps0.05": {
+    "free_turnover_share_median": 0.0,
+    "free_turnover_share_max": 0.0,
+    "free_turnover_share_mean": 0.0,
+    "pairs_free_gt_1pct": 0,
+    "n_pairs": 13,
+    "total_turnover_share": 0.2454,
+    "spearman_turnover_vs_abs_dlogn": -0.2143
+   },
+   "K8|sink_norm|lam0.5|eps0.05": {
+    "free_turnover_share_median": 0.08,
+    "free_turnover_share_max": 0.17,
+    "free_turnover_share_mean": 0.0769,
+    "pairs_free_gt_1pct": 11,
+    "n_pairs": 13,
+    "total_turnover_share": 0.0763,
+    "spearman_turnover_vs_abs_dlogn": -0.3297
+   },
+   "K8|sink_norm|lam1|eps0.05": {
+    "free_turnover_share_median": 0.0,
+    "free_turnover_share_max": 0.0,
+    "free_turnover_share_mean": 0.0,
+    "pairs_free_gt_1pct": 0,
+    "n_pairs": 13,
+    "total_turnover_share": 0.0,
+    "spearman_turnover_vs_abs_dlogn": -0.6319
+   }
+  },
+  "gastrulation-human": {
+   "K4|sink_abs|lam0.5|eps0.05": {
+    "free_turnover_share_median": 0.0,
+    "free_turnover_share_max": 0.0364,
+    "free_turnover_share_mean": 0.002,
+    "pairs_free_gt_1pct": 2,
+    "n_pairs": 28,
+    "total_turnover_share": 0.141,
+    "spearman_turnover_vs_abs_dlogn": 0.1615
+   },
+   "K4|sink_abs|lam1|eps0.05": {
+    "free_turnover_share_median": 0.0,
+    "free_turnover_share_max": 0.0,
+    "free_turnover_share_mean": 0.0,
+    "pairs_free_gt_1pct": 0,
+    "n_pairs": 28,
+    "total_turnover_share": 0.1396,
+    "spearman_turnover_vs_abs_dlogn": 0.1571
+   },
+   "K4|sink_norm|lam0.5|eps0.05": {
+    "free_turnover_share_median": 0.01,
+    "free_turnover_share_max": 0.14,
+    "free_turnover_share_mean": 0.0196,
+    "pairs_free_gt_1pct": 7,
+    "n_pairs": 28,
+    "total_turnover_share": 0.0205,
+    "spearman_turnover_vs_abs_dlogn": 0.0088
+   },
+   "K4|sink_norm|lam1|eps0.05": {
+    "free_turnover_share_median": 0.0,
+    "free_turnover_share_max": 0.02,
+    "free_turnover_share_mean": 0.0007,
+    "pairs_free_gt_1pct": 1,
+    "n_pairs": 28,
+    "total_turnover_share": 0.0007,
+    "spearman_turnover_vs_abs_dlogn": 0.0323
+   },
+   "K8|sink_abs|lam0.5|eps0.05": {
+    "free_turnover_share_median": 0.0013,
+    "free_turnover_share_max": 0.0601,
+    "free_turnover_share_mean": 0.0092,
+    "pairs_free_gt_1pct": 7,
+    "n_pairs": 28,
+    "total_turnover_share": 0.1477,
+    "spearman_turnover_vs_abs_dlogn": 0.1702
+   },
+   "K8|sink_abs|lam1|eps0.05": {
+    "free_turnover_share_median": 0.0,
+    "free_turnover_share_max": 0.0,
+    "free_turnover_share_mean": 0.0,
+    "pairs_free_gt_1pct": 0,
+    "n_pairs": 28,
+    "total_turnover_share": 0.1396,
+    "spearman_turnover_vs_abs_dlogn": 0.1565
+   },
+   "K8|sink_norm|lam0.5|eps0.05": {
+    "free_turnover_share_median": 0.03,
+    "free_turnover_share_max": 0.33,
+    "free_turnover_share_mean": 0.0514,
+    "pairs_free_gt_1pct": 26,
+    "n_pairs": 28,
+    "total_turnover_share": 0.0514,
+    "spearman_turnover_vs_abs_dlogn": -0.1374
+   },
+   "K8|sink_norm|lam1|eps0.05": {
+    "free_turnover_share_median": 0.0,
+    "free_turnover_share_max": 0.02,
+    "free_turnover_share_mean": 0.0018,
+    "pairs_free_gt_1pct": 1,
+    "n_pairs": 28,
+    "total_turnover_share": 0.0017,
+    "spearman_turnover_vs_abs_dlogn": -0.2463
+   }
+  }
+ },
+ "p2_solver_convergence": {
+  "pancreas-human_i4_lam128": {
+   "max_final_1500": {
+    "n_genes_ot": 9734,
+    "frac_unconverged": 0.0189,
+    "n_unconverged": 184,
+    "max_move_over_eps": 0.0161,
+    "max_overshoot_rel_to_own_mass": 0.0107,
+    "p99_overshoot_rel": 1e-06
+   },
+   "max_final_8000": {
+    "n_genes_ot": 9734,
+    "frac_unconverged": 0.00442,
+    "n_unconverged": 43,
+    "max_move_over_eps": 0.0085,
+    "max_overshoot_rel_to_own_mass": 0.0027,
+    "p99_overshoot_rel": 0.0
+   },
+   "forecast_mean_max_abs_change": 0.05424435943276329,
+   "linear_target_corr_1500_vs_8000": 0.9999945293532416,
+   "fhat_max_abs_change": 0.008513772365262962
+  },
+  "pancreas-human_i4_lam1": {
+   "max_final_1500": {
+    "n_genes_ot": 9734,
+    "frac_unconverged": 0.01592,
+    "n_unconverged": 155,
+    "max_move_over_eps": 0.0092,
+    "max_overshoot_rel_to_own_mass": 0.0014,
+    "p99_overshoot_rel": 0.0
+   },
+   "max_final_8000": {
+    "n_genes_ot": 9734,
+    "frac_unconverged": 0.00175,
+    "n_unconverged": 17,
+    "max_move_over_eps": 0.0004,
+    "max_overshoot_rel_to_own_mass": 0.0001,
+    "p99_overshoot_rel": 0.0
+   },
+   "forecast_mean_max_abs_change": 0.04009995515414033,
+   "linear_target_corr_1500_vs_8000": 0.9999976837038412,
+   "fhat_max_abs_change": 0.0019101599506864408
+  },
+  "pancreas-human_i4_lam0.0625": {
+   "max_final_1500": {
+    "n_genes_ot": 9734,
+    "frac_unconverged": 0.00021,
+    "n_unconverged": 2,
+    "max_move_over_eps": 0.0,
+    "max_overshoot_rel_to_own_mass": 0.0,
+    "p99_overshoot_rel": 0.0
+   },
+   "max_final_8000": {
+    "n_genes_ot": 9734,
+    "frac_unconverged": 0.0,
+    "n_unconverged": 0,
+    "max_move_over_eps": 0.0,
+    "max_overshoot_rel_to_own_mass": 0.0,
+    "p99_overshoot_rel": 0.0
+   },
+   "forecast_mean_max_abs_change": 1.62928981148891e-05,
+   "linear_target_corr_1500_vs_8000": 0.9999999999993625,
+   "fhat_max_abs_change": 1.7423398739335738e-06
+  },
+  "pancreas-human_i9_lam128": {
+   "max_final_1500": {
+    "n_genes_ot": 10410,
+    "frac_unconverged": 0.02171,
+    "n_unconverged": 226,
+    "max_move_over_eps": 0.0089,
+    "max_overshoot_rel_to_own_mass": 0.0029,
+    "p99_overshoot_rel": 1e-06
+   },
+   "max_final_8000": {
+    "n_genes_ot": 10410,
+    "frac_unconverged": 0.00653,
+    "n_unconverged": 68,
+    "max_move_over_eps": 0.0042,
+    "max_overshoot_rel_to_own_mass": 0.0018,
+    "p99_overshoot_rel": 0.0
+   },
+   "forecast_mean_max_abs_change": 0.07073981198185031,
+   "linear_target_corr_1500_vs_8000": 0.9999944859088634,
+   "fhat_max_abs_change": 0.00869387224109286
+  },
+  "pancreas-human_i9_lam1": {
+   "max_final_1500": {
+    "n_genes_ot": 10410,
+    "frac_unconverged": 0.01633,
+    "n_unconverged": 170,
+    "max_move_over_eps": 0.0029,
+    "max_overshoot_rel_to_own_mass": 0.0005,
+    "p99_overshoot_rel": 0.0
+   },
+   "max_final_8000": {
+    "n_genes_ot": 10410,
+    "frac_unconverged": 0.0024,
+    "n_unconverged": 25,
+    "max_move_over_eps": 0.0001,
+    "max_overshoot_rel_to_own_mass": 0.0,
+    "p99_overshoot_rel": 0.0
+   },
+   "forecast_mean_max_abs_change": 0.017550204756654253,
+   "linear_target_corr_1500_vs_8000": 0.9999998673534912,
+   "fhat_max_abs_change": 0.004427256816815106
+  },
+  "pancreas-human_i9_lam0.0625": {
+   "max_final_1500": {
+    "n_genes_ot": 10410,
+    "frac_unconverged": 0.0,
+    "n_unconverged": 0,
+    "max_move_over_eps": 0.0,
+    "max_overshoot_rel_to_own_mass": 0.0,
+    "p99_overshoot_rel": 0.0
+   },
+   "max_final_8000": {
+    "n_genes_ot": 10410,
+    "frac_unconverged": 0.0,
+    "n_unconverged": 0,
+    "max_move_over_eps": 0.0,
+    "max_overshoot_rel_to_own_mass": 0.0,
+    "p99_overshoot_rel": 0.0
+   },
+   "forecast_mean_max_abs_change": 0.0,
+   "linear_target_corr_1500_vs_8000": 0.9999999999999998,
+   "fhat_max_abs_change": 0.0
+  },
+  "pancreas-human_i12_lam128": {
+   "max_final_1500": {
+    "n_genes_ot": 11736,
+    "frac_unconverged": 0.02096,
+    "n_unconverged": 246,
+    "max_move_over_eps": 0.2876,
+    "max_overshoot_rel_to_own_mass": 0.002,
+    "p99_overshoot_rel": 1.4e-05
+   },
+   "max_final_8000": {
+    "n_genes_ot": 11736,
+    "frac_unconverged": 0.00631,
+    "n_unconverged": 74,
+    "max_move_over_eps": 0.0888,
+    "max_overshoot_rel_to_own_mass": 0.0008,
+    "p99_overshoot_rel": 0.0
+   },
+   "forecast_mean_max_abs_change": 0.3043413767749996,
+   "linear_target_corr_1500_vs_8000": 0.9999869625439608,
+   "fhat_max_abs_change": 0.0074880744294236745
+  },
+  "pancreas-human_i12_lam1": {
+   "max_final_1500": {
+    "n_genes_ot": 11736,
+    "frac_unconverged": 0.02181,
+    "n_unconverged": 256,
+    "max_move_over_eps": 0.145,
+    "max_overshoot_rel_to_own_mass": 0.001,
+    "p99_overshoot_rel": 0.0
+   },
+   "max_final_8000": {
+    "n_genes_ot": 11736,
+    "frac_unconverged": 0.00477,
+    "n_unconverged": 56,
+    "max_move_over_eps": 0.0005,
+    "max_overshoot_rel_to_own_mass": 0.0,
+    "p99_overshoot_rel": 0.0
+   },
+   "forecast_mean_max_abs_change": 0.09703010260297429,
+   "linear_target_corr_1500_vs_8000": 0.9999987034416166,
+   "fhat_max_abs_change": 0.0016486336109858835
+  },
+  "pancreas-human_i12_lam0.0625": {
+   "max_final_1500": {
+    "n_genes_ot": 11736,
+    "frac_unconverged": 0.00017,
+    "n_unconverged": 2,
+    "max_move_over_eps": 0.0222,
+    "max_overshoot_rel_to_own_mass": 0.0,
+    "p99_overshoot_rel": 0.0
+   },
+   "max_final_8000": {
+    "n_genes_ot": 11736,
+    "frac_unconverged": 0.0,
+    "n_unconverged": 0,
+    "max_move_over_eps": 0.0,
+    "max_overshoot_rel_to_own_mass": 0.0,
+    "p99_overshoot_rel": 0.0
+   },
+   "forecast_mean_max_abs_change": 0.2995020712983276,
+   "linear_target_corr_1500_vs_8000": 0.9999918875862294,
+   "fhat_max_abs_change": 0.0005597299431470554
+  }
+ },
+ "external_comparisons": {
+  "pancreas-human": {
+   "l1": {
+    "ours_spec_masks": {
+     "trend": {
+      "i>=1": [
+       0.1769,
+       0.2253,
+       0.2209
+      ],
+      "i>=2": [
+       0.1669,
+       0.2254,
+       0.2148
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "pop::sink_norm_Kany": {
+      "i>=1": [
+       0.1403,
+       0.2242,
+       0.2093
+      ],
+      "i>=2": [
+       0.1272,
+       0.2242,
+       0.2022
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.0366,
+       -0.0011,
+       -0.0116
+      ]
+     },
+     "pop::sink_abs_Kany": {
+      "i>=1": [
+       0.0974,
+       0.1956,
+       0.2174
+      ],
+      "i>=2": [
+       0.0807,
+       0.1933,
+       0.2109
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.0795,
+       -0.0296,
+       -0.0035
+      ]
+     },
+     "pop::balanced_Kany": {
+      "i>=1": [
+       0.1506,
+       0.232,
+       0.2115
+      ],
+      "i>=2": [
+       0.1384,
+       0.2327,
+       0.2045
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.0263,
+       0.0067,
+       -0.0094
+      ]
+     },
+     "pop::persist_L3_Kany": {
+      "i>=1": [
+       -0.0522,
+       0.1142,
+       0.1597
+      ],
+      "i>=2": [
+       -0.0813,
+       0.1051,
+       0.1485
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.2291,
+       -0.111,
+       -0.0612
+      ]
+     },
+     "pop::lin1_Kany": {
+      "i>=1": [
+       0.109,
+       0.2054,
+       0.2204
+      ],
+      "i>=2": [
+       0.0934,
+       0.204,
+       0.2142
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.0679,
+       -0.0198,
+       -0.0005
+      ]
+     },
+     "pop::kluot_abs_Kany": {
+      "i>=1": [
+       0.1297,
+       0.2271,
+       0.2077
+      ],
+      "i>=2": [
+       0.1158,
+       0.2274,
+       0.2004
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.0472,
+       0.0018,
+       -0.0133
+      ]
+     },
+     "gene::uot": {
+      "i>=1": [
+       0.1529,
+       0.2204,
+       0.235
+      ],
+      "i>=2": [
+       0.1432,
+       0.2211,
+       0.2297
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.024,
+       -0.0049,
+       0.0141
+      ]
+     },
+     "gene::uot_forced": {
+      "i>=1": [
+       0.1673,
+       0.2249,
+       0.2384
+      ],
+      "i>=2": [
+       0.1589,
+       0.2261,
+       0.2335
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.0096,
+       -0.0004,
+       0.0174
+      ]
+     },
+     "gene::bal": {
+      "i>=1": [
+       0.1843,
+       0.2012,
+       0.2579
+      ],
+      "i>=2": [
+       0.177,
+       0.2037,
+       0.2528
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0074,
+       -0.0241,
+       0.0369
+      ]
+     },
+     "gene::persist": {
+      "i>=1": [
+       0.0199,
+       0.0967,
+       0.1572
+      ],
+      "i>=2": [
+       0.0233,
+       0.0967,
+       0.1604
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.157,
+       -0.1286,
+       -0.0638
+      ]
+     }
+    },
+    "external": {
+     "trend@their_masks": [
+      0.1587,
+      0.2233,
+      0.2198
+     ],
+     "DistBridge@their_masks": [
+      0.1064,
+      0.1768,
+      0.2153
+     ],
+     "DistBridge_gain_over_trend_their_masks": [
+      -0.0523,
+      -0.0465,
+      -0.0046
+     ],
+     "their_corrected_best_per_metric_max_over_strict_pre_models": [
+      0.0937,
+      0.0878,
+      0.2354
+     ],
+     "their_best_gain_over_trend_their_masks": [
+      -0.065,
+      -0.1355,
+      0.0156
+     ],
+     "their_best_single_model_by_pcc": [
+      "preqB/pre/chebnet",
+      [
+       0.0937,
+       0.0814,
+       0.2311
+      ]
+     ],
+     "NASS_full_i>=2@nass_masks": [
+      0.308,
+      0.221,
+      0.283
+     ],
+     "NASS_trend_i>=2@nass_masks": [
+      0.1347,
+      0.2203,
+      0.216
+     ],
+     "NASS_gain_over_trend_i>=2": [
+      0.1733,
+      0.0007,
+      0.067
+     ]
+    },
+    "vs_NASS_transition_paired_i>=2": {
+     "pop::sink_norm_Kany": {
+      "DiD_pcc_mean": -0.2129,
+      "wins": 0,
+      "losses": 12,
+      "p": 0.0005,
+      "raw_pcc_minus_NASS_mean": -0.1808,
+      "raw_p": 0.0034
+     },
+     "pop::sink_abs_Kany": {
+      "DiD_pcc_mean": -0.2594,
+      "wins": 0,
+      "losses": 12,
+      "p": 0.0005,
+      "raw_pcc_minus_NASS_mean": -0.2272,
+      "raw_p": 0.0034
+     },
+     "pop::balanced_Kany": {
+      "DiD_pcc_mean": -0.2018,
+      "wins": 0,
+      "losses": 12,
+      "p": 0.0005,
+      "raw_pcc_minus_NASS_mean": -0.1696,
+      "raw_p": 0.0034
+     },
+     "pop::persist_L3_Kany": {
+      "DiD_pcc_mean": -0.4214,
+      "wins": 0,
+      "losses": 12,
+      "p": 0.0005,
+      "raw_pcc_minus_NASS_mean": -0.3892,
+      "raw_p": 0.0005
+     },
+     "pop::lin1_Kany": {
+      "DiD_pcc_mean": -0.2468,
+      "wins": 0,
+      "losses": 12,
+      "p": 0.0005,
+      "raw_pcc_minus_NASS_mean": -0.2146,
+      "raw_p": 0.0005
+     },
+     "pop::kluot_abs_Kany": {
+      "DiD_pcc_mean": -0.2244,
+      "wins": 0,
+      "losses": 12,
+      "p": 0.0005,
+      "raw_pcc_minus_NASS_mean": -0.1922,
+      "raw_p": 0.0005
+     },
+     "gene::uot": {
+      "DiD_pcc_mean": -0.1969,
+      "wins": 0,
+      "losses": 12,
+      "p": 0.0005,
+      "raw_pcc_minus_NASS_mean": -0.1647,
+      "raw_p": 0.0024
+     },
+     "gene::uot_forced": {
+      "DiD_pcc_mean": -0.1813,
+      "wins": 0,
+      "losses": 12,
+      "p": 0.0005,
+      "raw_pcc_minus_NASS_mean": -0.1491,
+      "raw_p": 0.0034
+     },
+     "gene::bal": {
+      "DiD_pcc_mean": -0.1631,
+      "wins": 1,
+      "losses": 11,
+      "p": 0.0024,
+      "raw_pcc_minus_NASS_mean": -0.1309,
+      "raw_p": 0.0161
+     },
+     "gene::persist": {
+      "DiD_pcc_mean": -0.3169,
+      "wins": 1,
+      "losses": 11,
+      "p": 0.001,
+      "raw_pcc_minus_NASS_mean": -0.2847,
+      "raw_p": 0.001
+     }
+    },
+    "p1_trend_vs_judge_trend_max_abs_diff": 4.455315470719423e-09
+   },
+   "linear": {
+    "ours_spec_masks": {
+     "trend": {
+      "i>=1": [
+       0.4255,
+       0.2916,
+       0.3584
+      ],
+      "i>=2": [
+       0.4616,
+       0.3014,
+       0.3562
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "pop::sink_norm_Kany": {
+      "i>=1": [
+       0.3009,
+       0.2893,
+       0.3442
+      ],
+      "i>=2": [
+       0.3266,
+       0.2989,
+       0.3408
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.1246,
+       -0.0023,
+       -0.0142
+      ]
+     },
+     "pop::sink_abs_Kany": {
+      "i>=1": [
+       0.3126,
+       0.2926,
+       0.346
+      ],
+      "i>=2": [
+       0.3393,
+       0.3025,
+       0.3428
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.1129,
+       0.001,
+       -0.0124
+      ]
+     },
+     "pop::balanced_Kany": {
+      "i>=1": [
+       0.3149,
+       0.2937,
+       0.3437
+      ],
+      "i>=2": [
+       0.3418,
+       0.3036,
+       0.3403
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.1105,
+       0.0021,
+       -0.0147
+      ]
+     },
+     "pop::persist_L3_Kany": {
+      "i>=1": [
+       -0.1611,
+       0.1599,
+       0.2759
+      ],
+      "i>=2": [
+       -0.1739,
+       0.1587,
+       0.2668
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.5865,
+       -0.1317,
+       -0.0825
+      ]
+     },
+     "pop::lin1_Kany": {
+      "i>=1": [
+       0.2868,
+       0.2749,
+       0.3355
+      ],
+      "i>=2": [
+       0.3114,
+       0.2833,
+       0.3314
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.1386,
+       -0.0167,
+       -0.0229
+      ]
+     },
+     "pop::kluot_abs_Kany": {
+      "i>=1": [
+       0.2917,
+       0.2844,
+       0.3399
+      ],
+      "i>=2": [
+       0.3167,
+       0.2936,
+       0.3361
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.1338,
+       -0.0072,
+       -0.0185
+      ]
+     },
+     "gene::uot": {
+      "i>=1": [
+       0.3728,
+       0.2108,
+       0.4215
+      ],
+      "i>=2": [
+       0.4065,
+       0.2139,
+       0.4264
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.0526,
+       -0.0808,
+       0.0631
+      ]
+     },
+     "gene::uot_forced": {
+      "i>=1": [
+       0.3735,
+       0.2997,
+       0.3494
+      ],
+      "i>=2": [
+       0.4064,
+       0.3099,
+       0.3478
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.052,
+       0.0081,
+       -0.009
+      ]
+     },
+     "gene::bal": {
+      "i>=1": [
+       0.4093,
+       0.2826,
+       0.3637
+      ],
+      "i>=2": [
+       0.4437,
+       0.2909,
+       0.3611
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.0162,
+       -0.009,
+       0.0053
+      ]
+     },
+     "gene::persist": {
+      "i>=1": [
+       0.0,
+       0.0431,
+       0.0431
+      ],
+      "i>=2": [
+       0.0,
+       0.0431,
+       0.0431
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.4255,
+       -0.2485,
+       -0.3153
+      ]
+     }
+    },
+    "external": {
+     "trend@their_masks": [
+      0.3767,
+      0.2906,
+      0.3602
+     ],
+     "DistBridge@their_masks": [
+      0.3043,
+      0.2666,
+      0.3135
+     ],
+     "DistBridge_gain_over_trend_their_masks": [
+      -0.0724,
+      -0.024,
+      -0.0467
+     ],
+     "their_corrected_best_per_metric_max_over_strict_pre_models": [
+      0.1977,
+      0.1179,
+      0.3611
+     ],
+     "their_best_gain_over_trend_their_masks": [
+      -0.1789,
+      -0.1727,
+      0.0009
+     ],
+     "their_best_single_model_by_pcc": [
+      "preqB/pre/chebnet",
+      [
+       0.1977,
+       0.0941,
+       0.299
+      ]
+     ],
+     "NASS_full_i>=2@nass_masks": [
+      0.2808,
+      0.1641,
+      0.3742
+     ],
+     "NASS_trend_i>=2@nass_masks": [
+      0.407,
+      0.2983,
+      0.3613
+     ],
+     "NASS_gain_over_trend_i>=2": [
+      -0.1263,
+      -0.1342,
+      0.013
+     ]
+    },
+    "vs_NASS_transition_paired_i>=2": {
+     "pop::sink_norm_Kany": {
+      "DiD_pcc_mean": -0.0087,
+      "wins": 7,
+      "losses": 5,
+      "p": 0.7334,
+      "raw_pcc_minus_NASS_mean": 0.0459,
+      "raw_p": 0.7334
+     },
+     "pop::sink_abs_Kany": {
+      "DiD_pcc_mean": 0.004,
+      "wins": 8,
+      "losses": 4,
+      "p": 0.5693,
+      "raw_pcc_minus_NASS_mean": 0.0585,
+      "raw_p": 0.6221
+     },
+     "pop::balanced_Kany": {
+      "DiD_pcc_mean": 0.0065,
+      "wins": 7,
+      "losses": 5,
+      "p": 0.6772,
+      "raw_pcc_minus_NASS_mean": 0.0611,
+      "raw_p": 0.6772
+     },
+     "pop::persist_L3_Kany": {
+      "DiD_pcc_mean": -0.5092,
+      "wins": 2,
+      "losses": 10,
+      "p": 0.0122,
+      "raw_pcc_minus_NASS_mean": -0.4546,
+      "raw_p": 0.0122
+     },
+     "pop::lin1_Kany": {
+      "DiD_pcc_mean": -0.0239,
+      "wins": 7,
+      "losses": 5,
+      "p": 0.9697,
+      "raw_pcc_minus_NASS_mean": 0.0306,
+      "raw_p": 0.6772
+     },
+     "pop::kluot_abs_Kany": {
+      "DiD_pcc_mean": -0.0187,
+      "wins": 7,
+      "losses": 5,
+      "p": 0.7334,
+      "raw_pcc_minus_NASS_mean": 0.0359,
+      "raw_p": 0.6772
+     },
+     "gene::uot": {
+      "DiD_pcc_mean": 0.0712,
+      "wins": 7,
+      "losses": 5,
+      "p": 0.3804,
+      "raw_pcc_minus_NASS_mean": 0.1257,
+      "raw_p": 0.1294
+     },
+     "gene::uot_forced": {
+      "DiD_pcc_mean": 0.0711,
+      "wins": 9,
+      "losses": 3,
+      "p": 0.0923,
+      "raw_pcc_minus_NASS_mean": 0.1256,
+      "raw_p": 0.1099
+     },
+     "gene::bal": {
+      "DiD_pcc_mean": 0.1084,
+      "wins": 10,
+      "losses": 2,
+      "p": 0.0425,
+      "raw_pcc_minus_NASS_mean": 0.163,
+      "raw_p": 0.1099
+     },
+     "gene::persist": {
+      "DiD_pcc_mean": -0.3353,
+      "wins": 1,
+      "losses": 11,
+      "p": 0.0034,
+      "raw_pcc_minus_NASS_mean": -0.2807,
+      "raw_p": 0.0093
+     }
+    },
+    "p1_trend_vs_judge_trend_max_abs_diff": 1.3732339598782062e-08
+   }
+  },
+  "gastrulation-human": {
+   "l1": {
+    "ours_spec_masks": {
+     "trend": {
+      "i>=1": [
+       -0.1583,
+       0.1053,
+       0.0915
+      ],
+      "i>=2": [
+       -0.1691,
+       0.102,
+       0.0903
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "pop::sink_norm_Kany": {
+      "i>=1": [
+       0.2688,
+       0.2658,
+       0.2789
+      ],
+      "i>=2": [
+       0.2739,
+       0.2685,
+       0.2847
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.4271,
+       0.1606,
+       0.1874
+      ]
+     },
+     "pop::sink_abs_Kany": {
+      "i>=1": [
+       0.2502,
+       0.2665,
+       0.2724
+      ],
+      "i>=2": [
+       0.2545,
+       0.2692,
+       0.278
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.4085,
+       0.1612,
+       0.181
+      ]
+     },
+     "pop::balanced_Kany": {
+      "i>=1": [
+       0.2576,
+       0.2582,
+       0.2677
+      ],
+      "i>=2": [
+       0.2622,
+       0.2606,
+       0.2731
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.4159,
+       0.153,
+       0.1762
+      ]
+     },
+     "pop::persist_L3_Kany": {
+      "i>=1": [
+       0.255,
+       0.2682,
+       0.2842
+      ],
+      "i>=2": [
+       0.2595,
+       0.271,
+       0.2902
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.4133,
+       0.163,
+       0.1928
+      ]
+     },
+     "pop::lin1_Kany": {
+      "i>=1": [
+       0.2582,
+       0.2587,
+       0.2648
+      ],
+      "i>=2": [
+       0.2629,
+       0.2611,
+       0.2701
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.4165,
+       0.1534,
+       0.1734
+      ]
+     },
+     "pop::kluot_abs_Kany": {
+      "i>=1": [
+       0.2713,
+       0.2658,
+       0.2764
+      ],
+      "i>=2": [
+       0.2764,
+       0.2684,
+       0.2822
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.4296,
+       0.1605,
+       0.185
+      ]
+     },
+     "gene::uot": {
+      "i>=1": [
+       -0.017,
+       0.1208,
+       0.1473
+      ],
+      "i>=2": [
+       -0.0223,
+       0.1179,
+       0.1459
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.1413,
+       0.0155,
+       0.0558
+      ]
+     },
+     "gene::uot_forced": {
+      "i>=1": [
+       -0.0156,
+       0.14,
+       0.1396
+      ],
+      "i>=2": [
+       -0.0215,
+       0.1374,
+       0.1374
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.1427,
+       0.0347,
+       0.0481
+      ]
+     },
+     "gene::bal": {
+      "i>=1": [
+       -0.0018,
+       0.1206,
+       0.1424
+      ],
+      "i>=2": [
+       -0.0061,
+       0.1185,
+       0.1399
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.1565,
+       0.0153,
+       0.051
+      ]
+     },
+     "gene::persist": {
+      "i>=1": [
+       0.012,
+       0.1387,
+       0.1676
+      ],
+      "i>=2": [
+       0.0118,
+       0.1382,
+       0.1674
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.1703,
+       0.0334,
+       0.0761
+      ]
+     }
+    },
+    "external": {
+     "trend@their_masks": [
+      -0.1687,
+      0.1021,
+      0.0919
+     ],
+     "DistBridge@their_masks": [
+      0.1371,
+      0.2213,
+      0.2165
+     ],
+     "DistBridge_gain_over_trend_their_masks": [
+      0.3058,
+      0.1192,
+      0.1246
+     ],
+     "their_corrected_best_per_metric_max_over_strict_pre_models": [
+      0.1041,
+      0.1401,
+      0.1474
+     ],
+     "their_best_gain_over_trend_their_masks": [
+      0.2728,
+      0.0379,
+      0.0555
+     ],
+     "their_best_single_model_by_pcc": [
+      "preqB/pre/chebnet",
+      [
+       0.1041,
+       0.1265,
+       0.1133
+      ]
+     ],
+     "NASS_full_i>=2@nass_masks": [
+      0.3351,
+      0.2755,
+      0.2905
+     ],
+     "NASS_trend_i>=2@nass_masks": [
+      -0.1793,
+      0.1011,
+      0.0916
+     ],
+     "NASS_gain_over_trend_i>=2": [
+      0.5144,
+      0.1745,
+      0.1989
+     ]
+    },
+    "vs_NASS_transition_paired_i>=2": {
+     "pop::sink_norm_Kany": {
+      "DiD_pcc_mean": -0.0714,
+      "wins": 7,
+      "losses": 20,
+      "p": 0.0104,
+      "raw_pcc_minus_NASS_mean": -0.0612,
+      "raw_p": 0.0112
+     },
+     "pop::sink_abs_Kany": {
+      "DiD_pcc_mean": -0.0908,
+      "wins": 7,
+      "losses": 20,
+      "p": 0.0065,
+      "raw_pcc_minus_NASS_mean": -0.0806,
+      "raw_p": 0.0096
+     },
+     "pop::balanced_Kany": {
+      "DiD_pcc_mean": -0.0831,
+      "wins": 7,
+      "losses": 20,
+      "p": 0.0065,
+      "raw_pcc_minus_NASS_mean": -0.0729,
+      "raw_p": 0.0065
+     },
+     "pop::persist_L3_Kany": {
+      "DiD_pcc_mean": -0.0858,
+      "wins": 6,
+      "losses": 21,
+      "p": 0.0096,
+      "raw_pcc_minus_NASS_mean": -0.0756,
+      "raw_p": 0.0121
+     },
+     "pop::lin1_Kany": {
+      "DiD_pcc_mean": -0.0824,
+      "wins": 6,
+      "losses": 21,
+      "p": 0.0104,
+      "raw_pcc_minus_NASS_mean": -0.0722,
+      "raw_p": 0.0214
+     },
+     "pop::kluot_abs_Kany": {
+      "DiD_pcc_mean": -0.0689,
+      "wins": 7,
+      "losses": 20,
+      "p": 0.0151,
+      "raw_pcc_minus_NASS_mean": -0.0587,
+      "raw_p": 0.0162
+     },
+     "gene::uot": {
+      "DiD_pcc_mean": -0.3676,
+      "wins": 2,
+      "losses": 25,
+      "p": 0.0,
+      "raw_pcc_minus_NASS_mean": -0.3574,
+      "raw_p": 0.0
+     },
+     "gene::uot_forced": {
+      "DiD_pcc_mean": -0.3668,
+      "wins": 1,
+      "losses": 26,
+      "p": 0.0,
+      "raw_pcc_minus_NASS_mean": -0.3566,
+      "raw_p": 0.0
+     },
+     "gene::bal": {
+      "DiD_pcc_mean": -0.3514,
+      "wins": 1,
+      "losses": 26,
+      "p": 0.0,
+      "raw_pcc_minus_NASS_mean": -0.3412,
+      "raw_p": 0.0
+     },
+     "gene::persist": {
+      "DiD_pcc_mean": -0.3335,
+      "wins": 2,
+      "losses": 25,
+      "p": 0.0,
+      "raw_pcc_minus_NASS_mean": -0.3233,
+      "raw_p": 0.0
+     }
+    },
+    "p1_trend_vs_judge_trend_max_abs_diff": 9.78136565146781e-09
+   },
+   "linear": {
+    "ours_spec_masks": {
+     "trend": {
+      "i>=1": [
+       0.1089,
+       0.2174,
+       0.1927
+      ],
+      "i>=2": [
+       0.1234,
+       0.2002,
+       0.1961
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "pop::sink_norm_Kany": {
+      "i>=1": [
+       0.1392,
+       0.3074,
+       0.2828
+      ],
+      "i>=2": [
+       0.1549,
+       0.2934,
+       0.2896
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0303,
+       0.0899,
+       0.0901
+      ]
+     },
+     "pop::sink_abs_Kany": {
+      "i>=1": [
+       0.1076,
+       0.313,
+       0.2944
+      ],
+      "i>=2": [
+       0.1222,
+       0.2993,
+       0.3016
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.0012,
+       0.0956,
+       0.1017
+      ]
+     },
+     "pop::balanced_Kany": {
+      "i>=1": [
+       0.141,
+       0.3083,
+       0.2806
+      ],
+      "i>=2": [
+       0.1568,
+       0.2944,
+       0.2873
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0322,
+       0.0908,
+       0.0879
+      ]
+     },
+     "pop::persist_L3_Kany": {
+      "i>=1": [
+       -0.0192,
+       0.3114,
+       0.3349
+      ],
+      "i>=2": [
+       -0.0094,
+       0.2977,
+       0.3436
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.1281,
+       0.094,
+       0.1422
+      ]
+     },
+     "pop::lin1_Kany": {
+      "i>=1": [
+       0.2216,
+       0.3243,
+       0.318
+      ],
+      "i>=2": [
+       0.2403,
+       0.311,
+       0.326
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.1127,
+       0.1068,
+       0.1252
+      ]
+     },
+     "pop::kluot_abs_Kany": {
+      "i>=1": [
+       0.1879,
+       0.3184,
+       0.3166
+      ],
+      "i>=2": [
+       0.2054,
+       0.3049,
+       0.3246
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.079,
+       0.101,
+       0.1239
+      ]
+     },
+     "gene::uot": {
+      "i>=1": [
+       0.1285,
+       0.23,
+       0.2283
+      ],
+      "i>=2": [
+       0.1464,
+       0.2143,
+       0.2318
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0196,
+       0.0126,
+       0.0355
+      ]
+     },
+     "gene::uot_forced": {
+      "i>=1": [
+       0.1784,
+       0.2563,
+       0.2104
+      ],
+      "i>=2": [
+       0.2019,
+       0.2418,
+       0.213
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0695,
+       0.0389,
+       0.0177
+      ]
+     },
+     "gene::bal": {
+      "i>=1": [
+       0.1856,
+       0.2459,
+       0.2077
+      ],
+      "i>=2": [
+       0.2093,
+       0.2332,
+       0.2102
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       0.0768,
+       0.0285,
+       0.0149
+      ]
+     },
+     "gene::persist": {
+      "i>=1": [
+       0.0,
+       0.0373,
+       0.0373
+      ],
+      "i>=2": [
+       0.0,
+       0.0373,
+       0.0373
+      ],
+      "gain_over_trend_same_masks_i>=1": [
+       -0.1089,
+       -0.1801,
+       -0.1554
+      ]
+     }
+    },
+    "external": {
+     "trend@their_masks": [
+      0.1767,
+      0.2198,
+      0.195
+     ],
+     "DistBridge@their_masks": [
+      0.2992,
+      0.2852,
+      0.2428
+     ],
+     "DistBridge_gain_over_trend_their_masks": [
+      0.1225,
+      0.0654,
+      0.0478
+     ],
+     "their_corrected_best_per_metric_max_over_strict_pre_models": [
+      0.2132,
+      0.2325,
+      0.2066
+     ],
+     "their_best_gain_over_trend_their_masks": [
+      0.0365,
+      0.0127,
+      0.0116
+     ],
+     "their_best_single_model_by_pcc": [
+      "preqB/pre/chebnet",
+      [
+       0.2132,
+       0.2325,
+       0.1764
+      ]
+     ],
+     "NASS_full_i>=2@nass_masks": [
+      0.2558,
+      0.3508,
+      0.3492
+     ],
+     "NASS_trend_i>=2@nass_masks": [
+      0.2014,
+      0.2037,
+      0.1966
+     ],
+     "NASS_gain_over_trend_i>=2": [
+      0.0544,
+      0.1471,
+      0.1526
+     ]
+    },
+    "vs_NASS_transition_paired_i>=2": {
+     "pop::sink_norm_Kany": {
+      "DiD_pcc_mean": -0.0229,
+      "wins": 14,
+      "losses": 13,
+      "p": 0.804,
+      "raw_pcc_minus_NASS_mean": -0.1009,
+      "raw_p": 0.4846
+     },
+     "pop::sink_abs_Kany": {
+      "DiD_pcc_mean": -0.0557,
+      "wins": 14,
+      "losses": 13,
+      "p": 0.9529,
+      "raw_pcc_minus_NASS_mean": -0.1337,
+      "raw_p": 0.3126
+     },
+     "pop::balanced_Kany": {
+      "DiD_pcc_mean": -0.0211,
+      "wins": 14,
+      "losses": 13,
+      "p": 0.804,
+      "raw_pcc_minus_NASS_mean": -0.099,
+      "raw_p": 0.4996
+     },
+     "pop::persist_L3_Kany": {
+      "DiD_pcc_mean": -0.1873,
+      "wins": 10,
+      "losses": 17,
+      "p": 0.1482,
+      "raw_pcc_minus_NASS_mean": -0.2652,
+      "raw_p": 0.0385
+     },
+     "pop::lin1_Kany": {
+      "DiD_pcc_mean": 0.0625,
+      "wins": 18,
+      "losses": 9,
+      "p": 0.2109,
+      "raw_pcc_minus_NASS_mean": -0.0155,
+      "raw_p": 0.8966
+     },
+     "pop::kluot_abs_Kany": {
+      "DiD_pcc_mean": 0.0276,
+      "wins": 17,
+      "losses": 10,
+      "p": 0.3361,
+      "raw_pcc_minus_NASS_mean": -0.0504,
+      "raw_p": 0.9906
+     },
+     "gene::uot": {
+      "DiD_pcc_mean": -0.0314,
+      "wins": 14,
+      "losses": 13,
+      "p": 0.9717,
+      "raw_pcc_minus_NASS_mean": -0.1094,
+      "raw_p": 0.3126
+     },
+     "gene::uot_forced": {
+      "DiD_pcc_mean": 0.0241,
+      "wins": 13,
+      "losses": 14,
+      "p": 0.9153,
+      "raw_pcc_minus_NASS_mean": -0.0539,
+      "raw_p": 0.441
+     },
+     "gene::bal": {
+      "DiD_pcc_mean": 0.0314,
+      "wins": 14,
+      "losses": 13,
+      "p": 0.8966,
+      "raw_pcc_minus_NASS_mean": -0.0466,
+      "raw_p": 0.4846
+     },
+     "gene::persist": {
+      "DiD_pcc_mean": -0.1778,
+      "wins": 7,
+      "losses": 20,
+      "p": 0.0065,
+      "raw_pcc_minus_NASS_mean": -0.2558,
+      "raw_p": 0.0004
+     }
+    },
+    "p1_trend_vs_judge_trend_max_abs_diff": 0.0008333333333333387
+   }
+  }
+ },
+ "p2_rerun_posthoc_down_side": {
+  "pancreas-human": {
+   "l1": {
+    "uot_lam0.0625 vs uot_lam128": {
+     "pcc": {
+      "mean_diff": -0.0664,
+      "wins": 3,
+      "losses": 10,
+      "wilcoxon_p": 0.0215
+     },
+     "p_up": {
+      "mean_diff": -0.0468,
+      "wins": 1,
+      "losses": 12,
+      "wilcoxon_p": 0.0032
+     },
+     "p_down": {
+      "mean_diff": -0.022,
+      "wins": 5,
+      "losses": 8,
+      "wilcoxon_p": 0.1318
+     }
+    },
+    "uot_lam0.25 vs uot_lam128": {
+     "pcc": {
+      "mean_diff": -0.0251,
+      "wins": 4,
+      "losses": 9,
+      "wilcoxon_p": 0.1677
+     },
+     "p_up": {
+      "mean_diff": -0.0167,
+      "wins": 2,
+      "losses": 11,
+      "wilcoxon_p": 0.0266
+     },
+     "p_down": {
+      "mean_diff": -0.0052,
+      "wins": 6,
+      "losses": 7,
+      "wilcoxon_p": 0.8533
+     }
+    },
+    "uot_lam0.0625 vs bal": {
+     "pcc": {
+      "mean_diff": -0.0834,
+      "wins": 2,
+      "losses": 11,
+      "wilcoxon_p": 0.0012
+     },
+     "p_up": {
+      "mean_diff": -0.0231,
+      "wins": 2,
+      "losses": 11,
+      "wilcoxon_p": 0.0129
+     },
+     "p_down": {
+      "mean_diff": -0.0415,
+      "wins": 1,
+      "losses": 12,
+      "wilcoxon_p": 0.0007
+     }
+    },
+    "uot_lam0.25 vs bal": {
+     "pcc": {
+      "mean_diff": -0.0421,
+      "wins": 1,
+      "losses": 12,
+      "wilcoxon_p": 0.0081
+     },
+     "p_up": {
+      "mean_diff": 0.0071,
+      "wins": 7,
+      "losses": 5,
+      "wilcoxon_p": 0.7173
+     },
+     "p_down": {
+      "mean_diff": -0.0248,
+      "wins": 0,
+      "losses": 13,
+      "wilcoxon_p": 0.0002
+     }
+    },
+    "uot_selected_lam0_counts_i>=2": {
+     "1.0": 1,
+     "4.0": 3,
+     "128.0": 8
+    },
+    "uot_selected_top_configs": [
+     [
+      [
+       128.0,
+       1,
+       2.0
+      ],
+      6
+     ],
+     [
+      [
+       4.0,
+       3,
+       2.0
+      ],
+      3
+     ],
+     [
+      [
+       1.0,
+       3,
+       2.0
+      ],
+      1
+     ],
+     [
+      [
+       128.0,
+       3,
+       2.0
+      ],
+      1
+     ]
+    ]
+   },
+   "linear": {
+    "uot_lam0.0625 vs uot_lam128": {
+     "pcc": {
+      "mean_diff": 0.027,
+      "wins": 4,
+      "losses": 9,
+      "wilcoxon_p": 0.946
+     },
+     "p_up": {
+      "mean_diff": -0.1179,
+      "wins": 1,
+      "losses": 12,
+      "wilcoxon_p": 0.0005
+     },
+     "p_down": {
+      "mean_diff": 0.0878,
+      "wins": 11,
+      "losses": 2,
+      "wilcoxon_p": 0.0024
+     }
+    },
+    "uot_lam0.25 vs uot_lam128": {
+     "pcc": {
+      "mean_diff": 0.0018,
+      "wins": 7,
+      "losses": 6,
+      "wilcoxon_p": 0.6355
+     },
+     "p_up": {
+      "mean_diff": -0.0369,
+      "wins": 3,
+      "losses": 10,
+      "wilcoxon_p": 0.0574
+     },
+     "p_down": {
+      "mean_diff": 0.0177,
+      "wins": 6,
+      "losses": 7,
+      "wilcoxon_p": 0.6494
+     }
+    },
+    "uot_lam0.0625 vs bal": {
+     "pcc": {
+      "mean_diff": -0.0088,
+      "wins": 4,
+      "losses": 9,
+      "wilcoxon_p": 0.6848
+     },
+     "p_up": {
+      "mean_diff": -0.1008,
+      "wins": 1,
+      "losses": 12,
+      "wilcoxon_p": 0.0024
+     },
+     "p_down": {
+      "mean_diff": 0.0735,
+      "wins": 10,
+      "losses": 3,
+      "wilcoxon_p": 0.0061
+     }
+    },
+    "uot_lam0.25 vs bal": {
+     "pcc": {
+      "mean_diff": -0.0339,
+      "wins": 6,
+      "losses": 7,
+      "wilcoxon_p": 0.4548
+     },
+     "p_up": {
+      "mean_diff": -0.0198,
+      "wins": 6,
+      "losses": 7,
+      "wilcoxon_p": 0.5417
+     },
+     "p_down": {
+      "mean_diff": 0.0033,
+      "wins": 6,
+      "losses": 7,
+      "wilcoxon_p": 0.6226
+     }
+    },
+    "uot_selected_lam0_counts_i>=2": {
+     "0.0625": 11,
+     "128.0": 1
+    },
+    "uot_selected_top_configs": [
+     [
+      [
+       0.0625,
+       3,
+       0.5
+      ],
+      6
+     ],
+     [
+      [
+       0.0625,
+       3,
+       1.0
+      ],
+      3
+     ],
+     [
+      [
+       0.0625,
+       1,
+       0.5
+      ],
+      2
+     ],
+     [
+      [
+       128.0,
+       1,
+       0.5
+      ],
+      1
+     ]
+    ]
+   }
+  },
+  "gastrulation-human": {
+   "l1": {
+    "uot_lam0.0625 vs uot_lam128": {
+     "pcc": {
+      "mean_diff": -0.0144,
+      "wins": 12,
+      "losses": 16,
+      "wilcoxon_p": 0.5369
+     },
+     "p_up": {
+      "mean_diff": -0.0353,
+      "wins": 5,
+      "losses": 23,
+      "wilcoxon_p": 0.0001
+     },
+     "p_down": {
+      "mean_diff": 0.0355,
+      "wins": 22,
+      "losses": 6,
+      "wilcoxon_p": 0.0005
+     }
+    },
+    "uot_lam0.25 vs uot_lam128": {
+     "pcc": {
+      "mean_diff": -0.0158,
+      "wins": 10,
+      "losses": 18,
+      "wilcoxon_p": 0.1145
+     },
+     "p_up": {
+      "mean_diff": -0.019,
+      "wins": 4,
+      "losses": 24,
+      "wilcoxon_p": 0.0
+     },
+     "p_down": {
+      "mean_diff": 0.0171,
+      "wins": 21,
+      "losses": 7,
+      "wilcoxon_p": 0.0091
+     }
+    },
+    "uot_lam0.0625 vs bal": {
+     "pcc": {
+      "mean_diff": -0.0283,
+      "wins": 9,
+      "losses": 19,
+      "wilcoxon_p": 0.1375
+     },
+     "p_up": {
+      "mean_diff": -0.0159,
+      "wins": 10,
+      "losses": 17,
+      "wilcoxon_p": 0.0366
+     },
+     "p_down": {
+      "mean_diff": 0.0326,
+      "wins": 22,
+      "losses": 6,
+      "wilcoxon_p": 0.001
+     }
+    },
+    "uot_lam0.25 vs bal": {
+     "pcc": {
+      "mean_diff": -0.0296,
+      "wins": 8,
+      "losses": 20,
+      "wilcoxon_p": 0.0191
+     },
+     "p_up": {
+      "mean_diff": 0.0004,
+      "wins": 12,
+      "losses": 15,
+      "wilcoxon_p": 0.4208
+     },
+     "p_down": {
+      "mean_diff": 0.0143,
+      "wins": 18,
+      "losses": 8,
+      "wilcoxon_p": 0.0505
+     }
+    },
+    "uot_selected_lam0_counts_i>=2": {
+     "0.0625": 9,
+     "128.0": 18
+    },
+    "uot_selected_top_configs": [
+     [
+      [
+       128.0,
+       3,
+       2.0
+      ],
+      14
+     ],
+     [
+      [
+       0.0625,
+       1,
+       0.5
+      ],
+      8
+     ],
+     [
+      [
+       128.0,
+       3,
+       1.0
+      ],
+      2
+     ],
+     [
+      [
+       128.0,
+       1,
+       1.0
+      ],
+      1
+     ]
+    ]
+   },
+   "linear": {
+    "uot_lam0.0625 vs uot_lam128": {
+     "pcc": {
+      "mean_diff": -0.0442,
+      "wins": 12,
+      "losses": 16,
+      "wilcoxon_p": 0.362
+     },
+     "p_up": {
+      "mean_diff": -0.1068,
+      "wins": 4,
+      "losses": 24,
+      "wilcoxon_p": 0.0
+     },
+     "p_down": {
+      "mean_diff": 0.0939,
+      "wins": 23,
+      "losses": 5,
+      "wilcoxon_p": 0.0001
+     }
+    },
+    "uot_lam0.25 vs uot_lam128": {
+     "pcc": {
+      "mean_diff": -0.0266,
+      "wins": 9,
+      "losses": 19,
+      "wilcoxon_p": 0.1042
+     },
+     "p_up": {
+      "mean_diff": -0.0368,
+      "wins": 6,
+      "losses": 22,
+      "wilcoxon_p": 0.0001
+     },
+     "p_down": {
+      "mean_diff": 0.0629,
+      "wins": 24,
+      "losses": 4,
+      "wilcoxon_p": 0.0
+     }
+    },
+    "uot_lam0.0625 vs bal": {
+     "pcc": {
+      "mean_diff": -0.0515,
+      "wins": 12,
+      "losses": 16,
+      "wilcoxon_p": 0.3272
+     },
+     "p_up": {
+      "mean_diff": -0.0964,
+      "wins": 4,
+      "losses": 24,
+      "wilcoxon_p": 0.0001
+     },
+     "p_down": {
+      "mean_diff": 0.0966,
+      "wins": 23,
+      "losses": 5,
+      "wilcoxon_p": 0.0
+     }
+    },
+    "uot_lam0.25 vs bal": {
+     "pcc": {
+      "mean_diff": -0.0339,
+      "wins": 10,
+      "losses": 18,
+      "wilcoxon_p": 0.1145
+     },
+     "p_up": {
+      "mean_diff": -0.0264,
+      "wins": 9,
+      "losses": 19,
+      "wilcoxon_p": 0.0094
+     },
+     "p_down": {
+      "mean_diff": 0.0657,
+      "wins": 26,
+      "losses": 2,
+      "wilcoxon_p": 0.0
+     }
+    },
+    "uot_selected_lam0_counts_i>=2": {
+     "0.0625": 4,
+     "0.25": 8,
+     "1.0": 1,
+     "128.0": 14
+    },
+    "uot_selected_top_configs": [
+     [
+      [
+       128.0,
+       3,
+       1.0
+      ],
+      7
+     ],
+     [
+      [
+       0.25,
+       1,
+       0.5
+      ],
+      5
+     ],
+     [
+      [
+       128.0,
+       1,
+       1.0
+      ],
+      4
+     ],
+     [
+      [
+       0.0625,
+       3,
+       2.0
+      ],
+      4
+     ]
+    ]
+   }
+  }
+ },
+ "p2_rerun_level_check": {
+  "pancreas-human": {
+   "linear": {
+    "uot_lam0.0625": {
+     "corr_with_minus_level": 0.363
+    },
+    "uot_lam0.25": {
+     "corr_with_minus_level": 0.09
+    },
+    "uot_lam128": {
+     "corr_with_minus_level": 0.039
+    },
+    "bal": {
+     "corr_with_minus_level": 0.043
+    },
+    "trend": {
+     "corr_with_minus_level": 0.082
+    },
+    "truth_corr_with_minus_level": 0.261
+   },
+   "l1": {
+    "uot_lam0.0625": {
+     "corr_with_minus_level": 0.069,
+     "corr_with_persist": 0.023
+    },
+    "uot_lam0.25": {
+     "corr_with_minus_level": 0.036,
+     "corr_with_persist": 0.016
+    },
+    "uot_lam128": {
+     "corr_with_minus_level": 0.047,
+     "corr_with_persist": -0.018
+    },
+    "bal": {
+     "corr_with_minus_level": 0.038,
+     "corr_with_persist": -0.01
+    },
+    "trend": {
+     "corr_with_minus_level": -0.084,
+     "corr_with_persist": -0.042
+    },
+    "persist": {
+     "corr_with_minus_level": 0.191,
+     "corr_with_persist": 1.0
+    },
+    "truth_corr_with_minus_level": 0.084
+   }
+  },
+  "gastrulation-human": {
+   "linear": {
+    "uot_lam0.0625": {
+     "corr_with_minus_level": 0.369
+    },
+    "uot_lam0.25": {
+     "corr_with_minus_level": 0.09
+    },
+    "uot_lam128": {
+     "corr_with_minus_level": 0.092
+    },
+    "bal": {
+     "corr_with_minus_level": 0.096
+    },
+    "trend": {
+     "corr_with_minus_level": 0.044
+    },
+    "truth_corr_with_minus_level": 0.062
+   },
+   "l1": {
+    "uot_lam0.0625": {
+     "corr_with_minus_level": 0.188,
+     "corr_with_persist": 0.002
+    },
+    "uot_lam0.25": {
+     "corr_with_minus_level": 0.115,
+     "corr_with_persist": 0.001
+    },
+    "uot_lam128": {
+     "corr_with_minus_level": 0.023,
+     "corr_with_persist": -0.039
+    },
+    "bal": {
+     "corr_with_minus_level": 0.038,
+     "corr_with_persist": -0.036
+    },
+    "trend": {
+     "corr_with_minus_level": -0.051,
+     "corr_with_persist": -0.035
+    },
+    "persist": {
+     "corr_with_minus_level": 0.137,
+     "corr_with_persist": 1.0
+    },
+    "truth_corr_with_minus_level": 0.021
+   }
+  }
+ },
+ "p1_rerun_extra_paired": {
+  "gastrulation-human": {
+   "l1": {
+    "sink_norm_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0144,
+      "wins": 19,
+      "losses": 8,
+      "p_wilcoxon": 0.3126
+     },
+     "dJ": {
+      "mean": 0.0021,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.4846
+     }
+    },
+    "sink_norm_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.0144,
+      "wins": 19,
+      "losses": 8,
+      "p_wilcoxon": 0.3126
+     },
+     "dJ": {
+      "mean": 0.0021,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.4846
+     }
+    },
+    "sink_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": -0.005,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.5781
+     },
+     "dJ": {
+      "mean": -0.0063,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.9153
+     }
+    },
+    "sink_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": -0.005,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.5781
+     },
+     "dJ": {
+      "mean": -0.0063,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.9153
+     }
+    },
+    "kluot_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0169,
+      "wins": 19,
+      "losses": 8,
+      "p_wilcoxon": 0.1937
+     },
+     "dJ": {
+      "mean": 0.0021,
+      "wins": 19,
+      "losses": 8,
+      "p_wilcoxon": 0.3483
+     }
+    },
+    "kluot_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.0169,
+      "wins": 19,
+      "losses": 8,
+      "p_wilcoxon": 0.1937
+     },
+     "dJ": {
+      "mean": 0.0021,
+      "wins": 19,
+      "losses": 8,
+      "p_wilcoxon": 0.3483
+     }
+    },
+    "balanced_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0027,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.4698
+     },
+     "dJ": {
+      "mean": -0.0083,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.7496
+     }
+    },
+    "balanced_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.0027,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.4698
+     },
+     "dJ": {
+      "mean": -0.0083,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.7496
+     }
+    },
+    "lin1_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0034,
+      "wins": 19,
+      "losses": 8,
+      "p_wilcoxon": 0.3361
+     },
+     "dJ": {
+      "mean": -0.0089,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.7317
+     }
+    },
+    "lin1_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.0034,
+      "wins": 19,
+      "losses": 8,
+      "p_wilcoxon": 0.3361
+     },
+     "dJ": {
+      "mean": -0.0089,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.7317
+     }
+    },
+    "full_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": -0.0257,
+      "wins": 16,
+      "losses": 8,
+      "p_wilcoxon": 0.7257
+     },
+     "dJ": {
+      "mean": -0.0189,
+      "wins": 15,
+      "losses": 9,
+      "p_wilcoxon": 0.9664
+     }
+    },
+    "full_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": -0.0257,
+      "wins": 16,
+      "losses": 8,
+      "p_wilcoxon": 0.7257
+     },
+     "dJ": {
+      "mean": -0.0189,
+      "wins": 15,
+      "losses": 9,
+      "p_wilcoxon": 0.9664
+     }
+    },
+    "sink_norm_Kany - sink_abs_Kany": {
+     "dPCC": {
+      "mean": 0.0194,
+      "wins": 15,
+      "losses": 12,
+      "p_wilcoxon": 0.6617
+     },
+     "dJ": {
+      "mean": 0.0084,
+      "wins": 10,
+      "losses": 17,
+      "p_wilcoxon": 0.5619
+     }
+    }
+   },
+   "linear": {
+    "sink_norm_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1426,
+      "wins": 16,
+      "losses": 11,
+      "p_wilcoxon": 0.2584
+     },
+     "dJ": {
+      "mean": 0.0553,
+      "wins": 16,
+      "losses": 11,
+      "p_wilcoxon": 0.427
+     }
+    },
+    "sink_norm_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.1643,
+      "wins": 16,
+      "losses": 11,
+      "p_wilcoxon": 0.1624
+     },
+     "dJ": {
+      "mean": 0.0354,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.3608
+     }
+    },
+    "sink_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1098,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.2687
+     },
+     "dJ": {
+      "mean": 0.0503,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.3012
+     }
+    },
+    "sink_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.1316,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.1624
+     },
+     "dJ": {
+      "mean": 0.0304,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.3361
+     }
+    },
+    "kluot_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1931,
+      "wins": 16,
+      "losses": 11,
+      "p_wilcoxon": 0.1349
+     },
+     "dJ": {
+      "mean": 0.0876,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.0906
+     }
+    },
+    "kluot_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.2148,
+      "wins": 16,
+      "losses": 11,
+      "p_wilcoxon": 0.0772
+     },
+     "dJ": {
+      "mean": 0.0677,
+      "wins": 19,
+      "losses": 8,
+      "p_wilcoxon": 0.0521
+     }
+    },
+    "balanced_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1445,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.2584
+     },
+     "dJ": {
+      "mean": 0.0554,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.3997
+     }
+    },
+    "balanced_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.1662,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.1624
+     },
+     "dJ": {
+      "mean": 0.0355,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.3361
+     }
+    },
+    "lin1_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.228,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.0362
+     },
+     "dJ": {
+      "mean": 0.1017,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.0319
+     }
+    },
+    "lin1_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.2497,
+      "wins": 17,
+      "losses": 10,
+      "p_wilcoxon": 0.0187
+     },
+     "dJ": {
+      "mean": 0.0818,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.014
+     }
+    },
+    "full_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1791,
+      "wins": 15,
+      "losses": 11,
+      "p_wilcoxon": 0.1165
+     },
+     "dJ": {
+      "mean": 0.0755,
+      "wins": 18,
+      "losses": 8,
+      "p_wilcoxon": 0.0525
+     }
+    },
+    "full_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.2008,
+      "wins": 16,
+      "losses": 11,
+      "p_wilcoxon": 0.0692
+     },
+     "dJ": {
+      "mean": 0.0556,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.1004
+     }
+    },
+    "sink_norm_Kany - sink_abs_Kany": {
+     "dPCC": {
+      "mean": 0.0327,
+      "wins": 12,
+      "losses": 15,
+      "p_wilcoxon": 0.714
+     },
+     "dJ": {
+      "mean": 0.005,
+      "wins": 14,
+      "losses": 13,
+      "p_wilcoxon": 0.9153
+     }
+    }
+   },
+   "orig": {
+    "sink_norm_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0021,
+      "wins": 16,
+      "losses": 11,
+      "p_wilcoxon": 0.2483
+     },
+     "dJ": {
+      "mean": 0.0008,
+      "wins": 15,
+      "losses": 12,
+      "p_wilcoxon": 0.6109
+     }
+    },
+    "sink_norm_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": -0.0003,
+      "wins": 16,
+      "losses": 11,
+      "p_wilcoxon": 0.2483
+     },
+     "dJ": {
+      "mean": -0.0018,
+      "wins": 15,
+      "losses": 12,
+      "p_wilcoxon": 0.6109
+     }
+    },
+    "sink_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0034,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.1225
+     },
+     "dJ": {
+      "mean": 0.0012,
+      "wins": 14,
+      "losses": 13,
+      "p_wilcoxon": 0.5781
+     }
+    },
+    "sink_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.0009,
+      "wins": 18,
+      "losses": 9,
+      "p_wilcoxon": 0.1551
+     },
+     "dJ": {
+      "mean": -0.0014,
+      "wins": 14,
+      "losses": 13,
+      "p_wilcoxon": 0.5781
+     }
+    },
+    "kluot_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": -0.0143,
+      "wins": 4,
+      "losses": 23,
+      "p_wilcoxon": 0.0001
+     },
+     "dJ": {
+      "mean": -0.0108,
+      "wins": 6,
+      "losses": 21,
+      "p_wilcoxon": 0.0017
+     }
+    },
+    "kluot_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": -0.0168,
+      "wins": 4,
+      "losses": 23,
+      "p_wilcoxon": 0.0001
+     },
+     "dJ": {
+      "mean": -0.0134,
+      "wins": 6,
+      "losses": 21,
+      "p_wilcoxon": 0.0017
+     }
+    },
+    "balanced_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": -0.0146,
+      "wins": 3,
+      "losses": 24,
+      "p_wilcoxon": 0.0
+     },
+     "dJ": {
+      "mean": -0.0108,
+      "wins": 4,
+      "losses": 23,
+      "p_wilcoxon": 0.0004
+     }
+    },
+    "balanced_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": -0.0171,
+      "wins": 3,
+      "losses": 24,
+      "p_wilcoxon": 0.0
+     },
+     "dJ": {
+      "mean": -0.0135,
+      "wins": 4,
+      "losses": 23,
+      "p_wilcoxon": 0.0004
+     }
+    },
+    "lin1_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": -0.0494,
+      "wins": 2,
+      "losses": 25,
+      "p_wilcoxon": 0.0
+     },
+     "dJ": {
+      "mean": -0.0345,
+      "wins": 3,
+      "losses": 24,
+      "p_wilcoxon": 0.0
+     }
+    },
+    "lin1_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": -0.0519,
+      "wins": 2,
+      "losses": 25,
+      "p_wilcoxon": 0.0
+     },
+     "dJ": {
+      "mean": -0.0372,
+      "wins": 3,
+      "losses": 24,
+      "p_wilcoxon": 0.0
+     }
+    },
+    "full_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0046,
+      "wins": 13,
+      "losses": 4,
+      "p_wilcoxon": 0.0032
+     },
+     "dJ": {
+      "mean": 0.0015,
+      "wins": 10,
+      "losses": 7,
+      "p_wilcoxon": 0.3529
+     }
+    },
+    "full_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.0021,
+      "wins": 13,
+      "losses": 5,
+      "p_wilcoxon": 0.0268
+     },
+     "dJ": {
+      "mean": -0.0011,
+      "wins": 10,
+      "losses": 8,
+      "p_wilcoxon": 0.6397
+     }
+    },
+    "sink_norm_Kany - sink_abs_Kany": {
+     "dPCC": {
+      "mean": -0.0012,
+      "wins": 11,
+      "losses": 16,
+      "p_wilcoxon": 0.3483
+     },
+     "dJ": {
+      "mean": -0.0004,
+      "wins": 9,
+      "losses": 18,
+      "p_wilcoxon": 0.1698
+     }
+    }
+   }
+  },
+  "pancreas-human": {
+   "l1": {
+    "sink_norm_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1914,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.021
+     },
+     "dJ": {
+      "mean": 0.1339,
+      "wins": 10,
+      "losses": 2,
+      "p_wilcoxon": 0.0068
+     }
+    },
+    "sink_norm_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.2085,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0161
+     },
+     "dJ": {
+      "mean": 0.1271,
+      "wins": 10,
+      "losses": 2,
+      "p_wilcoxon": 0.0093
+     }
+    },
+    "sink_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1449,
+      "wins": 7,
+      "losses": 5,
+      "p_wilcoxon": 0.1763
+     },
+     "dJ": {
+      "mean": 0.111,
+      "wins": 10,
+      "losses": 2,
+      "p_wilcoxon": 0.021
+     }
+    },
+    "sink_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.162,
+      "wins": 8,
+      "losses": 4,
+      "p_wilcoxon": 0.0771
+     },
+     "dJ": {
+      "mean": 0.1042,
+      "wins": 10,
+      "losses": 2,
+      "p_wilcoxon": 0.0269
+     }
+    },
+    "kluot_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1799,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0269
+     },
+     "dJ": {
+      "mean": 0.1305,
+      "wins": 10,
+      "losses": 2,
+      "p_wilcoxon": 0.0049
+     }
+    },
+    "kluot_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.197,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0161
+     },
+     "dJ": {
+      "mean": 0.1237,
+      "wins": 10,
+      "losses": 2,
+      "p_wilcoxon": 0.0093
+     }
+    },
+    "balanced_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.2025,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0161
+     },
+     "dJ": {
+      "mean": 0.1412,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0024
+     }
+    },
+    "balanced_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.2197,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0122
+     },
+     "dJ": {
+      "mean": 0.1344,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "lin1_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1575,
+      "wins": 8,
+      "losses": 4,
+      "p_wilcoxon": 0.0923
+     },
+     "dJ": {
+      "mean": 0.1199,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0161
+     }
+    },
+    "lin1_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.1746,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0425
+     },
+     "dJ": {
+      "mean": 0.1131,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0342
+     }
+    },
+    "full_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.1293,
+      "wins": 6,
+      "losses": 5,
+      "p_wilcoxon": 0.2402
+     },
+     "dJ": {
+      "mean": 0.0982,
+      "wins": 8,
+      "losses": 3,
+      "p_wilcoxon": 0.0674
+     }
+    },
+    "full_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.1464,
+      "wins": 8,
+      "losses": 4,
+      "p_wilcoxon": 0.0923
+     },
+     "dJ": {
+      "mean": 0.0914,
+      "wins": 8,
+      "losses": 4,
+      "p_wilcoxon": 0.1099
+     }
+    },
+    "sink_norm_Kany - sink_abs_Kany": {
+     "dPCC": {
+      "mean": 0.0465,
+      "wins": 6,
+      "losses": 6,
+      "p_wilcoxon": 0.6772
+     },
+     "dJ": {
+      "mean": 0.0229,
+      "wins": 7,
+      "losses": 5,
+      "p_wilcoxon": 0.4238
+     }
+    }
+   },
+   "linear": {
+    "sink_norm_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.5005,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0015
+     },
+     "dJ": {
+      "mean": 0.2382,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "sink_norm_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.5005,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0015
+     },
+     "dJ": {
+      "mean": 0.2382,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "sink_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.5131,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.001
+     },
+     "dJ": {
+      "mean": 0.2443,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "sink_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.5131,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.001
+     },
+     "dJ": {
+      "mean": 0.2443,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "kluot_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.4905,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0015
+     },
+     "dJ": {
+      "mean": 0.2316,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "kluot_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.4905,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0015
+     },
+     "dJ": {
+      "mean": 0.2316,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "balanced_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.5157,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.001
+     },
+     "dJ": {
+      "mean": 0.2447,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "balanced_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.5157,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.001
+     },
+     "dJ": {
+      "mean": 0.2447,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "lin1_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.4853,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0122
+     },
+     "dJ": {
+      "mean": 0.2248,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0122
+     }
+    },
+    "lin1_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.4853,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0122
+     },
+     "dJ": {
+      "mean": 0.2248,
+      "wins": 11,
+      "losses": 1,
+      "p_wilcoxon": 0.0122
+     }
+    },
+    "full_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.4775,
+      "wins": 10,
+      "losses": 1,
+      "p_wilcoxon": 0.002
+     },
+     "dJ": {
+      "mean": 0.2259,
+      "wins": 10,
+      "losses": 1,
+      "p_wilcoxon": 0.0049
+     }
+    },
+    "full_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.4775,
+      "wins": 10,
+      "losses": 1,
+      "p_wilcoxon": 0.002
+     },
+     "dJ": {
+      "mean": 0.2259,
+      "wins": 10,
+      "losses": 1,
+      "p_wilcoxon": 0.0049
+     }
+    },
+    "sink_norm_Kany - sink_abs_Kany": {
+     "dPCC": {
+      "mean": -0.0127,
+      "wins": 5,
+      "losses": 7,
+      "p_wilcoxon": 0.3394
+     },
+     "dJ": {
+      "mean": -0.0061,
+      "wins": 5,
+      "losses": 7,
+      "p_wilcoxon": 0.5693
+     }
+    }
+   },
+   "orig": {
+    "sink_norm_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0517,
+      "wins": 8,
+      "losses": 4,
+      "p_wilcoxon": 0.064
+     },
+     "dJ": {
+      "mean": 0.0372,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0269
+     }
+    },
+    "sink_norm_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.0517,
+      "wins": 8,
+      "losses": 4,
+      "p_wilcoxon": 0.064
+     },
+     "dJ": {
+      "mean": 0.0372,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0269
+     }
+    },
+    "sink_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0262,
+      "wins": 7,
+      "losses": 5,
+      "p_wilcoxon": 0.3013
+     },
+     "dJ": {
+      "mean": 0.0265,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0771
+     }
+    },
+    "sink_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.0262,
+      "wins": 7,
+      "losses": 5,
+      "p_wilcoxon": 0.3013
+     },
+     "dJ": {
+      "mean": 0.0265,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0771
+     }
+    },
+    "kluot_abs_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": -0.0316,
+      "wins": 0,
+      "losses": 12,
+      "p_wilcoxon": 0.0005
+     },
+     "dJ": {
+      "mean": -0.0218,
+      "wins": 0,
+      "losses": 12,
+      "p_wilcoxon": 0.0005
+     }
+    },
+    "kluot_abs_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": -0.0316,
+      "wins": 0,
+      "losses": 12,
+      "p_wilcoxon": 0.0005
+     },
+     "dJ": {
+      "mean": -0.0218,
+      "wins": 0,
+      "losses": 12,
+      "p_wilcoxon": 0.0005
+     }
+    },
+    "balanced_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": -0.0318,
+      "wins": 0,
+      "losses": 12,
+      "p_wilcoxon": 0.0005
+     },
+     "dJ": {
+      "mean": -0.0213,
+      "wins": 0,
+      "losses": 12,
+      "p_wilcoxon": 0.0005
+     }
+    },
+    "balanced_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": -0.0318,
+      "wins": 0,
+      "losses": 12,
+      "p_wilcoxon": 0.0005
+     },
+     "dJ": {
+      "mean": -0.0213,
+      "wins": 0,
+      "losses": 12,
+      "p_wilcoxon": 0.0005
+     }
+    },
+    "lin1_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": -0.0341,
+      "wins": 3,
+      "losses": 9,
+      "p_wilcoxon": 0.0342
+     },
+     "dJ": {
+      "mean": -0.023,
+      "wins": 1,
+      "losses": 11,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "lin1_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": -0.0341,
+      "wins": 3,
+      "losses": 9,
+      "p_wilcoxon": 0.0342
+     },
+     "dJ": {
+      "mean": -0.023,
+      "wins": 1,
+      "losses": 11,
+      "p_wilcoxon": 0.0034
+     }
+    },
+    "full_Kany - persist_Kany": {
+     "dPCC": {
+      "mean": 0.0424,
+      "wins": 7,
+      "losses": 4,
+      "p_wilcoxon": 0.042
+     },
+     "dJ": {
+      "mean": 0.034,
+      "wins": 9,
+      "losses": 2,
+      "p_wilcoxon": 0.0049
+     }
+    },
+    "full_Kany - persist_L3_Kany": {
+     "dPCC": {
+      "mean": 0.0424,
+      "wins": 7,
+      "losses": 4,
+      "p_wilcoxon": 0.042
+     },
+     "dJ": {
+      "mean": 0.034,
+      "wins": 9,
+      "losses": 2,
+      "p_wilcoxon": 0.0049
+     }
+    },
+    "sink_norm_Kany - sink_abs_Kany": {
+     "dPCC": {
+      "mean": 0.0255,
+      "wins": 9,
+      "losses": 3,
+      "p_wilcoxon": 0.0522
+     },
+     "dJ": {
+      "mean": 0.0107,
+      "wins": 7,
+      "losses": 5,
+      "p_wilcoxon": 0.2036
+     }
+    }
+   }
+  }
+ }
+}

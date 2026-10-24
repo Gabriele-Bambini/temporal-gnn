@@ -1,0 +1,112 @@
+[Thu Sep 24 02:01:19 PM CEST 2026] download verified: 33 files, sizes match GEO
+11 samples: ['E7.5_rep1', 'E7.5_rep2', 'E7.75_rep1', 'E8.0_rep1', 'E8.0_rep2', 'E8.5_CRISPR_T_KO', 'E8.5_CRISPR_T_WT', 'E8.5_rep1', 'E8.5_rep2', 'E8.75_rep1', 'E8.75_rep2']
+E7.5_rep1: 8936 cells kept of 8936 barcodes (0 not in the metadata), 33533971 gene entries (37s)
+E7.5_rep2: 13181 cells kept of 13181 barcodes (0 not in the metadata), 36214812 gene entries (71s)
+E7.75_rep1: 5257 cells kept of 5257 barcodes (0 not in the metadata), 19767090 gene entries (82s)
+E8.0_rep1: 6598 cells kept of 6598 barcodes (0 not in the metadata), 28600287 gene entries (101s)
+E8.0_rep2: 5608 cells kept of 5608 barcodes (0 not in the metadata), 27971876 gene entries (121s)
+E8.5_CRISPR_T_KO: 7359 cells kept of 7359 barcodes (0 not in the metadata), 38123439 gene entries (151s)
+E8.5_CRISPR_T_WT: 7604 cells kept of 7604 barcodes (0 not in the metadata), 40376543 gene entries (189s)
+E8.5_rep1: 10903 cells kept of 10903 barcodes (0 not in the metadata), 36452029 gene entries (232s)
+E8.5_rep2: 11419 cells kept of 11419 barcodes (0 not in the metadata), 35705207 gene entries (265s)
+E8.75_rep1: 3892 cells kept of 3892 barcodes (0 not in the metadata), 20551769 gene entries (284s)
+E8.75_rep2: 5382 cells kept of 5382 barcodes (0 not in the metadata), 26161877 gene entries (307s)
+{
+ "cells": 86139,
+ "genes_kept": 24672,
+ "genes_raw": 32285,
+ "min_cells": 20,
+ "per_sample": {
+  "E7.5_rep1": 8936,
+  "E7.5_rep2": 13181,
+  "E7.75_rep1": 5257,
+  "E8.0_rep1": 6598,
+  "E8.0_rep2": 5608,
+  "E8.5_CRISPR_T_KO": 7359,
+  "E8.5_CRISPR_T_WT": 7604,
+  "E8.5_rep1": 10903,
+  "E8.5_rep2": 11419,
+  "E8.75_rep1": 3892,
+  "E8.75_rep2": 5382
+ },
+ "per_stage_genotype": {
+  "E7.5|WT": 22117,
+  "E7.75|WT": 5257,
+  "E8.0|WT": 12206,
+  "E8.5|T_KO": 7359,
+  "E8.5|WT": 29926,
+  "E8.75|WT": 9274
+ }
+}
+saved /home/3393519/rafm_data/processed/argelaguet2022_rna.npz (760 MB) in 538s
+[Thu Sep 24 02:10:25 PM CEST 2026] cache ready: /home/3393519/rafm_data/processed/argelaguet2022_rna.npz
+wild-type time course: 71176 cells, stages {'E7.5': 22117, 'E7.75': 5257, 'E8.0': 12206, 'E8.5': 22322, 'E8.75': 9274} (18s)
+design: test E8.0 from E7.75 (horizon 0.25 d); bracketing E7.75 -> E8.5 observed; validation E8.5 from E7.75; fit ['E7.5', 'E7.75', 'E8.75']
+genes: 866 selected on the 36648 fit cells (300 HVG union the expressed prior regulators), of which 572 are prior regulators (69s)
+prior coverage: {'prior_edges_within_selected_genes': 1548, 'prior_regulators_present': 377}
+replicate yardstick (energy distance between the two biological replicates): {'E7.5': 0.4291, 'E8.0': 0.0334, 'E8.5': 0.1706, 'E8.75': 0.1247}
+snapshots: 15000 cells, 866 genes, times [0.0, 1.0, 2.0, 4.0, 5.0] (78s)
+[argelaguet2022] flow_matching seed=0 done in 106s
+[argelaguet2022] flow_matching_shuffled_time seed=0 done in 92s
+
+                               mean  std  count
+model                                          
+noise_floor                 -0.0019  NaN      1
+mean_interp                  1.1936  NaN      1
+ot_interp                    1.3649  NaN      1
+flow_matching_shuffled_time  2.1391  NaN      1
+persistence                  2.4846  NaN      1
+flow_matching                2.5646  NaN      1
+mlp                          3.8996  NaN      1
+linear                       5.5286  NaN      1
+freefm_replay                9.0089  NaN      1
+
+flow_vs_mean_interp                  mean +1.3710  CI95 [+nan, +nan]  n=1
+flow_vs_ot_interp                    mean +1.1997  CI95 [+nan, +nan]  n=1
+flow_vs_linear                       mean -2.9640  CI95 [+nan, +nan]  n=1
+flow_vs_mlp                          mean -1.3349  CI95 [+nan, +nan]  n=1
+flow_vs_persistence                  mean +0.0800  CI95 [+nan, +nan]  n=1
+flow_vs_freefm_replay                mean -6.4443  CI95 [+nan, +nan]  n=1
+flow_vs_flow_matching_shuffled_time  mean +0.4255  CI95 [+nan, +nan]  n=1
+
+done in 14.3 min -> outputs/argelaguet_quick
+[Thu Sep 24 02:25:16 PM CEST 2026] quick run done
+wild-type time course: 71176 cells, stages {'E7.5': 22117, 'E7.75': 5257, 'E8.0': 12206, 'E8.5': 22322, 'E8.75': 9274} (19s)
+design: test E8.0 from E7.75 (horizon 0.25 d); bracketing E7.75 -> E8.5 observed; validation E8.5 from E7.75; fit ['E7.5', 'E7.75', 'E8.75']
+genes: 1544 selected on the 36648 fit cells (1000 HVG union the expressed prior regulators), of which 572 are prior regulators (67s)
+prior coverage: {'prior_edges_within_selected_genes': 1974, 'prior_regulators_present': 407}
+replicate yardstick (energy distance between the two biological replicates): {'E7.5': 0.4666, 'E8.0': 0.0285, 'E8.5': 0.2252, 'E8.75': 0.1542}
+snapshots: 15000 cells, 1544 genes, times [0.0, 1.0, 2.0, 4.0, 5.0] (77s)
+[argelaguet2022] flow_matching seed=0 done in 613s
+[argelaguet2022] flow_matching_shuffled_time seed=0 done in 286s
+[argelaguet2022] flow_matching seed=1 done in 527s
+[argelaguet2022] flow_matching_shuffled_time seed=1 done in 303s
+[argelaguet2022] flow_matching seed=2 done in 518s
+[argelaguet2022] flow_matching_shuffled_time seed=2 done in 345s
+[argelaguet2022] flow_matching seed=3 done in 495s
+[argelaguet2022] flow_matching_shuffled_time seed=3 done in 327s
+[argelaguet2022] flow_matching seed=4 done in 561s
+[argelaguet2022] flow_matching_shuffled_time seed=4 done in 286s
+
+                                mean     std  count
+model                                              
+noise_floor                  -0.0026  0.0000      5
+mean_interp                   1.3220  0.0159      5
+ot_interp                     1.6204  0.0246      5
+flow_matching_shuffled_time   2.4970  0.0519      5
+flow_matching                 2.5722  0.1040      5
+persistence                   2.7626  0.0154      5
+mlp                           4.5252  0.2933      5
+linear                       10.2110  0.2601      5
+freefm_replay                11.5606  3.0603      5
+
+flow_vs_mean_interp                  mean +1.2502  CI95 [+1.1190, +1.3814]  n=5
+flow_vs_ot_interp                    mean +0.9517  CI95 [+0.8073, +1.0962]  n=5
+flow_vs_linear                       mean -7.6388  CI95 [-7.9303, -7.3473]  n=5
+flow_vs_mlp                          mean -1.9531  CI95 [-2.3017, -1.6044]  n=5
+flow_vs_persistence                  mean -0.1904  CI95 [-0.3171, -0.0638]  n=5
+flow_vs_freefm_replay                mean -8.9884  CI95 [-12.8670, -5.1098]  n=5
+flow_vs_flow_matching_shuffled_time  mean +0.0751  CI95 [-0.0230, +0.1733]  n=5
+
+done in 159.1 min -> outputs/argelaguet_interp
+[Thu Sep 24 05:04:54 PM CEST 2026] full run done

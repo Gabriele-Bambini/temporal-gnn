@@ -1,0 +1,64 @@
+
+=== fold t=1 | validation on t=5 (default) | knots [0.0, 2.0, 4.0, 6.0] | all observed [0.0, 2.0, 4.0, 5.0, 6.0] ===
+  seed 0  default             ED 0.2762  mean_err 0.997  best_iter 2000   (17s)
+  seed 0  default +refit x1   ED 0.2629  mean_err 0.972  iters 2000   (25s)
+  seed 0  default +refit x2   ED 0.2659  mean_err 0.976  iters 4000   (41s)
+  seed 1  default             ED 0.2801  mean_err 1.001  best_iter 3750   (66s)
+  seed 1  default +refit x1   ED 0.2667  mean_err 0.977  iters 3750   (81s)
+  seed 1  default +refit x2   ED 0.2654  mean_err 0.973  iters 7500   (109s)
+  seed 2  default             ED 0.2769  mean_err 0.999  best_iter 750   (121s)
+  seed 2  default +refit x1   ED 0.2642  mean_err 0.977  iters 750   (124s)
+  seed 2  default +refit x2   ED 0.2652  mean_err 0.979  iters 1500   (130s)
+
+=== fold t=1 | validation on t=4 (valswap) | knots [0.0, 2.0, 5.0, 6.0] | all observed [0.0, 2.0, 4.0, 5.0, 6.0] ===
+  seed 0  valswap             ED 0.3802  mean_err 1.122  best_iter 250   (141s)
+  seed 0  valswap +refit x1   ED 0.2973  mean_err 0.967  iters 250   (142s)
+  seed 0  valswap +refit x2   ED 0.2667  mean_err 0.979  iters 500   (144s)
+  seed 1  valswap             ED 0.3845  mean_err 1.133  best_iter 250   (158s)
+  seed 1  valswap +refit x1   ED 0.3177  mean_err 0.984  iters 250   (160s)
+  seed 1  valswap +refit x2   ED 0.2646  mean_err 0.972  iters 500   (162s)
+  seed 2  valswap             ED 0.3814  mean_err 1.112  best_iter 250   (174s)
+  seed 2  valswap +refit x1   ED 0.3137  mean_err 0.972  iters 250   (176s)
+  seed 2  valswap +refit x2   ED 0.2672  mean_err 0.978  iters 500   (178s)
+
+=== fold t=5 | validation on t=1 (default) | knots [0.0, 2.0, 4.0, 6.0] | all observed [0.0, 1.0, 2.0, 4.0, 6.0] ===
+  seed 0  default             ED 0.4177  mean_err 1.017  best_iter 1500   (195s)
+  seed 0  default +refit x1   ED 0.4017  mean_err 0.993  iters 1500   (201s)
+  seed 0  default +refit x2   ED 0.4064  mean_err 0.998  iters 3000   (213s)
+  seed 1  default             ED 0.4177  mean_err 1.018  best_iter 750   (223s)
+  seed 1  default +refit x1   ED 0.4024  mean_err 0.997  iters 750   (227s)
+  seed 1  default +refit x2   ED 0.4025  mean_err 0.995  iters 1500   (234s)
+  seed 2  default             ED 0.4205  mean_err 1.021  best_iter 1250   (248s)
+  seed 2  default +refit x1   ED 0.4006  mean_err 0.993  iters 1250   (253s)
+  seed 2  default +refit x2   ED 0.4021  mean_err 0.993  iters 2500   (263s)
+
+=== fold t=5 | validation on t=2 (valswap) | knots [0.0, 1.0, 4.0, 6.0] | all observed [0.0, 1.0, 2.0, 4.0, 6.0] ===
+  seed 0  valswap             ED 0.4320  mean_err 1.033  best_iter 250   (272s)
+  seed 0  valswap +refit x1   ED 0.4174  mean_err 1.016  iters 250   (274s)
+  seed 0  valswap +refit x2   ED 0.4070  mean_err 1.002  iters 500   (276s)
+  seed 1  valswap             ED 0.4361  mean_err 1.039  best_iter 250   (286s)
+  seed 1  valswap +refit x1   ED 0.4131  mean_err 1.012  iters 250   (287s)
+  seed 1  valswap +refit x2   ED 0.4032  mean_err 0.998  iters 500   (289s)
+  seed 2  valswap             ED 0.4402  mean_err 1.043  best_iter 250   (299s)
+  seed 2  valswap +refit x1   ED 0.4106  mean_err 1.008  iters 250   (300s)
+  seed 2  valswap +refit x2   ED 0.4032  mean_err 0.998  iters 500   (302s)
+
+                 energy_distance         mean_error        
+fold                         1.0     5.0        1.0     5.0
+arm                                                        
+default                   0.2777  0.4186     0.9991  1.0186
+default+refit x1          0.2646  0.4016     0.9755  0.9942
+default+refit x2          0.2655  0.4037     0.9760  0.9953
+valswap                   0.3820  0.4361     1.1223  1.0382
+valswap+refit x1          0.3096  0.4137     0.9744  1.0122
+valswap+refit x2          0.2662  0.4045     0.9763  0.9992
+
+                 energy_distance         mean_error        
+                            mean     std       mean     std
+arm                                                        
+default                   0.3482  0.0772     1.0089  0.0109
+default+refit x1          0.3331  0.0750     0.9848  0.0105
+default+refit x2          0.3346  0.0757     0.9856  0.0108
+valswap                   0.4090  0.0298     1.0803  0.0467
+valswap+refit x1          0.3616  0.0575     0.9933  0.0216
+valswap+refit x2          0.3353  0.0758     0.9878  0.0128

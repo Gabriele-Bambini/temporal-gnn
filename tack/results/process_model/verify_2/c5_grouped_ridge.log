@@ -1,0 +1,10 @@
+gastrulation-human a_level [0.2797, 0.2614, 0.2775] | NASS masks pcc 0.2919
+gastrulation-human b_R [0.2712, 0.2558, 0.2719] | NASS masks pcc 0.2744
+gastrulation-human c_SNR [0.2948, 0.2712, 0.2765] | NASS masks pcc 0.2928
+gastrulation-human o_one_group [0.2818, 0.2748, 0.2778] | NASS masks pcc 0.2887
+gastrulation-human {'a_level~b_R': 0.768, 'a_level~c_SNR': 0.649, 'b_R~c_SNR': 0.675} {'b_R - a_level': {'mean': -0.0086, 'better': 10, 'worse': 17}, 'c_SNR - a_level': {'mean': 0.0151, 'better': 11, 'worse': 16}, 'o_one_group - a_level': {'mean': 0.002, 'better': 7, 'worse': 20}, 'NASS_full - a_level': {'mean': 0.0568, 'better': 22, 'worse': 5}}
+pancreas-human a_level [0.2995, 0.2212, 0.2695] | NASS masks pcc 0.2819
+pancreas-human b_R [0.2647, 0.2245, 0.2591] | NASS masks pcc 0.2462
+pancreas-human c_SNR [0.2566, 0.2194, 0.2522] | NASS masks pcc 0.2364
+pancreas-human o_one_group [0.1994, 0.2275, 0.2418] | NASS masks pcc 0.1834
+pancreas-human {'a_level~b_R': 0.693, 'a_level~c_SNR': 0.537, 'b_R~c_SNR': 0.555} {'b_R - a_level': {'mean': -0.0348, 'better': 2, 'worse': 10}, 'c_SNR - a_level': {'mean': -0.0429, 'better': 0, 'worse': 12}, 'o_one_group - a_level': {'mean': -0.1001, 'better': 0, 'worse': 12}, 'NASS_full - a_level': {'mean': 0.0227, 'better': 8, 'worse': 4}}

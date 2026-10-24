@@ -1,0 +1,73 @@
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\graph\artefacts.py:173: RuntimeWarning: Mean of empty slice
+  out[f"ours/{f}"] = np.nanmean(M, 0)
+== gastrulation-human
+ n err {'persistence_n_a': 0.33927058903783897, 'n_hat': 0.25901676620330966}
+ library {'frac_transitions_sign_corr_linear_y_m_a_equals_sign_lib_change': 0.8620689655172413, 'spearman_corr_linear_y_m_a_vs_log_lib_ratio': 0.7334975369458127, 'lag1_autocorr_log_lib_ratio': 0.19232701084768727, 'sign_of_lib_change_predicted_by_previous_sign': 0.5714285714285714, 'mean_abs_corr_linear_y_m_a': 0.5445782432749663}
+ ref orig/obs4_n_a            pcc=0.590 up=0.397 down=0.542
+ ref orig/obs4_n_hat          pcc=0.587 up=0.398 down=0.541
+ ref orig/obs4_n_b_ORACLE     pcc=0.597 up=0.397 down=0.542
+ ref l1/trend                 pcc=-0.171 up=0.103 down=0.092
+ ref linear/trend             pcc=0.175 up=0.220 down=0.195
+ ref orig/trend               pcc=-0.466 up=0.009 down=0.010
+ ceiling orig {'mean_pcc_ceiling': 0.881, 'mean_oracle_sim_pcc': 0.887, 'mean_oracle_sim_p200_up': 0.696, 'mean_oracle_sim_p200_down': 0.697, 'mean_noise_frac': 0.224}
+ ceiling l1 {'mean_pcc_ceiling': 0.766, 'mean_oracle_sim_pcc': 0.85, 'mean_oracle_sim_p200_up': 0.642, 'mean_oracle_sim_p200_down': 0.652, 'mean_noise_frac': 0.396}
+ ceiling linear {'mean_pcc_ceiling': 0.786, 'mean_oracle_sim_pcc': 0.864, 'mean_oracle_sim_p200_up': 0.704, 'mean_oracle_sim_p200_down': 0.712, 'mean_noise_frac': 0.379}
+ tiny {"tiny_transitions": ["2->3", "29->30", "30->31"], "threshold_cells": 100, "ours/distbridge_strict": {"all": [0.5846, 0.4058, 0.5406], "without_tiny": [0.6007, 0.4309, 0.5674], "tiny_only": [0.4451, 0.1883, 0.3077], "share_of_sum_from_tiny": [0.0788, 0.048, 0.0589]}, "ours/distbridge_strict_nosb": {"all": [0.5846, 0.4059, 0.5406], "without_tiny": [0.6007, 0.4309, 0.5674], "tiny_only": [0.4454, 0.1893, 0.308], "share_of_sum_from_tiny": [0.0788, 0.0483, 0.0589]}, "ours/obslevel4": {"all": [0.5888, 0.3818, 0.5251], "without_tiny": [0.5915, 0.406, 0.5605], "tiny_only": [0.5537, 0.172, 0.218], "share_of_sum_from_tiny": [0.0672, 0.0466, 0.0429]}, "theirs/preqA_orig/pre/chebnet": {"all": [0.2702, 0.0503, 0.1991], "without_tiny": [0.2867, 0.0542, 0.207], "tiny_only": [0.1276, 0.0167, 0.13], "share_of_sum_from_tiny": [0.0489, 0.0342, 0.0676]}, "theirs/preqA_orig/post/chebnet": {"all": [0.3462, 0.056, 0.2438], "without_tiny": [0.3382, 0.059, 0.2466], "tiny_only": [0.4156, 0.0293, 0.2193], "share_of_sum_from_tiny": [0.1242, 0.0542, 0.0931]}, "theirs/preqA_orig/pre/gat": {"all": [0.2511, 0.0644, 0.2031], "without_tiny": [0.2583, 0.068, 0.2114], "tiny_only": [0.1887, 0.0333, 0.131], "share_of_sum_from_tiny": [0.0777, 0.0535, 0.0667]}, "theirs/preqA_orig/post/gat": {"all": [0.3154, 0.0741, 0.241], "without_tiny": [0.3008, 0.0785, 0.246], "tiny_only": [0.4418, 0.036, 0.1977], "share_of_sum_from_tiny": [0.1449, 0.0503, 0.0848]}, "theirs/preqA_orig/pre/gcn": {"all": [0.2173, 0.039, 0.1246], "
+   2->3 9 181 lib 10927->11252 on 0.215 off 0.003 ceil o/l1/lin 0.95 0.99 1.00 ties+5 1169 pmax_up 0.17 linear corr(y,m) -0.93
+   3->4 181 791 lib 11252->12491 on 0.095 off 0.010 ceil o/l1/lin 0.92 0.92 0.98 ties+5 513 pmax_up 0.39 linear corr(y,m) 0.49
+   4->5 791 929 lib 12491->13216 on 0.040 off 0.031 ceil o/l1/lin 0.87 0.89 1.00 ties+5 214 pmax_up 0.93 linear corr(y,m) 0.78
+   5->6 929 981 lib 13216->13070 on 0.036 off 0.037 ceil o/l1/lin 0.87 0.90 0.99 ties+5 197 pmax_up 0.99 linear corr(y,m) 0.76
+   6->7 981 616 lib 13070->12907 on 0.026 off 0.051 ceil o/l1/lin 0.87 0.83 0.97 ties+5 142 pmax_up 0.98 linear corr(y,m) 0.65
+   7->8 616 339 lib 12907->12445 on 0.025 off 0.052 ceil o/l1/lin 0.87 0.88 0.97 ties+5 134 pmax_up 0.99 linear corr(y,m) -0.95
+   8->9 339 216 lib 12445->10982 on 0.027 off 0.050 ceil o/l1/lin 0.88 0.94 1.00 ties+5 142 pmax_up 0.98 linear corr(y,m) -0.92
+   9->10 216 224 lib 10982->10649 on 0.041 off 0.036 ceil o/l1/lin 0.88 0.83 1.00 ties+5 218 pmax_up 0.92 linear corr(y,m) -0.66
+   10->11 224 248 lib 10649->10323 on 0.037 off 0.034 ceil o/l1/lin 0.87 0.71 0.96 ties+5 204 pmax_up 0.98 linear corr(y,m) -0.70
+   11->12 248 290 lib 10323->10164 on 0.041 off 0.032 ceil o/l1/lin 0.88 0.73 0.95 ties+5 214 pmax_up 0.94 linear corr(y,m) -0.58
+   12->13 290 303 lib 10164->10204 on 0.038 off 0.033 ceil o/l1/lin 0.88 0.74 0.95 ties+5 210 pmax_up 0.95 linear corr(y,m) -0.29
+   13->14 303 431 lib 10204->10059 on 0.046 off 0.027 ceil o/l1/lin 0.89 0.80 0.98 ties+5 244 pmax_up 0.82 linear corr(y,m) -0.50
+   14->15 431 440 lib 10059->10353 on 0.040 off 0.033 ceil o/l1/lin 0.88 0.77 0.96 ties+5 215 pmax_up 0.93 linear corr(y,m) 0.14
+   15->16 440 333 lib 10353->10769 on 0.032 off 0.042 ceil o/l1/lin 0.87 0.70 0.91 ties+5 180 pmax_up 0.99 linear corr(y,m) 0.40
+   16->17 333 246 lib 10769->10992 on 0.031 off 0.043 ceil o/l1/lin 0.87 0.68 0.82 ties+5 169 pmax_up 0.99 linear corr(y,m) 0.39
+   17->18 246 246 lib 10992->11238 on 0.038 off 0.038 ceil o/l1/lin 0.89 0.72 0.70 ties+5 199 pmax_up 0.98 linear corr(y,m) 0.41
+   18->19 246 230 lib 11238->10804 on 0.037 off 0.040 ceil o/l1/lin 0.88 0.71 0.89 ties+5 200 pmax_up 0.98 linear corr(y,m) -0.84
+   19->20 230 274 lib 10804->10849 on 0.047 off 0.030 ceil o/l1/lin 0.88 0.79 0.63 ties+5 253 pmax_up 0.79 linear corr(y,m) 0.04
+   20->21 274 315 lib 10849->10388 on 0.041 off 0.034 ceil o/l1/lin 0.88 0.75 0.91 ties+5 212 pmax_up 0.93 linear corr(y,m) -0.89
+   21->22 315 355 lib 10388->10480 on 0.038 off 0.032 ceil o/l1/lin 0.88 0.75 0.62 ties+5 202 pmax_up 0.97 linear corr(y,m) 0.02
+   22->23 355 350 lib 10480->10723 on 0.046 off 0.031 ceil o/l1/lin 0.88 0.85 0.77 ties+5 249 pmax_up 0.80 linear corr(y,m) 0.49
+   23->24 350 263 lib 10723->9873 on 0.027 off 0.055 ceil o/l1/lin 0.89 0.83 0.95 ties+5 147 pmax_up 0.99 linear corr(y,m) -0.92
+   24->25 263 232 lib 9873->10300 on 0.036 off 0.037 ceil o/l1/lin 0.87 0.73 0.79 ties+5 191 pmax_up 0.99 linear corr(y,m) 0.69
+   25->26 232 227 lib 10300->10888 on 0.040 off 0.033 ceil o/l1/lin 0.88 0.81 0.90 ties+5 219 pmax_up 0.92 linear corr(y,m) 0.81
+   26->27 227 305 lib 10888->10873 on 0.049 off 0.027 ceil o/l1/lin 0.88 0.80 0.56 ties+5 279 pmax_up 0.72 linear corr(y,m) -0.25
+   27->28 305 230 lib 10873->10871 on 0.029 off 0.047 ceil o/l1/lin 0.88 0.79 0.63 ties+5 155 pmax_up 1.00 linear corr(y,m) -0.11
+   28->29 230 137 lib 10871->10809 on 0.025 off 0.052 ceil o/l1/lin 0.87 0.60 0.00 ties+5 127 pmax_up 0.99 linear corr(y,m) -0.36
+   29->30 137 46 lib 10809->10421 on 0.021 off 0.073 ceil o/l1/lin 0.85 0.45 0.00 ties+5 112 pmax_up 0.99 linear corr(y,m) -0.32
+   30->31 46 6 lib 10421->11794 on 0.011 off 0.153 ceil o/l1/lin 0.87 0.35 0.00 ties+5 55 pmax_up 0.97 linear corr(y,m) 0.48
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\graph\artefacts.py:173: RuntimeWarning: Mean of empty slice
+  out[f"ours/{f}"] = np.nanmean(M, 0)
+== pancreas-human
+ n err {'persistence_n_a': 0.6183500354849604, 'n_hat': 0.6725854748033794}
+ library {'frac_transitions_sign_corr_linear_y_m_a_equals_sign_lib_change': 0.8571428571428571, 'spearman_corr_linear_y_m_a_vs_log_lib_ratio': 0.9208791208791209, 'lag1_autocorr_log_lib_ratio': 0.16805804398654425, 'sign_of_lib_change_predicted_by_previous_sign': 0.6923076923076923, 'mean_abs_corr_linear_y_m_a': 0.41568415654498064}
+ ref orig/obs4_n_a            pcc=0.479 up=0.322 down=0.449
+ ref orig/obs4_n_hat          pcc=0.466 up=0.328 down=0.445
+ ref orig/obs4_n_b_ORACLE     pcc=0.521 up=0.324 down=0.446
+ ref l1/trend                 pcc=0.155 up=0.224 down=0.220
+ ref linear/trend             pcc=0.347 up=0.292 down=0.362
+ ref orig/trend               pcc=-0.393 up=0.039 down=0.036
+ ceiling orig {'mean_pcc_ceiling': 0.882, 'mean_oracle_sim_pcc': 0.891, 'mean_oracle_sim_p200_up': 0.676, 'mean_oracle_sim_p200_down': 0.649, 'mean_noise_frac': 0.221}
+ ceiling l1 {'mean_pcc_ceiling': 0.881, 'mean_oracle_sim_pcc': 0.909, 'mean_oracle_sim_p200_up': 0.702, 'mean_oracle_sim_p200_down': 0.723, 'mean_noise_frac': 0.219}
+ ceiling linear {'mean_pcc_ceiling': 0.953, 'mean_oracle_sim_pcc': 0.958, 'mean_oracle_sim_p200_up': 0.743, 'mean_oracle_sim_p200_down': 0.793, 'mean_noise_frac': 0.09}
+ tiny {"tiny_transitions": ["3->4", "4->5", "5->6", "6->7", "7->8"], "threshold_cells": 100, "ours/distbridge_strict": {"all": [0.4883, 0.3011, 0.4415], "without_tiny": [0.4611, 0.2401, 0.4398], "tiny_only": [0.5374, 0.411, 0.4446], "share_of_sum_from_tiny": [0.393, 0.4874, 0.3597]}, "ours/distbridge_strict_nosb": {"all": [0.4912, 0.3034, 0.443], "without_tiny": [0.4655, 0.2436, 0.4421], "tiny_only": [0.5374, 0.411, 0.4446], "share_of_sum_from_tiny": [0.3907, 0.4839, 0.3584]}, "ours/obslevel4": {"all": [0.4743, 0.2923, 0.4173], "without_tiny": [0.4521, 0.2367, 0.4006], "tiny_only": [0.5098, 0.3924, 0.4474], "share_of_sum_from_tiny": [0.4134, 0.4795, 0.3829]}, "theirs/preqB_orig/pre/gat": {"all": [0.2107, 0.0805, 0.1875], "without_tiny": [0.1497, 0.0691, 0.1398], "tiny_only": [0.3206, 0.101, 0.2734], "share_of_sum_from_tiny": [0.5432, 0.4481, 0.5208]}, "theirs/preqB_orig/pre/gcn": {"all": [0.1815, 0.0749, 0.1264], "without_tiny": [0.1214, 0.0636, 0.0841], "tiny_only": [0.2896, 0.0952, 0.2026], "share_of_sum_from_tiny": [0.5699, 0.4542, 0.5723]}, "theirs/preqB_orig/pre/linear": {"all": [0.0474, 0.0556, 0.0686], "without_tiny": [0.0271, 0.0542, 0.0883], "tiny_only": [0.0839, 0.0582, 0.033], "share_of_sum_from_tiny": [0.6322, 0.374, 0.1719]}, "theirs/preqB_orig/pre/roland": {"all": [0.0827, 0.095, 0.0629], "without_tiny": [0.0484, 0.0891, 0.0572], "tiny_only": [0.1443, 0.1056, 0.0732], "share_of_sum_from_tiny": [0.6235, 0.397, 0.4154]}}
+   0->1 111 611 lib 7780->7839 on 0.090 off 0.009 ceil o/l1/lin 0.92 0.95 0.96 ties+5 404 pmax_up 0.49 linear corr(y,m) 0.21
+   1->2 611 361 lib 7839->7147 on 0.018 off 0.052 ceil o/l1/lin 0.88 0.86 0.97 ties+5 81 pmax_up 1.00 linear corr(y,m) -0.89
+   2->3 361 115 lib 7147->7062 on 0.017 off 0.071 ceil o/l1/lin 0.87 0.76 0.85 ties+5 80 pmax_up 1.00 linear corr(y,m) -0.43
+   3->4 115 50 lib 7062->6673 on 0.020 off 0.079 ceil o/l1/lin 0.86 0.83 0.90 ties+5 91 pmax_up 0.99 linear corr(y,m) -0.25
+   4->5 50 52 lib 6673->6199 on 0.043 off 0.048 ceil o/l1/lin 0.85 0.81 0.90 ties+5 206 pmax_up 0.95 linear corr(y,m) -0.48
+   5->6 52 67 lib 6199->5938 on 0.052 off 0.044 ceil o/l1/lin 0.87 0.82 0.93 ties+5 240 pmax_up 0.84 linear corr(y,m) -0.43
+   6->7 67 78 lib 5938->6355 on 0.054 off 0.039 ceil o/l1/lin 0.87 0.85 0.94 ties+5 240 pmax_up 0.83 linear corr(y,m) 0.34
+   7->8 78 191 lib 6355->5347 on 0.066 off 0.023 ceil o/l1/lin 0.90 0.91 0.99 ties+5 302 pmax_up 0.66 linear corr(y,m) -0.87
+   8->9 191 218 lib 5347->4750 on 0.037 off 0.044 ceil o/l1/lin 0.89 0.93 0.99 ties+5 181 pmax_up 1.00 linear corr(y,m) -0.74
+   9->10 218 131 lib 4750->4882 on 0.032 off 0.054 ceil o/l1/lin 0.87 0.93 0.98 ties+5 151 pmax_up 1.00 linear corr(y,m) -0.32
+   10->11 131 285 lib 4882->5166 on 0.088 off 0.016 ceil o/l1/lin 0.91 0.96 0.98 ties+5 413 pmax_up 0.48 linear corr(y,m) 0.07
+   11->12 285 697 lib 5166->5360 on 0.077 off 0.016 ceil o/l1/lin 0.91 0.98 0.99 ties+5 370 pmax_up 0.54 linear corr(y,m) -0.09
+   12->13 697 616 lib 5360->5564 on 0.029 off 0.040 ceil o/l1/lin 0.88 0.95 0.99 ties+5 132 pmax_up 1.00 linear corr(y,m) 0.23
+   13->14 616 104 lib 5564->5979 on 0.008 off 0.111 ceil o/l1/lin 0.88 0.80 0.97 ties+5 35 pmax_up 1.00 linear corr(y,m) 0.47

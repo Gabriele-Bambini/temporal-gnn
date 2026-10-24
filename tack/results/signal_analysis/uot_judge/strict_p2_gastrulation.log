@@ -1,0 +1,10 @@
+gastrulation-human ('gastrulation-human', 'persist', 7, 0, 0.0) positive control diff 5.019492283463478
+gastrulation-human ('gastrulation-human', 'uot', 6, 1, 0.0625) max abs diff vs unscrambled 0.0
+gastrulation-human ('gastrulation-human', 'uot', 6, 3, 1.0) max abs diff vs unscrambled 0.0
+gastrulation-human ('gastrulation-human', 'bal', 6, 3, 0.0) max abs diff vs unscrambled 0.0
+gastrulation-human ('gastrulation-human', 'persist', 6, 0, 0.0) max abs diff vs unscrambled 0.0
+gastrulation-human ('gastrulation-human', 'persist', 21, 0, 0.0) positive control diff 5.012771543115377
+gastrulation-human ('gastrulation-human', 'uot', 20, 1, 0.0625) max abs diff vs unscrambled 0.0
+gastrulation-human ('gastrulation-human', 'uot', 20, 3, 1.0) max abs diff vs unscrambled 0.0
+gastrulation-human ('gastrulation-human', 'bal', 20, 3, 0.0) max abs diff vs unscrambled 0.0
+gastrulation-human ('gastrulation-human', 'persist', 20, 0, 0.0) max abs diff vs unscrambled 0.0

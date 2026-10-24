@@ -1,0 +1,25 @@
+pancreas-human transition 1 done
+pancreas-human transition 2 done
+pancreas-human transition 3 done
+pancreas-human transition 4 done
+pancreas-human transition 5 done
+pancreas-human transition 6 done
+pancreas-human transition 7 done
+pancreas-human transition 8 done
+pancreas-human transition 9 done
+pancreas-human transition 10 done
+pancreas-human transition 11 done
+pancreas-human transition 12 done
+pancreas-human transition 13 done
+pancreas-human l1 {"HYB_closed_form|Kany(strict sel)": {"i>=1": {"pearson_nan0": 0.1095, "p_ta_up": 0.2049, "p_ta_down": 0.2203, "pcc_seed_sd": 0.0067, "spearman": -0.0511}, "i>=2": {"pearson_nan0": 0.0939, "p_ta_up": 0.2034, "p_ta_down": 0.2141, "pcc_seed_sd": 0.0071, "spearman": -0.0568}}, "sink_norm_Kany": {"i>=1": {"pearson_nan0": 0.1403, "p_ta_up": 0.2242, "p_ta_down": 0.2093, "pcc_seed_sd": 0.0034, "spearman": -0.0344}}, "balanced_Kany": {"i>=1": {"pearson_nan0": 0.1506, "p_ta_up": 0.232, "p_ta_down": 0.2115, "pcc_seed_sd": 0.0026, "spearman": -0.0485}}, "persist_L3_Kany": {"i>=1": {"pearson_nan0": -0.0522, "p_ta_up": 0.1142, "p_ta_down": 0.1597, "pcc_seed_sd": 0.0169, "spearman": 0.076}}, "lin1_Kany": {"i>=1": {"pearson_nan0": 0.109, "p_ta_up": 0.2054, "p_ta_down": 0.2204, "pcc_seed_sd": 0.0058, "spearman": -0.0517}}, "sink_abs_Kany": {"i>=1": {"pearson_nan0": 0.0974, "p_ta_up": 0.1956, "p_ta_down": 0.2174, "pcc_seed_sd": 0.0171, "spearman": 0.0205}}}
+   l1: HYB - sink_norm_Kany {"dPCC": {"mean": -0.0333, "wins": 6, "losses": 6, "p_wilcoxon": 0.4697}, "dJ": {"mean": -0.0141, "wins": 6, "losses": 6, "p_wilcoxon": 0.5693}}
+   l1: HYB - balanced_Kany {"dPCC": {"mean": -0.0445, "wins": 3, "losses": 9, "p_wilcoxon": 0.0771}, "dJ": {"mean": -0.0214, "wins": 4, "losses": 8, "p_wilcoxon": 0.1763}}
+   l1: HYB - persist_L3_Kany {"dPCC": {"mean": 0.1751, "wins": 8, "losses": 4, "p_wilcoxon": 0.0522}, "dJ": {"mean": 0.113, "wins": 9, "losses": 3, "p_wilcoxon": 0.0342}}
+   l1: HYB - lin1_Kany {"dPCC": {"mean": 0.0005, "wins": 5, "losses": 7, "p_wilcoxon": 0.9097}, "dJ": {"mean": -0.0001, "wins": 6, "losses": 6, "p_wilcoxon": 0.9697}}
+   l1: HYB - sink_abs_Kany {"dPCC": {"mean": 0.0131, "wins": 6, "losses": 6, "p_wilcoxon": 1.0}, "dJ": {"mean": 0.0088, "wins": 5, "losses": 7, "p_wilcoxon": 0.9097}}
+pancreas-human linear {"HYB_closed_form|Kany(strict sel)": {"i>=1": {"pearson_nan0": 0.2862, "p_ta_up": 0.2788, "p_ta_down": 0.3335, "pcc_seed_sd": 0.0361, "spearman": -0.0519}, "i>=2": {"pearson_nan0": 0.3107, "p_ta_up": 0.2875, "p_ta_down": 0.3292, "pcc_seed_sd": 0.0211, "spearman": -0.0546}}, "sink_norm_Kany": {"i>=1": {"pearson_nan0": 0.3009, "p_ta_up": 0.2893, "p_ta_down": 0.3442, "pcc_seed_sd": 0.0457, "spearman": -0.0532}}, "balanced_Kany": {"i>=1": {"pearson_nan0": 0.3149, "p_ta_up": 0.2937, "p_ta_down": 0.3437, "pcc_seed_sd": 0.0491, "spearman": -0.0552}}, "persist_L3_Kany": {"i>=1": {"pearson_nan0": -0.1611, "p_ta_up": 0.1599, "p_ta_down": 0.2759, "pcc_seed_sd": 0.0872, "spearman": 0.0683}}, "lin1_Kany": {"i>=1": {"pearson_nan0": 0.2868, "p_ta_up": 0.2749, "p_ta_down": 0.3355, "pcc_seed_sd": 0.0465, "spearman": -0.0516}}, "sink_abs_Kany": {"i>=1": {"pearson_nan0": 0.3126, "p_ta_up": 0.2926, "p_ta_down": 0.346, "pcc_seed_sd": 0.054, "spearman": -0.0494}}}
+   linear: HYB - sink_norm_Kany {"dPCC": {"mean": -0.0159, "wins": 7, "losses": 5, "p_wilcoxon": 0.5186}, "dJ": {"mean": -0.013, "wins": 6, "losses": 6, "p_wilcoxon": 0.4238}}
+   linear: HYB - balanced_Kany {"dPCC": {"mean": -0.0311, "wins": 4, "losses": 8, "p_wilcoxon": 0.2661}, "dJ": {"mean": -0.0194, "wins": 3, "losses": 9, "p_wilcoxon": 0.0342}}
+   linear: HYB - persist_L3_Kany {"dPCC": {"mean": 0.4846, "wins": 11, "losses": 1, "p_wilcoxon": 0.0122}, "dJ": {"mean": 0.2252, "wins": 11, "losses": 1, "p_wilcoxon": 0.0122}}
+   linear: HYB - lin1_Kany {"dPCC": {"mean": -0.0007, "wins": 4, "losses": 8, "p_wilcoxon": 0.4238}, "dJ": {"mean": 0.0004, "wins": 4, "losses": 8, "p_wilcoxon": 0.4238}}
+   linear: HYB - sink_abs_Kany {"dPCC": {"mean": -0.0286, "wins": 7, "losses": 5, "p_wilcoxon": 0.791}, "dJ": {"mean": -0.0191, "wins": 4, "losses": 8, "p_wilcoxon": 0.1294}}

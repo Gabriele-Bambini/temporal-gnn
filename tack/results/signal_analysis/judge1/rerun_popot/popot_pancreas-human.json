@@ -1,0 +1,6657 @@
+{
+ "dataset": "pancreas-human",
+ "n_genes": 18561,
+ "n_transitions": 14,
+ "n_test": 4640,
+ "cells": [
+  111,
+  612,
+  361,
+  116,
+  50,
+  53,
+  68,
+  79,
+  191,
+  218,
+  132,
+  286,
+  698,
+  616,
+  105
+ ],
+ "protocol": "Population-level OT on cell-state composition for Dileo & Sottoriva Task 2: a STRICT rolling-origin prototype.\n\nTransition i maps snapshot i -> i+1 and reads snapshots 0..i only (gastrulation-human bins 2..31, pancreas-human\nbins 0..14; first N genes of the node files, raw UMI bin statistics m, s, f, n cells).\n\nModel, per transition i\n 1. archetypes: weighted-KL NMF of the CP10k bin profiles of snapshots 0..i (crossgene nmf_kl.fit_subset through\n    forecasts.NMFMix.fit; row weight n_b lib_b / 1e4; K in {3, 6, 8}, K_eff = min(K, i + 1)). Rows of W = UMI\n    fractions P_b of the K archetypes; cost between archetypes C_kl = mean_g (log1p H_kg - log1p H_lg)^2 divided by\n    its mean off-diagonal value (crossgene's cost).\n 2. cell fractions: pi_bk = P_bk lib_b c_k / sum_k' (.), with c_k = 1 / (UMI per cell of archetype k) from a ridge\n    fit of sum_k P_bk lib_b c_k = 1 over the bins (weights n_b, shrunk to 1 / mean library, clipped to [1/4, 4] x).\n 3. archetype count laws: per gene and archetype the triplet A_k = (mean m_k, nonzero fraction f_k, second moment\n    e_k = E[c^2]), fitted with pi fixed by a weighted-KL multiplicative loop on the three raw bin channels. For a\n    mixture of cell populations the identities m_b = sum_k pi_bk m_k, f_b = sum_k pi_bk f_k, e_b = sum_k pi_bk e_k\n    are exact, so a composition change moves the whole count law of every gene, zero fraction included.\n 4. population forecast of pi_{i+1} (the only place OT / SB enters):\n      persist | lin1 (pi_i + (pi_i - pi_{i-1})) | loglin1 (multiplicative)                     -- no OT\n      ot0.05    balanced entropic OT plan between pi_{i-1} and pi_i (eps 0.05 on the normalised cost), its Markov\n                kernel applied once more to pi_i                         (crossgene forecasts.NMFMix.forecast_props)\n      uot0.05t1 unbalanced entropic OT (KL marginal relaxation tau = 1): growth of each archetype kept and\n                extrapolated together with the transport                 (crossgene forecasts.NMFMix.forecast_props)\n      sb3 / sbW static Schroedinger bridge: one time-homogeneous Markov kernel over archetypes = cell-weighted pool\n                of the conditional entropic OT plans of the last 3 / 8 consecutive pairs, applied to pi_i (new here)\n 5. map back by the mixture shift: T_hat = T_state + (pi_hat - pi_state) A for the three channels. T_state is the\n    gene's own law pooled over the last k bins (box k: cell-weighted mixture of the triplets, k in {1, 2, 4}; pi_state\n    pooled with the same weights) or mixavg3 (pi_i A + the residual T_b - pi_b A averaged over 3 bins with weights\n    n / (n + 50)). Optional per-gene residual trend (box1 only): + beta [(T_i - T_{i-1}) - (pi_i - pi_{i-1}) A],\n    beta in {0.5, 1}; lin1 with beta = 1 is exactly the raw-mean per-gene trend, so the two-pathway model nests it.\n    Fix-up: m >= 0, 0 <= f <= min(1, m) (f = 1 - exp(-m) if m > 0 and f = 0), e >= max(m, m^2 / f).\n 6. observation / target: orig -> dist_bridge.expected_target(T_hat, m_i, n_i) (bin i+1 = n_i cells drawn from the\n    forecast law: zero-crossings analytic, the rest Monte Carlo, 256 draws, numpy generator keyed by transition and\n    config); l1 -> plug-in log1p(1e4 m_hat / sum m_hat) - log1p(CP10k_i); linear -> m_hat - m_i.\n 7. selection: rolling origin per transition, the config with the best mean dist_bridge.criterion (Pearson + tie-aware\n    expected P@K up + down, K = 200 / n_test x N, all genes, targets rebuilt from bins <= i) over the last 8 past\n    transitions j >= 1; ties within 1e-3 go to non-OT forecasters, then to the earlier config. No past transition\n    (i <= 1): orig uses box4 persist (= level + observation model), l1 / linear the repeat-last-change trend.\nComparators run here: repeat-last-change trend (all targets); level + observation model (box4 persist; and RO over\nbox2 / box4 persist); RO groups restricted to non-OT / OT forecasters / one forecaster at a time (isolates the OT\nincrement, paired Wilcoxon over transitions); ORACLE next composition (bin i+1 projected on the strict archetypes,\nNOT strict, ceiling of any composition forecaster). Reproduction check: crossgene 'nmf_linear_props' on l1 with\ntheir own pipeline. Diagnostics: turn-on / turn-off AUC on genes at zero / nonzero in bin i, composition forecast\nerror (total variation against the oracle projection).\nScores: crossgene common.masks (10 draws of a random 25 % of genes per transition, seed 20261022), Pearson and\nP@200 up / down with np.argsort (their metric); 'i>=1' = mean over transitions 1..T-1 (NaN Pearson -> 0); 'all' =\nnanmean over all transitions including i = 0 (the convention of the CONTEXT DistBridge numbers).\nUsage: python popot.py <dataset>   ->   popot_<dataset>.json\n",
+ "n_configs": {
+  "orig": 38,
+  "l1": 120,
+  "linear": 120
+ },
+ "targets": {
+  "orig": {
+   "comparators": {
+    "trend_repeat_last_change": {
+     "i>=1": [
+      -0.3951,
+      0.04,
+      0.0376
+     ],
+     "all": [
+      -0.3951,
+      0.0371,
+      0.0349
+     ],
+     "i>=1_no_last": [
+      -0.4023,
+      0.0341,
+      0.0396
+     ]
+    },
+    "level_obs_box4_persist": {
+     "i>=1": [
+      0.4811,
+      0.3197,
+      0.4543
+     ],
+     "all": [
+      0.4636,
+      0.2969,
+      0.4505
+     ],
+     "i>=1_no_last": [
+      0.4848,
+      0.3375,
+      0.4648
+     ]
+    }
+   },
+   "groups": {
+    "full": {
+     "i>=1": [
+      0.4778,
+      0.3135,
+      0.4554
+     ],
+     "all": [
+      0.4605,
+      0.2911,
+      0.4515
+     ],
+     "i>=1_no_last": [
+      0.4812,
+      0.3308,
+      0.466
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7245,
+     "turn_off_auc_mean_i>=1": 0.9475,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4875,
+       0.2045,
+       0.4525
+      ],
+      [
+       0.4872,
+       0.27,
+       0.384
+      ],
+      [
+       0.5143,
+       0.437,
+       0.4685
+      ],
+      [
+       0.5307,
+       0.4185,
+       0.4925
+      ],
+      [
+       0.5276,
+       0.4315,
+       0.495
+      ],
+      [
+       0.4883,
+       0.345,
+       0.4085
+      ],
+      [
+       0.4682,
+       0.4,
+       0.539
+      ],
+      [
+       0.4206,
+       0.3385,
+       0.462
+      ],
+      [
+       0.4803,
+       0.3675,
+       0.3325
+      ],
+      [
+       0.4273,
+       0.333,
+       0.4515
+      ],
+      [
+       0.4596,
+       0.2705,
+       0.5595
+      ],
+      [
+       0.437,
+       0.1065,
+       0.3285
+      ]
+     ]
+    },
+    "noOT": {
+     "i>=1": [
+      0.4778,
+      0.3135,
+      0.4554
+     ],
+     "all": [
+      0.4605,
+      0.2911,
+      0.4515
+     ],
+     "i>=1_no_last": [
+      0.4812,
+      0.3308,
+      0.466
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7245,
+     "turn_off_auc_mean_i>=1": 0.9475,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4875,
+       0.2045,
+       0.4525
+      ],
+      [
+       0.4872,
+       0.27,
+       0.384
+      ],
+      [
+       0.5143,
+       0.437,
+       0.4685
+      ],
+      [
+       0.5307,
+       0.4185,
+       0.4925
+      ],
+      [
+       0.5276,
+       0.4315,
+       0.495
+      ],
+      [
+       0.4883,
+       0.345,
+       0.4085
+      ],
+      [
+       0.4682,
+       0.4,
+       0.539
+      ],
+      [
+       0.4206,
+       0.3385,
+       0.462
+      ],
+      [
+       0.4803,
+       0.3675,
+       0.3325
+      ],
+      [
+       0.4273,
+       0.333,
+       0.4515
+      ],
+      [
+       0.4596,
+       0.2705,
+       0.5595
+      ],
+      [
+       0.437,
+       0.1065,
+       0.3285
+      ]
+     ]
+    },
+    "OT_only": {
+     "i>=1": [
+      0.4515,
+      0.2753,
+      0.436
+     ],
+     "all": [
+      0.4361,
+      0.2556,
+      0.4335
+     ],
+     "i>=1_no_last": [
+      0.4465,
+      0.288,
+      0.4448
+     ],
+     "share_transitions_OT_selected": 0.923,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K3|uot0.05t1",
+      "box4|K6|sb3",
+      "box4|K3|sb3",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K8|sbW",
+      "box4|K8|sbW"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7189,
+     "turn_off_auc_mean_i>=1": 0.9473,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4381,
+       0.1715,
+       0.399
+      ],
+      [
+       0.4858,
+       0.224,
+       0.3875
+      ],
+      [
+       0.4653,
+       0.3375,
+       0.4395
+      ],
+      [
+       0.5346,
+       0.4,
+       0.491
+      ],
+      [
+       0.4925,
+       0.366,
+       0.4905
+      ],
+      [
+       0.4456,
+       0.3095,
+       0.399
+      ],
+      [
+       0.448,
+       0.3415,
+       0.5045
+      ],
+      [
+       0.4134,
+       0.298,
+       0.4675
+      ],
+      [
+       0.4131,
+       0.3315,
+       0.3115
+      ],
+      [
+       0.3059,
+       0.293,
+       0.371
+      ],
+      [
+       0.4319,
+       0.23,
+       0.531
+      ],
+      [
+       0.5125,
+       0.1235,
+       0.33
+      ]
+     ]
+    },
+    "persist_only(level_obs_RO)": {
+     "i>=1": [
+      0.4778,
+      0.3135,
+      0.4554
+     ],
+     "all": [
+      0.4605,
+      0.2911,
+      0.4515
+     ],
+     "i>=1_no_last": [
+      0.4812,
+      0.3308,
+      0.466
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7245,
+     "turn_off_auc_mean_i>=1": 0.9475,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4875,
+       0.2045,
+       0.4525
+      ],
+      [
+       0.4872,
+       0.27,
+       0.384
+      ],
+      [
+       0.5143,
+       0.437,
+       0.4685
+      ],
+      [
+       0.5307,
+       0.4185,
+       0.4925
+      ],
+      [
+       0.5276,
+       0.4315,
+       0.495
+      ],
+      [
+       0.4883,
+       0.345,
+       0.4085
+      ],
+      [
+       0.4682,
+       0.4,
+       0.539
+      ],
+      [
+       0.4206,
+       0.3385,
+       0.462
+      ],
+      [
+       0.4803,
+       0.3675,
+       0.3325
+      ],
+      [
+       0.4273,
+       0.333,
+       0.4515
+      ],
+      [
+       0.4596,
+       0.2705,
+       0.5595
+      ],
+      [
+       0.437,
+       0.1065,
+       0.3285
+      ]
+     ]
+    },
+    "composition_only(box_states,beta0)": {
+     "i>=1": [
+      0.4778,
+      0.3135,
+      0.4554
+     ],
+     "all": [
+      0.4605,
+      0.2911,
+      0.4515
+     ],
+     "i>=1_no_last": [
+      0.4812,
+      0.3308,
+      0.466
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7245,
+     "turn_off_auc_mean_i>=1": 0.9475,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4875,
+       0.2045,
+       0.4525
+      ],
+      [
+       0.4872,
+       0.27,
+       0.384
+      ],
+      [
+       0.5143,
+       0.437,
+       0.4685
+      ],
+      [
+       0.5307,
+       0.4185,
+       0.4925
+      ],
+      [
+       0.5276,
+       0.4315,
+       0.495
+      ],
+      [
+       0.4883,
+       0.345,
+       0.4085
+      ],
+      [
+       0.4682,
+       0.4,
+       0.539
+      ],
+      [
+       0.4206,
+       0.3385,
+       0.462
+      ],
+      [
+       0.4803,
+       0.3675,
+       0.3325
+      ],
+      [
+       0.4273,
+       0.333,
+       0.4515
+      ],
+      [
+       0.4596,
+       0.2705,
+       0.5595
+      ],
+      [
+       0.437,
+       0.1065,
+       0.3285
+      ]
+     ]
+    },
+    "fc=persist": {
+     "i>=1": [
+      0.4778,
+      0.3135,
+      0.4554
+     ],
+     "all": [
+      0.4605,
+      0.2911,
+      0.4515
+     ],
+     "i>=1_no_last": [
+      0.4812,
+      0.3308,
+      0.466
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K0|persist"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7245,
+     "turn_off_auc_mean_i>=1": 0.9475,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4875,
+       0.2045,
+       0.4525
+      ],
+      [
+       0.4872,
+       0.27,
+       0.384
+      ],
+      [
+       0.5143,
+       0.437,
+       0.4685
+      ],
+      [
+       0.5307,
+       0.4185,
+       0.4925
+      ],
+      [
+       0.5276,
+       0.4315,
+       0.495
+      ],
+      [
+       0.4883,
+       0.345,
+       0.4085
+      ],
+      [
+       0.4682,
+       0.4,
+       0.539
+      ],
+      [
+       0.4206,
+       0.3385,
+       0.462
+      ],
+      [
+       0.4803,
+       0.3675,
+       0.3325
+      ],
+      [
+       0.4273,
+       0.333,
+       0.4515
+      ],
+      [
+       0.4596,
+       0.2705,
+       0.5595
+      ],
+      [
+       0.437,
+       0.1065,
+       0.3285
+      ]
+     ]
+    },
+    "fc=lin1": {
+     "i>=1": [
+      0.4026,
+      0.2535,
+      0.3906
+     ],
+     "all": [
+      0.3906,
+      0.2354,
+      0.3914
+     ],
+     "i>=1_no_last": [
+      0.3988,
+      0.2642,
+      0.3958
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K6|lin1",
+      "box2|K6|lin1",
+      "box2|K6|lin1",
+      "box2|K3|lin1",
+      "box2|K6|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box4|K3|lin1",
+      "box2|K3|lin1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.6908,
+     "turn_off_auc_mean_i>=1": 0.9371,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4049,
+       0.166,
+       0.3975
+      ],
+      [
+       0.4671,
+       0.2245,
+       0.3875
+      ],
+      [
+       0.2402,
+       0.281,
+       0.1605
+      ],
+      [
+       0.3921,
+       0.3365,
+       0.3155
+      ],
+      [
+       0.4483,
+       0.379,
+       0.4635
+      ],
+      [
+       0.4815,
+       0.352,
+       0.397
+      ],
+      [
+       0.453,
+       0.313,
+       0.5165
+      ],
+      [
+       0.3901,
+       0.272,
+       0.4305
+      ],
+      [
+       0.3627,
+       0.2865,
+       0.3025
+      ],
+      [
+       0.2835,
+       0.1665,
+       0.364
+      ],
+      [
+       0.3787,
+       0.2405,
+       0.469
+      ],
+      [
+       0.4479,
+       0.1255,
+       0.328
+      ]
+     ]
+    },
+    "fc=loglin1": {
+     "i>=1": [
+      0.4209,
+      0.2588,
+      0.4204
+     ],
+     "all": [
+      0.4077,
+      0.2403,
+      0.419
+     ],
+     "i>=1_no_last": [
+      0.4186,
+      0.2701,
+      0.4281
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K6|loglin1",
+      "box2|K8|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7066,
+     "turn_off_auc_mean_i>=1": 0.9401,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.2931,
+       0.018,
+       0.391
+      ],
+      [
+       0.4233,
+       0.2305,
+       0.37
+      ],
+      [
+       0.3209,
+       0.2955,
+       0.281
+      ],
+      [
+       0.4432,
+       0.373,
+       0.4315
+      ],
+      [
+       0.4956,
+       0.3935,
+       0.491
+      ],
+      [
+       0.4525,
+       0.326,
+       0.3925
+      ],
+      [
+       0.4532,
+       0.3375,
+       0.5135
+      ],
+      [
+       0.3917,
+       0.274,
+       0.432
+      ],
+      [
+       0.4825,
+       0.3385,
+       0.349
+      ],
+      [
+       0.3359,
+       0.248,
+       0.396
+      ],
+      [
+       0.448,
+       0.254,
+       0.544
+      ],
+      [
+       0.449,
+       0.1225,
+       0.3275
+      ]
+     ]
+    },
+    "fc=ot0.05": {
+     "i>=1": [
+      0.4225,
+      0.2511,
+      0.4137
+     ],
+     "all": [
+      0.4091,
+      0.2332,
+      0.4128
+     ],
+     "i>=1_no_last": [
+      0.4216,
+      0.263,
+      0.4223
+     ],
+     "share_transitions_OT_selected": 0.923,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box4|K6|ot0.05",
+      "box2|K6|ot0.05",
+      "box2|K6|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05",
+      "box4|K3|ot0.05"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7162,
+     "turn_off_auc_mean_i>=1": 0.9408,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.47,
+       0.126,
+       0.415
+      ],
+      [
+       0.4772,
+       0.227,
+       0.3895
+      ],
+      [
+       0.3395,
+       0.3235,
+       0.326
+      ],
+      [
+       0.4844,
+       0.34,
+       0.4585
+      ],
+      [
+       0.4851,
+       0.3455,
+       0.479
+      ],
+      [
+       0.4672,
+       0.3255,
+       0.3835
+      ],
+      [
+       0.4445,
+       0.277,
+       0.513
+      ],
+      [
+       0.3948,
+       0.264,
+       0.445
+      ],
+      [
+       0.3632,
+       0.2885,
+       0.316
+      ],
+      [
+       0.2753,
+       0.2565,
+       0.3315
+      ],
+      [
+       0.3745,
+       0.229,
+       0.464
+      ],
+      [
+       0.4335,
+       0.109,
+       0.311
+      ]
+     ]
+    },
+    "fc=uot0.05t1": {
+     "i>=1": [
+      0.4328,
+      0.2637,
+      0.4173
+     ],
+     "all": [
+      0.4187,
+      0.2448,
+      0.4161
+     ],
+     "i>=1_no_last": [
+      0.4315,
+      0.2753,
+      0.4248
+     ],
+     "share_transitions_OT_selected": 0.923,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K3|uot0.05t1",
+      "box2|K3|uot0.05t1",
+      "box2|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box2|K3|uot0.05t1",
+      "box2|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box4|K3|uot0.05t1",
+      "box2|K3|uot0.05t1"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7173,
+     "turn_off_auc_mean_i>=1": 0.9435,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4381,
+       0.1715,
+       0.399
+      ],
+      [
+       0.5013,
+       0.223,
+       0.376
+      ],
+      [
+       0.385,
+       0.319,
+       0.346
+      ],
+      [
+       0.5067,
+       0.3525,
+       0.47
+      ],
+      [
+       0.4873,
+       0.348,
+       0.4795
+      ],
+      [
+       0.4807,
+       0.3495,
+       0.3985
+      ],
+      [
+       0.4533,
+       0.325,
+       0.5145
+      ],
+      [
+       0.3962,
+       0.2695,
+       0.4425
+      ],
+      [
+       0.3798,
+       0.2895,
+       0.317
+      ],
+      [
+       0.2858,
+       0.2645,
+       0.34
+      ],
+      [
+       0.3801,
+       0.2385,
+       0.4685
+      ],
+      [
+       0.4484,
+       0.124,
+       0.327
+      ]
+     ]
+    },
+    "fc=sb3": {
+     "i>=1": [
+      0.4362,
+      0.2597,
+      0.421
+     ],
+     "all": [
+      0.4219,
+      0.2411,
+      0.4196
+     ],
+     "i>=1_no_last": [
+      0.4315,
+      0.2707,
+      0.429
+     ],
+     "share_transitions_OT_selected": 0.923,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K8|sb3",
+      "box4|K6|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K6|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K3|sb3",
+      "box4|K6|sb3",
+      "box4|K6|sb3"
+     ],
+     "turn_on_auc_mean_i>=1": 0.7119,
+     "turn_off_auc_mean_i>=1": 0.9436,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4734,
+       0.174,
+       0.4105
+      ],
+      [
+       0.4858,
+       0.224,
+       0.3875
+      ],
+      [
+       0.4653,
+       0.3375,
+       0.4395
+      ],
+      [
+       0.5133,
+       0.359,
+       0.4765
+      ],
+      [
+       0.4416,
+       0.3175,
+       0.468
+      ],
+      [
+       0.4554,
+       0.3065,
+       0.372
+      ],
+      [
+       0.4558,
+       0.3575,
+       0.502
+      ],
+      [
+       0.3988,
+       0.272,
+       0.446
+      ],
+      [
+       0.3209,
+       0.2655,
+       0.289
+      ],
+      [
+       0.2757,
+       0.256,
+       0.3335
+      ],
+      [
+       0.4088,
+       0.2255,
+       0.477
+      ],
+      [
+       0.4926,
+       0.1275,
+       0.325
+      ]
+     ]
+    },
+    "fc=sbW": {
+     "i>=1": [
+      0.4546,
+      0.2757,
+      0.4373
+     ],
+     "all": [
+      0.4389,
+      0.256,
+      0.4348
+     ],
+     "i>=1_no_last": [
+      0.4497,
+      0.2884,
+      0.4462
+     ],
+     "share_transitions_OT_selected": 0.923,
+     "selected": [
+      "box4|K0|persist",
+      "box4|K0|persist",
+      "box2|K3|sbW",
+      "box4|K6|sbW",
+      "box4|K3|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K6|sbW",
+      "box4|K8|sbW",
+      "box4|K8|sbW"
+     ],
+     "turn_on_auc_mean_i>=1": 0.719,
+     "turn_off_auc_mean_i>=1": 0.9475,
+     "per_transition": [
+      [
+       0.2353,
+       0.0,
+       0.4015
+      ],
+      [
+       0.4834,
+       0.153,
+       0.546
+      ],
+      [
+       0.4729,
+       0.1755,
+       0.4135
+      ],
+      [
+       0.486,
+       0.2245,
+       0.3895
+      ],
+      [
+       0.4697,
+       0.3385,
+       0.44
+      ],
+      [
+       0.5346,
+       0.4,
+       0.491
+      ],
+      [
+       0.4925,
+       0.366,
+       0.4905
+      ],
+      [
+       0.4456,
+       0.3095,
+       0.399
+      ],
+      [
+       0.448,
+       0.3415,
+       0.5045
+      ],
+      [
+       0.4134,
+       0.298,
+       0.4675
+      ],
+      [
+       0.4131,
+       0.3315,
+       0.3115
+      ],
+      [
+       0.3059,
+       0.293,
+       0.371
+      ],
+      [
+       0.4319,
+       0.23,
+       0.531
+      ],
+      [
+       0.5125,
+       0.1235,
+       0.33
+      ]
+     ]
+    }
+   },
+   "paired": {
+    "full - noOT": {
+     "pearson": {
+      "mean_delta": 0.0,
+      "n_better": 0,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": null
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0,
+      "n_better": 0,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": null
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0,
+      "n_better": 0,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": null
+     },
+     "J": {
+      "mean_delta": 0.0,
+      "n_better": 0,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": null
+     }
+    },
+    "OT_only - noOT": {
+     "pearson": {
+      "mean_delta": -0.0263,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.04248046875
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0382,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.0009765625
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0194,
+      "n_better": 3,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.01611328125
+     },
+     "J": {
+      "mean_delta": -0.0839,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.0048828125
+     }
+    },
+    "fc=ot0.05 - fc=lin1": {
+     "pearson": {
+      "mean_delta": 0.0199,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.33935546875
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0024,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.4697265625
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0231,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.423828125
+     },
+     "J": {
+      "mean_delta": 0.0406,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.5185546875
+     }
+    },
+    "fc=ot0.05 - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0553,
+      "n_better": 0,
+      "n_worse": 12,
+      "wilcoxon_two_sided_p": 0.00048828125
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0624,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.0009765625
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0417,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.0009765625
+     },
+     "J": {
+      "mean_delta": -0.1594,
+      "n_better": 0,
+      "n_worse": 12,
+      "wilcoxon_two_sided_p": 0.00048828125
+     }
+    },
+    "fc=uot0.05t1 - fc=loglin1": {
+     "pearson": {
+      "mean_delta": 0.0118,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.6220703125
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0049,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.8330078125
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0031,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.9541015625
+     },
+     "J": {
+      "mean_delta": 0.0136,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.90966796875
+     }
+    },
+    "fc=sb3 - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0416,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.01611328125
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0538,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.0009765625
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0344,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.00146484375
+     },
+     "J": {
+      "mean_delta": -0.1299,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.00146484375
+     }
+    },
+    "fc=sbW - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0233,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.04248046875
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0378,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.0009765625
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0181,
+      "n_better": 3,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.02099609375
+     },
+     "J": {
+      "mean_delta": -0.0791,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.0068359375
+     }
+    },
+    "fc=sb3 - fc=lin1": {
+     "pearson": {
+      "mean_delta": 0.0337,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.12939453125
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0061,
+      "n_better": 6,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.7001953125
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0303,
+      "n_better": 6,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.7646484375
+     },
+     "J": {
+      "mean_delta": 0.0701,
+      "n_better": 9,
+      "n_worse": 3,
+      "wilcoxon_two_sided_p": 0.30126953125
+     }
+    },
+    "full - persist_only(level_obs_RO)": {
+     "pearson": {
+      "mean_delta": 0.0,
+      "n_better": 0,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": null
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0,
+      "n_better": 0,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": null
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0,
+      "n_better": 0,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": null
+     },
+     "J": {
+      "mean_delta": 0.0,
+      "n_better": 0,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": null
+     }
+    },
+    "full - trend": {
+     "pearson": {
+      "mean_delta": 0.8729,
+      "n_better": 13,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.000244140625
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.2735,
+      "n_better": 12,
+      "n_worse": 1,
+      "wilcoxon_two_sided_p": 0.00048828125
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.4178,
+      "n_better": 13,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.000244140625
+     },
+     "J": {
+      "mean_delta": 1.5642,
+      "n_better": 13,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.000244140625
+     }
+    },
+    "noOT - trend": {
+     "pearson": {
+      "mean_delta": 0.8729,
+      "n_better": 13,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.000244140625
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.2735,
+      "n_better": 12,
+      "n_worse": 1,
+      "wilcoxon_two_sided_p": 0.00048828125
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.4178,
+      "n_better": 13,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.000244140625
+     },
+     "J": {
+      "mean_delta": 1.5642,
+      "n_better": 13,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.000244140625
+     }
+    },
+    "composition_only(box_states,beta0) - trend": {
+     "pearson": {
+      "mean_delta": 0.8729,
+      "n_better": 13,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.000244140625
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.2735,
+      "n_better": 12,
+      "n_worse": 1,
+      "wilcoxon_two_sided_p": 0.00048828125
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.4178,
+      "n_better": 13,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.000244140625
+     },
+     "J": {
+      "mean_delta": 1.5642,
+      "n_better": 13,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.000244140625
+     }
+    }
+   },
+   "fixed_configs_hindsight_NOT_strict": {
+    "persist": {
+     "config": "box4|K0|persist",
+     "i>=1": [
+      0.4811,
+      0.3197,
+      0.4543
+     ],
+     "all": [
+      0.4636,
+      0.2969,
+      0.4505
+     ],
+     "i>=1_no_last": [
+      0.4848,
+      0.3375,
+      0.4648
+     ]
+    },
+    "lin1": {
+     "config": "box2|K3|lin1",
+     "i>=1": [
+      0.4157,
+      0.2458,
+      0.3993
+     ],
+     "all": [
+      0.4028,
+      0.2282,
+      0.3995
+     ],
+     "i>=1_no_last": [
+      0.413,
+      0.2558,
+      0.4052
+     ]
+    },
+    "loglin1": {
+     "config": "box2|K3|loglin1",
+     "i>=1": [
+      0.4308,
+      0.2613,
+      0.4203
+     ],
+     "all": [
+      0.4168,
+      0.2426,
+      0.4183
+     ],
+     "i>=1_no_last": [
+      0.4293,
+      0.2728,
+      0.428
+     ]
+    },
+    "ot0.05": {
+     "config": "box4|K3|ot0.05",
+     "i>=1": [
+      0.4328,
+      0.2505,
+      0.4145
+     ],
+     "all": [
+      0.4187,
+      0.2326,
+      0.4134
+     ],
+     "i>=1_no_last": [
+      0.4328,
+      0.2623,
+      0.4232
+     ]
+    },
+    "uot0.05t1": {
+     "config": "box2|K3|uot0.05t1",
+     "i>=1": [
+      0.4362,
+      0.2557,
+      0.4242
+     ],
+     "all": [
+      0.4218,
+      0.2375,
+      0.4221
+     ],
+     "i>=1_no_last": [
+      0.4352,
+      0.2667,
+      0.4322
+     ]
+    },
+    "sb3": {
+     "config": "box4|K6|sb3",
+     "i>=1": [
+      0.4438,
+      0.263,
+      0.4238
+     ],
+     "all": [
+      0.4289,
+      0.2442,
+      0.421
+     ],
+     "i>=1_no_last": [
+      0.4398,
+      0.2742,
+      0.4321
+     ]
+    },
+    "sbW": {
+     "config": "box4|K8|sbW",
+     "i>=1": [
+      0.46,
+      0.2759,
+      0.4332
+     ],
+     "all": [
+      0.4439,
+      0.2562,
+      0.4303
+     ],
+     "i>=1_no_last": [
+      0.4556,
+      0.2886,
+      0.4418
+     ]
+    }
+   },
+   "oracle_next_composition_NOT_strict": {
+    "ORACLE_props|box4|K3": {
+     "i>=1": [
+      0.4631,
+      0.2773,
+      0.4339
+     ],
+     "all": [
+      0.4468,
+      0.2575,
+      0.4316
+     ],
+     "i>=1_no_last": [
+      0.4655,
+      0.2914,
+      0.4443
+     ]
+    },
+    "ORACLE_props|box4|K6": {
+     "i>=1": [
+      0.4654,
+      0.281,
+      0.4337
+     ],
+     "all": [
+      0.449,
+      0.2609,
+      0.4314
+     ],
+     "i>=1_no_last": [
+      0.4656,
+      0.2948,
+      0.4426
+     ]
+    },
+    "ORACLE_props|box4|K8": {
+     "i>=1": [
+      0.4661,
+      0.2844,
+      0.4332
+     ],
+     "all": [
+      0.4496,
+      0.2641,
+      0.431
+     ],
+     "i>=1_no_last": [
+      0.4664,
+      0.2983,
+      0.4424
+     ]
+    }
+   }
+  },
+  "l1": {
+   "comparators": {
+    "trend_repeat_last_change": {
+     "i>=1": [
+      0.16,
+      0.2231,
+      0.2171
+     ],
+     "all": [
+      0.16,
+      0.2072,
+      0.2016
+     ],
+     "i>=1_no_last": [
+      0.1354,
+      0.2099,
+      0.2101
+     ]
+    },
+    "level_box4_persist_plugin": {
+     "i>=1": [
+      -0.1554,
+      0.1007,
+      0.1671
+     ],
+     "all": [
+      -0.1455,
+      0.0961,
+      0.1582
+     ],
+     "i>=1_no_last": [
+      -0.1381,
+      0.1062,
+      0.1727
+     ]
+    }
+   },
+   "groups": {
+    "full": {
+     "i>=1": [
+      0.0637,
+      0.1824,
+      0.1923
+     ],
+     "all": [
+      0.0637,
+      0.1694,
+      0.1785
+     ],
+     "i>=1_no_last": [
+      0.0331,
+      0.1661,
+      0.1826
+     ],
+     "share_transitions_OT_selected": 0.417,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|lin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1|K6|sb3",
+      "box2|K3|sbW",
+      "box2|K3|sbW",
+      "box1|K8|sb3",
+      "box1|K6|sb3",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0161,
+       0.1245,
+       0.134
+      ],
+      [
+       0.0922,
+       0.2235,
+       0.134
+      ],
+      [
+       0.0587,
+       0.1675,
+       0.1845
+      ],
+      [
+       -0.1374,
+       0.0995,
+       0.1205
+      ],
+      [
+       -0.0819,
+       0.1585,
+       0.136
+      ],
+      [
+       0.023,
+       0.167,
+       0.197
+      ],
+      [
+       -0.197,
+       0.0855,
+       0.125
+      ],
+      [
+       -0.218,
+       0.1055,
+       0.1475
+      ],
+      [
+       -0.2083,
+       0.0575,
+       0.1045
+      ],
+      [
+       0.2906,
+       0.2615,
+       0.29
+      ],
+      [
+       0.4686,
+       0.319,
+       0.3435
+      ],
+      [
+       0.4312,
+       0.3785,
+       0.308
+      ]
+     ]
+    },
+    "noOT": {
+     "i>=1": [
+      0.1332,
+      0.1993,
+      0.2107
+     ],
+     "all": [
+      0.1332,
+      0.185,
+      0.1957
+     ],
+     "i>=1_no_last": [
+      0.1083,
+      0.1843,
+      0.2026
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|lin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1|K3|lin1",
+      "box2|K3|loglin1",
+      "box2|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0161,
+       0.1245,
+       0.134
+      ],
+      [
+       0.0922,
+       0.2235,
+       0.134
+      ],
+      [
+       0.0587,
+       0.1675,
+       0.1845
+      ],
+      [
+       -0.1374,
+       0.0995,
+       0.1205
+      ],
+      [
+       -0.0572,
+       0.155,
+       0.111
+      ],
+      [
+       -0.0616,
+       0.083,
+       0.1795
+      ],
+      [
+       -0.208,
+       0.0775,
+       0.1235
+      ],
+      [
+       0.3054,
+       0.267,
+       0.278
+      ],
+      [
+       0.2415,
+       0.2105,
+       0.258
+      ],
+      [
+       0.2906,
+       0.2615,
+       0.29
+      ],
+      [
+       0.4686,
+       0.319,
+       0.3435
+      ],
+      [
+       0.4312,
+       0.3785,
+       0.308
+      ]
+     ]
+    },
+    "OT_only": {
+     "i>=1": [
+      0.0596,
+      0.181,
+      0.1896
+     ],
+     "all": [
+      0.0596,
+      0.1681,
+      0.1761
+     ],
+     "i>=1_no_last": [
+      0.0286,
+      0.1645,
+      0.1798
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta0.5|K3|ot0.05",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1|K6|sb3",
+      "box2|K3|sbW",
+      "box2|K3|sbW",
+      "box1|K8|sb3",
+      "box1|K6|sb3",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0314,
+       0.133,
+       0.1195
+      ],
+      [
+       0.0968,
+       0.219,
+       0.1275
+      ],
+      [
+       0.0378,
+       0.148,
+       0.174
+      ],
+      [
+       -0.1561,
+       0.0975,
+       0.1195
+      ],
+      [
+       -0.0819,
+       0.1585,
+       0.136
+      ],
+      [
+       0.023,
+       0.167,
+       0.197
+      ],
+      [
+       -0.197,
+       0.0855,
+       0.125
+      ],
+      [
+       -0.218,
+       0.1055,
+       0.1475
+      ],
+      [
+       -0.2083,
+       0.0575,
+       0.1045
+      ],
+      [
+       0.2846,
+       0.2585,
+       0.2895
+      ],
+      [
+       0.471,
+       0.321,
+       0.3425
+      ],
+      [
+       0.4311,
+       0.3785,
+       0.3075
+      ]
+     ]
+    },
+    "persist_only(level_obs_RO)": {
+     "i>=1": [
+      -0.0978,
+      0.1062,
+      0.1423
+     ],
+     "all": [
+      -0.0978,
+      0.0986,
+      0.1321
+     ],
+     "i>=1_no_last": [
+      -0.0756,
+      0.1122,
+      0.1458
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box4|K0|persist"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0253,
+       0.047,
+       0.0195
+      ],
+      [
+       0.0115,
+       0.0135,
+       0.0095
+      ],
+      [
+       -0.0045,
+       0.152,
+       0.2055
+      ],
+      [
+       0.1679,
+       0.2115,
+       0.223
+      ],
+      [
+       0.155,
+       0.2045,
+       0.235
+      ],
+      [
+       0.0044,
+       0.175,
+       0.2015
+      ],
+      [
+       -0.2333,
+       0.075,
+       0.109
+      ],
+      [
+       -0.2723,
+       0.0765,
+       0.111
+      ],
+      [
+       -0.1995,
+       0.0735,
+       0.1785
+      ],
+      [
+       -0.3854,
+       0.05,
+       0.1035
+      ],
+      [
+       -0.4492,
+       0.0445,
+       0.0785
+      ],
+      [
+       -0.3634,
+       0.0345,
+       0.1005
+      ]
+     ]
+    },
+    "composition_only(box_states,beta0)": {
+     "i>=1": [
+      0.0257,
+      0.1679,
+      0.1866
+     ],
+     "all": [
+      0.0257,
+      0.1559,
+      0.1733
+     ],
+     "i>=1_no_last": [
+      0.0065,
+      0.1522,
+      0.1826
+     ],
+     "share_transitions_OT_selected": 0.5,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1|K3|lin1",
+      "box1|K3|loglin1",
+      "box1|K6|lin1",
+      "box1|K3|lin1",
+      "box1|K6|sb3",
+      "box2|K3|sbW",
+      "box2|K3|sbW",
+      "box1|K8|sb3",
+      "box1|K6|sb3",
+      "box1|K3|loglin1",
+      "box1|K3|loglin1",
+      "box1|K6|uot0.05t1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       0.0032,
+       0.1325,
+       0.156
+      ],
+      [
+       0.0462,
+       0.177,
+       0.1485
+      ],
+      [
+       0.0009,
+       0.159,
+       0.175
+      ],
+      [
+       0.0152,
+       0.1675,
+       0.145
+      ],
+      [
+       -0.0819,
+       0.1585,
+       0.136
+      ],
+      [
+       0.023,
+       0.167,
+       0.197
+      ],
+      [
+       -0.197,
+       0.0855,
+       0.125
+      ],
+      [
+       -0.218,
+       0.1055,
+       0.1475
+      ],
+      [
+       -0.2083,
+       0.0575,
+       0.1045
+      ],
+      [
+       0.2411,
+       0.2345,
+       0.3495
+      ],
+      [
+       0.13,
+       0.1585,
+       0.232
+      ],
+      [
+       0.2569,
+       0.356,
+       0.235
+      ]
+     ]
+    },
+    "two_pathway(box1+beta)": {
+     "i>=1": [
+      0.1522,
+      0.2045,
+      0.2174
+     ],
+     "all": [
+      0.1522,
+      0.1899,
+      0.2019
+     ],
+     "i>=1_no_last": [
+      0.129,
+      0.19,
+      0.2098
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|lin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K8|loglin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0161,
+       0.1245,
+       0.134
+      ],
+      [
+       0.0922,
+       0.2235,
+       0.134
+      ],
+      [
+       0.0587,
+       0.1675,
+       0.1845
+      ],
+      [
+       -0.1374,
+       0.0995,
+       0.1205
+      ],
+      [
+       -0.1194,
+       0.123,
+       0.116
+      ],
+      [
+       -0.198,
+       0.0465,
+       0.1035
+      ],
+      [
+       0.2383,
+       0.214,
+       0.281
+      ],
+      [
+       0.3054,
+       0.267,
+       0.278
+      ],
+      [
+       0.2415,
+       0.2105,
+       0.258
+      ],
+      [
+       0.2906,
+       0.2615,
+       0.29
+      ],
+      [
+       0.4686,
+       0.319,
+       0.3435
+      ],
+      [
+       0.4312,
+       0.3785,
+       0.308
+      ]
+     ]
+    },
+    "mixavg3_denoised": {
+     "i>=1": [
+      -0.0012,
+      0.1453,
+      0.1811
+     ],
+     "all": [
+      -0.0012,
+      0.1349,
+      0.1682
+     ],
+     "i>=1_no_last": [
+      0.0015,
+      0.1436,
+      0.1809
+     ],
+     "share_transitions_OT_selected": 0.083,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K3|loglin1",
+      "mixavg3|K6|sb3",
+      "mixavg3|K8|lin1",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       0.0042,
+       0.1295,
+       0.155
+      ],
+      [
+       -0.1217,
+       0.0955,
+       0.1755
+      ],
+      [
+       0.0027,
+       0.167,
+       0.1865
+      ],
+      [
+       -0.0835,
+       0.0785,
+       0.148
+      ],
+      [
+       -0.03,
+       0.147,
+       0.149
+      ],
+      [
+       -0.1076,
+       0.0865,
+       0.152
+      ],
+      [
+       -0.1599,
+       0.0755,
+       0.1305
+      ],
+      [
+       0.0202,
+       0.1855,
+       0.2085
+      ],
+      [
+       -0.0435,
+       0.1265,
+       0.174
+      ],
+      [
+       -0.0531,
+       0.0985,
+       0.1885
+      ],
+      [
+       0.2674,
+       0.3095,
+       0.2285
+      ],
+      [
+       -0.0337,
+       0.1655,
+       0.1835
+      ]
+     ]
+    },
+    "fc=persist": {
+     "i>=1": [
+      0.1234,
+      0.1925,
+      0.2078
+     ],
+     "all": [
+      0.1234,
+      0.1787,
+      0.193
+     ],
+     "i>=1_no_last": [
+      0.0982,
+      0.177,
+      0.1995
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box2|K0|persist",
+      "box2|K0|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.053,
+       0.1075,
+       0.0935
+      ],
+      [
+       0.0966,
+       0.205,
+       0.1295
+      ],
+      [
+       0.0297,
+       0.121,
+       0.177
+      ],
+      [
+       -0.151,
+       0.0875,
+       0.13
+      ],
+      [
+       -0.0908,
+       0.117,
+       0.1285
+      ],
+      [
+       0.0044,
+       0.175,
+       0.2015
+      ],
+      [
+       -0.2333,
+       0.075,
+       0.109
+      ],
+      [
+       0.3064,
+       0.2655,
+       0.272
+      ],
+      [
+       0.2327,
+       0.204,
+       0.2555
+      ],
+      [
+       0.2516,
+       0.23,
+       0.2875
+      ],
+      [
+       0.4616,
+       0.3135,
+       0.335
+      ],
+      [
+       0.4264,
+       0.3775,
+       0.308
+      ]
+     ]
+    },
+    "fc=lin1": {
+     "i>=1": [
+      0.1415,
+      0.2076,
+      0.2117
+     ],
+     "all": [
+      0.1415,
+      0.1928,
+      0.1966
+     ],
+     "i>=1_no_last": [
+      0.1173,
+      0.1932,
+      0.2037
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1+beta0.5|K3|lin1",
+      "box1|K3|lin1",
+      "box2|K3|lin1",
+      "box2|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0161,
+       0.1245,
+       0.134
+      ],
+      [
+       0.0928,
+       0.2235,
+       0.1325
+      ],
+      [
+       0.0647,
+       0.172,
+       0.1855
+      ],
+      [
+       -0.1061,
+       0.1135,
+       0.13
+      ],
+      [
+       -0.0572,
+       0.155,
+       0.111
+      ],
+      [
+       0.0047,
+       0.1715,
+       0.1845
+      ],
+      [
+       -0.208,
+       0.0775,
+       0.1235
+      ],
+      [
+       0.3054,
+       0.267,
+       0.278
+      ],
+      [
+       0.2415,
+       0.2105,
+       0.258
+      ],
+      [
+       0.2906,
+       0.2615,
+       0.29
+      ],
+      [
+       0.4722,
+       0.3185,
+       0.342
+      ],
+      [
+       0.4325,
+       0.38,
+       0.3085
+      ]
+     ]
+    },
+    "fc=loglin1": {
+     "i>=1": [
+      0.1389,
+      0.2007,
+      0.2172
+     ],
+     "all": [
+      0.1389,
+      0.1863,
+      0.2016
+     ],
+     "i>=1_no_last": [
+      0.1145,
+      0.1858,
+      0.2096
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1+beta0.5|K3|loglin1",
+      "box1|K3|loglin1",
+      "box2|K3|loglin1",
+      "box2|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0058,
+       0.1275,
+       0.145
+      ],
+      [
+       0.0922,
+       0.2235,
+       0.134
+      ],
+      [
+       0.0587,
+       0.1675,
+       0.1845
+      ],
+      [
+       -0.1374,
+       0.0995,
+       0.1205
+      ],
+      [
+       -0.0565,
+       0.155,
+       0.111
+      ],
+      [
+       -0.0616,
+       0.083,
+       0.1795
+      ],
+      [
+       -0.205,
+       0.078,
+       0.1255
+      ],
+      [
+       0.3056,
+       0.2675,
+       0.277
+      ],
+      [
+       0.2993,
+       0.2365,
+       0.3175
+      ],
+      [
+       0.2928,
+       0.2495,
+       0.302
+      ],
+      [
+       0.4686,
+       0.319,
+       0.3435
+      ],
+      [
+       0.4312,
+       0.3785,
+       0.308
+      ]
+     ]
+    },
+    "fc=ot0.05": {
+     "i>=1": [
+      0.1505,
+      0.2105,
+      0.2161
+     ],
+     "all": [
+      0.1505,
+      0.1955,
+      0.2006
+     ],
+     "i>=1_no_last": [
+      0.1271,
+      0.1965,
+      0.2085
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta0.5|K3|ot0.05",
+      "box1|K3|ot0.05",
+      "box1|K3|ot0.05",
+      "box1|K3|ot0.05",
+      "box2|K6|ot0.05",
+      "box2|K3|ot0.05",
+      "box2|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0314,
+       0.133,
+       0.1195
+      ],
+      [
+       0.0517,
+       0.2045,
+       0.155
+      ],
+      [
+       0.0411,
+       0.1735,
+       0.171
+      ],
+      [
+       0.0015,
+       0.1675,
+       0.143
+      ],
+      [
+       0.0285,
+       0.151,
+       0.1535
+      ],
+      [
+       0.0189,
+       0.1675,
+       0.1935
+      ],
+      [
+       -0.2023,
+       0.086,
+       0.1275
+      ],
+      [
+       0.3056,
+       0.267,
+       0.277
+      ],
+      [
+       0.2334,
+       0.2055,
+       0.2545
+      ],
+      [
+       0.2846,
+       0.2585,
+       0.2895
+      ],
+      [
+       0.471,
+       0.321,
+       0.3425
+      ],
+      [
+       0.4311,
+       0.3785,
+       0.3075
+      ]
+     ]
+    },
+    "fc=uot0.05t1": {
+     "i>=1": [
+      0.1356,
+      0.2039,
+      0.2096
+     ],
+     "all": [
+      0.1356,
+      0.1893,
+      0.1946
+     ],
+     "i>=1_no_last": [
+      0.1111,
+      0.1893,
+      0.2014
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1|K3|uot0.05t1",
+      "box2|K3|uot0.05t1",
+      "box2|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.011,
+       0.1285,
+       0.1395
+      ],
+      [
+       0.0968,
+       0.219,
+       0.1275
+      ],
+      [
+       0.0378,
+       0.148,
+       0.174
+      ],
+      [
+       -0.1561,
+       0.0975,
+       0.1195
+      ],
+      [
+       -0.0538,
+       0.1555,
+       0.111
+      ],
+      [
+       0.0067,
+       0.1715,
+       0.1835
+      ],
+      [
+       -0.2079,
+       0.0795,
+       0.125
+      ],
+      [
+       0.3059,
+       0.266,
+       0.276
+      ],
+      [
+       0.2399,
+       0.2095,
+       0.2575
+      ],
+      [
+       0.2821,
+       0.254,
+       0.29
+      ],
+      [
+       0.4694,
+       0.3195,
+       0.3385
+      ],
+      [
+       0.4296,
+       0.3785,
+       0.3075
+      ]
+     ]
+    },
+    "fc=sb3": {
+     "i>=1": [
+      0.0494,
+      0.1722,
+      0.195
+     ],
+     "all": [
+      0.0494,
+      0.1599,
+      0.1811
+     ],
+     "i>=1_no_last": [
+      0.0177,
+      0.155,
+      0.1857
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta0.5|K3|sb3",
+      "box1|K3|sb3",
+      "box1+beta0.5|K3|sb3",
+      "box1+beta0.5|K3|sb3",
+      "box1|K6|sb3",
+      "box2|K3|sb3",
+      "box2|K3|sb3",
+      "box1|K8|sb3",
+      "box1|K6|sb3",
+      "box1+beta1|K3|sb3",
+      "box1+beta1|K3|sb3",
+      "box1+beta1|K3|sb3"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0428,
+       0.1255,
+       0.1115
+      ],
+      [
+       0.0047,
+       0.1455,
+       0.1895
+      ],
+      [
+       0.0264,
+       0.131,
+       0.1755
+      ],
+      [
+       -0.1601,
+       0.0965,
+       0.1235
+      ],
+      [
+       -0.0819,
+       0.1585,
+       0.136
+      ],
+      [
+       0.0341,
+       0.167,
+       0.215
+      ],
+      [
+       -0.1961,
+       0.0865,
+       0.126
+      ],
+      [
+       -0.218,
+       0.1055,
+       0.1475
+      ],
+      [
+       -0.2083,
+       0.0575,
+       0.1045
+      ],
+      [
+       0.2632,
+       0.243,
+       0.285
+      ],
+      [
+       0.4682,
+       0.3195,
+       0.339
+      ],
+      [
+       0.4304,
+       0.3785,
+       0.307
+      ]
+     ]
+    },
+    "fc=sbW": {
+     "i>=1": [
+      0.0755,
+      0.1772,
+      0.1989
+     ],
+     "all": [
+      0.0755,
+      0.1645,
+      0.1847
+     ],
+     "i>=1_no_last": [
+      0.0462,
+      0.1605,
+      0.1897
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta0.5|K3|sbW",
+      "box1|K3|sbW",
+      "box1+beta0.5|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1|K6|sbW",
+      "box2|K3|sbW",
+      "box2|K3|sbW",
+      "box1|K8|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K3|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.3231,
+       0.2235,
+       0.275
+      ],
+      [
+       -0.0428,
+       0.1255,
+       0.1115
+      ],
+      [
+       0.0047,
+       0.1455,
+       0.1895
+      ],
+      [
+       0.0242,
+       0.128,
+       0.1735
+      ],
+      [
+       -0.151,
+       0.0875,
+       0.13
+      ],
+      [
+       -0.059,
+       0.1635,
+       0.132
+      ],
+      [
+       0.023,
+       0.167,
+       0.197
+      ],
+      [
+       -0.197,
+       0.0855,
+       0.125
+      ],
+      [
+       -0.3168,
+       0.0505,
+       0.0635
+      ],
+      [
+       0.2271,
+       0.2,
+       0.2555
+      ],
+      [
+       0.2562,
+       0.236,
+       0.286
+      ],
+      [
+       0.4627,
+       0.313,
+       0.338
+      ],
+      [
+       0.4277,
+       0.3775,
+       0.3095
+      ]
+     ]
+    }
+   },
+   "paired": {
+    "full - noOT": {
+     "pearson": {
+      "mean_delta": -0.0694,
+      "n_better": 2,
+      "n_worse": 3,
+      "wilcoxon_two_sided_p": 0.4375
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0168,
+      "n_better": 3,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 0.8125
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0185,
+      "n_better": 3,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 0.8125
+     },
+     "J": {
+      "mean_delta": -0.1047,
+      "n_better": 3,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 0.8125
+     }
+    },
+    "OT_only - noOT": {
+     "pearson": {
+      "mean_delta": -0.0736,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.1513671875
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0183,
+      "n_better": 5,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.6533203125
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0211,
+      "n_better": 3,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.26611328125
+     },
+     "J": {
+      "mean_delta": -0.113,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.17626953125
+     }
+    },
+    "fc=ot0.05 - fc=lin1": {
+     "pearson": {
+      "mean_delta": 0.009,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.791015625
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.003,
+      "n_better": 5,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.9658203125
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0043,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.63525390625
+     },
+     "J": {
+      "mean_delta": 0.0163,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.9697265625
+     }
+    },
+    "fc=ot0.05 - fc=persist": {
+     "pearson": {
+      "mean_delta": 0.0271,
+      "n_better": 10,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 0.0341796875
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0181,
+      "n_better": 10,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 0.00732421875
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0082,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.06396484375
+     },
+     "J": {
+      "mean_delta": 0.0534,
+      "n_better": 10,
+      "n_worse": 2,
+      "wilcoxon_two_sided_p": 0.0068359375
+     }
+    },
+    "fc=uot0.05t1 - fc=loglin1": {
+     "pearson": {
+      "mean_delta": -0.0033,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.30126953125
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0032,
+      "n_better": 6,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.8310546875
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0076,
+      "n_better": 1,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.009765625
+     },
+     "J": {
+      "mean_delta": -0.0076,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.0771484375
+     }
+    },
+    "fc=sb3 - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.074,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 1.0
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0203,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.85009765625
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0128,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.7333984375
+     },
+     "J": {
+      "mean_delta": -0.1071,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.85009765625
+     }
+    },
+    "fc=sbW - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0479,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.791015625
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0153,
+      "n_better": 5,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 1.0
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0089,
+      "n_better": 6,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.556640625
+     },
+     "J": {
+      "mean_delta": -0.0721,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.67724609375
+     }
+    },
+    "fc=sb3 - fc=lin1": {
+     "pearson": {
+      "mean_delta": -0.0921,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.02099609375
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0354,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.04248046875
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0167,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.4697265625
+     },
+     "J": {
+      "mean_delta": -0.1443,
+      "n_better": 3,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.0341796875
+     }
+    },
+    "full - persist_only(level_obs_RO)": {
+     "pearson": {
+      "mean_delta": 0.1615,
+      "n_better": 9,
+      "n_worse": 3,
+      "wilcoxon_two_sided_p": 0.10986328125
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0762,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.12939453125
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.05,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.20361328125
+     },
+     "J": {
+      "mean_delta": 0.2877,
+      "n_better": 9,
+      "n_worse": 3,
+      "wilcoxon_two_sided_p": 0.1513671875
+     }
+    },
+    "full - trend": {
+     "pearson": {
+      "mean_delta": -0.0962,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.5693359375
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0407,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.06396484375
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0248,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.791015625
+     },
+     "J": {
+      "mean_delta": -0.1618,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.5185546875
+     }
+    },
+    "noOT - trend": {
+     "pearson": {
+      "mean_delta": -0.0268,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.85009765625
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0238,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.01611328125
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0064,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.5693359375
+     },
+     "J": {
+      "mean_delta": -0.057,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.9697265625
+     }
+    },
+    "two_pathway(box1+beta) - trend": {
+     "pearson": {
+      "mean_delta": -0.0078,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.5693359375
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0186,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.0048828125
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0003,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.4697265625
+     },
+     "J": {
+      "mean_delta": -0.0261,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.5185546875
+     }
+    },
+    "mixavg3_denoised - trend": {
+     "pearson": {
+      "mean_delta": -0.1612,
+      "n_better": 3,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.02099609375
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0778,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.00341796875
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.036,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.1513671875
+     },
+     "J": {
+      "mean_delta": -0.275,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.02685546875
+     }
+    },
+    "composition_only(box_states,beta0) - trend": {
+     "pearson": {
+      "mean_delta": -0.1342,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.09228515625
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0552,
+      "n_better": 3,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.0771484375
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0305,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.38037109375
+     },
+     "J": {
+      "mean_delta": -0.22,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.10986328125
+     }
+    }
+   },
+   "fixed_configs_hindsight_NOT_strict": {
+    "persist": {
+     "config": "box1+beta1|K3|persist",
+     "i>=1": [
+      0.1614,
+      0.1949,
+      0.2053
+     ],
+     "all": [
+      0.1486,
+      0.1836,
+      0.1937
+     ],
+     "i>=1_no_last": [
+      0.1393,
+      0.1797,
+      0.1967
+     ]
+    },
+    "lin1": {
+     "config": "box1+beta1|K3|lin1",
+     "i>=1": [
+      0.1752,
+      0.2093,
+      0.2247
+     ],
+     "all": [
+      0.1614,
+      0.197,
+      0.2117
+     ],
+     "i>=1_no_last": [
+      0.1537,
+      0.1951,
+      0.2177
+     ]
+    },
+    "loglin1": {
+     "config": "box1+beta1|K3|loglin1",
+     "i>=1": [
+      0.1732,
+      0.205,
+      0.2313
+     ],
+     "all": [
+      0.1596,
+      0.193,
+      0.2179
+     ],
+     "i>=1_no_last": [
+      0.1517,
+      0.1905,
+      0.2249
+     ]
+    },
+    "ot0.05": {
+     "config": "box1+beta1|K3|ot0.05",
+     "i>=1": [
+      0.1709,
+      0.205,
+      0.2211
+     ],
+     "all": [
+      0.1574,
+      0.193,
+      0.2084
+     ],
+     "i>=1_no_last": [
+      0.1492,
+      0.1906,
+      0.2139
+     ]
+    },
+    "uot0.05t1": {
+     "config": "box1+beta1|K3|uot0.05t1",
+     "i>=1": [
+      0.1716,
+      0.2018,
+      0.221
+     ],
+     "all": [
+      0.1581,
+      0.19,
+      0.2083
+     ],
+     "i>=1_no_last": [
+      0.1501,
+      0.1871,
+      0.2137
+     ]
+    },
+    "sb3": {
+     "config": "box1+beta1|K3|sb3",
+     "i>=1": [
+      0.1656,
+      0.2014,
+      0.2197
+     ],
+     "all": [
+      0.1525,
+      0.1896,
+      0.207
+     ],
+     "i>=1_no_last": [
+      0.1435,
+      0.1866,
+      0.2124
+     ]
+    },
+    "sbW": {
+     "config": "box1+beta1|K3|sbW",
+     "i>=1": [
+      0.1646,
+      0.2005,
+      0.219
+     ],
+     "all": [
+      0.1516,
+      0.1888,
+      0.2065
+     ],
+     "i>=1_no_last": [
+      0.1427,
+      0.1858,
+      0.2115
+     ]
+    }
+   },
+   "oracle_next_composition_NOT_strict": {
+    "ORACLE_props|box1|K3": {
+     "i>=1": [
+      0.0709,
+      0.1634,
+      0.2461
+     ],
+     "all": [
+      0.0709,
+      0.1517,
+      0.2285
+     ],
+     "i>=1_no_last": [
+      0.0733,
+      0.1592,
+      0.2549
+     ]
+    },
+    "ORACLE_props|box1|K6": {
+     "i>=1": [
+      0.1331,
+      0.205,
+      0.2324
+     ],
+     "all": [
+      0.1331,
+      0.1903,
+      0.2158
+     ],
+     "i>=1_no_last": [
+      0.1361,
+      0.1999,
+      0.2377
+     ]
+    },
+    "ORACLE_props|box1|K8": {
+     "i>=1": [
+      0.1407,
+      0.2025,
+      0.2334
+     ],
+     "all": [
+      0.1407,
+      0.188,
+      0.2167
+     ],
+     "i>=1_no_last": [
+      0.1438,
+      0.1978,
+      0.2374
+     ]
+    },
+    "ORACLE_props|box4|K3": {
+     "i>=1": [
+      -0.0877,
+      0.1182,
+      0.1754
+     ],
+     "all": [
+      -0.0877,
+      0.1098,
+      0.1629
+     ],
+     "i>=1_no_last": [
+      -0.0632,
+      0.126,
+      0.1849
+     ]
+    },
+    "ORACLE_props|box4|K6": {
+     "i>=1": [
+      0.0681,
+      0.1726,
+      0.2248
+     ],
+     "all": [
+      0.0681,
+      0.1603,
+      0.2088
+     ],
+     "i>=1_no_last": [
+      0.0834,
+      0.1766,
+      0.2311
+     ]
+    },
+    "ORACLE_props|box4|K8": {
+     "i>=1": [
+      0.0977,
+      0.1801,
+      0.2305
+     ],
+     "all": [
+      0.0977,
+      0.1672,
+      0.2141
+     ],
+     "i>=1_no_last": [
+      0.1131,
+      0.1839,
+      0.2363
+     ]
+    },
+    "ORACLE_props|mixavg3|K3": {
+     "i>=1": [
+      -0.1027,
+      0.116,
+      0.1715
+     ],
+     "all": [
+      -0.1027,
+      0.1077,
+      0.1592
+     ],
+     "i>=1_no_last": [
+      -0.0796,
+      0.1235,
+      0.1803
+     ]
+    },
+    "ORACLE_props|mixavg3|K6": {
+     "i>=1": [
+      0.0531,
+      0.1694,
+      0.2165
+     ],
+     "all": [
+      0.0531,
+      0.1573,
+      0.2011
+     ],
+     "i>=1_no_last": [
+      0.0638,
+      0.1711,
+      0.2213
+     ]
+    },
+    "ORACLE_props|mixavg3|K8": {
+     "i>=1": [
+      0.0793,
+      0.1786,
+      0.2266
+     ],
+     "all": [
+      0.0793,
+      0.1658,
+      0.2104
+     ],
+     "i>=1_no_last": [
+      0.0899,
+      0.1806,
+      0.2308
+     ]
+    }
+   }
+  },
+  "linear": {
+   "comparators": {
+    "trend_repeat_last_change": {
+     "i>=1": [
+      0.4013,
+      0.2933,
+      0.3575
+     ],
+     "all": [
+      0.4013,
+      0.2723,
+      0.3319
+     ],
+     "i>=1_no_last": [
+      0.3709,
+      0.2679,
+      0.358
+     ]
+    },
+    "level_box4_persist_plugin": {
+     "i>=1": [
+      -0.3772,
+      0.158,
+      0.223
+     ],
+     "all": [
+      -0.3515,
+      0.1516,
+      0.211
+     ],
+     "i>=1_no_last": [
+      -0.3502,
+      0.1638,
+      0.2298
+     ]
+    }
+   },
+   "groups": {
+    "full": {
+     "i>=1": [
+      0.2632,
+      0.2664,
+      0.3145
+     ],
+     "all": [
+      0.2632,
+      0.2474,
+      0.292
+     ],
+     "i>=1_no_last": [
+      0.2219,
+      0.2388,
+      0.3118
+     ],
+     "share_transitions_OT_selected": 0.5,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box2|K6|loglin1",
+      "box1|K6|ot0.05",
+      "box1+beta0.5|K6|ot0.05",
+      "box1|K6|sb3",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta1|K3|sb3"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.511,
+       0.1415,
+       0.3915
+      ],
+      [
+       0.2847,
+       0.2765,
+       0.281
+      ],
+      [
+       0.0636,
+       0.2005,
+       0.2785
+      ],
+      [
+       -0.2243,
+       0.1495,
+       0.2835
+      ],
+      [
+       -0.0649,
+       0.2285,
+       0.2055
+      ],
+      [
+       -0.3908,
+       0.096,
+       0.181
+      ],
+      [
+       0.5057,
+       0.2005,
+       0.4085
+      ],
+      [
+       0.6153,
+       0.2775,
+       0.406
+      ],
+      [
+       0.3045,
+       0.243,
+       0.234
+      ],
+      [
+       0.3936,
+       0.4225,
+       0.362
+      ],
+      [
+       0.6971,
+       0.4595,
+       0.358
+      ],
+      [
+       0.7589,
+       0.598,
+       0.3475
+      ]
+     ]
+    },
+    "noOT": {
+     "i>=1": [
+      0.3181,
+      0.2699,
+      0.3263
+     ],
+     "all": [
+      0.3181,
+      0.2506,
+      0.303
+     ],
+     "i>=1_no_last": [
+      0.2817,
+      0.243,
+      0.3243
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box2|K6|loglin1",
+      "box1+beta0.5|K6|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1|K6|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta1|K3|persist"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.5166,
+       0.16,
+       0.394
+      ],
+      [
+       0.2847,
+       0.2765,
+       0.281
+      ],
+      [
+       0.0566,
+       0.199,
+       0.283
+      ],
+      [
+       -0.2243,
+       0.1495,
+       0.2835
+      ],
+      [
+       0.1872,
+       0.2395,
+       0.1705
+      ],
+      [
+       0.07,
+       0.1145,
+       0.343
+      ],
+      [
+       0.5119,
+       0.2045,
+       0.4255
+      ],
+      [
+       0.6153,
+       0.2775,
+       0.406
+      ],
+      [
+       0.3045,
+       0.243,
+       0.234
+      ],
+      [
+       0.3936,
+       0.4225,
+       0.362
+      ],
+      [
+       0.6971,
+       0.4595,
+       0.358
+      ],
+      [
+       0.7549,
+       0.5935,
+       0.35
+      ]
+     ]
+    },
+    "OT_only": {
+     "i>=1": [
+      0.2586,
+      0.2603,
+      0.3213
+     ],
+     "all": [
+      0.2586,
+      0.2417,
+      0.2984
+     ],
+     "i>=1_no_last": [
+      0.2169,
+      0.2321,
+      0.3192
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1|K6|uot0.05t1",
+      "box1|K6|ot0.05",
+      "box1+beta0.5|K6|ot0.05",
+      "box1|K6|sb3",
+      "box1|K6|sb3",
+      "box1|K6|sb3",
+      "box1+beta0.5|K3|sb3",
+      "box1+beta0.5|K3|sb3",
+      "box1+beta1|K3|sb3"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.511,
+       0.1415,
+       0.3915
+      ],
+      [
+       0.2806,
+       0.274,
+       0.2795
+      ],
+      [
+       0.0636,
+       0.2005,
+       0.2785
+      ],
+      [
+       0.0262,
+       0.1405,
+       0.2815
+      ],
+      [
+       -0.0649,
+       0.2285,
+       0.2055
+      ],
+      [
+       -0.3908,
+       0.096,
+       0.181
+      ],
+      [
+       0.5057,
+       0.2005,
+       0.4085
+      ],
+      [
+       0.5949,
+       0.3005,
+       0.446
+      ],
+      [
+       -0.0669,
+       0.093,
+       0.265
+      ],
+      [
+       0.4319,
+       0.416,
+       0.3415
+      ],
+      [
+       0.7441,
+       0.525,
+       0.4
+      ],
+      [
+       0.7589,
+       0.598,
+       0.3475
+      ]
+     ]
+    },
+    "persist_only(level_obs_RO)": {
+     "i>=1": [
+      -0.1149,
+      0.0579,
+      0.0776
+     ],
+     "all": [
+      -0.1245,
+      0.0538,
+      0.072
+     ],
+     "i>=1_no_last": [
+      -0.1116,
+      0.0571,
+      0.0793
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box2|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box1|K0|persist",
+      "box4|K0|persist",
+      "box1|K0|persist"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.0852,
+       0.061,
+       0.04
+      ],
+      [
+       0.097,
+       0.018,
+       0.0185
+      ],
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       0.0036,
+       0.044,
+       0.0605
+      ],
+      [
+       0.0148,
+       0.0225,
+       0.024
+      ],
+      [
+       -0.08,
+       0.071,
+       0.07
+      ],
+      [
+       -0.838,
+       0.086,
+       0.0905
+      ],
+      [
+       0.0804,
+       0.0285,
+       0.0865
+      ],
+      [
+       -0.036,
+       0.0255,
+       0.013
+      ],
+      [
+       0.0139,
+       0.0285,
+       0.0295
+      ],
+      [
+       -0.6475,
+       0.1305,
+       0.167
+      ],
+      [
+       -0.154,
+       0.068,
+       0.0575
+      ]
+     ]
+    },
+    "composition_only(box_states,beta0)": {
+     "i>=1": [
+      0.2551,
+      0.2327,
+      0.3192
+     ],
+     "all": [
+      0.2551,
+      0.2161,
+      0.2964
+     ],
+     "i>=1_no_last": [
+      0.2361,
+      0.2213,
+      0.3243
+     ],
+     "share_transitions_OT_selected": 0.417,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1|K0|persist",
+      "box1|K3|loglin1",
+      "box1|K6|loglin1",
+      "box2|K6|loglin1",
+      "box1|K6|ot0.05",
+      "box1|K6|ot0.05",
+      "box1|K6|sb3",
+      "box1|K6|sb3",
+      "box1|K6|sb3",
+      "box1|K8|lin1",
+      "box1|K8|lin1",
+      "box1|K8|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.0852,
+       0.061,
+       0.04
+      ],
+      [
+       0.2163,
+       0.2385,
+       0.3405
+      ],
+      [
+       0.3619,
+       0.203,
+       0.415
+      ],
+      [
+       -0.2243,
+       0.1495,
+       0.2835
+      ],
+      [
+       -0.0649,
+       0.2285,
+       0.2055
+      ],
+      [
+       0.3881,
+       0.1145,
+       0.376
+      ],
+      [
+       0.5057,
+       0.2005,
+       0.4085
+      ],
+      [
+       0.5949,
+       0.3005,
+       0.446
+      ],
+      [
+       -0.0669,
+       0.093,
+       0.265
+      ],
+      [
+       0.3404,
+       0.4315,
+       0.3675
+      ],
+      [
+       0.7295,
+       0.4655,
+       0.3925
+      ],
+      [
+       0.4838,
+       0.3695,
+       0.2575
+      ]
+     ]
+    },
+    "two_pathway(box1+beta)": {
+     "i>=1": [
+      0.3092,
+      0.2675,
+      0.3245
+     ],
+     "all": [
+      0.3092,
+      0.2484,
+      0.3014
+     ],
+     "i>=1_no_last": [
+      0.2717,
+      0.2399,
+      0.3226
+     ],
+     "share_transitions_OT_selected": 0.417,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1+beta0.5|K6|loglin1",
+      "box1+beta0.5|K6|ot0.05",
+      "box1+beta0.5|K6|ot0.05",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta1|K3|sb3"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.511,
+       0.1415,
+       0.3915
+      ],
+      [
+       0.2847,
+       0.2765,
+       0.281
+      ],
+      [
+       0.0636,
+       0.2005,
+       0.2785
+      ],
+      [
+       -0.2,
+       0.1425,
+       0.279
+      ],
+      [
+       0.1909,
+       0.2355,
+       0.1805
+      ],
+      [
+       -0.3908,
+       0.096,
+       0.181
+      ],
+      [
+       0.8233,
+       0.2145,
+       0.5685
+      ],
+      [
+       0.6153,
+       0.2775,
+       0.406
+      ],
+      [
+       0.3045,
+       0.243,
+       0.234
+      ],
+      [
+       0.3936,
+       0.4225,
+       0.362
+      ],
+      [
+       0.6971,
+       0.4595,
+       0.358
+      ],
+      [
+       0.7589,
+       0.598,
+       0.3475
+      ]
+     ]
+    },
+    "mixavg3_denoised": {
+     "i>=1": [
+      0.0458,
+      0.2163,
+      0.3265
+     ],
+     "all": [
+      0.0458,
+      0.2009,
+      0.3031
+     ],
+     "i>=1_no_last": [
+      0.0657,
+      0.2138,
+      0.3341
+     ],
+     "share_transitions_OT_selected": 0.167,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "mixavg3|K3|lin1",
+      "mixavg3|K3|lin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K6|ot0.05",
+      "mixavg3|K8|loglin1",
+      "mixavg3|K6|ot0.05",
+      "mixavg3|K6|lin1",
+      "mixavg3|K6|loglin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1",
+      "mixavg3|K8|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.5099,
+       0.165,
+       0.4
+      ],
+      [
+       -0.1964,
+       0.112,
+       0.288
+      ],
+      [
+       0.3754,
+       0.201,
+       0.441
+      ],
+      [
+       -0.2232,
+       0.1515,
+       0.2825
+      ],
+      [
+       -0.4087,
+       0.154,
+       0.21
+      ],
+      [
+       -0.0543,
+       0.0445,
+       0.438
+      ],
+      [
+       -0.4357,
+       0.119,
+       0.236
+      ],
+      [
+       0.4359,
+       0.278,
+       0.4015
+      ],
+      [
+       -0.1898,
+       0.2825,
+       0.278
+      ],
+      [
+       0.3106,
+       0.4345,
+       0.3615
+      ],
+      [
+       0.6978,
+       0.454,
+       0.321
+      ],
+      [
+       -0.1932,
+       0.247,
+       0.235
+      ]
+     ]
+    },
+    "fc=persist": {
+     "i>=1": [
+      0.3439,
+      0.2764,
+      0.3118
+     ],
+     "all": [
+      0.3439,
+      0.2566,
+      0.2895
+     ],
+     "i>=1_no_last": [
+      0.3096,
+      0.25,
+      0.3086
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1|K0|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist",
+      "box1+beta1|K3|persist"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.0852,
+       0.061,
+       0.04
+      ],
+      [
+       0.2446,
+       0.2785,
+       0.2445
+      ],
+      [
+       -0.022,
+       0.1625,
+       0.2675
+      ],
+      [
+       0.3299,
+       0.1375,
+       0.3125
+      ],
+      [
+       0.2339,
+       0.248,
+       0.1955
+      ],
+      [
+       -0.1479,
+       0.1085,
+       0.227
+      ],
+      [
+       0.8725,
+       0.208,
+       0.583
+      ],
+      [
+       0.6428,
+       0.336,
+       0.4615
+      ],
+      [
+       0.3647,
+       0.368,
+       0.282
+      ],
+      [
+       0.4204,
+       0.397,
+       0.347
+      ],
+      [
+       0.7244,
+       0.525,
+       0.391
+      ],
+      [
+       0.7549,
+       0.5935,
+       0.35
+      ]
+     ]
+    },
+    "fc=lin1": {
+     "i>=1": [
+      0.3547,
+      0.2724,
+      0.3281
+     ],
+     "all": [
+      0.3547,
+      0.2529,
+      0.3047
+     ],
+     "i>=1_no_last": [
+      0.3209,
+      0.245,
+      0.3262
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1+beta1|K3|lin1",
+      "box1|K6|lin1",
+      "box1+beta0.5|K6|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1|K6|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta0.5|K8|lin1",
+      "box1+beta1|K3|lin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.512,
+       0.151,
+       0.393
+      ],
+      [
+       0.2946,
+       0.2755,
+       0.2905
+      ],
+      [
+       0.0659,
+       0.2005,
+       0.2845
+      ],
+      [
+       0.2315,
+       0.182,
+       0.2955
+      ],
+      [
+       0.1872,
+       0.2395,
+       0.1705
+      ],
+      [
+       0.07,
+       0.1145,
+       0.343
+      ],
+      [
+       0.5119,
+       0.2045,
+       0.4255
+      ],
+      [
+       0.6153,
+       0.2775,
+       0.406
+      ],
+      [
+       0.3045,
+       0.243,
+       0.234
+      ],
+      [
+       0.3936,
+       0.4225,
+       0.362
+      ],
+      [
+       0.6971,
+       0.4595,
+       0.358
+      ],
+      [
+       0.7609,
+       0.6015,
+       0.3515
+      ]
+     ]
+    },
+    "fc=loglin1": {
+     "i>=1": [
+      0.2502,
+      0.2702,
+      0.3121
+     ],
+     "all": [
+      0.2502,
+      0.2509,
+      0.2898
+     ],
+     "i>=1_no_last": [
+      0.2077,
+      0.2427,
+      0.309
+     ],
+     "share_transitions_OT_selected": 0.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box2|K6|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box2|K6|loglin1",
+      "box1+beta1|K8|loglin1",
+      "box1+beta1|K8|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1",
+      "box1+beta1|K3|loglin1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.5166,
+       0.16,
+       0.394
+      ],
+      [
+       0.2847,
+       0.2765,
+       0.281
+      ],
+      [
+       0.0566,
+       0.199,
+       0.283
+      ],
+      [
+       -0.2243,
+       0.1495,
+       0.2835
+      ],
+      [
+       0.2205,
+       0.2465,
+       0.194
+      ],
+      [
+       -0.5361,
+       0.079,
+       0.1575
+      ],
+      [
+       0.1487,
+       0.1485,
+       0.3345
+      ],
+      [
+       0.6416,
+       0.292,
+       0.4435
+      ],
+      [
+       0.2644,
+       0.2285,
+       0.229
+      ],
+      [
+       0.4235,
+       0.434,
+       0.3595
+      ],
+      [
+       0.7293,
+       0.529,
+       0.397
+      ],
+      [
+       0.7597,
+       0.601,
+       0.349
+      ]
+     ]
+    },
+    "fc=ot0.05": {
+     "i>=1": [
+      0.2858,
+      0.282,
+      0.3215
+     ],
+     "all": [
+      0.2858,
+      0.2618,
+      0.2985
+     ],
+     "i>=1_no_last": [
+      0.2463,
+      0.2554,
+      0.3192
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta0.5|K3|ot0.05",
+      "box1+beta0.5|K3|ot0.05",
+      "box1|K6|ot0.05",
+      "box1|K6|ot0.05",
+      "box1+beta0.5|K6|ot0.05",
+      "box1|K6|ot0.05",
+      "box1|K6|ot0.05",
+      "box1|K6|ot0.05",
+      "box1+beta0.5|K3|ot0.05",
+      "box1+beta1|K3|ot0.05",
+      "box1+beta1|K3|ot0.05"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.5002,
+       0.122,
+       0.3975
+      ],
+      [
+       0.3151,
+       0.2685,
+       0.309
+      ],
+      [
+       0.0717,
+       0.201,
+       0.276
+      ],
+      [
+       0.3683,
+       0.206,
+       0.356
+      ],
+      [
+       -0.0649,
+       0.2285,
+       0.2055
+      ],
+      [
+       -0.3908,
+       0.096,
+       0.181
+      ],
+      [
+       0.5037,
+       0.2135,
+       0.4325
+      ],
+      [
+       0.6085,
+       0.304,
+       0.456
+      ],
+      [
+       -0.1006,
+       0.28,
+       0.1125
+      ],
+      [
+       0.4375,
+       0.449,
+       0.3535
+      ],
+      [
+       0.7396,
+       0.527,
+       0.3995
+      ],
+      [
+       0.7596,
+       0.6005,
+       0.349
+      ]
+     ]
+    },
+    "fc=uot0.05t1": {
+     "i>=1": [
+      0.2972,
+      0.2613,
+      0.3142
+     ],
+     "all": [
+      0.2972,
+      0.2427,
+      0.2918
+     ],
+     "i>=1_no_last": [
+      0.2588,
+      0.2332,
+      0.3113
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1",
+      "box1+beta0.5|K3|uot0.05t1",
+      "box1|K6|uot0.05t1",
+      "box1+beta0.5|K6|uot0.05t1",
+      "box1+beta0.5|K6|uot0.05t1",
+      "box1|K6|uot0.05t1",
+      "box1+beta0.5|K8|uot0.05t1",
+      "box1+beta0.5|K8|uot0.05t1",
+      "box1+beta0.5|K8|uot0.05t1",
+      "box1+beta0.5|K8|uot0.05t1",
+      "box1+beta1|K3|uot0.05t1"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.511,
+       0.1415,
+       0.3915
+      ],
+      [
+       0.2806,
+       0.274,
+       0.2795
+      ],
+      [
+       0.0636,
+       0.2005,
+       0.2785
+      ],
+      [
+       0.0262,
+       0.1405,
+       0.2815
+      ],
+      [
+       0.2702,
+       0.2525,
+       0.166
+      ],
+      [
+       -0.3997,
+       0.094,
+       0.182
+      ],
+      [
+       0.5204,
+       0.197,
+       0.4305
+      ],
+      [
+       0.6352,
+       0.2955,
+       0.4165
+      ],
+      [
+       0.329,
+       0.2595,
+       0.2685
+      ],
+      [
+       0.4426,
+       0.423,
+       0.368
+      ],
+      [
+       0.4593,
+       0.3505,
+       0.322
+      ],
+      [
+       0.758,
+       0.5995,
+       0.3485
+      ]
+     ]
+    },
+    "fc=sb3": {
+     "i>=1": [
+      0.3497,
+      0.2687,
+      0.3481
+     ],
+     "all": [
+      0.3497,
+      0.2495,
+      0.3232
+     ],
+     "i>=1_no_last": [
+      0.3156,
+      0.2412,
+      0.3481
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|sb3",
+      "box1+beta1|K3|sb3",
+      "box1+beta0.5|K3|sb3",
+      "box1|K6|sb3",
+      "box1|K6|sb3",
+      "box1|K6|sb3",
+      "box1|K6|sb3",
+      "box1|K6|sb3",
+      "box1|K6|sb3",
+      "box1+beta0.5|K3|sb3",
+      "box1+beta0.5|K3|sb3",
+      "box1+beta1|K3|sb3"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.4957,
+       0.1075,
+       0.3935
+      ],
+      [
+       0.2782,
+       0.266,
+       0.272
+      ],
+      [
+       0.0231,
+       0.189,
+       0.2595
+      ],
+      [
+       0.4268,
+       0.2545,
+       0.387
+      ],
+      [
+       -0.0772,
+       0.23,
+       0.2185
+      ],
+      [
+       0.4642,
+       0.143,
+       0.4345
+      ],
+      [
+       0.5057,
+       0.2005,
+       0.4085
+      ],
+      [
+       0.5949,
+       0.3005,
+       0.446
+      ],
+      [
+       -0.0669,
+       0.093,
+       0.265
+      ],
+      [
+       0.4319,
+       0.416,
+       0.3415
+      ],
+      [
+       0.7441,
+       0.525,
+       0.4
+      ],
+      [
+       0.7589,
+       0.598,
+       0.3475
+      ]
+     ]
+    },
+    "fc=sbW": {
+     "i>=1": [
+      0.2916,
+      0.2657,
+      0.3273
+     ],
+     "all": [
+      0.2916,
+      0.2467,
+      0.3039
+     ],
+     "i>=1_no_last": [
+      0.2529,
+      0.2383,
+      0.3254
+     ],
+     "share_transitions_OT_selected": 1.0,
+     "selected": [
+      "fallback_trend",
+      "fallback_trend",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta0.5|K3|sbW",
+      "box1|K6|sbW",
+      "box1|K6|sbW",
+      "box1|K6|sbW",
+      "box1|K8|sbW",
+      "box1|K8|sbW",
+      "box1+beta0.5|K3|sbW",
+      "box1+beta0.5|K3|sbW",
+      "box1+beta1|K3|sbW",
+      "box1+beta1|K3|sbW"
+     ],
+     "per_transition": [
+      [
+       null,
+       0.0,
+       0.0
+      ],
+      [
+       -0.033,
+       0.1695,
+       0.3515
+      ],
+      [
+       0.4957,
+       0.1075,
+       0.3935
+      ],
+      [
+       0.2782,
+       0.266,
+       0.272
+      ],
+      [
+       0.0152,
+       0.182,
+       0.26
+      ],
+      [
+       0.4942,
+       0.2215,
+       0.3805
+      ],
+      [
+       -0.1313,
+       0.22,
+       0.2
+      ],
+      [
+       0.4681,
+       0.1215,
+       0.454
+      ],
+      [
+       0.3858,
+       0.168,
+       0.448
+      ],
+      [
+       -0.4568,
+       0.1165,
+       0.124
+      ],
+      [
+       0.3669,
+       0.3595,
+       0.283
+      ],
+      [
+       0.4229,
+       0.4045,
+       0.3435
+      ],
+      [
+       0.7289,
+       0.523,
+       0.395
+      ],
+      [
+       0.7561,
+       0.5945,
+       0.3495
+      ]
+     ]
+    }
+   },
+   "paired": {
+    "full - noOT": {
+     "pearson": {
+      "mean_delta": -0.0549,
+      "n_better": 2,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.3125
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0035,
+      "n_better": 2,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.21875
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0118,
+      "n_better": 1,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.28125
+     },
+     "J": {
+      "mean_delta": -0.0702,
+      "n_better": 2,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.15625
+     }
+    },
+    "OT_only - noOT": {
+     "pearson": {
+      "mean_delta": -0.0595,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.5185546875
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0097,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.33935546875
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.005,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.9541015625
+     },
+     "J": {
+      "mean_delta": -0.0741,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.6220703125
+     }
+    },
+    "fc=ot0.05 - fc=lin1": {
+     "pearson": {
+      "mean_delta": -0.069,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.6220703125
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0096,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.3291015625
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0066,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.67724609375
+     },
+     "J": {
+      "mean_delta": -0.066,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.90966796875
+     }
+    },
+    "fc=ot0.05 - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0581,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.791015625
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.0056,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.7333984375
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0097,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.6220703125
+     },
+     "J": {
+      "mean_delta": -0.0428,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.90966796875
+     }
+    },
+    "fc=uot0.05t1 - fc=loglin1": {
+     "pearson": {
+      "mean_delta": 0.047,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.17626953125
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0089,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.9697265625
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0021,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.791015625
+     },
+     "J": {
+      "mean_delta": 0.0402,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.423828125
+     }
+    },
+    "fc=sb3 - fc=persist": {
+     "pearson": {
+      "mean_delta": 0.0058,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.7333984375
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0077,
+      "n_better": 6,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.7001953125
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0363,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.38037109375
+     },
+     "J": {
+      "mean_delta": 0.0344,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.67724609375
+     }
+    },
+    "fc=sbW - fc=persist": {
+     "pearson": {
+      "mean_delta": -0.0523,
+      "n_better": 9,
+      "n_worse": 3,
+      "wilcoxon_two_sided_p": 0.5185546875
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0107,
+      "n_better": 6,
+      "n_worse": 6,
+      "wilcoxon_two_sided_p": 0.9697265625
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.0155,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.5185546875
+     },
+     "J": {
+      "mean_delta": -0.0474,
+      "n_better": 8,
+      "n_worse": 4,
+      "wilcoxon_two_sided_p": 0.5693359375
+     }
+    },
+    "fc=sb3 - fc=lin1": {
+     "pearson": {
+      "mean_delta": -0.005,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.791015625
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0037,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.85009765625
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.02,
+      "n_better": 7,
+      "n_worse": 5,
+      "wilcoxon_two_sided_p": 0.1474609375
+     },
+     "J": {
+      "mean_delta": 0.0112,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.85009765625
+     }
+    },
+    "full - persist_only(level_obs_RO)": {
+     "pearson": {
+      "mean_delta": 0.3781,
+      "n_better": 9,
+      "n_worse": 3,
+      "wilcoxon_two_sided_p": 0.02685546875
+     },
+     "p_at_200_up": {
+      "mean_delta": 0.2085,
+      "n_better": 12,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.00048828125
+     },
+     "p_at_200_down": {
+      "mean_delta": 0.2369,
+      "n_better": 12,
+      "n_worse": 0,
+      "wilcoxon_two_sided_p": 0.00048828125
+     },
+     "J": {
+      "mean_delta": 0.8235,
+      "n_better": 11,
+      "n_worse": 1,
+      "wilcoxon_two_sided_p": 0.00146484375
+     }
+    },
+    "full - trend": {
+     "pearson": {
+      "mean_delta": -0.1381,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.0048828125
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0269,
+      "n_better": 1,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.009765625
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.043,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.0048828125
+     },
+     "J": {
+      "mean_delta": -0.2079,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.00146484375
+     }
+    },
+    "noOT - trend": {
+     "pearson": {
+      "mean_delta": -0.0832,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.0771484375
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0233,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.20361328125
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0312,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.05224609375
+     },
+     "J": {
+      "mean_delta": -0.1377,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.05224609375
+     }
+    },
+    "two_pathway(box1+beta) - trend": {
+     "pearson": {
+      "mean_delta": -0.0921,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.00927734375
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0258,
+      "n_better": 3,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.02734375
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0329,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.00341796875
+     },
+     "J": {
+      "mean_delta": -0.1508,
+      "n_better": 1,
+      "n_worse": 11,
+      "wilcoxon_two_sided_p": 0.00341796875
+     }
+    },
+    "mixavg3_denoised - trend": {
+     "pearson": {
+      "mean_delta": -0.3555,
+      "n_better": 3,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.01611328125
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0769,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.00341796875
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.031,
+      "n_better": 4,
+      "n_worse": 8,
+      "wilcoxon_two_sided_p": 0.25732421875
+     },
+     "J": {
+      "mean_delta": -0.4634,
+      "n_better": 3,
+      "n_worse": 9,
+      "wilcoxon_two_sided_p": 0.01220703125
+     }
+    },
+    "composition_only(box_states,beta0) - trend": {
+     "pearson": {
+      "mean_delta": -0.1461,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.06396484375
+     },
+     "p_at_200_up": {
+      "mean_delta": -0.0606,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.00341796875
+     },
+     "p_at_200_down": {
+      "mean_delta": -0.0383,
+      "n_better": 5,
+      "n_worse": 7,
+      "wilcoxon_two_sided_p": 0.33935546875
+     },
+     "J": {
+      "mean_delta": -0.245,
+      "n_better": 2,
+      "n_worse": 10,
+      "wilcoxon_two_sided_p": 0.05224609375
+     }
+    }
+   },
+   "fixed_configs_hindsight_NOT_strict": {
+    "persist": {
+     "config": "box1+beta1|K3|persist",
+     "i>=1": [
+      0.3871,
+      0.2782,
+      0.3214
+     ],
+     "all": [
+      0.3582,
+      0.2632,
+      0.3024
+     ],
+     "i>=1_no_last": [
+      0.3564,
+      0.2519,
+      0.319
+     ]
+    },
+    "lin1": {
+     "config": "box1+beta1|K3|lin1",
+     "i>=1": [
+      0.3778,
+      0.2899,
+      0.3423
+     ],
+     "all": [
+      0.3496,
+      0.2741,
+      0.3218
+     ],
+     "i>=1_no_last": [
+      0.3459,
+      0.2639,
+      0.3415
+     ]
+    },
+    "loglin1": {
+     "config": "box1+beta1|K3|loglin1",
+     "i>=1": [
+      0.3436,
+      0.289,
+      0.3382
+     ],
+     "all": [
+      0.3178,
+      0.2732,
+      0.318
+     ],
+     "i>=1_no_last": [
+      0.3089,
+      0.263,
+      0.3373
+     ]
+    },
+    "ot0.05": {
+     "config": "box1+beta0.5|K3|ot0.05",
+     "i>=1": [
+      0.383,
+      0.2913,
+      0.3434
+     ],
+     "all": [
+      0.3544,
+      0.2754,
+      0.3228
+     ],
+     "i>=1_no_last": [
+      0.3513,
+      0.2651,
+      0.3426
+     ]
+    },
+    "uot0.05t1": {
+     "config": "box1+beta1|K3|uot0.05t1",
+     "i>=1": [
+      0.3837,
+      0.2877,
+      0.3388
+     ],
+     "all": [
+      0.3551,
+      0.272,
+      0.3185
+     ],
+     "i>=1_no_last": [
+      0.3525,
+      0.2617,
+      0.338
+     ]
+    },
+    "sb3": {
+     "config": "box1+beta0.5|K3|sb3",
+     "i>=1": [
+      0.3897,
+      0.2844,
+      0.3422
+     ],
+     "all": [
+      0.3606,
+      0.269,
+      0.3217
+     ],
+     "i>=1_no_last": [
+      0.3587,
+      0.2579,
+      0.3415
+     ]
+    },
+    "sbW": {
+     "config": "box1+beta1|K3|sbW",
+     "i>=1": [
+      0.3825,
+      0.2801,
+      0.3408
+     ],
+     "all": [
+      0.354,
+      0.265,
+      0.3204
+     ],
+     "i>=1_no_last": [
+      0.3514,
+      0.2539,
+      0.3401
+     ]
+    }
+   },
+   "oracle_next_composition_NOT_strict": {
+    "ORACLE_props|box1|K3": {
+     "i>=1": [
+      0.0302,
+      0.257,
+      0.322
+     ],
+     "all": [
+      0.0302,
+      0.2387,
+      0.299
+     ],
+     "i>=1_no_last": [
+      0.0008,
+      0.2479,
+      0.331
+     ]
+    },
+    "ORACLE_props|box1|K6": {
+     "i>=1": [
+      0.2909,
+      0.2747,
+      0.3515
+     ],
+     "all": [
+      0.2909,
+      0.2551,
+      0.3264
+     ],
+     "i>=1_no_last": [
+      0.2781,
+      0.2631,
+      0.3598
+     ]
+    },
+    "ORACLE_props|box1|K8": {
+     "i>=1": [
+      0.3149,
+      0.269,
+      0.3558
+     ],
+     "all": [
+      0.3149,
+      0.2498,
+      0.3304
+     ],
+     "i>=1_no_last": [
+      0.3007,
+      0.2622,
+      0.3635
+     ]
+    },
+    "ORACLE_props|box4|K3": {
+     "i>=1": [
+      -0.3585,
+      0.164,
+      0.2457
+     ],
+     "all": [
+      -0.3585,
+      0.1522,
+      0.2281
+     ],
+     "i>=1_no_last": [
+      -0.3318,
+      0.1722,
+      0.2553
+     ]
+    },
+    "ORACLE_props|box4|K6": {
+     "i>=1": [
+      0.0436,
+      0.238,
+      0.3536
+     ],
+     "all": [
+      0.0436,
+      0.221,
+      0.3284
+     ],
+     "i>=1_no_last": [
+      0.0794,
+      0.2377,
+      0.3653
+     ]
+    },
+    "ORACLE_props|box4|K8": {
+     "i>=1": [
+      0.1131,
+      0.2485,
+      0.3492
+     ],
+     "all": [
+      0.1131,
+      0.2307,
+      0.3243
+     ],
+     "i>=1_no_last": [
+      0.1478,
+      0.2511,
+      0.3596
+     ]
+    },
+    "ORACLE_props|mixavg3|K3": {
+     "i>=1": [
+      -0.3318,
+      0.1632,
+      0.2541
+     ],
+     "all": [
+      -0.3318,
+      0.1515,
+      0.2359
+     ],
+     "i>=1_no_last": [
+      -0.3045,
+      0.1713,
+      0.2647
+     ]
+    },
+    "ORACLE_props|mixavg3|K6": {
+     "i>=1": [
+      0.0594,
+      0.2341,
+      0.3495
+     ],
+     "all": [
+      0.0594,
+      0.2174,
+      0.3246
+     ],
+     "i>=1_no_last": [
+      0.0921,
+      0.2325,
+      0.3595
+     ]
+    },
+    "ORACLE_props|mixavg3|K8": {
+     "i>=1": [
+      0.1317,
+      0.2461,
+      0.3513
+     ],
+     "all": [
+      0.1317,
+      0.2285,
+      0.3262
+     ],
+     "i>=1_no_last": [
+      0.1625,
+      0.2474,
+      0.3607
+     ]
+    }
+   }
+  }
+ },
+ "composition_forecast_tv_error_vs_oracle_projection_i>=2": {
+  "K3": {
+   "persist": 0.0304,
+   "lin1": 0.0652,
+   "loglin1": 0.0783,
+   "ot0.05": 0.042,
+   "uot0.05t1": 0.0388,
+   "sb3": 0.0356,
+   "sbW": 0.0314,
+   "archetype_UMI_per_cell_final_fit": [
+    5262.9,
+    5463.7,
+    7532.3
+   ],
+   "bin_scale_s_b_range": [
+    0.901,
+    1.132
+   ],
+   "proportions_final_fit": [
+    [
+     0.014,
+     0.001,
+     0.985
+    ],
+    [
+     0.015,
+     0.001,
+     0.983
+    ],
+    [
+     0.025,
+     0.001,
+     0.974
+    ],
+    [
+     0.103,
+     0.001,
+     0.896
+    ],
+    [
+     0.359,
+     0.0,
+     0.64
+    ],
+    [
+     0.557,
+     0.001,
+     0.442
+    ],
+    [
+     0.736,
+     0.001,
+     0.263
+    ],
+    [
+     0.844,
+     0.001,
+     0.154
+    ],
+    [
+     0.953,
+     0.002,
+     0.046
+    ],
+    [
+     0.984,
+     0.013,
+     0.004
+    ],
+    [
+     0.679,
+     0.32,
+     0.001
+    ],
+    [
+     0.26,
+     0.738,
+     0.002
+    ],
+    [
+     0.069,
+     0.922,
+     0.009
+    ],
+    [
+     0.015,
+     0.98,
+     0.005
+    ]
+   ]
+  },
+  "K6": {
+   "persist": 0.0803,
+   "lin1": 0.0698,
+   "loglin1": 0.1846,
+   "ot0.05": 0.0529,
+   "uot0.05t1": 0.0601,
+   "sb3": 0.0624,
+   "sbW": 0.0679,
+   "archetype_UMI_per_cell_final_fit": [
+    6350.4,
+    5520.4,
+    8849.0,
+    5105.5,
+    4808.2,
+    5734.1
+   ],
+   "bin_scale_s_b_range": [
+    0.926,
+    1.113
+   ],
+   "proportions_final_fit": [
+    [
+     0.155,
+     0.0,
+     0.559,
+     0.002,
+     0.0,
+     0.285
+    ],
+    [
+     0.165,
+     0.0,
+     0.543,
+     0.002,
+     0.0,
+     0.29
+    ],
+    [
+     0.2,
+     0.0,
+     0.516,
+     0.002,
+     0.0,
+     0.282
+    ],
+    [
+     0.35,
+     0.0,
+     0.444,
+     0.002,
+     0.005,
+     0.199
+    ],
+    [
+     0.669,
+     0.0,
+     0.253,
+     0.002,
+     0.057,
+     0.019
+    ],
+    [
+     0.709,
+     0.0,
+     0.135,
+     0.001,
+     0.155,
+     0.0
+    ],
+    [
+     0.678,
+     0.0,
+     0.044,
+     0.0,
+     0.268,
+     0.01
+    ],
+    [
+     0.491,
+     0.0,
+     0.009,
+     0.0,
+     0.387,
+     0.112
+    ],
+    [
+     0.24,
+     0.0,
+     0.0,
+     0.0,
+     0.552,
+     0.208
+    ],
+    [
+     0.052,
+     0.002,
+     0.0,
+     0.013,
+     0.679,
+     0.255
+    ],
+    [
+     0.007,
+     0.0,
+     0.0,
+     0.373,
+     0.422,
+     0.197
+    ],
+    [
+     0.025,
+     0.014,
+     0.0,
+     0.738,
+     0.08,
+     0.144
+    ],
+    [
+     0.023,
+     0.446,
+     0.0,
+     0.348,
+     0.009,
+     0.175
+    ],
+    [
+     0.016,
+     0.777,
+     0.0,
+     0.018,
+     0.007,
+     0.182
+    ]
+   ]
+  },
+  "K8": {
+   "persist": 0.0928,
+   "lin1": 0.0831,
+   "loglin1": 0.2368,
+   "ot0.05": 0.0668,
+   "uot0.05t1": 0.0732,
+   "sb3": 0.0784,
+   "sbW": 0.0808,
+   "archetype_UMI_per_cell_final_fit": [
+    6384.5,
+    5545.4,
+    10447.7,
+    5637.3,
+    4570.8,
+    5364.4,
+    6140.4,
+    5078.3
+   ],
+   "bin_scale_s_b_range": [
+    0.944,
+    1.095
+   ],
+   "proportions_final_fit": [
+    [
+     0.246,
+     0.0,
+     0.418,
+     0.127,
+     0.0,
+     0.202,
+     0.007,
+     0.0
+    ],
+    [
+     0.295,
+     0.0,
+     0.37,
+     0.128,
+     0.0,
+     0.203,
+     0.003,
+     0.0
+    ],
+    [
+     0.36,
+     0.0,
+     0.311,
+     0.142,
+     0.0,
+     0.181,
+     0.005,
+     0.0
+    ],
+    [
+     0.456,
+     0.001,
+     0.255,
+     0.153,
+     0.002,
+     0.089,
+     0.045,
+     0.0
+    ],
+    [
+     0.58,
+     0.0,
+     0.127,
+     0.094,
+     0.008,
+     0.0,
+     0.19,
+     0.001
+    ],
+    [
+     0.561,
+     0.0,
+     0.057,
+     0.052,
+     0.029,
+     0.0,
+     0.3,
+     0.001
+    ],
+    [
+     0.427,
+     0.0,
+     0.011,
+     0.03,
+     0.065,
+     0.074,
+     0.393,
+     0.0
+    ],
+    [
+     0.233,
+     0.0,
+     0.001,
+     0.01,
+     0.148,
+     0.212,
+     0.396,
+     0.0
+    ],
+    [
+     0.094,
+     0.0,
+     0.0,
+     0.01,
+     0.316,
+     0.303,
+     0.277,
+     0.0
+    ],
+    [
+     0.021,
+     0.002,
+     0.0,
+     0.047,
+     0.532,
+     0.328,
+     0.067,
+     0.003
+    ],
+    [
+     0.003,
+     0.0,
+     0.0,
+     0.126,
+     0.402,
+     0.236,
+     0.0,
+     0.232
+    ],
+    [
+     0.008,
+     0.01,
+     0.0,
+     0.149,
+     0.073,
+     0.158,
+     0.013,
+     0.588
+    ],
+    [
+     0.009,
+     0.376,
+     0.0,
+     0.179,
+     0.0,
+     0.135,
+     0.012,
+     0.287
+    ],
+    [
+     0.007,
+     0.666,
+     0.0,
+     0.192,
+     0.0,
+     0.112,
+     0.01,
+     0.012
+    ]
+   ]
+  }
+ },
+ "turn_on_auc_history_fraction_of_past_bins_expressed": 0.8088,
+ "reproduction_crossgene_nmf_linear_props_l1": {
+  "i>=1": [
+   0.0678,
+   0.1867,
+   0.1809
+  ],
+  "all": [
+   0.0678,
+   0.1734,
+   0.168
+  ],
+  "i>=1_no_last": [
+   0.0605,
+   0.1775,
+   0.179
+  ]
+ },
+ "context_numbers_quoted_not_rerun": {
+  "orig": [
+   0.488,
+   0.301,
+   0.442
+  ],
+  "l1": [
+   0.1,
+   0.17,
+   0.21
+  ],
+  "l1_without_OT": [
+   -0.05,
+   0.1,
+   0.15
+  ],
+  "linear": [
+   0.3,
+   0.25,
+   0.3
+  ],
+  "linear_without_OT": [
+   -0.14,
+   0.06,
+   0.06
+  ],
+  "trend_context_l1": [
+   0.15,
+   0.21,
+   0.21
+  ],
+  "trend_context_linear": [
+   0.4,
+   0.27,
+   0.35
+  ]
+ },
+ "seconds": 390.6,
+ "nmf_and_law_fit_seconds": 48.1
+}

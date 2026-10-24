@@ -1,0 +1,1 @@
+﻿pancreas-human lsb {'nmed_real': 132.0, 'nmed_garbage': 361.0, 'R_diff_bins<=i': 0.0, 'l1_head_maxdiff_all_cfgs': 0.7179512734059847, 'l1_head_maxdiff_k0_cfgs': 0.0, 'worst_cfg': "(2, 'cur', 'ar', None, None, 'none')", 'orig_head_alpha1_diff': 4.8320857882499695, 'orig_head_alpha0_diff': 0.0, 'l1_head_maxdiff_all_cfgs_with_causal_nmed': 0.0}

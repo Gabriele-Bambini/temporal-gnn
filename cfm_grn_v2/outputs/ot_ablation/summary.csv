@@ -1,0 +1,13 @@
+model,mean,std,count
+noise_floor,0.0,0.0,5
+spline_random,0.6251,0.0065,5
+spline_ot,0.6432,0.0032,5
+linear_indep,1.0612,0.0327,5
+linear_ot,1.0706,0.0061,5
+mean_interp,1.1021,0.0,5
+ot_interp,1.1706,0.0,5
+linear,2.747,0.0,5
+mlp,2.9077,0.1478,5
+spline_ot_shuffled_time,4.1171,0.0483,5
+persistence,4.1554,0.0,5
+freefm_replay,4.4023,0.0,5

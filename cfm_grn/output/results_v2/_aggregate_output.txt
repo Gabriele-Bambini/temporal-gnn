@@ -1,0 +1,158 @@
+[0.00h] job 667180: RUNNING 0:26 | results: 0
+[0.08h] job 667180: RUNNING 5:29 | results: 15
+[0.17h] job 667180: RUNNING 10:36 | results: 33
+[0.25h] job 667180: RUNNING 15:38 | results: 53
+[0.34h] job 667180: RUNNING 20:44 | results: 72
+[0.42h] job 667180: RUNNING 25:49 | results: 91
+[0.51h] job 667180: RUNNING 30:55 | results: 110
+[0.60h] job 667180: RUNNING 36:06 | results: 131
+[0.68h] job 667180: RUNNING 41:08 | results: 151
+[0.77h] job 667180: RUNNING 46:14 | results: 171
+[0.85h] job 667180: RUNNING 51:25 | results: 192
+[0.94h] job 667180: RUNNING 56:30 | results: 212
+[1.02h] job 667180: RUNNING 1:01:36 | results: 232
+[1.11h] job 667180: RUNNING 1:06:42 | results: 249
+[1.19h] job 667180: RUNNING 1:11:47 | results: 267
+[1.27h] job 667180: RUNNING 1:16:53 | results: 286
+[1.36h] job 667180: RUNNING 1:21:59 | results: 307
+[1.44h] job 667180: gone | results: 315
+fetched
+loaded 315 runs from C:\Users\02gab\AppData\Local\Temp\claude\G--My-Drive-PhD---Research-Temporal-GNN\b56bd6cc-c67f-42cc-89a1-2290385f822c\scratchpad\cfm_v2_fetch\results_v2
+
+====================================================================================================
+SUMMARY  mean +/- 95% CI over fold x seed
+====================================================================================================
+
+--- oracle ---
+          model            ot  n pearson_delta_downstream direction_acc_downstream    pearson_delta knockdown_fraction energy_distance_de           w1_de pearson_mean_corr  energy_distance mean_w1_distance
+      graph_cfm        global 15          0.026 +/- 0.105          0.960 +/- 0.032 -0.077 +/- 0.028    0.035 +/- 0.020   14.213 +/- 1.505 1.937 +/- 0.189   0.807 +/- 0.052 14.985 +/- 2.085  0.847 +/- 0.199
+            mlp        global 15         -0.001 +/- 0.160          0.821 +/- 0.053 -0.018 +/- 0.043    0.036 +/- 0.013   15.475 +/- 1.383 1.962 +/- 0.198   0.742 +/- 0.033 19.688 +/- 1.514  0.920 +/- 0.046
+   static_graph        global 15          0.094 +/- 0.097          0.941 +/- 0.063 -0.053 +/- 0.039    0.038 +/- 0.024   13.902 +/- 1.830 1.960 +/- 0.203   0.780 +/- 0.053 15.869 +/- 1.816  0.936 +/- 0.148
+      graph_cfm per_condition 15          0.047 +/- 0.116          0.987 +/- 0.027  0.957 +/- 0.019    0.832 +/- 0.164    6.482 +/- 1.523 0.915 +/- 0.161   0.968 +/- 0.019  6.192 +/- 1.529  0.249 +/- 0.045
+graph_cfm_dense per_condition 15          0.030 +/- 0.144          0.987 +/- 0.027  0.946 +/- 0.024    0.841 +/- 0.200    6.908 +/- 1.519 1.002 +/- 0.182   0.967 +/- 0.020  6.621 +/- 1.511  0.270 +/- 0.044
+            mlp per_condition 15          0.053 +/- 0.161          0.821 +/- 0.056 -0.046 +/- 0.034    0.048 +/- 0.016   14.084 +/- 1.728 1.741 +/- 0.231   0.819 +/- 0.033 15.998 +/- 1.296  0.849 +/- 0.049
+    persistence per_condition 15          0.000 +/- 0.000          0.000 +/- 0.000  0.000 +/- 0.000    0.000 +/- 0.000   15.533 +/- 1.661 1.978 +/- 0.197   0.864 +/- 0.031 15.220 +/- 1.654  0.516 +/- 0.038
+   static_graph per_condition 15         -0.015 +/- 0.160          0.995 +/- 0.011  0.959 +/- 0.023    1.017 +/- 0.215    4.691 +/- 0.751 0.664 +/- 0.098   0.984 +/- 0.005  4.427 +/- 0.740  0.184 +/- 0.022
+ static_learned per_condition 15          0.003 +/- 0.160          1.000 +/- 0.000  0.961 +/- 0.020    0.997 +/- 0.212    4.846 +/- 0.806 0.672 +/- 0.105   0.983 +/- 0.005  4.580 +/- 0.795  0.185 +/- 0.023
+
+--- noisy ---
+          model            ot  n pearson_delta_downstream direction_acc_downstream   pearson_delta knockdown_fraction energy_distance_de           w1_de pearson_mean_corr  energy_distance mean_w1_distance
+      graph_cfm per_condition 15         -0.072 +/- 0.108          0.633 +/- 0.057 0.733 +/- 0.048    0.954 +/- 0.176    7.337 +/- 0.518 1.172 +/- 0.094   0.937 +/- 0.008  7.587 +/- 0.530  0.443 +/- 0.035
+graph_cfm_dense per_condition 15         -0.043 +/- 0.134          0.591 +/- 0.065 0.798 +/- 0.034    0.949 +/- 0.166    6.780 +/- 0.490 1.144 +/- 0.086   0.952 +/- 0.008  6.686 +/- 0.511  0.386 +/- 0.031
+            mlp per_condition 15          0.041 +/- 0.157          0.606 +/- 0.068 0.015 +/- 0.049    0.045 +/- 0.021   11.552 +/- 1.074 1.621 +/- 0.150   0.803 +/- 0.027 12.873 +/- 0.771  0.754 +/- 0.044
+    persistence per_condition 15          0.000 +/- 0.000          0.000 +/- 0.000 0.000 +/- 0.000    0.000 +/- 0.000   12.293 +/- 1.192 1.682 +/- 0.150   0.851 +/- 0.027 11.981 +/- 1.195  0.458 +/- 0.033
+   static_graph per_condition 15         -0.035 +/- 0.123          0.564 +/- 0.058 0.726 +/- 0.053    0.994 +/- 0.211    7.053 +/- 0.474 1.171 +/- 0.075   0.937 +/- 0.014  7.346 +/- 0.568  0.462 +/- 0.043
+ static_learned per_condition 15         -0.049 +/- 0.099          0.578 +/- 0.054 0.726 +/- 0.041    0.997 +/- 0.225    7.144 +/- 0.413 1.192 +/- 0.073   0.936 +/- 0.012  7.480 +/- 0.459  0.467 +/- 0.036
+
+--- noisy_context ---
+          model            ot  n pearson_delta_downstream direction_acc_downstream   pearson_delta knockdown_fraction energy_distance_de           w1_de pearson_mean_corr  energy_distance mean_w1_distance
+      graph_cfm per_condition 15         -0.080 +/- 0.087          0.634 +/- 0.035 0.690 +/- 0.050    1.005 +/- 0.161    7.657 +/- 0.479 1.127 +/- 0.068   0.926 +/- 0.008  7.981 +/- 0.524  0.516 +/- 0.041
+graph_cfm_dense per_condition 15         -0.012 +/- 0.106          0.627 +/- 0.033 0.757 +/- 0.039    0.979 +/- 0.172    7.145 +/- 0.433 1.110 +/- 0.065   0.944 +/- 0.009  7.113 +/- 0.488  0.445 +/- 0.038
+            mlp per_condition 15          0.044 +/- 0.115          0.663 +/- 0.045 0.007 +/- 0.049    0.052 +/- 0.018   11.418 +/- 1.115 1.486 +/- 0.133   0.785 +/- 0.029 12.939 +/- 0.814  0.808 +/- 0.047
+    persistence per_condition 15          0.000 +/- 0.000          0.000 +/- 0.000 0.000 +/- 0.000    0.000 +/- 0.000   12.488 +/- 1.151 1.588 +/- 0.128   0.843 +/- 0.028 12.209 +/- 1.153  0.514 +/- 0.035
+   static_graph per_condition 15         -0.035 +/- 0.126          0.582 +/- 0.055 0.701 +/- 0.052    1.033 +/- 0.199    7.278 +/- 0.502 1.112 +/- 0.083   0.930 +/- 0.011  7.648 +/- 0.546  0.524 +/- 0.041
+ static_learned per_condition 15         -0.014 +/- 0.126          0.622 +/- 0.055 0.715 +/- 0.043    1.055 +/- 0.208    7.081 +/- 0.511 1.076 +/- 0.083   0.932 +/- 0.011  7.500 +/- 0.541  0.514 +/- 0.042
+
+====================================================================================================
+PRE-REGISTERED COMPARISONS  (positive = first model better; primary metric: pearson_delta_downstream, secondary: energy_distance_de)
+====================================================================================================
+
+--- P1 ---
+scenario                                           comparison                   metric  n    diff   ci95 verdict  wins seeds  wilcoxon_p
+  oracle                   mlp[per-cond OT] vs mlp[global OT] pearson_delta_downstream 15  0.0539 0.1531    n.s.  5/15   +-+      0.8904
+  oracle                   mlp[per-cond OT] vs mlp[global OT]       energy_distance_de 15  1.3907 1.2846     SIG 12/15   +++      0.0479
+  oracle                   mlp[per-cond OT] vs mlp[global OT]       knockdown_fraction 15  0.0119 0.0218    n.s.  9/15   -+-      0.3591
+  oracle static_graph[per-cond OT] vs static_graph[global OT] pearson_delta_downstream 15 -0.1088 0.2309    n.s.  5/15   -+-      0.1205
+  oracle static_graph[per-cond OT] vs static_graph[global OT]       energy_distance_de 15  9.2112 1.6207     SIG 15/15   +++      0.0001
+  oracle static_graph[per-cond OT] vs static_graph[global OT]       knockdown_fraction 15  0.9783 0.2211     SIG 15/15   +++      0.0001
+  oracle       graph_cfm[per-cond OT] vs graph_cfm[global OT] pearson_delta_downstream 15  0.0208 0.1458    n.s.  7/15   ++-      0.7197
+  oracle       graph_cfm[per-cond OT] vs graph_cfm[global OT]       energy_distance_de 15  7.7305 1.3269     SIG 15/15   +++      0.0001
+  oracle       graph_cfm[per-cond OT] vs graph_cfm[global OT]       knockdown_fraction 15  0.7965 0.1558     SIG 15/15   +++      0.0001
+
+--- P2 ---
+     scenario                   comparison                   metric  n    diff   ci95 verdict wins seeds  wilcoxon_p
+       oracle graph_cfm vs graph_cfm_dense pearson_delta_downstream 15  0.0166 0.1010    n.s. 9/15   +-+      0.6387
+       oracle graph_cfm vs graph_cfm_dense       energy_distance_de 15  0.4261 0.9697    n.s. 8/15   --+      0.3894
+       oracle graph_cfm vs graph_cfm_dense       knockdown_fraction 15 -0.0095 0.1354    n.s. 7/15   +-+      1.0000
+        noisy graph_cfm vs graph_cfm_dense pearson_delta_downstream 15 -0.0287 0.1556    n.s. 5/15   --+      0.6788
+        noisy graph_cfm vs graph_cfm_dense       energy_distance_de 15 -0.5570 0.4701     SIG 4/15   ---      0.0302
+        noisy graph_cfm vs graph_cfm_dense       knockdown_fraction 15  0.0049 0.0620    n.s. 7/15   +-+      0.8040
+noisy_context graph_cfm vs graph_cfm_dense pearson_delta_downstream 15 -0.0681 0.1163    n.s. 5/15   ---      0.2078
+noisy_context graph_cfm vs graph_cfm_dense       energy_distance_de 15 -0.5122 0.4387     SIG 3/15   ---      0.0256
+noisy_context graph_cfm vs graph_cfm_dense       knockdown_fraction 15  0.0258 0.0701    n.s. 8/15   ++-      0.7197
+
+--- P3 ---
+     scenario          comparison                   metric  n    diff   ci95 verdict  wins seeds  wilcoxon_p
+       oracle static_graph vs mlp pearson_delta_downstream 15 -0.0675 0.2059    n.s.  7/15   -++      0.5614
+       oracle static_graph vs mlp       energy_distance_de 15  9.3938 1.4084     SIG 15/15   +++      0.0001
+       oracle static_graph vs mlp       knockdown_fraction 15  0.9686 0.2180     SIG 15/15   +++      0.0001
+        noisy static_graph vs mlp pearson_delta_downstream 15 -0.0753 0.1806    n.s.  6/15   -+-      0.4543
+        noisy static_graph vs mlp       energy_distance_de 15  4.4994 0.9910     SIG 15/15   +++      0.0001
+        noisy static_graph vs mlp       knockdown_fraction 15  0.9483 0.2205     SIG 15/15   +++      0.0001
+noisy_context static_graph vs mlp pearson_delta_downstream 15 -0.0788 0.1569    n.s.  7/15   ---      0.3591
+noisy_context static_graph vs mlp       energy_distance_de 15  4.1399 0.9525     SIG 15/15   +++      0.0001
+noisy_context static_graph vs mlp       knockdown_fraction 15  0.9809 0.2083     SIG 15/15   +++      0.0001
+
+--- P4 ---
+     scenario                     comparison                   metric  n    diff   ci95 verdict  wins seeds  wilcoxon_p
+       oracle static_learned vs static_graph pearson_delta_downstream 15  0.0174 0.0348    n.s.  7/15   +++      0.3591
+       oracle static_learned vs static_graph       energy_distance_de 15 -0.1553 0.1361     SIG  2/15   ---      0.0084
+       oracle static_learned vs static_graph       knockdown_fraction 15 -0.0201 0.0143     SIG  4/15   ---      0.0181
+        noisy static_learned vs static_graph pearson_delta_downstream 15 -0.0145 0.0554    n.s.  7/15   +--      0.5995
+        noisy static_learned vs static_graph       energy_distance_de 15 -0.0913 0.2592    n.s.  3/15   +--      0.1070
+        noisy static_learned vs static_graph       knockdown_fraction 15  0.0033 0.0266    n.s. 11/15   -+-      0.4212
+noisy_context static_learned vs static_graph pearson_delta_downstream 15  0.0210 0.0398    n.s.  7/15   ++-      0.5995
+noisy_context static_learned vs static_graph       energy_distance_de 15  0.1976 0.1870     SIG 10/15   ++-      0.0833
+noisy_context static_learned vs static_graph       knockdown_fraction 15  0.0219 0.0233    n.s. 10/15   +++      0.1070
+
+--- P5 ---
+     scenario                  comparison                   metric  n    diff   ci95 verdict  wins seeds  wilcoxon_p
+       oracle graph_cfm vs static_learned pearson_delta_downstream 15  0.0439 0.1255    n.s. 10/15   ++-      0.5245
+       oracle graph_cfm vs static_learned       energy_distance_de 15 -1.6363 1.3939     SIG  4/15   ---      0.0256
+       oracle graph_cfm vs static_learned       knockdown_fraction 15 -0.1648 0.1347     SIG  3/15   ---      0.0125
+        noisy graph_cfm vs static_learned pearson_delta_downstream 15 -0.0228 0.1371    n.s.  7/15   -+-      0.5995
+        noisy graph_cfm vs static_learned       energy_distance_de 15 -0.1922 0.5534    n.s.  6/15   +-+      0.5245
+        noisy graph_cfm vs static_learned       knockdown_fraction 15 -0.0435 0.1054    n.s.  6/15   +--      0.3028
+noisy_context graph_cfm vs static_learned pearson_delta_downstream 15 -0.0658 0.1480    n.s.  5/15   ---      0.3894
+noisy_context graph_cfm vs static_learned       energy_distance_de 15 -0.5768 0.5687     SIG  5/15   ---      0.0833
+noisy_context graph_cfm vs static_learned       knockdown_fraction 15 -0.0499 0.1116    n.s.  6/15   ---      0.4887
+
+--- P6 ---
+     scenario                    comparison                   metric  n    diff   ci95 verdict  wins seeds  wilcoxon_p
+       oracle            mlp vs persistence pearson_delta_downstream 15  0.0527 0.1610    n.s. 10/15   -++      0.3894
+       oracle            mlp vs persistence       energy_distance_de 15  1.4489 0.2665     SIG 15/15   +++      0.0001
+       oracle            mlp vs persistence       knockdown_fraction 15  0.0482 0.0160     SIG 15/15   +++      0.0001
+       oracle   static_graph vs persistence pearson_delta_downstream 15 -0.0148 0.1596    n.s.  7/15   -++      0.4543
+       oracle   static_graph vs persistence       energy_distance_de 15 10.8428 1.3898     SIG 15/15   +++      0.0001
+       oracle   static_graph vs persistence       knockdown_fraction 15  1.0167 0.2154     SIG 15/15   +++      0.0001
+       oracle static_learned vs persistence pearson_delta_downstream 15  0.0026 0.1597    n.s.  7/15   -++      0.6387
+       oracle static_learned vs persistence       energy_distance_de 15 10.6875 1.3124     SIG 15/15   +++      0.0001
+       oracle static_learned vs persistence       knockdown_fraction 15  0.9966 0.2124     SIG 15/15   +++      0.0001
+       oracle      graph_cfm vs persistence pearson_delta_downstream 15  0.0465 0.1158    n.s.  8/15   -++      0.5995
+       oracle      graph_cfm vs persistence       energy_distance_de 15  9.0511 1.1340     SIG 15/15   +++      0.0001
+       oracle      graph_cfm vs persistence       knockdown_fraction 15  0.8318 0.1636     SIG 15/15   +++      0.0001
+        noisy            mlp vs persistence pearson_delta_downstream 15  0.0408 0.1566    n.s.  9/15   +-+      0.5245
+        noisy            mlp vs persistence       energy_distance_de 15  0.7403 0.2737     SIG 14/15   +++      0.0002
+        noisy            mlp vs persistence       knockdown_fraction 15  0.0455 0.0214     SIG 13/15   +++      0.0006
+        noisy   static_graph vs persistence pearson_delta_downstream 15 -0.0345 0.1227    n.s.  6/15   --+      0.4543
+        noisy   static_graph vs persistence       energy_distance_de 15  5.2398 1.0702     SIG 15/15   +++      0.0001
+        noisy   static_graph vs persistence       knockdown_fraction 15  0.9937 0.2110     SIG 15/15   +++      0.0001
+        noisy static_learned vs persistence pearson_delta_downstream 15 -0.0490 0.0988    n.s.  7/15   --+      0.3028
+        noisy static_learned vs persistence       energy_distance_de 15  5.1485 0.9439     SIG 15/15   +++      0.0001
+        noisy static_learned vs persistence       knockdown_fraction 15  0.9971 0.2249     SIG 15/15   +++      0.0001
+        noisy      graph_cfm vs persistence pearson_delta_downstream 15 -0.0718 0.1078    n.s.  5/15   --+      0.1876
+        noisy      graph_cfm vs persistence       energy_distance_de 15  4.9562 1.0159     SIG 15/15   +++      0.0001
+        noisy      graph_cfm vs persistence       knockdown_fraction 15  0.9536 0.1755     SIG 15/15   +++      0.0001
+noisy_context            mlp vs persistence pearson_delta_downstream 15  0.0436 0.1147    n.s.  9/15   +-+      0.3894
+noisy_context            mlp vs persistence       energy_distance_de 15  1.0700 0.2705     SIG 15/15   +++      0.0001
+noisy_context            mlp vs persistence       knockdown_fraction 15  0.0519 0.0176     SIG 14/15   +++      0.0002
+noisy_context   static_graph vs persistence pearson_delta_downstream 15 -0.0352 0.1260    n.s.  8/15   --+      0.8040
+noisy_context   static_graph vs persistence       energy_distance_de 15  5.2100 0.9849     SIG 15/15   +++      0.0001
+noisy_context   static_graph vs persistence       knockdown_fraction 15  1.0328 0.1991     SIG 15/15   +++      0.0001
+noisy_context static_learned vs persistence pearson_delta_downstream 15 -0.0142 0.1264    n.s.  9/15   --+      0.9341
+noisy_context static_learned vs persistence       energy_distance_de 15  5.4076 0.9170     SIG 15/15   +++      0.0001
+noisy_context static_learned vs persistence       knockdown_fraction 15  1.0546 0.2084     SIG 15/15   +++      0.0001
+noisy_context      graph_cfm vs persistence pearson_delta_downstream 15 -0.0800 0.0873    n.s.  7/15   ---      0.1354
+noisy_context      graph_cfm vs persistence       energy_distance_de 15  4.8308 0.9962     SIG 15/15   +++      0.0001
+noisy_context      graph_cfm vs persistence       knockdown_fraction 15  1.0048 0.1610     SIG 15/15   +++      0.0001
+DONE

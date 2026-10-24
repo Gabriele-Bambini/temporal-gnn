@@ -1,0 +1,51 @@
+{
+ "dataset": "eb",
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  3.0
+ ],
+ "min_detect": 0.01,
+ "smoke": true,
+ "rule": "improve on base in >= 3 of 4 (fold, seed) pairs and on average; most negative mean change; else base",
+ "per_arm": {
+  "center": {
+   "mean_change": -0.06735952964327563,
+   "n_better": 4,
+   "n": 4,
+   "changes": [
+    -0.06815117347310817,
+    -0.07109227718709121,
+    -0.06193390600746085,
+    -0.06826076190544228
+   ]
+  },
+  "wide": {
+   "mean_change": 0.01966053675066526,
+   "n_better": 2,
+   "n": 4,
+   "changes": [
+    0.10840845776397146,
+    0.12051656810676548,
+    -0.09501006012204272,
+    -0.05527281874603318
+   ]
+  },
+  "wide_center": {
+   "mean_change": -0.07380343525504696,
+   "n_better": 4,
+   "n": 4,
+   "changes": [
+    -0.019796601376249612,
+    -0.03216149533963275,
+    -0.13446157824254357,
+    -0.1087940660617619
+   ]
+  }
+ },
+ "winner": "wide_center",
+ "overrides": {
+  "hidden": 512,
+  "path_center": "linear"
+ }
+}

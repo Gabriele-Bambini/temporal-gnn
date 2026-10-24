@@ -1,0 +1,163 @@
+[Thu Sep 24 06:57:46 PM CEST 2026] eb on gnode02, steps: select chosen base 
+eb: test time 2.0 removed: 24813 cells, times [0.0, 1.0, 3.0, 4.0], folds [1.0, 3.0]
+
+=== fold 1.0: predicted from 0.0, bracketing 0.0->3.0; validation 3.0; fit [0.0, 4.0]; 1192 genes (1s) ===
+  path family, no network: {'linear': 0.5123, 'spline': 0.5898}
+  seed 0  base         ED 0.7637  mean_err 4.623  (462s, total 8 min)
+  seed 0  center       ED 0.7396  mean_err 4.578  (584s, total 18 min)
+  seed 0  wide         ED 0.9590  mean_err 5.348  (657s, total 29 min)
+  seed 0  wide_center  ED 0.8321  mean_err 4.880  (722s, total 41 min)
+  seed 1  base         ED 0.7353  mean_err 4.568  (443s, total 48 min)
+  seed 1  center       ED 0.7277  mean_err 4.531  (586s, total 58 min)
+  seed 1  wide         ED 0.9297  mean_err 5.197  (612s, total 68 min)
+  seed 1  wide_center  ED 0.8177  mean_err 4.804  (663s, total 79 min)
+
+=== fold 3.0: predicted from 1.0, bracketing 1.0->4.0; validation 1.0; fit [0.0, 4.0]; 1192 genes (4740s) ===
+  path family, no network: {'linear': 0.5259, 'spline': 0.5791}
+  seed 0  base         ED 0.6744  mean_err 5.552  (454s, total 87 min)
+  seed 0  center       ED 0.6008  mean_err 5.284  (490s, total 95 min)
+  seed 0  wide         ED 0.5827  mean_err 5.498  (898s, total 110 min)
+  seed 0  wide_center  ED 0.5262  mean_err 5.253  (939s, total 125 min)
+  seed 1  base         ED 0.5235  mean_err 5.547  (447s, total 133 min)
+  seed 1  center       ED 0.4721  mean_err 5.278  (583s, total 143 min)
+  seed 1  wide         ED 0.5993  mean_err 5.594  (928s, total 158 min)
+  seed 1  wide_center  ED 0.5427  mean_err 5.367  (962s, total 174 min)
+
+fold            1.0     3.0
+arm                        
+base         0.7495  0.5990
+center       0.7336  0.5365
+wide         0.9444  0.5910
+wide_center  0.8249  0.5345
+{
+ "dataset": "eb",
+ "test_time_removed": 2.0,
+ "folds": [
+  1.0,
+  3.0
+ ],
+ "min_detect": 0.01,
+ "smoke": false,
+ "rule": "improve on base in >= 3 of 4 (fold, seed) pairs and on average; most negative mean change; else base",
+ "per_arm": {
+  "center": {
+   "mean_change": -0.03919419060020246,
+   "n_better": 4,
+   "n": 4,
+   "changes": [
+    -0.02412995688499109,
+    -0.007683745044310797,
+    -0.0736096890431952,
+    -0.051353371428312755
+   ]
+  },
+  "wide": {
+   "mean_change": 0.09344635226639753,
+   "n_better": 1,
+   "n": 4,
+   "changes": [
+    0.1953021518275122,
+    0.19438194934882347,
+    -0.09173498911356148,
+    0.07583629700281591
+   ]
+  },
+  "wide_center": {
+   "mean_change": 0.005447652518656199,
+   "n_better": 1,
+   "n": 4,
+   "changes": [
+    0.06842235353755655,
+    0.08237898424856382,
+    -0.148257134422785,
+    0.01924640671128941
+   ]
+  }
+ },
+ "winner": "center",
+ "overrides": {
+  "path_center": "linear"
+ }
+}
+done in 174.2 min
+[Thu Sep 24 09:52:27 PM CEST 2026] selection done
+loaded 31054 cells x 17619 genes (1s)
+design: test 2.0 (days 12-15) from 1.0, horizon 1.0, bracketing 1.0->3.0 observed; validation 3.0 from 1.0; fit [0.0, 1.0, 4.0]
+genes: 1197 selected on the 18258 fit cells (1000 HVG union the expressed prior regulators), of which 248 are prior regulators (3s)
+snapshots: 10000 cells, 1197 genes, timepoints [0.0, 1.0, 2.0, 3.0, 4.0] (3s)
+prior coverage: {'prior_edges_within_selected_genes': 416, 'prior_regulators_present': 127}
+configuration chosen on the validation folds: {'path_center': 'linear'}
+space: 1197 dimensions (gene space, primary task)
+[moon2019_eb] flow_matching seed=0 done in 314s
+[moon2019_eb] flow_matching_shuffled_time seed=0 done in 513s
+[moon2019_eb] flow_matching seed=1 done in 388s
+[moon2019_eb] flow_matching_shuffled_time seed=1 done in 524s
+[moon2019_eb] flow_matching seed=2 done in 283s
+[moon2019_eb] flow_matching_shuffled_time seed=2 done in 496s
+[moon2019_eb] flow_matching seed=3 done in 348s
+[moon2019_eb] flow_matching_shuffled_time seed=3 done in 488s
+[moon2019_eb] flow_matching seed=4 done in 296s
+[moon2019_eb] flow_matching_shuffled_time seed=4 done in 492s
+
+                               mean     std  count
+model                                             
+noise_floor                 -0.0031  0.0000      5
+flow_matching                0.2669  0.0184      5
+mean_interp                  0.3706  0.0123      5
+mlp                          0.7415  0.0385      5
+flow_matching_shuffled_time  0.7860  0.0186      5
+persistence                  0.9052  0.0302      5
+ot_interp                    0.9795  0.0360      5
+linear                       2.6479  0.1009      5
+freefm_replay                3.6196  0.0745      5
+
+flow_vs_mean_interp                  mean -0.1037  CI95 [-0.1157, -0.0918]  n=5
+flow_vs_ot_interp                    mean -0.7126  CI95 [-0.7571, -0.6681]  n=5
+flow_vs_linear                       mean -2.3811  CI95 [-2.5142, -2.2479]  n=5
+flow_vs_mlp                          mean -0.4747  CI95 [-0.5198, -0.4296]  n=5
+flow_vs_persistence                  mean -0.6384  CI95 [-0.6537, -0.6230]  n=5
+flow_vs_freefm_replay                mean -3.3527  CI95 [-3.4663, -3.2391]  n=5
+flow_vs_flow_matching_shuffled_time  mean -0.5192  CI95 [-0.5294, -0.5089]  n=5
+
+done in 135.0 min -> outputs/eb_v0110
+[Fri Sep 25 12:07:59 AM CEST 2026] chosen-configuration measurement done
+loaded 31054 cells x 17619 genes (1s)
+design: test 2.0 (days 12-15) from 1.0, horizon 1.0, bracketing 1.0->3.0 observed; validation 3.0 from 1.0; fit [0.0, 1.0, 4.0]
+genes: 1197 selected on the 18258 fit cells (1000 HVG union the expressed prior regulators), of which 248 are prior regulators (3s)
+snapshots: 10000 cells, 1197 genes, timepoints [0.0, 1.0, 2.0, 3.0, 4.0] (3s)
+prior coverage: {'prior_edges_within_selected_genes': 416, 'prior_regulators_present': 127}
+space: 1197 dimensions (gene space, primary task)
+[moon2019_eb] flow_matching seed=0 done in 262s
+[moon2019_eb] flow_matching_shuffled_time seed=0 done in 363s
+[moon2019_eb] flow_matching seed=1 done in 328s
+[moon2019_eb] flow_matching_shuffled_time seed=1 done in 366s
+[moon2019_eb] flow_matching seed=2 done in 298s
+[moon2019_eb] flow_matching_shuffled_time seed=2 done in 357s
+[moon2019_eb] flow_matching seed=3 done in 299s
+[moon2019_eb] flow_matching_shuffled_time seed=3 done in 361s
+[moon2019_eb] flow_matching seed=4 done in 301s
+[moon2019_eb] flow_matching_shuffled_time seed=4 done in 361s
+
+                               mean     std  count
+model                                             
+noise_floor                 -0.0031  0.0000      5
+flow_matching                0.2712  0.0113      5
+mean_interp                  0.3706  0.0123      5
+mlp                          0.7415  0.0385      5
+flow_matching_shuffled_time  0.7838  0.0191      5
+persistence                  0.9052  0.0302      5
+ot_interp                    0.9795  0.0360      5
+linear                       2.6479  0.1009      5
+freefm_replay                3.6196  0.0745      5
+
+flow_vs_mean_interp                  mean -0.0994  CI95 [-0.1118, -0.0869]  n=5
+flow_vs_ot_interp                    mean -0.7082  CI95 [-0.7470, -0.6694]  n=5
+flow_vs_linear                       mean -2.3767  CI95 [-2.4999, -2.2535]  n=5
+flow_vs_mlp                          mean -0.4703  CI95 [-0.5123, -0.4283]  n=5
+flow_vs_persistence                  mean -0.6340  CI95 [-0.6610, -0.6070]  n=5
+flow_vs_freefm_replay                mean -3.3483  CI95 [-3.4513, -3.2454]  n=5
+flow_vs_flow_matching_shuffled_time  mean -0.5126  CI95 [-0.5243, -0.5008]  n=5
+
+done in 122.6 min -> outputs/eb_filter_base
+[Fri Sep 25 02:11:04 AM CEST 2026] base-configuration measurement done
+[Fri Sep 25 02:11:04 AM CEST 2026] all steps done

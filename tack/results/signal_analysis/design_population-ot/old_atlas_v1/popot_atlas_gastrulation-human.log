@@ -1,0 +1,31 @@
+gastrulation-human atlas transition 1 66.3 s
+gastrulation-human atlas transition 2 89.4 s
+gastrulation-human atlas transition 3 115.1 s
+gastrulation-human atlas transition 4 139.0 s
+gastrulation-human atlas transition 5 163.1 s
+gastrulation-human atlas transition 6 186.4 s
+gastrulation-human atlas transition 7 208.8 s
+gastrulation-human atlas transition 8 232.9 s
+gastrulation-human atlas transition 9 256.5 s
+gastrulation-human atlas transition 10 280.0 s
+gastrulation-human atlas transition 11 305.2 s
+gastrulation-human atlas transition 12 329.9 s
+gastrulation-human atlas transition 13 354.9 s
+gastrulation-human atlas transition 14 380.5 s
+gastrulation-human atlas transition 15 402.2 s
+gastrulation-human atlas transition 16 427.1 s
+gastrulation-human atlas transition 17 452.4 s
+gastrulation-human atlas transition 18 475.9 s
+gastrulation-human atlas transition 19 501.4 s
+gastrulation-human atlas transition 20 528.2 s
+gastrulation-human atlas transition 21 553.0 s
+gastrulation-human atlas transition 22 575.8 s
+gastrulation-human atlas transition 23 598.2 s
+gastrulation-human atlas transition 24 617.9 s
+gastrulation-human atlas transition 25 633.2 s
+gastrulation-human atlas transition 26 658.1 s
+gastrulation-human atlas transition 27 679.3 s
+gastrulation-human atlas transition 28 695.9 s
+gastrulation-human orig {'trend_repeat_last_change': [-0.4648, 0.0102, 0.0103], 'fc=persist': [0.5905, 0.3927, 0.5445], 'fc=lin1': [0.6309, 0.4489, 0.5705], 'fc=ot0.05': [0.6312, 0.4479, 0.5717], 'fc=uot0.05t1': [0.6304, 0.4468, 0.5713], 'fc=sb3': [0.6263, 0.4459, 0.5679], 'fc=oracle': [0.638, 0.451, 0.5737]}
+gastrulation-human l1 {'trend_repeat_last_change': [-0.1707, 0.1008, 0.0916], 'fc=persist': [0.0791, 0.2384, 0.2459], 'fc=lin1': [0.542, 0.4401, 0.4331], 'fc=ot0.05': [0.5477, 0.4407, 0.4373], 'fc=uot0.05t1': [0.5452, 0.437, 0.4349], 'fc=sb3': [0.4222, 0.3836, 0.3827], 'fc=oracle': [0.6565, 0.4889, 0.4895]}
+gastrulation-human linear {'trend_repeat_last_change': [0.1742, 0.218, 0.1928], 'fc=persist': [0.0409, 0.2273, 0.2019], 'fc=lin1': [0.5374, 0.4713, 0.451], 'fc=ot0.05': [0.5092, 0.4354, 0.4214], 'fc=uot0.05t1': [0.4144, 0.3974, 0.38], 'fc=sb3': [0.3522, 0.3861, 0.3811], 'fc=oracle': [0.6037, 0.5126, 0.4828]}

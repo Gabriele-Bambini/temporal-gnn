@@ -1,0 +1,12 @@
+gastrulation-human raw [0.3365, 0.2765, 0.2948] | NASS masks 0.3351
+gastrulation-human L_eb [0.3074, 0.2711, 0.2788] | NASS masks 0.3119
+gastrulation-human CP_nass [0.291, 0.2636, 0.2728] | NASS masks 0.2977
+gastrulation-human L_eb - raw {'mean_delta': -0.0291, 'better': 3, 'worse': 24, 'wilcoxon_p': 0.0}
+gastrulation-human CP_nass - raw {'mean_delta': -0.0456, 'better': 2, 'worse': 25, 'wilcoxon_p': 0.0}
+gastrulation-human baseline == nass.run_learned (max abs diff) 0.0 {'L_eb': {'corr(bridged, raw) mean at last origin': 0.663, 'var(bridged)/var(raw) mean': 1.035}, 'CP_nass': {'corr(bridged, raw) mean at last origin': 0.563, 'var(bridged)/var(raw) mean': 1.287}}
+pancreas-human raw [0.3223, 0.2212, 0.2798] | NASS masks 0.308
+pancreas-human L_eb [0.313, 0.2185, 0.2742] | NASS masks 0.2969
+pancreas-human CP_nass [0.3106, 0.2144, 0.2715] | NASS masks 0.2936
+pancreas-human L_eb - raw {'mean_delta': -0.0093, 'better': 4, 'worse': 8, 'wilcoxon_p': 0.1514}
+pancreas-human CP_nass - raw {'mean_delta': -0.0116, 'better': 4, 'worse': 8, 'wilcoxon_p': 0.1763}
+pancreas-human baseline == nass.run_learned (max abs diff) 0.0 {'L_eb': {'corr(bridged, raw) mean at last origin': 0.899, 'var(bridged)/var(raw) mean': 0.798}, 'CP_nass': {'corr(bridged, raw) mean at last origin': 0.79, 'var(bridged)/var(raw) mean': 0.818}}

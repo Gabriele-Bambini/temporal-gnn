@@ -1,0 +1,94 @@
+pred,scenario,comparison,metric,n,diff,ci95,verdict,wins,seeds,wilcoxon_p
+Q1,noisy,static_graph: signed vs unsigned,pearson_delta_downstream,15,0.5726,0.1186,SIG,15/15,+++,0.0001
+Q1,noisy,static_graph: signed vs unsigned,mse_delta_downstream,15,0.824,0.1629,SIG,15/15,+++,0.0001
+Q1,noisy,static_graph: signed vs unsigned,direction_acc_downstream,15,0.2416,0.0519,SIG,14/15,+++,0.001
+Q1,noisy_context,static_graph: signed vs unsigned,pearson_delta_downstream,15,0.5441,0.1415,SIG,15/15,+++,0.0001
+Q1,noisy_context,static_graph: signed vs unsigned,mse_delta_downstream,15,0.7441,0.2196,SIG,15/15,+++,0.0001
+Q1,noisy_context,static_graph: signed vs unsigned,direction_acc_downstream,15,0.1933,0.0627,SIG,14/15,+++,0.0001
+Q1,noisy,static_learned: signed vs unsigned,pearson_delta_downstream,15,0.5833,0.1075,SIG,15/15,+++,0.0001
+Q1,noisy,static_learned: signed vs unsigned,mse_delta_downstream,15,0.8253,0.1407,SIG,15/15,+++,0.0001
+Q1,noisy,static_learned: signed vs unsigned,direction_acc_downstream,15,0.2736,0.0492,SIG,15/15,+++,0.0001
+Q1,noisy_context,static_learned: signed vs unsigned,pearson_delta_downstream,15,0.5121,0.1349,SIG,15/15,+++,0.0001
+Q1,noisy_context,static_learned: signed vs unsigned,mse_delta_downstream,15,0.6425,0.1779,SIG,15/15,+++,0.0001
+Q1,noisy_context,static_learned: signed vs unsigned,direction_acc_downstream,15,0.1677,0.0642,SIG,14/15,+++,0.0002
+Q1,noisy,graph_cfm: signed vs unsigned,pearson_delta_downstream,15,0.4808,0.1487,SIG,13/15,+++,0.0003
+Q1,noisy,graph_cfm: signed vs unsigned,mse_delta_downstream,15,0.7272,0.1911,SIG,15/15,+++,0.0001
+Q1,noisy,graph_cfm: signed vs unsigned,direction_acc_downstream,15,0.1921,0.0986,SIG,13/15,+++,0.0012
+Q1,noisy_context,graph_cfm: signed vs unsigned,pearson_delta_downstream,15,0.5548,0.089,SIG,15/15,+++,0.0001
+Q1,noisy_context,graph_cfm: signed vs unsigned,mse_delta_downstream,15,0.8152,0.196,SIG,15/15,+++,0.0001
+Q1,noisy_context,graph_cfm: signed vs unsigned,direction_acc_downstream,15,0.2063,0.0386,SIG,15/15,+++,0.0001
+Q3,oracle,mech_graph(v0) vs static_graph CFM,pearson_delta_downstream,15,0.5726,0.1789,SIG,14/15,+++,0.0001
+Q3,oracle,mech_graph(v0) vs static_graph CFM,mse_delta_downstream,15,0.2352,0.0608,SIG,15/15,+++,0.0001
+Q3,oracle,mech_graph(v0) vs static_graph CFM,direction_acc_downstream,15,0.005,0.0107,n.s.,1/15,--+,0.3173
+Q3,noisy,mech_graph(v0) vs static_graph CFM,pearson_delta_downstream,15,0.4931,0.1533,SIG,14/15,+++,0.0001
+Q3,noisy,mech_graph(v0) vs static_graph CFM,mse_delta_downstream,15,0.7144,0.2061,SIG,14/15,+++,0.0001
+Q3,noisy,mech_graph(v0) vs static_graph CFM,direction_acc_downstream,15,0.145,0.1014,SIG,10/15,+++,0.0186
+Q3,noisy_context,mech_graph(v0) vs static_graph CFM,pearson_delta_downstream,15,0.4517,0.1389,SIG,14/15,+++,0.0002
+Q3,noisy_context,mech_graph(v0) vs static_graph CFM,mse_delta_downstream,15,0.6107,0.2343,SIG,14/15,+++,0.0003
+Q3,noisy_context,mech_graph(v0) vs static_graph CFM,direction_acc_downstream,15,0.1277,0.0951,SIG,12/15,+++,0.0181
+Q3,oracle,mech_graph_learned(v0) vs static_graph CFM,pearson_delta_downstream,15,0.7343,0.1536,SIG,15/15,+++,0.0001
+Q3,oracle,mech_graph_learned(v0) vs static_graph CFM,mse_delta_downstream,15,0.295,0.0647,SIG,15/15,+++,0.0001
+Q3,oracle,mech_graph_learned(v0) vs static_graph CFM,direction_acc_downstream,15,0.005,0.0107,n.s.,1/15,--+,0.3173
+Q3,noisy,mech_graph_learned(v0) vs static_graph CFM,pearson_delta_downstream,15,0.4868,0.1644,SIG,14/15,+++,0.0002
+Q3,noisy,mech_graph_learned(v0) vs static_graph CFM,mse_delta_downstream,15,0.6955,0.1796,SIG,15/15,+++,0.0001
+Q3,noisy,mech_graph_learned(v0) vs static_graph CFM,direction_acc_downstream,15,0.1675,0.0857,SIG,13/15,+++,0.0015
+Q3,noisy_context,mech_graph_learned(v0) vs static_graph CFM,pearson_delta_downstream,15,0.4886,0.1386,SIG,14/15,+++,0.0001
+Q3,noisy_context,mech_graph_learned(v0) vs static_graph CFM,mse_delta_downstream,15,0.684,0.2399,SIG,14/15,+++,0.0001
+Q3,noisy_context,mech_graph_learned(v0) vs static_graph CFM,direction_acc_downstream,15,0.1507,0.0923,SIG,13/15,+++,0.0026
+Q4,oracle,mech_graph vs mech_mlp (v0),pearson_delta_downstream,15,0.5555,0.2545,SIG,14/15,+++,0.0012
+Q4,oracle,mech_graph vs mech_mlp (v0),mse_delta_downstream,15,21.9095,11.8555,SIG,15/15,+++,0.0001
+Q4,oracle,mech_graph vs mech_mlp (v0),direction_acc_downstream,15,0.6008,0.1559,SIG,15/15,+++,0.0007
+Q4,noisy,mech_graph vs mech_mlp (v0),pearson_delta_downstream,15,0.3755,0.2146,SIG,12/15,+++,0.0034
+Q4,noisy,mech_graph vs mech_mlp (v0),mse_delta_downstream,15,6.8593,3.7868,SIG,15/15,+++,0.0001
+Q4,noisy,mech_graph vs mech_mlp (v0),direction_acc_downstream,15,0.2439,0.0899,SIG,15/15,+++,0.0007
+Q4,noisy_context,mech_graph vs mech_mlp (v0),pearson_delta_downstream,15,0.2028,0.2098,n.s.,10/15,+++,0.0833
+Q4,noisy_context,mech_graph vs mech_mlp (v0),mse_delta_downstream,15,5.4823,2.8835,SIG,15/15,+++,0.0001
+Q4,noisy_context,mech_graph vs mech_mlp (v0),direction_acc_downstream,15,0.2534,0.1234,SIG,13/15,+++,0.0009
+Q4,oracle,mech_graph vs mech_mlp (v1),pearson_delta_downstream,15,0.1639,0.1747,n.s.,9/15,+++,0.073
+Q4,oracle,mech_graph vs mech_mlp (v1),mse_delta_downstream,15,34.3103,18.2292,SIG,15/15,+++,0.0001
+Q4,oracle,mech_graph vs mech_mlp (v1),direction_acc_downstream,15,0.455,0.2031,SIG,13/15,+++,0.0012
+Q4,noisy,mech_graph vs mech_mlp (v1),pearson_delta_downstream,15,0.0663,0.2377,n.s.,8/15,+++,0.6788
+Q4,noisy,mech_graph vs mech_mlp (v1),mse_delta_downstream,15,10.2603,4.6345,SIG,15/15,+++,0.0001
+Q4,noisy,mech_graph vs mech_mlp (v1),direction_acc_downstream,15,0.1739,0.0814,SIG,14/15,+++,0.001
+Q4,noisy_context,mech_graph vs mech_mlp (v1),pearson_delta_downstream,15,0.0547,0.1649,n.s.,8/15,+-+,0.4543
+Q4,noisy_context,mech_graph vs mech_mlp (v1),mse_delta_downstream,15,9.7555,4.2789,SIG,15/15,+++,0.0001
+Q4,noisy_context,mech_graph vs mech_mlp (v1),direction_acc_downstream,15,0.1921,0.1008,SIG,13/15,+++,0.0009
+Q5,oracle,mech_graph: clean vs noisy velocity,pearson_delta_downstream,15,0.3907,0.166,SIG,14/15,+++,0.0043
+Q5,oracle,mech_graph: clean vs noisy velocity,mse_delta_downstream,15,0.6509,0.2831,SIG,15/15,+++,0.0001
+Q5,oracle,mech_graph: clean vs noisy velocity,direction_acc_downstream,15,0.1414,0.1064,SIG,10/15,+++,0.0051
+Q5,noisy,mech_graph: clean vs noisy velocity,pearson_delta_downstream,15,0.3432,0.2355,SIG,13/15,+++,0.0054
+Q5,noisy,mech_graph: clean vs noisy velocity,mse_delta_downstream,15,0.4213,0.2132,SIG,14/15,+++,0.0026
+Q5,noisy,mech_graph: clean vs noisy velocity,direction_acc_downstream,15,0.1121,0.0927,SIG,10/15,+++,0.0151
+Q5,noisy_context,mech_graph: clean vs noisy velocity,pearson_delta_downstream,15,0.2885,0.1461,SIG,12/15,+++,0.002
+Q5,noisy_context,mech_graph: clean vs noisy velocity,mse_delta_downstream,15,0.4078,0.1795,SIG,13/15,+++,0.0004
+Q5,noisy_context,mech_graph: clean vs noisy velocity,direction_acc_downstream,15,0.1339,0.0661,SIG,14/15,+++,0.0009
+Q6,noisy,mech_graph (v0): signed vs unsigned,pearson_delta_downstream,15,0.2032,0.1143,SIG,13/15,+++,0.0009
+Q6,noisy,mech_graph (v0): signed vs unsigned,mse_delta_downstream,15,0.3089,0.1886,SIG,12/15,+++,0.0009
+Q6,noisy,mech_graph (v0): signed vs unsigned,direction_acc_downstream,15,0.1405,0.0659,SIG,13/15,+++,0.0019
+Q6,noisy_context,mech_graph (v0): signed vs unsigned,pearson_delta_downstream,15,0.2218,0.1205,SIG,13/15,+++,0.0009
+Q6,noisy_context,mech_graph (v0): signed vs unsigned,mse_delta_downstream,15,0.3186,0.1628,SIG,13/15,+++,0.002
+Q6,noisy_context,mech_graph (v0): signed vs unsigned,direction_acc_downstream,15,0.0947,0.0596,SIG,12/15,+++,0.0185
+Q6,noisy,mech_graph (v1): signed vs unsigned,pearson_delta_downstream,15,0.4328,0.2016,SIG,14/15,+++,0.0006
+Q6,noisy,mech_graph (v1): signed vs unsigned,mse_delta_downstream,15,0.5176,0.1804,SIG,15/15,+++,0.0001
+Q6,noisy,mech_graph (v1): signed vs unsigned,direction_acc_downstream,15,0.2241,0.0931,SIG,14/15,+++,0.0002
+Q6,noisy_context,mech_graph (v1): signed vs unsigned,pearson_delta_downstream,15,0.4109,0.1467,SIG,15/15,+++,0.0001
+Q6,noisy_context,mech_graph (v1): signed vs unsigned,mse_delta_downstream,15,0.576,0.1635,SIG,15/15,+++,0.0001
+Q6,noisy_context,mech_graph (v1): signed vs unsigned,direction_acc_downstream,15,0.2121,0.0626,SIG,15/15,+++,0.0001
+Q6,noisy,mech_graph_learned (v0): signed vs unsigned,pearson_delta_downstream,15,0.2281,0.1041,SIG,14/15,+++,0.0003
+Q6,noisy,mech_graph_learned (v0): signed vs unsigned,mse_delta_downstream,15,0.3492,0.1657,SIG,13/15,+++,0.0006
+Q6,noisy,mech_graph_learned (v0): signed vs unsigned,direction_acc_downstream,15,0.119,0.0408,SIG,14/15,+++,0.0002
+Q6,noisy_context,mech_graph_learned (v0): signed vs unsigned,pearson_delta_downstream,15,0.1862,0.1072,SIG,12/15,+++,0.0034
+Q6,noisy_context,mech_graph_learned (v0): signed vs unsigned,mse_delta_downstream,15,0.2677,0.1483,SIG,13/15,+++,0.0054
+Q6,noisy_context,mech_graph_learned (v0): signed vs unsigned,direction_acc_downstream,15,0.069,0.0535,SIG,13/15,+-+,0.0356
+Q6,noisy,mech_graph_learned (v1): signed vs unsigned,pearson_delta_downstream,15,0.4729,0.1677,SIG,15/15,+++,0.0001
+Q6,noisy,mech_graph_learned (v1): signed vs unsigned,mse_delta_downstream,15,0.6228,0.1924,SIG,15/15,+++,0.0001
+Q6,noisy,mech_graph_learned (v1): signed vs unsigned,direction_acc_downstream,15,0.2342,0.0884,SIG,14/15,+++,0.0003
+Q6,noisy_context,mech_graph_learned (v1): signed vs unsigned,pearson_delta_downstream,15,0.4441,0.1362,SIG,15/15,+++,0.0001
+Q6,noisy_context,mech_graph_learned (v1): signed vs unsigned,mse_delta_downstream,15,0.6432,0.16,SIG,15/15,+++,0.0001
+Q6,noisy_context,mech_graph_learned (v1): signed vs unsigned,direction_acc_downstream,15,0.2225,0.075,SIG,14/15,+++,0.0002
+CHK,noisy,static_graph: v3 unsigned vs v2 (should be ~0),mse_delta_downstream,15,0.0065,0.0118,n.s.,10/15,+++,0.2769
+CHK,noisy_context,static_graph: v3 unsigned vs v2 (should be ~0),mse_delta_downstream,15,0.0062,0.0152,n.s.,8/15,++-,0.6788
+CHK,noisy,static_learned: v3 unsigned vs v2 (should be ~0),mse_delta_downstream,15,0.0021,0.0208,n.s.,8/15,++-,0.978
+CHK,noisy_context,static_learned: v3 unsigned vs v2 (should be ~0),mse_delta_downstream,15,0.0202,0.0295,n.s.,12/15,+++,0.0833
+CHK,noisy,graph_cfm: v3 unsigned vs v2 (should be ~0),mse_delta_downstream,15,-0.007,0.0129,n.s.,7/15,---,0.4212
+CHK,noisy_context,graph_cfm: v3 unsigned vs v2 (should be ~0),mse_delta_downstream,15,-0.0024,0.0127,n.s.,8/15,---,0.8469

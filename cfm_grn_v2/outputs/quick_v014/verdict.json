@@ -1,0 +1,33 @@
+{
+ "synthetic_grn": {
+  "dataset": "synthetic_grn",
+  "metric": "energy_distance",
+  "mode": "benchmark",
+  "pass": false,
+  "beats_all_controls": false,
+  "best_control": "freefm_replay",
+  "paired_vs_best_control": {
+   "model": "flow_matching",
+   "reference": "freefm_replay",
+   "metric": "energy_distance",
+   "mean": 0.1542636936353905,
+   "ci_low": 0.03702123319375236,
+   "ci_high": 0.2715061540770286,
+   "n": 2
+  },
+  "uses_time": false,
+  "paired_vs_shuffled_time": {
+   "model": "flow_matching",
+   "reference": "flow_matching_shuffled_time",
+   "metric": "energy_distance",
+   "mean": -0.20680132368568516,
+   "ci_low": -0.7207327585709483,
+   "ci_high": 0.307130111199578,
+   "n": 2
+  },
+  "fm_mean": 0.44736917089620265,
+  "noise_floor": -0.0057549482062511535,
+  "null_q95": 0.016253493412993994,
+  "matches_target": false
+ }
+}

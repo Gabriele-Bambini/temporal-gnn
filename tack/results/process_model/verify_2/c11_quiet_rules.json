@@ -1,0 +1,790 @@
+{
+ "gastrulation-human": {
+  "per_transition_lags_and_NASS": {
+   "1": {
+    "r(y_i,y_i-1)": 0.1171,
+    "r(y_i,y_i-2)": null,
+    "NASS_pcc_own20masks": 0.1289,
+    "NASS_pcc_ctx": 0.1322
+   },
+   "2": {
+    "r(y_i,y_i-1)": -0.3506,
+    "r(y_i,y_i-2)": -0.4714,
+    "NASS_pcc_own20masks": -0.1305,
+    "NASS_pcc_ctx": -0.1059
+   },
+   "3": {
+    "r(y_i,y_i-1)": 0.2797,
+    "r(y_i,y_i-2)": -0.2304,
+    "NASS_pcc_own20masks": 0.3668,
+    "NASS_pcc_ctx": 0.3522
+   },
+   "4": {
+    "r(y_i,y_i-1)": 0.2974,
+    "r(y_i,y_i-2)": 0.3023,
+    "NASS_pcc_own20masks": 0.3217,
+    "NASS_pcc_ctx": 0.3493
+   },
+   "5": {
+    "r(y_i,y_i-1)": -0.4163,
+    "r(y_i,y_i-2)": -0.5244,
+    "NASS_pcc_own20masks": -0.286,
+    "NASS_pcc_ctx": -0.2881
+   },
+   "6": {
+    "r(y_i,y_i-1)": 0.6069,
+    "r(y_i,y_i-2)": -0.3895,
+    "NASS_pcc_own20masks": 0.5602,
+    "NASS_pcc_ctx": 0.5735
+   },
+   "7": {
+    "r(y_i,y_i-1)": 0.3339,
+    "r(y_i,y_i-2)": 0.3729,
+    "NASS_pcc_own20masks": 0.174,
+    "NASS_pcc_ctx": 0.0536
+   },
+   "8": {
+    "r(y_i,y_i-1)": -0.1832,
+    "r(y_i,y_i-2)": 0.1874,
+    "NASS_pcc_own20masks": -0.0045,
+    "NASS_pcc_ctx": 0.0949
+   },
+   "9": {
+    "r(y_i,y_i-1)": -0.3729,
+    "r(y_i,y_i-2)": 0.0701,
+    "NASS_pcc_own20masks": 0.3473,
+    "NASS_pcc_ctx": 0.3714
+   },
+   "10": {
+    "r(y_i,y_i-1)": -0.377,
+    "r(y_i,y_i-2)": 0.0752,
+    "NASS_pcc_own20masks": 0.422,
+    "NASS_pcc_ctx": 0.3791
+   },
+   "11": {
+    "r(y_i,y_i-1)": -0.3535,
+    "r(y_i,y_i-2)": 0.1549,
+    "NASS_pcc_own20masks": 0.5202,
+    "NASS_pcc_ctx": 0.5301
+   },
+   "12": {
+    "r(y_i,y_i-1)": -0.179,
+    "r(y_i,y_i-2)": 0.1564,
+    "NASS_pcc_own20masks": 0.4457,
+    "NASS_pcc_ctx": 0.4219
+   },
+   "13": {
+    "r(y_i,y_i-1)": -0.1574,
+    "r(y_i,y_i-2)": 0.1334,
+    "NASS_pcc_own20masks": 0.4413,
+    "NASS_pcc_ctx": 0.4476
+   },
+   "14": {
+    "r(y_i,y_i-1)": -0.3232,
+    "r(y_i,y_i-2)": 0.0967,
+    "NASS_pcc_own20masks": 0.3953,
+    "NASS_pcc_ctx": 0.3699
+   },
+   "15": {
+    "r(y_i,y_i-1)": -0.4243,
+    "r(y_i,y_i-2)": 0.1378,
+    "NASS_pcc_own20masks": 0.5476,
+    "NASS_pcc_ctx": 0.5488
+   },
+   "16": {
+    "r(y_i,y_i-1)": -0.3781,
+    "r(y_i,y_i-2)": 0.0671,
+    "NASS_pcc_own20masks": 0.4962,
+    "NASS_pcc_ctx": 0.5114
+   },
+   "17": {
+    "r(y_i,y_i-1)": -0.3447,
+    "r(y_i,y_i-2)": 0.1147,
+    "NASS_pcc_own20masks": 0.5575,
+    "NASS_pcc_ctx": 0.5456
+   },
+   "18": {
+    "r(y_i,y_i-1)": -0.2118,
+    "r(y_i,y_i-2)": 0.1037,
+    "NASS_pcc_own20masks": 0.5484,
+    "NASS_pcc_ctx": 0.5591
+   },
+   "19": {
+    "r(y_i,y_i-1)": -0.2488,
+    "r(y_i,y_i-2)": 0.1374,
+    "NASS_pcc_own20masks": 0.4091,
+    "NASS_pcc_ctx": 0.3755
+   },
+   "20": {
+    "r(y_i,y_i-1)": -0.1206,
+    "r(y_i,y_i-2)": 0.1251,
+    "NASS_pcc_own20masks": 0.3431,
+    "NASS_pcc_ctx": 0.3012
+   },
+   "21": {
+    "r(y_i,y_i-1)": -0.4572,
+    "r(y_i,y_i-2)": 0.1051,
+    "NASS_pcc_own20masks": 0.2348,
+    "NASS_pcc_ctx": 0.3407
+   },
+   "22": {
+    "r(y_i,y_i-1)": -0.204,
+    "r(y_i,y_i-2)": 0.2049,
+    "NASS_pcc_own20masks": 0.4164,
+    "NASS_pcc_ctx": 0.423
+   },
+   "23": {
+    "r(y_i,y_i-1)": -0.1531,
+    "r(y_i,y_i-2)": 0.1392,
+    "NASS_pcc_own20masks": 0.4177,
+    "NASS_pcc_ctx": 0.4014
+   },
+   "24": {
+    "r(y_i,y_i-1)": -0.0568,
+    "r(y_i,y_i-2)": 0.1835,
+    "NASS_pcc_own20masks": 0.3583,
+    "NASS_pcc_ctx": 0.3693
+   },
+   "25": {
+    "r(y_i,y_i-1)": -0.1703,
+    "r(y_i,y_i-2)": 0.0499,
+    "NASS_pcc_own20masks": 0.2559,
+    "NASS_pcc_ctx": 0.2568
+   },
+   "26": {
+    "r(y_i,y_i-1)": -0.1971,
+    "r(y_i,y_i-2)": 0.1125,
+    "NASS_pcc_own20masks": 0.2379,
+    "NASS_pcc_ctx": 0.2181
+   },
+   "27": {
+    "r(y_i,y_i-1)": -0.324,
+    "r(y_i,y_i-2)": -0.0969,
+    "NASS_pcc_own20masks": 0.2904,
+    "NASS_pcc_ctx": 0.3155
+   },
+   "28": {
+    "r(y_i,y_i-1)": -0.3566,
+    "r(y_i,y_i-2)": 0.0139,
+    "NASS_pcc_own20masks": 0.3613,
+    "NASS_pcc_ctx": 0.3697
+   }
+  },
+  "share<0.2_at_i_and_i-1": {
+   "transitions": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    27,
+    28
+   ],
+   "0": {
+    "NASS_within_class_pcc": 0.5577,
+    "best_rule_in_sample": "+rev_box4",
+    "best_rule_pcc": 0.5464,
+    "n_transitions_best_rule>NASS": 3,
+    "strict_rule_pcc": 0.5266,
+    "NASS_pcc_same_transitions_as_strict": 0.5509,
+    "all_rules_mean_pcc": {
+     "+lag1": -0.4421,
+     "-lag1": 0.4421,
+     "+rev_box2": 0.4421,
+     "-rev_box2": -0.4421,
+     "+rev_box4": 0.5464,
+     "-rev_box4": -0.5464,
+     "+rev_box8": 0.5287,
+     "-rev_box8": -0.5287
+    },
+    "ss_share": 0.0142,
+    "genes_per_transition": 10685.1
+   },
+   "(0,0.1]": {
+    "NASS_within_class_pcc": 0.5115,
+    "best_rule_in_sample": "+rev_box4",
+    "best_rule_pcc": 0.4978,
+    "n_transitions_best_rule>NASS": 2,
+    "strict_rule_pcc": 0.4878,
+    "NASS_pcc_same_transitions_as_strict": 0.5083,
+    "all_rules_mean_pcc": {
+     "+lag1": -0.4491,
+     "-lag1": 0.4491,
+     "+rev_box2": 0.4493,
+     "-rev_box2": -0.4493,
+     "+rev_box4": 0.4978,
+     "-rev_box4": -0.4978,
+     "+rev_box8": 0.3576,
+     "-rev_box8": -0.3576
+    },
+    "ss_share": 0.1062,
+    "genes_per_transition": 5158.9
+   },
+   "(0.1,1]": {
+    "NASS_within_class_pcc": 0.4566,
+    "best_rule_in_sample": "+rev_box2",
+    "best_rule_pcc": 0.4016,
+    "n_transitions_best_rule>NASS": 2,
+    "strict_rule_pcc": 0.3976,
+    "NASS_pcc_same_transitions_as_strict": 0.4585,
+    "all_rules_mean_pcc": {
+     "+lag1": -0.4014,
+     "-lag1": 0.4014,
+     "+rev_box2": 0.4016,
+     "-rev_box2": -0.4016,
+     "+rev_box4": 0.3935,
+     "-rev_box4": -0.3935,
+     "+rev_box8": 0.2084,
+     "-rev_box8": -0.2084
+    },
+    "ss_share": 0.5399,
+    "genes_per_transition": 3933.7
+   },
+   "(1,10]": {
+    "NASS_within_class_pcc": 0.3722,
+    "best_rule_in_sample": "-lag1",
+    "best_rule_pcc": 0.2468,
+    "n_transitions_best_rule>NASS": 3,
+    "strict_rule_pcc": 0.2442,
+    "NASS_pcc_same_transitions_as_strict": 0.3768,
+    "all_rules_mean_pcc": {
+     "+lag1": -0.2468,
+     "-lag1": 0.2468,
+     "+rev_box2": 0.2403,
+     "-rev_box2": -0.2403,
+     "+rev_box4": 0.0714,
+     "-rev_box4": -0.0714,
+     "+rev_box8": -0.094,
+     "-rev_box8": 0.094
+    },
+    "ss_share": 0.3181,
+    "genes_per_transition": 1490.2
+   },
+   "(10,100]": {
+    "NASS_within_class_pcc": 0.4442,
+    "best_rule_in_sample": "-rev_box8",
+    "best_rule_pcc": 0.342,
+    "n_transitions_best_rule>NASS": 5,
+    "strict_rule_pcc": 0.3368,
+    "NASS_pcc_same_transitions_as_strict": 0.4768,
+    "all_rules_mean_pcc": {
+     "+lag1": 0.1031,
+     "-lag1": -0.1031,
+     "+rev_box2": -0.1079,
+     "-rev_box2": 0.1079,
+     "+rev_box4": -0.2527,
+     "-rev_box4": 0.2527,
+     "+rev_box8": -0.342,
+     "-rev_box8": 0.342
+    },
+    "ss_share": 0.0208,
+    "genes_per_transition": 160.9
+   },
+   ">100": "fewer than 10 masked genes",
+   "NASS_all_gene_pcc_ctx_mean": 0.442
+  },
+  "share<0.2_at_i": {
+   "transitions": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    22,
+    24,
+    26,
+    27,
+    28
+   ],
+   "0": {
+    "NASS_within_class_pcc": 0.4901,
+    "best_rule_in_sample": "+rev_box4",
+    "best_rule_pcc": 0.5073,
+    "n_transitions_best_rule>NASS": 5,
+    "strict_rule_pcc": 0.4857,
+    "NASS_pcc_same_transitions_as_strict": 0.5162,
+    "all_rules_mean_pcc": {
+     "+lag1": -0.4223,
+     "-lag1": 0.4223,
+     "+rev_box2": 0.4219,
+     "-rev_box2": -0.4219,
+     "+rev_box4": 0.5073,
+     "-rev_box4": -0.5073,
+     "+rev_box8": 0.4904,
+     "-rev_box8": -0.4904
+    },
+    "ss_share": 0.0127,
+    "genes_per_transition": 10633.1
+   },
+   "(0,0.1]": {
+    "NASS_within_class_pcc": 0.4811,
+    "best_rule_in_sample": "+rev_box4",
+    "best_rule_pcc": 0.4622,
+    "n_transitions_best_rule>NASS": 2,
+    "strict_rule_pcc": 0.4622,
+    "NASS_pcc_same_transitions_as_strict": 0.4913,
+    "all_rules_mean_pcc": {
+     "+lag1": -0.4353,
+     "-lag1": 0.4353,
+     "+rev_box2": 0.4353,
+     "-rev_box2": -0.4353,
+     "+rev_box4": 0.4622,
+     "-rev_box4": -0.4622,
+     "+rev_box8": 0.3379,
+     "-rev_box8": -0.3379
+    },
+    "ss_share": 0.1066,
+    "genes_per_transition": 5172.1
+   },
+   "(0.1,1]": {
+    "NASS_within_class_pcc": 0.4161,
+    "best_rule_in_sample": "+rev_box2",
+    "best_rule_pcc": 0.3693,
+    "n_transitions_best_rule>NASS": 4,
+    "strict_rule_pcc": 0.3693,
+    "NASS_pcc_same_transitions_as_strict": 0.4329,
+    "all_rules_mean_pcc": {
+     "+lag1": -0.3692,
+     "-lag1": 0.3692,
+     "+rev_box2": 0.3693,
+     "-rev_box2": -0.3693,
+     "+rev_box4": 0.3286,
+     "-rev_box4": -0.3286,
+     "+rev_box8": 0.1681,
+     "-rev_box8": -0.1681
+    },
+    "ss_share": 0.543,
+    "genes_per_transition": 3968.0
+   },
+   "(1,10]": {
+    "NASS_within_class_pcc": 0.338,
+    "best_rule_in_sample": "-lag1",
+    "best_rule_pcc": 0.2006,
+    "n_transitions_best_rule>NASS": 4,
+    "strict_rule_pcc": 0.2021,
+    "NASS_pcc_same_transitions_as_strict": 0.3655,
+    "all_rules_mean_pcc": {
+     "+lag1": -0.2006,
+     "-lag1": 0.2006,
+     "+rev_box2": 0.1954,
+     "-rev_box2": -0.1954,
+     "+rev_box4": 0.02,
+     "-rev_box4": -0.02,
+     "+rev_box8": -0.1234,
+     "-rev_box8": 0.1234
+    },
+    "ss_share": 0.3166,
+    "genes_per_transition": 1496.1
+   },
+   "(10,100]": {
+    "NASS_within_class_pcc": 0.4625,
+    "best_rule_in_sample": "-rev_box8",
+    "best_rule_pcc": 0.4007,
+    "n_transitions_best_rule>NASS": 8,
+    "strict_rule_pcc": 0.3591,
+    "NASS_pcc_same_transitions_as_strict": 0.4461,
+    "all_rules_mean_pcc": {
+     "+lag1": 0.1644,
+     "-lag1": -0.1644,
+     "+rev_box2": -0.1685,
+     "-rev_box2": 0.1685,
+     "+rev_box4": -0.3215,
+     "-rev_box4": 0.3215,
+     "+rev_box8": -0.4007,
+     "-rev_box8": 0.4007
+    },
+    "ss_share": 0.0202,
+    "genes_per_transition": 159.4
+   },
+   ">100": "fewer than 10 masked genes",
+   "NASS_all_gene_pcc_ctx_mean": 0.403
+  }
+ },
+ "pancreas-human": {
+  "per_transition_lags_and_NASS": {
+   "1": {
+    "r(y_i,y_i-1)": 0.3336,
+    "r(y_i,y_i-2)": null,
+    "NASS_pcc_own20masks": 0.344,
+    "NASS_pcc_ctx": 0.2972
+   },
+   "2": {
+    "r(y_i,y_i-1)": -0.0234,
+    "r(y_i,y_i-2)": 0.0176,
+    "NASS_pcc_own20masks": -0.0144,
+    "NASS_pcc_ctx": -0.0107
+   },
+   "3": {
+    "r(y_i,y_i-1)": 0.1172,
+    "r(y_i,y_i-2)": 0.0289,
+    "NASS_pcc_own20masks": 0.1994,
+    "NASS_pcc_ctx": 0.1969
+   },
+   "4": {
+    "r(y_i,y_i-1)": 0.0109,
+    "r(y_i,y_i-2)": 0.0939,
+    "NASS_pcc_own20masks": 0.2398,
+    "NASS_pcc_ctx": 0.2384
+   },
+   "5": {
+    "r(y_i,y_i-1)": -0.1576,
+    "r(y_i,y_i-2)": 0.124,
+    "NASS_pcc_own20masks": 0.2862,
+    "NASS_pcc_ctx": 0.3022
+   },
+   "6": {
+    "r(y_i,y_i-1)": -0.1402,
+    "r(y_i,y_i-2)": 0.0815,
+    "NASS_pcc_own20masks": 0.2951,
+    "NASS_pcc_ctx": 0.2765
+   },
+   "7": {
+    "r(y_i,y_i-1)": -0.0152,
+    "r(y_i,y_i-2)": 0.1911,
+    "NASS_pcc_own20masks": 0.3564,
+    "NASS_pcc_ctx": 0.4074
+   },
+   "8": {
+    "r(y_i,y_i-1)": 0.2307,
+    "r(y_i,y_i-2)": 0.0596,
+    "NASS_pcc_own20masks": 0.2101,
+    "NASS_pcc_ctx": 0.2281
+   },
+   "9": {
+    "r(y_i,y_i-1)": 0.2797,
+    "r(y_i,y_i-2)": 0.0446,
+    "NASS_pcc_own20masks": 0.3834,
+    "NASS_pcc_ctx": 0.4078
+   },
+   "10": {
+    "r(y_i,y_i-1)": 0.2144,
+    "r(y_i,y_i-2)": 0.0024,
+    "NASS_pcc_own20masks": 0.4106,
+    "NASS_pcc_ctx": 0.3929
+   },
+   "11": {
+    "r(y_i,y_i-1)": 0.342,
+    "r(y_i,y_i-2)": 0.0426,
+    "NASS_pcc_own20masks": 0.4345,
+    "NASS_pcc_ctx": 0.4639
+   },
+   "12": {
+    "r(y_i,y_i-1)": 0.4239,
+    "r(y_i,y_i-2)": 0.0774,
+    "NASS_pcc_own20masks": 0.5328,
+    "NASS_pcc_ctx": 0.4512
+   },
+   "13": {
+    "r(y_i,y_i-1)": 0.4117,
+    "r(y_i,y_i-2)": 0.0693,
+    "NASS_pcc_own20masks": 0.3617,
+    "NASS_pcc_ctx": 0.5126
+   }
+  },
+  "lag1_by_class": {
+   "CP>10": {
+    "per_transition(r, n_genes)": {
+     "1": [
+      0.2694,
+      132
+     ],
+     "2": [
+      0.2398,
+      134
+     ],
+     "3": [
+      0.2838,
+      131
+     ],
+     "4": [
+      0.4519,
+      134
+     ],
+     "5": [
+      0.4982,
+      130
+     ],
+     "6": [
+      0.3992,
+      136
+     ],
+     "7": [
+      0.6533,
+      138
+     ],
+     "8": [
+      0.5469,
+      139
+     ],
+     "9": [
+      0.61,
+      141
+     ],
+     "10": [
+      0.5842,
+      142
+     ],
+     "11": [
+      0.1889,
+      131
+     ],
+     "12": [
+      0.5793,
+      131
+     ],
+     "13": [
+      0.6227,
+      135
+     ]
+    },
+    "slope_per_transition_i2..13": 0.0209,
+    "mean_i>=2": 0.4715
+   },
+   "CP(10,100]": {
+    "per_transition(r, n_genes)": {
+     "1": [
+      0.2694,
+      132
+     ],
+     "2": [
+      0.2398,
+      134
+     ],
+     "3": [
+      0.2838,
+      131
+     ],
+     "4": [
+      0.4519,
+      134
+     ],
+     "5": [
+      0.4982,
+      130
+     ],
+     "6": [
+      0.3992,
+      136
+     ],
+     "7": [
+      0.6533,
+      138
+     ],
+     "8": [
+      0.5469,
+      139
+     ],
+     "9": [
+      0.61,
+      141
+     ],
+     "10": [
+      0.6531,
+      141
+     ],
+     "11": [
+      0.1935,
+      129
+     ],
+     "12": [
+      0.5791,
+      130
+     ],
+     "13": [
+      0.7327,
+      131
+     ]
+    },
+    "slope_per_transition_i2..13": 0.0265,
+    "mean_i>=2": 0.4868
+   },
+   "NASS_class4(m>=3)": {
+    "per_transition(r, n_genes)": {
+     "1": [
+      0.4048,
+      397
+     ],
+     "2": [
+      0.1101,
+      364
+     ],
+     "3": [
+      0.4075,
+      358
+     ],
+     "4": [
+      0.4344,
+      337
+     ],
+     "5": [
+      0.3352,
+      313
+     ],
+     "6": [
+      0.3981,
+      294
+     ],
+     "7": [
+      0.6428,
+      325
+     ],
+     "8": [
+      0.5678,
+      255
+     ],
+     "9": [
+      0.6598,
+      226
+     ],
+     "10": [
+      0.5942,
+      249
+     ],
+     "11": [
+      0.2631,
+      263
+     ],
+     "12": [
+      0.5421,
+      273
+     ],
+     "13": [
+      0.7817,
+      289
+     ]
+    },
+    "slope_per_transition_i2..13": 0.0329,
+    "mean_i>=2": 0.4781
+   },
+   "CP(1,10]": {
+    "per_transition(r, n_genes)": {
+     "1": [
+      0.5104,
+      1609
+     ],
+     "2": [
+      0.0708,
+      1570
+     ],
+     "3": [
+      0.3636,
+      1614
+     ],
+     "4": [
+      0.2572,
+      1612
+     ],
+     "5": [
+      0.047,
+      1603
+     ],
+     "6": [
+      0.0977,
+      1549
+     ],
+     "7": [
+      0.2367,
+      1579
+     ],
+     "8": [
+      0.4256,
+      1594
+     ],
+     "9": [
+      0.4086,
+      1637
+     ],
+     "10": [
+      0.3599,
+      1742
+     ],
+     "11": [
+      0.5037,
+      1742
+     ],
+     "12": [
+      0.4731,
+      1697
+     ],
+     "13": [
+      0.6931,
+      1656
+     ]
+    },
+    "slope_per_transition_i2..13": 0.0428,
+    "mean_i>=2": 0.3281
+   },
+   "CP(0,1]": {
+    "per_transition(r, n_genes)": {
+     "1": [
+      0.2391,
+      11101
+     ],
+     "2": [
+      -0.086,
+      10510
+     ],
+     "3": [
+      -0.0402,
+      9458
+     ],
+     "4": [
+      -0.1299,
+      8365
+     ],
+     "5": [
+      -0.2637,
+      8297
+     ],
+     "6": [
+      -0.2663,
+      8482
+     ],
+     "7": [
+      -0.1902,
+      8718
+     ],
+     "8": [
+      0.09,
+      9496
+     ],
+     "9": [
+      0.1499,
+      9320
+     ],
+     "10": [
+      0.0375,
+      8807
+     ],
+     "11": [
+      0.2423,
+      10163
+     ],
+     "12": [
+      0.2739,
+      11331
+     ],
+     "13": [
+      0.1229,
+      11155
+     ]
+    },
+    "slope_per_transition_i2..13": 0.0376,
+    "mean_i>=2": -0.005
+   }
+  }
+ }
+}

@@ -1,0 +1,31 @@
+gastrulation-human loo transition 1 61.4 s
+gastrulation-human loo transition 2 114.1 s
+gastrulation-human loo transition 3 167.6 s
+gastrulation-human loo transition 4 216.5 s
+gastrulation-human loo transition 5 268.8 s
+gastrulation-human loo transition 6 322.9 s
+gastrulation-human loo transition 7 374.2 s
+gastrulation-human loo transition 8 428.5 s
+gastrulation-human loo transition 9 477.1 s
+gastrulation-human loo transition 10 524.9 s
+gastrulation-human loo transition 11 572.0 s
+gastrulation-human loo transition 12 614.2 s
+gastrulation-human loo transition 13 660.0 s
+gastrulation-human loo transition 14 706.0 s
+gastrulation-human loo transition 15 750.7 s
+gastrulation-human loo transition 16 794.7 s
+gastrulation-human loo transition 17 841.7 s
+gastrulation-human loo transition 18 887.4 s
+gastrulation-human loo transition 19 930.1 s
+gastrulation-human loo transition 20 958.9 s
+gastrulation-human loo transition 21 1001.6 s
+gastrulation-human loo transition 22 1040.8 s
+gastrulation-human loo transition 23 1078.4 s
+gastrulation-human loo transition 24 1100.9 s
+gastrulation-human loo transition 25 1131.2 s
+gastrulation-human loo transition 26 1151.0 s
+gastrulation-human loo transition 27 1170.4 s
+gastrulation-human loo transition 28 1188.2 s
+gastrulation-human loo orig {'trend_repeat_last_change': [-0.4648, 0.0102, 0.0103], 'fc=persist': [0.5905, 0.3931, 0.545], 'fc=lin1': [0.5898, 0.4051, 0.5428], 'fc=loglin1': [0.59, 0.4046, 0.5432], 'fc=ot0.05': [0.5921, 0.4092, 0.5434], 'fc=uot0.05t1': [0.5943, 0.4082, 0.5462], 'fc=sb3': [0.5947, 0.4113, 0.5451], 'fc=bridge': [0.5977, 0.4164, 0.5501], 'fc=oracle': [0.6047, 0.4201, 0.5512]}
+gastrulation-human loo l1 {'trend_repeat_last_change': [-0.1707, 0.1008, 0.0916], 'fc=persist': [0.0793, 0.2385, 0.2462], 'fc=lin1': [0.4793, 0.3905, 0.3891], 'fc=loglin1': [0.4779, 0.3905, 0.3898], 'fc=ot0.05': [0.4873, 0.3925, 0.3934], 'fc=uot0.05t1': [0.4614, 0.3852, 0.3818], 'fc=sb3': [0.3781, 0.3534, 0.352], 'fc=bridge': [0.4275, 0.3626, 0.3761], 'fc=oracle': [0.5968, 0.4331, 0.437]}
+gastrulation-human loo linear {'trend_repeat_last_change': [0.1742, 0.218, 0.1928], 'fc=persist': [0.0547, 0.2302, 0.2017], 'fc=lin1': [0.485, 0.4151, 0.4031], 'fc=loglin1': [0.4914, 0.4012, 0.4058], 'fc=ot0.05': [0.4908, 0.3963, 0.3932], 'fc=uot0.05t1': [0.4115, 0.3666, 0.3652], 'fc=sb3': [0.2939, 0.3552, 0.354], 'fc=bridge': [0.3845, 0.3614, 0.3687], 'fc=oracle': [0.5745, 0.4647, 0.4404]}

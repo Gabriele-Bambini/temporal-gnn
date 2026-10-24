@@ -1,0 +1,182 @@
+{
+ "nass_pancreas-human": {
+  "n_numeric": 6280,
+  "max_abs_delta": 1.0,
+  "n_gt_0.005": 25,
+  "n_gt_0.02": 20,
+  "worst": [
+   [
+    1,
+    "targets/orig/paired/full vs full-kal/pcc/worse"
+   ],
+   [
+    1,
+    "targets/orig/paired/full vs full-kal/pcc/better"
+   ],
+   [
+    1,
+    "targets/orig/chosen/regime+obs/3/3"
+   ],
+   [
+    1,
+    "targets/orig/chosen/full/3/3"
+   ],
+   [
+    1,
+    "targets/orig/chosen/full-kal/3/3"
+   ]
+  ],
+  "n_nonnumeric_mismatch": 0,
+  "nonnumeric_examples": []
+ },
+ "nass_gastrulation-human": {
+  "n_numeric": 10950,
+  "max_abs_delta": 1.0,
+  "n_gt_0.005": 21,
+  "n_gt_0.02": 13,
+  "worst": [
+   [
+    1,
+    "targets/orig/paired/full+grn vs full+grn_null/pcc/worse"
+   ],
+   [
+    1,
+    "targets/orig/paired/full+grn vs full+grn_null/pcc/better"
+   ],
+   [
+    1,
+    "targets/orig/chosen/full+grn_null/3/3"
+   ],
+   [
+    1,
+    "targets/linear/chosen/regime_unstd/3/3"
+   ],
+   [
+    1,
+    "targets/linear/chosen/regime/3/3"
+   ]
+  ],
+  "n_nonnumeric_mismatch": 0,
+  "nonnumeric_examples": []
+ },
+ "lsb_pancreas-human": {
+  "n_numeric": 6839,
+  "max_abs_delta": 0.0,
+  "n_gt_0.005": 0,
+  "n_gt_0.02": 0,
+  "worst": [
+   [
+    0,
+    "paired/orig/trend_vs_levelobs_i>=3/up/worse"
+   ],
+   [
+    0.0,
+    "paired/orig/trend_vs_levelobs_i>=3/up/wilcoxon_p"
+   ],
+   [
+    0.0,
+    "paired/orig/trend_vs_levelobs_i>=3/up/mean_delta"
+   ],
+   [
+    0,
+    "paired/orig/trend_vs_levelobs_i>=3/up/better"
+   ],
+   [
+    0,
+    "paired/orig/trend_vs_levelobs_i>=3/pcc/worse"
+   ]
+  ],
+  "n_nonnumeric_mismatch": 0,
+  "nonnumeric_examples": []
+ },
+ "lsb_gastrulation-human": {
+  "n_numeric": 7433,
+  "max_abs_delta": 0.0,
+  "n_gt_0.005": 0,
+  "n_gt_0.02": 0,
+  "worst": [
+   [
+    0,
+    "paired/orig/trend_vs_levelobs_i>=3/up/worse"
+   ],
+   [
+    0.0,
+    "paired/orig/trend_vs_levelobs_i>=3/up/wilcoxon_p"
+   ],
+   [
+    0.0,
+    "paired/orig/trend_vs_levelobs_i>=3/up/mean_delta"
+   ],
+   [
+    0,
+    "paired/orig/trend_vs_levelobs_i>=3/up/better"
+   ],
+   [
+    0,
+    "paired/orig/trend_vs_levelobs_i>=3/pcc/worse"
+   ]
+  ],
+  "n_nonnumeric_mismatch": 0,
+  "nonnumeric_examples": []
+ },
+ "popot_pancreas-human": {
+  "n_numeric": 3473,
+  "max_abs_delta": 0.0,
+  "n_gt_0.005": 0,
+  "n_gt_0.02": 0,
+  "worst": [
+   [
+    0.0,
+    "turn_on_auc_history_fraction_of_past_bins_expressed"
+   ],
+   [
+    0.0,
+    "targets/orig/paired/noOT - trend/pearson/wilcoxon_two_sided_p"
+   ],
+   [
+    0,
+    "targets/orig/paired/noOT - trend/pearson/n_worse"
+   ],
+   [
+    0,
+    "targets/orig/paired/noOT - trend/pearson/n_better"
+   ],
+   [
+    0.0,
+    "targets/orig/paired/noOT - trend/pearson/mean_delta"
+   ]
+  ],
+  "n_nonnumeric_mismatch": 0,
+  "nonnumeric_examples": []
+ },
+ "popot_gastrulation-human": {
+  "n_numeric": 5530,
+  "max_abs_delta": 0.0,
+  "n_gt_0.005": 0,
+  "n_gt_0.02": 0,
+  "worst": [
+   [
+    0.0,
+    "turn_on_auc_history_fraction_of_past_bins_expressed"
+   ],
+   [
+    0.0,
+    "targets/orig/paired/noOT - trend/pearson/wilcoxon_two_sided_p"
+   ],
+   [
+    0,
+    "targets/orig/paired/noOT - trend/pearson/n_worse"
+   ],
+   [
+    0,
+    "targets/orig/paired/noOT - trend/pearson/n_better"
+   ],
+   [
+    0.0,
+    "targets/orig/paired/noOT - trend/pearson/mean_delta"
+   ]
+  ],
+  "n_nonnumeric_mismatch": 0,
+  "nonnumeric_examples": []
+ }
+}

@@ -1,0 +1,5 @@
+dataset,config_id,hidden,lr,sigma_min,coupling,pair_mode,clock,seed,val_energy_distance,best_iter,seconds
+synthetic_grn_interp_t3,0,128,0.001,0.001,ot,consecutive,flow,0,0.47224714868905227,1200,11.52644968032837
+synthetic_grn_interp_t3,1,128,0.001,0.001,ot,consecutive,duration,0,0.1328833157178968,450,5.293636083602905
+synthetic_grn_interp_t3,2,128,0.001,0.001,ot,all,flow,0,0.031428383392628545,1500,7.50255823135376
+synthetic_grn_interp_t3,3,128,0.001,0.001,ot,all,duration,0,0.29489313633344794,450,5.7186503410339355

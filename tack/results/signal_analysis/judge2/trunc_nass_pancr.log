@@ -1,0 +1,3 @@
+﻿pancreas-human nass l1 {'pred_maxabs_diff_at_i': 0.0, 'pred_diff_at_i+1 (should be >0, garbage visible)': 8.079127715939297, 'label_diff_at_i (garbage label)': 4.625270366668701, 'feature_maxabs_diff_at_i': 0.0, 'chosen_same': True}
+pancreas-human nass orig {'pred_maxabs_diff_at_i': 0.0, 'pred_diff_at_i+1 (should be >0, garbage visible)': 3.4414406772553936, 'label_diff_at_i (garbage label)': 10.0, 'feature_maxabs_diff_at_i': 0.0, 'chosen_same': True}
+pancreas-human nass linear {'pred_maxabs_diff_at_i': 0.0, 'pred_diff_at_i+1 (should be >0, garbage visible)': 19.72125791192307, 'label_diff_at_i (garbage label)': 179.36034688353539, 'feature_maxabs_diff_at_i': 0.0, 'chosen_same': True}

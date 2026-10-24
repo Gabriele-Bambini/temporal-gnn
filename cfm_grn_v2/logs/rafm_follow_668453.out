@@ -1,0 +1,82 @@
+[Fri Sep 25 07:49:57 AM CEST 2026] follow-up on gnode01
+loaded 31054 cells x 17619 genes (1s)
+design: test 2.0 (days 12-15) from 1.0, horizon 1.0, bracketing 1.0->3.0 observed; validation 3.0 from 1.0; fit [0.0, 1.0, 4.0]
+genes: 1197 selected on the 18258 fit cells (1000 HVG union the expressed prior regulators), of which 248 are prior regulators (3s)
+PCA control: 50 components, 43.0 % of the variance of the selected genes (4s)
+snapshots: 10000 cells, 50 genes, timepoints [0.0, 1.0, 2.0, 3.0, 4.0] (4s)
+prior coverage: {'prior_error': 'prior coverage is reported for the gene space only'}
+configuration chosen on the validation folds: {'path_center': 'linear'}
+space: 50 dimensions (PCA control)
+[moon2019_eb] flow_matching seed=0 done in 81s
+[moon2019_eb] flow_matching_shuffled_time seed=0 done in 82s
+[moon2019_eb] flow_matching seed=1 done in 75s
+[moon2019_eb] flow_matching_shuffled_time seed=1 done in 76s
+[moon2019_eb] flow_matching seed=2 done in 72s
+[moon2019_eb] flow_matching_shuffled_time seed=2 done in 83s
+[moon2019_eb] flow_matching seed=3 done in 70s
+[moon2019_eb] flow_matching_shuffled_time seed=3 done in 80s
+[moon2019_eb] flow_matching seed=4 done in 72s
+[moon2019_eb] flow_matching_shuffled_time seed=4 done in 73s
+
+                               mean     std  count
+model                                             
+noise_floor                 -0.0010  0.0000      5
+mean_interp                  0.1344  0.0071      5
+flow_matching                0.1363  0.0127      5
+ot_interp                    0.1758  0.0071      5
+flow_matching_shuffled_time  0.3015  0.0106      5
+persistence                  0.3155  0.0096      5
+mlp                          0.4976  0.0440      5
+linear                       1.0194  0.0459      5
+freefm_replay                1.2305  0.0181      5
+
+flow_vs_mean_interp                  mean +0.0019  CI95 [-0.0059, +0.0096]  n=5
+flow_vs_ot_interp                    mean -0.0395  CI95 [-0.0511, -0.0279]  n=5
+flow_vs_linear                       mean -0.8831  CI95 [-0.9290, -0.8373]  n=5
+flow_vs_mlp                          mean -0.3613  CI95 [-0.4221, -0.3004]  n=5
+flow_vs_persistence                  mean -0.1792  CI95 [-0.1897, -0.1687]  n=5
+flow_vs_freefm_replay                mean -1.0942  CI95 [-1.1048, -1.0836]  n=5
+flow_vs_flow_matching_shuffled_time  mean -0.1652  CI95 [-0.1698, -0.1605]  n=5
+
+done in 16.1 min -> outputs/eb_v0110_pca50
+[Fri Sep 25 08:06:33 AM CEST 2026] embryoid-body PCA-50 done
+wild-type time course: 71176 cells, stages {'E7.5': 22117, 'E7.75': 5257, 'E8.0': 12206, 'E8.5': 22322, 'E8.75': 9274} (11s)
+design: test E8.0 from E7.75 (horizon 0.25 d); bracketing E7.75 -> E8.5 observed; validation E8.5 from E7.75; fit ['E7.5', 'E7.75', 'E8.75']
+genes: 1428 selected on the 36648 fit cells (1000 HVG union the expressed prior regulators), of which 465 are prior regulators (22s)
+prior coverage: {'prior_edges_within_selected_genes': 1587, 'prior_regulators_present': 331}
+replicate yardstick (energy distance between the two biological replicates): {'E7.5': 0.552, 'E8.0': 0.0265, 'E8.5': 0.2364, 'E8.75': 0.1701}
+snapshots: 15000 cells, 1428 genes, times [0.0, 1.0, 2.0, 4.0, 5.0] (30s)
+[argelaguet2022] flow_matching seed=0 done in 322s
+[argelaguet2022] flow_matching_shuffled_time seed=0 done in 276s
+[argelaguet2022] flow_matching seed=1 done in 304s
+[argelaguet2022] flow_matching_shuffled_time seed=1 done in 269s
+[argelaguet2022] flow_matching seed=2 done in 321s
+[argelaguet2022] flow_matching_shuffled_time seed=2 done in 285s
+[argelaguet2022] flow_matching seed=3 done in 347s
+[argelaguet2022] flow_matching_shuffled_time seed=3 done in 259s
+[argelaguet2022] flow_matching seed=4 done in 325s
+[argelaguet2022] flow_matching_shuffled_time seed=4 done in 287s
+
+                                mean     std  count
+model                                              
+noise_floor                  -0.0021  0.0000      5
+mean_interp                   1.5131  0.0256      5
+ot_interp                     1.9867  0.0150      5
+flow_matching_shuffled_time   2.8416  0.0868      5
+flow_matching                 2.8794  0.0346      5
+persistence                   3.1162  0.0339      5
+mlp                           4.3195  0.1312      5
+linear                        8.8911  0.5610      5
+freefm_replay                11.2297  0.8085      5
+
+flow_vs_mean_interp                  mean +1.3663  CI95 [+1.3385, +1.3941]  n=5
+flow_vs_ot_interp                    mean +0.8927  CI95 [+0.8663, +0.9192]  n=5
+flow_vs_linear                       mean -6.0117  CI95 [-6.7055, -5.3179]  n=5
+flow_vs_mlp                          mean -1.4401  CI95 [-1.5690, -1.3112]  n=5
+flow_vs_persistence                  mean -0.2368  CI95 [-0.2571, -0.2166]  n=5
+flow_vs_freefm_replay                mean -8.3503  CI95 [-9.3295, -7.3712]  n=5
+flow_vs_flow_matching_shuffled_time  mean +0.0378  CI95 [-0.0596, +0.1352]  n=5
+
+done in 129.4 min -> outputs/argelaguet_filter_base
+[Fri Sep 25 10:16:32 AM CEST 2026] gastrulation base-configuration measurement done
+[Fri Sep 25 10:16:32 AM CEST 2026] all done

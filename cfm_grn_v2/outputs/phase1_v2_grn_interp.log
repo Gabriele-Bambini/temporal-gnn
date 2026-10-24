@@ -1,0 +1,12 @@
+[synthetic_grn_interp_t3] best config: {'hidden': 128, 'depth': 3, 'lr': 0.001, 'weight_decay': 0.0, 'batch_size': 256, 'n_iters': 8000, 'sigma_min': 0.01, 'coupling': 'ot', 'n_ode_steps': 20, 'ode_method': 'rk4', 'time_embed_dim': 32, 'cond_dim': 8, 'time_conditioning': 'delta', 'eval_every': 250, 'patience': 8, 'seed': 0, 'shuffle_biological_time': False, 'ema_decay': 0.999, 'grad_clip': 1.0, 'pair_mode': 'consecutive', 'clock': 'duration', 'path': 'spline'}
+[synthetic_grn_interp_t3] flow_matching seed=0 done in 11s
+[synthetic_grn_interp_t3] flow_matching_shuffled_time seed=0 done in 10s
+[synthetic_grn_interp_t3] flow_matching seed=1 done in 10s
+[synthetic_grn_interp_t3] flow_matching_shuffled_time seed=1 done in 8s
+[synthetic_grn_interp_t3] flow_matching seed=2 done in 12s
+[synthetic_grn_interp_t3] flow_matching_shuffled_time seed=2 done in 8s
+[synthetic_grn_interp_t3] flow_matching seed=3 done in 11s
+[synthetic_grn_interp_t3] flow_matching_shuffled_time seed=3 done in 7s
+[synthetic_grn_interp_t3] flow_matching seed=4 done in 11s
+[synthetic_grn_interp_t3] flow_matching_shuffled_time seed=4 done in 17s
+synthetic_grn_interp_t3 (benchmark): PASS fm=0.641 best_control=mean_interp uses_time=True null_q95=0.004 matches=False

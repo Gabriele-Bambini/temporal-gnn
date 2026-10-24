@@ -1,0 +1,3 @@
+GRN full scale flow/consecutive: 10.2s for 500 iters + 2 evals -> 20 ms/iter, val ED 2.065
+GRN full scale duration/all: 7.8s for 500 iters + 2 evals -> 16 ms/iter, val ED 4.347
+toy bimodal full scale: 8.4s for 500 iters + 2 evals -> 17 ms/iter

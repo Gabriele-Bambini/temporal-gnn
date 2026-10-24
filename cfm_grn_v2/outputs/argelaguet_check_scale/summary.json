@@ -1,0 +1,45 @@
+{
+ "n_genes": 1544,
+ "n_regulators": 572,
+ "genes_std_below_0.01": 13,
+ "genes_std_below_0.03": 150,
+ "regulators_among_std_below_0.03": 42,
+ "table": [
+  {
+   "min_std_kept": 0.0,
+   "genes_kept": 1544,
+   "noise_floor_ED": 0.0018108313830325073,
+   "noise_floor_mean_error": 175.88662719726562,
+   "mean_interp_ED": 1.3233550612510996,
+   "persistence_ED": 2.7548643522127847,
+   "max_abs_z_heldout": 263821.59375
+  },
+  {
+   "min_std_kept": 0.01,
+   "genes_kept": 1531,
+   "noise_floor_ED": 0.003624337689394963,
+   "noise_floor_mean_error": 1.3632718324661255,
+   "mean_interp_ED": 1.3235364263039742,
+   "persistence_ED": 2.759467656022096,
+   "max_abs_z_heldout": 143.83645629882812
+  },
+  {
+   "min_std_kept": 0.03,
+   "genes_kept": 1394,
+   "noise_floor_ED": 0.00359478468546115,
+   "noise_floor_mean_error": 1.292378544807434,
+   "mean_interp_ED": 1.3647241855218297,
+   "persistence_ED": 2.8491904750218353,
+   "max_abs_z_heldout": 125.08707427978516
+  },
+  {
+   "min_std_kept": 0.1,
+   "genes_kept": 982,
+   "noise_floor_ED": 0.004317142207511893,
+   "noise_floor_mean_error": 1.1308352947235107,
+   "mean_interp_ED": 1.5109376154115282,
+   "persistence_ED": 3.1518533729834175,
+   "max_abs_z_heldout": 32.65134811401367
+  }
+ ]
+}

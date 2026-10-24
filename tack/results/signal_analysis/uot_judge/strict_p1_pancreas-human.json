@@ -1,0 +1,28 @@
+{
+ "dataset": "pancreas-human",
+ "A_future_scramble": {
+  "2": {
+   "max_abs_diff_all_configs_targets": 7.105427357601002e-15,
+   "oracle_max_abs_diff_positive_control": 0.3076773421379058
+  },
+  "5": {
+   "max_abs_diff_all_configs_targets": 1.509903313490213e-14,
+   "oracle_max_abs_diff_positive_control": 0.7187996769330525
+  },
+  "9": {
+   "max_abs_diff_all_configs_targets": 4.440892098500626e-15,
+   "oracle_max_abs_diff_positive_control": 0.7428859715016771
+  },
+  "12": {
+   "max_abs_diff_all_configs_targets": 5.329070518200751e-15,
+   "oracle_max_abs_diff_positive_control": 0.5627054251808423
+  }
+ },
+ "B_truncation": {
+  "cut_last_bin": 8,
+  "transitions_compared": "1..7",
+  "score_arrays_compared": 117,
+  "max_abs_diff_scores": 0.0,
+  "max_abs_diff_J_all_configs": 0.0
+ }
+}

@@ -1,0 +1,203 @@
+gastrulation-human G 21430 T 29 configs 300 cells [9, 182, 792, 929, 982, 616, 340, 217, 225, 248, 290, 304, 431, 440, 333, 247, 246, 230, 275, 316, 355, 350, 264, 233, 228, 306, 231, 138, 46, 7]
+gastrulation-human transition 1 fit 0.4 s total 5.0 s
+gastrulation-human transition 2 fit 0.4 s total 33.1 s
+gastrulation-human transition 3 fit 0.5 s total 42.0 s
+gastrulation-human transition 4 fit 0.9 s total 52.0 s
+gastrulation-human transition 5 fit 1.0 s total 57.7 s
+gastrulation-human transition 6 fit 1.6 s total 64.3 s
+gastrulation-human transition 7 fit 1.6 s total 75.9 s
+gastrulation-human transition 8 fit 2.0 s total 82.2 s
+gastrulation-human transition 9 fit 5.5 s total 112.0 s
+gastrulation-human transition 10 fit 5.4 s total 144.6 s
+gastrulation-human transition 11 fit 5.6 s total 174.1 s
+gastrulation-human transition 12 fit 6.2 s total 209.8 s
+gastrulation-human transition 13 fit 7.6 s total 244.2 s
+gastrulation-human transition 14 fit 7.7 s total 278.8 s
+gastrulation-human transition 15 fit 10.1 s total 324.5 s
+gastrulation-human transition 16 fit 12.4 s total 368.3 s
+gastrulation-human transition 17 fit 12.3 s total 413.8 s
+gastrulation-human transition 18 fit 10.8 s total 453.6 s
+gastrulation-human transition 19 fit 10.2 s total 485.6 s
+gastrulation-human transition 20 fit 11.4 s total 521.9 s
+gastrulation-human transition 21 fit 12.0 s total 560.8 s
+gastrulation-human transition 22 fit 14.2 s total 610.1 s
+gastrulation-human transition 23 fit 10.8 s total 652.8 s
+gastrulation-human transition 24 fit 13.0 s total 698.4 s
+gastrulation-human transition 25 fit 13.1 s total 742.7 s
+gastrulation-human transition 26 fit 14.2 s total 789.2 s
+gastrulation-human transition 27 fit 12.8 s total 832.7 s
+gastrulation-human transition 28 fit 15.0 s total 877.0 s
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\signal_analysis\uot_pop_sink\uot_sink.py:583: RuntimeWarning: Mean of empty slice
+  for v in np.nanmean(Sg[t][g][:, :, 0], 1)]}
+== gastrulation-human target=l1  [PCC, P@200 up, P@200 down] tie-aware, i>=1 | i>=2
+  trend                        [-0.1583, 0.1053, 0.0915] | [-0.1691, 0.102, 0.0903]
+  persist|Kany                 [0.255, 0.2682, 0.2842] | [0.2595, 0.271, 0.2902]  fam {'persist': 27} K {'K4': 27}
+  persist|L1|Kany              [0.0062, 0.0344, 0.0395] | [0.0015, 0.0286, 0.0364]  fam {'persist': 27} K {'K4': 8, 'K8': 18, 'K16': 1}
+  persist|L3|Kany              [0.255, 0.2682, 0.2842] | [0.2595, 0.271, 0.2902]  fam {'persist': 27} K {'K4': 27}
+  lin1|Kany                    [0.2582, 0.2587, 0.2648] | [0.2629, 0.2611, 0.2701]  fam {'lin1': 27} K {'K4': 26, 'K8': 1}
+  balanced|Kany                [0.2576, 0.2582, 0.2677] | [0.2622, 0.2606, 0.2731]  fam {'balanced': 27} K {'K4': 23, 'K8': 4}
+  sink_abs|Kany                [0.2502, 0.2665, 0.2724] | [0.2545, 0.2692, 0.278]  fam {'sink_abs': 27} K {'K4': 24, 'K8': 3}
+  sink_norm|Kany               [0.2688, 0.2658, 0.2789] | [0.2739, 0.2685, 0.2847]  fam {'sink_norm': 27} K {'K4': 24, 'K8': 3}
+  sink_any|Kany                [0.2486, 0.2662, 0.2725] | [0.2529, 0.2689, 0.2781]  fam {'sink_abs': 24, 'sink_norm': 3} K {'K4': 24, 'K8': 3}
+  kluot_abs|Kany               [0.2713, 0.2658, 0.2764] | [0.2764, 0.2684, 0.2822]  fam {'kluot_abs': 27} K {'K4': 25, 'K8': 2}
+  noOT|Kany                    [0.229, 0.2609, 0.2736] | [0.2326, 0.2634, 0.2793]  fam {'persist': 14, 'lin1': 13} K {'K4': 27}
+  full|Kany                    [0.2302, 0.2539, 0.2685] | [0.2339, 0.2562, 0.274]  fam {'persist': 3, 'sink_abs': 14, 'sink_norm': 1, 'kluot_abs': 5, 'lin1': 4} K {'K4': 24, 'K8': 3}
+  lin1|K4                      [0.2596, 0.2603, 0.2661] | [0.2643, 0.2627, 0.2715]
+  balanced|K4                  [0.2675, 0.2659, 0.2737] | [0.2726, 0.2685, 0.2793]
+  sink_abs|K4                  [0.2586, 0.2724, 0.2779] | [0.2633, 0.2754, 0.2837]
+  sink_norm|K4                 [0.2759, 0.2714, 0.2829] | [0.2812, 0.2743, 0.2888]
+  ORACLE|K4|Lsel               [0.3919, 0.3064, 0.3215] | [0.4061, 0.3164, 0.332]
+  ORACLE|K4|L1                 [0.2659, 0.2375, 0.218] | [0.2754, 0.2449, 0.2247]
+  ORACLE|K4|L3                 [0.3864, 0.3083, 0.326] | [0.4061, 0.3164, 0.332]
+  lin1|K8                      [0.1461, 0.2042, 0.2046] | [0.1466, 0.2046, 0.2077]
+  balanced|K8                  [0.2069, 0.2321, 0.2449] | [0.2097, 0.2335, 0.2494]
+  sink_abs|K8                  [0.1879, 0.2355, 0.2436] | [0.1899, 0.2371, 0.2481]
+  sink_norm|K8                 [0.2022, 0.2324, 0.2457] | [0.2048, 0.2338, 0.2502]
+  ORACLE|K8|Lsel               [0.4081, 0.3079, 0.3246] | [0.4229, 0.3179, 0.3353]
+  ORACLE|K8|L1                 [0.3253, 0.2645, 0.2623] | [0.337, 0.2729, 0.2706]
+  ORACLE|K8|L3                 [0.4026, 0.3097, 0.3291] | [0.4229, 0.3179, 0.3353]
+  lin1|K16                     [-0.048, 0.1372, 0.1193] | [-0.0547, 0.1351, 0.1192]
+  balanced|K16                 [0.1158, 0.1984, 0.1949] | [0.1152, 0.1985, 0.1976]
+  sink_abs|K16                 [0.0875, 0.2104, 0.2115] | [0.0859, 0.211, 0.2148]
+  sink_norm|K16                [0.1031, 0.2092, 0.2164] | [0.102, 0.2098, 0.2199]
+  ORACLE|K16|Lsel              [0.4137, 0.3138, 0.3244] | [0.4287, 0.324, 0.335]
+  ORACLE|K16|L1                [0.3989, 0.3037, 0.3211] | [0.4133, 0.3136, 0.3316]
+  ORACLE|K16|L3                [0.4094, 0.316, 0.3286] | [0.4299, 0.3245, 0.3348]
+  ORACLE|Ksel|Lsel             [0.4162, 0.318, 0.3273] | [0.4312, 0.3284, 0.338]
+  paired sink_abs|Kany - balanced|Kany            dPCC -0.0077 (19/8, p=0.2198) dJ +0.0019 (19/8, p=0.0436)
+  paired sink_norm|Kany - balanced|Kany           dPCC +0.0117 (19/8, p=0.0906) dJ +0.0104 (20/7, p=0.0096)
+  paired sink_any|Kany - balanced|Kany            dPCC -0.0093 (18/9, p=0.3735) dJ +0.0013 (18/9, p=0.1056)
+  paired kluot_abs|Kany - balanced|Kany           dPCC +0.0142 (20/7, p=0.0121) dJ +0.0104 (20/7, p=0.0059)
+  paired sink_abs|Kany - lin1|Kany                dPCC -0.0083 (11/16, p=0.8408) dJ +0.0025 (13/14, p=0.8408)
+  paired sink_norm|Kany - lin1|Kany               dPCC +0.0110 (13/14, p=0.804) dJ +0.0110 (13/14, p=0.427)
+  paired sink_any|Kany - persist|Kany             dPCC -0.0066 (18/9, p=0.6109) dJ -0.0069 (17/10, p=0.9341)
+  paired balanced|Kany - lin1|Kany                dPCC -0.0007 (11/16, p=0.7496) dJ +0.0006 (11/16, p=0.8779)
+  paired full|Kany - noOT|Kany                    dPCC +0.0013 (11/9, p=0.8695) dJ -0.0038 (10/10, p=0.8408)
+  paired sink_abs|K4 - balanced|K4                dPCC -0.0093 (18/9, p=0.2291) dJ +0.0006 (19/8, p=0.0319)
+  paired sink_norm|K4 - balanced|K4               dPCC +0.0086 (17/10, p=0.2386) dJ +0.0080 (18/9, p=0.0619)
+  paired sink_abs|K8 - balanced|K8                dPCC -0.0197 (11/16, p=0.4553) dJ -0.0058 (13/14, p=0.714)
+  paired sink_norm|K8 - balanced|K8               dPCC -0.0049 (10/17, p=0.2021) dJ -0.0013 (10/17, p=0.4553)
+  paired sink_abs|K16 - balanced|K16              dPCC -0.0293 (11/16, p=0.4698) dJ +0.0002 (15/12, p=0.6109)
+  paired sink_norm|K16 - balanced|K16             dPCC -0.0131 (14/13, p=0.6277) dJ +0.0068 (17/10, p=0.3361)
+  paired sink_abs|Kany - trend                    dPCC +0.4236 (24/3, p=0.0) dJ +0.2595 (24/3, p=0.0)
+  paired sink_norm|Kany - trend                   dPCC +0.4430 (26/1, p=0.0) dJ +0.2679 (25/2, p=0.0)
+  paired sink_any|Kany - trend                    dPCC +0.4220 (24/3, p=0.0) dJ +0.2589 (24/3, p=0.0)
+  paired balanced|Kany - trend                    dPCC +0.4313 (24/3, p=0.0) dJ +0.2576 (24/3, p=0.0)
+  paired lin1|Kany - trend                        dPCC +0.4319 (25/2, p=0.0) dJ +0.2570 (25/2, p=0.0)
+  paired persist|Kany - trend                     dPCC +0.4286 (23/4, p=0.0) dJ +0.2658 (24/3, p=0.0)
+  paired full|Kany - trend                        dPCC +0.4029 (23/4, p=0.0001) dJ +0.2469 (23/4, p=0.0)
+== gastrulation-human target=linear  [PCC, P@200 up, P@200 down] tie-aware, i>=1 | i>=2
+  trend                        [0.1089, 0.2174, 0.1927] | [0.1234, 0.2002, 0.1961]
+  persist|Kany                 [0.0017, 0.2961, 0.2717] | [0.0123, 0.2818, 0.278]  fam {'persist': 27} K {'K4': 16, 'K8': 11}
+  persist|L1|Kany              [-0.0111, 0.0509, 0.0377] | [-0.001, 0.0275, 0.0354]  fam {'persist': 27} K {'K4': 14, 'K8': 13}
+  persist|L3|Kany              [-0.0192, 0.3114, 0.3349] | [-0.0094, 0.2977, 0.3436]  fam {'persist': 27} K {'K4': 16, 'K8': 11}
+  lin1|Kany                    [0.2216, 0.3243, 0.318] | [0.2403, 0.311, 0.326]  fam {'lin1': 27} K {'K4': 24, 'K8': 3}
+  balanced|Kany                [0.141, 0.3083, 0.2806] | [0.1568, 0.2944, 0.2873]  fam {'balanced': 27} K {'K4': 17, 'K8': 5, 'K16': 5}
+  sink_abs|Kany                [0.1076, 0.313, 0.2944] | [0.1222, 0.2993, 0.3016]  fam {'sink_abs': 27} K {'K4': 18, 'K8': 3, 'K16': 6}
+  sink_norm|Kany               [0.1392, 0.3074, 0.2828] | [0.1549, 0.2934, 0.2896]  fam {'sink_norm': 27} K {'K4': 16, 'K8': 5, 'K16': 6}
+  sink_any|Kany                [0.1016, 0.3072, 0.2849] | [0.1159, 0.2933, 0.2918]  fam {'sink_abs': 14, 'sink_norm': 13} K {'K4': 16, 'K8': 4, 'K16': 7}
+  kluot_abs|Kany               [0.1879, 0.3184, 0.3166] | [0.2054, 0.3049, 0.3246]  fam {'kluot_abs': 27} K {'K4': 19, 'K8': 6, 'K16': 2}
+  noOT|Kany                    [0.2086, 0.2972, 0.2954] | [0.2269, 0.2829, 0.3026]  fam {'persist': 3, 'lin1': 24} K {'K4': 23, 'K8': 4}
+  full|Kany                    [0.1744, 0.3024, 0.311] | [0.1914, 0.2883, 0.3188]  fam {'persist': 1, 'sink_abs': 6, 'balanced': 2, 'lin1': 4, 'kluot_abs': 14} K {'K4': 19, 'K8': 3, 'K16': 5}
+  lin1|K4                      [0.2445, 0.325, 0.3249] | [0.2641, 0.3117, 0.3332]
+  balanced|K4                  [0.211, 0.3181, 0.3113] | [0.2294, 0.3046, 0.3191]
+  sink_abs|K4                  [0.1627, 0.3187, 0.3069] | [0.1792, 0.3052, 0.3146]
+  sink_norm|K4                 [0.2123, 0.3184, 0.3119] | [0.2307, 0.3049, 0.3197]
+  ORACLE|K4|Lsel               [0.3788, 0.3221, 0.3497] | [0.3929, 0.3327, 0.3612]
+  ORACLE|K4|L1                 [0.3485, 0.3001, 0.3193] | [0.3615, 0.3099, 0.3297]
+  ORACLE|K4|L3                 [0.3515, 0.336, 0.3757] | [0.354, 0.3458, 0.3888]
+  lin1|K8                      [0.2111, 0.2911, 0.304] | [0.2295, 0.2766, 0.3116]
+  balanced|K8                  [0.2073, 0.3092, 0.3068] | [0.2255, 0.2954, 0.3144]
+  sink_abs|K8                  [0.1334, 0.2991, 0.29] | [0.1489, 0.2849, 0.297]
+  sink_norm|K8                 [0.213, 0.3018, 0.3015] | [0.2314, 0.2876, 0.309]
+  ORACLE|K8|Lsel               [0.393, 0.3178, 0.3774] | [0.4076, 0.3281, 0.39]
+  ORACLE|K8|L1                 [0.3873, 0.3149, 0.3633] | [0.4017, 0.3252, 0.3754]
+  ORACLE|K8|L3                 [0.4044, 0.3328, 0.4031] | [0.4088, 0.3425, 0.4173]
+  lin1|K16                     [0.1431, 0.2333, 0.2367] | [0.1589, 0.2167, 0.2417]
+  balanced|K16                 [0.1809, 0.2921, 0.2702] | [0.1981, 0.2776, 0.2764]
+  sink_abs|K16                 [0.1194, 0.2885, 0.2797] | [0.1343, 0.2738, 0.2863]
+  sink_norm|K16                [0.1671, 0.2896, 0.2678] | [0.1839, 0.275, 0.274]
+  ORACLE|K16|Lsel              [0.4178, 0.3479, 0.4014] | [0.4333, 0.3594, 0.4149]
+  ORACLE|K16|L1                [0.431, 0.3533, 0.4037] | [0.447, 0.365, 0.4172]
+  ORACLE|K16|L3                [0.4001, 0.3329, 0.3969] | [0.4044, 0.3425, 0.4108]
+  ORACLE|Ksel|Lsel             [0.42, 0.3448, 0.3975] | [0.4356, 0.3562, 0.4108]
+  paired sink_abs|Kany - balanced|Kany            dPCC -0.0346 (14/13, p=0.9906) dJ -0.0051 (12/15, p=0.714)
+  paired sink_norm|Kany - balanced|Kany           dPCC -0.0019 (13/14, p=0.5149) dJ -0.0002 (14/13, p=0.9341)
+  paired sink_any|Kany - balanced|Kany            dPCC -0.0409 (11/16, p=0.3126) dJ -0.0125 (10/17, p=0.1775)
+  paired kluot_abs|Kany - balanced|Kany           dPCC +0.0486 (17/10, p=0.0319) dJ +0.0322 (20/7, p=0.0046)
+  paired sink_abs|Kany - lin1|Kany                dPCC -0.1181 (9/18, p=0.0319) dJ -0.0514 (9/18, p=0.0491)
+  paired sink_norm|Kany - lin1|Kany               dPCC -0.0854 (9/18, p=0.0174) dJ -0.0465 (9/18, p=0.0262)
+  paired sink_any|Kany - persist|Kany             dPCC +0.1036 (17/10, p=0.3361) dJ +0.0429 (16/11, p=0.4846)
+  paired balanced|Kany - lin1|Kany                dPCC -0.0835 (9/18, p=0.02) dJ -0.0463 (10/17, p=0.028)
+  paired full|Kany - noOT|Kany                    dPCC -0.0355 (9/13, p=0.4826) dJ -0.0046 (11/11, p=0.9746)
+  paired sink_abs|K4 - balanced|K4                dPCC -0.0501 (15/12, p=0.9717) dJ -0.0180 (15/12, p=0.6446)
+  paired sink_norm|K4 - balanced|K4               dPCC +0.0013 (16/11, p=0.2109) dJ +0.0008 (16/11, p=0.2901)
+  paired sink_abs|K8 - balanced|K8                dPCC -0.0766 (10/17, p=0.0815) dJ -0.0348 (9/18, p=0.0089)
+  paired sink_norm|K8 - balanced|K8               dPCC +0.0059 (14/13, p=0.9906) dJ -0.0024 (13/14, p=0.546)
+  paired sink_abs|K16 - balanced|K16              dPCC -0.0638 (10/17, p=0.0906) dJ -0.0192 (9/18, p=0.1414)
+  paired sink_norm|K16 - balanced|K16             dPCC -0.0143 (11/16, p=0.2198) dJ -0.0064 (13/14, p=0.546)
+  paired sink_abs|Kany - trend                    dPCC -0.0013 (17/10, p=0.6277) dJ +0.0678 (16/11, p=0.1225)
+  paired sink_norm|Kany - trend                   dPCC +0.0315 (16/11, p=0.4698) dJ +0.0727 (16/11, p=0.0772)
+  paired sink_any|Kany - trend                    dPCC -0.0075 (15/12, p=0.714) dJ +0.0604 (15/12, p=0.1775)
+  paired balanced|Kany - trend                    dPCC +0.0333 (17/10, p=0.427) dJ +0.0729 (18/9, p=0.0731)
+  paired lin1|Kany - trend                        dPCC +0.1169 (17/10, p=0.1624) dJ +0.1192 (20/7, p=0.0065)
+  paired persist|Kany - trend                     dPCC -0.1111 (12/15, p=0.4996) dJ +0.0175 (16/11, p=0.7317)
+  paired full|Kany - trend                        dPCC +0.0679 (17/10, p=0.2792) dJ +0.0929 (18/9, p=0.0362)
+== gastrulation-human target=orig  [PCC, P@200 up, P@200 down] tie-aware, i>=1 | i>=2
+  trend                        [-0.4631, 0.0098, 0.0097] | [-0.471, 0.0101, 0.0086]
+  persist|Kany                 [0.5547, 0.364, 0.5252] | [0.567, 0.3754, 0.5312]  fam {'persist': 27} K {'K4': 10, 'K8': 6, 'K16': 11}
+  persist|L1|Kany              [0.4113, 0.051, 0.4404] | [0.4183, 0.0508, 0.4432]  fam {'persist': 27} K {'K4': 27}
+  persist|L3|Kany              [0.557, 0.3681, 0.5265] | [0.5695, 0.3796, 0.5325]  fam {'persist': 27} K {'K4': 10, 'K8': 6, 'K16': 11}
+  lin1|Kany                    [0.507, 0.3454, 0.4916] | [0.5176, 0.3561, 0.4963]  fam {'lin1': 27} K {'K4': 18, 'K8': 9}
+  balanced|Kany                [0.5406, 0.3527, 0.5192] | [0.5524, 0.3636, 0.525]  fam {'balanced': 27} K {'K4': 14, 'K8': 9, 'K16': 4}
+  sink_abs|Kany                [0.5579, 0.3581, 0.5314] | [0.5704, 0.3693, 0.5376]  fam {'sink_abs': 27} K {'K4': 17, 'K8': 9, 'K16': 1}
+  sink_norm|Kany               [0.5567, 0.3589, 0.5307] | [0.5692, 0.37, 0.5369]  fam {'sink_norm': 27} K {'K4': 19, 'K8': 8}
+  sink_any|Kany                [0.5587, 0.3585, 0.5317] | [0.5712, 0.3696, 0.5379]  fam {'sink_abs': 18, 'sink_norm': 9} K {'K4': 18, 'K8': 8, 'K16': 1}
+  kluot_abs|Kany               [0.5408, 0.3519, 0.5199] | [0.5527, 0.3628, 0.5257]  fam {'kluot_abs': 27} K {'K4': 15, 'K8': 8, 'K16': 4}
+  noOT|Kany                    [0.5547, 0.364, 0.5252] | [0.567, 0.3754, 0.5312]  fam {'persist': 27} K {'K4': 10, 'K8': 6, 'K16': 11}
+  full|Kany                    [0.5591, 0.3607, 0.5286] | [0.5716, 0.3719, 0.5347]  fam {'persist': 10, 'sink_abs': 8, 'sink_norm': 9} K {'K4': 13, 'K8': 8, 'K16': 6}
+  lin1|K4                      [0.5079, 0.3341, 0.4971] | [0.5186, 0.3443, 0.5021]
+  balanced|K4                  [0.5385, 0.3491, 0.5209] | [0.5503, 0.3599, 0.5267]
+  sink_abs|K4                  [0.5573, 0.3612, 0.5308] | [0.5697, 0.3725, 0.537]
+  sink_norm|K4                 [0.5558, 0.3603, 0.5307] | [0.5683, 0.3715, 0.5369]
+  ORACLE|K4|Lsel               [0.5457, 0.3558, 0.5245] | [0.5578, 0.3669, 0.5305]
+  ORACLE|K4|L1                 [0.4133, 0.2203, 0.4679] | [0.4204, 0.2263, 0.4718]
+  ORACLE|K4|L3                 [0.5471, 0.3546, 0.5248] | [0.5578, 0.3669, 0.5305]
+  lin1|K8                      [0.4828, 0.3282, 0.4748] | [0.4925, 0.3382, 0.4789]
+  balanced|K8                  [0.534, 0.3444, 0.5145] | [0.5457, 0.355, 0.5201]
+  sink_abs|K8                  [0.5555, 0.3555, 0.5267] | [0.5679, 0.3666, 0.5328]
+  sink_norm|K8                 [0.5545, 0.3551, 0.5265] | [0.5669, 0.3661, 0.5325]
+  ORACLE|K8|Lsel               [0.5437, 0.3527, 0.5196] | [0.5557, 0.3637, 0.5254]
+  ORACLE|K8|L1                 [0.4401, 0.2397, 0.4714] | [0.4483, 0.2465, 0.4754]
+  ORACLE|K8|L3                 [0.5451, 0.3515, 0.5199] | [0.5557, 0.3637, 0.5254]
+  lin1|K16                     [0.4786, 0.3372, 0.4669] | [0.4882, 0.3476, 0.4707]
+  balanced|K16                 [0.5332, 0.3496, 0.5113] | [0.5448, 0.3604, 0.5168]
+  sink_abs|K16                 [0.5568, 0.3564, 0.5279] | [0.5692, 0.3675, 0.534]
+  sink_norm|K16                [0.5542, 0.3558, 0.5277] | [0.5666, 0.3668, 0.5338]
+  ORACLE|K16|Lsel              [0.547, 0.3569, 0.5213] | [0.5591, 0.368, 0.5272]
+  ORACLE|K16|L1                [0.4622, 0.2617, 0.483] | [0.4711, 0.2693, 0.4874]
+  ORACLE|K16|L3                [0.5483, 0.3558, 0.5216] | [0.5591, 0.368, 0.5272]
+  ORACLE|Ksel|Lsel             [0.5463, 0.3576, 0.5224] | [0.5584, 0.3687, 0.5282]
+  paired sink_abs|Kany - balanced|Kany            dPCC +0.0180 (26/1, p=0.0) dJ +0.0121 (26/1, p=0.0)
+  paired sink_norm|Kany - balanced|Kany           dPCC +0.0168 (26/1, p=0.0) dJ +0.0117 (26/1, p=0.0)
+  paired sink_any|Kany - balanced|Kany            dPCC +0.0188 (27/0, p=0.0) dJ +0.0126 (27/0, p=0.0)
+  paired kluot_abs|Kany - balanced|Kany           dPCC +0.0003 (10/17, p=0.8966) dJ +0.0001 (13/14, p=0.7676)
+  paired sink_abs|Kany - lin1|Kany                dPCC +0.0528 (26/1, p=0.0) dJ +0.0358 (24/3, p=0.0)
+  paired sink_norm|Kany - lin1|Kany               dPCC +0.0516 (27/0, p=0.0) dJ +0.0354 (26/1, p=0.0)
+  paired sink_any|Kany - persist|Kany             dPCC +0.0042 (16/11, p=0.0954) dJ +0.0017 (14/13, p=0.546)
+  paired balanced|Kany - lin1|Kany                dPCC +0.0348 (24/3, p=0.0) dJ +0.0237 (23/4, p=0.0001)
+  paired full|Kany - noOT|Kany                    dPCC +0.0046 (13/4, p=0.0032) dJ +0.0015 (10/7, p=0.3529)
+  paired sink_abs|K4 - balanced|K4                dPCC +0.0195 (27/0, p=0.0) dJ +0.0141 (27/0, p=0.0)
+  paired sink_norm|K4 - balanced|K4               dPCC +0.0180 (26/1, p=0.0) dJ +0.0132 (26/1, p=0.0)
+  paired sink_abs|K8 - balanced|K8                dPCC +0.0222 (27/0, p=0.0) dJ +0.0155 (27/0, p=0.0)
+  paired sink_norm|K8 - balanced|K8               dPCC +0.0212 (26/1, p=0.0) dJ +0.0149 (26/1, p=0.0)
+  paired sink_abs|K16 - balanced|K16              dPCC +0.0244 (26/1, p=0.0) dJ +0.0162 (26/1, p=0.0)
+  paired sink_norm|K16 - balanced|K16             dPCC +0.0218 (24/3, p=0.0) dJ +0.0151 (24/3, p=0.0)
+  paired sink_abs|Kany - trend                    dPCC +1.0414 (27/0, p=0.0) dJ +0.6432 (27/0, p=0.0)
+  paired sink_norm|Kany - trend                   dPCC +1.0402 (27/0, p=0.0) dJ +0.6428 (27/0, p=0.0)
+  paired sink_any|Kany - trend                    dPCC +1.0422 (27/0, p=0.0) dJ +0.6437 (27/0, p=0.0)
+  paired balanced|Kany - trend                    dPCC +1.0234 (27/0, p=0.0) dJ +0.6311 (27/0, p=0.0)
+  paired lin1|Kany - trend                        dPCC +0.9886 (27/0, p=0.0) dJ +0.6074 (27/0, p=0.0)
+  paired persist|Kany - trend                     dPCC +1.0381 (27/0, p=0.0) dJ +0.6420 (27/0, p=0.0)
+  paired full|Kany - trend                        dPCC +1.0426 (27/0, p=0.0) dJ +0.6435 (27/0, p=0.0)
+gastrulation-human done 915.4 s

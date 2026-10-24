@@ -1,0 +1,16 @@
+pancreas-human atlas transition 1 48.8 s
+pancreas-human atlas transition 2 94.2 s
+pancreas-human atlas transition 3 135.9 s
+pancreas-human atlas transition 4 176.0 s
+pancreas-human atlas transition 5 217.0 s
+pancreas-human atlas transition 6 253.4 s
+pancreas-human atlas transition 7 287.4 s
+pancreas-human atlas transition 8 301.7 s
+pancreas-human atlas transition 9 316.9 s
+pancreas-human atlas transition 10 331.3 s
+pancreas-human atlas transition 11 346.3 s
+pancreas-human atlas transition 12 361.3 s
+pancreas-human atlas transition 13 375.8 s
+pancreas-human orig {'trend_repeat_last_change': [-0.3951, 0.04, 0.0376], 'fc=persist': [0.4812, 0.3203, 0.4533], 'fc=lin1': [0.4952, 0.3194, 0.435], 'fc=ot0.05': [0.5103, 0.3313, 0.4514], 'fc=uot0.05t1': [0.5205, 0.3392, 0.4568], 'fc=sb3': [0.5071, 0.3229, 0.4565], 'fc=oracle': [0.5629, 0.3709, 0.4762]}
+pancreas-human l1 {'trend_repeat_last_change': [0.16, 0.2231, 0.2171], 'fc=persist': [-0.0737, 0.1337, 0.1695], 'fc=lin1': [0.2866, 0.2978, 0.2928], 'fc=ot0.05': [0.3511, 0.332, 0.2988], 'fc=uot0.05t1': [0.4148, 0.3599, 0.328], 'fc=sb3': [0.2716, 0.2979, 0.2728], 'fc=oracle': [0.5668, 0.448, 0.4537]}
+pancreas-human linear {'trend_repeat_last_change': [0.4013, 0.2933, 0.3575], 'fc=persist': [0.0654, 0.202, 0.2717], 'fc=lin1': [0.4865, 0.3639, 0.4494], 'fc=ot0.05': [0.5472, 0.3712, 0.4627], 'fc=uot0.05t1': [0.5845, 0.4096, 0.4884], 'fc=sb3': [0.4711, 0.3587, 0.4354], 'fc=oracle': [0.5908, 0.4595, 0.569]}
