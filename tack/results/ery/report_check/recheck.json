@@ -1,0 +1,266 @@
+{
+ "origins": {
+  "2": {
+   "n_murk_hvg": 6,
+   "cos_shift_prev_next": -0.07295231901650308,
+   "norm_next_over_prev": 0.6213193358029439,
+   "rms_radius_now": 6.9441347974949,
+   "rms_radius_fut": 4.522652710664738,
+   "shift_over_radius": 0.4901456210882418,
+   "composition_share": 0.6219975161278668,
+   "meanshift_err_over_persist_err": 1.9558248413579005,
+   "vel": {
+    "v_ss": {
+     "pop_cos_with_murk": 0.09293826572741513,
+     "pop_cos_without_murk": 0.09646011386864443,
+     "pop_cos_with_vs_without": 0.9999738831994707,
+     "median_norm_share_in_pca": 0.11840537894554604,
+     "n_genes_nonzero": 1222
+    },
+    "v_dyn": {
+     "pop_cos_with_murk": 0.38401896864288937,
+     "pop_cos_without_murk": 0.4163299495024208,
+     "pop_cos_with_vs_without": 0.998407666552683,
+     "median_norm_share_in_pca": 0.29633223507726963,
+     "n_genes_nonzero": 237
+    }
+   }
+  },
+  "3": {
+   "n_murk_hvg": 29,
+   "cos_shift_prev_next": 0.014630509795328147,
+   "norm_next_over_prev": 0.6266182705311986,
+   "rms_radius_now": 8.027440140370638,
+   "rms_radius_fut": 5.956923105742513,
+   "shift_over_radius": 0.5161437278927125,
+   "composition_share": 0.2610303675651266,
+   "meanshift_err_over_persist_err": 1.8708548088152437,
+   "vel": {
+    "v_ss": {
+     "pop_cos_with_murk": 0.04214830272210178,
+     "pop_cos_without_murk": 0.047260747170265266,
+     "pop_cos_with_vs_without": 0.9997476059710753,
+     "median_norm_share_in_pca": 0.086700872474785,
+     "n_genes_nonzero": 2000
+    },
+    "v_dyn": {
+     "pop_cos_with_murk": 0.11801237846563363,
+     "pop_cos_without_murk": -0.0704793391381245,
+     "pop_cos_with_vs_without": 0.9047090221651715,
+     "median_norm_share_in_pca": 0.3076291283703004,
+     "n_genes_nonzero": 385
+    }
+   }
+  },
+  "4": {
+   "n_murk_hvg": 40,
+   "cos_shift_prev_next": -0.04134111515314659,
+   "norm_next_over_prev": 1.03542954261845,
+   "rms_radius_now": 6.764701763352199,
+   "rms_radius_fut": 5.823490601856424,
+   "shift_over_radius": 0.7292455278591978,
+   "composition_share": 0.503172747687216,
+   "meanshift_err_over_persist_err": 1.4186576081880358,
+   "vel": {
+    "v_ss": {
+     "pop_cos_with_murk": 0.18199936732159627,
+     "pop_cos_without_murk": 0.18305639713518299,
+     "pop_cos_with_vs_without": 0.9998780721653181,
+     "median_norm_share_in_pca": 0.10715537615551111,
+     "n_genes_nonzero": 2000
+    },
+    "v_dyn": {
+     "pop_cos_with_murk": 0.22362292896925504,
+     "pop_cos_without_murk": 0.21556289584283264,
+     "pop_cos_with_vs_without": 0.9939582564348673,
+     "median_norm_share_in_pca": 0.29917972548333815,
+     "n_genes_nonzero": 373
+    }
+   }
+  },
+  "5": {
+   "n_murk_hvg": 45,
+   "cos_shift_prev_next": 0.5356437768730362,
+   "norm_next_over_prev": 1.199392943613727,
+   "rms_radius_now": 6.898026576786083,
+   "rms_radius_fut": 5.830871288179069,
+   "shift_over_radius": 1.0153275829235744,
+   "composition_share": 0.6281153133371338,
+   "meanshift_err_over_persist_err": 0.8955200240113789,
+   "vel": {
+    "v_ss": {
+     "pop_cos_with_murk": -0.23901640113225867,
+     "pop_cos_without_murk": -0.23461574405015795,
+     "pop_cos_with_vs_without": 0.9993768594519882,
+     "median_norm_share_in_pca": 0.146753804228169,
+     "n_genes_nonzero": 2000,
+     "per_type_median_cos_vs_shift": {
+      "Blood progenitors 1": [
+       0.34932581281238795,
+       0.8235294117647058
+      ],
+      "Blood progenitors 2": [
+       0.1879185824499538,
+       0.6538461538461539
+      ],
+      "Erythroid1": [
+       -0.1290972416573365,
+       0.2087912087912088
+      ],
+      "Erythroid2": [
+       -0.222700865904906,
+       0.0049586776859504135
+      ],
+      "Erythroid3": [
+       -0.3022322065638114,
+       0.0
+      ]
+     }
+    },
+    "v_dyn": {
+     "pop_cos_with_murk": 0.04885963329535347,
+     "pop_cos_without_murk": 0.03936734236308407,
+     "pop_cos_with_vs_without": 0.9990938920745225,
+     "median_norm_share_in_pca": 0.3074385410539208,
+     "n_genes_nonzero": 406,
+     "per_type_median_cos_vs_shift": {
+      "Blood progenitors 1": [
+       0.4494247714977905,
+       1.0
+      ],
+      "Blood progenitors 2": [
+       0.45276448433727445,
+       1.0
+      ],
+      "Erythroid1": [
+       0.11046233796483491,
+       0.8269230769230769
+      ],
+      "Erythroid2": [
+       -0.10222898055363523,
+       0.20991735537190082
+      ],
+      "Erythroid3": [
+       -0.14360066332502391,
+       0.011627906976744186
+      ]
+     }
+    }
+   }
+  }
+ },
+ "batch_by_stage_cells": {
+  "E7.0": {
+   "2": 42,
+   "3": 1
+  },
+  "E7.25": {
+   "2": 65
+  },
+  "E7.5": {
+   "1": 109,
+   "2": 362
+  },
+  "E7.75": {
+   "1": 669,
+   "2": 1040
+  },
+  "E8.0": {
+   "2": 1210,
+   "3": 1601
+  },
+  "E8.25": {
+   "2": 1695
+  },
+  "E8.5": {
+   "2": 557,
+   "3": 2464
+  }
+ },
+ "origin5_chain_adjacent_cos": [
+  0.11001102144548897,
+  0.052735764423737806,
+  0.5356437768730362
+ ],
+ "origin5_chain_gap2_cos": [
+  0.7246832603789668,
+  0.5491356777146256
+ ],
+ "origin5_within_stage_batch": {
+  "E7.5": {
+   "pools": {
+    "2": 1,
+    "6": 1,
+    "19": 2,
+    "20": 2
+   },
+   "same_batch_mean": 3.096586042689673,
+   "diff_batch_mean": 3.605862431498182
+  },
+  "E7.75": {
+   "pools": {
+    "8": 1,
+    "9": 1,
+    "12": 2,
+    "13": 2
+   },
+   "same_batch_mean": 1.2713329190761646,
+   "diff_batch_mean": 6.572888131764953
+  },
+  "E8.0": {
+   "pools": {
+    "16": 2,
+    "33": 3,
+    "34": 3,
+    "35": 3
+   },
+   "same_batch_mean": 0.5094941558266667,
+   "diff_batch_mean": 4.793666181426704
+  },
+  "E8.25": {
+   "pools": {
+    "24": 2,
+    "25": 2,
+    "28": 2
+   },
+   "same_batch_mean": 2.5101594211603064,
+   "diff_batch_mean": null
+  },
+  "E8.5": {
+   "pools": {
+    "17": 2,
+    "29": 3,
+    "36": 3,
+    "37": 3
+   },
+   "same_batch_mean": 1.6961344046810722,
+   "diff_batch_mean": 1.769970358487342
+  }
+ },
+ "origin5_stage_vs_sample": {
+  "E7.5->E7.75": {
+   "ratio_cross_within": 1.4346186436721766,
+   "frac_cross_gt_within": 0.671875,
+   "pooled_ED_U": 4.055223219793325,
+   "pooled_over_median_within": 0.9143652879421905
+  },
+  "E7.75->E8.0": {
+   "ratio_cross_within": 1.462542007052786,
+   "frac_cross_gt_within": 0.6927083333333334,
+   "pooled_ED_U": 2.35386423898394,
+   "pooled_over_median_within": 0.5304719815995335
+  },
+  "E8.0->E8.25": {
+   "ratio_cross_within": 2.1051896972039676,
+   "frac_cross_gt_within": 0.7685185185185185,
+   "pooled_ED_U": 3.3468832556646166,
+   "pooled_over_median_within": 0.9096160005908644
+  },
+  "E8.25->E8.5": {
+   "ratio_cross_within": 3.14126890623259,
+   "frac_cross_gt_within": 1.0,
+   "pooled_ED_U": 5.026263830839647,
+   "pooled_over_median_within": 2.4782348977026913
+  }
+ }
+}

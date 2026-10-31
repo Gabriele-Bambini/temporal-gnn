@@ -1,0 +1,40 @@
+atlas 1 Epiblast [1958, 856, 1068] {'prev': 3.966, 'next': 1.811, 'union': 2.232, 'indep': 2.7, 'ot_pairs': 2.533, 'sb_half': 2.396}
+atlas 1 ExE ectoderm [540, 403, 405] {'prev': 3.032, 'next': 1.153, 'union': 1.667, 'indep': 1.924, 'ot_pairs': 1.659, 'sb_half': 1.692}
+atlas 1 ExE endoderm [111, 197, 268] {'prev': 1.587, 'next': 1.325, 'union': 1.0, 'indep': 1.095, 'ot_pairs': 0.984, 'sb_half': 1.0}
+atlas 1 Primitive Streak [333, 326, 620] {'prev': 3.072, 'next': 1.661, 'union': 1.846, 'indep': 2.263, 'ot_pairs': 2.039, 'sb_half': 1.881}
+atlas 2 Epiblast [856, 1068, 954] {'prev': 1.68, 'next': 0.807, 'union': 0.53, 'indep': 0.667, 'ot_pairs': 0.559, 'sb_half': 0.511}
+atlas 2 ExE ectoderm [403, 405, 370] {'prev': 1.035, 'next': 1.022, 'union': 0.486, 'indep': 0.628, 'ot_pairs': 0.489, 'sb_half': 0.452}
+atlas 2 ExE endoderm [197, 268, 298] {'prev': 1.255, 'next': 1.592, 'union': 0.706, 'indep': 0.936, 'ot_pairs': 0.783, 'sb_half': 0.749}
+atlas 2 Nascent mesoderm [138, 320, 437] {'prev': 1.663, 'next': 0.892, 'union': 0.525, 'indep': 0.723, 'ot_pairs': 0.548, 'sb_half': 0.509}
+atlas 2 Primitive Streak [326, 620, 507] {'prev': 1.495, 'next': 0.833, 'union': 0.47, 'indep': 0.601, 'ot_pairs': 0.475, 'sb_half': 0.454}
+atlas 3 Epiblast [1068, 954, 264] {'prev': 0.627, 'next': 1.282, 'union': 0.63, 'indep': 0.785, 'ot_pairs': 0.704, 'sb_half': 0.636}
+atlas 3 ExE ectoderm [405, 370, 596] {'prev': 0.747, 'next': 1.681, 'union': 0.816, 'indep': 0.997, 'ot_pairs': 0.869, 'sb_half': 0.811}
+atlas 3 ExE endoderm [268, 298, 486] {'prev': 1.25, 'next': 2.847, 'union': 1.77, 'indep': 2.261, 'ot_pairs': 1.908, 'sb_half': 1.745}
+atlas 3 Nascent mesoderm [320, 437, 196] {'prev': 0.811, 'next': 1.964, 'union': 0.794, 'indep': 1.034, 'ot_pairs': 0.879, 'sb_half': 0.856}
+atlas 3 Primitive Streak [620, 507, 159] {'prev': 0.651, 'next': 1.363, 'union': 0.627, 'indep': 0.812, 'ot_pairs': 0.694, 'sb_half': 0.646}
+atlas 4 ExE ectoderm [370, 596, 577] {'prev': 2.166, 'next': 0.567, 'union': 0.421, 'indep': 0.556, 'ot_pairs': 0.415, 'sb_half': 0.434}
+atlas 4 ExE endoderm [298, 486, 480] {'prev': 3.445, 'next': 0.565, 'union': 0.772, 'indep': 1.009, 'ot_pairs': 0.835, 'sb_half': 0.829}
+atlas 5 Caudal epiblast [126, 152, 227] {'prev': 2.212, 'next': 1.002, 'union': 0.601, 'indep': 0.932, 'ot_pairs': 0.843, 'sb_half': 0.588}
+atlas 5 ExE ectoderm [596, 577, 209] {'prev': 0.425, 'next': 0.867, 'union': 0.186, 'indep': 0.353, 'ot_pairs': 0.226, 'sb_half': 0.208}
+atlas 5 ExE endoderm [486, 480, 293] {'prev': 0.491, 'next': 0.554, 'union': 0.148, 'indep': 0.26, 'ot_pairs': 0.136, 'sb_half': 0.163}
+atlas 5 Mesenchyme [168, 211, 199] {'prev': 1.024, 'next': 0.597, 'union': 0.286, 'indep': 0.47, 'ot_pairs': 0.341, 'sb_half': 0.299}
+atlas 5 Rostral neurectoderm [329, 393, 355] {'prev': 1.071, 'next': 1.028, 'union': 0.372, 'indep': 0.609, 'ot_pairs': 0.452, 'sb_half': 0.364}
+atlas 6 ExE endoderm [480, 293, 119] {'prev': 0.332, 'next': 1.622, 'union': 0.595, 'indep': 0.725, 'ot_pairs': 0.55, 'sb_half': 0.574}
+atlas 6 Intermediate mesoderm [145, 294, 204] {'prev': 0.417, 'next': 1.33, 'union': 0.553, 'indep': 0.808, 'ot_pairs': 0.644, 'sb_half': 0.601}
+atlas 6 Mesenchyme [211, 199, 221] {'prev': 0.342, 'next': 1.581, 'union': 0.423, 'indep': 0.568, 'ot_pairs': 0.423, 'sb_half': 0.483}
+atlas 6 Paraxial mesoderm [112, 190, 249] {'prev': 0.661, 'next': 1.426, 'union': 0.654, 'indep': 0.849, 'ot_pairs': 0.72, 'sb_half': 0.688}
+atlas 6 Surface ectoderm [102, 163, 214] {'prev': 0.337, 'next': 1.131, 'union': 0.396, 'indep': 0.624, 'ot_pairs': 0.419, 'sb_half': 0.397}
+atlas 7 ExE endoderm [293, 119, 120] {'prev': 1.341, 'next': 1.819, 'union': 0.65, 'indep': 0.747, 'ot_pairs': 0.58, 'sb_half': 0.479}
+atlas 7 ExE mesoderm [132, 122, 185] {'prev': 2.352, 'next': 1.574, 'union': 0.424, 'indep': 0.532, 'ot_pairs': 0.462, 'sb_half': 0.422}
+atlas 7 Mesenchyme [199, 221, 217] {'prev': 1.634, 'next': 1.931, 'union': 0.404, 'indep': 0.472, 'ot_pairs': 0.296, 'sb_half': 0.339}
+atlas 7 Paraxial mesoderm [190, 249, 264] {'prev': 1.708, 'next': 1.156, 'union': 0.356, 'indep': 0.516, 'ot_pairs': 0.379, 'sb_half': 0.324}
+atlas 7 Pharyngeal mesoderm [197, 196, 157] {'prev': 1.259, 'next': 1.724, 'union': 0.379, 'indep': 0.408, 'ot_pairs': 0.317, 'sb_half': 0.31}
+atlas 7 Somitic mesoderm [124, 158, 119] {'prev': 2.797, 'next': 1.979, 'union': 0.669, 'indep': 0.786, 'ot_pairs': 0.588, 'sb_half': 0.496}
+atlas 7 Surface ectoderm [163, 214, 238] {'prev': 1.183, 'next': 1.246, 'union': 0.375, 'indep': 0.604, 'ot_pairs': 0.366, 'sb_half': 0.43}
+atlas {"n_units": 33, "ot_pairs<union": 10, "ot_pairs_beats_prev_next_union": 8, "median_ot_pairs_over_union": 1.0636873760994974, "sb_half<union": 15, "median_sb_half_over_union": 1.0038644016659533, "ot_pairs<indep": 33, "units_ot_wins": ["k1 ExE ectoderm", "k1 ExE endoderm", "k4 ExE ectoderm", "k5 ExE endoderm", "k6 ExE endoderm", "k7 ExE endoderm", "k7 Mesenchyme", "k7 Pharyngeal mesoderm", "k7 Somitic mesoderm", "k7 Surface ectoderm"], "seconds": 6.8}
+ery 3 Blood progenitors 1 [201, 162, 109] {'prev': 1.053, 'next': 3.018, 'union': 1.151, 'indep': 1.352, 'ot_pairs': 1.253, 'sb_half': 1.248}
+ery 3 Blood progenitors 2 [268, 940, 983] {'prev': 1.283, 'next': 2.027, 'union': 0.976, 'indep': 1.227, 'ot_pairs': 1.076, 'sb_half': 0.972}
+ery 4 Blood progenitors 2 [940, 983, 156] {'prev': 1.932, 'next': 1.147, 'union': 1.014, 'indep': 0.976, 'ot_pairs': 0.89, 'sb_half': 1.015}
+ery 4 Erythroid1 [582, 1544, 728] {'prev': 2.089, 'next': 1.165, 'union': 1.4, 'indep': 1.619, 'ot_pairs': 1.407, 'sb_half': 1.365}
+ery 5 Erythroid2 [169, 605, 306] {'prev': 1.813, 'next': 1.894, 'union': 0.819, 'indep': 0.959, 'ot_pairs': 0.837, 'sb_half': 0.755}
+ery {"n_units": 5, "ot_pairs<union": 1, "ot_pairs_beats_prev_next_union": 1, "median_ot_pairs_over_union": 1.0214368406236207, "sb_half<union": 3, "median_sb_half_over_union": 0.9966113876958285, "ot_pairs<indep": 5, "units_ot_wins": ["k4 Blood progenitors 2"], "seconds": 2.6}

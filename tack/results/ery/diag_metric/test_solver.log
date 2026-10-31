@@ -1,0 +1,11 @@
+origin 2 65x471 tau=None beta=0.0: max|dP|/maxP=6.13e-15 max|d drift|=5.94e-15 fallback=False log 0.0s kernel 0.00s
+origin 2 65x471 tau=0.1 beta=0.0: max|dP|/maxP=8.54e-16 max|d drift|=7.99e-15 fallback=False log 0.0s kernel 0.00s
+origin 2 65x471 tau=0.1 beta=5.0: max|dP|/maxP=5.08e-16 max|d drift|=4.88e-15 fallback=False log 0.0s kernel 0.00s
+origin 2 65x471 tau=1.0 beta=5.0: max|dP|/maxP=3.37e-15 max|d drift|=9.33e-15 fallback=False log 0.1s kernel 0.01s
+origin 3 471x1709 tau=None beta=0.0: max|dP|/maxP=4.64e-15 max|d drift|=7.11e-15 fallback=False log 0.9s kernel 0.02s
+origin 3 471x1709 tau=0.1 beta=0.0: max|dP|/maxP=1.05e-15 max|d drift|=4.44e-15 fallback=False log 0.3s kernel 0.02s
+origin 3 471x1709 tau=0.1 beta=5.0: max|dP|/maxP=1.52e-15 max|d drift|=3.55e-15 fallback=False log 0.3s kernel 0.02s
+origin 3 471x1709 tau=1.0 beta=5.0: max|dP|/maxP=2.22e-15 max|d drift|=7.11e-15 fallback=False log 2.4s kernel 0.05s
+self term origin 4 (S=106.89): alternating 10.08957250 symmetric 10.08957480 rel diff 2.3e-07
+forced underflow: fallback taken=True identical=True
+WORST max|dP|/maxP over real couplings: 6.13e-15 PASS

@@ -1,0 +1,4 @@
+4 rep 0 {'prev': 2.075, 'next': 2.625, 'union': 1.129, 'indep': 1.069, 'ot_pairs': 0.999, 'sb': 1.384, 'sb_half': 1.078, 'ot_bary': 1.02, 'ot_bary_sym': 1.029, 'uot': 0.888, 'uot_beta0': 0.955, 'vel_ss_sd_fixed': 2.013, 'vel_ss_energy_U': 2.052} 154s
+4 rep 1 {'prev': 2.052, 'next': 2.673, 'union': 1.12, 'indep': 1.029, 'ot_pairs': 0.928, 'sb': 1.375, 'sb_half': 1.027, 'ot_bary': 1.022, 'ot_bary_sym': 1.016, 'uot': 0.854, 'uot_beta0': 0.882, 'vel_ss_sd_fixed': 1.998, 'vel_ss_energy_U': 2.031} 241s
+4 rep 2 {'prev': 2.072, 'next': 2.687, 'union': 1.171, 'indep': 1.026, 'ot_pairs': 1.004, 'sb': 1.424, 'sb_half': 1.09, 'ot_bary': 1.033, 'ot_bary_sym': 1.031, 'uot': 0.915, 'uot_beta0': 0.895, 'vel_ss_sd_fixed': 2.013, 'vel_ss_energy_U': 2.05} 314s
+done 4 335.6 {'calls': 118, 'log_path': 0, 'unconverged': 0, 'max_marg_err': 9.974983061766807e-10}

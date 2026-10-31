@@ -39,3 +39,18 @@ STATUS: RUNNING | SUCCESS | PARTIAL | FAILED | ABANDONED | INCONCLUSIVE
 - goal: Compare direct Temporal GNN and graph flow on held-out changes
 - approach: Streaming top8 per regulator, original pancreas/gastrulation, 40 epochs, seed0, six neural variants plus three baselines
 - lesson: Unlike prior full-table scan, chunks bound edge memory; one seed remains exploratory
+
+### A-005 | 2026-10-30 | claude | SUCCEEDED | OT coupling vs kNN on clonal truth, independent LARRY replication
+- goal: Confirm on independent barcoding data that, at equal spread, OT couplings recover sister cells better than kNN and than the kernel without mass constraints
+- approach: LARRY cytokine perturbation GSM4185644, clone-label integrity check first, prereg tack/prereg/2026-10-30-larry-cytokine-prereg.md, 9 units, frozen larry_vivo_confirm unit()/rule()
+- lesson: H1 9/9 and H2 9/9 pass, best-vs-best 5/9 fails (sharp kNN K 1-3 wins in G-csf / M-csf); LARRY in vivo GEO clone labels are broken (sisters carry no fate signal inside mice), always run the integrity check before using clone labels
+
+### A-006 | 2026-10-31 | claude | FAILED (primary) | WFR (Hellinger-Kantorovich) interpolant vs 50/50 mix
+- goal: Test whether letting far mass fade (WFR) while transporting near pairs beats the mix (interpolation) and persistence (forecast)
+- approach: tack/hpc/wfr_confirm.py, prereg tack/prereg/2026-10-31-wfr-prereg.md, atlas + zebrafish + LARRY products already on HPC; differs from failed uot (A in decisions 2026-10-25) by fading far mass and nesting the mix as delta=0
+- lesson: H1 vs mix fails (atlas 4/7, zebrafish 5/9 collapsing to delta 0); WFR beats OT pairs everywhere; forecast beats persistence on atlas only (6/6, 4/6 after a same-subsample control), not zebrafish (3/8); delta=0 and persistence must share the same subsample
+
+### A-007 | 2026-10-31 | claude | FAILED | Mellon time-continuous density vs 50/50 mix
+- goal: Test whether a density-over-time model (not transport) beats the mix at reconstructing a missing time point
+- approach: tack/hpc/mellon_confirm.py (Mellon 1.7.1 in ~/envs/mellon, own Palantir-style diffusion map), prereg tack/prereg/2026-10-31-mellon-prereg.md; differs from failed dynmix (logit shares, k-means) by a GP density over continuous state and time, reweighting the neighbours' own cells
+- lesson: H1 fails (atlas 0/7, zebrafish 1/9); log-density weights collapse (ESS 4-9 % atlas), corr(log w, one-sided gap) -0.44..-0.99; log-geometry kills one-sided states

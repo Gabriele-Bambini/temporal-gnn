@@ -1,0 +1,4 @@
+2 rep 0 {'prev': 4.192, 'next': 3.781, 'union': 2.068, 'indep': 1.97, 'ot_pairs': 1.809, 'sb': 2.343, 'sb_half': 1.927, 'ot_bary': 2.208, 'ot_bary_sym': 2.067, 'uot': 1.88, 'uot_beta0': 1.703, 'vel_ss_sd_fixed': 3.601, 'vel_ss_energy_U': 3.601} 14s
+2 rep 1 {'prev': 4.192, 'next': 3.892, 'union': 2.082, 'indep': 2.168, 'ot_pairs': 1.999, 'sb': 2.508, 'sb_half': 2.076, 'ot_bary': 2.198, 'ot_bary_sym': 2.167, 'uot': 1.823, 'uot_beta0': 1.68, 'vel_ss_sd_fixed': 3.601, 'vel_ss_energy_U': 3.601} 21s
+2 rep 2 {'prev': 4.192, 'next': 3.96, 'union': 2.083, 'indep': 2.096, 'ot_pairs': 2.014, 'sb': 2.466, 'sb_half': 2.217, 'ot_bary': 2.184, 'ot_bary_sym': 2.094, 'uot': 1.637, 'uot_beta0': 1.458, 'vel_ss_sd_fixed': 3.601, 'vel_ss_energy_U': 3.601} 27s
+done 2 28.8 {'calls': 118, 'log_path': 0, 'unconverged': 0, 'max_marg_err': 9.85146630938516e-10}

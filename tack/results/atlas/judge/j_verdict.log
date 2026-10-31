@@ -1,0 +1,253 @@
+H1_ot_pairs joint 0 / 7 need 5 mean_ok False FAIL | matches stored True | readings agree True | {'prev': (6, 0, 1, 0.6151, 1.2072), 'next': (6, 0, 1, 0.6151, 0.9369), 'union': (0, 0, 7, 0.6151, 0.5073)}
+H1b_uot joint 2 / 7 need 5 mean_ok False FAIL | matches stored True | readings agree True | {'prev': (6, 0, 1, 0.6149, 1.2072), 'next': (5, 0, 2, 0.6149, 0.9369), 'union': (3, 0, 4, 0.6149, 0.5073)}
+H1c_pairing joint 7 / 7 need 5 mean_ok True PASS | matches stored True | readings agree True | {'indep': (7, 0, 0, 0.6151, 1.0063)}
+H2_uot_rw joint 1 / 6 need 4 mean_ok False FAIL | matches stored True | readings agree True | {'persist': (1, 3, 2, 0.8154, 0.7708), 'meanshift': (6, 0, 0, 0.8154, 1.7786)}
+H2b_ot_needed joint 2 / 6 need 4 mean_ok False FAIL | matches stored True | readings agree True | {'tilt_rw': (2, 2, 2, 0.8154, 0.7297)}
+sha {'atlas_prep.py': True, 'atlas_confirm.py': True, 'interp_bench_frozen.py': True, 'ery_forecast.py': True}
+rep_mean_maxdiff {'ED_U': 0.0, 'ED_U_gene': 0.0, 'pool': 0.0}
+gene {'H1_ot_pairs': (0, False), 'H1b_uot': (0, False), 'H1c_pairing': (7, True), 'H2_uot_rw': (1, False), 'H2b_ot_needed': (2, False)}
+pool {'ot_pairs<union': '5/27', 'uot<union': '10/27', 'sb_half<union': '2/27', 'indep<union': '0/27', 'uot_rw_vs_persist_W/T/L': '6/13/5', 'tilt_rw_vs_persist_W/T/L': '5/13/6', 'uot_rw_vs_tilt_rw_W/T/L': '10/9/5'}
+{
+"indep_vs_union": {
+"1": [
+1.978,
+1.476
+],
+"2": [
+0.772,
+0.343
+],
+"3": [
+1.249,
+0.644
+],
+"4": [
+1.011,
+0.357
+],
+"5": [
+0.888,
+0.248
+],
+"6": [
+0.607,
+0.276
+],
+"7": [
+0.539,
+0.208
+]
+},
+"n_k_union_lt_indep": 7,
+"n_k_order_union_lt_otpairs_lt_indep": 7,
+"sb_half_vs_union": {
+"1": [
+1.496,
+1.476
+],
+"2": [
+0.482,
+0.343
+],
+"3": [
+1.009,
+0.644
+],
+"4": [
+0.435,
+0.357
+],
+"5": [
+0.352,
+0.248
+],
+"6": [
+0.425,
+0.276
+],
+"7": [
+0.278,
+0.208
+]
+},
+"n_k_sb_half_lt_union": 0,
+"mean_ED_U": {
+"prev": 1.2072,
+"next": 0.9369,
+"union": 0.5073,
+"indep": 1.0063,
+"ot_pairs": 0.6151,
+"sb_half": 0.6395,
+"uot": 0.6149
+},
+"gap_ot_pairs_minus_union": {
+"1": 0.2556,
+"2": 0.0092,
+"3": 0.0811,
+"4": 0.162,
+"5": 0.1552,
+"6": 0.073,
+"7": 0.0183
+},
+"rep_level_ot_pairs_minus_union": {
+"1": [
+0.2917,
+0.323,
+0.1523
+],
+"2": [
+0.0089,
+0.0099,
+0.0088
+],
+"3": [
+0.1042,
+0.0264,
+0.1126
+],
+"4": [
+0.1543,
+0.1312,
+0.2004
+],
+"5": [
+0.2115,
+0.1414,
+0.1128
+],
+"6": [
+0.0694,
+0.0778,
+0.0718
+],
+"7": [
+0.0306,
+0.0215,
+0.003
+]
+},
+"n_rep_pairs_ot_pairs_worse": 21,
+"forecast_ties": {
+"2": {
+"hp_uot_rw": {
+"lam": 0.0,
+"tau": 1.0,
+"beta": 0.0
+},
+"hp_tilt_rw": {
+"lam": 0.0
+},
+"uot_rw_eq_persist": true,
+"tilt_rw_eq_persist": true,
+"uot_rw_minus_persist": 0.0,
+"backtest_uot_rw": 1.2011,
+"backtest_persist": 1.2011,
+"ess_uot_rw": 1500.0
+},
+"3": {
+"hp_uot_rw": {
+"lam": 0.0,
+"tau": 1.0,
+"beta": 0.0
+},
+"hp_tilt_rw": {
+"lam": 0.0
+},
+"uot_rw_eq_persist": true,
+"tilt_rw_eq_persist": true,
+"uot_rw_minus_persist": 0.0,
+"backtest_uot_rw": 0.4999,
+"backtest_persist": 0.4999,
+"ess_uot_rw": 1500.0
+},
+"4": {
+"hp_uot_rw": {
+"lam": 2.0,
+"tau": 1.0,
+"beta": 2.0
+},
+"hp_tilt_rw": {
+"lam": 0.0
+},
+"uot_rw_eq_persist": false,
+"tilt_rw_eq_persist": true,
+"uot_rw_minus_persist": 0.5751,
+"backtest_uot_rw": 1.6238,
+"backtest_persist": 1.6398,
+"ess_uot_rw": 1300.7
+},
+"5": {
+"hp_uot_rw": {
+"lam": 0.0,
+"tau": 1.0,
+"beta": 0.0
+},
+"hp_tilt_rw": {
+"lam": 1.0
+},
+"uot_rw_eq_persist": true,
+"tilt_rw_eq_persist": false,
+"uot_rw_minus_persist": 0.0,
+"backtest_uot_rw": 0.4683,
+"backtest_persist": 0.4683,
+"ess_uot_rw": 1500.0
+},
+"6": {
+"hp_uot_rw": {
+"lam": 2.0,
+"tau": 1.0,
+"beta": 0.0
+},
+"hp_tilt_rw": {
+"lam": 0.5
+},
+"uot_rw_eq_persist": false,
+"tilt_rw_eq_persist": false,
+"uot_rw_minus_persist": -0.3156,
+"backtest_uot_rw": 0.7597,
+"backtest_persist": 0.7668,
+"ess_uot_rw": 1405.5
+},
+"7": {
+"hp_uot_rw": {
+"lam": 2.0,
+"tau": 1.0,
+"beta": 0.0
+},
+"hp_tilt_rw": {
+"lam": 0.5
+},
+"uot_rw_eq_persist": false,
+"tilt_rw_eq_persist": false,
+"uot_rw_minus_persist": 0.0077,
+"backtest_uot_rw": 0.596,
+"backtest_persist": 0.9116,
+"ess_uot_rw": 1423.5
+}
+},
+"H2_if_ties_counted_as_wins": {
+"wins": 4,
+"mean_uot_rw": 0.8153643097819646,
+"mean_persist": 0.7708356360835316
+},
+"gap_t_interval_95_nominal": [
+0.02618205895742172,
+0.1893623550718585
+],
+"gap_mean_sd": [
+0.10777220701464012,
+0.08822027695494226
+],
+"rel_gap_ot_pairs_vs_union": [
+0.173,
+0.027,
+0.126,
+0.454,
+0.626,
+0.264,
+0.088
+],
+"coin_null_P_ge5_of7": 0.2265625,
+"coin_null_P_0_of7": 0.0078125,
+"coin_null_P_ge3_of4": 0.3125
+}

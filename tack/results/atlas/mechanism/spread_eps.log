@@ -1,0 +1,41 @@
+k1 full spread prev=0.875 next=1.016 union=0.976 indep=0.666 ot_pairs=0.839 sb_half=0.969 uot=0.816 held_rest=0.995 | eps 0.01:1.567/0.87/9 0.02:1.601/0.87/46 0.05:1.711/0.86/333 0.1:1.715/0.84/749 0.2:1.681/0.84/1038 | union 1.476 [57s]
+   k1 Epiblast                 spread ot 1.076 union 1.379 held_rest nan | best eps 0.01 2.421 vs union 2.338
+   k1 ExE ectoderm             spread ot 1.143 union 1.415 held_rest nan | best eps 0.01 1.590 vs union 1.556
+   k1 ExE endoderm             spread ot 1.011 union 1.252 held_rest nan | best eps 0.02 0.960 vs union 0.910
+   k1 Primitive Streak         spread ot 1.011 union 1.293 held_rest nan | best eps 0.2 1.988 vs union 1.820
+k2 full spread prev=1.029 next=1.024 union=1.050 indep=0.722 ot_pairs=0.952 sb_half=1.099 uot=0.965 held_rest=1.022 | eps 0.01:0.350/0.99/15 0.02:0.349/0.97/73 0.05:0.355/0.96/332 0.1:0.358/0.95/671 0.2:0.386/0.94/924 | union 0.343 [142s]
+   k2 Epiblast                 spread ot 0.878 union 1.169 held_rest nan | best eps 0.01 0.480 vs union 0.530
+   k2 ExE ectoderm             spread ot 0.974 union 1.194 held_rest nan | best eps 0.02 0.468 vs union 0.459
+   k2 ExE endoderm             spread ot 0.901 union 1.134 held_rest nan | best eps 0.05 0.587 vs union 0.690
+   k2 Nascent mesoderm         spread ot 0.886 union 1.146 held_rest nan | best eps 0.05 0.510 vs union 0.527
+   k2 Primitive Streak         spread ot 0.909 union 1.165 held_rest nan | best eps 0.02 0.440 vs union 0.468
+k3 full spread prev=1.012 next=1.200 union=1.138 indep=0.791 ot_pairs=1.018 sb_half=1.213 uot=1.000 held_rest=0.987 | eps 0.01:0.690/1.02/25 0.02:0.691/1.01/107 0.05:0.722/1.01/435 0.1:0.727/1.00/867 0.2:0.723/0.97/1142 | union 0.644 [207s]
+   k3 Epiblast                 spread ot 0.915 union 1.136 held_rest nan | best eps 0.02 0.668 vs union 0.635
+   k3 ExE ectoderm             spread ot 0.915 union 1.100 held_rest nan | best eps 0.02 0.827 vs union 0.824
+   k3 ExE endoderm             spread ot 0.909 union 1.053 held_rest nan | best eps 0.2 1.767 vs union 1.667
+   k3 Nascent mesoderm         spread ot 0.949 union 1.156 held_rest nan | best eps 0.02 0.837 vs union 0.792
+   k3 Primitive Streak         spread ot 0.931 union 1.123 held_rest nan | best eps 0.02 0.656 vs union 0.603
+k4 full spread prev=0.853 next=1.020 union=0.976 indep=0.670 ot_pairs=0.842 sb_half=1.016 uot=0.836 held_rest=1.001 | eps 0.01:0.448/0.86/29 0.02:0.483/0.85/113 0.05:0.485/0.85/439 0.1:0.604/0.82/876 0.2:0.536/0.83/1161 | union 0.357 [282s]
+   k4 ExE ectoderm             spread ot 1.040 union 1.229 held_rest nan | best eps 0.01 0.379 vs union 0.413
+   k4 ExE endoderm             spread ot 0.948 union 1.232 held_rest nan | best eps 0.02 0.807 vs union 0.751
+k5 full spread prev=0.999 next=0.914 union=0.970 indep=0.680 ot_pairs=0.861 sb_half=1.018 uot=0.922 held_rest=1.015 | eps 0.01:0.403/0.87/18 0.02:0.378/0.87/66 0.05:0.400/0.86/259 0.1:0.432/0.84/570 0.2:0.485/0.82/907 | union 0.248 [337s]
+   k5 Caudal epiblast          spread ot 0.699 union 1.041 held_rest nan | best eps 0.02 0.749 vs union 0.636
+   k5 ExE ectoderm             spread ot 0.907 union 1.092 held_rest nan | best eps 0.05 0.197 vs union 0.185
+   k5 ExE endoderm             spread ot 0.978 union 1.116 held_rest nan | best eps 0.02 0.127 vs union 0.148
+   k5 Mesenchyme               spread ot 0.884 union 1.074 held_rest nan | best eps 0.02 0.282 vs union 0.314
+   k5 Rostral neurectoderm     spread ot 0.832 union 1.083 held_rest nan | best eps 0.05 0.436 vs union 0.390
+k6 full spread prev=1.120 next=0.942 union=1.065 indep=0.737 ot_pairs=0.893 sb_half=1.073 uot=0.997 held_rest=1.002 | eps 0.01:0.338/0.91/13 0.02:0.322/0.92/49 0.05:0.353/0.89/230 0.1:0.377/0.87/557 0.2:0.390/0.85/956 | union 0.276 [381s]
+   k6 ExE endoderm             spread ot 1.036 union 1.218 held_rest nan | best eps 0.01 0.486 vs union 0.595
+   k6 Intermediate mesoderm    spread ot 0.931 union 1.098 held_rest nan | best eps 0.2 0.590 vs union 0.575
+   k6 Mesenchyme               spread ot 0.955 union 1.184 held_rest nan | best eps 0.01 0.429 vs union 0.399
+   k6 Paraxial mesoderm        spread ot 0.966 union 1.152 held_rest nan | best eps 0.05 0.627 vs union 0.621
+   k6 Surface ectoderm         spread ot 0.931 union 1.044 held_rest nan | best eps 0.01 0.389 vs union 0.395
+k7 full spread prev=1.082 next=1.050 union=1.101 indep=0.757 ot_pairs=0.944 sb_half=1.103 uot=0.971 held_rest=0.983 | eps 0.01:0.213/0.95/8 0.02:0.210/0.95/30 0.05:0.224/0.94/144 0.1:0.227/0.92/425 0.2:0.266/0.90/894 | union 0.208 [437s]
+   k7 ExE endoderm             spread ot 0.839 union 1.217 held_rest nan | best eps 0.01 0.551 vs union 0.656
+   k7 ExE mesoderm             spread ot 0.806 union 1.219 held_rest nan | best eps 0.01 0.380 vs union 0.404
+   k7 Mesenchyme               spread ot 0.881 union 1.198 held_rest nan | best eps 0.01 0.249 vs union 0.370
+   k7 Paraxial mesoderm        spread ot 0.812 union 1.138 held_rest nan | best eps 0.05 0.353 vs union 0.347
+   k7 Pharyngeal mesoderm      spread ot 0.884 union 1.223 held_rest nan | best eps 0.1 0.303 vs union 0.380
+   k7 Somitic mesoderm         spread ot 0.802 union 1.170 held_rest nan | best eps 0.05 0.547 vs union 0.700
+   k7 Surface ectoderm         spread ot 0.872 union 1.106 held_rest nan | best eps 0.01 0.286 vs union 0.386
+{'full_n_k_ot_pairs_spread_below_union': 7, 'full_mean_spread': {'prev': 0.9956977675762465, 'next': 1.0237332546952447, 'union': 1.0395367298750913, 'indep': 0.7176825988310582, 'ot_pairs': 0.907122571045065, 'sb_half': 1.070088873910224, 'uot': 0.9297079002199382, 'held_rest': 1.0007295582990956}, 'full_n_k_ORACLE_best_eps_beats_union': 0, 'full_ORACLE_best_eps': {1: '0.01', 2: '0.02', 3: '0.01', 4: '0.01', 5: '0.02', 6: '0.02', 7: '0.02'}, 'types_n': 33, 'types_n_ot_pairs_spread_below_union': 33, 'types_n_ORACLE_best_eps_beats_union': 15, 'types_median_spread': {'prev': 1.0241732840251812, 'next': 1.0650126176817325, 'union': 1.155673633618555, 'ot_pairs': 0.9146545096076156, 'uot': 0.9220081008978761, 'indep': 0.7410333062376881}}

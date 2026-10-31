@@ -1,0 +1,58 @@
+atlas k 1 | union 1.476 ot_pairs 1.732 sb_half 1.496 | own mccann 1.659 restored 1.487 spread 0.858 -> 0.934 | sep_ed 0.14 sep_mu 0.44 | calib {'raw_half': -0.012, 'half_averaged_with_knn': 0.01, 'half_averaged_restored': -0.011, 'spread_avg': 0.973, 'spread_avg_restored': 1.001} [4s]
+atlas k 2 | union 0.343 ot_pairs 0.352 sb_half 0.482 | own mccann 0.352 restored 0.349 spread 0.96 -> 1.024 | sep_ed 0.14 sep_mu 0.42 | calib {'raw_half': 0.0, 'half_averaged_with_knn': 0.016, 'half_averaged_restored': 0.002, 'spread_avg': 0.986, 'spread_avg_restored': 1.013} [3s]
+atlas k 3 | union 0.644 ot_pairs 0.725 sb_half 1.009 | own mccann 0.713 restored 0.697 spread 1.017 -> 1.077 | sep_ed 0.15 sep_mu 0.45 | calib {'raw_half': -0.008, 'half_averaged_with_knn': 0.012, 'half_averaged_restored': -0.007, 'spread_avg': 0.965, 'spread_avg_restored': 0.996} [2s]
+atlas k 4 | union 0.357 ot_pairs 0.519 sb_half 0.435 | own mccann 0.524 restored 0.419 spread 0.834 -> 0.886 | sep_ed 0.21 sep_mu 0.51 | calib {'raw_half': 0.003, 'half_averaged_with_knn': 0.022, 'half_averaged_restored': 0.002, 'spread_avg': 0.964, 'spread_avg_restored': 0.99} [2s]
+atlas k 5 | union 0.248 ot_pairs 0.403 sb_half 0.352 | own mccann 0.392 restored 0.307 spread 0.863 -> 0.92 | sep_ed 0.11 sep_mu 0.37 | calib {'raw_half': -0.007, 'half_averaged_with_knn': 0.0, 'half_averaged_restored': -0.006, 'spread_avg': 0.993, 'spread_avg_restored': 1.016} [2s]
+atlas k 6 | union 0.276 ot_pairs 0.349 sb_half 0.425 | own mccann 0.349 restored 0.325 spread 0.901 -> 0.97 | sep_ed 0.15 sep_mu 0.52 | calib {'raw_half': 0.002, 'half_averaged_with_knn': 0.018, 'half_averaged_restored': 0.002, 'spread_avg': 0.98, 'spread_avg_restored': 1.007} [1s]
+atlas k 7 | union 0.208 ot_pairs 0.226 sb_half 0.278 | own mccann 0.224 restored 0.195 spread 0.945 -> 1.027 | sep_ed 0.18 sep_mu 0.54 | calib {'raw_half': -0.002, 'half_averaged_with_knn': 0.01, 'half_averaged_restored': -0.0, 'spread_avg': 0.983, 'spread_avg_restored': 1.026} [1s]
+ery k 2 | union 2.206 ot_pairs 1.908 sb_half 2.005 | own mccann 1.903 restored 2.057 spread 1.109 -> 1.613 | sep_ed 1.01 sep_mu 1.71 | calib {'raw_half': -0.01, 'half_averaged_with_knn': 0.046, 'half_averaged_restored': 0.004, 'spread_avg': 0.864, 'spread_avg_restored': 1.058} [0s]
+ery k 3 | union 1.041 ot_pairs 1.287 sb_half 1.082 | own mccann 1.317 restored 1.089 spread 0.816 -> 1.118 | sep_ed 0.65 sep_mu 1.18 | calib {'raw_half': 0.005, 'half_averaged_with_knn': 0.039, 'half_averaged_restored': 0.003, 'spread_avg': 0.902, 'spread_avg_restored': 1.002} [1s]
+ery k 4 | union 1.154 ot_pairs 0.942 sb_half 1.027 | own mccann 0.929 restored 0.971 spread 1.01 -> 1.276 | sep_ed 0.59 sep_mu 1.24 | calib {'raw_half': 0.006, 'half_averaged_with_knn': 0.034, 'half_averaged_restored': 0.01, 'spread_avg': 0.907, 'spread_avg_restored': 1.021} [1s]
+ery k 5 | union 1.473 ot_pairs 1.198 sb_half 1.191 | own mccann 1.181 restored 1.009 spread 0.853 -> 1.067 | sep_ed 1.46 sep_mu 1.92 | calib {'raw_half': -0.005, 'half_averaged_with_knn': 0.04, 'half_averaged_restored': -0.002, 'spread_avg': 0.909, 'spread_avg_restored': 1.024} [1s]
+{
+"restored_lt_union": {
+"atlas": "1/7",
+"ery": "3/4"
+},
+"spearman_rel_gain_vs_sep_ed_all11": 0.5272727272727273,
+"spearman_rel_gain_vs_sep_mu_all11": 0.6363636363636364,
+"sep_ed": {
+"atlas1": 0.142,
+"atlas2": 0.138,
+"atlas3": 0.146,
+"atlas4": 0.209,
+"atlas5": 0.109,
+"atlas6": 0.153,
+"atlas7": 0.179,
+"ery2": 1.005,
+"ery3": 0.646,
+"ery4": 0.588,
+"ery5": 1.463
+},
+"sep_mu": {
+"atlas1": 0.435,
+"atlas2": 0.415,
+"atlas3": 0.452,
+"atlas4": 0.509,
+"atlas5": 0.373,
+"atlas6": 0.524,
+"atlas7": 0.545,
+"ery2": 1.715,
+"ery3": 1.183,
+"ery4": 1.235,
+"ery5": 1.922
+},
+"rel_gain": {
+"atlas1": -0.173,
+"atlas2": -0.027,
+"atlas3": -0.126,
+"atlas4": -0.454,
+"atlas5": -0.626,
+"atlas6": -0.264,
+"atlas7": -0.088,
+"ery2": 0.135,
+"ery3": -0.236,
+"ery4": 0.184,
+"ery5": 0.187
+}
+}

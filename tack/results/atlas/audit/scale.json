@@ -1,0 +1,10 @@
+{
+ "S_frozen_interp4": 278.4185359223647,
+ "interp_bit_identical": true,
+ "forecast_bit_identical": true,
+ "example_interp4_union": [
+  0.3376461347102726,
+  0.241873824508815
+ ],
+ "example_origin4_persist": 0.4683110664995329
+}

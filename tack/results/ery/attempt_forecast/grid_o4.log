@@ -1,0 +1,11 @@
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\ery\diag_metric\ery_forecast_fixed.py:115: RuntimeWarning: divide by zero encountered in log
+  f_new = eps * np.log(u)
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\ery\diag_metric\ery_forecast_fixed.py:116: RuntimeWarning: invalid value encountered in subtract
+  done = np.abs(f_new - f).max() < tol
+origin 4 final grid 764s rho=0.882
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\ery\diag_metric\ery_forecast_fixed.py:115: RuntimeWarning: divide by zero encountered in log
+  f_new = eps * np.log(u)
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\ery\diag_metric\ery_forecast_fixed.py:116: RuntimeWarning: invalid value encountered in subtract
+  done = np.abs(f_new - f).max() < tol
+origin 4 same-space backtest 1506s
+origin 4 baselines 1522s max|diff| vs rescore (same draws) 8.74e-13

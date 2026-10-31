@@ -1,0 +1,190 @@
+{
+ "prereg_sha256": {
+  "raw": "7cb27ba3d237775ed13c5a6707960e4f23509addc97ca26cb18e9dd854b5ff3b",
+  "lf": "7cb27ba3d237775ed13c5a6707960e4f23509addc97ca26cb18e9dd854b5ff3b",
+  "logged_in_decisions": "7cb27ba3d237775ed13c5a6707960e4f23509addc97ca26cb18e9dd854b5ff3b",
+  "match": true
+ },
+ "mtimes_utc": {
+  "tack\\prereg\\2026-10-25-atlas-confirmation-prereg.md": 1792930367.754323,
+  "tack\\results\\atlas\\confirm.json": 1792930686.5072296,
+  "tack\\results\\atlas\\parity_erythroid.json": 1792930183.0999987
+ },
+ "interp_products": {
+  "1": {
+   "stage_fit_values": [
+    0,
+    2
+   ],
+   "prev_block_first": true,
+   "held_eq_origin1_stage1": true,
+   "next_eq_origin_k_fut": true,
+   "n_pools_held": 1,
+   "cc_genes_among_hvg": 6,
+   "cc_genes_confirm_json": 6,
+   "pca_angle_deg_vs_fit_svd": 0.03157546268434305,
+   "pca_angle_deg_vs_fit_plus_held_svd": 57.19643134140043,
+   "plan_rep0": {
+    "max_marg_rel_err": 1.9676751701336315e-06,
+    "log_fallbacks": 0,
+    "mass": 1.0
+   }
+  },
+  "2": {
+   "stage_fit_values": [
+    1,
+    3
+   ],
+   "prev_block_first": true,
+   "held_eq_origin_prev_fut": true,
+   "next_eq_origin_k_fut": true,
+   "n_pools_held": 6,
+   "cc_genes_among_hvg": 3,
+   "cc_genes_confirm_json": 3,
+   "pca_angle_deg_vs_fit_svd": 0.07518766333057665,
+   "pca_angle_deg_vs_fit_plus_held_svd": 74.64764319895657,
+   "plan_rep0": {
+    "max_marg_rel_err": 1.9655892514736095e-06,
+    "log_fallbacks": 0,
+    "mass": 1.0
+   }
+  },
+  "3": {
+   "stage_fit_values": [
+    2,
+    4
+   ],
+   "prev_block_first": true,
+   "held_eq_origin_prev_fut": true,
+   "next_eq_origin_k_fut": true,
+   "n_pools_held": 3,
+   "cc_genes_among_hvg": 4,
+   "cc_genes_confirm_json": 4,
+   "pca_angle_deg_vs_fit_svd": 0.04089614193533298,
+   "pca_angle_deg_vs_fit_plus_held_svd": 80.82940986170885,
+   "plan_rep0": {
+    "max_marg_rel_err": 1.6565207316965314e-06,
+    "log_fallbacks": 0,
+    "mass": 1.0
+   }
+  },
+  "4": {
+   "stage_fit_values": [
+    3,
+    5
+   ],
+   "prev_block_first": true,
+   "held_eq_origin_prev_fut": true,
+   "next_eq_origin_k_fut": true,
+   "n_pools_held": 6,
+   "cc_genes_among_hvg": 6,
+   "cc_genes_confirm_json": 6,
+   "pca_angle_deg_vs_fit_svd": 0.018441911364498343,
+   "pca_angle_deg_vs_fit_plus_held_svd": 82.53193680216073,
+   "plan_rep0": {
+    "max_marg_rel_err": 1.9027703261897955e-06,
+    "log_fallbacks": 0,
+    "mass": 0.9999999999999999
+   }
+  },
+  "5": {
+   "stage_fit_values": [
+    4,
+    6
+   ],
+   "prev_block_first": true,
+   "held_eq_origin_prev_fut": true,
+   "next_eq_origin_k_fut": true,
+   "n_pools_held": 4,
+   "cc_genes_among_hvg": 8,
+   "cc_genes_confirm_json": 8,
+   "pca_angle_deg_vs_fit_svd": 0.02455341661644935,
+   "pca_angle_deg_vs_fit_plus_held_svd": 38.280725359997575,
+   "plan_rep0": {
+    "max_marg_rel_err": 1.860890947558147e-06,
+    "log_fallbacks": 0,
+    "mass": 1.0
+   }
+  },
+  "6": {
+   "stage_fit_values": [
+    5,
+    7
+   ],
+   "prev_block_first": true,
+   "held_eq_origin_prev_fut": true,
+   "next_eq_origin_k_fut": true,
+   "n_pools_held": 4,
+   "cc_genes_among_hvg": 6,
+   "cc_genes_confirm_json": 6,
+   "pca_angle_deg_vs_fit_svd": 0.030952566299293098,
+   "pca_angle_deg_vs_fit_plus_held_svd": 84.03353139725577,
+   "plan_rep0": {
+    "max_marg_rel_err": 1.5594284064057717e-06,
+    "log_fallbacks": 0,
+    "mass": 1.0
+   }
+  },
+  "7": {
+   "stage_fit_values": [
+    6,
+    8
+   ],
+   "prev_block_first": true,
+   "held_eq_origin_prev_fut": true,
+   "next_eq_origin_k_fut": true,
+   "n_pools_held": 3,
+   "cc_genes_among_hvg": 6,
+   "cc_genes_confirm_json": 6,
+   "pca_angle_deg_vs_fit_svd": 0.013989824759008711,
+   "pca_angle_deg_vs_fit_plus_held_svd": 87.1208701678366,
+   "plan_rep0": {
+    "max_marg_rel_err": 1.8181265788452805e-06,
+    "log_fallbacks": 0,
+    "mass": 1.0
+   }
+  }
+ },
+ "kernel_underflow": {
+  "1": {
+   "max_row_min_exponent": 3.087815929277366,
+   "threshold": 745.0
+  },
+  "2": {
+   "max_row_min_exponent": 11.011745552725884,
+   "threshold": 745.0
+  },
+  "3": {
+   "max_row_min_exponent": 4.751794515425779,
+   "threshold": 745.0
+  },
+  "4": {
+   "max_row_min_exponent": 2.919730547356673,
+   "threshold": 745.0
+  },
+  "5": {
+   "max_row_min_exponent": 2.181866509920938,
+   "threshold": 745.0
+  },
+  "6": {
+   "max_row_min_exponent": 3.6252204985714647,
+   "threshold": 745.0
+  },
+  "7": {
+   "max_row_min_exponent": 1.3568862285641894,
+   "threshold": 745.0
+  }
+ },
+ "pools_per_stage": [
+  3,
+  1,
+  6,
+  3,
+  6,
+  4,
+  4,
+  3,
+  4
+ ],
+ "pools_match_prereg": true
+}

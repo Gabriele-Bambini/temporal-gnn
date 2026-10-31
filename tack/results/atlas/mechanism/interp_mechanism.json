@@ -1,0 +1,3611 @@
+{
+ "script": "interp_mechanism.py",
+ "exploratory": true,
+ "note": "EXPLORATORY, not pre-registered; does not change the pre-registered verdicts (H1/H1b FAIL).",
+ "k": {
+  "1": {
+   "held": "E6.75",
+   "composition": {
+    "counts": {
+     "Anterior Primitive Streak": {
+      "prev": 0,
+      "held": 13,
+      "next": 121
+     },
+     "Caudal epiblast": {
+      "prev": 0,
+      "held": 0,
+      "next": 1
+     },
+     "Def. endoderm": {
+      "prev": 0,
+      "held": 2,
+      "next": 16
+     },
+     "Epiblast": {
+      "prev": 1958,
+      "held": 856,
+      "next": 1068
+     },
+     "ExE ectoderm": {
+      "prev": 540,
+      "held": 403,
+      "next": 405
+     },
+     "ExE endoderm": {
+      "prev": 111,
+      "held": 197,
+      "next": 268
+     },
+     "ExE mesoderm": {
+      "prev": 0,
+      "held": 0,
+      "next": 2
+     },
+     "Mesenchyme": {
+      "prev": 0,
+      "held": 0,
+      "next": 3
+     },
+     "Mixed mesoderm": {
+      "prev": 0,
+      "held": 20,
+      "next": 55
+     },
+     "Nascent mesoderm": {
+      "prev": 2,
+      "held": 138,
+      "next": 320
+     },
+     "PGC": {
+      "prev": 0,
+      "held": 3,
+      "next": 7
+     },
+     "Parietal endoderm": {
+      "prev": 7,
+      "held": 0,
+      "next": 27
+     },
+     "Primitive Streak": {
+      "prev": 333,
+      "held": 326,
+      "next": 620
+     },
+     "Rostral neurectoderm": {
+      "prev": 1,
+      "held": 2,
+      "next": 3
+     },
+     "Surface ectoderm": {
+      "prev": 1,
+      "held": 3,
+      "next": 7
+     },
+     "Visceral endoderm": {
+      "prev": 46,
+      "held": 109,
+      "next": 77
+     }
+    },
+    "TV_held_prev": 0.24209099300796533,
+    "TV_held_next": 0.14930888030888032,
+    "TV_held_mix5050": 0.11509167320037605,
+    "TV_prev_next": 0.34194431477159054,
+    "best_alpha_next": 0.8,
+    "TV_held_best_alpha_mix": 0.09579786853017924,
+    "held_mass_types_absent_at_prev": 0.08735521235521235,
+    "held_mass_types_absent_at_next": 0.003861003861003861,
+    "next_mass_types_absent_at_prev(appearing)": 0.18733333333333335,
+    "prev_mass_types_absent_at_next(vanishing)": 0.0006668889629876625,
+    "share_of_TV_prev_next_from_one_sided_types": 0.25832519901848644,
+    "held_transient_peak_excess": 0.047121447174798284,
+    "held_transient_trough_deficit": 0.002334111370456819,
+    "held_mass_in_types_between_neighbours": 0.657818532818533
+   },
+   "ed_identity": {
+    "ED_prev_held": 2.8708131565864563,
+    "ED_next_held": 1.0475223422928768,
+    "ED_prev_next": 2.008663856286359,
+    "avg_endpoints": 1.9591677494396667,
+    "convexity_bonus_quarter_ED_prev_next": 0.5021659640715898,
+    "identity_pred_union": 1.457001785368077,
+    "full_weighted_mix_ED_U": 1.4568343408985605,
+    "recorded_union_ED_U": 1.4759894024475706,
+    "recorded_ot_pairs_ED_U": 1.7316318110944653,
+    "recorded_uot_ED_U": 1.9595228257766457,
+    "ot_pairs_gain_vs_avg_endpoints": 0.22753593834520136,
+    "union_gain_vs_avg_endpoints": 0.48317834699209605
+   },
+   "t_scan_ORACLE": {
+    "t": [
+     0.0,
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9,
+     1.0
+    ],
+    "ED_U": [
+     2.89361,
+     2.62543,
+     2.36423,
+     2.11268,
+     1.87486,
+     1.65566,
+     1.46066,
+     1.29584,
+     1.16723,
+     1.08032,
+     1.03922
+    ],
+    "best_t": 1.0,
+    "best_ED_U": 1.0392187358160125,
+    "at_t0.5": 1.6556636338705228
+   },
+   "alpha_scan_ORACLE": {
+    "alpha_next": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ],
+    "ED_U": [
+     2.87081,
+     2.68413,
+     2.50752,
+     2.34098,
+     2.1845,
+     2.03809,
+     1.90174,
+     1.77544,
+     1.65919,
+     1.55299,
+     1.45683,
+     1.37072,
+     1.29465,
+     1.22862,
+     1.17263,
+     1.12668,
+     1.09077,
+     1.0649,
+     1.04906,
+     1.04327,
+     1.04752
+    ],
+    "best_alpha": 0.95,
+    "best_ED_U": 1.0432712255602734,
+    "at_alpha0.5": 1.4568343408985605
+   },
+   "best_t_OT_vs_best_alpha_mix": {
+    "best_OT": 1.0392187358160125,
+    "best_mix": 1.0432712255602734,
+    "mix_better": false
+   },
+   "t_spread_scan_ORACLE": {
+    "ED_U": {
+     "uniform_h0.0": 1.6556636338705228,
+     "uniform_h0.1": 1.6529443610890404,
+     "uniform_h0.2": 1.6413636408421777,
+     "uniform_h0.3": 1.6227312866575883,
+     "uniform_h0.4": 1.5991745770943737,
+     "uniform_h0.5": 1.5727674347552725,
+     "two_point_h0.0": 1.6556636338705228,
+     "two_point_h0.1": 1.6406019044179423,
+     "two_point_h0.2": 1.6018340018362824,
+     "two_point_h0.3": 1.5511489663873668,
+     "two_point_h0.4": 1.5005734931541863,
+     "two_point_h0.5": 1.4606908794465336
+    },
+    "best": "two_point_h0.5",
+    "best_ED_U": 1.4606908794465336
+   },
+   "pool_oracle_scans": {
+    "7": {
+     "n": 2072,
+     "best_t": 1.0,
+     "best_t_ED_U": 1.024818507170367,
+     "t0.5_ED_U": 1.631408076203975,
+     "best_alpha": 0.95,
+     "best_alpha_ED_U": 1.0280690448690326,
+     "alpha0.5_ED_U": 1.4378947486769806,
+     "best_t_OT_beats_best_mix": true
+    }
+   },
+   "stage_vote": {
+    "n_train_each": 1499,
+    "held_all": {
+     "mean_P_next": 0.44594594594594594,
+     "frac_prev_like(<0.2)": 0.22683397683397682,
+     "frac_next_like(>0.8)": 0.1525096525096525,
+     "frac_intermediate[0.2,0.8]": 0.6206563706563707,
+     "hist5": [
+      0.2268,
+      0.2259,
+      0.2022,
+      0.1467,
+      0.1984
+     ]
+    },
+    "acc_on_prev_rep0": 0.9473333333333334,
+    "acc_on_next_rep0": 0.9686666666666667,
+    "union": {
+     "mean_P_next": 0.4953777777777778,
+     "frac_prev_like(<0.2)": 0.436,
+     "frac_next_like(>0.8)": 0.41533333333333333,
+     "frac_intermediate[0.2,0.8]": 0.14866666666666667,
+     "hist5": [
+      0.436,
+      0.036,
+      0.0353,
+      0.0473,
+      0.4453
+     ]
+    },
+    "ot_pairs": {
+     "mean_P_next": 0.5284444444444445,
+     "frac_prev_like(<0.2)": 0.17066666666666666,
+     "frac_next_like(>0.8)": 0.23,
+     "frac_intermediate[0.2,0.8]": 0.5993333333333334,
+     "hist5": [
+      0.1707,
+      0.1687,
+      0.192,
+      0.1753,
+      0.2933
+     ]
+    },
+    "uot": {
+     "mean_P_next": 0.4914666666666667,
+     "frac_prev_like(<0.2)": 0.202,
+     "frac_next_like(>0.8)": 0.18066666666666667,
+     "frac_intermediate[0.2,0.8]": 0.6173333333333333,
+     "hist5": [
+      0.202,
+      0.1807,
+      0.1867,
+      0.1827,
+      0.248
+     ]
+    },
+    "indep": {
+     "mean_P_next": 0.5042222222222223,
+     "frac_prev_like(<0.2)": 0.18,
+     "frac_next_like(>0.8)": 0.16466666666666666,
+     "frac_intermediate[0.2,0.8]": 0.6553333333333333,
+     "hist5": [
+      0.18,
+      0.156,
+      0.222,
+      0.2233,
+      0.2187
+     ]
+    },
+    "sb_half": {
+     "mean_P_next": 0.5201333333333333,
+     "frac_prev_like(<0.2)": 0.22266666666666668,
+     "frac_next_like(>0.8)": 0.24733333333333332,
+     "frac_intermediate[0.2,0.8]": 0.53,
+     "hist5": [
+      0.2227,
+      0.1493,
+      0.144,
+      0.1713,
+      0.3127
+     ]
+    },
+    "held_per_pool_mean_P_next": {
+     "7": 0.44594594594594594
+    },
+    "held_per_pool_n": {
+     "7": 2072
+    },
+    "held_per_type_mean_P_next": {
+     "Epiblast": 0.2634735202492212,
+     "ExE ectoderm": 0.3566583953680728,
+     "ExE endoderm": 0.7377326565143826,
+     "Nascent mesoderm": 0.9202898550724637,
+     "Primitive Streak": 0.514314928425358,
+     "Visceral endoderm": 0.6954128440366971
+    }
+   },
+   "off_manifold": {
+    "n_target": 1500,
+    "n_reference_held_others": 572,
+    "thr_q95": 4.572145487669598,
+    "reference_median_nn": 3.318869337222754,
+    "methods": {
+     "prev": {
+      "frac_off_manifold": 0.6866666666666666,
+      "median_nn_ratio": 2.1400348268624705,
+      "frac_target_uncovered": 0.25466666666666665
+     },
+     "next": {
+      "frac_off_manifold": 0.5233333333333333,
+      "median_nn_ratio": 1.3939512389258983,
+      "frac_target_uncovered": 0.27266666666666667
+     },
+     "union": {
+      "frac_off_manifold": 0.61,
+      "median_nn_ratio": 1.5058266036308778,
+      "frac_target_uncovered": 0.21066666666666667
+     },
+     "indep": {
+      "frac_off_manifold": 0.7546666666666667,
+      "median_nn_ratio": 1.7407410499875617,
+      "frac_target_uncovered": 0.29133333333333333
+     },
+     "ot_pairs": {
+      "frac_off_manifold": 0.66,
+      "median_nn_ratio": 1.5802610558682129,
+      "frac_target_uncovered": 0.21266666666666667
+     },
+     "sb_half": {
+      "frac_off_manifold": 0.9726666666666667,
+      "median_nn_ratio": 2.0208160098684584,
+      "frac_target_uncovered": 0.7613333333333333
+     },
+     "uot": {
+      "frac_off_manifold": 0.614,
+      "median_nn_ratio": 1.5276963586712713,
+      "frac_target_uncovered": 0.20133333333333334
+     }
+    },
+    "reference_frac_target_uncovered": 0.05
+   },
+   "pair_types": {
+    "plan_mass_same_type": 0.5779685091889754,
+    "independent_same_type": 0.28571377777777784,
+    "frac_pairs_same_type_drawn": 0.5533333333333333,
+    "off_manifold_same_type_midpoints": 0.5433734939759036,
+    "off_manifold_cross_type_midpoints": 0.7776119402985074,
+    "top_flows(>1%)": {
+     "Epiblast -> Epiblast": 0.3581,
+     "Epiblast -> Primitive Streak": 0.1607,
+     "ExE ectoderm -> ExE ectoderm": 0.1313,
+     "Epiblast -> Nascent mesoderm": 0.0627,
+     "ExE ectoderm -> ExE endoderm": 0.0437,
+     "Primitive Streak -> Nascent mesoderm": 0.0413,
+     "ExE endoderm -> ExE endoderm": 0.0412,
+     "Primitive Streak -> Primitive Streak": 0.0373,
+     "Epiblast -> Anterior Primitive Streak": 0.0291,
+     "Epiblast -> Mixed mesoderm": 0.0146,
+     "Primitive Streak -> Anterior Primitive Streak": 0.0129,
+     "Epiblast -> Visceral endoderm": 0.0103
+    }
+   },
+   "pools_confirm": {
+    "7": {
+     "prev": 2.8477,
+     "next": 1.0327,
+     "union": 1.4568,
+     "ot_pairs": 1.7044,
+     "uot": 1.9297
+    }
+   },
+   "pools_union_beats_ot_pairs": {
+    "7": true
+   }
+  },
+  "2": {
+   "held": "E7.0",
+   "composition": {
+    "counts": {
+     "Anterior Primitive Streak": {
+      "prev": 13,
+      "held": 121,
+      "next": 84
+     },
+     "Caudal epiblast": {
+      "prev": 0,
+      "held": 1,
+      "next": 0
+     },
+     "Def. endoderm": {
+      "prev": 2,
+      "held": 16,
+      "next": 89
+     },
+     "Epiblast": {
+      "prev": 856,
+      "held": 1068,
+      "next": 954
+     },
+     "ExE ectoderm": {
+      "prev": 403,
+      "held": 405,
+      "next": 370
+     },
+     "ExE endoderm": {
+      "prev": 197,
+      "held": 268,
+      "next": 298
+     },
+     "ExE mesoderm": {
+      "prev": 0,
+      "held": 2,
+      "next": 10
+     },
+     "Gut": {
+      "prev": 0,
+      "held": 0,
+      "next": 1
+     },
+     "Intermediate mesoderm": {
+      "prev": 0,
+      "held": 0,
+      "next": 1
+     },
+     "Mesenchyme": {
+      "prev": 0,
+      "held": 3,
+      "next": 31
+     },
+     "Mixed mesoderm": {
+      "prev": 20,
+      "held": 55,
+      "next": 104
+     },
+     "Nascent mesoderm": {
+      "prev": 138,
+      "held": 320,
+      "next": 437
+     },
+     "Notochord": {
+      "prev": 0,
+      "held": 0,
+      "next": 4
+     },
+     "PGC": {
+      "prev": 3,
+      "held": 7,
+      "next": 6
+     },
+     "Parietal endoderm": {
+      "prev": 0,
+      "held": 27,
+      "next": 25
+     },
+     "Primitive Streak": {
+      "prev": 326,
+      "held": 620,
+      "next": 507
+     },
+     "Rostral neurectoderm": {
+      "prev": 2,
+      "held": 3,
+      "next": 17
+     },
+     "Surface ectoderm": {
+      "prev": 3,
+      "held": 7,
+      "next": 12
+     },
+     "Visceral endoderm": {
+      "prev": 109,
+      "held": 77,
+      "next": 50
+     }
+    },
+    "TV_held_prev": 0.14930888030888032,
+    "TV_held_next": 0.10999999999999999,
+    "TV_held_mix5050": 0.0730032175032175,
+    "TV_prev_next": 0.20223166023166023,
+    "best_alpha_next": 0.6,
+    "TV_held_best_alpha_mix": 0.06824350064350063,
+    "held_mass_types_absent_at_prev": 0.022,
+    "held_mass_types_absent_at_next": 0.002666666666666667,
+    "next_mass_types_absent_at_prev(appearing)": 0.06533333333333333,
+    "prev_mass_types_absent_at_next(vanishing)": 0.0014478764478764478,
+    "share_of_TV_prev_next_from_one_sided_types": 0.14328853080810008,
+    "held_transient_peak_excess": 0.051333333333333314,
+    "held_transient_trough_deficit": 0.0057438867438867475,
+    "held_mass_in_types_between_neighbours": 0.6519999999999999
+   },
+   "ed_identity": {
+    "ED_prev_held": 0.9968060840171867,
+    "ED_next_held": 0.5629269228189765,
+    "ED_prev_next": 1.7516123424995158,
+    "avg_endpoints": 0.7798665034180816,
+    "convexity_bonus_quarter_ED_prev_next": 0.43790308562487895,
+    "identity_pred_union": 0.34196341779320266,
+    "full_weighted_mix_ED_U": 0.3418174014258722,
+    "recorded_union_ED_U": 0.34271630584743323,
+    "recorded_ot_pairs_ED_U": 0.3518964055339436,
+    "recorded_uot_ED_U": 0.3484678253881774,
+    "ot_pairs_gain_vs_avg_endpoints": 0.42797009788413803,
+    "union_gain_vs_avg_endpoints": 0.4371501975706484
+   },
+   "t_scan_ORACLE": {
+    "t": [
+     0.0,
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9,
+     1.0
+    ],
+    "ED_U": [
+     1.03067,
+     0.84157,
+     0.67889,
+     0.54511,
+     0.44274,
+     0.37419,
+     0.34172,
+     0.34714,
+     0.39145,
+     0.47464,
+     0.59562
+    ],
+    "best_t": 0.6,
+    "best_ED_U": 0.34172127224610804,
+    "at_t0.5": 0.37418900323801313
+   },
+   "alpha_scan_ORACLE": {
+    "alpha_next": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ],
+    "ED_U": [
+     0.99681,
+     0.89186,
+     0.79568,
+     0.70828,
+     0.62964,
+     0.55977,
+     0.49866,
+     0.44631,
+     0.40272,
+     0.36789,
+     0.34182,
+     0.3245,
+     0.31595,
+     0.31615,
+     0.32511,
+     0.34284,
+     0.36932,
+     0.40457,
+     0.44859,
+     0.50137,
+     0.56293
+    ],
+    "best_alpha": 0.6,
+    "best_ED_U": 0.31594795829838773,
+    "at_alpha0.5": 0.3418174014258722
+   },
+   "best_t_OT_vs_best_alpha_mix": {
+    "best_OT": 0.34172127224610804,
+    "best_mix": 0.31594795829838773,
+    "mix_better": true
+   },
+   "t_spread_scan_ORACLE": {
+    "ED_U": {
+     "uniform_h0.0": 0.37418900323801313,
+     "uniform_h0.1": 0.3730103639571851,
+     "uniform_h0.2": 0.3689984324545457,
+     "uniform_h0.3": 0.3635558255584037,
+     "uniform_h0.4": 0.35821329185203393,
+     "uniform_h0.5": 0.3543520666038524,
+     "two_point_h0.0": 0.37418900323801313,
+     "two_point_h0.1": 0.3703622408009751,
+     "two_point_h0.2": 0.361062177116444,
+     "two_point_h0.3": 0.35452074499855374,
+     "two_point_h0.4": 0.35854425909521187,
+     "two_point_h0.5": 0.37916952243923124
+    },
+    "best": "uniform_h0.5",
+    "best_ED_U": 0.3543520666038524
+   },
+   "pool_oracle_scans": {
+    "10": {
+     "n": 447,
+     "best_t": 0.5,
+     "best_t_ED_U": 0.3992542527940053,
+     "t0.5_ED_U": 0.3992542527940053,
+     "best_alpha": 0.45,
+     "best_alpha_ED_U": 0.37476906062092813,
+     "alpha0.5_ED_U": 0.3761532440862266,
+     "best_t_OT_beats_best_mix": false
+    },
+    "14": {
+     "n": 238,
+     "best_t": 0.8,
+     "best_t_ED_U": 0.5405327909750905,
+     "t0.5_ED_U": 0.7119628724484871,
+     "best_alpha": 0.75,
+     "best_alpha_ED_U": 0.5156681789492676,
+     "alpha0.5_ED_U": 0.6438082293388069,
+     "best_t_OT_beats_best_mix": false
+    },
+    "15": {
+     "n": 295,
+     "best_t": 0.9,
+     "best_t_ED_U": 0.5640908542524249,
+     "t0.5_ED_U": 0.792791507916086,
+     "best_alpha": 0.85,
+     "best_alpha_ED_U": 0.5380565542813525,
+     "alpha0.5_ED_U": 0.7246244479333436,
+     "best_t_OT_beats_best_mix": false
+    },
+    "30": {
+     "n": 682,
+     "best_t": 0.6,
+     "best_t_ED_U": 0.48100420744423467,
+     "t0.5_ED_U": 0.5145964687520467,
+     "best_alpha": 0.65,
+     "best_alpha_ED_U": 0.45339315971504374,
+     "alpha0.5_ED_U": 0.47972931457221374,
+     "best_t_OT_beats_best_mix": false
+    },
+    "31": {
+     "n": 666,
+     "best_t": 0.6,
+     "best_t_ED_U": 0.5655772291354975,
+     "t0.5_ED_U": 0.585701814916062,
+     "best_alpha": 0.6,
+     "best_alpha_ED_U": 0.5388176920656734,
+     "alpha0.5_ED_U": 0.5530026051901498,
+     "best_t_OT_beats_best_mix": false
+    },
+    "32": {
+     "n": 672,
+     "best_t": 0.6,
+     "best_t_ED_U": 0.48986149121266226,
+     "t0.5_ED_U": 0.5044816884366708,
+     "best_alpha": 0.6,
+     "best_alpha_ED_U": 0.47765397376080543,
+     "alpha0.5_ED_U": 0.48765649065582534,
+     "best_t_OT_beats_best_mix": false
+    }
+   },
+   "stage_vote": {
+    "n_train_each": 572,
+    "held_all": {
+     "mean_P_next": 0.6004444444444444,
+     "frac_prev_like(<0.2)": 0.107,
+     "frac_next_like(>0.8)": 0.2876666666666667,
+     "frac_intermediate[0.2,0.8]": 0.6053333333333333,
+     "hist5": [
+      0.107,
+      0.16,
+      0.164,
+      0.1937,
+      0.3753
+     ]
+    },
+    "acc_on_prev_rep0": 0.9913333333333333,
+    "acc_on_next_rep0": 0.9553333333333334,
+    "union": {
+     "mean_P_next": 0.47613333333333335,
+     "frac_prev_like(<0.2)": 0.4646666666666667,
+     "frac_next_like(>0.8)": 0.412,
+     "frac_intermediate[0.2,0.8]": 0.12333333333333334,
+     "hist5": [
+      0.4647,
+      0.0413,
+      0.024,
+      0.0347,
+      0.4353
+     ]
+    },
+    "ot_pairs": {
+     "mean_P_next": 0.4521333333333334,
+     "frac_prev_like(<0.2)": 0.18933333333333333,
+     "frac_next_like(>0.8)": 0.09533333333333334,
+     "frac_intermediate[0.2,0.8]": 0.7153333333333334,
+     "hist5": [
+      0.1893,
+      0.22,
+      0.2253,
+      0.2107,
+      0.1547
+     ]
+    },
+    "uot": {
+     "mean_P_next": 0.4408444444444444,
+     "frac_prev_like(<0.2)": 0.21866666666666668,
+     "frac_next_like(>0.8)": 0.11733333333333333,
+     "frac_intermediate[0.2,0.8]": 0.664,
+     "hist5": [
+      0.2187,
+      0.224,
+      0.21,
+      0.1847,
+      0.1627
+     ]
+    },
+    "indep": {
+     "mean_P_next": 0.4265777777777778,
+     "frac_prev_like(<0.2)": 0.154,
+     "frac_next_like(>0.8)": 0.051333333333333335,
+     "frac_intermediate[0.2,0.8]": 0.7946666666666666,
+     "hist5": [
+      0.154,
+      0.262,
+      0.316,
+      0.188,
+      0.08
+     ]
+    },
+    "sb_half": {
+     "mean_P_next": 0.48213333333333336,
+     "frac_prev_like(<0.2)": 0.22466666666666665,
+     "frac_next_like(>0.8)": 0.19933333333333333,
+     "frac_intermediate[0.2,0.8]": 0.576,
+     "hist5": [
+      0.2247,
+      0.1933,
+      0.1613,
+      0.1713,
+      0.2493
+     ]
+    },
+    "held_per_pool_mean_P_next": {
+     "10": 0.4723340790454884,
+     "14": 0.8207282913165267,
+     "15": 0.8702824858757062,
+     "30": 0.6162267839687194,
+     "31": 0.527927927927928,
+     "32": 0.5450396825396825
+    },
+    "held_per_pool_n": {
+     "10": 447,
+     "14": 238,
+     "15": 295,
+     "30": 682,
+     "31": 666,
+     "32": 672
+    },
+    "held_per_type_mean_P_next": {
+     "Anterior Primitive Streak": 0.831955922865014,
+     "Epiblast": 0.6564294631710362,
+     "ExE ectoderm": 0.4148148148148148,
+     "ExE endoderm": 0.368407960199005,
+     "Mixed mesoderm": 0.7527272727272726,
+     "Nascent mesoderm": 0.7308333333333333,
+     "Primitive Streak": 0.6302150537634409,
+     "Visceral endoderm": 0.19047619047619047
+    }
+   },
+   "off_manifold": {
+    "n_target": 1500,
+    "n_reference_held_others": 1500,
+    "thr_q95": 4.760028265614044,
+    "reference_median_nn": 3.0811616476489094,
+    "methods": {
+     "prev": {
+      "frac_off_manifold": 0.192,
+      "median_nn_ratio": 1.301243872769955,
+      "frac_target_uncovered": 0.27066666666666667
+     },
+     "next": {
+      "frac_off_manifold": 0.21533333333333332,
+      "median_nn_ratio": 1.325120253393545,
+      "frac_target_uncovered": 0.136
+     },
+     "union": {
+      "frac_off_manifold": 0.20066666666666666,
+      "median_nn_ratio": 1.3082820787082063,
+      "frac_target_uncovered": 0.136
+     },
+     "indep": {
+      "frac_off_manifold": 0.526,
+      "median_nn_ratio": 1.6104949368174761,
+      "frac_target_uncovered": 0.17533333333333334
+     },
+     "ot_pairs": {
+      "frac_off_manifold": 0.15733333333333333,
+      "median_nn_ratio": 1.0695447371377351,
+      "frac_target_uncovered": 0.116
+     },
+     "sb_half": {
+      "frac_off_manifold": 0.9286666666666666,
+      "median_nn_ratio": 1.9350068750220082,
+      "frac_target_uncovered": 0.8393333333333334
+     },
+     "uot": {
+      "frac_off_manifold": 0.056,
+      "median_nn_ratio": 1.039807575282485,
+      "frac_target_uncovered": 0.104
+     }
+    },
+    "reference_frac_target_uncovered": 0.05
+   },
+   "pair_types": {
+    "plan_mass_same_type": 0.6631280941531805,
+    "independent_same_type": 0.20551155555555556,
+    "frac_pairs_same_type_drawn": 0.668,
+    "off_manifold_same_type_midpoints": 0.043912175648702596,
+    "off_manifold_cross_type_midpoints": 0.3353413654618474,
+    "top_flows(>1%)": {
+     "Epiblast -> Epiblast": 0.2989,
+     "ExE ectoderm -> ExE ectoderm": 0.124,
+     "Epiblast -> Primitive Streak": 0.0973,
+     "ExE endoderm -> ExE endoderm": 0.0919,
+     "Primitive Streak -> Primitive Streak": 0.0711,
+     "Nascent mesoderm -> Nascent mesoderm": 0.0553,
+     "Primitive Streak -> Nascent mesoderm": 0.0497,
+     "ExE ectoderm -> Mixed mesoderm": 0.0237,
+     "ExE ectoderm -> Nascent mesoderm": 0.0178,
+     "Visceral endoderm -> Def. endoderm": 0.0166,
+     "Primitive Streak -> Epiblast": 0.016,
+     "Visceral endoderm -> Visceral endoderm": 0.0152
+    }
+   },
+   "pools_confirm": {
+    "10": {
+     "prev": 0.7566,
+     "next": 0.8718,
+     "union": 0.3587,
+     "ot_pairs": 0.4158,
+     "uot": 0.3993
+    },
+    "14": {
+     "prev": 1.5571,
+     "next": 0.6066,
+     "union": 0.6482,
+     "ot_pairs": 0.7273,
+     "uot": 0.7264
+    },
+    "15": {
+     "prev": 1.7358,
+     "next": 0.5896,
+     "union": 0.7257,
+     "ot_pairs": 0.786,
+     "uot": 0.7835
+    },
+    "30": {
+     "prev": 1.137,
+     "next": 0.6986,
+     "union": 0.4807,
+     "ot_pairs": 0.4967,
+     "uot": 0.4958
+    },
+    "31": {
+     "prev": 1.1496,
+     "next": 0.8325,
+     "union": 0.5587,
+     "ot_pairs": 0.5615,
+     "uot": 0.567
+    },
+    "32": {
+     "prev": 1.0633,
+     "next": 0.7881,
+     "union": 0.4892,
+     "ot_pairs": 0.4767,
+     "uot": 0.4687
+    }
+   },
+   "pools_union_beats_ot_pairs": {
+    "10": true,
+    "14": true,
+    "15": true,
+    "30": true,
+    "31": true,
+    "32": false
+   }
+  },
+  "3": {
+   "held": "E7.25",
+   "composition": {
+    "counts": {
+     "Anterior Primitive Streak": {
+      "prev": 121,
+      "held": 84,
+      "next": 18
+     },
+     "Caudal Mesoderm": {
+      "prev": 0,
+      "held": 0,
+      "next": 15
+     },
+     "Caudal epiblast": {
+      "prev": 1,
+      "held": 0,
+      "next": 126
+     },
+     "Caudal neurectoderm": {
+      "prev": 0,
+      "held": 0,
+      "next": 23
+     },
+     "Def. endoderm": {
+      "prev": 16,
+      "held": 89,
+      "next": 74
+     },
+     "Epiblast": {
+      "prev": 1068,
+      "held": 954,
+      "next": 264
+     },
+     "ExE ectoderm": {
+      "prev": 405,
+      "held": 370,
+      "next": 596
+     },
+     "ExE endoderm": {
+      "prev": 268,
+      "held": 298,
+      "next": 486
+     },
+     "ExE mesoderm": {
+      "prev": 2,
+      "held": 10,
+      "next": 38
+     },
+     "Gut": {
+      "prev": 0,
+      "held": 1,
+      "next": 41
+     },
+     "Intermediate mesoderm": {
+      "prev": 0,
+      "held": 1,
+      "next": 62
+     },
+     "Mesenchyme": {
+      "prev": 3,
+      "held": 31,
+      "next": 168
+     },
+     "Mixed mesoderm": {
+      "prev": 55,
+      "held": 104,
+      "next": 168
+     },
+     "Nascent mesoderm": {
+      "prev": 320,
+      "held": 437,
+      "next": 196
+     },
+     "Notochord": {
+      "prev": 0,
+      "held": 4,
+      "next": 20
+     },
+     "PGC": {
+      "prev": 7,
+      "held": 6,
+      "next": 20
+     },
+     "Paraxial mesoderm": {
+      "prev": 0,
+      "held": 0,
+      "next": 22
+     },
+     "Parietal endoderm": {
+      "prev": 27,
+      "held": 25,
+      "next": 10
+     },
+     "Pharyngeal mesoderm": {
+      "prev": 0,
+      "held": 0,
+      "next": 39
+     },
+     "Primitive Streak": {
+      "prev": 620,
+      "held": 507,
+      "next": 159
+     },
+     "Rostral neurectoderm": {
+      "prev": 3,
+      "held": 17,
+      "next": 329
+     },
+     "Somitic mesoderm": {
+      "prev": 0,
+      "held": 0,
+      "next": 13
+     },
+     "Surface ectoderm": {
+      "prev": 7,
+      "held": 12,
+      "next": 46
+     },
+     "Visceral endoderm": {
+      "prev": 77,
+      "held": 50,
+      "next": 67
+     }
+    },
+    "TV_held_prev": 0.10999999999999999,
+    "TV_held_next": 0.45833333333333337,
+    "TV_held_mix5050": 0.21650000000000003,
+    "TV_prev_next": 0.5063333333333333,
+    "best_alpha_next": 0.14,
+    "TV_held_best_alpha_mix": 0.08062,
+    "held_mass_types_absent_at_prev": 0.02733333333333333,
+    "held_mass_types_absent_at_next": 0.0,
+    "next_mass_types_absent_at_prev(appearing)": 0.32066666666666666,
+    "prev_mass_types_absent_at_next(vanishing)": 0.0,
+    "share_of_TV_prev_next_from_one_sided_types": 0.30908492429229756,
+    "held_transient_peak_excess": 0.044,
+    "held_transient_trough_deficit": 0.018000000000000006,
+    "held_mass_in_types_between_neighbours": 0.6826666666666668
+   },
+   "ed_identity": {
+    "ED_prev_held": 0.41066154864837817,
+    "ED_next_held": 1.8779255013119844,
+    "ED_prev_next": 2.075844552493139,
+    "avg_endpoints": 1.1442935249801813,
+    "convexity_bonus_quarter_ED_prev_next": 0.5189611381232847,
+    "identity_pred_union": 0.6253323868568966,
+    "full_weighted_mix_ED_U": 0.6251593421292849,
+    "recorded_union_ED_U": 0.6440503054621356,
+    "recorded_ot_pairs_ED_U": 0.7251317799995262,
+    "recorded_uot_ED_U": 0.547228928277649,
+    "ot_pairs_gain_vs_avg_endpoints": 0.41916174498065517,
+    "union_gain_vs_avg_endpoints": 0.5002432195180457
+   },
+   "t_scan_ORACLE": {
+    "t": [
+     0.0,
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9,
+     1.0
+    ],
+    "ED_U": [
+     0.40513,
+     0.36997,
+     0.38326,
+     0.44298,
+     0.54639,
+     0.69029,
+     0.87162,
+     1.08773,
+     1.33636,
+     1.61514,
+     1.9208
+    ],
+    "best_t": 0.1,
+    "best_ED_U": 0.3699667440590743,
+    "at_t0.5": 0.6902940537778992
+   },
+   "alpha_scan_ORACLE": {
+    "alpha_next": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ],
+    "ED_U": [
+     0.41066,
+     0.38527,
+     0.3703,
+     0.36575,
+     0.37161,
+     0.38788,
+     0.41456,
+     0.45162,
+     0.49908,
+     0.55693,
+     0.62516,
+     0.70377,
+     0.79275,
+     0.89211,
+     1.00184,
+     1.12194,
+     1.2524,
+     1.39324,
+     1.54443,
+     1.706,
+     1.87793
+    ],
+    "best_alpha": 0.15,
+    "best_ED_U": 0.36574858995626275,
+    "at_alpha0.5": 0.6251593421292849
+   },
+   "best_t_OT_vs_best_alpha_mix": {
+    "best_OT": 0.3699667440590743,
+    "best_mix": 0.36574858995626275,
+    "mix_better": true
+   },
+   "t_spread_scan_ORACLE": {
+    "ED_U": {
+     "uniform_h0.0": 0.6902940537778992,
+     "uniform_h0.1": 0.6855855984694929,
+     "uniform_h0.2": 0.6741059599594982,
+     "uniform_h0.3": 0.6588827637760156,
+     "uniform_h0.4": 0.6428012022458466,
+     "uniform_h0.5": 0.6287304793613977,
+     "two_point_h0.0": 0.6902940537778992,
+     "two_point_h0.1": 0.6779192700510143,
+     "two_point_h0.2": 0.651412841554673,
+     "two_point_h0.3": 0.6242767041173849,
+     "two_point_h0.4": 0.6099985220687009,
+     "two_point_h0.5": 0.6224275197493009
+    },
+    "best": "two_point_h0.4",
+    "best_ED_U": 0.6099985220687009
+   },
+   "pool_oracle_scans": {
+    "23": {
+     "n": 294,
+     "best_t": 0.0,
+     "best_t_ED_U": 0.34300954490880287,
+     "t0.5_ED_U": 1.1500602733344927,
+     "best_alpha": 0.0,
+     "best_alpha_ED_U": 0.34654317039346694,
+     "alpha0.5_ED_U": 1.0288774536024168,
+     "best_t_OT_beats_best_mix": true
+    },
+    "26": {
+     "n": 1307,
+     "best_t": 0.1,
+     "best_t_ED_U": 0.4531051470658465,
+     "t0.5_ED_U": 0.7351023982776107,
+     "best_alpha": 0.15,
+     "best_alpha_ED_U": 0.4483748421669927,
+     "alpha0.5_ED_U": 0.6824683880389326,
+     "best_t_OT_beats_best_mix": false
+    },
+    "27": {
+     "n": 1399,
+     "best_t": 0.2,
+     "best_t_ED_U": 0.4641303161314762,
+     "t0.5_ED_U": 0.7172018546629898,
+     "best_alpha": 0.2,
+     "best_alpha_ED_U": 0.448713749716721,
+     "alpha0.5_ED_U": 0.6554913958493683,
+     "best_t_OT_beats_best_mix": false
+    }
+   },
+   "stage_vote": {
+    "n_train_each": 1500,
+    "held_all": {
+     "mean_P_next": 0.2932,
+     "frac_prev_like(<0.2)": 0.41633333333333333,
+     "frac_next_like(>0.8)": 0.04666666666666667,
+     "frac_intermediate[0.2,0.8]": 0.537,
+     "hist5": [
+      0.4163,
+      0.2533,
+      0.1543,
+      0.1017,
+      0.0743
+     ]
+    },
+    "acc_on_prev_rep0": 0.9246666666666666,
+    "acc_on_next_rep0": 0.948,
+    "union": {
+     "mean_P_next": 0.5061333333333333,
+     "frac_prev_like(<0.2)": 0.38866666666666666,
+     "frac_next_like(>0.8)": 0.3893333333333333,
+     "frac_intermediate[0.2,0.8]": 0.222,
+     "hist5": [
+      0.3887,
+      0.0627,
+      0.054,
+      0.0647,
+      0.43
+     ]
+    },
+    "ot_pairs": {
+     "mean_P_next": 0.557288888888889,
+     "frac_prev_like(<0.2)": 0.112,
+     "frac_next_like(>0.8)": 0.22866666666666666,
+     "frac_intermediate[0.2,0.8]": 0.6593333333333333,
+     "hist5": [
+      0.112,
+      0.184,
+      0.2133,
+      0.18,
+      0.3107
+     ]
+    },
+    "uot": {
+     "mean_P_next": 0.569288888888889,
+     "frac_prev_like(<0.2)": 0.11666666666666667,
+     "frac_next_like(>0.8)": 0.25266666666666665,
+     "frac_intermediate[0.2,0.8]": 0.6306666666666667,
+     "hist5": [
+      0.1167,
+      0.1793,
+      0.1813,
+      0.2007,
+      0.322
+     ]
+    },
+    "indep": {
+     "mean_P_next": 0.5264888888888889,
+     "frac_prev_like(<0.2)": 0.07533333333333334,
+     "frac_next_like(>0.8)": 0.136,
+     "frac_intermediate[0.2,0.8]": 0.7886666666666666,
+     "hist5": [
+      0.0753,
+      0.194,
+      0.3067,
+      0.238,
+      0.186
+     ]
+    },
+    "sb_half": {
+     "mean_P_next": 0.5345333333333333,
+     "frac_prev_like(<0.2)": 0.17066666666666666,
+     "frac_next_like(>0.8)": 0.232,
+     "frac_intermediate[0.2,0.8]": 0.5973333333333334,
+     "hist5": [
+      0.1707,
+      0.1673,
+      0.182,
+      0.18,
+      0.3
+     ]
+    },
+    "held_per_pool_mean_P_next": {
+     "23": 0.2204081632653061,
+     "26": 0.30400408059168577,
+     "27": 0.29840362163450085
+    },
+    "held_per_pool_n": {
+     "23": 294,
+     "26": 1307,
+     "27": 1399
+    },
+    "held_per_type_mean_P_next": {
+     "Anterior Primitive Streak": 0.10079365079365077,
+     "Def. endoderm": 0.3415730337078651,
+     "Epiblast": 0.16505939902166317,
+     "ExE ectoderm": 0.48486486486486485,
+     "ExE endoderm": 0.5234899328859061,
+     "Mixed mesoderm": 0.5435897435897435,
+     "Nascent mesoderm": 0.2924485125858124,
+     "Primitive Streak": 0.16370808678500987,
+     "Visceral endoderm": 0.22800000000000004
+    }
+   },
+   "off_manifold": {
+    "n_target": 1500,
+    "n_reference_held_others": 1500,
+    "thr_q95": 4.977825489904498,
+    "reference_median_nn": 3.354155560219283,
+    "methods": {
+     "prev": {
+      "frac_off_manifold": 0.118,
+      "median_nn_ratio": 1.154439755884144,
+      "frac_target_uncovered": 0.19133333333333333
+     },
+     "next": {
+      "frac_off_manifold": 0.45266666666666666,
+      "median_nn_ratio": 1.4441205462698365,
+      "frac_target_uncovered": 0.30733333333333335
+     },
+     "union": {
+      "frac_off_manifold": 0.2866666666666667,
+      "median_nn_ratio": 1.2740760596280412,
+      "frac_target_uncovered": 0.18866666666666668
+     },
+     "indep": {
+      "frac_off_manifold": 0.678,
+      "median_nn_ratio": 1.9574280955443184,
+      "frac_target_uncovered": 0.264
+     },
+     "ot_pairs": {
+      "frac_off_manifold": 0.2786666666666667,
+      "median_nn_ratio": 1.1770798861834577,
+      "frac_target_uncovered": 0.15666666666666668
+     },
+     "sb_half": {
+      "frac_off_manifold": 0.996,
+      "median_nn_ratio": 2.3124394975216798,
+      "frac_target_uncovered": 0.9926666666666667
+     },
+     "uot": {
+      "frac_off_manifold": 0.13066666666666665,
+      "median_nn_ratio": 1.0996719422548609,
+      "frac_target_uncovered": 0.13866666666666666
+     }
+    },
+    "reference_frac_target_uncovered": 0.05
+   },
+   "pair_types": {
+    "plan_mass_same_type": 0.3823761512609044,
+    "independent_same_type": 0.09195555555555557,
+    "frac_pairs_same_type_drawn": 0.38333333333333336,
+    "off_manifold_same_type_midpoints": 0.05565217391304348,
+    "off_manifold_cross_type_midpoints": 0.42702702702702705,
+    "top_flows(>1%)": {
+     "ExE ectoderm -> ExE ectoderm": 0.1307,
+     "ExE endoderm -> ExE endoderm": 0.0893,
+     "Epiblast -> Rostral neurectoderm": 0.087,
+     "Epiblast -> Epiblast": 0.0823,
+     "Epiblast -> ExE ectoderm": 0.0462,
+     "Nascent mesoderm -> Mixed mesoderm": 0.0382,
+     "Epiblast -> ExE endoderm": 0.0359,
+     "Nascent mesoderm -> Nascent mesoderm": 0.0354,
+     "Primitive Streak -> Caudal epiblast": 0.0248,
+     "Epiblast -> Primitive Streak": 0.0228,
+     "Primitive Streak -> Primitive Streak": 0.0222,
+     "Primitive Streak -> Rostral neurectoderm": 0.0214
+    }
+   },
+   "pools_confirm": {
+    "23": {
+     "prev": 0.3465,
+     "next": 2.7495,
+     "union": 1.063,
+     "ot_pairs": 1.2043,
+     "uot": 0.7939
+    },
+    "26": {
+     "prev": 0.5041,
+     "next": 1.8991,
+     "union": 0.7007,
+     "ot_pairs": 0.7699,
+     "uot": 0.6021
+    },
+    "27": {
+     "prev": 0.5189,
+     "next": 1.8303,
+     "union": 0.6732,
+     "ot_pairs": 0.7424,
+     "uot": 0.6058
+    }
+   },
+   "pools_union_beats_ot_pairs": {
+    "23": true,
+    "26": true,
+    "27": true
+   }
+  },
+  "4": {
+   "held": "E7.5",
+   "composition": {
+    "counts": {
+     "Allantois": {
+      "prev": 0,
+      "held": 0,
+      "next": 57
+     },
+     "Anterior Primitive Streak": {
+      "prev": 84,
+      "held": 18,
+      "next": 0
+     },
+     "Cardiomyocytes": {
+      "prev": 0,
+      "held": 0,
+      "next": 21
+     },
+     "Caudal Mesoderm": {
+      "prev": 0,
+      "held": 15,
+      "next": 66
+     },
+     "Caudal epiblast": {
+      "prev": 0,
+      "held": 126,
+      "next": 152
+     },
+     "Caudal neurectoderm": {
+      "prev": 0,
+      "held": 23,
+      "next": 73
+     },
+     "Def. endoderm": {
+      "prev": 89,
+      "held": 74,
+      "next": 23
+     },
+     "Endothelium": {
+      "prev": 0,
+      "held": 0,
+      "next": 26
+     },
+     "Epiblast": {
+      "prev": 954,
+      "held": 264,
+      "next": 35
+     },
+     "ExE ectoderm": {
+      "prev": 370,
+      "held": 596,
+      "next": 577
+     },
+     "ExE endoderm": {
+      "prev": 298,
+      "held": 486,
+      "next": 480
+     },
+     "ExE mesoderm": {
+      "prev": 10,
+      "held": 38,
+      "next": 61
+     },
+     "Forebrain/Midbrain/Hindbrain": {
+      "prev": 0,
+      "held": 0,
+      "next": 43
+     },
+     "Gut": {
+      "prev": 1,
+      "held": 41,
+      "next": 85
+     },
+     "Intermediate mesoderm": {
+      "prev": 1,
+      "held": 62,
+      "next": 145
+     },
+     "Mesenchyme": {
+      "prev": 31,
+      "held": 168,
+      "next": 211
+     },
+     "Mixed mesoderm": {
+      "prev": 104,
+      "held": 168,
+      "next": 54
+     },
+     "NMP": {
+      "prev": 0,
+      "held": 0,
+      "next": 2
+     },
+     "Nascent mesoderm": {
+      "prev": 437,
+      "held": 196,
+      "next": 23
+     },
+     "Notochord": {
+      "prev": 4,
+      "held": 20,
+      "next": 29
+     },
+     "PGC": {
+      "prev": 6,
+      "held": 20,
+      "next": 19
+     },
+     "Paraxial mesoderm": {
+      "prev": 0,
+      "held": 22,
+      "next": 112
+     },
+     "Parietal endoderm": {
+      "prev": 25,
+      "held": 10,
+      "next": 4
+     },
+     "Pharyngeal mesoderm": {
+      "prev": 0,
+      "held": 39,
+      "next": 97
+     },
+     "Primitive Streak": {
+      "prev": 507,
+      "held": 159,
+      "next": 15
+     },
+     "Rostral neurectoderm": {
+      "prev": 17,
+      "held": 329,
+      "next": 393
+     },
+     "Somitic mesoderm": {
+      "prev": 0,
+      "held": 13,
+      "next": 58
+     },
+     "Spinal cord": {
+      "prev": 0,
+      "held": 0,
+      "next": 14
+     },
+     "Surface ectoderm": {
+      "prev": 12,
+      "held": 46,
+      "next": 102
+     },
+     "Visceral endoderm": {
+      "prev": 50,
+      "held": 67,
+      "next": 24
+     }
+    },
+    "TV_held_prev": 0.45833333333333337,
+    "TV_held_next": 0.26813928690436517,
+    "TV_held_mix5050": 0.1971123514384094,
+    "TV_prev_next": 0.6906864378540486,
+    "best_alpha_next": 0.75,
+    "TV_held_best_alpha_mix": 0.14491452849050315,
+    "held_mass_types_absent_at_prev": 0.127,
+    "held_mass_types_absent_at_next": 0.009333333333333334,
+    "next_mass_types_absent_at_prev(appearing)": 0.3328890369876708,
+    "prev_mass_types_absent_at_next(vanishing)": 0.036333333333333336,
+    "share_of_TV_prev_next_from_one_sided_types": 0.2629435130462751,
+    "held_transient_peak_excess": 0.03578618238364988,
+    "held_transient_trough_deficit": 0.0,
+    "held_mass_in_types_between_neighbours": 0.5543333333333333
+   },
+   "ed_identity": {
+    "ED_prev_held": 1.9106876387946248,
+    "ED_next_held": 0.6097223761361358,
+    "ED_prev_next": 3.5951957524778138,
+    "avg_endpoints": 1.2602050074653803,
+    "convexity_bonus_quarter_ED_prev_next": 0.8987989381194534,
+    "identity_pred_union": 0.3614060693459269,
+    "full_weighted_mix_ED_U": 0.36110636980004074,
+    "recorded_union_ED_U": 0.35669204484623646,
+    "recorded_ot_pairs_ED_U": 0.5186533751327254,
+    "recorded_uot_ED_U": 0.7135187892074306,
+    "ot_pairs_gain_vs_avg_endpoints": 0.741551632332655,
+    "union_gain_vs_avg_endpoints": 0.9035129626191438
+   },
+   "t_scan_ORACLE": {
+    "t": [
+     0.0,
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9,
+     1.0
+    ],
+    "ED_U": [
+     1.94179,
+     1.58355,
+     1.24642,
+     0.94623,
+     0.69715,
+     0.50921,
+     0.38885,
+     0.3398,
+     0.36387,
+     0.46157,
+     0.63213
+    ],
+    "best_t": 0.7,
+    "best_ED_U": 0.33980178097813746,
+    "at_t0.5": 0.5092056851020968
+   },
+   "alpha_scan_ORACLE": {
+    "alpha_next": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ],
+    "ED_U": [
+     1.91069,
+     1.67467,
+     1.45669,
+     1.25673,
+     1.07479,
+     0.91086,
+     0.76493,
+     0.63699,
+     0.52705,
+     0.43509,
+     0.36111,
+     0.3051,
+     0.26707,
+     0.24701,
+     0.24491,
+     0.26079,
+     0.29464,
+     0.34645,
+     0.41623,
+     0.50399,
+     0.60972
+    ],
+    "best_alpha": 0.7,
+    "best_ED_U": 0.24491463176696016,
+    "at_alpha0.5": 0.36110636980004074
+   },
+   "best_t_OT_vs_best_alpha_mix": {
+    "best_OT": 0.33980178097813746,
+    "best_mix": 0.24491463176696016,
+    "mix_better": true
+   },
+   "t_spread_scan_ORACLE": {
+    "ED_U": {
+     "uniform_h0.0": 0.5092056851020968,
+     "uniform_h0.1": 0.5027762546529454,
+     "uniform_h0.2": 0.48563216257223135,
+     "uniform_h0.3": 0.46150105578854195,
+     "uniform_h0.4": 0.43419553729650556,
+     "uniform_h0.5": 0.40721137370375377,
+     "two_point_h0.0": 0.5092056851020968,
+     "two_point_h0.1": 0.4920970964138303,
+     "two_point_h0.2": 0.45051021113646544,
+     "two_point_h0.3": 0.4048034750454181,
+     "two_point_h0.4": 0.37358155968235707,
+     "two_point_h0.5": 0.37165424122948804
+    },
+    "best": "two_point_h0.5",
+    "best_ED_U": 0.37165424122948804
+   },
+   "pool_oracle_scans": {
+    "19": {
+     "n": 1603,
+     "best_t": 0.7,
+     "best_t_ED_U": 0.4219634728312407,
+     "t0.5_ED_U": 0.5317554810222861,
+     "best_alpha": 0.65,
+     "best_alpha_ED_U": 0.319626383524497,
+     "alpha0.5_ED_U": 0.395572813929468,
+     "best_t_OT_beats_best_mix": false
+    },
+    "2": {
+     "n": 85,
+     "best_t": 0.8,
+     "best_t_ED_U": 0.8413455492290941,
+     "t0.5_ED_U": 1.1906829222869841,
+     "best_alpha": 0.75,
+     "best_alpha_ED_U": 0.7688151289302354,
+     "alpha0.5_ED_U": 1.0153534626441747,
+     "best_t_OT_beats_best_mix": false
+    },
+    "20": {
+     "n": 420,
+     "best_t": 0.7,
+     "best_t_ED_U": 0.4395959464488837,
+     "t0.5_ED_U": 0.5401166625555867,
+     "best_alpha": 0.65,
+     "best_alpha_ED_U": 0.36792502136563005,
+     "alpha0.5_ED_U": 0.447679014286044,
+     "best_t_OT_beats_best_mix": false
+    },
+    "3": {
+     "n": 111,
+     "best_t": 1.0,
+     "best_t_ED_U": 1.245702196119204,
+     "t0.5_ED_U": 2.0983564415456684,
+     "best_alpha": 0.9,
+     "best_alpha_ED_U": 1.214860613665581,
+     "alpha0.5_ED_U": 1.7779536786465435,
+     "best_t_OT_beats_best_mix": false
+    },
+    "4": {
+     "n": 70,
+     "best_t": 1.0,
+     "best_t_ED_U": 1.6434632918818377,
+     "t0.5_ED_U": 2.300814467776925,
+     "best_alpha": 0.8,
+     "best_alpha_ED_U": 1.5285276709662814,
+     "alpha0.5_ED_U": 1.8870949312704706,
+     "best_t_OT_beats_best_mix": false
+    },
+    "6": {
+     "n": 711,
+     "best_t": 0.8,
+     "best_t_ED_U": 0.5843835272488024,
+     "t0.5_ED_U": 0.8632299015605831,
+     "best_alpha": 0.75,
+     "best_alpha_ED_U": 0.5111742663385938,
+     "alpha0.5_ED_U": 0.709814571706012,
+     "best_t_OT_beats_best_mix": false
+    }
+   },
+   "stage_vote": {
+    "n_train_each": 1500,
+    "held_all": {
+     "mean_P_next": 0.7063555555555555,
+     "frac_prev_like(<0.2)": 0.155,
+     "frac_next_like(>0.8)": 0.5533333333333333,
+     "frac_intermediate[0.2,0.8]": 0.2916666666666667,
+     "hist5": [
+      0.155,
+      0.065,
+      0.0697,
+      0.1117,
+      0.5987
+     ]
+    },
+    "acc_on_prev_rep0": 0.982,
+    "acc_on_next_rep0": 0.9853333333333333,
+    "union": {
+     "mean_P_next": 0.49906666666666666,
+     "frac_prev_like(<0.2)": 0.4726666666666667,
+     "frac_next_like(>0.8)": 0.4693333333333333,
+     "frac_intermediate[0.2,0.8]": 0.058,
+     "hist5": [
+      0.4727,
+      0.022,
+      0.0127,
+      0.016,
+      0.4767
+     ]
+    },
+    "ot_pairs": {
+     "mean_P_next": 0.5506222222222222,
+     "frac_prev_like(<0.2)": 0.164,
+     "frac_next_like(>0.8)": 0.264,
+     "frac_intermediate[0.2,0.8]": 0.572,
+     "hist5": [
+      0.164,
+      0.1633,
+      0.1633,
+      0.1827,
+      0.3267
+     ]
+    },
+    "uot": {
+     "mean_P_next": 0.5631555555555555,
+     "frac_prev_like(<0.2)": 0.17,
+     "frac_next_like(>0.8)": 0.292,
+     "frac_intermediate[0.2,0.8]": 0.538,
+     "hist5": [
+      0.17,
+      0.15,
+      0.1593,
+      0.162,
+      0.3587
+     ]
+    },
+    "indep": {
+     "mean_P_next": 0.5456000000000001,
+     "frac_prev_like(<0.2)": 0.10933333333333334,
+     "frac_next_like(>0.8)": 0.19933333333333333,
+     "frac_intermediate[0.2,0.8]": 0.6913333333333334,
+     "hist5": [
+      0.1093,
+      0.1833,
+      0.2407,
+      0.2027,
+      0.264
+     ]
+    },
+    "sb_half": {
+     "mean_P_next": 0.5295555555555556,
+     "frac_prev_like(<0.2)": 0.25533333333333336,
+     "frac_next_like(>0.8)": 0.30866666666666664,
+     "frac_intermediate[0.2,0.8]": 0.436,
+     "hist5": [
+      0.2553,
+      0.1227,
+      0.1227,
+      0.1427,
+      0.3567
+     ]
+    },
+    "held_per_pool_mean_P_next": {
+     "19": 0.6785610313994593,
+     "2": 0.8807843137254903,
+     "20": 0.7292063492063492,
+     "3": 0.7579579579579581,
+     "4": 0.5228571428571429,
+     "6": 0.7446788560712612
+    },
+    "held_per_pool_n": {
+     "19": 1603,
+     "2": 85,
+     "20": 420,
+     "3": 111,
+     "4": 70,
+     "6": 711
+    },
+    "held_per_type_mean_P_next": {
+     "Caudal epiblast": 0.9608465608465608,
+     "Def. endoderm": 0.4432432432432433,
+     "Epiblast": 0.281060606060606,
+     "ExE ectoderm": 0.832662192393736,
+     "ExE endoderm": 0.8109739368998629,
+     "Intermediate mesoderm": 0.9569892473118279,
+     "Mesenchyme": 0.8726190476190477,
+     "Mixed mesoderm": 0.6146825396825397,
+     "Nascent mesoderm": 0.30306122448979594,
+     "Primitive Streak": 0.26666666666666666,
+     "Rostral neurectoderm": 0.9138804457953393,
+     "Visceral endoderm": 0.5333333333333333
+    }
+   },
+   "off_manifold": {
+    "n_target": 1500,
+    "n_reference_held_others": 1500,
+    "thr_q95": 5.313147543785849,
+    "reference_median_nn": 3.5005408889426053,
+    "methods": {
+     "prev": {
+      "frac_off_manifold": 0.22666666666666666,
+      "median_nn_ratio": 1.274111532912822,
+      "frac_target_uncovered": 0.4106666666666667
+     },
+     "next": {
+      "frac_off_manifold": 0.3,
+      "median_nn_ratio": 1.2787936324113873,
+      "frac_target_uncovered": 0.18066666666666667
+     },
+     "union": {
+      "frac_off_manifold": 0.2693333333333333,
+      "median_nn_ratio": 1.2732437709106372,
+      "frac_target_uncovered": 0.156
+     },
+     "indep": {
+      "frac_off_manifold": 0.6886666666666666,
+      "median_nn_ratio": 1.9431399416841004,
+      "frac_target_uncovered": 0.25466666666666665
+     },
+     "ot_pairs": {
+      "frac_off_manifold": 0.2826666666666667,
+      "median_nn_ratio": 1.1834115690917861,
+      "frac_target_uncovered": 0.12466666666666666
+     },
+     "sb_half": {
+      "frac_off_manifold": 0.9913333333333333,
+      "median_nn_ratio": 2.2419393621193056,
+      "frac_target_uncovered": 0.9853333333333333
+     },
+     "uot": {
+      "frac_off_manifold": 0.124,
+      "median_nn_ratio": 1.0949682129430094,
+      "frac_target_uncovered": 0.11466666666666667
+     }
+    },
+    "reference_frac_target_uncovered": 0.05
+   },
+   "pair_types": {
+    "plan_mass_same_type": 0.262311447375491,
+    "independent_same_type": 0.04789466666666668,
+    "frac_pairs_same_type_drawn": 0.27066666666666667,
+    "off_manifold_same_type_midpoints": 0.022167487684729065,
+    "off_manifold_cross_type_midpoints": 0.40036563071297987,
+    "top_flows(>1%)": {
+     "ExE ectoderm -> ExE ectoderm": 0.122,
+     "Epiblast -> Rostral neurectoderm": 0.1058,
+     "ExE endoderm -> ExE endoderm": 0.104,
+     "Epiblast -> ExE ectoderm": 0.0548,
+     "Nascent mesoderm -> Intermediate mesoderm": 0.0277,
+     "Primitive Streak -> Caudal epiblast": 0.0236,
+     "Primitive Streak -> Rostral neurectoderm": 0.0231,
+     "Epiblast -> Caudal epiblast": 0.0216,
+     "Epiblast -> ExE endoderm": 0.0216,
+     "Nascent mesoderm -> Mesenchyme": 0.0189,
+     "Epiblast -> Surface ectoderm": 0.0177,
+     "Visceral endoderm -> ExE endoderm": 0.0162
+    }
+   },
+   "pools_confirm": {
+    "19": {
+     "prev": 1.818,
+     "next": 0.7714,
+     "union": 0.3881,
+     "ot_pairs": 0.5373,
+     "uot": 0.7092
+    },
+    "2": {
+     "prev": 2.8574,
+     "next": 0.9715,
+     "union": 1.0103,
+     "ot_pairs": 1.2278,
+     "uot": 1.3468
+    },
+    "20": {
+     "prev": 1.8828,
+     "next": 0.8108,
+     "union": 0.445,
+     "ot_pairs": 0.5326,
+     "uot": 0.6515
+    },
+    "3": {
+     "prev": 4.1003,
+     "next": 1.2538,
+     "union": 1.7493,
+     "ot_pairs": 2.1563,
+     "uot": 2.6582
+    },
+    "4": {
+     "prev": 3.9235,
+     "next": 1.6489,
+     "union": 1.8747,
+     "ot_pairs": 2.3633,
+     "uot": 2.8462
+    },
+    "6": {
+     "prev": 2.456,
+     "next": 0.7618,
+     "union": 0.7158,
+     "ot_pairs": 0.879,
+     "uot": 1.1096
+    }
+   },
+   "pools_union_beats_ot_pairs": {
+    "19": true,
+    "2": true,
+    "20": true,
+    "3": true,
+    "4": true,
+    "6": true
+   }
+  },
+  "5": {
+   "held": "E7.75",
+   "composition": {
+    "counts": {
+     "Allantois": {
+      "prev": 0,
+      "held": 57,
+      "next": 89
+     },
+     "Anterior Primitive Streak": {
+      "prev": 18,
+      "held": 0,
+      "next": 0
+     },
+     "Cardiomyocytes": {
+      "prev": 0,
+      "held": 21,
+      "next": 24
+     },
+     "Caudal Mesoderm": {
+      "prev": 15,
+      "held": 66,
+      "next": 102
+     },
+     "Caudal epiblast": {
+      "prev": 126,
+      "held": 152,
+      "next": 227
+     },
+     "Caudal neurectoderm": {
+      "prev": 23,
+      "held": 73,
+      "next": 103
+     },
+     "Def. endoderm": {
+      "prev": 74,
+      "held": 23,
+      "next": 9
+     },
+     "Endothelium": {
+      "prev": 0,
+      "held": 26,
+      "next": 43
+     },
+     "Epiblast": {
+      "prev": 264,
+      "held": 35,
+      "next": 0
+     },
+     "ExE ectoderm": {
+      "prev": 596,
+      "held": 577,
+      "next": 209
+     },
+     "ExE endoderm": {
+      "prev": 486,
+      "held": 480,
+      "next": 293
+     },
+     "ExE mesoderm": {
+      "prev": 38,
+      "held": 61,
+      "next": 132
+     },
+     "Forebrain/Midbrain/Hindbrain": {
+      "prev": 0,
+      "held": 43,
+      "next": 33
+     },
+     "Gut": {
+      "prev": 41,
+      "held": 85,
+      "next": 88
+     },
+     "Intermediate mesoderm": {
+      "prev": 62,
+      "held": 145,
+      "next": 294
+     },
+     "Mesenchyme": {
+      "prev": 168,
+      "held": 211,
+      "next": 199
+     },
+     "Mixed mesoderm": {
+      "prev": 168,
+      "held": 54,
+      "next": 1
+     },
+     "NMP": {
+      "prev": 0,
+      "held": 2,
+      "next": 23
+     },
+     "Nascent mesoderm": {
+      "prev": 196,
+      "held": 23,
+      "next": 0
+     },
+     "Notochord": {
+      "prev": 20,
+      "held": 29,
+      "next": 35
+     },
+     "PGC": {
+      "prev": 20,
+      "held": 19,
+      "next": 10
+     },
+     "Paraxial mesoderm": {
+      "prev": 22,
+      "held": 112,
+      "next": 190
+     },
+     "Parietal endoderm": {
+      "prev": 10,
+      "held": 4,
+      "next": 4
+     },
+     "Pharyngeal mesoderm": {
+      "prev": 39,
+      "held": 97,
+      "next": 197
+     },
+     "Primitive Streak": {
+      "prev": 159,
+      "held": 15,
+      "next": 0
+     },
+     "Rostral neurectoderm": {
+      "prev": 329,
+      "held": 393,
+      "next": 355
+     },
+     "Somitic mesoderm": {
+      "prev": 13,
+      "held": 58,
+      "next": 124
+     },
+     "Spinal cord": {
+      "prev": 0,
+      "held": 14,
+      "next": 41
+     },
+     "Surface ectoderm": {
+      "prev": 46,
+      "held": 102,
+      "next": 163
+     },
+     "Visceral endoderm": {
+      "prev": 67,
+      "held": 24,
+      "next": 12
+     }
+    },
+    "TV_held_prev": 0.26813928690436517,
+    "TV_held_next": 0.2584559591247362,
+    "TV_held_mix5050": 0.14825652560257696,
+    "TV_prev_next": 0.5066666666666668,
+    "best_alpha_next": 0.53,
+    "TV_held_best_alpha_mix": 0.1477265256025769,
+    "held_mass_types_absent_at_prev": 0.05431522825724758,
+    "held_mass_types_absent_at_next": 0.05131622792402532,
+    "next_mass_types_absent_at_prev(appearing)": 0.08433333333333334,
+    "prev_mass_types_absent_at_next(vanishing)": 0.29633333333333334,
+    "share_of_TV_prev_next_from_one_sided_types": 0.3710526315789472,
+    "held_transient_peak_excess": 0.019928135066089085,
+    "held_transient_trough_deficit": 4.4429634566247114e-07,
+    "held_mass_in_types_between_neighbours": 0.7830723092302567
+   },
+   "ed_identity": {
+    "ED_prev_held": 0.5265937410280834,
+    "ED_next_held": 0.8684607431900572,
+    "ED_prev_next": 1.817947937702926,
+    "avg_endpoints": 0.6975272421090704,
+    "convexity_bonus_quarter_ED_prev_next": 0.4544869844257315,
+    "identity_pred_union": 0.2430402576833388,
+    "full_weighted_mix_ED_U": 0.24288871150647276,
+    "recorded_union_ED_U": 0.24785224487042257,
+    "recorded_ot_pairs_ED_U": 0.40308210496964136,
+    "recorded_uot_ED_U": 0.26945433337654734,
+    "ot_pairs_gain_vs_avg_endpoints": 0.294445137139429,
+    "union_gain_vs_avg_endpoints": 0.4496749972386478
+   },
+   "t_scan_ORACLE": {
+    "t": [
+     0.0,
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9,
+     1.0
+    ],
+    "ED_U": [
+     0.53016,
+     0.43071,
+     0.37362,
+     0.35347,
+     0.36489,
+     0.40347,
+     0.46543,
+     0.54736,
+     0.64664,
+     0.76221,
+     0.89536
+    ],
+    "best_t": 0.3,
+    "best_ED_U": 0.35347215026532436,
+    "at_t0.5": 0.4034732787120869
+   },
+   "alpha_scan_ORACLE": {
+    "alpha_next": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ],
+    "ED_U": [
+     0.52659,
+     0.45733,
+     0.39715,
+     0.34606,
+     0.30406,
+     0.27115,
+     0.24732,
+     0.23258,
+     0.22693,
+     0.23037,
+     0.24289,
+     0.2645,
+     0.29521,
+     0.335,
+     0.3839,
+     0.44189,
+     0.50899,
+     0.58519,
+     0.6705,
+     0.76492,
+     0.86846
+    ],
+    "best_alpha": 0.4,
+    "best_ED_U": 0.22693058503213237,
+    "at_alpha0.5": 0.24288871150647276
+   },
+   "best_t_OT_vs_best_alpha_mix": {
+    "best_OT": 0.35347215026532436,
+    "best_mix": 0.22693058503213237,
+    "mix_better": true
+   },
+   "t_spread_scan_ORACLE": {
+    "ED_U": {
+     "uniform_h0.0": 0.4034732787120869,
+     "uniform_h0.1": 0.39908221945606215,
+     "uniform_h0.2": 0.3854101143499922,
+     "uniform_h0.3": 0.36523690109318946,
+     "uniform_h0.4": 0.34158074145352185,
+     "uniform_h0.5": 0.31736843463762315,
+     "two_point_h0.0": 0.4034732787120869,
+     "two_point_h0.1": 0.3900217300831355,
+     "two_point_h0.2": 0.35412486037231616,
+     "two_point_h0.3": 0.3103334884238175,
+     "two_point_h0.4": 0.2725394860863008,
+     "two_point_h0.5": 0.2534976207826034
+    },
+    "best": "two_point_h0.5",
+    "best_ED_U": 0.2534976207826034
+   },
+   "pool_oracle_scans": {
+    "12": {
+     "n": 854,
+     "best_t": 0.7,
+     "best_t_ED_U": 0.4131134236897059,
+     "t0.5_ED_U": 0.4962387387743193,
+     "best_alpha": 0.7,
+     "best_alpha_ED_U": 0.3584493173057564,
+     "alpha0.5_ED_U": 0.4331628531863494,
+     "best_t_OT_beats_best_mix": false
+    },
+    "13": {
+     "n": 963,
+     "best_t": 0.7,
+     "best_t_ED_U": 0.41748638079396844,
+     "t0.5_ED_U": 0.4506203384270613,
+     "best_alpha": 0.65,
+     "best_alpha_ED_U": 0.29890409765337483,
+     "alpha0.5_ED_U": 0.32905735875622,
+     "best_t_OT_beats_best_mix": false
+    },
+    "8": {
+     "n": 635,
+     "best_t": 0.0,
+     "best_t_ED_U": 0.8305551673692264,
+     "t0.5_ED_U": 1.7891760903047331,
+     "best_alpha": 0.0,
+     "best_alpha_ED_U": 0.8232050113036719,
+     "alpha0.5_ED_U": 1.516316938721663,
+     "best_t_OT_beats_best_mix": false
+    },
+    "9": {
+     "n": 549,
+     "best_t": 0.0,
+     "best_t_ED_U": 1.067473247508411,
+     "t0.5_ED_U": 1.5392953821028321,
+     "best_alpha": 0.15,
+     "best_alpha_ED_U": 1.0166522371712514,
+     "alpha0.5_ED_U": 1.2388194876615384,
+     "best_t_OT_beats_best_mix": false
+    }
+   },
+   "stage_vote": {
+    "n_train_each": 1500,
+    "held_all": {
+     "mean_P_next": 0.5241363989781185,
+     "frac_prev_like(<0.2)": 0.27324225258247253,
+     "frac_next_like(>0.8)": 0.32722425858047316,
+     "frac_intermediate[0.2,0.8]": 0.3995334888370543,
+     "hist5": [
+      0.2732,
+      0.1333,
+      0.104,
+      0.1173,
+      0.3722
+     ]
+    },
+    "acc_on_prev_rep0": 0.952,
+    "acc_on_next_rep0": 0.9486666666666667,
+    "union": {
+     "mean_P_next": 0.5023111111111112,
+     "frac_prev_like(<0.2)": 0.41133333333333333,
+     "frac_next_like(>0.8)": 0.418,
+     "frac_intermediate[0.2,0.8]": 0.17066666666666666,
+     "hist5": [
+      0.4113,
+      0.064,
+      0.0393,
+      0.048,
+      0.4373
+     ]
+    },
+    "ot_pairs": {
+     "mean_P_next": 0.44168888888888885,
+     "frac_prev_like(<0.2)": 0.22466666666666665,
+     "frac_next_like(>0.8)": 0.11666666666666667,
+     "frac_intermediate[0.2,0.8]": 0.6586666666666666,
+     "hist5": [
+      0.2247,
+      0.196,
+      0.22,
+      0.1893,
+      0.17
+     ]
+    },
+    "uot": {
+     "mean_P_next": 0.44128888888888895,
+     "frac_prev_like(<0.2)": 0.252,
+     "frac_next_like(>0.8)": 0.13133333333333333,
+     "frac_intermediate[0.2,0.8]": 0.6166666666666667,
+     "hist5": [
+      0.252,
+      0.19,
+      0.1767,
+      0.194,
+      0.1873
+     ]
+    },
+    "indep": {
+     "mean_P_next": 0.48208888888888896,
+     "frac_prev_like(<0.2)": 0.13466666666666666,
+     "frac_next_like(>0.8)": 0.124,
+     "frac_intermediate[0.2,0.8]": 0.7413333333333333,
+     "hist5": [
+      0.1347,
+      0.2347,
+      0.2487,
+      0.1987,
+      0.1833
+     ]
+    },
+    "sb_half": {
+     "mean_P_next": 0.49591111111111114,
+     "frac_prev_like(<0.2)": 0.23,
+     "frac_next_like(>0.8)": 0.22133333333333333,
+     "frac_intermediate[0.2,0.8]": 0.5486666666666666,
+     "hist5": [
+      0.23,
+      0.1633,
+      0.158,
+      0.1813,
+      0.2673
+     ]
+    },
+    "held_per_pool_mean_P_next": {
+     "12": 0.6814988290398126,
+     "13": 0.6654205607476635,
+     "8": 0.18456692913385825,
+     "9": 0.42428658166363087
+    },
+    "held_per_pool_n": {
+     "12": 854,
+     "13": 963,
+     "8": 635,
+     "9": 549
+    },
+    "held_per_type_mean_P_next": {
+     "Allantois": 0.9754385964912281,
+     "Caudal Mesoderm": 0.8535353535353536,
+     "Caudal epiblast": 0.6885964912280701,
+     "Caudal neurectoderm": 0.7022831050228311,
+     "ExE ectoderm": 0.24055459272097054,
+     "ExE endoderm": 0.36569444444444443,
+     "ExE mesoderm": 0.7333333333333333,
+     "Gut": 0.6321568627450981,
+     "Intermediate mesoderm": 0.7880459770114944,
+     "Mesenchyme": 0.5605055292259083,
+     "Mixed mesoderm": 0.1037037037037037,
+     "Paraxial mesoderm": 0.8232142857142856,
+     "Pharyngeal mesoderm": 0.8082474226804123,
+     "Rostral neurectoderm": 0.5384223918575064,
+     "Somitic mesoderm": 0.8011494252873563,
+     "Surface ectoderm": 0.7522875816993464
+    }
+   },
+   "off_manifold": {
+    "n_target": 1500,
+    "n_reference_held_others": 1501,
+    "thr_q95": 5.179130941785831,
+    "reference_median_nn": 3.3830806149703814,
+    "methods": {
+     "prev": {
+      "frac_off_manifold": 0.14666666666666667,
+      "median_nn_ratio": 1.162611990207902,
+      "frac_target_uncovered": 0.268
+     },
+     "next": {
+      "frac_off_manifold": 0.146,
+      "median_nn_ratio": 1.2555984747985434,
+      "frac_target_uncovered": 0.17466666666666666
+     },
+     "union": {
+      "frac_off_manifold": 0.14933333333333335,
+      "median_nn_ratio": 1.2194875436587016,
+      "frac_target_uncovered": 0.122
+     },
+     "indep": {
+      "frac_off_manifold": 0.6566666666666666,
+      "median_nn_ratio": 1.8136700859431578,
+      "frac_target_uncovered": 0.22533333333333333
+     },
+     "ot_pairs": {
+      "frac_off_manifold": 0.2653333333333333,
+      "median_nn_ratio": 1.1919990816239425,
+      "frac_target_uncovered": 0.112
+     },
+     "sb_half": {
+      "frac_off_manifold": 0.9813333333333333,
+      "median_nn_ratio": 2.2017170762446807,
+      "frac_target_uncovered": 0.944
+     },
+     "uot": {
+      "frac_off_manifold": 0.06933333333333333,
+      "median_nn_ratio": 1.0436381081598896,
+      "frac_target_uncovered": 0.11
+     }
+    },
+    "reference_frac_target_uncovered": 0.05
+   },
+   "pair_types": {
+    "plan_mass_same_type": 0.31695820393791146,
+    "independent_same_type": 0.05313999999999999,
+    "frac_pairs_same_type_drawn": 0.31866666666666665,
+    "off_manifold_same_type_midpoints": 0.02510460251046025,
+    "off_manifold_cross_type_midpoints": 0.38943248532289626,
+    "top_flows(>1%)": {
+     "ExE endoderm -> ExE endoderm": 0.0927,
+     "ExE ectoderm -> ExE ectoderm": 0.0627,
+     "Epiblast -> Rostral neurectoderm": 0.0494,
+     "Rostral neurectoderm -> Rostral neurectoderm": 0.0457,
+     "Mesenchyme -> Mesenchyme": 0.037,
+     "Nascent mesoderm -> Intermediate mesoderm": 0.0297,
+     "ExE ectoderm -> Surface ectoderm": 0.0182,
+     "Mixed mesoderm -> Intermediate mesoderm": 0.0179,
+     "Caudal epiblast -> Caudal epiblast": 0.0171,
+     "ExE ectoderm -> Allantois": 0.0171,
+     "Rostral neurectoderm -> Caudal epiblast": 0.0171,
+     "Primitive Streak -> Caudal epiblast": 0.017
+    }
+   },
+   "pools_confirm": {
+    "12": {
+     "prev": 1.2562,
+     "next": 0.5194,
+     "union": 0.4365,
+     "ot_pairs": 0.4934,
+     "uot": 0.5053
+    },
+    "13": {
+     "prev": 1.0203,
+     "next": 0.5471,
+     "union": 0.3325,
+     "ot_pairs": 0.4469,
+     "uot": 0.4173
+    },
+    "8": {
+     "prev": 0.8232,
+     "next": 3.1187,
+     "union": 1.5236,
+     "ot_pairs": 1.795,
+     "uot": 1.4224
+    },
+    "9": {
+     "prev": 1.0578,
+     "next": 2.3292,
+     "union": 1.2464,
+     "ot_pairs": 1.5399,
+     "uot": 1.263
+    }
+   },
+   "pools_union_beats_ot_pairs": {
+    "12": true,
+    "13": true,
+    "8": true,
+    "9": true
+   }
+  },
+  "6": {
+   "held": "E8.0",
+   "composition": {
+    "counts": {
+     "Allantois": {
+      "prev": 57,
+      "held": 89,
+      "next": 119
+     },
+     "Cardiomyocytes": {
+      "prev": 21,
+      "held": 24,
+      "next": 100
+     },
+     "Caudal Mesoderm": {
+      "prev": 66,
+      "held": 102,
+      "next": 32
+     },
+     "Caudal epiblast": {
+      "prev": 152,
+      "held": 227,
+      "next": 36
+     },
+     "Caudal neurectoderm": {
+      "prev": 73,
+      "held": 103,
+      "next": 26
+     },
+     "Def. endoderm": {
+      "prev": 23,
+      "held": 9,
+      "next": 14
+     },
+     "Endothelium": {
+      "prev": 26,
+      "held": 43,
+      "next": 88
+     },
+     "Epiblast": {
+      "prev": 35,
+      "held": 0,
+      "next": 0
+     },
+     "ExE ectoderm": {
+      "prev": 577,
+      "held": 209,
+      "next": 71
+     },
+     "ExE endoderm": {
+      "prev": 480,
+      "held": 293,
+      "next": 119
+     },
+     "ExE mesoderm": {
+      "prev": 61,
+      "held": 132,
+      "next": 122
+     },
+     "Forebrain/Midbrain/Hindbrain": {
+      "prev": 43,
+      "held": 33,
+      "next": 418
+     },
+     "Gut": {
+      "prev": 85,
+      "held": 88,
+      "next": 88
+     },
+     "Intermediate mesoderm": {
+      "prev": 145,
+      "held": 294,
+      "next": 204
+     },
+     "Mesenchyme": {
+      "prev": 211,
+      "held": 199,
+      "next": 221
+     },
+     "Mixed mesoderm": {
+      "prev": 54,
+      "held": 1,
+      "next": 0
+     },
+     "NMP": {
+      "prev": 2,
+      "held": 23,
+      "next": 238
+     },
+     "Nascent mesoderm": {
+      "prev": 23,
+      "held": 0,
+      "next": 0
+     },
+     "Neural crest": {
+      "prev": 0,
+      "held": 0,
+      "next": 19
+     },
+     "Notochord": {
+      "prev": 29,
+      "held": 35,
+      "next": 5
+     },
+     "PGC": {
+      "prev": 19,
+      "held": 10,
+      "next": 5
+     },
+     "Paraxial mesoderm": {
+      "prev": 112,
+      "held": 190,
+      "next": 249
+     },
+     "Parietal endoderm": {
+      "prev": 4,
+      "held": 4,
+      "next": 1
+     },
+     "Pharyngeal mesoderm": {
+      "prev": 97,
+      "held": 197,
+      "next": 196
+     },
+     "Primitive Streak": {
+      "prev": 15,
+      "held": 0,
+      "next": 0
+     },
+     "Rostral neurectoderm": {
+      "prev": 393,
+      "held": 355,
+      "next": 80
+     },
+     "Somitic mesoderm": {
+      "prev": 58,
+      "held": 124,
+      "next": 158
+     },
+     "Spinal cord": {
+      "prev": 14,
+      "held": 41,
+      "next": 175
+     },
+     "Surface ectoderm": {
+      "prev": 102,
+      "held": 163,
+      "next": 214
+     },
+     "Visceral endoderm": {
+      "prev": 24,
+      "held": 12,
+      "next": 2
+     }
+    },
+    "TV_held_prev": 0.25845595912473623,
+    "TV_held_next": 0.35833333333333334,
+    "TV_held_mix5050": 0.20707964011996002,
+    "TV_prev_next": 0.5251148506053538,
+    "best_alpha_next": 0.51,
+    "TV_held_best_alpha_mix": 0.20675804731756087,
+    "held_mass_types_absent_at_prev": 0.009,
+    "held_mass_types_absent_at_next": 0.020666666666666667,
+    "next_mass_types_absent_at_prev(appearing)": 0.08600000000000001,
+    "prev_mass_types_absent_at_next(vanishing)": 0.0676441186271243,
+    "share_of_TV_prev_next_from_one_sided_types": 0.14026593569815102,
+    "held_transient_peak_excess": 0.08270265467066534,
+    "held_transient_trough_deficit": 0.008971787182050434,
+    "held_mass_in_types_between_neighbours": 0.555
+   },
+   "ed_identity": {
+    "ED_prev_held": 0.7574319710258107,
+    "ED_next_held": 0.9502875264219194,
+    "ED_prev_next": 2.2833393601482648,
+    "avg_endpoints": 0.853859748723865,
+    "convexity_bonus_quarter_ED_prev_next": 0.5708348400370662,
+    "identity_pred_union": 0.28302490868679886,
+    "full_weighted_mix_ED_U": 0.28283456695954595,
+    "recorded_union_ED_U": 0.2762891678402634,
+    "recorded_ot_pairs_ED_U": 0.34926424148207147,
+    "recorded_uot_ED_U": 0.2616058762576839,
+    "ot_pairs_gain_vs_avg_endpoints": 0.5045955072417936,
+    "union_gain_vs_avg_endpoints": 0.5775705808836016
+   },
+   "t_scan_ORACLE": {
+    "t": [
+     0.0,
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9,
+     1.0
+    ],
+    "ED_U": [
+     0.7541,
+     0.59269,
+     0.47356,
+     0.39286,
+     0.34914,
+     0.34315,
+     0.37686,
+     0.45291,
+     0.57407,
+     0.74227,
+     0.95698
+    ],
+    "best_t": 0.5,
+    "best_ED_U": 0.3431506150125229,
+    "at_t0.5": 0.3431506150125229
+   },
+   "alpha_scan_ORACLE": {
+    "alpha_next": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ],
+    "ED_U": [
+     0.75743,
+     0.65863,
+     0.57123,
+     0.49525,
+     0.43068,
+     0.37751,
+     0.33575,
+     0.30541,
+     0.28647,
+     0.27894,
+     0.28283,
+     0.29814,
+     0.32487,
+     0.36302,
+     0.41259,
+     0.4736,
+     0.54604,
+     0.62993,
+     0.72526,
+     0.83204,
+     0.95029
+    ],
+    "best_alpha": 0.45,
+    "best_ED_U": 0.2789445033216005,
+    "at_alpha0.5": 0.28283456695954595
+   },
+   "best_t_OT_vs_best_alpha_mix": {
+    "best_OT": 0.3431506150125229,
+    "best_mix": 0.2789445033216005,
+    "mix_better": true
+   },
+   "t_spread_scan_ORACLE": {
+    "ED_U": {
+     "uniform_h0.0": 0.3431506150125229,
+     "uniform_h0.1": 0.3368730628313603,
+     "uniform_h0.2": 0.32223677879852214,
+     "uniform_h0.3": 0.3037946105271316,
+     "uniform_h0.4": 0.28545259354478186,
+     "uniform_h0.5": 0.2703488892956282,
+     "two_point_h0.0": 0.3431506150125229,
+     "two_point_h0.1": 0.3266819698305892,
+     "two_point_h0.2": 0.2944534167666859,
+     "two_point_h0.3": 0.2673230599532861,
+     "two_point_h0.4": 0.26019898503518313,
+     "two_point_h0.5": 0.28449769239543937
+    },
+    "best": "two_point_h0.4",
+    "best_ED_U": 0.26019898503518313
+   },
+   "pool_oracle_scans": {
+    "16": {
+     "n": 702,
+     "best_t": 0.2,
+     "best_t_ED_U": 0.7721397312889202,
+     "t0.5_ED_U": 0.8967492067922317,
+     "best_alpha": 0.35,
+     "best_alpha_ED_U": 0.5193277749180302,
+     "alpha0.5_ED_U": 0.5659005502123975,
+     "best_t_OT_beats_best_mix": false
+    },
+    "33": {
+     "n": 782,
+     "best_t": 0.5,
+     "best_t_ED_U": 0.3869774594702455,
+     "t0.5_ED_U": 0.3869774594702455,
+     "best_alpha": 0.45,
+     "best_alpha_ED_U": 0.3621868968998096,
+     "alpha0.5_ED_U": 0.36901512043108653,
+     "best_t_OT_beats_best_mix": false
+    },
+    "34": {
+     "n": 779,
+     "best_t": 0.5,
+     "best_t_ED_U": 0.39499682041068357,
+     "t0.5_ED_U": 0.39499682041068357,
+     "best_alpha": 0.5,
+     "best_alpha_ED_U": 0.4227141944495916,
+     "alpha0.5_ED_U": 0.4227141944495916,
+     "best_t_OT_beats_best_mix": true
+    },
+    "35": {
+     "n": 737,
+     "best_t": 0.6,
+     "best_t_ED_U": 0.35649627662530453,
+     "t0.5_ED_U": 0.3626502483240988,
+     "best_alpha": 0.55,
+     "best_alpha_ED_U": 0.4134780968686271,
+     "alpha0.5_ED_U": 0.4166267066524612,
+     "best_t_OT_beats_best_mix": true
+    }
+   },
+   "stage_vote": {
+    "n_train_each": 1500,
+    "held_all": {
+     "mean_P_next": 0.34842222222222224,
+     "frac_prev_like(<0.2)": 0.2876666666666667,
+     "frac_next_like(>0.8)": 0.042666666666666665,
+     "frac_intermediate[0.2,0.8]": 0.6696666666666666,
+     "hist5": [
+      0.2877,
+      0.2827,
+      0.2233,
+      0.1357,
+      0.0707
+     ]
+    },
+    "acc_on_prev_rep0": 0.87,
+    "acc_on_next_rep0": 0.8993333333333333,
+    "union": {
+     "mean_P_next": 0.4758222222222223,
+     "frac_prev_like(<0.2)": 0.328,
+     "frac_next_like(>0.8)": 0.23933333333333334,
+     "frac_intermediate[0.2,0.8]": 0.43266666666666664,
+     "hist5": [
+      0.328,
+      0.0907,
+      0.1167,
+      0.1467,
+      0.318
+     ]
+    },
+    "ot_pairs": {
+     "mean_P_next": 0.36768888888888884,
+     "frac_prev_like(<0.2)": 0.2946666666666667,
+     "frac_next_like(>0.8)": 0.056,
+     "frac_intermediate[0.2,0.8]": 0.6493333333333333,
+     "hist5": [
+      0.2947,
+      0.2493,
+      0.1967,
+      0.1553,
+      0.104
+     ]
+    },
+    "uot": {
+     "mean_P_next": 0.4135111111111111,
+     "frac_prev_like(<0.2)": 0.23866666666666667,
+     "frac_next_like(>0.8)": 0.06466666666666666,
+     "frac_intermediate[0.2,0.8]": 0.6966666666666667,
+     "hist5": [
+      0.2387,
+      0.2213,
+      0.2093,
+      0.21,
+      0.1207
+     ]
+    },
+    "indep": {
+     "mean_P_next": 0.3489333333333334,
+     "frac_prev_like(<0.2)": 0.308,
+     "frac_next_like(>0.8)": 0.035333333333333335,
+     "frac_intermediate[0.2,0.8]": 0.6566666666666666,
+     "hist5": [
+      0.308,
+      0.264,
+      0.1947,
+      0.1653,
+      0.068
+     ]
+    },
+    "sb_half": {
+     "mean_P_next": 0.4244888888888889,
+     "frac_prev_like(<0.2)": 0.254,
+     "frac_next_like(>0.8)": 0.102,
+     "frac_intermediate[0.2,0.8]": 0.644,
+     "hist5": [
+      0.254,
+      0.212,
+      0.186,
+      0.1827,
+      0.1653
+     ]
+    },
+    "held_per_pool_mean_P_next": {
+     "16": 0.48148148148148145,
+     "33": 0.3120204603580563,
+     "34": 0.3115104835258879,
+     "35": 0.29932157394843967
+    },
+    "held_per_pool_n": {
+     "16": 702,
+     "33": 782,
+     "34": 779,
+     "35": 737
+    },
+    "held_per_type_mean_P_next": {
+     "Allantois": 0.6464419475655431,
+     "Caudal Mesoderm": 0.32483660130718955,
+     "Caudal epiblast": 0.2784140969162996,
+     "Caudal neurectoderm": 0.21747572815533975,
+     "ExE ectoderm": 0.14545454545454542,
+     "ExE endoderm": 0.12718998862343572,
+     "ExE mesoderm": 0.42525252525252527,
+     "Gut": 0.49166666666666664,
+     "Intermediate mesoderm": 0.4482993197278911,
+     "Mesenchyme": 0.4080402010050251,
+     "Paraxial mesoderm": 0.41508771929824567,
+     "Pharyngeal mesoderm": 0.4297800338409475,
+     "Rostral neurectoderm": 0.2388732394366197,
+     "Somitic mesoderm": 0.3618279569892473,
+     "Surface ectoderm": 0.47116564417177914
+    }
+   },
+   "off_manifold": {
+    "n_target": 1500,
+    "n_reference_held_others": 1500,
+    "thr_q95": 5.300969571786808,
+    "reference_median_nn": 3.5066366353668315,
+    "methods": {
+     "prev": {
+      "frac_off_manifold": 0.10066666666666667,
+      "median_nn_ratio": 1.1175765692482815,
+      "frac_target_uncovered": 0.10933333333333334
+     },
+     "next": {
+      "frac_off_manifold": 0.20333333333333334,
+      "median_nn_ratio": 1.3013258973753183,
+      "frac_target_uncovered": 0.18
+     },
+     "union": {
+      "frac_off_manifold": 0.15666666666666668,
+      "median_nn_ratio": 1.227560378801482,
+      "frac_target_uncovered": 0.10866666666666666
+     },
+     "indep": {
+      "frac_off_manifold": 0.636,
+      "median_nn_ratio": 1.727031537297084,
+      "frac_target_uncovered": 0.18133333333333335
+     },
+     "ot_pairs": {
+      "frac_off_manifold": 0.344,
+      "median_nn_ratio": 1.1949110304564445,
+      "frac_target_uncovered": 0.084
+     },
+     "sb_half": {
+      "frac_off_manifold": 0.9853333333333333,
+      "median_nn_ratio": 2.215900224098435,
+      "frac_target_uncovered": 0.9733333333333334
+     },
+     "uot": {
+      "frac_off_manifold": 0.09066666666666667,
+      "median_nn_ratio": 1.0636791772940135,
+      "frac_target_uncovered": 0.07333333333333333
+     }
+    },
+    "reference_frac_target_uncovered": 0.05
+   },
+   "pair_types": {
+    "plan_mass_same_type": 0.2893239110592422,
+    "independent_same_type": 0.038332888888888896,
+    "frac_pairs_same_type_drawn": 0.2906666666666667,
+    "off_manifold_same_type_midpoints": 0.02522935779816514,
+    "off_manifold_cross_type_midpoints": 0.4830827067669173,
+    "top_flows(>1%)": {
+     "Rostral neurectoderm -> Forebrain/Midbrain/Hindbrain": 0.0714,
+     "Mesenchyme -> Mesenchyme": 0.0543,
+     "ExE endoderm -> ExE endoderm": 0.042,
+     "Caudal epiblast -> NMP": 0.0356,
+     "ExE ectoderm -> Surface ectoderm": 0.0295,
+     "Paraxial mesoderm -> Paraxial mesoderm": 0.0288,
+     "ExE ectoderm -> Forebrain/Midbrain/Hindbrain": 0.0259,
+     "ExE ectoderm -> ExE ectoderm": 0.0253,
+     "Rostral neurectoderm -> Spinal cord": 0.0213,
+     "ExE ectoderm -> Pharyngeal mesoderm": 0.0197,
+     "ExE ectoderm -> Paraxial mesoderm": 0.019,
+     "ExE endoderm -> Pharyngeal mesoderm": 0.0187
+    }
+   },
+   "pools_confirm": {
+    "16": {
+     "prev": 0.81,
+     "next": 1.4638,
+     "union": 0.5777,
+     "ot_pairs": 0.8895,
+     "uot": 0.6801
+    },
+    "33": {
+     "prev": 0.8142,
+     "next": 1.0658,
+     "union": 0.3615,
+     "ot_pairs": 0.3946,
+     "uot": 0.3349
+    },
+    "34": {
+     "prev": 0.9747,
+     "next": 1.0128,
+     "union": 0.4107,
+     "ot_pairs": 0.4055,
+     "uot": 0.3642
+    },
+    "35": {
+     "prev": 1.0758,
+     "next": 0.8995,
+     "union": 0.4023,
+     "ot_pairs": 0.3679,
+     "uot": 0.3441
+    }
+   },
+   "pools_union_beats_ot_pairs": {
+    "16": true,
+    "33": true,
+    "34": false,
+    "35": false
+   }
+  },
+  "7": {
+   "held": "E8.25",
+   "composition": {
+    "counts": {
+     "Allantois": {
+      "prev": 89,
+      "held": 119,
+      "next": 114
+     },
+     "Cardiomyocytes": {
+      "prev": 24,
+      "held": 100,
+      "next": 120
+     },
+     "Caudal Mesoderm": {
+      "prev": 102,
+      "held": 32,
+      "next": 15
+     },
+     "Caudal epiblast": {
+      "prev": 227,
+      "held": 36,
+      "next": 0
+     },
+     "Caudal neurectoderm": {
+      "prev": 103,
+      "held": 26,
+      "next": 0
+     },
+     "Def. endoderm": {
+      "prev": 9,
+      "held": 14,
+      "next": 15
+     },
+     "Endothelium": {
+      "prev": 43,
+      "held": 88,
+      "next": 94
+     },
+     "ExE ectoderm": {
+      "prev": 209,
+      "held": 71,
+      "next": 0
+     },
+     "ExE endoderm": {
+      "prev": 293,
+      "held": 119,
+      "next": 120
+     },
+     "ExE mesoderm": {
+      "prev": 132,
+      "held": 122,
+      "next": 185
+     },
+     "Forebrain/Midbrain/Hindbrain": {
+      "prev": 33,
+      "held": 418,
+      "next": 562
+     },
+     "Gut": {
+      "prev": 88,
+      "held": 88,
+      "next": 113
+     },
+     "Intermediate mesoderm": {
+      "prev": 294,
+      "held": 204,
+      "next": 87
+     },
+     "Mesenchyme": {
+      "prev": 199,
+      "held": 221,
+      "next": 217
+     },
+     "Mixed mesoderm": {
+      "prev": 1,
+      "held": 0,
+      "next": 0
+     },
+     "NMP": {
+      "prev": 23,
+      "held": 238,
+      "next": 247
+     },
+     "Neural crest": {
+      "prev": 0,
+      "held": 19,
+      "next": 138
+     },
+     "Notochord": {
+      "prev": 35,
+      "held": 5,
+      "next": 1
+     },
+     "PGC": {
+      "prev": 10,
+      "held": 5,
+      "next": 3
+     },
+     "Paraxial mesoderm": {
+      "prev": 190,
+      "held": 249,
+      "next": 264
+     },
+     "Parietal endoderm": {
+      "prev": 4,
+      "held": 1,
+      "next": 0
+     },
+     "Pharyngeal mesoderm": {
+      "prev": 197,
+      "held": 196,
+      "next": 157
+     },
+     "Rostral neurectoderm": {
+      "prev": 355,
+      "held": 80,
+      "next": 2
+     },
+     "Somitic mesoderm": {
+      "prev": 124,
+      "held": 158,
+      "next": 119
+     },
+     "Spinal cord": {
+      "prev": 41,
+      "held": 175,
+      "next": 188
+     },
+     "Surface ectoderm": {
+      "prev": 163,
+      "held": 214,
+      "next": 238
+     },
+     "Visceral endoderm": {
+      "prev": 12,
+      "held": 2,
+      "next": 1
+     }
+    },
+    "TV_held_prev": 0.3583333333333333,
+    "TV_held_next": 0.14666666666666664,
+    "TV_held_mix5050": 0.15616666666666668,
+    "TV_prev_next": 0.487,
+    "best_alpha_next": 0.78,
+    "TV_held_best_alpha_mix": 0.08495333333333335,
+    "held_mass_types_absent_at_prev": 0.011333333333333332,
+    "held_mass_types_absent_at_next": 0.07533333333333334,
+    "next_mass_types_absent_at_prev(appearing)": 0.051,
+    "prev_mass_types_absent_at_next(vanishing)": 0.31866666666666665,
+    "share_of_TV_prev_next_from_one_sided_types": 0.3723477070499658,
+    "held_transient_peak_excess": 0.014333333333333344,
+    "held_transient_trough_deficit": 0.0036666666666666653,
+    "held_mass_in_types_between_neighbours": 0.7536666666666666
+   },
+   "ed_identity": {
+    "ED_prev_held": 0.9775189051821774,
+    "ED_next_held": 0.6415971679369322,
+    "ED_prev_next": 2.426976155695749,
+    "avg_endpoints": 0.8095580365595548,
+    "convexity_bonus_quarter_ED_prev_next": 0.6067440389239372,
+    "identity_pred_union": 0.20281399763561758,
+    "full_weighted_mix_ED_U": 0.20261168218416023,
+    "recorded_union_ED_U": 0.2075129104638768,
+    "recorded_ot_pairs_ED_U": 0.22584811266804591,
+    "recorded_uot_ED_U": 0.2042857828239312,
+    "ot_pairs_gain_vs_avg_endpoints": 0.5837099238915089,
+    "union_gain_vs_avg_endpoints": 0.6020451260956781
+   },
+   "t_scan_ORACLE": {
+    "t": [
+     0.0,
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9,
+     1.0
+    ],
+    "ED_U": [
+     0.96964,
+     0.73239,
+     0.53608,
+     0.38288,
+     0.27474,
+     0.21344,
+     0.20023,
+     0.23579,
+     0.3205,
+     0.45478,
+     0.63924
+    ],
+    "best_t": 0.6,
+    "best_ED_U": 0.20022510060004942,
+    "at_t0.5": 0.21344021137465674
+   },
+   "alpha_scan_ORACLE": {
+    "alpha_next": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ],
+    "ED_U": [
+     0.97752,
+     0.84538,
+     0.7254,
+     0.61756,
+     0.52187,
+     0.43831,
+     0.3669,
+     0.30763,
+     0.26049,
+     0.22548,
+     0.20261,
+     0.19188,
+     0.19328,
+     0.20681,
+     0.23249,
+     0.27031,
+     0.32026,
+     0.38237,
+     0.45662,
+     0.54303,
+     0.6416
+    ],
+    "best_alpha": 0.55,
+    "best_ED_U": 0.19187672827727967,
+    "at_alpha0.5": 0.20261168218416023
+   },
+   "best_t_OT_vs_best_alpha_mix": {
+    "best_OT": 0.20022510060004942,
+    "best_mix": 0.19187672827727967,
+    "mix_better": true
+   },
+   "t_spread_scan_ORACLE": {
+    "ED_U": {
+     "uniform_h0.0": 0.21344021137465674,
+     "uniform_h0.1": 0.20998779870718978,
+     "uniform_h0.2": 0.2019270724275651,
+     "uniform_h0.3": 0.19118557633201938,
+     "uniform_h0.4": 0.17991823792095119,
+     "uniform_h0.5": 0.1702166519016277,
+     "two_point_h0.0": 0.21344021137465674,
+     "two_point_h0.1": 0.20421270251500326,
+     "two_point_h0.2": 0.1850869261960065,
+     "two_point_h0.3": 0.16788619357625953,
+     "two_point_h0.4": 0.16438161828206907,
+     "two_point_h0.5": 0.18494257729496866
+    },
+    "best": "two_point_h0.4",
+    "best_ED_U": 0.16438161828206907
+   },
+   "pool_oracle_scans": {
+    "24": {
+     "n": 1069,
+     "best_t": 0.6,
+     "best_t_ED_U": 0.36906726136569407,
+     "t0.5_ED_U": 0.4121376621838759,
+     "best_alpha": 0.65,
+     "best_alpha_ED_U": 0.41560860631401003,
+     "alpha0.5_ED_U": 0.45478052286369436,
+     "best_t_OT_beats_best_mix": true
+    },
+    "25": {
+     "n": 1172,
+     "best_t": 0.6,
+     "best_t_ED_U": 0.3285216351641355,
+     "t0.5_ED_U": 0.37123230508102506,
+     "best_alpha": 0.65,
+     "best_alpha_ED_U": 0.37071764424158776,
+     "alpha0.5_ED_U": 0.4089107036991931,
+     "best_t_OT_beats_best_mix": true
+    },
+    "28": {
+     "n": 759,
+     "best_t": 0.3,
+     "best_t_ED_U": 0.33188345868760943,
+     "t0.5_ED_U": 0.3878252863265459,
+     "best_alpha": 0.35,
+     "best_alpha_ED_U": 0.22366678126706377,
+     "alpha0.5_ED_U": 0.2608478066848197,
+     "best_t_OT_beats_best_mix": false
+    }
+   },
+   "stage_vote": {
+    "n_train_each": 1500,
+    "held_all": {
+     "mean_P_next": 0.4044888888888889,
+     "frac_prev_like(<0.2)": 0.37433333333333335,
+     "frac_next_like(>0.8)": 0.18166666666666667,
+     "frac_intermediate[0.2,0.8]": 0.444,
+     "hist5": [
+      0.3743,
+      0.134,
+      0.1333,
+      0.1303,
+      0.228
+     ]
+    },
+    "acc_on_prev_rep0": 0.9913333333333333,
+    "acc_on_next_rep0": 0.9866666666666667,
+    "union": {
+     "mean_P_next": 0.4943555555555556,
+     "frac_prev_like(<0.2)": 0.48133333333333334,
+     "frac_next_like(>0.8)": 0.4633333333333333,
+     "frac_intermediate[0.2,0.8]": 0.05533333333333333,
+     "hist5": [
+      0.4813,
+      0.0107,
+      0.0153,
+      0.0213,
+      0.4713
+     ]
+    },
+    "ot_pairs": {
+     "mean_P_next": 0.3883555555555555,
+     "frac_prev_like(<0.2)": 0.3273333333333333,
+     "frac_next_like(>0.8)": 0.12666666666666668,
+     "frac_intermediate[0.2,0.8]": 0.546,
+     "hist5": [
+      0.3273,
+      0.2113,
+      0.1573,
+      0.1333,
+      0.1707
+     ]
+    },
+    "uot": {
+     "mean_P_next": 0.3821333333333334,
+     "frac_prev_like(<0.2)": 0.33466666666666667,
+     "frac_next_like(>0.8)": 0.11866666666666667,
+     "frac_intermediate[0.2,0.8]": 0.5466666666666666,
+     "hist5": [
+      0.3347,
+      0.204,
+      0.162,
+      0.1353,
+      0.164
+     ]
+    },
+    "indep": {
+     "mean_P_next": 0.3773777777777778,
+     "frac_prev_like(<0.2)": 0.32866666666666666,
+     "frac_next_like(>0.8)": 0.10333333333333333,
+     "frac_intermediate[0.2,0.8]": 0.568,
+     "hist5": [
+      0.3287,
+      0.22,
+      0.158,
+      0.142,
+      0.1513
+     ]
+    },
+    "sb_half": {
+     "mean_P_next": 0.43786666666666674,
+     "frac_prev_like(<0.2)": 0.32266666666666666,
+     "frac_next_like(>0.8)": 0.204,
+     "frac_intermediate[0.2,0.8]": 0.47333333333333333,
+     "hist5": [
+      0.3227,
+      0.1573,
+      0.1453,
+      0.1273,
+      0.2473
+     ]
+    },
+    "held_per_pool_mean_P_next": {
+     "24": 0.4601808543810415,
+     "25": 0.4584755403868032,
+     "28": 0.2426877470355731
+    },
+    "held_per_pool_n": {
+     "24": 1069,
+     "25": 1172,
+     "28": 759
+    },
+    "held_per_type_mean_P_next": {
+     "Allantois": 0.2991596638655462,
+     "Cardiomyocytes": 0.6466666666666666,
+     "Endothelium": 0.496969696969697,
+     "ExE ectoderm": 0.0,
+     "ExE endoderm": 0.36190476190476206,
+     "ExE mesoderm": 0.46174863387978143,
+     "Forebrain/Midbrain/Hindbrain": 0.6641148325358852,
+     "Gut": 0.3522727272727273,
+     "Intermediate mesoderm": 0.23071895424836603,
+     "Mesenchyme": 0.33966817496229273,
+     "NMP": 0.3509803921568627,
+     "Paraxial mesoderm": 0.5515394912985274,
+     "Pharyngeal mesoderm": 0.2602040816326531,
+     "Rostral neurectoderm": 0.024166666666666663,
+     "Somitic mesoderm": 0.339662447257384,
+     "Spinal cord": 0.5344761904761904,
+     "Surface ectoderm": 0.4015576323987539
+    }
+   },
+   "off_manifold": {
+    "n_target": 1500,
+    "n_reference_held_others": 1500,
+    "thr_q95": 5.117751466317566,
+    "reference_median_nn": 3.559959579543822,
+    "methods": {
+     "prev": {
+      "frac_off_manifold": 0.16666666666666666,
+      "median_nn_ratio": 1.1878381474411057,
+      "frac_target_uncovered": 0.2613333333333333
+     },
+     "next": {
+      "frac_off_manifold": 0.39466666666666667,
+      "median_nn_ratio": 1.3754746705187229,
+      "frac_target_uncovered": 0.4573333333333333
+     },
+     "union": {
+      "frac_off_manifold": 0.28733333333333333,
+      "median_nn_ratio": 1.2783085246243402,
+      "frac_target_uncovered": 0.20733333333333334
+     },
+     "indep": {
+      "frac_off_manifold": 0.6053333333333333,
+      "median_nn_ratio": 1.5328750608265416,
+      "frac_target_uncovered": 0.2673333333333333
+     },
+     "ot_pairs": {
+      "frac_off_manifold": 0.21666666666666667,
+      "median_nn_ratio": 1.0934611926946174,
+      "frac_target_uncovered": 0.10533333333333333
+     },
+     "sb_half": {
+      "frac_off_manifold": 0.962,
+      "median_nn_ratio": 1.8587561310976588,
+      "frac_target_uncovered": 0.8973333333333333
+     },
+     "uot": {
+      "frac_off_manifold": 0.12333333333333334,
+      "median_nn_ratio": 1.0435543767151543,
+      "frac_target_uncovered": 0.09466666666666666
+     }
+    },
+    "reference_frac_target_uncovered": 0.05
+   },
+   "pair_types": {
+    "plan_mass_same_type": 0.3251795446437845,
+    "independent_same_type": 0.03604577777777778,
+    "frac_pairs_same_type_drawn": 0.3586666666666667,
+    "off_manifold_same_type_midpoints": 0.03717472118959108,
+    "off_manifold_cross_type_midpoints": 0.28586278586278585,
+    "top_flows(>1%)": {
+     "Rostral neurectoderm -> Forebrain/Midbrain/Hindbrain": 0.0939,
+     "Mesenchyme -> Mesenchyme": 0.0547,
+     "Paraxial mesoderm -> Paraxial mesoderm": 0.0452,
+     "Caudal epiblast -> NMP": 0.0364,
+     "ExE endoderm -> ExE endoderm": 0.0353,
+     "Caudal Mesoderm -> NMP": 0.0271,
+     "Intermediate mesoderm -> ExE mesoderm": 0.0271,
+     "ExE ectoderm -> Surface ectoderm": 0.0252,
+     "Pharyngeal mesoderm -> Pharyngeal mesoderm": 0.0242,
+     "ExE mesoderm -> ExE mesoderm": 0.0233,
+     "Intermediate mesoderm -> Somitic mesoderm": 0.0231,
+     "Surface ectoderm -> Surface ectoderm": 0.0228
+    }
+   },
+   "pools_confirm": {
+    "24": {
+     "prev": 1.3743,
+     "next": 0.7492,
+     "union": 0.4647,
+     "ot_pairs": 0.4379,
+     "uot": 0.4081
+    },
+    "25": {
+     "prev": 1.3251,
+     "next": 0.7066,
+     "union": 0.4191,
+     "ot_pairs": 0.3928,
+     "uot": 0.3661
+    },
+    "28": {
+     "prev": 0.5618,
+     "next": 1.1738,
+     "union": 0.2534,
+     "ot_pairs": 0.3767,
+     "uot": 0.3668
+    }
+   },
+   "pools_union_beats_ot_pairs": {
+    "24": false,
+    "25": false,
+    "28": true
+   }
+  }
+ },
+ "seconds": 1664.5
+}

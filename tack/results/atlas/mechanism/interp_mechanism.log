@@ -1,0 +1,7 @@
+k=1 done [187s] {'bonus': 0.502, 'pred': 1.457, 'union': 1.476, 'best_t': np.float64(1.0), 'bestOT': 1.039, 'best_a': np.float64(0.95), 'bestmix': 1.043}
+k=2 done [533s] {'bonus': 0.438, 'pred': 0.342, 'union': 0.343, 'best_t': np.float64(0.6), 'bestOT': 0.342, 'best_a': np.float64(0.6), 'bestmix': 0.316}
+k=3 done [904s] {'bonus': 0.519, 'pred': 0.625, 'union': 0.644, 'best_t': np.float64(0.1), 'bestOT': 0.37, 'best_a': np.float64(0.15), 'bestmix': 0.366}
+k=4 done [1176s] {'bonus': 0.899, 'pred': 0.361, 'union': 0.357, 'best_t': np.float64(0.7), 'bestOT': 0.34, 'best_a': np.float64(0.7), 'bestmix': 0.245}
+k=5 done [1340s] {'bonus': 0.454, 'pred': 0.243, 'union': 0.248, 'best_t': np.float64(0.3), 'bestOT': 0.353, 'best_a': np.float64(0.4), 'bestmix': 0.227}
+k=6 done [1525s] {'bonus': 0.571, 'pred': 0.283, 'union': 0.276, 'best_t': np.float64(0.5), 'bestOT': 0.343, 'best_a': np.float64(0.45), 'bestmix': 0.279}
+k=7 done [1665s] {'bonus': 0.607, 'pred': 0.203, 'union': 0.208, 'best_t': np.float64(0.6), 'bestOT': 0.2, 'best_a': np.float64(0.55), 'bestmix': 0.192}

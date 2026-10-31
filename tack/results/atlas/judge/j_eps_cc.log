@@ -1,0 +1,45 @@
+k 1 {'ot_pairs_eps0.01': 1.552, 'ot_pairs_eps0.02': 1.57, 'ot_pairs_eps0.1': 1.65, 'ot_pairs_eps0.2': 1.686, 'uot_cc96': 1.743, 'uot_beta0': 1.718} | frozen {'prev': 2.871, 'next': 1.048, 'union': 1.476, 'ot_pairs': 1.732, 'uot': 1.96} [9s]
+k 2 {'ot_pairs_eps0.01': 0.343, 'ot_pairs_eps0.02': 0.346, 'ot_pairs_eps0.1': 0.364, 'ot_pairs_eps0.2': 0.385, 'uot_cc96': 0.384, 'uot_beta0': 0.355} | frozen {'prev': 0.997, 'next': 0.563, 'union': 0.343, 'ot_pairs': 0.352, 'uot': 0.348} [10s]
+k 3 {'ot_pairs_eps0.01': 0.676, 'ot_pairs_eps0.02': 0.685, 'ot_pairs_eps0.1': 0.694, 'ot_pairs_eps0.2': 0.718, 'uot_cc96': 0.546, 'uot_beta0': 0.54} | frozen {'prev': 0.411, 'next': 1.878, 'union': 0.644, 'ot_pairs': 0.725, 'uot': 0.547} [6s]
+k 4 {'ot_pairs_eps0.01': 0.479, 'ot_pairs_eps0.02': 0.499, 'ot_pairs_eps0.1': 0.559, 'ot_pairs_eps0.2': 0.585, 'uot_cc96': 0.673, 'uot_beta0': 0.631} | frozen {'prev': 1.911, 'next': 0.61, 'union': 0.357, 'ot_pairs': 0.519, 'uot': 0.714} [8s]
+k 5 {'ot_pairs_eps0.01': 0.351, 'ot_pairs_eps0.02': 0.349, 'ot_pairs_eps0.1': 0.393, 'ot_pairs_eps0.2': 0.429, 'uot_cc96': 0.254, 'uot_beta0': 0.259} | frozen {'prev': 0.527, 'next': 0.868, 'union': 0.248, 'ot_pairs': 0.403, 'uot': 0.269} [6s]
+k 6 {'ot_pairs_eps0.01': 0.347, 'ot_pairs_eps0.02': 0.347, 'ot_pairs_eps0.1': 0.374, 'ot_pairs_eps0.2': 0.404, 'uot_cc96': 0.268, 'uot_beta0': 0.28} | frozen {'prev': 0.757, 'next': 0.95, 'union': 0.276, 'ot_pairs': 0.349, 'uot': 0.262} [6s]
+k 7 {'ot_pairs_eps0.01': 0.219, 'ot_pairs_eps0.02': 0.223, 'ot_pairs_eps0.1': 0.249, 'ot_pairs_eps0.2': 0.287, 'uot_cc96': 0.243, 'uot_beta0': 0.239} | frozen {'prev': 0.978, 'next': 0.642, 'union': 0.208, 'ot_pairs': 0.226, 'uot': 0.204} [7s]
+{
+"ot_pairs_eps0.01": {
+"lt_union": 0,
+"beats_prev_next_union": 0,
+"mean": 0.5668131633862723,
+"mean_union": 0.5073003402539916
+},
+"ot_pairs_eps0.02": {
+"lt_union": 0,
+"beats_prev_next_union": 0,
+"mean": 0.5742272473032217,
+"mean_union": 0.5073003402539916
+},
+"ot_pairs_eps0.1": {
+"lt_union": 0,
+"beats_prev_next_union": 0,
+"mean": 0.6118533828508598,
+"mean_union": 0.5073003402539916
+},
+"ot_pairs_eps0.2": {
+"lt_union": 0,
+"beats_prev_next_union": 0,
+"mean": 0.6418652079250328,
+"mean_union": 0.5073003402539916
+},
+"uot_cc96": {
+"lt_union": 2,
+"beats_prev_next_union": 1,
+"mean": 0.5873537604968151,
+"mean_union": 0.5073003402539916
+},
+"uot_beta0": {
+"lt_union": 1,
+"beats_prev_next_union": 0,
+"mean": 0.5745137462969764,
+"mean_union": 0.5073003402539916
+}
+}

@@ -1,0 +1,6 @@
+1 uot_rw grid done 2s
+1 tilt_rw grid done 2s
+1 mk_km grid done 2s
+1 contract grid done 2s
+1 ms_smooth grid done 2s
+done 1 2.0 {'calls': 77, 'log_path': 0, 'unconverged': 0, 'max_marg_err': 7.751923547516526e-10}

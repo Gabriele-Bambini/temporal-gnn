@@ -1,0 +1,20 @@
+2 sd_fixed done
+2 energy done
+3 sd_fixed done
+3 energy done
+4 sd_fixed done
+4 energy done
+5 sd_fixed done
+5 energy done
+sd_fixed [(0, False, True, True, False), (1, False, True, True, False), (2, False, True, True, False), (3, False, True, True, False), (4, False, True, True, False)]
+   seed 0 vel beats persist at {'vel_ss': ['2', '3', '4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['4', '5'], 'ot_vel_dyn': ['5']}
+   seed 1 vel beats persist at {'vel_ss': ['2', '3', '4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['4', '5'], 'ot_vel_dyn': ['5']}
+   seed 2 vel beats persist at {'vel_ss': ['2', '3', '4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['4', '5'], 'ot_vel_dyn': ['5']}
+   seed 3 vel beats persist at {'vel_ss': ['2', '3', '4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['4', '5'], 'ot_vel_dyn': ['5']}
+   seed 4 vel beats persist at {'vel_ss': ['2', '3', '4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['4', '5'], 'ot_vel_dyn': ['5']}
+energy [(0, False, True, False, False), (1, False, True, False, False), (2, False, True, False, False), (3, False, True, False, False), (4, False, True, False, False)]
+   seed 0 vel beats persist at {'vel_ss': ['4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['5'], 'ot_vel_dyn': []}
+   seed 1 vel beats persist at {'vel_ss': ['4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['5'], 'ot_vel_dyn': []}
+   seed 2 vel beats persist at {'vel_ss': ['4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['5'], 'ot_vel_dyn': []}
+   seed 3 vel beats persist at {'vel_ss': ['4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['5'], 'ot_vel_dyn': []}
+   seed 4 vel beats persist at {'vel_ss': ['4'], 'vel_dyn': ['2', '4'], 'ot_vel_ss': ['5'], 'ot_vel_dyn': []}

@@ -1,0 +1,56 @@
+  origin 1 s->s+1 sinkhorn_eps0.05_seed0 0.8s marg {'row_err': 1.439520633028657e-06, 'col_err': 3.774758283725532e-15}
+  origin 1 s->s+1 sinkhorn_eps0.05_seed1 0.0s marg {'row_err': 1.439520633028657e-06, 'col_err': 3.774758283725532e-15}
+  origin 1 s->s+1 sinkhorn_eps0.05_seed2 0.0s marg {'row_err': 1.439520633028657e-06, 'col_err': 3.774758283725532e-15}
+  origin 1 s->s+1 sinkhorn_eps0.01_seed0 0.8s marg {'row_err': 9.449186257448616e-06, 'col_err': 1.1213252548714081e-14}
+  origin 1 s->s+1 sinkhorn_eps0.2_seed0 0.8s marg {'row_err': 4.943615472541296e-08, 'col_err': 1.7763568394002505e-15}
+  origin 1 s-1->s sinkhorn_eps0.05_seed0 0.5s marg {'row_err': 1.419169085137284e-06, 'col_err': 1.887379141862766e-15}
+  origin 1 s-1->s sinkhorn_eps0.05_seed1 0.0s marg {'row_err': 1.419169085137284e-06, 'col_err': 1.887379141862766e-15}
+  origin 1 s-1->s sinkhorn_eps0.05_seed2 0.0s marg {'row_err': 1.419169085137284e-06, 'col_err': 1.887379141862766e-15}
+  origin 1 s-1->s sinkhorn_eps0.01_seed0 0.5s marg {'row_err': 8.999896839556598e-06, 'col_err': 1.787459069646502e-14}
+  origin 1 s-1->s sinkhorn_eps0.2_seed0 0.5s marg {'row_err': 1.5290072985507663e-08, 'col_err': 1.1102230246251565e-15}
+origin 1 done 5.3s
+  origin 2 s->s+1 sinkhorn_eps0.05_seed0 2.8s marg {'row_err': 1.1379127971000713e-06, 'col_err': 6.217248937900877e-15}
+  origin 2 s->s+1 sinkhorn_eps0.05_seed1 0.9s marg {'row_err': 1.167545351510313e-06, 'col_err': 5.995204332975845e-15}
+  origin 2 s->s+1 sinkhorn_eps0.05_seed2 0.9s marg {'row_err': 1.469760005701204e-06, 'col_err': 8.659739592076221e-15}
+  origin 2 s->s+1 sinkhorn_eps0.01_seed0 5.8s marg {'row_err': 9.44205809361165e-06, 'col_err': 4.7406523151494184e-14}
+  origin 2 s->s+1 sinkhorn_eps0.2_seed0 1.7s marg {'row_err': 1.3426358336232624e-07, 'col_err': 3.4416913763379853e-15}
+  origin 2 s-1->s sinkhorn_eps0.05_seed0 0.8s marg {'row_err': 1.6313299706638418e-06, 'col_err': 6.994405055138486e-15}
+  origin 2 s-1->s sinkhorn_eps0.05_seed1 0.0s marg {'row_err': 1.6313299706638418e-06, 'col_err': 6.994405055138486e-15}
+  origin 2 s-1->s sinkhorn_eps0.05_seed2 0.0s marg {'row_err': 1.6313299706638418e-06, 'col_err': 6.994405055138486e-15}
+  origin 2 s-1->s sinkhorn_eps0.01_seed0 0.8s marg {'row_err': 9.428336828265493e-06, 'col_err': 5.784261958297066e-14}
+  origin 2 s-1->s sinkhorn_eps0.2_seed0 0.8s marg {'row_err': 1.0110223014336839e-07, 'col_err': 3.3306690738754696e-15}
+origin 2 done 17.6s
+  origin 3 s->s+1 sinkhorn_eps0.05_seed0 13.5s marg {'row_err': 1.636309778452194e-06, 'col_err': 6.439293542825908e-15}
+  origin 3 s->s+1 sinkhorn_eps0.05_seed1 8.8s marg {'row_err': 1.843100268184017e-06, 'col_err': 6.8833827526759706e-15}
+  origin 3 s->s+1 sinkhorn_eps0.05_seed2 8.5s marg {'row_err': 1.8566225090665966e-06, 'col_err': 6.439293542825908e-15}
+  origin 3 s->s+1 sinkhorn_eps0.01_seed0 130.5s marg {'row_err': 0.0008046379769243162, 'col_err': 1.2878587085651816e-14}
+  origin 3 s->s+1 sinkhorn_eps0.2_seed0 7.6s marg {'row_err': 1.5808610442924476e-07, 'col_err': 6.8833827526759706e-15}
+  origin 3 s-1->s sinkhorn_eps0.05_seed0 2.5s marg {'row_err': 1.2933930578773456e-06, 'col_err': 6.439293542825908e-15}
+  origin 3 s-1->s sinkhorn_eps0.05_seed1 0.8s marg {'row_err': 1.2821172808985537e-06, 'col_err': 5.773159728050814e-15}
+  origin 3 s-1->s sinkhorn_eps0.05_seed2 0.8s marg {'row_err': 1.2959890938191165e-06, 'col_err': 6.217248937900877e-15}
+  origin 3 s-1->s sinkhorn_eps0.01_seed0 5.9s marg {'row_err': 9.102459264553886e-06, 'col_err': 3.3084646133829665e-14}
+  origin 3 s-1->s sinkhorn_eps0.2_seed0 2.2s marg {'row_err': 1.0357936530702716e-07, 'col_err': 3.774758283725532e-15}
+origin 3 done 189.9s
+  origin 4 s->s+1 sinkhorn_eps0.05_seed0 14.0s marg {'row_err': 1.7698766147100642e-06, 'col_err': 8.43769498715119e-15}
+  origin 4 s->s+1 sinkhorn_eps0.05_seed1 8.3s marg {'row_err': 1.7324314032229893e-06, 'col_err': 7.549516567451064e-15}
+  origin 4 s->s+1 sinkhorn_eps0.05_seed2 8.9s marg {'row_err': 1.844451487542642e-06, 'col_err': 8.43769498715119e-15}
+  origin 4 s->s+1 sinkhorn_eps0.01_seed0 93.8s marg {'row_err': 0.0005097511030121016, 'col_err': 2.353672812205332e-14}
+  origin 4 s->s+1 sinkhorn_eps0.2_seed0 6.9s marg {'row_err': 3.291461906362869e-07, 'col_err': 7.216449660063518e-15}
+  origin 4 s-1->s sinkhorn_eps0.05_seed0 8.9s marg {'row_err': 1.5748845009211365e-06, 'col_err': 6.217248937900877e-15}
+  origin 4 s-1->s sinkhorn_eps0.05_seed1 4.1s marg {'row_err': 1.6802770284041202e-06, 'col_err': 7.327471962526033e-15}
+  origin 4 s-1->s sinkhorn_eps0.05_seed2 4.4s marg {'row_err': 1.50365155271448e-06, 'col_err': 7.327471962526033e-15}
+  origin 4 s-1->s sinkhorn_eps0.01_seed0 101.3s marg {'row_err': 0.0005451586641770367, 'col_err': 1.6431300764452317e-14}
+  origin 4 s-1->s sinkhorn_eps0.2_seed0 6.0s marg {'row_err': 2.1420265972071917e-07, 'col_err': 5.995204332975845e-15}
+origin 4 done 269.4s
+  origin 5 s->s+1 sinkhorn_eps0.05_seed0 18.7s marg {'row_err': 1.8493855257206704e-06, 'col_err': 6.661338147750939e-15}
+  origin 5 s->s+1 sinkhorn_eps0.05_seed1 14.5s marg {'row_err': 1.8718475119916533e-06, 'col_err': 9.547918011776346e-15}
+  origin 5 s->s+1 sinkhorn_eps0.05_seed2 13.9s marg {'row_err': 1.874285320502267e-06, 'col_err': 7.105427357601002e-15}
+  origin 5 s->s+1 sinkhorn_eps0.01_seed0 114.0s marg {'row_err': 0.00028092963027770423, 'col_err': 4.529709940470639e-14}
+  origin 5 s->s+1 sinkhorn_eps0.2_seed0 26.9s marg {'row_err': 3.499913485693895e-07, 'col_err': 6.661338147750939e-15}
+  origin 5 s-1->s sinkhorn_eps0.05_seed0 37.2s marg {'row_err': 1.801421369851397e-06, 'col_err': 7.771561172376096e-15}
+  origin 5 s-1->s sinkhorn_eps0.05_seed1 18.7s marg {'row_err': 1.7278451919233717e-06, 'col_err': 6.8833827526759706e-15}
+  origin 5 s-1->s sinkhorn_eps0.05_seed2 16.5s marg {'row_err': 1.7344492555526614e-06, 'col_err': 9.103828801926284e-15}
+  origin 5 s-1->s sinkhorn_eps0.01_seed0 199.1s marg {'row_err': 0.0006107056400171951, 'col_err': 2.0650148258027912e-14}
+  origin 5 s-1->s sinkhorn_eps0.2_seed0 16.9s marg {'row_err': 3.073896542860055e-07, 'col_err': 5.773159728050814e-15}
+origin 5 done 514.4s
+total 997.4 s

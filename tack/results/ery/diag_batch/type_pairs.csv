@@ -1,0 +1,1779 @@
+space,kind,k,rep,dim,gap,celltype,stage_a,stage_b,sample_a,sample_b,n_a,n_b,same_batch,ED_U
+origin1,origin,1,pca,30,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.09708126001698858
+origin1,origin,1,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,0.5951955671527616
+origin1,origin,1,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,0.5577225961863048
+origin1,origin,1,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,1.5024349918016369
+origin1,origin,1,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,0.4922341475122467
+origin1,origin,1,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,0.5793872250778547
+origin1,origin,1,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,1.912699818976019
+origin1,origin,1,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,0.09022974748117729
+origin1,origin,1,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,0.1942855632130076
+origin1,origin,1,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,0.940007126582072
+origin1,origin,1,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,0.9298200366166154
+origin1,origin,1,pca,30,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,0.6096988319300372
+origin1,origin,1,pca,30,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,0.7502243058681537
+origin1,origin,1,genes,105,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.0849825050578854
+origin1,origin,1,genes,105,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,0.6392858713532092
+origin1,origin,1,genes,105,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,0.43313969945344066
+origin1,origin,1,genes,105,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,1.3648374733836022
+origin1,origin,1,genes,105,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,0.5462356260587828
+origin1,origin,1,genes,105,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,0.41627036089068614
+origin1,origin,1,genes,105,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,1.7287608606979958
+origin1,origin,1,genes,105,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,0.1730515160562005
+origin1,origin,1,genes,105,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,0.22794824332594388
+origin1,origin,1,genes,105,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,1.002065342894129
+origin1,origin,1,genes,105,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,0.9980475929364951
+origin1,origin,1,genes,105,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,0.7529507074551054
+origin1,origin,1,genes,105,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,0.8590198361120533
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.37129553720258635
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,4.363876626686256
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,3.571273698646273
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,6.694409283890663
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,3.595677793617048
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,2.669539734306026
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,6.313633479994892
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,1.3076938766686474
+origin2,origin,2,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,1.6201273290804803
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,3.03221600480511
+origin2,origin,2,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,3.20396227178726
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,0.8528223921628522
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,1.1890072564649357
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,1.0550738707708103
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,1.6902100669926554
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,2.3107281312082133
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,2.766092826496722
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,1.7559622106270627
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,2.36084775644256
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,2.843784335468171
+origin2,origin,2,pca,30,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,2.894043734575792
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,1.5078490544289176
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,1.1389506384687538
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,1.7547524195584838
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,1.3816718249670892
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,2.586133080991596
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,3.0006855059685744
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,2.552582717027173
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,2.8128245556008906
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,3.771790627946703
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,3.3101525188886667
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,3.9263311256453584
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,3.306129024720585
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,3.338458118114241
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,3.8456265108396313
+origin2,origin,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,4.083173008964561
+origin2,origin,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,4.124080779062398
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.2099582829529849
+origin2,origin,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.36207860762934185
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,1.9647023398316898
+origin2,origin,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,2.6936784297719454
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,1.1836878547646075
+origin2,origin,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,1.9367147603936656
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,2.773344591517434
+origin2,origin,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,3.204429409193006
+origin2,origin,2,pca,30,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,3.5180349687719383
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,2.1670884358650273
+origin2,origin,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,2.5661423289989465
+origin2,origin,2,pca,30,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,3.2442330030134094
+origin2,origin,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,0.3610951783647085
+origin2,origin,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,0.3760014775610152
+origin2,origin,2,pca,30,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,0.3051725602060982
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.15355746206134668
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,1.6649810079656895
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,1.2988670853363402
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,2.794004911002393
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,1.3072283782219358
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,0.9695360402792907
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,2.5819224703456527
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,0.4809655473528416
+origin2,origin,2,genes,1222,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,0.5501675044611893
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,1.238040123682751
+origin2,origin,2,genes,1222,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,1.417627385411265
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,0.37503384692456976
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,0.41860371982433975
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,0.4651122714021234
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,0.6433956987251648
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,1.639788889104885
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,1.7286542948000765
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,0.8407788637488025
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,1.036358218915968
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,1.1657030815167282
+origin2,origin,2,genes,1222,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,1.128574283790929
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,0.6150307239374371
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,0.5267151053082877
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,0.7747968057179477
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,0.6747679733040535
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,1.5979998577970456
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,1.7749527925043864
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,1.1032618855043417
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,1.23487160135317
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,1.6133277503741787
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,1.5196058341822365
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,1.753336350355145
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,1.5659091212810168
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,2.07599254026281
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,2.334446086434479
+origin2,origin,2,genes,1222,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,1.8434369573757934
+origin2,origin,2,genes,1222,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,1.931210760346037
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.18482906933796528
+origin2,origin,2,genes,1222,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.16787542160494695
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,1.6928441399134009
+origin2,origin,2,genes,1222,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,1.8580967027423405
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,0.8089552485428975
+origin2,origin,2,genes,1222,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,1.0608756296130117
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,1.9047616503382692
+origin2,origin,2,genes,1222,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,1.9656332959452918
+origin2,origin,2,genes,1222,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,2.101638433968777
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,1.1149262125613468
+origin2,origin,2,genes,1222,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,1.2372509116071022
+origin2,origin,2,genes,1222,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,1.4743345104767158
+origin2,origin,2,genes,1222,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,0.3123908880181645
+origin2,origin,2,genes,1222,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,0.3665205171975785
+origin2,origin,2,genes,1222,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,0.3459411381801978
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.3638899863359697
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,5.565637065218523
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,4.653189010925363
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,7.534836758791442
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,4.269507595442862
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,3.6601577814306694
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,6.840652184126601
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,1.5794078774578555
+origin3,origin,3,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,1.9403303231079683
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,2.822851353346545
+origin3,origin,3,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,3.2783908128273618
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,1.1980735369009547
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,1.2161615858973978
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,1.8422466774355675
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,2.6175861610480187
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,5.359852184452647
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,6.308397847469756
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,2.6619032626595267
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,4.087378302729968
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,3.091016316142639
+origin3,origin,3,pca,30,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,3.0193790063929535
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,2.313604365347466
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,1.8938474803456717
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,3.142502405986556
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,2.8324191001085506
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,5.210930990299865
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,6.114678026713701
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,3.616101276700171
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,4.491505259252763
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,4.207791072423408
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,3.770443272633484
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,4.85589373510446
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,4.233872910009753
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,7.041764060968035
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,7.767963321921204
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,5.193130085530939
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,5.832269832826517
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.5893122774671768
+origin3,origin,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.6658336170837416
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,5.31352900988303
+origin3,origin,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,6.027962665139567
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,2.642188326948112
+origin3,origin,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,3.566489857703157
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,5.6015600825338305
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,4.25359476104275
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,4.080081025095867
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,3.8834828052565573
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,4.302981583388987
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,3.9536408856218666
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,5.39605714946139
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,4.494023056224126
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,6.140185054459447
+origin3,origin,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,6.436499100943136
+origin3,origin,3,pca,30,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,7.6897536957388635
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,3.6411794362670413
+origin3,origin,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,4.0494583783039495
+origin3,origin,3,pca,30,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,5.585942506240498
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,5.336456063685639
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,4.0682676629774885
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,4.353198250129128
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,5.258547500273307
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,4.217241649756884
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,4.16264329470667
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,5.506960262316315
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,4.295531202196085
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,4.074220531568776
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,6.583233442947707
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,4.861845692173876
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,4.992510860185239
+origin3,origin,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,1.1498752955011753
+origin3,origin,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,1.4100122979691196
+origin3,origin,3,pca,30,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,1.533708694521989
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,5.212879695059486
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,4.907201009982096
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,4.9483395182559144
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,4.364164506271097
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,5.253674274484332
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,5.617492898023644
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,4.497986689045038
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,5.274718064086971
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,5.587548664430536
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,2.7745879390842045
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,3.1406235367474284
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,3.4246800912536637
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,4.708774655128473
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,4.270439050943073
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,4.496149701062376
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,1.8863873943851903
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,2.2019265524807015
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,2.4607381394992
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,2.027007304643191
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,2.321519275593766
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,2.5630528083996067
+origin3,origin,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,1.7686020529298734
+origin3,origin,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,1.601986519876359
+origin3,origin,3,pca,30,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,1.947166909611986
+origin3,origin,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,3.742998148806679
+origin3,origin,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,3.461255026396575
+origin3,origin,3,pca,30,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,3.710351524866696
+origin3,origin,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,4.071640362156418
+origin3,origin,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,3.1956269945830114
+origin3,origin,3,pca,30,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,3.4803289224578497
+origin3,origin,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,3.2632843797671587
+origin3,origin,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,2.2954825382898107
+origin3,origin,3,pca,30,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,2.3634946821291702
+origin3,origin,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.05932248812100038
+origin3,origin,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.06684391442658733
+origin3,origin,3,pca,30,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.07667720604182371
+origin3,origin,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.860312108233785
+origin3,origin,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.8111919926391469
+origin3,origin,3,pca,30,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.9697126618078027
+origin3,origin,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.66941955619067
+origin3,origin,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.6930771444226353
+origin3,origin,3,pca,30,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.8255207550599568
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.1454722520235201
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,1.834106021364299
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,1.4525954465127633
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,2.8637142452518063
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,1.5017987752362707
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,1.1881757516812428
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,2.6453698839350572
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,0.5302695326194247
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,0.628437655119086
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,1.3206723201289634
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,1.4661008250954097
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,0.4580188176712561
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,0.47624747664649547
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,0.6374353711156253
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,0.9017754200144132
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,1.9611175732206192
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,2.3095000860088284
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,0.9879780447940156
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,1.4666441377297588
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,1.276585309344025
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,1.1934041457437132
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,0.7273411331473199
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,0.6112481297852703
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,0.9700932775080418
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,0.908028683064483
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,1.793262220515583
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,2.1409533734367336
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,1.2409145938020885
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,1.5247051438882977
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,1.6679402570391169
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,1.5494067612438904
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,1.9447992446541669
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,1.6955810835168954
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,2.69265040419765
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,3.07832558789438
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,2.1112899682739545
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,2.317336805816673
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.23818929259760324
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.23544453125487053
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,1.903788985467994
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,2.1689392637209366
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,0.939747048825943
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,1.244288834352286
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,2.094139229670965
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,1.5068479312718353
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,2.020402087786106
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,1.5850106321847406
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,2.0947927802553643
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,1.627300088441796
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,2.520918406654854
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,1.7706374780945708
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,2.137473931674638
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,2.2749799874736
+origin3,origin,3,genes,2000,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,2.6186880261661045
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,1.2751299681771542
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,1.375839593621901
+origin3,origin,3,genes,2000,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,1.812917496293366
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,1.8038058689376868
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,1.3983150706853067
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,1.4089022294404216
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,2.299864754899378
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,1.654202424716118
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,1.5918837877755365
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,2.386511356283439
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,1.7124044601661872
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,1.5794233849593624
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,2.901043949216646
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,1.8571272795756002
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,1.808140988934472
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,0.3863310778191824
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,0.4423668893969612
+origin3,origin,3,genes,2000,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,0.4419576056045571
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,2.024205201550881
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,1.7099633510095131
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,1.6312364215516837
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,2.018171497079166
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,2.0213698462148386
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,2.0534629202488546
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,2.0520239117894192
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,2.0559536544934467
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,2.068870167051763
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,1.3769941197497033
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,1.2658590448356222
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,1.30015434489167
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,1.8386540375281584
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,1.5112061645417434
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,1.4726796577986931
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,1.1783704592599982
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,1.0151236860848805
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,1.0588699854393866
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,1.1984569712414093
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,1.0815721527287394
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,1.1125248017295561
+origin3,origin,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,1.053994671330873
+origin3,origin,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,0.8215818548406624
+origin3,origin,3,genes,2000,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,0.9004504728464333
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,1.7493937117018028
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,1.4945832456680321
+origin3,origin,3,genes,2000,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,1.4847499056816602
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,1.94195597908816
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,1.427813786702135
+origin3,origin,3,genes,2000,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,1.434349625113157
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,1.606426770780434
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,1.0546032760171613
+origin3,origin,3,genes,2000,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,1.0112851832982663
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.09701560833450174
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.03654986393944526
+origin3,origin,3,genes,2000,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.03273284478405003
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.2856830902282326
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.26603936140966766
+origin3,origin,3,genes,2000,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.29358848434685925
+origin3,origin,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.19988965377117296
+origin3,origin,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.21317519794835604
+origin3,origin,3,genes,2000,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.22439236337669044
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.45586819730215744
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,5.0771371116737685
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,4.262153608920068
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,6.767301818991401
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,3.8064706812977738
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,3.2998911103558832
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,5.985423771544443
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,1.5712716193853211
+origin4,origin,4,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,1.76450150746882
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,2.5134847188410845
+origin4,origin,4,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,2.7781961674343174
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,1.1049788373537526
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,1.1839846912109078
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,1.9309756404282368
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,2.675050635039076
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,5.385520648373221
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,6.396728130787711
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,2.7942046362264907
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,3.9262713522979116
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,2.646037389117293
+origin4,origin,4,pca,30,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,2.476387077617061
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,2.1851872837740602
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,1.8276715731033093
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,3.279731102471697
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,2.823046013767641
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,5.01671055607803
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,5.879366396706429
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,3.6156772594027817
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,4.198342837040634
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,3.734817925127989
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,3.209553054336686
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,4.469562139590643
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,3.7081533508142055
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,6.843063292730891
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,7.494600326123155
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,4.9184661360856285
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,5.301379385418118
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.6791007217692355
+origin4,origin,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.6673907016943907
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,5.1488261746132675
+origin4,origin,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,5.87961642084972
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,2.5199720808704686
+origin4,origin,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,3.34490893520406
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,6.259172819903255
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,4.592722260329297
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,5.646630291219802
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,4.942911561835004
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,5.726424994280238
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,5.070679482861845
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,6.562110613099547
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,5.326311810340247
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,6.055902915802955
+origin4,origin,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,6.28872435413855
+origin4,origin,4,pca,30,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,7.4196248428915785
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,3.6029494546260405
+origin4,origin,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,3.818159610059567
+origin4,origin,4,pca,30,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,5.2384835953364055
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,5.652374473507375
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,4.296460368182367
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,4.582664667034141
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,6.405897194413592
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,5.240697143395991
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,5.353658938459984
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,6.513693367760842
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,5.356226212862126
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,5.192478487989345
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,7.469045479583
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,5.6419795759911935
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,5.8121928959285425
+origin4,origin,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,1.078927990763912
+origin4,origin,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,1.4590928044652376
+origin4,origin,4,pca,30,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,1.615764197999792
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,5.6200228274469035
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,4.999717150199099
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,5.076978245275971
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,5.810527140433269
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,6.301974955976126
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,6.79259541068742
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,5.910268150918039
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,6.395168929074293
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,6.772721728728073
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,4.202818827660604
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,4.1499510172054865
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,4.490882708130868
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,5.28058421431517
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,4.539149530103068
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,4.820818682890767
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,3.353446345681398
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,3.311006473799214
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,3.695557951878773
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,3.3590094468334506
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,3.480751292950817
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,3.783884843565045
+origin4,origin,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,3.006873715876555
+origin4,origin,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,2.6781275675284775
+origin4,origin,4,pca,30,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,3.087192271143951
+origin4,origin,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,5.2854772086888655
+origin4,origin,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,4.9833254649696865
+origin4,origin,4,pca,30,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,5.376998447928668
+origin4,origin,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,5.517180155654566
+origin4,origin,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,4.795840275111148
+origin4,origin,4,pca,30,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,5.122141020846041
+origin4,origin,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,4.518658052368282
+origin4,origin,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,3.5484094514865117
+origin4,origin,4,pca,30,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,3.7421214121070454
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,24,219,40,True,2.991562225394227
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,16,24,784,251,True,2.607178224007278
+origin4,origin,4,pca,30,1,Erythroid2,E8.0,E8.25,16,24,167,254,True,2.269812970522243
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,25,219,56,True,2.894363963990184
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,16,25,784,250,True,2.730924390185163
+origin4,origin,4,pca,30,1,Erythroid2,E8.0,E8.25,16,25,167,281,True,2.3298536750728935
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,28,219,60,True,5.034532622464942
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,16,28,784,227,True,5.371254303922384
+origin4,origin,4,pca,30,1,Erythroid2,E8.0,E8.25,16,28,167,70,True,5.910475673682659
+origin4,origin,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.05140019229376591
+origin4,origin,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.07331752946713976
+origin4,origin,4,pca,30,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.08904101583647339
+origin4,origin,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.8099954122463586
+origin4,origin,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.872784524276625
+origin4,origin,4,pca,30,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,1.066145037194742
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,24,277,40,False,4.399043174816664
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,33,24,282,251,False,4.9214165537813095
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,25,277,56,False,4.552387592947882
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,33,25,282,250,False,5.056311331110579
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,28,277,60,False,1.326586477848064
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,33,28,282,227,False,1.628768031355678
+origin4,origin,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.6940058678392376
+origin4,origin,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.7549332792129437
+origin4,origin,4,pca,30,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.9095077850914102
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,24,236,40,False,4.334624861158743
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,34,24,245,251,False,4.897752115891564
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,25,236,56,False,4.565649743748596
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,34,25,245,250,False,5.060566438420953
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,28,236,60,False,1.436005003893019
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,34,28,245,227,False,1.7977594951884583
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,24,251,40,False,2.516279521229815
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,35,24,233,251,False,3.063165845086292
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,25,251,56,False,2.693978891837988
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,35,25,233,250,False,3.125922580948882
+origin4,origin,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,28,251,60,False,1.8061678799901415
+origin4,origin,4,pca,30,1,Erythroid1,E8.0,E8.25,35,28,233,227,False,2.310598959918045
+origin4,origin,4,pca,30,0,Blood progenitors 2,E8.25,E8.25,24,25,40,56,True,0.07116497292840673
+origin4,origin,4,pca,30,0,Erythroid1,E8.25,E8.25,24,25,251,250,True,0.05904294226083184
+origin4,origin,4,pca,30,0,Erythroid2,E8.25,E8.25,24,25,254,281,True,0.10177806828015346
+origin4,origin,4,pca,30,0,Erythroid3,E8.25,E8.25,24,25,81,84,True,0.07483859673761195
+origin4,origin,4,pca,30,0,Blood progenitors 2,E8.25,E8.25,24,28,40,60,True,2.7365646133218196
+origin4,origin,4,pca,30,0,Erythroid1,E8.25,E8.25,24,28,251,227,True,3.0961869596225027
+origin4,origin,4,pca,30,0,Erythroid2,E8.25,E8.25,24,28,254,70,True,3.4080921598273655
+origin4,origin,4,pca,30,0,Blood progenitors 2,E8.25,E8.25,25,28,56,60,True,2.8865535054768348
+origin4,origin,4,pca,30,0,Erythroid1,E8.25,E8.25,25,28,250,227,True,3.2476746222555013
+origin4,origin,4,pca,30,0,Erythroid2,E8.25,E8.25,25,28,281,70,True,3.680738268056241
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.1462499885324
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,1.728503050217629
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,1.4405465086004057
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,2.76704246881312
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,1.3650964323452612
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,1.1369181993309105
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,2.543836446004967
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,0.5162374576338458
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,0.6180800964858015
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,1.2196036132837662
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,1.3860866483966312
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,0.44553170738807424
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,0.4697674429180907
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,0.700140595524946
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,0.9285589224243083
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,1.9459021353063335
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,2.3231721367004603
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,0.9892876824491914
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,1.4405863259607834
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,1.2066704307003242
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,1.091129114252702
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,0.7227368107155598
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,0.5982643873861271
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,1.0333762777132804
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,0.9129636935464625
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,1.730902748984672
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,2.0685456385532177
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,1.249829963652104
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,1.452777572188218
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,1.582282565841556
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,1.4477874920103737
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,1.9092185703673685
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,1.610388073144943
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,2.7763319534965376
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,3.101943891736269
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,2.1069950226724607
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,2.2186029192667007
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.2756372158647906
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.23616353880561292
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,1.8582162039803158
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,2.1073367302449633
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,0.9220162716112625
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,1.173207138144246
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,2.1817949431164685
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,1.5628953008234596
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,2.1951261142918064
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,1.6833074090360292
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,2.1928865357452523
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,1.726942715143192
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,2.606102198867955
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,1.8216674405860829
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,2.1355343582340502
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,2.227985416723879
+origin4,origin,4,genes,2000,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,2.550899010437462
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,1.2710893915590304
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,1.309302751179299
+origin4,origin,4,genes,2000,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,1.7069176023766452
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,1.8282287797388044
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,1.4376420953448452
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,1.4459719055940639
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,2.397065476071784
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,1.7577941007310507
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,1.6842039070313142
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,2.4731453349709938
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,1.808844049909485
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,1.6506507351858843
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,2.942100241544299
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,1.9167121762093657
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,1.8544638752244573
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,0.39936985329014263
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,0.48756249788886663
+origin4,origin,4,genes,2000,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,0.4941315278168794
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,2.073463494814476
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,1.7450417312558741
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,1.6409063401837258
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,2.16812107413444
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,2.1815218290435467
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,2.226568602496517
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,2.2502522116748302
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,2.222670279412341
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,2.24466195189553
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,1.5263423421346118
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,1.3766622952853176
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,1.4086149430238954
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,1.9242101447808828
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,1.5666822792216735
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,1.511092120759269
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,1.2515329972998508
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,1.0807291890331854
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,1.108448350232102
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,1.2782911441327798
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,1.14031199803064
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,1.1526917565605892
+origin4,origin,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,1.1140358013274216
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,0.8629244047272202
+origin4,origin,4,genes,2000,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,0.9237276019164256
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,1.9081259187916189
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,1.6560007706082303
+origin4,origin,4,genes,2000,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,1.6571068148946928
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,2.08530390818974
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,1.6013313432286154
+origin4,origin,4,genes,2000,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,1.5996612536245962
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,1.7349614147047703
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,1.1597675995072017
+origin4,origin,4,genes,2000,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,1.1223098581780029
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,24,219,40,True,0.992852140181899
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,16,24,784,251,True,0.8242162389430945
+origin4,origin,4,genes,2000,1,Erythroid2,E8.0,E8.25,16,24,167,254,True,0.6910668375517233
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,25,219,56,True,1.0491882619609925
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,16,25,784,250,True,0.8836867516194644
+origin4,origin,4,genes,2000,1,Erythroid2,E8.0,E8.25,16,25,167,281,True,0.7394303026599758
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,28,219,60,True,2.215978739375256
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,16,28,784,227,True,2.170876225102635
+origin4,origin,4,genes,2000,1,Erythroid2,E8.0,E8.25,16,28,167,70,True,2.353523607048615
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.05648132412799001
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.033791861191204475
+origin4,origin,4,genes,2000,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.032260090001731356
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.27415795952982336
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.2649130733472411
+origin4,origin,4,genes,2000,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.3017091378463732
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,24,277,40,False,1.4587738589786277
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,33,24,282,251,False,1.5435512303560266
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,25,277,56,False,1.6059074179491404
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,33,25,282,250,False,1.6011789568112853
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,28,277,60,False,0.8509700245893619
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,33,28,282,227,False,0.8857394427628833
+origin4,origin,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.2051573404643996
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.22348058476693566
+origin4,origin,4,genes,2000,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.24359283303425272
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,24,236,40,False,1.4556202012308752
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,34,24,245,251,False,1.5708836829317292
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,25,236,56,False,1.6417311053748804
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,34,25,245,250,False,1.6502220803996437
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,28,236,60,False,0.8139371147909777
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,34,28,245,227,False,0.8968099408460084
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,24,251,40,False,0.8738922255607946
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,35,24,233,251,False,0.9750370107092401
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,25,251,56,False,1.0115095268596797
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,35,25,233,250,False,1.0090804906809687
+origin4,origin,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,28,251,60,False,0.9750360199909807
+origin4,origin,4,genes,2000,1,Erythroid1,E8.0,E8.25,35,28,233,227,False,1.083080680306189
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E8.25,E8.25,24,25,40,56,True,0.015124252313579944
+origin4,origin,4,genes,2000,0,Erythroid1,E8.25,E8.25,24,25,251,250,True,0.0367990263202671
+origin4,origin,4,genes,2000,0,Erythroid2,E8.25,E8.25,24,25,254,281,True,0.05517134977240801
+origin4,origin,4,genes,2000,0,Erythroid3,E8.25,E8.25,24,25,81,84,True,0.04582797755475099
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E8.25,E8.25,24,28,40,60,True,1.357809051560956
+origin4,origin,4,genes,2000,0,Erythroid1,E8.25,E8.25,24,28,251,227,True,1.4092145590709215
+origin4,origin,4,genes,2000,0,Erythroid2,E8.25,E8.25,24,28,254,70,True,1.4762784841492191
+origin4,origin,4,genes,2000,0,Blood progenitors 2,E8.25,E8.25,25,28,56,60,True,1.507212728791007
+origin4,origin,4,genes,2000,0,Erythroid1,E8.25,E8.25,25,28,250,227,True,1.4417133212393658
+origin4,origin,4,genes,2000,0,Erythroid2,E8.25,E8.25,25,28,281,70,True,1.5743669718994795
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.42289764924852946
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,4.823646295770107
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,4.297076323848184
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,6.689481299768471
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,3.8645953700837765
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,3.617686564042792
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,6.015091141210076
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,1.5552710603735793
+origin5,origin,5,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,1.7886298281026338
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,2.0682303394167016
+origin5,origin,5,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,2.449673509063917
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,1.0652171506552612
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,1.1273266013701715
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,1.8927262721366347
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,2.6548173725509745
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,5.317603195220725
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,6.333764418961363
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,2.8106232204767494
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,3.963334793613541
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,2.1485057963652876
+origin5,origin,5,pca,30,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,1.907773850575012
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,2.173290687581291
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,1.7869720482839409
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,3.167688481250254
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,2.7925563932896402
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,5.011285154061094
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,5.81433890105385
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,3.707397643333259
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,4.225440523452734
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,3.3762534432096576
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,2.749999121900327
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,3.969936674184547
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,3.253341457813635
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,6.566406888479156
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,7.091378010470234
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,4.608105766340088
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,4.862370591842012
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.539231664126147
+origin5,origin,5,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.6674413369633729
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,5.110961898003843
+origin5,origin,5,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,5.808401449686117
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,2.491551682885577
+origin5,origin,5,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,3.269037020434972
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,6.235947842895559
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,4.607900469010004
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,5.572908577548997
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,4.94032717856334
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,5.624814093245277
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,5.054344765031939
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,6.428552689354415
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,5.297316211310826
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,5.913058688657511
+origin5,origin,5,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,6.143233495308098
+origin5,origin,5,pca,30,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,7.1043813087035845
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,3.442796925558584
+origin5,origin,5,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,3.707948393641532
+origin5,origin,5,pca,30,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,4.9959099199291375
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,5.607902515437267
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,4.225008377576963
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,4.466875077140475
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,6.346213891901627
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,5.146482848457941
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,5.032457901596475
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,6.26729509502497
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,5.251593954141898
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,4.907489144009645
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,7.243577872194242
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,5.516225984632821
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,5.472981100058842
+origin5,origin,5,pca,30,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,1.0700422498653364
+origin5,origin,5,pca,30,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,1.4262457062450071
+origin5,origin,5,pca,30,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,1.4860014979269751
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,5.5820823761965634
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,4.88704851294088
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,4.756405739673934
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,5.784464450317451
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,6.1716023239369395
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,6.548592981720239
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,5.91051594044724
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,6.309220161578056
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,6.542184840139473
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,4.164519662682736
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,4.052405506416608
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,4.303659218057291
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,5.282285047859906
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,4.450967411756905
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,4.524758674068515
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,3.3566561786803693
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,3.2185575201166294
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,3.5630310199162754
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,3.3316095758795274
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,3.4044512058921192
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,3.6343877165979244
+origin5,origin,5,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,2.9406840716946068
+origin5,origin,5,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,2.5362503129317426
+origin5,origin,5,pca,30,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,2.8832971417241566
+origin5,origin,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,5.350115676518147
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,4.906811252627081
+origin5,origin,5,pca,30,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,5.267730613384577
+origin5,origin,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,5.4877396800143465
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,4.7282910884777305
+origin5,origin,5,pca,30,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,5.0421802262672415
+origin5,origin,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,4.49690753089649
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,3.4990327305550926
+origin5,origin,5,pca,30,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,3.5993108568265413
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,24,219,40,True,3.095706210533222
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,16,24,784,251,True,2.693458957795655
+origin5,origin,5,pca,30,1,Erythroid2,E8.0,E8.25,16,24,167,254,True,2.2681549535676107
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,25,219,56,True,3.1299320560184736
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,16,25,784,250,True,2.868248278276832
+origin5,origin,5,pca,30,1,Erythroid2,E8.0,E8.25,16,25,167,281,True,2.4090791511377443
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,28,219,60,True,5.437716310604717
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,16,28,784,227,True,5.651682941597475
+origin5,origin,5,pca,30,1,Erythroid2,E8.0,E8.25,16,28,167,70,True,5.959888257770308
+origin5,origin,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.03331611520547284
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.06823077054180082
+origin5,origin,5,pca,30,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.07065305471701144
+origin5,origin,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.7363701496162172
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.8245121077899702
+origin5,origin,5,pca,30,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.9867320229043983
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,24,277,40,False,4.5612217613737345
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,33,24,282,251,False,5.09366076488302
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,25,277,56,False,4.79069355465537
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,33,25,282,250,False,5.279777187114856
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,28,277,60,False,1.9663649774482135
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,33,28,282,227,False,2.3149344896744566
+origin5,origin,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.6781097480523428
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.7317664046950503
+origin5,origin,5,pca,30,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.8480613710174687
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,24,236,40,False,4.556255983201059
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,34,24,245,251,False,5.1098582245548405
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,25,236,56,False,4.873281308862971
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,34,25,245,250,False,5.340233318880726
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,28,236,60,False,2.0970589092158907
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,34,28,245,227,False,2.5054736655113548
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,24,251,40,False,2.7708501131423793
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,35,24,233,251,False,3.3000973730980823
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,25,251,56,False,3.07689702289362
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,35,25,233,250,False,3.441928241238477
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,28,251,60,False,2.572372685698074
+origin5,origin,5,pca,30,1,Erythroid1,E8.0,E8.25,35,28,233,227,False,3.0664473626105675
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.25,E8.25,24,25,40,56,True,0.0935628788713867
+origin5,origin,5,pca,30,0,Erythroid1,E8.25,E8.25,24,25,251,250,True,0.0683559265858138
+origin5,origin,5,pca,30,0,Erythroid2,E8.25,E8.25,24,25,254,281,True,0.10660367490277078
+origin5,origin,5,pca,30,0,Erythroid3,E8.25,E8.25,24,25,81,84,True,0.07554272459498712
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.25,E8.25,24,28,40,60,True,3.253411919964652
+origin5,origin,5,pca,30,0,Erythroid1,E8.25,E8.25,24,28,251,227,True,3.5963129691759868
+origin5,origin,5,pca,30,0,Erythroid2,E8.25,E8.25,24,28,254,70,True,3.724610308778372
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,24,17,40,30,True,4.578120241142838
+origin5,origin,5,pca,30,1,Erythroid3,E8.25,E8.5,24,17,81,491,True,2.7191437051373777
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,24,29,40,33,False,4.02919935283364
+origin5,origin,5,pca,30,1,Erythroid1,E8.25,E8.5,24,29,251,23,False,3.1840936331652827
+origin5,origin,5,pca,30,1,Erythroid2,E8.25,E8.5,24,29,254,71,False,1.8847753445926019
+origin5,origin,5,pca,30,1,Erythroid3,E8.25,E8.5,24,29,81,550,False,1.9619558908177357
+origin5,origin,5,pca,30,1,Erythroid2,E8.25,E8.5,24,36,254,130,False,2.4722671383254946
+origin5,origin,5,pca,30,1,Erythroid3,E8.25,E8.5,24,36,81,805,False,2.7616624437267783
+origin5,origin,5,pca,30,1,Erythroid1,E8.25,E8.5,24,37,251,24,False,3.3826906193178736
+origin5,origin,5,pca,30,1,Erythroid2,E8.25,E8.5,24,37,254,91,False,3.289249391811679
+origin5,origin,5,pca,30,1,Erythroid3,E8.25,E8.5,24,37,81,672,False,3.5530381565305618
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.25,E8.25,25,28,56,60,True,3.436959004638071
+origin5,origin,5,pca,30,0,Erythroid1,E8.25,E8.25,25,28,250,227,True,3.7020550542105486
+origin5,origin,5,pca,30,0,Erythroid2,E8.25,E8.25,25,28,281,70,True,3.958131721757571
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,25,17,56,30,True,4.366278947535188
+origin5,origin,5,pca,30,1,Erythroid3,E8.25,E8.5,25,17,84,491,True,3.1335801548753492
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,25,29,56,33,False,4.009109305098834
+origin5,origin,5,pca,30,1,Erythroid1,E8.25,E8.5,25,29,250,23,False,3.520980718911341
+origin5,origin,5,pca,30,1,Erythroid2,E8.25,E8.5,25,29,281,71,False,2.328711723627249
+origin5,origin,5,pca,30,1,Erythroid3,E8.25,E8.5,25,29,84,550,False,2.413813074842924
+origin5,origin,5,pca,30,1,Erythroid2,E8.25,E8.5,25,36,281,130,False,2.614575118217515
+origin5,origin,5,pca,30,1,Erythroid3,E8.25,E8.5,25,36,84,805,False,2.9147108270348516
+origin5,origin,5,pca,30,1,Erythroid1,E8.25,E8.5,25,37,250,24,False,3.481341350433313
+origin5,origin,5,pca,30,1,Erythroid2,E8.25,E8.5,25,37,281,91,False,3.4758198952902424
+origin5,origin,5,pca,30,1,Erythroid3,E8.25,E8.5,25,37,84,672,False,3.7804107558400446
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,28,17,60,30,True,6.242920146041617
+origin5,origin,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,28,29,60,33,False,5.461955720271128
+origin5,origin,5,pca,30,1,Erythroid1,E8.25,E8.5,28,29,227,23,False,3.897453723058476
+origin5,origin,5,pca,30,1,Erythroid2,E8.25,E8.5,28,29,70,71,False,2.1572783458276437
+origin5,origin,5,pca,30,1,Erythroid2,E8.25,E8.5,28,36,70,130,False,3.118955967591602
+origin5,origin,5,pca,30,1,Erythroid1,E8.25,E8.5,28,37,227,24,False,3.1936052288933894
+origin5,origin,5,pca,30,1,Erythroid2,E8.25,E8.5,28,37,70,91,False,2.687446742359241
+origin5,origin,5,pca,30,0,Blood progenitors 2,E8.5,E8.5,17,29,30,33,False,0.9381218002340406
+origin5,origin,5,pca,30,0,Erythroid3,E8.5,E8.5,17,29,491,550,False,1.4090596754217062
+origin5,origin,5,pca,30,0,Erythroid3,E8.5,E8.5,17,36,491,805,False,2.110340219764959
+origin5,origin,5,pca,30,0,Erythroid3,E8.5,E8.5,17,37,491,672,False,2.1733201358516654
+origin5,origin,5,pca,30,0,Erythroid2,E8.5,E8.5,29,36,71,130,True,2.4095252917642513
+origin5,origin,5,pca,30,0,Erythroid3,E8.5,E8.5,29,36,550,805,True,2.3657519811707077
+origin5,origin,5,pca,30,0,Erythroid1,E8.5,E8.5,29,37,23,24,True,3.1310635285044004
+origin5,origin,5,pca,30,0,Erythroid2,E8.5,E8.5,29,37,71,91,True,2.694716757875489
+origin5,origin,5,pca,30,0,Erythroid3,E8.5,E8.5,29,37,550,672,True,2.8780377727889803
+origin5,origin,5,pca,30,0,Erythroid2,E8.5,E8.5,36,37,130,91,True,0.29400423498133854
+origin5,origin,5,pca,30,0,Erythroid3,E8.5,E8.5,36,37,805,672,True,0.31938547887086255
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.15653641934441964
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,1.6298999223661426
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,1.4173626540502475
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,2.756770200081867
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,1.3195412597510838
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,1.1620366007923444
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,2.579631225257991
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,0.5087865880026605
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,0.6327166978191698
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,1.21129141802421
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,1.3877579963106648
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,0.43668023133456657
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,0.4683190706212912
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,0.6858635915731348
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,0.9366369083777926
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,1.9015536896708412
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,2.3206298053314782
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,0.9939337139051858
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,1.462741375669772
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,1.1762185035719135
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,1.0511444037338329
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,0.6973771238954285
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,0.587634179508548
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,0.9770272782569762
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,0.9086883254770584
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,1.6906605786223388
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,2.043767295004507
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,1.263652747792026
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,1.4570857649629758
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,1.5523778726771447
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,1.398206552923238
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,1.8562135101003712
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,1.5639891575745288
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,2.787419885653634
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,3.09749762733529
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,2.1305537758160327
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,2.2094031627160824
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.2550685805997617
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.24550763554861277
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,1.784164670993011
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,2.081411839544984
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,0.9079861258364694
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,1.1618299863187076
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,2.1577546399368046
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,1.565075519265804
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,2.148232552636536
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,1.6813585217231797
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,2.1181309180400127
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,1.7171643489031645
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,2.531891535873637
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,1.8001147342244685
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,2.0163430136571314
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,2.179594521866143
+origin5,origin,5,genes,2000,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,2.5201134684148307
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,1.1969198478529925
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,1.2800729753287143
+origin5,origin,5,genes,2000,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,1.695678389130439
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,1.7791150186516305
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,1.4077708619767861
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,1.4544741329554434
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,2.2865716859341205
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,1.7226972368833522
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,1.6143364085535907
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,2.3118479130224863
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,1.770166001961801
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,1.5827793240175403
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,2.7920392435544024
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,1.867588547784866
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,1.7765861862218486
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,0.35610152117840244
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,0.4892240822550207
+origin5,origin,5,genes,2000,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,0.48847972562521136
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,2.0188660421864846
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,1.7106783136859676
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,1.5919731082145532
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,2.1292051002108288
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,2.1450135877842307
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,2.2205295922351347
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,2.1994598084201797
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,2.207003264261804
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,2.240727303609269
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,1.5140335299810417
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,1.3516618298383527
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,1.3959807273854956
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,1.9183575033454154
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,1.5602028202058875
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,1.4821700276046386
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,1.237220160962476
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,1.0555523933860051
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,1.117674342364115
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,1.2314711388377262
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,1.1224405155966828
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,1.155611695094649
+origin5,origin,5,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,1.0839668398876086
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,0.834582711374086
+origin5,origin,5,genes,2000,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,0.9180973780911295
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,1.8953136749752204
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,1.6365870606010198
+origin5,origin,5,genes,2000,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,1.6810394045956834
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,2.0237131015854963
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,1.5805421010736502
+origin5,origin,5,genes,2000,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,1.6253392018341017
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,1.7278532599376497
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,1.1429243398185598
+origin5,origin,5,genes,2000,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,1.1155874103993035
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,24,219,40,True,1.005338461759628
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,16,24,784,251,True,0.8395648799627224
+origin5,origin,5,genes,2000,1,Erythroid2,E8.0,E8.25,16,24,167,254,True,0.688817217002768
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,25,219,56,True,1.060595477332189
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,16,25,784,250,True,0.8952349107430209
+origin5,origin,5,genes,2000,1,Erythroid2,E8.0,E8.25,16,25,167,281,True,0.7303850098993827
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,28,219,60,True,2.2211110859390146
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,16,28,784,227,True,2.170392477034241
+origin5,origin,5,genes,2000,1,Erythroid2,E8.0,E8.25,16,28,167,70,True,2.350864282530001
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.04553771070975543
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.032800907180707384
+origin5,origin,5,genes,2000,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.0348257808910013
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.27425555509084276
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.2629920199992597
+origin5,origin,5,genes,2000,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.3020751922921008
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,24,277,40,False,1.496275005601266
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,33,24,282,251,False,1.6525340636585177
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,25,277,56,False,1.6416642491117344
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,33,25,282,250,False,1.7091340554595682
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,28,277,60,False,0.8323373869253281
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,33,28,282,227,False,0.9188577156605753
+origin5,origin,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.2358215303440545
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.22468509818263271
+origin5,origin,5,genes,2000,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.24177457399040136
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,24,236,40,False,1.5105876755783676
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,34,24,245,251,False,1.682263843234999
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,25,236,56,False,1.6906822180778605
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,34,25,245,250,False,1.7603567145239154
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,28,236,60,False,0.8111959464005132
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,34,28,245,227,False,0.9252731070756965
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,24,251,40,False,0.9154705796055858
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,35,24,233,251,False,1.0505716609897213
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,25,251,56,False,1.0491051994498335
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,35,25,233,250,False,1.0874212870630835
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,28,251,60,False,0.9748880077478042
+origin5,origin,5,genes,2000,1,Erythroid1,E8.0,E8.25,35,28,233,227,False,1.1062335026709
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.25,E8.25,24,25,40,56,True,0.002838550073658297
+origin5,origin,5,genes,2000,0,Erythroid1,E8.25,E8.25,24,25,251,250,True,0.034158287378737384
+origin5,origin,5,genes,2000,0,Erythroid2,E8.25,E8.25,24,25,254,281,True,0.04928616822817844
+origin5,origin,5,genes,2000,0,Erythroid3,E8.25,E8.25,24,25,81,84,True,0.041649297587557754
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.25,E8.25,24,28,40,60,True,1.3955393587695468
+origin5,origin,5,genes,2000,0,Erythroid1,E8.25,E8.25,24,28,251,227,True,1.4385933825953146
+origin5,origin,5,genes,2000,0,Erythroid2,E8.25,E8.25,24,28,254,70,True,1.4776177663057837
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,24,17,40,30,True,2.6130277756209956
+origin5,origin,5,genes,2000,1,Erythroid3,E8.25,E8.5,24,17,81,491,True,1.4560163404171327
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,24,29,40,33,False,2.3081806002510064
+origin5,origin,5,genes,2000,1,Erythroid1,E8.25,E8.5,24,29,251,23,False,1.5585446157950393
+origin5,origin,5,genes,2000,1,Erythroid2,E8.25,E8.5,24,29,254,71,False,1.0818954083525227
+origin5,origin,5,genes,2000,1,Erythroid3,E8.25,E8.5,24,29,81,550,False,1.181764265162787
+origin5,origin,5,genes,2000,1,Erythroid2,E8.25,E8.5,24,36,254,130,False,1.101013601655005
+origin5,origin,5,genes,2000,1,Erythroid3,E8.25,E8.5,24,36,81,805,False,1.3711491372073858
+origin5,origin,5,genes,2000,1,Erythroid1,E8.25,E8.5,24,37,251,24,False,1.4440684603353766
+origin5,origin,5,genes,2000,1,Erythroid2,E8.25,E8.5,24,37,254,91,False,1.4461752054290251
+origin5,origin,5,genes,2000,1,Erythroid3,E8.25,E8.5,24,37,81,672,False,1.6696773362925548
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.25,E8.25,25,28,56,60,True,1.555407969398349
+origin5,origin,5,genes,2000,0,Erythroid1,E8.25,E8.25,25,28,250,227,True,1.4658104004366521
+origin5,origin,5,genes,2000,0,Erythroid2,E8.25,E8.25,25,28,281,70,True,1.5856696428676784
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,25,17,56,30,True,2.63609740853709
+origin5,origin,5,genes,2000,1,Erythroid3,E8.25,E8.5,25,17,84,491,True,1.7277221980091753
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,25,29,56,33,False,2.3432531811502777
+origin5,origin,5,genes,2000,1,Erythroid1,E8.25,E8.5,25,29,250,23,False,1.690810909665597
+origin5,origin,5,genes,2000,1,Erythroid2,E8.25,E8.5,25,29,281,71,False,1.2760516989387725
+origin5,origin,5,genes,2000,1,Erythroid3,E8.25,E8.5,25,29,84,550,False,1.4794357320254505
+origin5,origin,5,genes,2000,1,Erythroid2,E8.25,E8.5,25,36,281,130,False,1.1510372764837626
+origin5,origin,5,genes,2000,1,Erythroid3,E8.25,E8.5,25,36,84,805,False,1.4775025859389572
+origin5,origin,5,genes,2000,1,Erythroid1,E8.25,E8.5,25,37,250,24,False,1.4564204157644731
+origin5,origin,5,genes,2000,1,Erythroid2,E8.25,E8.5,25,37,281,91,False,1.5080302643478767
+origin5,origin,5,genes,2000,1,Erythroid3,E8.25,E8.5,25,37,84,672,False,1.7802502029118372
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,28,17,60,30,True,3.937973806361253
+origin5,origin,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,28,29,60,33,False,3.0813720205775965
+origin5,origin,5,genes,2000,1,Erythroid1,E8.25,E8.5,28,29,227,23,False,1.8805649201670356
+origin5,origin,5,genes,2000,1,Erythroid2,E8.25,E8.5,28,29,70,71,False,1.0633179650345923
+origin5,origin,5,genes,2000,1,Erythroid2,E8.25,E8.5,28,36,70,130,False,1.3643226546869656
+origin5,origin,5,genes,2000,1,Erythroid1,E8.25,E8.5,28,37,227,24,False,1.4739543979023857
+origin5,origin,5,genes,2000,1,Erythroid2,E8.25,E8.5,28,37,70,91,False,1.284957383024011
+origin5,origin,5,genes,2000,0,Blood progenitors 2,E8.5,E8.5,17,29,30,33,False,0.7944224633943726
+origin5,origin,5,genes,2000,0,Erythroid3,E8.5,E8.5,17,29,491,550,False,0.8219590578975655
+origin5,origin,5,genes,2000,0,Erythroid3,E8.5,E8.5,17,36,491,805,False,1.0917665560765428
+origin5,origin,5,genes,2000,0,Erythroid3,E8.5,E8.5,17,37,491,672,False,1.1549761557747402
+origin5,origin,5,genes,2000,0,Erythroid2,E8.5,E8.5,29,36,71,130,True,1.0358163199729233
+origin5,origin,5,genes,2000,0,Erythroid3,E8.5,E8.5,29,36,550,805,True,1.0404448842696823
+origin5,origin,5,genes,2000,0,Erythroid1,E8.5,E8.5,29,37,23,24,True,1.3154588936817575
+origin5,origin,5,genes,2000,0,Erythroid2,E8.5,E8.5,29,37,71,91,True,1.235109643631528
+origin5,origin,5,genes,2000,0,Erythroid3,E8.5,E8.5,29,37,550,672,True,1.312002218453273
+origin5,origin,5,genes,2000,0,Erythroid2,E8.5,E8.5,36,37,130,91,True,0.14204022237976588
+origin5,origin,5,genes,2000,0,Erythroid3,E8.5,E8.5,36,37,805,672,True,0.1649531850748076
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.4282260245869072
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,5.417477636324308
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,4.567390492850091
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,5.596706463444093
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,4.215981201220102
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,3.4457595947040733
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,4.608274534334521
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,0.9204010680768073
+interp2,interp,2,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,1.1110623642991966
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,0.9060945609468947
+interp2,interp,2,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,1.2355292256990351
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,0.919211986536963
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,1.079118366199161
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,1.4003201626127595
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,2.583769831478934
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,5.226281997061989
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,5.957841610238297
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,2.693826752355177
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,3.8684027158232333
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,0.43105105957742396
+interp2,interp,2,pca,30,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,0.2612099454275896
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,1.8893614619251622
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,1.5811295221233426
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,2.5693160946327858
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,2.484654447351879
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,5.222349510704662
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,5.996666798273891
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,3.4845947721417865
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,4.276191732176239
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,2.1025125948071626
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,1.618402432904169
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,2.6333672856684025
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,2.194474250850055
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,5.191460947859499
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,5.692413969266958
+interp2,interp,2,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,3.354842662805023
+interp2,interp,2,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,3.966561760045469
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.5512672688605811
+interp2,interp,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.6677705354865342
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,5.137298189642165
+interp2,interp,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,5.771114998027553
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,2.5930043961139866
+interp2,interp,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,3.526750039657628
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,5.919434795577521
+interp2,interp,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,6.179655527586137
+interp2,interp,2,pca,30,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,7.354876077796006
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,3.564042394913699
+interp2,interp,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,4.059683361261312
+interp2,interp,2,pca,30,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,5.5332207987178395
+interp2,interp,2,pca,30,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,1.088798360363965
+interp2,interp,2,pca,30,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,1.295619848159447
+interp2,interp,2,pca,30,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,1.4058051598910497
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.25,E7.25,26,27,32,29,True,0.11136300880304262
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,6,32,39,False,1.763357998120867
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,19,32,118,True,1.4057254268976465
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.25,E7.5,26,20,32,31,True,2.735643826783111
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,6,29,39,False,1.389092227787149
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,19,29,118,True,1.0901674085073942
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.25,E7.5,27,20,29,31,True,2.4729477766978114
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,0.5063645046244858
+interp2,interp,2,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,0.5492500229177502
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,1.2464862492887363
+interp2,interp,2,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,1.4046893353518932
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,0.4130484434914443
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,0.4299474835049253
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,0.5892748666639527
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,0.859169100941358
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,1.842128800055221
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,2.0659760674968908
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,0.9426813130408505
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,1.3282332131989278
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,1.0993490215730901
+interp2,interp,2,genes,2000,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,1.0336112438134109
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,0.6631542932020942
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,0.5812113230163796
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,0.8976126989495974
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,0.8701502160947392
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,1.7510228447744254
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,2.0802724042915095
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,1.217934815368345
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,1.5010064463433146
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,1.5341033592230282
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,1.4422088446576602
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,1.8316268119539139
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,1.5968701458848393
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,2.3843341975260373
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,2.7972086129378546
+interp2,interp,2,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,1.9842812948286905
+interp2,interp,2,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,2.1729356545544682
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.24277459654487643
+interp2,interp,2,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.23170237723974196
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,1.8037451836653098
+interp2,interp,2,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,2.0662475696827514
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,0.9287835405990101
+interp2,interp,2,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,1.2281425396315768
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,2.064593179067767
+interp2,interp,2,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,2.191206216564183
+interp2,interp,2,genes,2000,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,2.5207718820373017
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,1.2803827921839108
+interp2,interp,2,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,1.382227386965674
+interp2,interp,2,genes,2000,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,1.8118540041466105
+interp2,interp,2,genes,2000,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,0.3523159044892168
+interp2,interp,2,genes,2000,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,0.39292779654316234
+interp2,interp,2,genes,2000,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,0.3966396610256595
+interp3,interp,3,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,1.664272443668123
+interp3,interp,3,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,1.8614843751798409
+interp3,interp,3,pca,30,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,2.4546196114727437
+interp3,interp,3,pca,30,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,2.693692647746566
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,0.9026380677216501
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,1.062678546858141
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,1.4527331966172623
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,2.3279841954818687
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,4.337051297091726
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,5.322584583630437
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,2.2615390719135062
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,3.595853027948256
+interp3,interp,3,pca,30,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,2.80506987439694
+interp3,interp,3,pca,30,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,2.5705368280093044
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,1.7701761530519002
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,1.3113178039791666
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,2.2918470794320935
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,2.0544119418333535
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,3.9783441744561916
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,4.685021365102463
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,3.1192124141470616
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,3.7302802088991482
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,3.33334913757695
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,2.7015359954389098
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,3.526800536486137
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,2.938766433685644
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,5.513081903835701
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,5.893387928257585
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,4.229796708651782
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,4.511990269115484
+interp3,interp,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.3853479308510446
+interp3,interp,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.6178737366236957
+interp3,interp,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,3.8339022570275034
+interp3,interp,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,4.468788406756719
+interp3,interp,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,1.8010614575475108
+interp3,interp,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,2.6126283381831685
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,5.484072373441622
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,3.906461321721558
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,5.301314778843086
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,4.517811664700758
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,5.384245641769676
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,4.614143402871442
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,6.198238335136365
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,4.839704825596743
+interp3,interp,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,4.528643591042005
+interp3,interp,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,4.823340336223053
+interp3,interp,3,pca,30,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,5.7569717674184595
+interp3,interp,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,2.627535432793363
+interp3,interp,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,2.981165852857944
+interp3,interp,3,pca,30,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,4.306434469192398
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,4.8527606942649175
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,3.3888053645836695
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,3.5044615417254423
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,6.066911706080951
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,4.573108105575469
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,4.603219377311107
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,6.064275467921908
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,4.662572527468348
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,4.355171037873723
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,6.931483691808351
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,4.955811952769069
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,4.919808777853392
+interp3,interp,3,pca,30,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,0.8599756191816477
+interp3,interp,3,pca,30,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,1.0403820739576952
+interp3,interp,3,pca,30,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,1.144232617087134
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,4.327785251866716
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,3.6189279411767536
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,3.428717125102084
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,4.776370715018469
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,4.710832636441995
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,5.120080959018801
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,4.488017974784119
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,4.733313437229186
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,4.926259144454394
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,3.377709690762087
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,2.8383780065120083
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,3.0299223205572687
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,4.542353722487233
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,3.7598468890027004
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,3.7955289796227127
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,2.9264321771095467
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,2.454697559810655
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,2.767219628613357
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,2.63827396368338
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,2.5663936053336647
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,2.6986746673164097
+interp3,interp,3,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,2.669409376980118
+interp3,interp,3,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,1.9156051772622584
+interp3,interp,3,pca,30,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,2.185911952064478
+interp3,interp,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,5.26836599437951
+interp3,interp,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,4.848584748503877
+interp3,interp,3,pca,30,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,5.253641170640395
+interp3,interp,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,5.388255405799743
+interp3,interp,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,4.670045291102917
+interp3,interp,3,pca,30,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,4.973724786201715
+interp3,interp,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,4.604868608907552
+interp3,interp,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,3.6058726379639365
+interp3,interp,3,pca,30,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,3.8062934196752636
+interp3,interp,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.022901209089004837
+interp3,interp,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.08309238023171694
+interp3,interp,3,pca,30,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.08523950334902786
+interp3,interp,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.755451583654354
+interp3,interp,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.8625047538452302
+interp3,interp,3,pca,30,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,1.0366601683627374
+interp3,interp,3,pca,30,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.5461611247707978
+interp3,interp,3,pca,30,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.7230195031286799
+interp3,interp,3,pca,30,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.8304413708457554
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,19,39,118,False,0.5300901009355492
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,19,24,171,False,0.6006395647807743
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E7.5,E7.5,6,20,39,31,False,1.1856243971905442
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E7.5,E7.5,6,20,24,41,False,1.3453571316565132
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,8,39,74,True,0.4255914191014263
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,8,24,196,True,0.4352108727123678
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,9,39,28,True,0.5967116796233967
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,9,24,305,True,0.8458972514598173
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,12,39,29,False,1.7611372013209632
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,12,24,224,False,2.082667819867414
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,6,13,39,31,False,0.8975405410200032
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,6,13,24,215,False,1.3345996727772018
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E7.5,E7.5,19,20,118,31,True,1.1812917719435738
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E7.5,E7.5,19,20,171,41,True,1.07822648014454
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,8,118,74,False,0.6829877594085261
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,8,171,196,False,0.5750696828889552
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,9,118,28,False,0.913796088435678
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,9,171,305,False,0.8603567669734709
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,12,118,29,True,1.5856548923270886
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,12,171,224,True,1.8895138316908842
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,19,13,118,31,True,1.1598004768420935
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,19,13,171,215,True,1.380691540136855
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,8,31,74,False,1.5303495185481886
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,8,41,196,False,1.406870757472248
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,9,31,28,False,1.7718593034299843
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,9,41,305,False,1.55012209612849
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,12,31,29,True,2.456599027075562
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,12,41,224,True,2.7947567370561437
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.5,E7.75,20,13,31,31,True,1.8768147350277893
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.5,E7.75,20,13,41,215,True,2.0526749581560324
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.2231923174907955
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.22525740793950177
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,1.602929339131851
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,1.8537346194519664
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,0.8191096550038708
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,1.0578923769498019
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,1.9545161741105588
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,1.4197993219995908
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,2.041928292172141
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,1.6323105935582305
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,2.059463156614296
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,1.671150480240911
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,2.4722322112975412
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,1.7578454360114932
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,1.843114484787769
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,1.946361617377125
+interp3,interp,3,genes,2000,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,2.2182069690760713
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,1.1363317732916691
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,1.1735438741848299
+interp3,interp,3,genes,2000,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,1.5433548977246687
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,1.6469702497695557
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,1.2918804641412152
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,1.3091918607684505
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,2.2221464832737112
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,1.6864592596763188
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,1.6000624309889275
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,2.3210657165100628
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,1.73462630024774
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,1.5680997366111313
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,2.772114986433216
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,1.8339467876028124
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,1.7470797991528535
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,0.3382703771129876
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,0.42031494650963097
+interp3,interp,3,genes,2000,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,0.4236102376202737
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,1.8456425293418057
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,1.5859912039065556
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,1.4623101826294516
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,1.9153711813268686
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,1.94581232152753
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,1.9657910266225969
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,1.9769673345766776
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,1.9788343321240696
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,1.9653403614207576
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,1.386783567010795
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,1.2426194600668445
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,1.2356297415079034
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,1.7351093395543131
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,1.43786277644665
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,1.3805958278658963
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,1.1526641604073227
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,0.9957176908268437
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,1.022525717786067
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,1.1333040271328336
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,1.0443553024865295
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,1.0475833465012343
+interp3,interp,3,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,1.057413398267908
+interp3,interp,3,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,0.8106597824747439
+interp3,interp,3,genes,2000,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,0.8544005818243683
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,1.8689455410709321
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,1.6068942426698953
+interp3,interp,3,genes,2000,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,1.6179701568301539
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,2.0000990269626335
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,1.5548107258828736
+interp3,interp,3,genes,2000,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,1.552614529326675
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,1.7688055612297795
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,1.1736311818689131
+interp3,interp,3,genes,2000,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,1.1345399068676834
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.09569552869457709
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.03426555940111342
+interp3,interp,3,genes,2000,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.030838034339289777
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.24278489900401468
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.24927296440492341
+interp3,interp,3,genes,2000,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.27516406200109245
+interp3,interp,3,genes,2000,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.17221061440350383
+interp3,interp,3,genes,2000,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.20539161449526944
+interp3,interp,3,genes,2000,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.21918091370350723
+interp4,interp,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.5927591218586272
+interp4,interp,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.6366572973695828
+interp4,interp,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,5.245154825626709
+interp4,interp,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,5.919136825178189
+interp4,interp,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,2.473434438729212
+interp4,interp,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,3.426405150882829
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,5.309837828783205
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,3.8690002129834484
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,4.383970508045448
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,4.028310095613013
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,4.443774364508291
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,4.018004335228474
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,5.4867793218726835
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,4.412998546301683
+interp4,interp,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,6.1376848047094805
+interp4,interp,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,6.256240574412123
+interp4,interp,4,pca,30,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,7.396204775093399
+interp4,interp,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,3.474134850955302
+interp4,interp,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,3.8451029603799878
+interp4,interp,4,pca,30,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,5.217732831918213
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,5.209975290730768
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,3.6128460780815663
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,4.090599123183776
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,5.498485517718151
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,4.319383328832717
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,4.211121314983464
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,5.497903889291656
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,4.346391486412813
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,4.031967801446301
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,6.6739441307030205
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,4.721868704774417
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,4.799828692606717
+interp4,interp,4,pca,30,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,1.1057212042655014
+interp4,interp,4,pca,30,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,1.4019931530903271
+interp4,interp,4,pca,30,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,1.4205021349615565
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,4.857339941074481
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,4.2695850594806695
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,4.248173258097176
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,4.707401894303563
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,5.298442993073821
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,5.592753922562094
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,4.928700928401648
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,5.357509247473709
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,5.557373586843132
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,3.129597782842323
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,3.1248616233301405
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,3.3270448918964455
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,4.204489035840138
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,3.6285097218107696
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,3.728244294945509
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,2.1194655637547006
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,2.228513414443147
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,2.474993691962064
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,2.13585362566052
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,2.3400797089229197
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,2.5114328494560656
+interp4,interp,4,pca,30,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,1.8375395662380676
+interp4,interp,4,pca,30,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,1.5532252573503413
+interp4,interp,4,pca,30,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,1.7500012024955245
+interp4,interp,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,3.472834186035535
+interp4,interp,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,3.262258485499399
+interp4,interp,4,pca,30,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,3.576954368513059
+interp4,interp,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,3.8441896660124666
+interp4,interp,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,3.079813630398567
+interp4,interp,4,pca,30,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,3.4034655237099134
+interp4,interp,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,2.9339943969525226
+interp4,interp,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,2.022944601289428
+interp4,interp,4,pca,30,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,2.1272820585442522
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,24,219,40,True,2.1014642641578085
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,16,24,784,251,True,1.7623816928172031
+interp4,interp,4,pca,30,1,Erythroid2,E8.0,E8.25,16,24,167,254,True,1.4548249450743267
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,25,219,56,True,2.403063095438897
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,16,25,784,250,True,1.932573518246266
+interp4,interp,4,pca,30,1,Erythroid2,E8.0,E8.25,16,25,167,281,True,1.5467655440218602
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,28,219,60,True,4.634744372767374
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,16,28,784,227,True,4.929025083139483
+interp4,interp,4,pca,30,1,Erythroid2,E8.0,E8.25,16,28,167,70,True,5.2601376610353565
+interp4,interp,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.03355269636737024
+interp4,interp,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.02716255483839536
+interp4,interp,4,pca,30,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.005917870947762083
+interp4,interp,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.7199405603743738
+interp4,interp,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.7681710534964816
+interp4,interp,4,pca,30,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.8617624383922511
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,24,277,40,False,3.5405017291045553
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,33,24,282,251,False,3.890000385424
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,25,277,56,False,3.8952219886421755
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,33,25,282,250,False,4.0882337404659514
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,28,277,60,False,0.9198316861122979
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,33,28,282,227,False,1.1339002606908553
+interp4,interp,4,pca,30,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.7312429782732703
+interp4,interp,4,pca,30,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.7065353685012354
+interp4,interp,4,pca,30,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.8040172756393584
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,24,236,40,False,3.4674237453520416
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,34,24,245,251,False,3.837696086264409
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,25,236,56,False,3.8855137105139725
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,34,25,245,250,False,4.0602845139827535
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,28,236,60,False,0.9781896724874599
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,34,28,245,227,False,1.226927754086538
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,24,251,40,False,1.6815717794832992
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,35,24,233,251,False,1.9943628711864099
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,25,251,56,False,2.1388048177563608
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,35,25,233,250,False,2.1185509840489543
+interp4,interp,4,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,28,251,60,False,1.6820961343838707
+interp4,interp,4,pca,30,1,Erythroid1,E8.0,E8.25,35,28,233,227,False,1.9858587601496103
+interp4,interp,4,pca,30,0,Blood progenitors 2,E8.25,E8.25,24,25,40,56,True,0.12701191553530045
+interp4,interp,4,pca,30,0,Erythroid1,E8.25,E8.25,24,25,251,250,True,0.08188330904612329
+interp4,interp,4,pca,30,0,Erythroid2,E8.25,E8.25,24,25,254,281,True,0.13945073953106668
+interp4,interp,4,pca,30,0,Erythroid3,E8.25,E8.25,24,25,81,84,True,0.08202034441201
+interp4,interp,4,pca,30,0,Blood progenitors 2,E8.25,E8.25,24,28,40,60,True,3.3409978378241103
+interp4,interp,4,pca,30,0,Erythroid1,E8.25,E8.25,24,28,251,227,True,3.671717769380188
+interp4,interp,4,pca,30,0,Erythroid2,E8.25,E8.25,24,28,254,70,True,3.8662285910588707
+interp4,interp,4,pca,30,0,Blood progenitors 2,E8.25,E8.25,25,28,56,60,True,3.5497986842371567
+interp4,interp,4,pca,30,0,Erythroid1,E8.25,E8.25,25,28,250,227,True,3.8249979396389913
+interp4,interp,4,pca,30,0,Erythroid2,E8.25,E8.25,25,28,281,70,True,4.069883639550989
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,9,74,28,True,0.253221793508164
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,9,196,305,True,0.22708015850933805
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,12,74,29,False,1.8338417017726094
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,12,196,224,False,2.0987381991792375
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,8,13,74,31,False,0.8908311522211108
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,8,13,196,215,False,1.1732812064946607
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,16,74,34,False,2.054463305146559
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,16,196,219,False,1.5065293273473692
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,33,74,30,False,2.0271499286050094
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,33,196,277,False,1.5893945370309694
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,34,74,23,False,2.0279610378318367
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,34,196,236,False,1.5996991088200332
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,8,35,74,22,False,2.4577600269282307
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,8,35,196,251,False,1.7010090237991804
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,12,28,29,False,2.0722617491991215
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,12,305,224,False,2.1981562145112505
+interp4,interp,4,genes,2000,0,Erythroid1,E7.75,E7.75,9,12,62,250,False,2.5822841412619475
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,9,13,28,31,False,1.229541845046807
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,9,13,305,215,False,1.3015737354842507
+interp4,interp,4,genes,2000,0,Erythroid1,E7.75,E7.75,9,13,62,266,False,1.7441103895267247
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,16,28,34,False,1.8026083393825445
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,16,305,219,False,1.4049079428023354
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,9,16,62,784,False,1.4813378930993153
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,33,28,30,False,2.2514193338302704
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,33,305,277,False,1.663365673394118
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,9,33,62,282,False,1.5674208795581208
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,34,28,23,False,2.2934038383595627
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,34,305,236,False,1.690968028920345
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,9,34,62,245,False,1.5284778205499912
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,9,35,28,22,False,2.8078725131147664
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,9,35,305,251,False,1.7926861722080787
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,9,35,62,233,False,1.744734391669926
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E7.75,E7.75,12,13,29,31,True,0.38953453876724
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E7.75,E7.75,12,13,224,215,True,0.463669415071589
+interp4,interp,4,genes,2000,0,Erythroid1,E7.75,E7.75,12,13,250,266,True,0.45939161223661173
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,16,29,34,True,1.9755129038958472
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,16,224,219,True,1.6620233460332052
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,12,16,250,784,True,1.5591156436395757
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,33,29,30,False,2.0047247385579112
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,33,224,277,False,2.030092215840412
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,12,33,250,282,False,2.0583224727667364
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,34,29,23,False,2.07635666970965
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,34,224,236,False,2.0688454285327538
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,12,34,250,245,False,2.0776028027862736
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,12,35,29,22,False,1.3913551015472336
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,12,35,224,251,False,1.247286788039844
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,12,35,250,233,False,1.270550448481714
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,16,31,34,True,1.781390450345537
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,16,215,219,True,1.4644317138725071
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,13,16,266,784,True,1.3937390393401898
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,33,31,30,False,1.1240112270948437
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,33,215,277,False,0.9666771100672555
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,13,33,266,282,False,1.0087359158352953
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,34,31,23,False,1.1077014189016765
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,34,215,236,False,1.0150609024508164
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,13,34,266,245,False,1.0485926576994977
+interp4,interp,4,genes,2000,1,Blood progenitors 1,E7.75,E8.0,13,35,31,22,False,0.9884913720204871
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E7.75,E8.0,13,35,215,251,False,0.7465590054314184
+interp4,interp,4,genes,2000,1,Erythroid1,E7.75,E8.0,13,35,266,233,False,0.807921219924669
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,1.7040255433306513
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,1.4831719879056031
+interp4,interp,4,genes,2000,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,1.4868755155512403
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,1.912836749669463
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,1.4190546297029307
+interp4,interp,4,genes,2000,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,1.4334955780601994
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,1.5916873506824345
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,1.0152004436234812
+interp4,interp,4,genes,2000,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,0.9714545828778149
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,24,219,40,True,0.9343703162982351
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,16,24,784,251,True,0.7648730478661285
+interp4,interp,4,genes,2000,1,Erythroid2,E8.0,E8.25,16,24,167,254,True,0.6515698440035251
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,25,219,56,True,1.0138375861558906
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,16,25,784,250,True,0.8125067596885636
+interp4,interp,4,genes,2000,1,Erythroid2,E8.0,E8.25,16,25,167,281,True,0.6975884140016468
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,28,219,60,True,2.0938987272484333
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,16,28,784,227,True,2.0399764829628886
+interp4,interp,4,genes,2000,1,Erythroid2,E8.0,E8.25,16,28,167,70,True,2.2180886286031374
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.08909218791474771
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.031607392179445526
+interp4,interp,4,genes,2000,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.02984960207188081
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.2510434520987417
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.2533667713845986
+interp4,interp,4,genes,2000,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.2758885861280085
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,24,277,40,False,1.3767240886814385
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,33,24,282,251,False,1.4361151641444998
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,25,277,56,False,1.5013698888078153
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,33,25,282,250,False,1.5009655578697796
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,28,277,60,False,0.789369739071411
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,33,28,282,227,False,0.8480818240850958
+interp4,interp,4,genes,2000,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.23925343599594484
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.21533565906867835
+interp4,interp,4,genes,2000,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.22781742769387137
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,24,236,40,False,1.3718238996974215
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,34,24,245,251,False,1.4583422579849028
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,25,236,56,False,1.5348241584298705
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,34,25,245,250,False,1.5436692369548197
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,28,236,60,False,0.7367731146125891
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,34,28,245,227,False,0.8413429176360694
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,24,251,40,False,0.8051021302590833
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,35,24,233,251,False,0.8595529914696911
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,25,251,56,False,0.9275859635643471
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,35,25,233,250,False,0.9051223823748273
+interp4,interp,4,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,28,251,60,False,0.9246881434661702
+interp4,interp,4,genes,2000,1,Erythroid1,E8.0,E8.25,35,28,233,227,False,1.014578303902077
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E8.25,E8.25,24,25,40,56,True,0.028342467166371677
+interp4,interp,4,genes,2000,0,Erythroid1,E8.25,E8.25,24,25,251,250,True,0.03291690446994977
+interp4,interp,4,genes,2000,0,Erythroid2,E8.25,E8.25,24,25,254,281,True,0.05377698297349909
+interp4,interp,4,genes,2000,0,Erythroid3,E8.25,E8.25,24,25,81,84,True,0.05124581312919574
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E8.25,E8.25,24,28,40,60,True,1.415728978944795
+interp4,interp,4,genes,2000,0,Erythroid1,E8.25,E8.25,24,28,251,227,True,1.4058655475858828
+interp4,interp,4,genes,2000,0,Erythroid2,E8.25,E8.25,24,28,254,70,True,1.4669178871213084
+interp4,interp,4,genes,2000,0,Blood progenitors 2,E8.25,E8.25,25,28,56,60,True,1.5834375353220835
+interp4,interp,4,genes,2000,0,Erythroid1,E8.25,E8.25,25,28,250,227,True,1.4491915729220182
+interp4,interp,4,genes,2000,0,Erythroid2,E8.25,E8.25,25,28,281,70,True,1.5641967851455973
+interp5,interp,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,5.17523922518202
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,4.86584867094346
+interp5,interp,5,pca,30,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,5.127335286161833
+interp5,interp,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,5.589539007609126
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,4.707958121296914
+interp5,interp,5,pca,30,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,4.928203323647251
+interp5,interp,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,4.593704453216393
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,3.598022125990976
+interp5,interp,5,pca,30,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,3.57534582280225
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,24,219,40,True,2.7580296298649127
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,16,24,784,251,True,2.1626418119541695
+interp5,interp,5,pca,30,1,Erythroid2,E8.0,E8.25,16,24,167,254,True,1.7954231824368003
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,25,219,56,True,2.5366926264687564
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,16,25,784,250,True,2.160632783780465
+interp5,interp,5,pca,30,1,Erythroid2,E8.0,E8.25,16,25,167,281,True,1.6913980289791413
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,16,28,219,60,True,4.824736089617675
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,16,28,784,227,True,4.764723523252932
+interp5,interp,5,pca,30,1,Erythroid2,E8.0,E8.25,16,28,167,70,True,5.126073325563525
+interp5,interp,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.017520042551653958
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.04387285491431747
+interp5,interp,5,pca,30,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.05290914292832216
+interp5,interp,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.6857332604351303
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.6360854252623991
+interp5,interp,5,pca,30,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.739859118666975
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,24,277,40,False,3.964995685749969
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,33,24,282,251,False,4.5103541170461385
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,25,277,56,False,3.970170212233201
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,33,25,282,250,False,4.45473255277459
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,33,28,277,60,False,1.154316683502305
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,33,28,282,227,False,1.5078513087131222
+interp5,interp,5,pca,30,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.5542088628093147
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.6067699672700417
+interp5,interp,5,pca,30,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.6822675970185159
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,24,236,40,False,3.9420924411692404
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,34,24,245,251,False,4.512953720635708
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,25,236,56,False,4.012981460626781
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,34,25,245,250,False,4.462856417630316
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,34,28,236,60,False,1.2241967767645576
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,34,28,245,227,False,1.604027831680729
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,24,251,40,False,2.5317920081883454
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,35,24,233,251,False,3.057275644275287
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,25,251,56,False,2.559549932729194
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,35,25,233,250,False,2.8827620614391405
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.0,E8.25,35,28,251,60,False,1.3465612747402655
+interp5,interp,5,pca,30,1,Erythroid1,E8.0,E8.25,35,28,233,227,False,1.7090254151786324
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.25,E8.25,24,25,40,56,True,0.049365422303958795
+interp5,interp,5,pca,30,0,Erythroid1,E8.25,E8.25,24,25,251,250,True,0.07421689560961475
+interp5,interp,5,pca,30,0,Erythroid2,E8.25,E8.25,24,25,254,281,True,0.1017378568523295
+interp5,interp,5,pca,30,0,Erythroid3,E8.25,E8.25,24,25,81,84,True,0.05797555582337033
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.25,E8.25,24,28,40,60,True,2.290990853890346
+interp5,interp,5,pca,30,0,Erythroid1,E8.25,E8.25,24,28,251,227,True,2.3728689654488777
+interp5,interp,5,pca,30,0,Erythroid2,E8.25,E8.25,24,28,254,70,True,2.5553513056498227
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,24,17,40,30,True,7.436006863830876
+interp5,interp,5,pca,30,1,Erythroid3,E8.25,E8.5,24,17,81,491,True,4.392201497249663
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,24,29,40,33,False,6.309303418689174
+interp5,interp,5,pca,30,1,Erythroid1,E8.25,E8.5,24,29,251,23,False,4.3274357522244875
+interp5,interp,5,pca,30,1,Erythroid2,E8.25,E8.5,24,29,254,71,False,2.5554538340527824
+interp5,interp,5,pca,30,1,Erythroid3,E8.25,E8.5,24,29,81,550,False,2.9436922655564475
+interp5,interp,5,pca,30,1,Erythroid2,E8.25,E8.5,24,36,254,130,False,2.928551769440272
+interp5,interp,5,pca,30,1,Erythroid3,E8.25,E8.5,24,36,81,805,False,3.5859039716333703
+interp5,interp,5,pca,30,1,Erythroid1,E8.25,E8.5,24,37,251,24,False,3.656426302667681
+interp5,interp,5,pca,30,1,Erythroid2,E8.25,E8.5,24,37,254,91,False,3.4960351635673783
+interp5,interp,5,pca,30,1,Erythroid3,E8.25,E8.5,24,37,81,672,False,4.056962707573386
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.25,E8.25,25,28,56,60,True,2.3999661677353377
+interp5,interp,5,pca,30,0,Erythroid1,E8.25,E8.25,25,28,250,227,True,2.4028322320235427
+interp5,interp,5,pca,30,0,Erythroid2,E8.25,E8.25,25,28,281,70,True,2.63558395385487
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,25,17,56,30,True,7.095631689577825
+interp5,interp,5,pca,30,1,Erythroid3,E8.25,E8.5,25,17,84,491,True,4.926402348361633
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,25,29,56,33,False,6.139088044276441
+interp5,interp,5,pca,30,1,Erythroid1,E8.25,E8.5,25,29,250,23,False,4.713128902865054
+interp5,interp,5,pca,30,1,Erythroid2,E8.25,E8.5,25,29,281,71,False,2.9774503124638922
+interp5,interp,5,pca,30,1,Erythroid3,E8.25,E8.5,25,29,84,550,False,3.4961830983248214
+interp5,interp,5,pca,30,1,Erythroid2,E8.25,E8.5,25,36,281,130,False,2.7802384860327827
+interp5,interp,5,pca,30,1,Erythroid3,E8.25,E8.5,25,36,84,805,False,3.5943889366997945
+interp5,interp,5,pca,30,1,Erythroid1,E8.25,E8.5,25,37,250,24,False,3.482206140481834
+interp5,interp,5,pca,30,1,Erythroid2,E8.25,E8.5,25,37,281,91,False,3.362347917978945
+interp5,interp,5,pca,30,1,Erythroid3,E8.25,E8.5,25,37,84,672,False,4.084198208403547
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,28,17,60,30,True,9.505014748772087
+interp5,interp,5,pca,30,1,Blood progenitors 2,E8.25,E8.5,28,29,60,33,False,7.701934227603106
+interp5,interp,5,pca,30,1,Erythroid1,E8.25,E8.5,28,29,227,23,False,4.735590226108498
+interp5,interp,5,pca,30,1,Erythroid2,E8.25,E8.5,28,29,70,71,False,2.5964401149300524
+interp5,interp,5,pca,30,1,Erythroid2,E8.25,E8.5,28,36,70,130,False,3.0073953169713086
+interp5,interp,5,pca,30,1,Erythroid1,E8.25,E8.5,28,37,227,24,False,3.2660095432037064
+interp5,interp,5,pca,30,1,Erythroid2,E8.25,E8.5,28,37,70,91,False,2.790402102472581
+interp5,interp,5,pca,30,0,Blood progenitors 2,E8.5,E8.5,17,29,30,33,False,1.9396547786424723
+interp5,interp,5,pca,30,0,Erythroid3,E8.5,E8.5,17,29,491,550,False,2.6844604010488764
+interp5,interp,5,pca,30,0,Erythroid3,E8.5,E8.5,17,36,491,805,False,3.814897557920342
+interp5,interp,5,pca,30,0,Erythroid3,E8.5,E8.5,17,37,491,672,False,3.8131565105153937
+interp5,interp,5,pca,30,0,Erythroid2,E8.5,E8.5,29,36,71,130,True,3.2242167691368078
+interp5,interp,5,pca,30,0,Erythroid3,E8.5,E8.5,29,36,550,805,True,3.1085350576387922
+interp5,interp,5,pca,30,0,Erythroid1,E8.5,E8.5,29,37,23,24,True,3.971213313215637
+interp5,interp,5,pca,30,0,Erythroid2,E8.5,E8.5,29,37,71,91,True,3.679931917825747
+interp5,interp,5,pca,30,0,Erythroid3,E8.5,E8.5,29,37,550,672,True,3.7908592435344977
+interp5,interp,5,pca,30,0,Erythroid2,E8.5,E8.5,36,37,130,91,True,0.3174105079372831
+interp5,interp,5,pca,30,0,Erythroid3,E8.5,E8.5,36,37,805,672,True,0.39467555263441767
+interp5,interp,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,33,34,30,False,1.7835361466996744
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,33,219,277,False,1.535098412241748
+interp5,interp,5,genes,2000,0,Erythroid1,E8.0,E8.0,16,33,784,282,False,1.5763840362163855
+interp5,interp,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,34,34,23,False,2.00721323040203
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,34,219,236,False,1.4925941331073496
+interp5,interp,5,genes,2000,0,Erythroid1,E8.0,E8.0,16,34,784,245,False,1.5327394260833849
+interp5,interp,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,16,35,34,22,False,1.688360037180228
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,16,35,219,251,False,1.1411867399446152
+interp5,interp,5,genes,2000,0,Erythroid1,E8.0,E8.0,16,35,784,233,False,1.0877321786047887
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,24,219,40,True,0.9950590934229488
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,16,24,784,251,True,0.8043213110769258
+interp5,interp,5,genes,2000,1,Erythroid2,E8.0,E8.25,16,24,167,254,True,0.6545546495129315
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,25,219,56,True,0.9943672269283326
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,16,25,784,250,True,0.839895817071497
+interp5,interp,5,genes,2000,1,Erythroid2,E8.0,E8.25,16,25,167,281,True,0.6811113292696902
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,16,28,219,60,True,2.1775943987526496
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,16,28,784,227,True,2.083698609258576
+interp5,interp,5,genes,2000,1,Erythroid2,E8.0,E8.25,16,28,167,70,True,2.2763786613805443
+interp5,interp,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,34,30,23,True,0.0958255063564053
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,34,277,236,True,0.031113224382558258
+interp5,interp,5,genes,2000,0,Erythroid1,E8.0,E8.0,33,34,282,245,True,0.028401873622755147
+interp5,interp,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,33,35,30,22,True,0.23302375976634337
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,33,35,277,251,True,0.22161734426235213
+interp5,interp,5,genes,2000,0,Erythroid1,E8.0,E8.0,33,35,282,233,True,0.24431768203149673
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,24,277,40,False,1.3905621359156228
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,33,24,282,251,False,1.5477021450791248
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,25,277,56,False,1.4482141136672517
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,33,25,282,250,False,1.5522070680885136
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,33,28,277,60,False,0.8747903217080761
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,33,28,282,227,False,0.9718729378817734
+interp5,interp,5,genes,2000,0,Blood progenitors 1,E8.0,E8.0,34,35,23,22,True,0.22370250598519803
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.0,E8.0,34,35,236,251,True,0.19907986386525423
+interp5,interp,5,genes,2000,0,Erythroid1,E8.0,E8.0,34,35,245,233,True,0.20325398008643347
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,24,236,40,False,1.4164220514144574
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,34,24,245,251,False,1.5878005932622337
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,25,236,56,False,1.5083715026900641
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,34,25,245,250,False,1.6037151197072745
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,34,28,236,60,False,0.8318681078749179
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,34,28,245,227,False,0.9656021637390246
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,24,251,40,False,0.9303323212305408
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,35,24,233,251,False,1.0440807607794795
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,25,251,56,False,0.9879988015721111
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,35,25,233,250,False,1.0289808183491367
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.0,E8.25,35,28,251,60,False,0.9797258465528564
+interp5,interp,5,genes,2000,1,Erythroid1,E8.0,E8.25,35,28,233,227,False,1.1011345407822262
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.25,E8.25,24,25,40,56,True,0.016542211970449472
+interp5,interp,5,genes,2000,0,Erythroid1,E8.25,E8.25,24,25,251,250,True,0.03871977108630276
+interp5,interp,5,genes,2000,0,Erythroid2,E8.25,E8.25,24,25,254,281,True,0.05738499286238152
+interp5,interp,5,genes,2000,0,Erythroid3,E8.25,E8.25,24,25,81,84,True,0.02844253284407472
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.25,E8.25,24,28,40,60,True,1.3862304465120943
+interp5,interp,5,genes,2000,0,Erythroid1,E8.25,E8.25,24,28,251,227,True,1.40111715970923
+interp5,interp,5,genes,2000,0,Erythroid2,E8.25,E8.25,24,28,254,70,True,1.462968704354811
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,24,17,40,30,True,2.781322980906573
+interp5,interp,5,genes,2000,1,Erythroid3,E8.25,E8.5,24,17,81,491,True,1.749179477364045
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,24,29,40,33,False,2.470860864059599
+interp5,interp,5,genes,2000,1,Erythroid1,E8.25,E8.5,24,29,251,23,False,1.6685764581647113
+interp5,interp,5,genes,2000,1,Erythroid2,E8.25,E8.5,24,29,254,71,False,1.1245237193100834
+interp5,interp,5,genes,2000,1,Erythroid3,E8.25,E8.5,24,29,81,550,False,1.3149205611918084
+interp5,interp,5,genes,2000,1,Erythroid2,E8.25,E8.5,24,36,254,130,False,1.0670753920880252
+interp5,interp,5,genes,2000,1,Erythroid3,E8.25,E8.5,24,36,81,805,False,1.3797873266752951
+interp5,interp,5,genes,2000,1,Erythroid1,E8.25,E8.5,24,37,251,24,False,1.4005123365189611
+interp5,interp,5,genes,2000,1,Erythroid2,E8.25,E8.5,24,37,254,91,False,1.3294575914164461
+interp5,interp,5,genes,2000,1,Erythroid3,E8.25,E8.5,24,37,81,672,False,1.6166190031489833
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.25,E8.25,25,28,56,60,True,1.5032478851110476
+interp5,interp,5,genes,2000,0,Erythroid1,E8.25,E8.25,25,28,250,227,True,1.3694571461631107
+interp5,interp,5,genes,2000,0,Erythroid2,E8.25,E8.25,25,28,281,70,True,1.4998381544831325
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,25,17,56,30,True,2.843039374041801
+interp5,interp,5,genes,2000,1,Erythroid3,E8.25,E8.5,25,17,84,491,True,2.060697953124894
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,25,29,56,33,False,2.532812104005494
+interp5,interp,5,genes,2000,1,Erythroid1,E8.25,E8.5,25,29,250,23,False,1.8096745617862453
+interp5,interp,5,genes,2000,1,Erythroid2,E8.25,E8.5,25,29,281,71,False,1.3486143470840588
+interp5,interp,5,genes,2000,1,Erythroid3,E8.25,E8.5,25,29,84,550,False,1.6501517984859326
+interp5,interp,5,genes,2000,1,Erythroid2,E8.25,E8.5,25,36,281,130,False,1.0981474613342037
+interp5,interp,5,genes,2000,1,Erythroid3,E8.25,E8.5,25,36,84,805,False,1.4958459602759326
+interp5,interp,5,genes,2000,1,Erythroid1,E8.25,E8.5,25,37,250,24,False,1.3686618171096328
+interp5,interp,5,genes,2000,1,Erythroid2,E8.25,E8.5,25,37,281,91,False,1.3696142363541775
+interp5,interp,5,genes,2000,1,Erythroid3,E8.25,E8.5,25,37,84,672,False,1.7311218131053607
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,28,17,60,30,True,4.424286310713072
+interp5,interp,5,genes,2000,1,Blood progenitors 2,E8.25,E8.5,28,29,60,33,False,3.4507312644616412
+interp5,interp,5,genes,2000,1,Erythroid1,E8.25,E8.5,28,29,227,23,False,2.0503255256730206
+interp5,interp,5,genes,2000,1,Erythroid2,E8.25,E8.5,28,29,70,71,False,1.1877003814971197
+interp5,interp,5,genes,2000,1,Erythroid2,E8.25,E8.5,28,36,70,130,False,1.3915418763672491
+interp5,interp,5,genes,2000,1,Erythroid1,E8.25,E8.5,28,37,227,24,False,1.5249960116551158
+interp5,interp,5,genes,2000,1,Erythroid2,E8.25,E8.5,28,37,70,91,False,1.278421982692052
+interp5,interp,5,genes,2000,0,Blood progenitors 2,E8.5,E8.5,17,29,30,33,False,0.8122690411913815
+interp5,interp,5,genes,2000,0,Erythroid3,E8.5,E8.5,17,29,491,550,False,0.8958720343895656
+interp5,interp,5,genes,2000,0,Erythroid3,E8.5,E8.5,17,36,491,805,False,1.2779176873061253
+interp5,interp,5,genes,2000,0,Erythroid3,E8.5,E8.5,17,37,491,672,False,1.3025184451988068
+interp5,interp,5,genes,2000,0,Erythroid2,E8.5,E8.5,29,36,71,130,True,1.0425610964756764
+interp5,interp,5,genes,2000,0,Erythroid3,E8.5,E8.5,29,36,550,805,True,1.030197522600929
+interp5,interp,5,genes,2000,0,Erythroid1,E8.5,E8.5,29,37,23,24,True,1.3916288183177912
+interp5,interp,5,genes,2000,0,Erythroid2,E8.5,E8.5,29,37,71,91,True,1.2076654432759746
+interp5,interp,5,genes,2000,0,Erythroid3,E8.5,E8.5,29,37,550,672,True,1.2720229602804345
+interp5,interp,5,genes,2000,0,Erythroid2,E8.5,E8.5,36,37,130,91,True,0.12358638701770985
+interp5,interp,5,genes,2000,0,Erythroid3,E8.5,E8.5,36,37,805,672,True,0.15460777469651887

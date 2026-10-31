@@ -1,0 +1,133 @@
+S_fixed per origin: {'1': 36.53, '2': 87.27, '3': 130.68, '4': 106.89, '5': 115.5}
+floors: {'1': {'sd_fixed': 0.1897, 'energy': 0.035, 'mmd': 0.0018, 'sd_orig': 0.615}, '2': {'sd_fixed': 0.0799, 'energy': 0.019, 'mmd': 0.0008, 'sd_orig': 0.3666}, '3': {'sd_fixed': 0.0693, 'energy': 0.0144, 'mmd': 0.0005, 'sd_orig': 0.295}, '4': {'sd_fixed': 0.1089, 'energy': 0.0153, 'mmd': 0.0004, 'sd_orig': 0.3546}, '5': {'sd_fixed': 0.0561, 'energy': 0.0085, 'mmd': 0.0002, 'sd_orig': 0.3341}}
+reproduction of the first run (max abs diff over origins x families): {'energy': 1.0246736792396405e-10, 'pearson': 1.3517019448183731e-10, 'p200_up': 0.0, 'p200_down': 0.0, 'sd_orig': 7.771561172376096e-16}
+
+[A_recorded] metric sd_fixed (lower better)
+origin    persist  meanshift         ot uot_growth     vel_ss    vel_dyn  ot_vel_ss ot_vel_dyn
+     1      0.432      0.807      0.799      0.789      0.403      0.432      0.536      0.567
+     2      0.557      0.932      1.159      0.852      0.899      0.556      0.562      0.581
+     3      0.406      0.742      0.975      0.667      0.398      0.477      0.416      0.471
+     4      0.462      0.691      0.687      0.700      0.448      0.459      0.464      0.477
+     5      0.656      0.569      0.493      0.520      0.803      0.852      0.486      0.656
+  OT helps: False  (ot: 1/4 mean_ok=False, uot_growth: 1/4 mean_ok=False, ot_vel_ss: 1/4 mean_ok=True, ot_vel_dyn: 0/4 mean_ok=False)
+  velocity helps: True  (vel_ss: 3/4 mean_ok=True, vel_dyn: 3/4 mean_ok=True, ot_vel_ss: 4/4 mean_ok=True, ot_vel_dyn: 3/4 mean_ok=True)
+  sink helps: False  (uot vs ot 2/4 mean_ok=True)
+  extras: velocity vs ot AND baselines False; log-ratio means {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+
+[A_recorded] metric energy (lower better)
+origin    persist  meanshift         ot uot_growth     vel_ss    vel_dyn  ot_vel_ss ot_vel_dyn
+     1      0.706      3.255      3.240      3.182      0.701      0.706      1.726      1.718
+     2      1.756      5.304      4.931      4.775      4.033      1.743      1.992      2.039
+     3      1.995      5.798      5.764      5.093      1.985      2.323      2.330      2.539
+     4      2.796      5.363      5.476      5.693      2.731      2.782      3.026      3.106
+     5      5.130      4.654      4.133      4.448      7.530      6.683      4.185      5.208
+  OT helps: False  (ot: 1/4 mean_ok=False, uot_growth: 1/4 mean_ok=False, ot_vel_ss: 1/4 mean_ok=True, ot_vel_dyn: 0/4 mean_ok=False)
+  velocity helps: True  (vel_ss: 3/4 mean_ok=True, vel_dyn: 3/4 mean_ok=True, ot_vel_ss: 3/4 mean_ok=True, ot_vel_dyn: 3/4 mean_ok=True)
+  sink helps: False  (uot vs ot 2/4 mean_ok=True)
+  extras: velocity vs ot AND baselines False; log-ratio means {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+
+[A_recorded] metric mmd (lower better)
+origin    persist  meanshift         ot uot_growth     vel_ss    vel_dyn  ot_vel_ss ot_vel_dyn
+     1      0.058      0.304      0.302      0.297      0.058      0.058      0.154      0.154
+     2      0.105      0.325      0.304      0.292      0.234      0.104      0.119      0.122
+     3      0.095      0.286      0.284      0.251      0.095      0.111      0.111      0.122
+     4      0.150      0.294      0.301      0.313      0.146      0.149      0.162      0.167
+     5      0.263      0.239      0.210      0.227      0.390      0.351      0.213      0.270
+  OT helps: False  (ot: 1/4 mean_ok=False, uot_growth: 1/4 mean_ok=False, ot_vel_ss: 1/4 mean_ok=True, ot_vel_dyn: 0/4 mean_ok=False)
+  velocity helps: True  (vel_ss: 3/4 mean_ok=True, vel_dyn: 3/4 mean_ok=True, ot_vel_ss: 3/4 mean_ok=True, ot_vel_dyn: 3/4 mean_ok=True)
+  sink helps: False  (uot vs ot 2/4 mean_ok=True)
+  extras: velocity vs ot AND baselines False; log-ratio means {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+
+[A_recorded] metric sd_orig (lower better)
+origin    persist  meanshift         ot uot_growth     vel_ss    vel_dyn  ot_vel_ss ot_vel_dyn
+     1      0.751      0.845      0.846      0.844      0.760      0.751      0.819      0.806
+     2      0.885      1.044      0.956      1.049      1.335      0.882      0.929      0.932
+     3      0.331      0.736      0.799      0.600      0.328      0.482      0.390      0.506
+     4      0.773      0.744      0.725      0.753      0.774      0.772      0.747      0.746
+     5      0.732      0.728      0.722      0.698      0.795      0.741      0.736      0.725
+  OT helps: False  (ot: 2/4 mean_ok=False, uot_growth: 1/4 mean_ok=False, ot_vel_ss: 0/4 mean_ok=False, ot_vel_dyn: 1/4 mean_ok=False)
+  velocity helps: False  (vel_ss: 1/4 mean_ok=False, vel_dyn: 2/4 mean_ok=True, ot_vel_ss: 2/4 mean_ok=True, ot_vel_dyn: 2/4 mean_ok=True)
+  sink helps: False  (uot vs ot 2/4 mean_ok=True)
+  extras: velocity vs ot AND baselines False; log-ratio means {'OT_helps': False, 'velocity_helps': False, 'sink_helps': False}
+[A_recorded] gene PCC of mean change (higher better) under the recorded hp:
+     1      0.049     -0.674     -0.675     -0.670      0.011     -0.021     -0.473     -0.675
+     2     -0.001     -0.029     -0.018     -0.118      0.015      0.087      0.003     -0.013
+     3     -0.063     -0.015      0.004     -0.095      0.003      0.025      0.004      0.024
+     4      0.001     -0.098     -0.150     -0.361      0.043      0.051     -0.001     -0.131
+     5      0.135      0.450      0.503      0.423      0.037      0.039      0.350      0.119
+
+[B_sd_fixed] metric sd_fixed (lower better)
+origin    persist  meanshift         ot uot_growth     vel_ss    vel_dyn  ot_vel_ss ot_vel_dyn
+     1      0.432      0.807      0.799      0.789      0.403      0.432      0.536      0.567
+     2      0.557      0.932      0.905      0.852      0.547      0.557      0.641      0.581
+     3      0.406      0.742      0.763      0.667      0.377      0.477      0.460      0.471
+     4      0.462      0.691      0.687      0.697      0.450      0.449      0.443      0.470
+     5      0.656      0.569      0.493      0.520      0.664      0.685      0.536      0.555
+  OT helps: False  (ot: 1/4 mean_ok=False, uot_growth: 1/4 mean_ok=False, ot_vel_ss: 2/4 mean_ok=True, ot_vel_dyn: 1/4 mean_ok=True)
+  velocity helps: True  (vel_ss: 3/4 mean_ok=True, vel_dyn: 3/4 mean_ok=True, ot_vel_ss: 3/4 mean_ok=True, ot_vel_dyn: 3/4 mean_ok=True)
+  sink helps: False  (uot vs ot 2/4 mean_ok=True)
+  extras: velocity vs ot AND baselines True; log-ratio means {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+[B_sd_fixed] gene PCC of mean change (higher better) under the sd_fixed hp:
+     1      0.049     -0.674     -0.675     -0.670      0.011     -0.021     -0.473     -0.675
+     2     -0.001     -0.029     -0.018     -0.118      0.015      0.087      0.014     -0.013
+     3     -0.063     -0.015      0.004     -0.095      0.003      0.025      0.003      0.024
+     4      0.001     -0.098     -0.150     -0.353      0.043      0.051      0.032     -0.061
+     5      0.135      0.450      0.503      0.423      0.037      0.039      0.173      0.308
+
+[B_energy] metric energy (lower better)
+origin    persist  meanshift         ot uot_growth     vel_ss    vel_dyn  ot_vel_ss ot_vel_dyn
+     1      0.706      3.255      3.240      3.182      0.701      0.706      1.726      1.718
+     2      1.756      5.304      4.931      4.775      2.403      1.749      2.834      2.039
+     3      1.995      5.798      5.764      5.093      2.048      2.323      2.351      2.539
+     4      2.796      5.363      5.055      5.673      2.756      2.751      3.026      3.106
+     5      5.130      4.654      3.984      4.448      5.542      5.549      4.597      5.208
+  OT helps: False  (ot: 1/4 mean_ok=False, uot_growth: 1/4 mean_ok=False, ot_vel_ss: 1/4 mean_ok=False, ot_vel_dyn: 0/4 mean_ok=False)
+  velocity helps: True  (vel_ss: 3/4 mean_ok=True, vel_dyn: 3/4 mean_ok=True, ot_vel_ss: 3/4 mean_ok=True, ot_vel_dyn: 3/4 mean_ok=True)
+  sink helps: False  (uot vs ot 2/4 mean_ok=False)
+  extras: velocity vs ot AND baselines False; log-ratio means {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+[B_energy] gene PCC of mean change (higher better) under the energy hp:
+     1      0.049     -0.674     -0.675     -0.670      0.011     -0.021     -0.473     -0.675
+     2     -0.001     -0.029     -0.018     -0.118      0.015      0.087      0.014     -0.013
+     3     -0.063     -0.015      0.004     -0.095      0.003      0.025      0.003      0.024
+     4      0.001     -0.098     -0.150     -0.353      0.043      0.051     -0.001     -0.131
+     5      0.135      0.450      0.503      0.423      0.037      0.039      0.212      0.119
+
+[B_mmd] metric mmd (lower better)
+origin    persist  meanshift         ot uot_growth     vel_ss    vel_dyn  ot_vel_ss ot_vel_dyn
+     1      0.058      0.304      0.302      0.297      0.058      0.058      0.154      0.154
+     2      0.105      0.325      0.304      0.292      0.143      0.104      0.169      0.122
+     3      0.095      0.286      0.284      0.202      0.097      0.111      0.112      0.122
+     4      0.150      0.294      0.279      0.312      0.148      0.147      0.162      0.167
+     5      0.263      0.239      0.205      0.227      0.285      0.286      0.246      0.270
+  OT helps: False  (ot: 1/4 mean_ok=False, uot_growth: 1/4 mean_ok=False, ot_vel_ss: 0/4 mean_ok=False, ot_vel_dyn: 0/4 mean_ok=False)
+  velocity helps: True  (vel_ss: 3/4 mean_ok=True, vel_dyn: 3/4 mean_ok=True, ot_vel_ss: 3/4 mean_ok=True, ot_vel_dyn: 3/4 mean_ok=True)
+  sink helps: False  (uot vs ot 2/4 mean_ok=True)
+  extras: velocity vs ot AND baselines False; log-ratio means {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+[B_mmd] gene PCC of mean change (higher better) under the mmd hp:
+     1      0.049     -0.674     -0.675     -0.670      0.011     -0.021     -0.473     -0.675
+     2     -0.001     -0.029     -0.018     -0.118      0.015      0.087      0.014     -0.013
+     3     -0.063     -0.015      0.004     -0.373      0.003      0.025      0.003      0.024
+     4      0.001     -0.098     -0.150     -0.353      0.043      0.051     -0.001     -0.131
+     5      0.135      0.450      0.503      0.423      0.037      0.039      0.173      0.119
+
+DESCRIPTIVE spread-bias check (persist + N(0, sigma^2), vs true next stage):
+  origin 2 sigma  0.0: sd_orig 0.8850 (scale 56.3)  sd_fixed 0.5568  energy 1.7555  mmd 0.1045
+  origin 2 sigma  0.5: sd_orig 0.8692 (scale 63.0)  sd_fixed 0.6253  energy 1.8211  mmd 0.1091
+  origin 2 sigma  1.0: sd_orig 0.8146 (scale 88.4)  sd_fixed 0.8251  energy 2.1218  mmd 0.1320
+  origin 2 sigma  2.0: sd_orig 0.8367 (scale 180.9)  sd_fixed 1.6529  energy 3.6280  mmd 0.2899
+  origin 2 sigma  4.0: sd_orig 0.9261 (scale 549.0)  sd_fixed 5.3909  energy 8.7303  mmd 0.6993
+  origin 3 sigma  0.0: sd_orig 0.3308 (scale 153.3)  sd_fixed 0.4057  energy 1.9955  mmd 0.0951
+  origin 3 sigma  0.5: sd_orig 0.3603 (scale 160.5)  sd_fixed 0.4630  energy 2.0056  mmd 0.0961
+  origin 3 sigma  1.0: sd_orig 0.4393 (scale 181.9)  sd_fixed 0.6073  energy 2.2210  mmd 0.1085
+  origin 3 sigma  2.0: sd_orig 0.5914 (scale 267.6)  sd_fixed 1.1380  energy 3.3170  mmd 0.1953
+  origin 3 sigma  4.0: sd_orig 0.7833 (scale 635.7)  sd_fixed 3.4773  energy 7.6395  mmd 0.5556
+  origin 4 sigma  0.0: sd_orig 0.7734 (scale 69.0)  sd_fixed 0.4615  energy 2.7958  mmd 0.1498
+  origin 4 sigma  0.5: sd_orig 0.7710 (scale 76.4)  sd_fixed 0.5353  energy 2.7611  mmd 0.1483
+  origin 4 sigma  1.0: sd_orig 0.7430 (scale 101.0)  sd_fixed 0.7036  energy 2.8122  mmd 0.1514
+  origin 4 sigma  2.0: sd_orig 0.7862 (scale 192.2)  sd_fixed 1.3564  energy 3.8450  mmd 0.2418
+  origin 4 sigma  4.0: sd_orig 0.8879 (scale 557.2)  sd_fixed 4.2593  energy 8.1246  mmd 0.6025
+  origin 5 sigma  0.0: sd_orig 0.7324 (scale 105.0)  sd_fixed 0.6559  energy 5.1297  mmd 0.2628
+  origin 5 sigma  0.5: sd_orig 0.7429 (scale 113.2)  sd_fixed 0.7261  energy 5.0233  mmd 0.2579
+  origin 5 sigma  1.0: sd_orig 0.7682 (scale 135.7)  sd_fixed 0.8982  energy 4.9518  mmd 0.2524
+  origin 5 sigma  2.0: sd_orig 0.7953 (scale 228.8)  sd_fixed 1.5033  energy 5.5683  mmd 0.3033
+  origin 5 sigma  4.0: sd_orig 0.8991 (scale 579.5)  sd_fixed 4.1565  energy 9.3368  mmd 0.6187

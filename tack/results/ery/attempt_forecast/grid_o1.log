@@ -1,0 +1,5 @@
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\ery\diag_metric\ery_forecast_fixed.py:115: RuntimeWarning: divide by zero encountered in log
+  f_new = eps * np.log(u)
+C:\Users\Gabriele\My Drive\PhD & Research\Temporal GNN\tack\results\ery\diag_metric\ery_forecast_fixed.py:116: RuntimeWarning: invalid value encountered in subtract
+  done = np.abs(f_new - f).max() < tol
+origin 1 final grid 7s rho=0.697

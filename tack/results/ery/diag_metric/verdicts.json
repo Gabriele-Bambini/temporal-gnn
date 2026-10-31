@@ -1,0 +1,5911 @@
+{
+ "modes": {
+  "A_recorded": {
+   "sd_fixed": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.8284352508117865,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.4304563032947997,
+       "meanshift": 0.0850676612232445
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.6846672596339336,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.2766707770433088,
+       "meanshift": -0.06871786502824652
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.48206232887291567,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": -0.06490077532286209,
+       "meanshift": -0.4102894173944174
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.546235444273756,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.056141177306417996,
+       "meanshift": -0.28924746476513724
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.6369916423605919,
+      "comparator_means": {
+       "ot": 0.8284352508117865
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.2722949108153323
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.5860910274246219,
+      "comparator_means": {
+       "ot": 0.8284352508117865
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.32610115029624953
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.48206232887291567,
+      "comparator_means": {
+       "ot": 0.8284352508117865
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.4953570786176619
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.546235444273756,
+      "comparator_means": {
+       "ot": 0.8284352508117865
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.3743151259883818
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "4"
+      ],
+      "mean": 0.6369916423605919,
+      "comparator_means": {
+       "ot": 0.8284352508117865,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.2722949108153323,
+       "persist": 0.15816139247946748,
+       "meanshift": -0.18722724959208775
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.5860910274246219,
+      "comparator_means": {
+       "ot": 0.8284352508117865,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.32610115029624953,
+       "persist": 0.1043551529985502,
+       "meanshift": -0.24103348907300515
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.48206232887291567,
+      "comparator_means": {
+       "ot": 0.8284352508117865,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.4953570786176619,
+       "persist": -0.06490077532286209,
+       "meanshift": -0.4102894173944174
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.546235444273756,
+      "comparator_means": {
+       "ot": 0.8284352508117865,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.3743151259883818,
+       "persist": 0.056141177306417996,
+       "meanshift": -0.28924746476513724
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 0.6846672596339336,
+     "comparator_means": {
+      "ot": 0.8284352508117865
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.15378552625149092
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "energy": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 5.075829366865037,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6373965527572057,
+       "meanshift": -0.04427440055804876
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 5.002155611953791,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6265130660554985,
+       "meanshift": -0.05515788725975621
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 2.883015884744097,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.03914217311634393,
+       "meanshift": -0.6425287801989108
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.222976393267172,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.12770858731500737,
+       "meanshift": -0.5539623660002473
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 4.069690194916627,
+      "comparator_means": {
+       "ot": 5.075829366865037
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.3406718952101606
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.3828310963346597,
+      "comparator_means": {
+       "ot": 5.075829366865037
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5362903817459631
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 2.883015884744097,
+      "comparator_means": {
+       "ot": 5.075829366865037
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.598254379640862
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.222976393267172,
+      "comparator_means": {
+       "ot": 5.075829366865037
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5096879654421985
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "4"
+      ],
+      "mean": 4.069690194916627,
+      "comparator_means": {
+       "ot": 5.075829366865037,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.3406718952101606,
+       "persist": 0.2967246575470453,
+       "meanshift": -0.38494629576820943
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 3.3828310963346597,
+      "comparator_means": {
+       "ot": 5.075829366865037,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5362903817459631,
+       "persist": 0.10110617101124264,
+       "meanshift": -0.5805647823040121
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 2.883015884744097,
+      "comparator_means": {
+       "ot": 5.075829366865037,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.598254379640862,
+       "persist": 0.03914217311634393,
+       "meanshift": -0.6425287801989108
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.222976393267172,
+      "comparator_means": {
+       "ot": 5.075829366865037,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5096879654421985,
+       "persist": 0.12770858731500737,
+       "meanshift": -0.5539623660002473
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 5.002155611953791,
+     "comparator_means": {
+      "ot": 5.075829366865037
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.010883486701707405
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "mmd": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.2747504917104917,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6587473971903142,
+       "meanshift": -0.0448169394524752
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.27071962889167356,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6469812097469193,
+       "meanshift": -0.05658312689586996
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.15142419298979326,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.03936570124457236,
+       "meanshift": -0.664198635398217
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.17025808061856784,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.13460389044927,
+       "meanshift": -0.5689604461935193
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.21617401311155393,
+      "comparator_means": {
+       "ot": 0.2747504917104917
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.366348076702131
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.17856479710156015,
+      "comparator_means": {
+       "ot": 0.2747504917104917
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5514485966204706
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.15142419298979326,
+      "comparator_means": {
+       "ot": 0.2747504917104917
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.6193816959457418
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.17025808061856784,
+      "comparator_means": {
+       "ot": 0.2747504917104917
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5241435067410442
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "4"
+      ],
+      "mean": 0.21617401311155393,
+      "comparator_means": {
+       "ot": 0.2747504917104917,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.366348076702131,
+       "persist": 0.29239932048818323,
+       "meanshift": -0.4111650161546061
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.17856479710156015,
+      "comparator_means": {
+       "ot": 0.2747504917104917,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5514485966204706,
+       "persist": 0.10729880056984352,
+       "meanshift": -0.5962655360729459
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.15142419298979326,
+      "comparator_means": {
+       "ot": 0.2747504917104917,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.6193816959457418,
+       "persist": 0.03936570124457236,
+       "meanshift": -0.664198635398217
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.17025808061856784,
+      "comparator_means": {
+       "ot": 0.2747504917104917,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5241435067410442,
+       "persist": 0.13460389044927,
+       "meanshift": -0.5689604461935193
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 0.27071962889167356,
+     "comparator_means": {
+      "ot": 0.2747504917104917
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.01176618744339479
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "sd_orig": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 2,
+      "win_origins": [
+       "4",
+       "5"
+      ],
+      "mean": 0.8006182882815334,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.22019439278769748,
+       "meanshift": -0.009618923811565573
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.7750703744506703,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.17283269780528976,
+       "meanshift": -0.05698061879397329
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.7004715235630632,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.04575698670756817,
+       "meanshift": -0.18405632989169485
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.727354944982271,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.1078600342486332,
+       "meanshift": -0.12195328235062981
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": false,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": 0.8079492077231407,
+      "comparator_means": {
+       "ot": 0.8006182882815334
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.09885487056246486
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "3"
+      ],
+      "mean": 0.7192471772432327,
+      "comparator_means": {
+       "ot": 0.8006182882815334
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.12447737552158504
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "3"
+      ],
+      "mean": 0.7004715235630632,
+      "comparator_means": {
+       "ot": 0.8006182882815334
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.17443740608012928
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "3"
+      ],
+      "mean": 0.727354944982271,
+      "comparator_means": {
+       "ot": 0.8006182882815334
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.11233435853906427
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": 0.8079492077231407,
+      "comparator_means": {
+       "ot": 0.8006182882815334,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.09885487056246486,
+       "persist": 0.1213395222252327,
+       "meanshift": -0.10847379437403036
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "2"
+      ],
+      "mean": 0.7192471772432327,
+      "comparator_means": {
+       "ot": 0.8006182882815334,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.12447737552158504,
+       "persist": 0.09571701726611247,
+       "meanshift": -0.13409629933315056
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.7004715235630632,
+      "comparator_means": {
+       "ot": 0.8006182882815334,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.17443740608012928,
+       "persist": 0.04575698670756817,
+       "meanshift": -0.18405632989169485
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.727354944982271,
+      "comparator_means": {
+       "ot": 0.8006182882815334,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.11233435853906427,
+       "persist": 0.1078600342486332,
+       "meanshift": -0.12195328235062981
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "3",
+      "5"
+     ],
+     "mean": 0.7750703744506703,
+     "comparator_means": {
+      "ot": 0.8006182882815334
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.04736169498240772
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": false,
+     "sink_helps": false
+    }
+   },
+   "pearson_secondary": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "5"
+      ],
+      "mean": 0.08467972115012458,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": true,
+      "pass": false
+     },
+     "uot_growth": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": -0.03753152107484474,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "3"
+      ],
+      "mean": 0.08900256705219772,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": true,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": -5.1649288675056915e-05,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.02425396507150525,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.050267964101385426,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.08900256705219772,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": true,
+      "pass": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": -5.1649288675056915e-05,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.02425396507150525,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.050267964101385426,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "3"
+      ],
+      "mean": 0.08900256705219772,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": true,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": -5.1649288675056915e-05,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 0,
+     "win_origins": [],
+     "mean": -0.03753152107484474,
+     "comparator_means": {
+      "ot": 0.08467972115012458
+     },
+     "mean_ok": false,
+     "pass": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": false,
+     "sink_helps": false
+    }
+   }
+  },
+  "B_sd_fixed": {
+   "sd_fixed": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.711880574598942,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.30725251299681083,
+       "meanshift": -0.03813612907474443
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.6840129081941158,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.27573422946266407,
+       "meanshift": -0.06965441260889119
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "4",
+       "5"
+      ],
+      "mean": 0.5198841961879905,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.00570742676347475,
+       "meanshift": -0.3396812153080806
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.519117448919046,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.010476656811118486,
+       "meanshift": -0.33491198526043675
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.509529244815432,
+      "comparator_means": {
+       "ot": 0.711880574598942
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.33326001146558926
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.5419132574371629,
+      "comparator_means": {
+       "ot": 0.711880574598942
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.2628789245192422
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.5198841961879905,
+      "comparator_means": {
+       "ot": 0.711880574598942
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.3015450862333361
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.519117448919046,
+      "comparator_means": {
+       "ot": 0.711880574598942
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.2967758561856923
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": true,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.509529244815432,
+      "comparator_means": {
+       "ot": 0.711880574598942,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.33326001146558926,
+       "persist": -0.026007498468778426,
+       "meanshift": -0.3713961405403337
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.5419132574371629,
+      "comparator_means": {
+       "ot": 0.711880574598942,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.2628789245192422,
+       "persist": 0.044373588477568573,
+       "meanshift": -0.3010150535939867
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "4"
+      ],
+      "mean": 0.5198841961879905,
+      "comparator_means": {
+       "ot": 0.711880574598942,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.3015450862333361,
+       "persist": 0.00570742676347475,
+       "meanshift": -0.3396812153080806
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.519117448919046,
+      "comparator_means": {
+       "ot": 0.711880574598942,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.2967758561856923,
+       "persist": 0.010476656811118486,
+       "meanshift": -0.33491198526043675
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 0.6840129081941158,
+     "comparator_means": {
+      "ot": 0.711880574598942
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.03151828353414672
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "energy": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 5.17578943938065,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6561009409262095,
+       "meanshift": -0.025570012389045
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 4.997182381609372,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6256379388174839,
+       "meanshift": -0.05603301449777085
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.5065759309147158,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.25248263811135224,
+       "meanshift": -0.42918831520390244
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 2.9985061306303797,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.07947956315509161,
+       "meanshift": -0.602191390160163
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.3088615964326773,
+      "comparator_means": {
+       "ot": 5.17578943938065
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5041808164237475
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.0873864598532474,
+      "comparator_means": {
+       "ot": 5.17578943938065
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.6054657627450906
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.5065759309147158,
+      "comparator_means": {
+       "ot": 5.17578943938065
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.40361830281485744
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 2.9985061306303797,
+      "comparator_means": {
+       "ot": 5.17578943938065
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.576621377771118
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.3088615964326773,
+      "comparator_means": {
+       "ot": 5.17578943938065,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5041808164237475,
+       "persist": 0.1519201245024622,
+       "meanshift": -0.5297508288127925
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 3.0873864598532474,
+      "comparator_means": {
+       "ot": 5.17578943938065,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.6054657627450906,
+       "persist": 0.05063517818111905,
+       "meanshift": -0.6310357751341357
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.5065759309147158,
+      "comparator_means": {
+       "ot": 5.17578943938065,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.40361830281485744,
+       "persist": 0.25248263811135224,
+       "meanshift": -0.42918831520390244
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 2.9985061306303797,
+      "comparator_means": {
+       "ot": 5.17578943938065,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.576621377771118,
+       "persist": 0.07947956315509161,
+       "meanshift": -0.602191390160163
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 4.997182381609372,
+     "comparator_means": {
+      "ot": 5.17578943938065
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.03046300210872583
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "mmd": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.2796129122126096,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6748617045678832,
+       "meanshift": -0.02870263207490619
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.27044048156555023,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6460868555722163,
+       "meanshift": -0.05747748107057285
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.184706613544788,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.2558748395808537,
+       "meanshift": -0.44768949706193556
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.15780961014852823,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.08286545317405969,
+       "meanshift": -0.6206988834687297
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.1742006762114457,
+      "comparator_means": {
+       "ot": 0.2796129122126096
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5226126686685456
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.16191586944967995,
+      "comparator_means": {
+       "ot": 0.2796129122126096
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.6220191925179874
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.184706613544788,
+      "comparator_means": {
+       "ot": 0.2796129122126096
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.4189868649870294
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.15780961014852823,
+      "comparator_means": {
+       "ot": 0.2796129122126096
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5919962513938235
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.1742006762114457,
+      "comparator_means": {
+       "ot": 0.2796129122126096,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5226126686685456,
+       "persist": 0.15224903589933747,
+       "meanshift": -0.5513153007434518
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.16191586944967995,
+      "comparator_means": {
+       "ot": 0.2796129122126096,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.6220191925179874,
+       "persist": 0.05284251204989576,
+       "meanshift": -0.6507218245928935
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.184706613544788,
+      "comparator_means": {
+       "ot": 0.2796129122126096,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.4189868649870294,
+       "persist": 0.2558748395808537,
+       "meanshift": -0.44768949706193556
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.15780961014852823,
+      "comparator_means": {
+       "ot": 0.2796129122126096,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5919962513938235,
+       "persist": 0.08286545317405969,
+       "meanshift": -0.6206988834687297
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 0.27044048156555023,
+     "comparator_means": {
+      "ot": 0.2796129122126096
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.028774848995666763
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "sd_orig": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 2,
+      "win_origins": [
+       "4",
+       "5"
+      ],
+      "mean": 0.8127063202357374,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.2298833972794344,
+       "meanshift": 7.008068017144427e-05
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.7746623974062831,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.17229039660346734,
+       "meanshift": -0.057522919995795674
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "4"
+      ],
+      "mean": 0.7960954775208553,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.17808845698139364,
+       "meanshift": -0.05172485961786939
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "4",
+       "5"
+      ],
+      "mean": 0.7232656719367999,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.10224011740233348,
+       "meanshift": -0.12757319919692953
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "3"
+      ],
+      "mean": 0.7050662115216255,
+      "comparator_means": {
+       "ot": 0.8127063202357374
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.19454944029535548
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "3"
+      ],
+      "mean": 0.7140013724565506,
+      "comparator_means": {
+       "ot": 0.8127063202357374
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.14119278188450107
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": 0.7960954775208553,
+      "comparator_means": {
+       "ot": 0.8127063202357374
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.051794940298040854
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "5"
+      ],
+      "mean": 0.7232656719367999,
+      "comparator_means": {
+       "ot": 0.8127063202357374
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.12764327987710097
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.7050662115216255,
+      "comparator_means": {
+       "ot": 0.8127063202357374,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.19454944029535548,
+       "persist": 0.035333956984078936,
+       "meanshift": -0.1944793596151841
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "2"
+      ],
+      "mean": 0.7140013724565506,
+      "comparator_means": {
+       "ot": 0.8127063202357374,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.14119278188450107,
+       "persist": 0.08869061539493338,
+       "meanshift": -0.14112270120432968
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.7960954775208553,
+      "comparator_means": {
+       "ot": 0.8127063202357374,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.051794940298040854,
+       "persist": 0.17808845698139364,
+       "meanshift": -0.05172485961786939
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.7232656719367999,
+      "comparator_means": {
+       "ot": 0.8127063202357374,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.12764327987710097,
+       "persist": 0.10224011740233348,
+       "meanshift": -0.12757319919692953
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "3",
+      "5"
+     ],
+     "mean": 0.7746623974062831,
+     "comparator_means": {
+      "ot": 0.8127063202357374
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.05759300067596713
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "pearson_secondary": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "5"
+      ],
+      "mean": 0.08467972115012458,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": true,
+      "pass": false
+     },
+     "uot_growth": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": -0.035599795510513996,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.055472814747361,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": 0.06442377365699144,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "velocity_helps": false,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.024253980993585264,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.050267962391026225,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.055472814747361,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.06442377365699144,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.024253980993585264,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.050267962391026225,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.055472814747361,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": 0.06442377365699144,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 0,
+     "win_origins": [],
+     "mean": -0.035599795510513996,
+     "comparator_means": {
+      "ot": 0.08467972115012458
+     },
+     "mean_ok": false,
+     "pass": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": false,
+     "sink_helps": false
+    }
+   }
+  },
+  "B_energy": {
+   "sd_fixed": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.9521482747898428,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6091167924580829,
+       "meanshift": 0.26372815038652775
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.6840129081941158,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.27573422946266407,
+       "meanshift": -0.06965441260889119
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "5"
+      ],
+      "mean": 0.515654539685214,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": -0.0087848154088313,
+       "meanshift": -0.3541734574803866
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.546235444273756,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.056141177306417996,
+       "meanshift": -0.28924746476513724
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.5082316599855237,
+      "comparator_means": {
+       "ot": 0.9521482747898428
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.639016592298477
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.5430092820959544,
+      "comparator_means": {
+       "ot": 0.9521482747898428
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5623129329883033
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.515654539685214,
+      "comparator_means": {
+       "ot": 0.9521482747898428
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.6179016078669144
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.546235444273756,
+      "comparator_means": {
+       "ot": 0.9521482747898428
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.552975615151665
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": true,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.5082316599855237,
+      "comparator_means": {
+       "ot": 0.9521482747898428,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.639016592298477,
+       "persist": -0.029899799840394013,
+       "meanshift": -0.3752884419119493
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.5430092820959544,
+      "comparator_means": {
+       "ot": 0.9521482747898428,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5623129329883033,
+       "persist": 0.04680385946977966,
+       "meanshift": -0.2985847826017757
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "5"
+      ],
+      "mean": 0.515654539685214,
+      "comparator_means": {
+       "ot": 0.9521482747898428,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.6179016078669144,
+       "persist": -0.0087848154088313,
+       "meanshift": -0.3541734574803866
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.546235444273756,
+      "comparator_means": {
+       "ot": 0.9521482747898428,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.552975615151665,
+       "persist": 0.056141177306417996,
+       "meanshift": -0.28924746476513724
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": true,
+    "sink_detail": {
+     "wins": 4,
+     "win_origins": [
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "mean": 0.6840129081941158,
+     "comparator_means": {
+      "ot": 0.9521482747898428
+     },
+     "mean_ok": true,
+     "pass": true,
+     "extra_mean_log_ratio": {
+      "ot": -0.33338256299541896
+     },
+     "extra_pass_logratio": true
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": true
+    }
+   },
+   "energy": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 4.933294518862935,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6082101929034273,
+       "meanshift": -0.07346076041182736
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 4.997182381609372,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6256379388174839,
+       "meanshift": -0.05603301449777085
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 3.2016554412002742,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.15297353152927892,
+       "meanshift": -0.5286974217859757
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.222976393267172,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.12770858731500737,
+       "meanshift": -0.5539623660002473
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.1871723904945255,
+      "comparator_means": {
+       "ot": 4.933294518862935
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.507527359626018
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.092827941193799,
+      "comparator_means": {
+       "ot": 4.933294518862935
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5555889929176644
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.2016554412002742,
+      "comparator_means": {
+       "ot": 4.933294518862935
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.4552366613741483
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.222976393267172,
+      "comparator_means": {
+       "ot": 4.933294518862935
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.48050160558842003
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "4"
+      ],
+      "mean": 3.1871723904945255,
+      "comparator_means": {
+       "ot": 4.933294518862935,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.507527359626018,
+       "persist": 0.10068283327740932,
+       "meanshift": -0.5809881200378454
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 3.092827941193799,
+      "comparator_means": {
+       "ot": 4.933294518862935,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5555889929176644,
+       "persist": 0.05262119998576288,
+       "meanshift": -0.6290497533294918
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.2016554412002742,
+      "comparator_means": {
+       "ot": 4.933294518862935,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.4552366613741483,
+       "persist": 0.15297353152927892,
+       "meanshift": -0.5286974217859757
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.222976393267172,
+      "comparator_means": {
+       "ot": 4.933294518862935,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.48050160558842003,
+       "persist": 0.12770858731500737,
+       "meanshift": -0.5539623660002473
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 4.997182381609372,
+     "comparator_means": {
+      "ot": 4.933294518862935
+     },
+     "mean_ok": false,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": 0.01742774591405645
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "mmd": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.26806285783905526,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6340270817036393,
+       "meanshift": -0.06953725493914992
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.27044048156555023,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6460868555722163,
+       "meanshift": -0.05747748107057285
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.16972788859386917,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.15369205657431625,
+       "meanshift": -0.5498722800684731
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.17025808061856784,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.13460389044927,
+       "meanshift": -0.5689604461935193
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.16807143676774128,
+      "comparator_means": {
+       "ot": 0.26806285783905526
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5340713279071012
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.16221023673620483,
+      "comparator_means": {
+       "ot": 0.26806285783905526
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5791793667602373
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.16972788859386917,
+      "comparator_means": {
+       "ot": 0.26806285783905526
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.48033502512932313
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.17025808061856784,
+      "comparator_means": {
+       "ot": 0.26806285783905526
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.4994231912543695
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "4"
+      ],
+      "mean": 0.16807143676774128,
+      "comparator_means": {
+       "ot": 0.26806285783905526,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5340713279071012,
+       "persist": 0.09995575379653826,
+       "meanshift": -0.6036085828462511
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.16221023673620483,
+      "comparator_means": {
+       "ot": 0.26806285783905526,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5791793667602373,
+       "persist": 0.05484771494340218,
+       "meanshift": -0.6487166216993872
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.16972788859386917,
+      "comparator_means": {
+       "ot": 0.26806285783905526,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.48033502512932313,
+       "persist": 0.15369205657431625,
+       "meanshift": -0.5498722800684731
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.17025808061856784,
+      "comparator_means": {
+       "ot": 0.26806285783905526,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.4994231912543695,
+       "persist": 0.13460389044927,
+       "meanshift": -0.5689604461935193
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 0.27044048156555023,
+     "comparator_means": {
+      "ot": 0.26806285783905526
+     },
+     "mean_ok": false,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": 0.012059773868577036
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "sd_orig": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.812916197224376,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.23684013723264513,
+       "meanshift": 0.007026820633382118
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.7746623974062831,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.17229039660346734,
+       "meanshift": -0.057522919995795674
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.760857245398146,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.1011799428950856,
+       "meanshift": -0.12863337370417746
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.727354944982271,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.1078600342486332,
+       "meanshift": -0.12195328235062981
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": 0.7063047513365746,
+      "comparator_means": {
+       "ot": 0.812916197224376
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.21135382456937143
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "5"
+      ],
+      "mean": 0.7159639894962311,
+      "comparator_means": {
+       "ot": 0.812916197224376
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.145572621662672
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.760857245398146,
+      "comparator_means": {
+       "ot": 0.812916197224376
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.13566019433755958
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.727354944982271,
+      "comparator_means": {
+       "ot": 0.812916197224376
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.12898010298401194
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": 0.7063047513365746,
+      "comparator_means": {
+       "ot": 0.812916197224376,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.21135382456937143,
+       "persist": 0.025486312663273683,
+       "meanshift": -0.20432700393598938
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "2"
+      ],
+      "mean": 0.7159639894962311,
+      "comparator_means": {
+       "ot": 0.812916197224376,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.145572621662672,
+       "persist": 0.09126751556997315,
+       "meanshift": -0.13854580102928987
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.760857245398146,
+      "comparator_means": {
+       "ot": 0.812916197224376,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.13566019433755958,
+       "persist": 0.1011799428950856,
+       "meanshift": -0.12863337370417746
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.727354944982271,
+      "comparator_means": {
+       "ot": 0.812916197224376,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.12898010298401194,
+       "persist": 0.1078600342486332,
+       "meanshift": -0.12195328235062981
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": true,
+    "sink_detail": {
+     "wins": 3,
+     "win_origins": [
+      "3",
+      "4",
+      "5"
+     ],
+     "mean": 0.7746623974062831,
+     "comparator_means": {
+      "ot": 0.812916197224376
+     },
+     "mean_ok": true,
+     "pass": true,
+     "extra_mean_log_ratio": {
+      "ot": -0.06454974062917782
+     },
+     "extra_pass_logratio": true
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": true
+    }
+   },
+   "pearson_secondary": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "5"
+      ],
+      "mean": 0.08467972115012458,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": true,
+      "pass": false
+     },
+     "uot_growth": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": -0.035599795510513996,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "3"
+      ],
+      "mean": 0.05706093555665801,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": -5.1649288675056915e-05,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "velocity_helps": false,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.02425398049290247,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.050267962494022975,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.05706093555665801,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": -5.1649288675056915e-05,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.02425398049290247,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.050267962494022975,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "2"
+      ],
+      "mean": 0.05706093555665801,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": -5.1649288675056915e-05,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 0,
+     "win_origins": [],
+     "mean": -0.035599795510513996,
+     "comparator_means": {
+      "ot": 0.08467972115012458
+     },
+     "mean_ok": false,
+     "pass": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": false,
+     "sink_helps": false
+    }
+   }
+  },
+  "B_mmd": {
+   "sd_fixed": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.9521482747898428,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6091167924580829,
+       "meanshift": 0.26372815038652775
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.6569309172874913,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.23141187028457305,
+       "meanshift": -0.11397677178698225
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "5"
+      ],
+      "mean": 0.508536319237599,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": -0.021732027512016108,
+       "meanshift": -0.3671206695835714
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.546235444273756,
+      "comparator_means": {
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.056141177306417996,
+       "meanshift": -0.28924746476513724
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.5082316599855237,
+      "comparator_means": {
+       "ot": 0.9521482747898428
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.639016592298477
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.5430092820959544,
+      "comparator_means": {
+       "ot": 0.9521482747898428
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5623129329883033
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.508536319237599,
+      "comparator_means": {
+       "ot": 0.9521482747898428
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.6308488199700992
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.546235444273756,
+      "comparator_means": {
+       "ot": 0.9521482747898428
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.552975615151665
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": true,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.5082316599855237,
+      "comparator_means": {
+       "ot": 0.9521482747898428,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.639016592298477,
+       "persist": -0.029899799840394013,
+       "meanshift": -0.3752884419119493
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.5430092820959544,
+      "comparator_means": {
+       "ot": 0.9521482747898428,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5623129329883033,
+       "persist": 0.04680385946977966,
+       "meanshift": -0.2985847826017757
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "5"
+      ],
+      "mean": 0.508536319237599,
+      "comparator_means": {
+       "ot": 0.9521482747898428,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.6308488199700992,
+       "persist": -0.021732027512016108,
+       "meanshift": -0.3671206695835714
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.546235444273756,
+      "comparator_means": {
+       "ot": 0.9521482747898428,
+       "persist": 0.5199670834368,
+       "meanshift": 0.7336926872207743
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.552975615151665,
+       "persist": 0.056141177306417996,
+       "meanshift": -0.28924746476513724
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": true,
+    "sink_detail": {
+     "wins": 4,
+     "win_origins": [
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "mean": 0.6569309172874913,
+     "comparator_means": {
+      "ot": 0.9521482747898428
+     },
+     "mean_ok": true,
+     "pass": true,
+     "extra_mean_log_ratio": {
+      "ot": -0.37770492217351004
+     },
+     "extra_pass_logratio": true
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": true
+    }
+   },
+   "energy": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 4.933294518862935,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6082101929034273,
+       "meanshift": -0.07346076041182736
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 4.750786231081264,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.5718714533129117,
+       "meanshift": -0.10979950000234298
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.253117543903711,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.16392564879595217,
+       "meanshift": -0.5177453045193025
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.222976393267172,
+      "comparator_means": {
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.12770858731500737,
+       "meanshift": -0.5539623660002473
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.1871723904945255,
+      "comparator_means": {
+       "ot": 4.933294518862935
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.507527359626018
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.092827941193799,
+      "comparator_means": {
+       "ot": 4.933294518862935
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5555889929176644
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.253117543903711,
+      "comparator_means": {
+       "ot": 4.933294518862935
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.44428454410747503
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 3.222976393267172,
+      "comparator_means": {
+       "ot": 4.933294518862935
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.48050160558842003
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "4"
+      ],
+      "mean": 3.1871723904945255,
+      "comparator_means": {
+       "ot": 4.933294518862935,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.507527359626018,
+       "persist": 0.10068283327740932,
+       "meanshift": -0.5809881200378454
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 3.092827941193799,
+      "comparator_means": {
+       "ot": 4.933294518862935,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5555889929176644,
+       "persist": 0.05262119998576288,
+       "meanshift": -0.6290497533294918
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.253117543903711,
+      "comparator_means": {
+       "ot": 4.933294518862935,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.44428454410747503,
+       "persist": 0.16392564879595217,
+       "meanshift": -0.5177453045193025
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 3.222976393267172,
+      "comparator_means": {
+       "ot": 4.933294518862935,
+       "persist": 2.919125996611991,
+       "meanshift": 5.280112686699458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.48050160558842003,
+       "persist": 0.12770858731500737,
+       "meanshift": -0.5539623660002473
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 4.750786231081264,
+     "comparator_means": {
+      "ot": 4.933294518862935
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.0363387395905157
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "mmd": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.26806285783905526,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.6340270817036393,
+       "meanshift": -0.06953725493914992
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.2580308001825476,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.5910653831104099,
+       "meanshift": -0.11249895353237933
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.17231280246715036,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.16444067051562694,
+       "meanshift": -0.5391236661271623
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.17025808061856784,
+      "comparator_means": {
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.13460389044927,
+       "meanshift": -0.5689604461935193
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.16807143676774128,
+      "comparator_means": {
+       "ot": 0.26806285783905526
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5340713279071012
+      },
+      "extra_pass_logratio": true
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.16221023673620483,
+      "comparator_means": {
+       "ot": 0.26806285783905526
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.5791793667602373
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.17231280246715036,
+      "comparator_means": {
+       "ot": 0.26806285783905526
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.4695864111880124
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.17025808061856784,
+      "comparator_means": {
+       "ot": 0.26806285783905526
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.4994231912543695
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "4"
+      ],
+      "mean": 0.16807143676774128,
+      "comparator_means": {
+       "ot": 0.26806285783905526,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5340713279071012,
+       "persist": 0.09995575379653826,
+       "meanshift": -0.6036085828462511
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.16221023673620483,
+      "comparator_means": {
+       "ot": 0.26806285783905526,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.5791793667602373,
+       "persist": 0.05484771494340218,
+       "meanshift": -0.6487166216993872
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.17231280246715036,
+      "comparator_means": {
+       "ot": 0.26806285783905526,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.4695864111880124,
+       "persist": 0.16444067051562694,
+       "meanshift": -0.5391236661271623
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.17025808061856784,
+      "comparator_means": {
+       "ot": 0.26806285783905526,
+       "persist": 0.1530568368950701,
+       "meanshift": 0.2859864224254145
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.4994231912543695,
+       "persist": 0.13460389044927,
+       "meanshift": -0.5689604461935193
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 2,
+     "win_origins": [
+      "2",
+      "3"
+     ],
+     "mean": 0.2580308001825476,
+     "comparator_means": {
+      "ot": 0.26806285783905526
+     },
+     "mean_ok": true,
+     "pass": false,
+     "extra_mean_log_ratio": {
+      "ot": -0.04296169859322944
+     },
+     "extra_pass_logratio": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": false
+    }
+   },
+   "sd_orig": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.812916197224376,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.23684013723264513,
+       "meanshift": 0.007026820633382118
+      },
+      "extra_pass_logratio": false
+     },
+     "uot_growth": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.7266681772419328,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.07596012186488892,
+       "meanshift": -0.15385319473437414
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.7668883787014531,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.10928231002290917,
+       "meanshift": -0.12053100657635385
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.727354944982271,
+      "comparator_means": {
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "persist": 0.1078600342486332,
+       "meanshift": -0.12195328235062981
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "velocity_helps": true,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": 0.7063047513365746,
+      "comparator_means": {
+       "ot": 0.812916197224376
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.21135382456937143
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "5"
+      ],
+      "mean": 0.7159639894962311,
+      "comparator_means": {
+       "ot": 0.812916197224376
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.145572621662672
+      },
+      "extra_pass_logratio": true
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "4"
+      ],
+      "mean": 0.7668883787014531,
+      "comparator_means": {
+       "ot": 0.812916197224376
+      },
+      "mean_ok": true,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.127557827209736
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 4,
+      "win_origins": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "mean": 0.727354944982271,
+      "comparator_means": {
+       "ot": 0.812916197224376
+      },
+      "mean_ok": true,
+      "pass": true,
+      "extra_mean_log_ratio": {
+       "ot": -0.12898010298401194
+      },
+      "extra_pass_logratio": true
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": 0.7063047513365746,
+      "comparator_means": {
+       "ot": 0.812916197224376,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.21135382456937143,
+       "persist": 0.025486312663273683,
+       "meanshift": -0.20432700393598938
+      },
+      "extra_pass_logratio": false
+     },
+     "vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "2"
+      ],
+      "mean": 0.7159639894962311,
+      "comparator_means": {
+       "ot": 0.812916197224376,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.145572621662672,
+       "persist": 0.09126751556997315,
+       "meanshift": -0.13854580102928987
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_ss": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": 0.7668883787014531,
+      "comparator_means": {
+       "ot": 0.812916197224376,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.127557827209736,
+       "persist": 0.10928231002290917,
+       "meanshift": -0.12053100657635385
+      },
+      "extra_pass_logratio": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "5"
+      ],
+      "mean": 0.727354944982271,
+      "comparator_means": {
+       "ot": 0.812916197224376,
+       "persist": 0.6803890988230705,
+       "meanshift": 0.8127844035625458
+      },
+      "mean_ok": false,
+      "pass": false,
+      "extra_mean_log_ratio": {
+       "ot": -0.12898010298401194,
+       "persist": 0.1078600342486332,
+       "meanshift": -0.12195328235062981
+      },
+      "extra_pass_logratio": false
+     }
+    },
+    "sink_helps": true,
+    "sink_detail": {
+     "wins": 3,
+     "win_origins": [
+      "3",
+      "4",
+      "5"
+     ],
+     "mean": 0.7266681772419328,
+     "comparator_means": {
+      "ot": 0.812916197224376
+     },
+     "mean_ok": true,
+     "pass": true,
+     "extra_mean_log_ratio": {
+      "ot": -0.16088001536775623
+     },
+     "extra_pass_logratio": true
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": true,
+     "sink_helps": true
+    }
+   },
+   "pearson_secondary": {
+    "OT_helps": false,
+    "OT_detail": {
+     "ot": {
+      "wins": 2,
+      "win_origins": [
+       "3",
+       "5"
+      ],
+      "mean": 0.08467972115012458,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": true,
+      "pass": false
+     },
+     "uot_growth": {
+      "wins": 0,
+      "win_origins": [],
+      "mean": -0.10522804264483192,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "3"
+      ],
+      "mean": 0.047282659983218574,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": -5.1649288675056915e-05,
+      "comparator_means": {
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "velocity_helps": false,
+    "velocity_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.02425398049290247,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.050267962494022975,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.047282659983218574,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": -5.1649288675056915e-05,
+      "comparator_means": {
+       "ot": 0.08467972115012458
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "extra_velocity_vs_ot_and_baselines": false,
+    "extra_velocity_strict_detail": {
+     "vel_ss": {
+      "wins": 2,
+      "win_origins": [
+       "2",
+       "4"
+      ],
+      "mean": 0.02425398049290247,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "vel_dyn": {
+      "wins": 3,
+      "win_origins": [
+       "2",
+       "3",
+       "4"
+      ],
+      "mean": 0.050267962494022975,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_ss": {
+      "wins": 1,
+      "win_origins": [
+       "2"
+      ],
+      "mean": 0.047282659983218574,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     },
+     "ot_vel_dyn": {
+      "wins": 1,
+      "win_origins": [
+       "3"
+      ],
+      "mean": -5.1649288675056915e-05,
+      "comparator_means": {
+       "ot": 0.08467972115012458,
+       "persist": 0.017836676229934973,
+       "meanshift": 0.07684120811579374
+      },
+      "mean_ok": false,
+      "pass": false
+     }
+    },
+    "sink_helps": false,
+    "sink_detail": {
+     "wins": 0,
+     "win_origins": [],
+     "mean": -0.10522804264483192,
+     "comparator_means": {
+      "ot": 0.08467972115012458
+     },
+     "mean_ok": false,
+     "pass": false
+    },
+    "extra_logratio": {
+     "OT_helps": false,
+     "velocity_helps": false,
+     "sink_helps": false
+    }
+   }
+  }
+ },
+ "floors": {
+  "1": {
+   "sd_fixed": 0.18974391386341152,
+   "energy": 0.0350445045245209,
+   "mmd": 0.0017728797679581465,
+   "sd_orig": 0.6149951815605164
+  },
+  "2": {
+   "sd_fixed": 0.07987193236456218,
+   "energy": 0.018983698353029155,
+   "mmd": 0.0007527431250640149,
+   "sd_orig": 0.3665876090526581
+  },
+  "3": {
+   "sd_fixed": 0.06926378900399484,
+   "energy": 0.014351260501488383,
+   "mmd": 0.0004612511273258679,
+   "sd_orig": 0.29504498839378357
+  },
+  "4": {
+   "sd_fixed": 0.10885372995583682,
+   "energy": 0.015331476781105913,
+   "mmd": 0.0004242933718627828,
+   "sd_orig": 0.3546355664730072
+  },
+  "5": {
+   "sd_fixed": 0.056072424594808774,
+   "energy": 0.00845030774840172,
+   "mmd": 0.0002284577897053719,
+   "sd_orig": 0.33409610390663147
+  }
+ },
+ "S_fixed": {
+  "1": 36.527286529541016,
+  "2": 87.27434539794922,
+  "3": 130.68115234375,
+  "4": 106.88880920410156,
+  "5": 115.50272369384766
+ },
+ "reproduction": {
+  "1": {
+   "persist": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "meanshift": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 1.0246736792396405e-10,
+    "pearson": 1.1102230246251565e-16,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "uot_growth": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 5.4988014142054453e-11,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot_vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 1.84501303124307e-11,
+    "pearson": 1.1102230246251565e-16,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 2.220446049250313e-16
+   },
+   "ot_vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 4.3026915363952867e-11,
+    "pearson": 1.1102230246251565e-16,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 1.1102230246251565e-16
+   }
+  },
+  "2": {
+   "persist": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 8.881784197001252e-16,
+    "pearson": 2.5067157551073027e-12,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "meanshift": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 8.881784197001252e-16,
+    "pearson": 1.0408340855860843e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 1.092015367021304e-11,
+    "pearson": 4.5102810375396984e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "uot_growth": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 5.160316618457728e-13,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 4.440892098500626e-16
+   },
+   "vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 8.881784197001252e-16,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 8.881784197001252e-16,
+    "pearson": 9.71445146547012e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot_vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 1.2070344723724702e-12,
+    "pearson": 2.0383000842727483e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot_vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 5.786482404346316e-12,
+    "pearson": 6.938893903907228e-18,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   }
+  },
+  "3": {
+   "persist": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 3.552713678800501e-15,
+    "pearson": 1.3517019448183731e-10,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "meanshift": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 3.9898639947466563e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 5.364597654988756e-13,
+    "pearson": 1.5178830414797062e-16,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "uot_growth": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 2.4158453015843406e-12,
+    "pearson": 8.326672684688674e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 3.3306690738754696e-16
+   },
+   "vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 1.3097162243624894e-16,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 2.0816681711721685e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot_vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 2.646771690706373e-13,
+    "pearson": 5.724587470723463e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 5.551115123125783e-17
+   },
+   "ot_vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 5.986322548778844e-13,
+    "pearson": 8.326672684688674e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 1.1102230246251565e-16
+   }
+  },
+  "4": {
+   "persist": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 5.840191611566903e-11,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "meanshift": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 1.907807245515869e-12,
+    "pearson": 9.353628982466944e-15,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 3.3306690738754696e-16
+   },
+   "uot_growth": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 1.2168044349891716e-12,
+    "pearson": 2.3148150063434514e-14,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 1.1102230246251565e-16
+   },
+   "vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 6.245004513516506e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 1.7763568394002505e-15,
+    "pearson": 7.147060721024445e-16,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot_vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 3.6770586575585185e-13,
+    "pearson": 1.0337867714649285e-15,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 4.440892098500626e-16
+   },
+   "ot_vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 2.8954616482224083e-13,
+    "pearson": 7.077671781985373e-15,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 7.771561172376096e-16
+   }
+  },
+  "5": {
+   "persist": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 3.702671502736621e-11,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "meanshift": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 1.1102230246251565e-16,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 4.014566457044566e-13,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 2.220446049250313e-16
+   },
+   "uot_growth": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 2.460254222569347e-12,
+    "pearson": 1.1102230246251565e-16,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 1.1102230246251565e-16
+   },
+   "vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 6.938893903907228e-18,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 0.0,
+    "pearson": 0.0,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 0.0
+   },
+   "ot_vel_ss": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 5.808686864838819e-13,
+    "pearson": 1.1102230246251565e-16,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 3.3306690738754696e-16
+   },
+   "ot_vel_dyn": {
+    "argmin_sd_orig_equals_recorded": true,
+    "energy": 5.648814749292796e-13,
+    "pearson": 4.163336342344337e-17,
+    "p200_up": 0.0,
+    "p200_down": 0.0,
+    "sd_orig": 3.3306690738754696e-16
+   }
+  }
+ },
+ "selection_changes": {
+  "1": {
+   "persist": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "meanshift": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "ot": {
+    "sd_orig": {
+     "noise": 0.0
+    },
+    "energy": {
+     "noise": 0.0
+    },
+    "sd_fixed": {
+     "noise": 0.0
+    },
+    "mmd": {
+     "noise": 0.0
+    },
+    "recorded": {
+     "noise": 0.0
+    }
+   },
+   "uot_growth": {
+    "sd_orig": {
+     "tau": 1.0,
+     "beta": 2.0,
+     "noise": 0.0
+    },
+    "energy": {
+     "tau": 1.0,
+     "beta": 2.0,
+     "noise": 0.0
+    },
+    "sd_fixed": {
+     "tau": 1.0,
+     "beta": 2.0,
+     "noise": 0.0
+    },
+    "mmd": {
+     "tau": 1.0,
+     "beta": 2.0,
+     "noise": 0.0
+    },
+    "recorded": {
+     "tau": 1.0,
+     "beta": 2.0,
+     "noise": 0.0
+    }
+   },
+   "vel_ss": {
+    "sd_orig": {
+     "c": 1
+    },
+    "energy": {
+     "c": 1
+    },
+    "sd_fixed": {
+     "c": 1
+    },
+    "mmd": {
+     "c": 1
+    },
+    "recorded": {
+     "c": 1
+    }
+   },
+   "vel_dyn": {
+    "sd_orig": {
+     "c": 1
+    },
+    "energy": {
+     "c": 1
+    },
+    "sd_fixed": {
+     "c": 1
+    },
+    "mmd": {
+     "c": 1
+    },
+    "recorded": {
+     "c": 1
+    }
+   },
+   "ot_vel_ss": {
+    "sd_orig": {
+     "c": 2,
+     "w": 0.5
+    },
+    "energy": {
+     "c": 2,
+     "w": 0.5
+    },
+    "sd_fixed": {
+     "c": 2,
+     "w": 0.5
+    },
+    "mmd": {
+     "c": 2,
+     "w": 0.5
+    },
+    "recorded": {
+     "c": 2,
+     "w": 0.5
+    }
+   },
+   "ot_vel_dyn": {
+    "sd_orig": {
+     "c": 2,
+     "w": 0.5
+    },
+    "energy": {
+     "c": 2,
+     "w": 0.5
+    },
+    "sd_fixed": {
+     "c": 2,
+     "w": 0.5
+    },
+    "mmd": {
+     "c": 2,
+     "w": 0.5
+    },
+    "recorded": {
+     "c": 2,
+     "w": 0.5
+    }
+   }
+  },
+  "2": {
+   "persist": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "meanshift": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "ot": {
+    "sd_orig": {
+     "noise": 1.0
+    },
+    "energy": {
+     "noise": 1.0
+    },
+    "sd_fixed": {
+     "noise": 0.0
+    },
+    "mmd": {
+     "noise": 1.0
+    },
+    "recorded": {
+     "noise": 1.0
+    }
+   },
+   "uot_growth": {
+    "sd_orig": {
+     "tau": 0.1,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "energy": {
+     "tau": 0.1,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "sd_fixed": {
+     "tau": 0.1,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "mmd": {
+     "tau": 0.1,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "recorded": {
+     "tau": 0.1,
+     "beta": 5.0,
+     "noise": 0.0
+    }
+   },
+   "vel_ss": {
+    "sd_orig": {
+     "c": 8
+    },
+    "energy": {
+     "c": 4
+    },
+    "sd_fixed": {
+     "c": 4
+    },
+    "mmd": {
+     "c": 4
+    },
+    "recorded": {
+     "c": 8
+    }
+   },
+   "vel_dyn": {
+    "sd_orig": {
+     "c": 0.5
+    },
+    "energy": {
+     "c": 0.25
+    },
+    "sd_fixed": {
+     "c": 0.25
+    },
+    "mmd": {
+     "c": 0.25
+    },
+    "recorded": {
+     "c": 0.5
+    }
+   },
+   "ot_vel_ss": {
+    "sd_orig": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "energy": {
+     "c": 8,
+     "w": 0.25
+    },
+    "sd_fixed": {
+     "c": 8,
+     "w": 0.25
+    },
+    "mmd": {
+     "c": 8,
+     "w": 0.25
+    },
+    "recorded": {
+     "c": 0.5,
+     "w": 0.25
+    }
+   },
+   "ot_vel_dyn": {
+    "sd_orig": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "energy": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "sd_fixed": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "mmd": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "recorded": {
+     "c": 0.5,
+     "w": 0.25
+    }
+   }
+  },
+  "3": {
+   "persist": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "meanshift": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "ot": {
+    "sd_orig": {
+     "noise": 1.0
+    },
+    "energy": {
+     "noise": 1.0
+    },
+    "sd_fixed": {
+     "noise": 0.0
+    },
+    "mmd": {
+     "noise": 1.0
+    },
+    "recorded": {
+     "noise": 1.0
+    }
+   },
+   "uot_growth": {
+    "sd_orig": {
+     "tau": 1.0,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "energy": {
+     "tau": 1.0,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "sd_fixed": {
+     "tau": 1.0,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "mmd": {
+     "tau": 0.1,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "recorded": {
+     "tau": 1.0,
+     "beta": 5.0,
+     "noise": 0.0
+    }
+   },
+   "vel_ss": {
+    "sd_orig": {
+     "c": 0.25
+    },
+    "energy": {
+     "c": 2
+    },
+    "sd_fixed": {
+     "c": 4
+    },
+    "mmd": {
+     "c": 2
+    },
+    "recorded": {
+     "c": 0.25
+    }
+   },
+   "vel_dyn": {
+    "sd_orig": {
+     "c": 8
+    },
+    "energy": {
+     "c": 8
+    },
+    "sd_fixed": {
+     "c": 8
+    },
+    "mmd": {
+     "c": 8
+    },
+    "recorded": {
+     "c": 8
+    }
+   },
+   "ot_vel_ss": {
+    "sd_orig": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "energy": {
+     "c": 2,
+     "w": 0.25
+    },
+    "sd_fixed": {
+     "c": 8,
+     "w": 0.5
+    },
+    "mmd": {
+     "c": 2,
+     "w": 0.25
+    },
+    "recorded": {
+     "c": 0.5,
+     "w": 0.25
+    }
+   },
+   "ot_vel_dyn": {
+    "sd_orig": {
+     "c": 8,
+     "w": 0.25
+    },
+    "energy": {
+     "c": 8,
+     "w": 0.25
+    },
+    "sd_fixed": {
+     "c": 8,
+     "w": 0.25
+    },
+    "mmd": {
+     "c": 8,
+     "w": 0.25
+    },
+    "recorded": {
+     "c": 8,
+     "w": 0.25
+    }
+   }
+  },
+  "4": {
+   "persist": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "meanshift": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "ot": {
+    "sd_orig": {
+     "noise": 0.0
+    },
+    "energy": {
+     "noise": 1.0
+    },
+    "sd_fixed": {
+     "noise": 0.0
+    },
+    "mmd": {
+     "noise": 1.0
+    },
+    "recorded": {
+     "noise": 0.0
+    }
+   },
+   "uot_growth": {
+    "sd_orig": {
+     "tau": 0.1,
+     "beta": 0.0,
+     "noise": 0.0
+    },
+    "energy": {
+     "tau": 0.1,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "sd_fixed": {
+     "tau": 0.1,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "mmd": {
+     "tau": 0.1,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "recorded": {
+     "tau": 0.1,
+     "beta": 0.0,
+     "noise": 0.0
+    }
+   },
+   "vel_ss": {
+    "sd_orig": {
+     "c": 0.5
+    },
+    "energy": {
+     "c": 0.25
+    },
+    "sd_fixed": {
+     "c": 2
+    },
+    "mmd": {
+     "c": 0.25
+    },
+    "recorded": {
+     "c": 0.5
+    }
+   },
+   "vel_dyn": {
+    "sd_orig": {
+     "c": 0.25
+    },
+    "energy": {
+     "c": 1
+    },
+    "sd_fixed": {
+     "c": 2
+    },
+    "mmd": {
+     "c": 1
+    },
+    "recorded": {
+     "c": 0.25
+    }
+   },
+   "ot_vel_ss": {
+    "sd_orig": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "energy": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "sd_fixed": {
+     "c": 2,
+     "w": 0.25
+    },
+    "mmd": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "recorded": {
+     "c": 0.5,
+     "w": 0.25
+    }
+   },
+   "ot_vel_dyn": {
+    "sd_orig": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "energy": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "sd_fixed": {
+     "c": 2,
+     "w": 0.25
+    },
+    "mmd": {
+     "c": 0.5,
+     "w": 0.25
+    },
+    "recorded": {
+     "c": 0.5,
+     "w": 0.25
+    }
+   }
+  },
+  "5": {
+   "persist": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "meanshift": {
+    "sd_orig": {},
+    "energy": {},
+    "sd_fixed": {},
+    "mmd": {},
+    "recorded": {}
+   },
+   "ot": {
+    "sd_orig": {
+     "noise": 0.0
+    },
+    "energy": {
+     "noise": 1.0
+    },
+    "sd_fixed": {
+     "noise": 0.0
+    },
+    "mmd": {
+     "noise": 1.0
+    },
+    "recorded": {
+     "noise": 0.0
+    }
+   },
+   "uot_growth": {
+    "sd_orig": {
+     "tau": 1.0,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "energy": {
+     "tau": 1.0,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "sd_fixed": {
+     "tau": 1.0,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "mmd": {
+     "tau": 1.0,
+     "beta": 5.0,
+     "noise": 0.0
+    },
+    "recorded": {
+     "tau": 1.0,
+     "beta": 5.0,
+     "noise": 0.0
+    }
+   },
+   "vel_ss": {
+    "sd_orig": {
+     "c": 8
+    },
+    "energy": {
+     "c": 2
+    },
+    "sd_fixed": {
+     "c": 2
+    },
+    "mmd": {
+     "c": 2
+    },
+    "recorded": {
+     "c": 8
+    }
+   },
+   "vel_dyn": {
+    "sd_orig": {
+     "c": 8
+    },
+    "energy": {
+     "c": 4
+    },
+    "sd_fixed": {
+     "c": 4
+    },
+    "mmd": {
+     "c": 4
+    },
+    "recorded": {
+     "c": 8
+    }
+   },
+   "ot_vel_ss": {
+    "sd_orig": {
+     "c": 8,
+     "w": 0.75
+    },
+    "energy": {
+     "c": 2,
+     "w": 0.25
+    },
+    "sd_fixed": {
+     "c": 8,
+     "w": 0.5
+    },
+    "mmd": {
+     "c": 8,
+     "w": 0.5
+    },
+    "recorded": {
+     "c": 8,
+     "w": 0.75
+    }
+   },
+   "ot_vel_dyn": {
+    "sd_orig": {
+     "c": 8,
+     "w": 0.25
+    },
+    "energy": {
+     "c": 8,
+     "w": 0.25
+    },
+    "sd_fixed": {
+     "c": 2,
+     "w": 0.25
+    },
+    "mmd": {
+     "c": 8,
+     "w": 0.25
+    },
+    "recorded": {
+     "c": 8,
+     "w": 0.25
+    }
+   }
+  }
+ }
+}

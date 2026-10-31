@@ -1,0 +1,65 @@
+{
+ "min_shared": 50,
+ "units": {
+  "A_A1": {
+   "day_b": 9,
+   "n_a": 8231,
+   "n_b": 6001,
+   "shared_clones_all": 78,
+   "shared_clones_sampled": 75
+  },
+  "A_A2": {
+   "day_b": 9,
+   "n_a": 8231,
+   "n_b": 6001,
+   "shared_clones_all": 96,
+   "shared_clones_sampled": 88
+  },
+  "A_A3": {
+   "day_b": 9,
+   "n_a": 8231,
+   "n_b": 6000,
+   "shared_clones_all": 82,
+   "shared_clones_sampled": 77
+  },
+  "A_A5": {
+   "day_b": 16,
+   "n_a": 8231,
+   "n_b": 6000,
+   "shared_clones_all": 130,
+   "shared_clones_sampled": 90
+  },
+  "B_B1": {
+   "day_b": 9,
+   "n_a": 7940,
+   "n_b": 5563,
+   "shared_clones_all": 83,
+   "shared_clones_sampled": 83
+  },
+  "B_B2": {
+   "day_b": 9,
+   "n_a": 7940,
+   "n_b": 6001,
+   "shared_clones_all": 101,
+   "shared_clones_sampled": 79
+  },
+  "B_B3": {
+   "day_b": 9,
+   "n_a": 7940,
+   "n_b": 5999,
+   "shared_clones_all": 125,
+   "shared_clones_sampled": 97
+  },
+  "B_B5": {
+   "day_b": 16,
+   "n_a": 7940,
+   "n_b": 5999,
+   "shared_clones_all": 93,
+   "shared_clones_sampled": 74
+  }
+ },
+ "excluded": {
+  "A_A4": 14,
+  "B_B4": 23
+ }
+}

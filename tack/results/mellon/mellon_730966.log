@@ -1,0 +1,46 @@
+An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+interp 1 {'prev': 2.871, 'next': 1.048, 'union': 1.476, 'indep': 1.978, 'ot_pairs': 1.732, 'mix_full': 1.494, 'mellon_dm25': 4.438, 'mellon_pc30': 1.455} {'dm25': {'ls': 0.721, 'ls_time': 0.343, 'sec': 126.6, 'ess_frac': 0.088, 'clipped_frac': 0.662, 'weight_on_prev': 0.377, 'corr_logw_gap': -0.585}, 'pc30': {'ls': 62.12, 'ls_time': 1.142, 'sec': 92.0, 'ess_frac': 0.95, 'clipped_frac': 0.0, 'weight_on_prev': 0.491, 'corr_logw_gap': -0.819}} cells_aligned True [236s]
+interp 2 {'prev': 0.997, 'next': 0.563, 'union': 0.343, 'indep': 0.772, 'ot_pairs': 0.352, 'mix_full': 0.343, 'mellon_dm25': 2.156, 'mellon_pc30': 0.402} {'dm25': {'ls': 0.751, 'ls_time': 0.358, 'sec': 91.5, 'ess_frac': 0.049, 'clipped_frac': 0.825, 'weight_on_prev': 0.647, 'corr_logw_gap': -0.444}, 'pc30': {'ls': 62.051, 'ls_time': 1.306, 'sec': 86.0, 'ess_frac': 0.953, 'clipped_frac': 0.0, 'weight_on_prev': 0.514, 'corr_logw_gap': -0.944}} cells_aligned True [431s]
+interp 3 {'prev': 0.411, 'next': 1.878, 'union': 0.644, 'indep': 1.249, 'ot_pairs': 0.725, 'mix_full': 0.617, 'mellon_dm25': 2.187, 'mellon_pc30': 1.034} {'dm25': {'ls': 0.716, 'ls_time': 0.385, 'sec': 83.6, 'ess_frac': 0.063, 'clipped_frac': 0.813, 'weight_on_prev': 0.363, 'corr_logw_gap': -0.578}, 'pc30': {'ls': 61.905, 'ls_time': 1.369, 'sec': 82.5, 'ess_frac': 0.907, 'clipped_frac': 0.0, 'weight_on_prev': 0.469, 'corr_logw_gap': -0.856}} cells_aligned True [613s]
+interp 4 {'prev': 1.911, 'next': 0.61, 'union': 0.357, 'indep': 1.011, 'ot_pairs': 0.519, 'mix_full': 0.361, 'mellon_dm25': 0.651, 'mellon_pc30': 0.388} {'dm25': {'ls': 0.679, 'ls_time': 0.37, 'sec': 82.8, 'ess_frac': 0.05, 'clipped_frac': 0.873, 'weight_on_prev': 0.335, 'corr_logw_gap': -0.61}, 'pc30': {'ls': 61.497, 'ls_time': 1.543, 'sec': 85.0, 'ess_frac': 0.89, 'clipped_frac': 0.0, 'weight_on_prev': 0.489, 'corr_logw_gap': -0.736}} cells_aligned True [798s]
+interp 5 {'prev': 0.527, 'next': 0.868, 'union': 0.248, 'indep': 0.888, 'ot_pairs': 0.403, 'mix_full': 0.241, 'mellon_dm25': 4.999, 'mellon_pc30': 1.104} {'dm25': {'ls': 0.659, 'ls_time': 0.407, 'sec': 86.9, 'ess_frac': 0.057, 'clipped_frac': 0.847, 'weight_on_prev': 0.643, 'corr_logw_gap': -0.525}, 'pc30': {'ls': 60.747, 'ls_time': 1.47, 'sec': 84.5, 'ess_frac': 0.798, 'clipped_frac': 0.0, 'weight_on_prev': 0.407, 'corr_logw_gap': -0.954}} cells_aligned True [986s]
+interp 6 {'prev': 0.757, 'next': 0.95, 'union': 0.276, 'indep': 0.607, 'ot_pairs': 0.349, 'mix_full': 0.281, 'mellon_dm25': 2.911, 'mellon_pc30': 0.718} {'dm25': {'ls': 0.679, 'ls_time': 0.408, 'sec': 84.5, 'ess_frac': 0.059, 'clipped_frac': 0.737, 'weight_on_prev': 0.498, 'corr_logw_gap': -0.509}, 'pc30': {'ls': 62.435, 'ls_time': 1.369, 'sec': 85.7, 'ess_frac': 0.855, 'clipped_frac': 0.0, 'weight_on_prev': 0.455, 'corr_logw_gap': -0.986}} cells_aligned True [1172s]
+interp 7 {'prev': 0.978, 'next': 0.642, 'union': 0.208, 'indep': 0.539, 'ot_pairs': 0.226, 'mix_full': 0.198, 'mellon_dm25': 3.723, 'mellon_pc30': 0.2} {'dm25': {'ls': 0.613, 'ls_time': 0.393, 'sec': 85.1, 'ess_frac': 0.043, 'clipped_frac': 0.883, 'weight_on_prev': 0.357, 'corr_logw_gap': -0.652}, 'pc30': {'ls': 62.097, 'ls_time': 1.04, 'sec': 86.4, 'ess_frac': 0.803, 'clipped_frac': 0.065, 'weight_on_prev': 0.525, 'corr_logw_gap': -0.958}} cells_aligned True [1359s]
+PARITY 2.3869795029440866e-15 True
+VERDICTS {"H1_mellon_vs_union": {"wins": 0, "of": 7, "need": 5, "mean_ok": false, "pass": false}, "H1b_mellon_vs_mix_full": {"wins": 0, "of": 7, "need": 5, "mean_ok": false, "pass": false}, "desc_pc30_vs_union": {"wins": 2, "of": 7, "need": 5, "mean_ok": false, "pass": false}, "desc_mix_full_vs_union": {"wins": 3, "of": 7, "need": 5, "mean_ok": true, "pass": false}}
+An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+interp 1 {'prev': 0.252, 'next': 0.207, 'union': 0.068, 'indep': 0.293, 'ot_pairs': 0.126, 'mix_full': 0.067, 'mellon_dm25': 0.338, 'mellon_pc30': 0.226} {'dm25': {'ls': 0.847, 'ls_time': 8.48, 'sec': 158.8, 'ess_frac': 0.302, 'clipped_frac': 0.359, 'weight_on_prev': 0.483, 'corr_logw_gap': -0.686}, 'pc30': {'ls': 22.754, 'ls_time': 24.31, 'sec': 116.7, 'ess_frac': 0.877, 'clipped_frac': 0.001, 'weight_on_prev': 0.466, 'corr_logw_gap': -0.984}} cells_aligned True [306s]
+[2026-10-31 13:45:30,269] [WARNING ] The computed nearest neighbor distances (`nn_distances` attribute) contain 2 invalid values: 0 NaN, 0 infinite, 2 less or equal 0. Please check the input data. Setting invalid distances to the minimum positive value found.
+Traceback (most recent call last):
+  File "/mnt/beegfsstudents/home/3393519/projects/temporal-gnn/tack/code/mellon_confirm.py", line 235, in <module>
+    main()
+  File "/mnt/beegfsstudents/home/3393519/projects/temporal-gnn/tack/code/mellon_confirm.py", line 210, in main
+    info, W, nb_idx, side_a = run_k(args.dataset, X, stage, smp, genes, cc_genes, k, AP)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/beegfsstudents/home/3393519/projects/temporal-gnn/tack/code/mellon_confirm.py", line 107, in run_k
+    lr, hp = mellon_logdens(E, times, nb, tq)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/beegfsstudents/home/3393519/projects/temporal-gnn/tack/code/mellon_confirm.py", line 87, in mellon_logdens
+    m.fit(E, times)
+  File "/home/3393519/envs/mellon/lib/python3.11/site-packages/mellon/time_sensitive_density_estimator.py", line 741, in fit
+    self.prepare_inference(x, times)
+  File "/home/3393519/envs/mellon/lib/python3.11/site-packages/mellon/time_sensitive_density_estimator.py", line 657, in prepare_inference
+    self._prepare_attribute("ls_time")
+  File "/home/3393519/envs/mellon/lib/python3.11/site-packages/mellon/base_model.py", line 445, in _prepare_attribute
+    value = function()
+            ^^^^^^^^^^
+  File "/home/3393519/envs/mellon/lib/python3.11/site-packages/mellon/time_sensitive_density_estimator.py", line 523, in _compute_ls_time
+    ls = compute_ls_time(
+         ^^^^^^^^^^^^^^^^
+  File "/home/3393519/envs/mellon/lib/python3.11/site-packages/mellon/compute_ls_time.py", line 80, in compute_ls_time
+    est = DensityEstimator(
+          ^^^^^^^^^^^^^^^^^
+  File "/home/3393519/envs/mellon/lib/python3.11/site-packages/mellon/density_estimator.py", line 206, in __init__
+    super().__init__(
+  File "/home/3393519/envs/mellon/lib/python3.11/site-packages/mellon/base_model.py", line 102, in __init__
+    self.ls = validate_positive_float(ls, "ls", optional=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/3393519/envs/mellon/lib/python3.11/site-packages/mellon/validation.py", line 196, in validate_positive_float
+    raise ValueError(f"'{param_name}' should be a positive float number")
+ValueError: 'ls' should be a positive float number
+end

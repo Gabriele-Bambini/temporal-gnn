@@ -1,0 +1,3 @@
+origin 4 final grid 277s rho=0.882
+origin 4 same-space backtest 473s
+origin 4 baselines 510s max|diff| vs rescore (same draws) 6.63e-13

@@ -1,0 +1,39 @@
+interp 1 {'prev': 2.871, 'next': 1.048, 'union': 1.476, 'indep': 1.978, 'ot_pairs': 1.732, 'wfr_0': 1.476, 'wfr_0.03': 1.489, 'wfr_0.05': 1.446, 'wfr_0.1': 1.449, 'wfr_0.2': 1.339, 'wfr_0.3': 1.458, 'wfr_0.5': 1.628, 'wfr_1': 1.666, 'wfr_2': 1.659} [22s]
+interp 2 {'prev': 0.997, 'next': 0.563, 'union': 0.343, 'indep': 0.772, 'ot_pairs': 0.352, 'wfr_0': 0.339, 'wfr_0.03': 0.35, 'wfr_0.05': 0.337, 'wfr_0.1': 0.343, 'wfr_0.2': 0.334, 'wfr_0.3': 0.305, 'wfr_0.5': 0.331, 'wfr_1': 0.34, 'wfr_2': 0.367} [48s]
+interp 3 {'prev': 0.411, 'next': 1.878, 'union': 0.644, 'indep': 1.249, 'ot_pairs': 0.725, 'wfr_0': 0.622, 'wfr_0.03': 0.628, 'wfr_0.05': 0.645, 'wfr_0.1': 0.632, 'wfr_0.2': 0.614, 'wfr_0.3': 0.694, 'wfr_0.5': 0.633, 'wfr_1': 0.656, 'wfr_2': 0.68} [73s]
+interp 4 {'prev': 1.911, 'next': 0.61, 'union': 0.357, 'indep': 1.011, 'ot_pairs': 0.519, 'wfr_0': 0.357, 'wfr_0.03': 0.363, 'wfr_0.05': 0.383, 'wfr_0.1': 0.308, 'wfr_0.2': 0.284, 'wfr_0.3': 0.368, 'wfr_0.5': 0.429, 'wfr_1': 0.547, 'wfr_2': 0.534} [99s]
+interp 5 {'prev': 0.527, 'next': 0.868, 'union': 0.248, 'indep': 0.888, 'ot_pairs': 0.403, 'wfr_0': 0.248, 'wfr_0.03': 0.245, 'wfr_0.05': 0.256, 'wfr_0.1': 0.185, 'wfr_0.2': 0.205, 'wfr_0.3': 0.306, 'wfr_0.5': 0.258, 'wfr_1': 0.35, 'wfr_2': 0.415} [124s]
+interp 6 {'prev': 0.757, 'next': 0.95, 'union': 0.276, 'indep': 0.607, 'ot_pairs': 0.349, 'wfr_0': 0.287, 'wfr_0.03': 0.277, 'wfr_0.05': 0.273, 'wfr_0.1': 0.283, 'wfr_0.2': 0.282, 'wfr_0.3': 0.257, 'wfr_0.5': 0.278, 'wfr_1': 0.278, 'wfr_2': 0.335} [149s]
+interp 7 {'prev': 0.978, 'next': 0.642, 'union': 0.208, 'indep': 0.539, 'ot_pairs': 0.226, 'wfr_0': 0.201, 'wfr_0.03': 0.203, 'wfr_0.05': 0.194, 'wfr_0.1': 0.231, 'wfr_0.2': 0.2, 'wfr_0.3': 0.209, 'wfr_0.5': 0.163, 'wfr_1': 0.204, 'wfr_2': 0.212} [171s]
+forecast 2 {'persist': 0.5, 'meanshift': 2.118, 'wfr': (0.486, 0.0)} [187s]
+forecast 3 {'persist': 1.64, 'meanshift': 2.953, 'wfr': (1.538, 0.0)} [203s]
+forecast 4 {'persist': 0.468, 'meanshift': 1.496, 'wfr': (0.41, 0.1)} [219s]
+forecast 5 {'persist': 0.767, 'meanshift': 1.296, 'wfr': (0.714, 0.1)} [236s]
+forecast 6 {'persist': 0.912, 'meanshift': 1.542, 'wfr': (0.847, 0.1)} [253s]
+forecast 7 {'persist': 0.339, 'meanshift': 1.267, 'wfr': (0.326, 0.1)} [270s]
+PARITY max |diff| vs frozen 3.552713678800501e-15
+VERDICTS {"H1_wfr_vs_union": {"wins": 4, "of": 7, "need": 5, "mean_ok": true, "pass": false}, "H2_wfr_vs_ot_pairs": {"wins": 7, "of": 7, "need": 5, "mean_ok": true, "pass": true}, "H3_wfr_vs_persist": {"wins": 6, "of": 6, "need": 4, "mean_ok": true, "pass": true}, "H3_wfr_vs_meanshift": {"wins": 6, "of": 6, "need": 4, "mean_ok": true, "pass": true}, "H3_pass": true}
+interp 1 {'prev': 0.252, 'next': 0.207, 'union': 0.068, 'indep': 0.293, 'ot_pairs': 0.126, 'wfr_0': 0.071, 'wfr_0.03': 0.067, 'wfr_0.05': 0.063, 'wfr_0.1': 0.045, 'wfr_0.2': 0.052, 'wfr_0.3': 0.057, 'wfr_0.5': 0.08, 'wfr_1': 0.104, 'wfr_2': 0.122} [47s]
+interp 2 {'prev': 0.25, 'next': 0.129, 'union': 0.163, 'indep': 0.328, 'ot_pairs': 0.16, 'wfr_0': 0.158, 'wfr_0.03': 0.153, 'wfr_0.05': 0.252, 'wfr_0.1': 0.356, 'wfr_0.2': 0.24, 'wfr_0.3': 0.198, 'wfr_0.5': 0.204, 'wfr_1': 0.186, 'wfr_2': 0.177} [94s]
+interp 3 {'prev': 0.108, 'next': 0.046, 'union': 0.043, 'indep': 0.208, 'ot_pairs': 0.05, 'wfr_0': 0.044, 'wfr_0.03': 0.043, 'wfr_0.05': 0.04, 'wfr_0.1': 0.044, 'wfr_0.2': 0.034, 'wfr_0.3': 0.045, 'wfr_0.5': 0.048, 'wfr_1': 0.051, 'wfr_2': 0.05} [141s]
+interp 4 {'prev': 0.017, 'next': 0.039, 'union': 0.011, 'indep': 0.256, 'ot_pairs': 0.02, 'wfr_0': 0.011, 'wfr_0.03': 0.007, 'wfr_0.05': 0.042, 'wfr_0.1': 0.058, 'wfr_0.2': 0.014, 'wfr_0.3': 0.018, 'wfr_0.5': 0.02, 'wfr_1': 0.015, 'wfr_2': 0.018} [189s]
+interp 5 {'prev': 0.044, 'next': 0.179, 'union': 0.063, 'indep': 0.242, 'ot_pairs': 0.066, 'wfr_0': 0.058, 'wfr_0.03': 0.06, 'wfr_0.05': 0.052, 'wfr_0.1': 0.074, 'wfr_0.2': 0.064, 'wfr_0.3': 0.062, 'wfr_0.5': 0.062, 'wfr_1': 0.067, 'wfr_2': 0.068} [236s]
+interp 6 {'prev': 0.209, 'next': 0.888, 'union': 0.378, 'indep': 0.644, 'ot_pairs': 0.455, 'wfr_0': 0.385, 'wfr_0.03': 0.408, 'wfr_0.05': 0.588, 'wfr_0.1': 0.543, 'wfr_0.2': 0.498, 'wfr_0.3': 0.473, 'wfr_0.5': 0.417, 'wfr_1': 0.463, 'wfr_2': 0.422} [280s]
+interp 7 {'prev': 0.485, 'next': 0.045, 'union': 0.156, 'indep': 0.28, 'ot_pairs': 0.17, 'wfr_0': 0.152, 'wfr_0.03': 0.124, 'wfr_0.05': 0.06, 'wfr_0.1': 0.051, 'wfr_0.2': 0.087, 'wfr_0.3': 0.083, 'wfr_0.5': 0.134, 'wfr_1': 0.146, 'wfr_2': 0.159} [328s]
+interp 8 {'prev': 0.045, 'next': 0.064, 'union': 0.007, 'indep': 0.209, 'ot_pairs': 0.014, 'wfr_0': 0.004, 'wfr_0.03': 0.005, 'wfr_0.05': 0.021, 'wfr_0.1': 0.087, 'wfr_0.2': 0.033, 'wfr_0.3': 0.016, 'wfr_0.5': 0.014, 'wfr_1': 0.008, 'wfr_2': 0.013} [375s]
+interp 9 {'prev': 0.068, 'next': 0.088, 'union': 0.057, 'indep': 0.29, 'ot_pairs': 0.074, 'wfr_0': 0.05, 'wfr_0.03': 0.072, 'wfr_0.05': 0.117, 'wfr_0.1': 0.128, 'wfr_0.2': 0.063, 'wfr_0.3': 0.071, 'wfr_0.5': 0.076, 'wfr_1': 0.069, 'wfr_2': 0.072} [420s]
+forecast 2 {'persist': 0.113, 'meanshift': 0.279, 'wfr': (0.219, 0.05)} [445s]
+forecast 3 {'persist': 0.011, 'meanshift': 0.108, 'wfr': (0.008, 0.0)} [471s]
+forecast 4 {'persist': 0.032, 'meanshift': 0.057, 'wfr': (0.027, 0.0)} [497s]
+forecast 5 {'persist': 0.089, 'meanshift': 0.076, 'wfr': (0.089, 0.0)} [522s]
+forecast 6 {'persist': 0.489, 'meanshift': 0.731, 'wfr': (0.692, 0.03)} [547s]
+forecast 7 {'persist': 0.015, 'meanshift': 0.515, 'wfr': (0.011, 0.0)} [574s]
+forecast 8 {'persist': 0.067, 'meanshift': 0.067, 'wfr': (0.077, 0.0)} [600s]
+forecast 9 {'persist': 0.03, 'meanshift': 0.103, 'wfr': (0.093, 0.03)} [625s]
+PARITY max |diff| vs frozen 0.0
+VERDICTS {"H1_wfr_vs_union": {"wins": 5, "of": 9, "need": 6, "mean_ok": false, "pass": false}, "H2_wfr_vs_ot_pairs": {"wins": 9, "of": 9, "need": 6, "mean_ok": true, "pass": true}, "H3_wfr_vs_persist": {"wins": 3, "of": 8, "need": 6, "mean_ok": false, "pass": false}, "H3_wfr_vs_meanshift": {"wins": 6, "of": 8, "need": 6, "mean_ok": true, "pass": true}, "H3_pass": false}
+sca1pos {'prev': 1.1524, 'next': 0.6386, 'union': 0.1961, 'indep': 0.3182, 'ot_pairs': 0.2098, 'wfr_0': 0.1894, 'wfr_0.03': 0.1937, 'wfr_0.05': 0.1939, 'wfr_0.1': 0.198, 'wfr_0.2': 0.1994, 'wfr_0.3': 0.2157, 'wfr_0.5': 0.2132, 'wfr_1': 0.2046, 'wfr_2': 0.2174} [22s]
+sca1neg {'prev': 1.5554, 'next': 0.6036, 'union': 0.1697, 'indep': 0.4884, 'ot_pairs': 0.2978, 'wfr_0': 0.1783, 'wfr_0.03': 0.1769, 'wfr_0.05': 0.176, 'wfr_0.1': 0.2235, 'wfr_0.2': 0.3187, 'wfr_0.3': 0.284, 'wfr_0.5': 0.2554, 'wfr_1': 0.2479, 'wfr_2': 0.2984} [46s]
+PARITY max |diff| vs frozen 0.0
+VERDICTS {"desc_wfr_vs_union": {"wins": 2, "of": 4, "need": 3, "mean_ok": false, "pass": false}, "desc_wfr_vs_ot_pairs": {"wins": 4, "of": 4, "need": 3, "mean_ok": true, "pass": true}}
+end

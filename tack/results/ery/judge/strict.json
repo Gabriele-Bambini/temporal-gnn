@@ -1,0 +1,1319 @@
+{
+ "data_layer": {
+  "1": {
+   "n_past": 108,
+   "n_fut": 471,
+   "pca_mean_minus_past_mean_maxabs": 0.00013117437009446675,
+   "pca_mean_minus_pastfut_mean_maxabs": 0.32069151399460893,
+   "angle_comps_vs_past_svd_deg": 0.20543298423950596,
+   "angle_comps_vs_past+fut_svd_deg": 86.4673106186887,
+   "Z_past_reconstruction_rel_err": 0.0003555773553862081,
+   "Z_fut_reconstruction_rel_err": 0.0005462806876847176,
+   "v_ss_recomputed_from_past_moments_rel_err": 2.524144212726824e-08,
+   "gamma_recomputed_maxabs": 0.0,
+   "cc_past_mean (0 if centred on past)": 1.5450282514278617e-16,
+   "cc_fut_mean": 0.11902131764769536,
+   "Ms_rows = n_past": true,
+   "v_dyn_rows = n_past": true,
+   "stage_past_max": 1,
+   "stage_fut_unique": [
+    2
+   ]
+  },
+  "2": {
+   "n_past": 579,
+   "n_fut": 1709,
+   "pca_mean_minus_past_mean_maxabs": 8.126902868532682e-05,
+   "pca_mean_minus_pastfut_mean_maxabs": 0.5446419682536092,
+   "angle_comps_vs_past_svd_deg": 0.1587961414001318,
+   "angle_comps_vs_past+fut_svd_deg": 87.7225069266384,
+   "Z_past_reconstruction_rel_err": 0.0003259336427542064,
+   "Z_fut_reconstruction_rel_err": 0.0004124681291819787,
+   "v_ss_recomputed_from_past_moments_rel_err": 2.511340307642357e-08,
+   "gamma_recomputed_maxabs": 0.0,
+   "cc_past_mean (0 if centred on past)": 6.059248286382547e-17,
+   "cc_fut_mean": -0.018640268562435877,
+   "Ms_rows = n_past": true,
+   "v_dyn_rows = n_past": true,
+   "stage_past_max": 2,
+   "stage_fut_unique": [
+    3
+   ]
+  },
+  "3": {
+   "n_past": 2288,
+   "n_fut": 2811,
+   "pca_mean_minus_past_mean_maxabs": 4.578637076413372e-05,
+   "pca_mean_minus_pastfut_mean_maxabs": 0.9120718033834168,
+   "angle_comps_vs_past_svd_deg": 0.11938412608761903,
+   "angle_comps_vs_past+fut_svd_deg": 87.91174363179913,
+   "Z_past_reconstruction_rel_err": 0.0003355381736989485,
+   "Z_fut_reconstruction_rel_err": 0.00039168978990682156,
+   "v_ss_recomputed_from_past_moments_rel_err": 2.58473809851907e-08,
+   "gamma_recomputed_maxabs": 0.0,
+   "cc_past_mean (0 if centred on past)": -1.5217042855002146e-16,
+   "cc_fut_mean": -0.03424484266050983,
+   "Ms_rows = n_past": true,
+   "v_dyn_rows = n_past": true,
+   "stage_past_max": 3,
+   "stage_fut_unique": [
+    4
+   ]
+  },
+  "4": {
+   "n_past": 5099,
+   "n_fut": 1695,
+   "pca_mean_minus_past_mean_maxabs": 2.659220488832048e-05,
+   "pca_mean_minus_pastfut_mean_maxabs": 0.6612580824080796,
+   "angle_comps_vs_past_svd_deg": 0.08071746274164662,
+   "angle_comps_vs_past+fut_svd_deg": 87.37194546003907,
+   "Z_past_reconstruction_rel_err": 0.00035184035262304493,
+   "Z_fut_reconstruction_rel_err": 0.0003327850600319409,
+   "v_ss_recomputed_from_past_moments_rel_err": 2.5367165528328977e-08,
+   "gamma_recomputed_maxabs": 0.0,
+   "cc_past_mean (0 if centred on past)": -5.337083110337682e-16,
+   "cc_fut_mean": -0.043307201179463524,
+   "Ms_rows = n_past": true,
+   "v_dyn_rows = n_past": true,
+   "stage_past_max": 4,
+   "stage_fut_unique": [
+    5
+   ]
+  },
+  "5": {
+   "n_past": 6794,
+   "n_fut": 3021,
+   "pca_mean_minus_past_mean_maxabs": 2.4613752974467218e-05,
+   "pca_mean_minus_pastfut_mean_maxabs": 1.3952658666194364,
+   "angle_comps_vs_past_svd_deg": 0.04795477753679162,
+   "angle_comps_vs_past+fut_svd_deg": 85.06158864068767,
+   "Z_past_reconstruction_rel_err": 0.0003364979343099452,
+   "Z_fut_reconstruction_rel_err": 0.00021807026458644344,
+   "v_ss_recomputed_from_past_moments_rel_err": 2.3542360922245025e-08,
+   "gamma_recomputed_maxabs": 0.0,
+   "cc_past_mean (0 if centred on past)": 5.009566829983632e-16,
+   "cc_fut_mean": -0.0880524110495981,
+   "Ms_rows = n_past": true,
+   "v_dyn_rows = n_past": true,
+   "stage_past_max": 5,
+   "stage_fut_unique": [
+    6
+   ]
+  },
+  "interp2": {
+   "fit_stages": [
+    1,
+    3
+   ],
+   "pca_mean_minus_fit_mean_maxabs": 5.272625532892761e-05,
+   "pca_mean_minus_fit+held_mean_maxabs": 0.4881994072206832,
+   "angle_comps_vs_fit_svd_deg": 0.2327733181737056,
+   "angle_comps_vs_fit+held_svd_deg": 82.97055414214289,
+   "Z_held_reconstruction_rel_err": 0.0003408055339166398,
+   "Ms_rows = n_fit": true
+  },
+  "interp3": {
+   "fit_stages": [
+    2,
+    4
+   ],
+   "pca_mean_minus_fit_mean_maxabs": 5.157774065711607e-05,
+   "pca_mean_minus_fit+held_mean_maxabs": 0.3300768585535645,
+   "angle_comps_vs_fit_svd_deg": 0.15093984329660223,
+   "angle_comps_vs_fit+held_svd_deg": 88.42443439465393,
+   "Z_held_reconstruction_rel_err": 0.00036497172320723803,
+   "Ms_rows = n_fit": true
+  },
+  "interp4": {
+   "fit_stages": [
+    3,
+    5
+   ],
+   "pca_mean_minus_fit_mean_maxabs": 2.895651076562089e-05,
+   "pca_mean_minus_fit+held_mean_maxabs": 0.3835184662742952,
+   "angle_comps_vs_fit_svd_deg": 0.15723018063938646,
+   "angle_comps_vs_fit+held_svd_deg": 88.86917105875533,
+   "Z_held_reconstruction_rel_err": 0.00040857455956087955,
+   "Ms_rows = n_fit": true
+  },
+  "interp5": {
+   "fit_stages": [
+    4,
+    6
+   ],
+   "pca_mean_minus_fit_mean_maxabs": 2.7884181144521847e-05,
+   "pca_mean_minus_fit+held_mean_maxabs": 0.2630668567980812,
+   "angle_comps_vs_fit_svd_deg": 0.08189969523134616,
+   "angle_comps_vs_fit+held_svd_deg": 80.32467596808175,
+   "Z_held_reconstruction_rel_err": 0.00039108399095541063,
+   "Ms_rows = n_fit": true
+  }
+ },
+ "metric_scale": {
+  "2": {
+   "S_audited": 87.27434539794922,
+   "S_reported": 87.27434539794922,
+   "S_judge_3000cells_seed123": 87.27433975987886,
+   "S_judge_3000cells_seed999": 87.27433975987886,
+   "S_rel_diff_judge_vs_audited": -6.460169177380237e-08,
+   "rows": [
+    {
+     "pred": "persist",
+     "S_used_by_sd_fixed": 87.27434539794922,
+     "sd_fixed_audited": 0.5567880637291549,
+     "sd_fixed_judge": 0.5567880931579401,
+     "energy_audited": 1.7555105654507068,
+     "energy_judge": 1.75551316806264,
+     "old_sinkhorn_div": 0.885009765625,
+     "old_scale (moves with the prediction)": 56.314186096191406
+    },
+    {
+     "pred": "persist+N(0,1)",
+     "S_used_by_sd_fixed": 87.27434539794922,
+     "sd_fixed_audited": 0.8129900999738625,
+     "sd_fixed_judge": 0.8129901142578446,
+     "energy_audited": 2.095427586404905,
+     "energy_judge": 2.0954282605852033,
+     "old_sinkhorn_div": 0.8123060110506252,
+     "old_scale (moves with the prediction)": 87.35075824797622
+    },
+    {
+     "pred": "persist+N(0,2)",
+     "S_used_by_sd_fixed": 87.27434539794922,
+     "sd_fixed_audited": 1.668773221355348,
+     "sd_fixed_judge": 1.6687732360040375,
+     "energy_audited": 3.6908087547550688,
+     "energy_judge": 3.690809426752832,
+     "old_sinkhorn_div": 0.8368772812611339,
+     "old_scale (moves with the prediction)": 182.28168190660386
+    },
+    {
+     "pred": "contract a=0.3",
+     "S_used_by_sd_fixed": 87.27434539794922,
+     "sd_fixed_audited": 0.34738584325026783,
+     "sd_fixed_judge": 0.3473858699699308,
+     "energy_audited": 1.780741039087915,
+     "energy_judge": 1.7807432431477954,
+     "old_sinkhorn_div": 0.9111629724502563,
+     "old_scale (moves with the prediction)": 38.72833251953125
+    }
+   ],
+   "past_scale_reads_only": "Z_past (signature past_scale(Z_past)); Target.S is passed in"
+  },
+  "3": {
+   "S_audited": 130.68115234375,
+   "S_reported": 130.68115234375,
+   "S_judge_3000cells_seed123": 129.5937037247465,
+   "S_judge_3000cells_seed999": 129.5937037247465,
+   "S_rel_diff_judge_vs_audited": -0.008321388352491965,
+   "rows": [
+    {
+     "pred": "persist",
+     "S_used_by_sd_fixed": 130.68115234375,
+     "sd_fixed_audited": 0.4057283669399314,
+     "sd_fixed_judge": 0.4057284110053303,
+     "energy_audited": 1.9954885398207,
+     "energy_judge": 1.9954901871673805,
+     "old_sinkhorn_div": 0.33076390624046326,
+     "old_scale (moves with the prediction)": 153.28390502929688
+    },
+    {
+     "pred": "persist+N(0,1)",
+     "S_used_by_sd_fixed": 130.68115234375,
+     "sd_fixed_audited": 0.6029513183679214,
+     "sd_fixed_judge": 0.6029513360362204,
+     "energy_audited": 2.1750006313104304,
+     "energy_judge": 2.175001408449262,
+     "old_sinkhorn_div": 0.4439560750120815,
+     "old_scale (moves with the prediction)": 179.10591489441413
+    },
+    {
+     "pred": "persist+N(0,2)",
+     "S_used_by_sd_fixed": 130.68115234375,
+     "sd_fixed_audited": 1.1300153389617356,
+     "sd_fixed_judge": 1.1300153565902709,
+     "energy_audited": 3.30925414128178,
+     "energy_judge": 3.309254913867706,
+     "old_sinkhorn_div": 0.574819957404136,
+     "old_scale (moves with the prediction)": 274.0351246462644
+    },
+    {
+     "pred": "contract a=0.3",
+     "S_used_by_sd_fixed": 130.68115234375,
+     "sd_fixed_audited": 0.2627297078817779,
+     "sd_fixed_judge": 0.26272973234925917,
+     "energy_audited": 2.1023836381976952,
+     "energy_judge": 2.1023850409725107,
+     "old_sinkhorn_div": 0.33093804121017456,
+     "old_scale (moves with the prediction)": 109.78913116455078
+    }
+   ],
+   "past_scale_reads_only": "Z_past (signature past_scale(Z_past)); Target.S is passed in"
+  },
+  "4": {
+   "S_audited": 106.88880920410156,
+   "S_reported": 106.88880920410156,
+   "S_judge_3000cells_seed123": 107.82796311597849,
+   "S_judge_3000cells_seed999": 109.6458086756549,
+   "S_rel_diff_judge_vs_audited": 0.008786269758919607,
+   "rows": [
+    {
+     "pred": "persist",
+     "S_used_by_sd_fixed": 106.88880920410156,
+     "sd_fixed_audited": 0.46150090314430936,
+     "sd_fixed_judge": 0.4615009539538328,
+     "energy_audited": 2.795843804990806,
+     "energy_judge": 2.7958454812406925,
+     "old_sinkhorn_div": 0.7733508348464966,
+     "old_scale (moves with the prediction)": 69.03197479248047
+    },
+    {
+     "pred": "persist+N(0,1)",
+     "S_used_by_sd_fixed": 106.88880920410156,
+     "sd_fixed_audited": 0.7032856233576454,
+     "sd_fixed_judge": 0.7032856472535984,
+     "energy_audited": 2.839967468243781,
+     "energy_judge": 2.83996840045124,
+     "old_sinkhorn_div": 0.7662543451381545,
+     "old_scale (moves with the prediction)": 97.78562863305578
+    },
+    {
+     "pred": "persist+N(0,2)",
+     "S_used_by_sd_fixed": 106.88880920410156,
+     "sd_fixed_audited": 1.3451136133101276,
+     "sd_fixed_judge": 1.3451136365697087,
+     "energy_audited": 3.7966265188189503,
+     "energy_judge": 3.796627451028498,
+     "old_sinkhorn_div": 0.7807880565551193,
+     "old_scale (moves with the prediction)": 191.73714390270686
+    },
+    {
+     "pred": "contract a=0.3",
+     "S_used_by_sd_fixed": 106.88880920410156,
+     "sd_fixed_audited": 0.3633308073123436,
+     "sd_fixed_judge": 0.3633308384764983,
+     "energy_audited": 3.2872953150702617,
+     "energy_judge": 3.2872968052431757,
+     "old_sinkhorn_div": 0.7817946672439575,
+     "old_scale (moves with the prediction)": 56.720191955566406
+    }
+   ],
+   "past_scale_reads_only": "Z_past (signature past_scale(Z_past)); Target.S is passed in"
+  },
+  "5": {
+   "S_audited": 115.50272369384766,
+   "S_reported": 115.50272369384766,
+   "S_judge_3000cells_seed123": 115.60390827481086,
+   "S_judge_3000cells_seed999": 114.81496490989167,
+   "S_rel_diff_judge_vs_audited": 0.0008760363195539078,
+   "rows": [
+    {
+     "pred": "persist",
+     "S_used_by_sd_fixed": 115.50272369384766,
+     "sd_fixed_audited": 0.6558509999338041,
+     "sd_fixed_judge": 0.6558510712879478,
+     "energy_audited": 5.129661076185751,
+     "energy_judge": 5.129663420133392,
+     "old_sinkhorn_div": 0.7324318885803223,
+     "old_scale (moves with the prediction)": 105.01220703125
+    },
+    {
+     "pred": "persist+N(0,1)",
+     "S_used_by_sd_fixed": 115.50272369384766,
+     "sd_fixed_audited": 0.892664324764134,
+     "sd_fixed_judge": 0.892664361270349,
+     "energy_audited": 4.919850308866834,
+     "energy_judge": 4.919851752670789,
+     "old_sinkhorn_div": 0.7737214865241505,
+     "old_scale (moves with the prediction)": 133.8306027140512
+    },
+    {
+     "pred": "persist+N(0,2)",
+     "S_used_by_sd_fixed": 115.50272369384766,
+     "sd_fixed_audited": 1.5046279039192099,
+     "sd_fixed_judge": 1.5046279403599696,
+     "energy_audited": 5.642302243842766,
+     "energy_judge": 5.642303686757105,
+     "old_sinkhorn_div": 0.7811216564155572,
+     "old_scale (moves with the prediction)": 233.67522289278094
+    },
+    {
+     "pred": "contract a=0.3",
+     "S_used_by_sd_fixed": 115.50272369384766,
+     "sd_fixed_audited": 0.5574687235845134,
+     "sd_fixed_judge": 0.5574687654675798,
+     "energy_audited": 5.999729518646471,
+     "energy_judge": 5.999731734998553,
+     "old_sinkhorn_div": 0.6951668858528137,
+     "old_scale (moves with the prediction)": 94.98200988769531
+    }
+   ],
+   "past_scale_reads_only": "Z_past (signature past_scale(Z_past)); Target.S is passed in"
+  },
+  "interp2": {
+   "S_fit_audited_rule": 126.09650022328509,
+   "S_fit_judge": 127.60468705905345,
+   "S_if_held_were_included": 121.72591599484392
+  },
+  "interp3": {
+   "S_fit_audited_rule": 95.93670966432552,
+   "S_fit_judge": 96.52084835159107,
+   "S_if_held_were_included": 94.9640196579472
+  },
+  "interp4": {
+   "S_fit_audited_rule": 120.87722436145746,
+   "S_fit_judge": 120.5795588624342,
+   "S_if_held_were_included": 97.92880584011559
+  },
+  "interp5": {
+   "S_fit_audited_rule": 157.91868780270542,
+   "S_fit_judge": 160.88337192229727,
+   "S_if_held_were_included": 137.22431412699066
+  }
+ },
+ "interp_layer": {
+  "2": {
+   "S_identical": true,
+   "cfit_identical": true,
+   "methods_identical": {
+    "prev": true,
+    "next": true,
+    "union": true,
+    "indep": true,
+    "ot_pairs": true,
+    "sb": true,
+    "sb_half": true,
+    "ot_bary": true,
+    "ot_bary_sym": true,
+    "uot": true,
+    "vel_ss": true,
+    "vel_ss_back": true,
+    "vel_ss_cED": true,
+    "vel_ss_back_cED": true,
+    "vel_dyn": true,
+    "vel_dyn_back": true,
+    "vel_dyn_cED": true,
+    "vel_dyn_back_cED": true
+   },
+   "n_pred_depends_on_n_held": "n_pred = min(n_held, 1500): only the NUMBER of predicted points"
+  },
+  "3": {
+   "S_identical": true,
+   "cfit_identical": true,
+   "methods_identical": {
+    "prev": true,
+    "next": true,
+    "union": true,
+    "indep": true,
+    "ot_pairs": true,
+    "sb": true,
+    "sb_half": true,
+    "ot_bary": true,
+    "ot_bary_sym": true,
+    "uot": true,
+    "vel_ss": true,
+    "vel_ss_back": true,
+    "vel_ss_cED": true,
+    "vel_ss_back_cED": true,
+    "vel_dyn": true,
+    "vel_dyn_back": true,
+    "vel_dyn_cED": true,
+    "vel_dyn_back_cED": true
+   },
+   "n_pred_depends_on_n_held": "n_pred = min(n_held, 1500): only the NUMBER of predicted points"
+  },
+  "4": {
+   "S_identical": true,
+   "cfit_identical": true,
+   "methods_identical": {
+    "prev": true,
+    "next": true,
+    "union": true,
+    "indep": true,
+    "ot_pairs": true,
+    "sb": true,
+    "sb_half": true,
+    "ot_bary": true,
+    "ot_bary_sym": true,
+    "uot": true,
+    "vel_ss": true,
+    "vel_ss_back": true,
+    "vel_ss_cED": true,
+    "vel_ss_back_cED": true,
+    "vel_dyn": true,
+    "vel_dyn_back": true,
+    "vel_dyn_cED": true,
+    "vel_dyn_back_cED": true
+   },
+   "n_pred_depends_on_n_held": "n_pred = min(n_held, 1500): only the NUMBER of predicted points"
+  },
+  "5": {
+   "S_identical": true,
+   "cfit_identical": true,
+   "methods_identical": {
+    "prev": true,
+    "next": true,
+    "union": true,
+    "indep": true,
+    "ot_pairs": true,
+    "sb": true,
+    "sb_half": true,
+    "ot_bary": true,
+    "ot_bary_sym": true,
+    "uot": true,
+    "vel_ss": true,
+    "vel_ss_back": true,
+    "vel_ss_cED": true,
+    "vel_ss_back_cED": true,
+    "vel_dyn": true,
+    "vel_dyn_back": true,
+    "vel_dyn_cED": true,
+    "vel_dyn_back_cED": true
+   },
+   "n_pred_depends_on_n_held": "n_pred = min(n_held, 1500): only the NUMBER of predicted points"
+  }
+ },
+ "forecast_layer": {
+  "1": {
+   "first_run": {
+    "persist": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "meanshift": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "ot": {
+     "identical": 4,
+     "of": 4,
+     "error": null
+    },
+    "uot_growth": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_ss": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_dyn": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "ot_vel_ss": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "ot_vel_dyn": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    }
+   },
+   "attempt": {
+    "ms_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_smooth": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_pool": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ot_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "uot_damp": {
+     "identical": 9,
+     "of": 9,
+     "error": null
+    },
+    "uot_rw": {
+     "identical": 13,
+     "of": 13,
+     "error": null
+    },
+    "tilt_rw": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "comp_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "comp_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "contract": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "xfit": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "vel_ss_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "vel_dyn_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "pool_eq": {
+     "identical": 3,
+     "of": 3,
+     "error": null
+    },
+    "desample": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "c_trend": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_tilt": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_ot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_uot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_vel": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "c_comp": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "comp_pool": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    }
+   },
+   "S_from_truncated_equals_rescore": true,
+   "seconds": 0.3
+  },
+  "2": {
+   "first_run": {
+    "persist": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "meanshift": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "ot": {
+     "identical": 4,
+     "of": 4,
+     "error": null
+    },
+    "uot_growth": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_ss": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_dyn": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "ot_vel_ss": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "ot_vel_dyn": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    }
+   },
+   "attempt": {
+    "ms_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_smooth": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_pool": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ot_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "uot_damp": {
+     "identical": 9,
+     "of": 9,
+     "error": null
+    },
+    "uot_rw": {
+     "identical": 13,
+     "of": 13,
+     "error": null
+    },
+    "tilt_rw": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "comp_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "comp_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "contract": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "xfit": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "vel_ss_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "vel_dyn_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "pool_eq": {
+     "identical": 3,
+     "of": 3,
+     "error": null
+    },
+    "desample": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "c_trend": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_tilt": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_ot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_uot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_vel": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "c_comp": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "comp_pool": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    }
+   },
+   "S_from_truncated_equals_rescore": true,
+   "seconds": 2.3
+  },
+  "3": {
+   "first_run": {
+    "persist": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "meanshift": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "ot": {
+     "identical": 4,
+     "of": 4,
+     "error": null
+    },
+    "uot_growth": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_ss": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_dyn": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "ot_vel_ss": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "ot_vel_dyn": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    }
+   },
+   "attempt": {
+    "ms_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_smooth": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_pool": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ot_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "uot_damp": {
+     "identical": 9,
+     "of": 9,
+     "error": null
+    },
+    "uot_rw": {
+     "identical": 13,
+     "of": 13,
+     "error": null
+    },
+    "tilt_rw": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "comp_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "comp_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "contract": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "xfit": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "vel_ss_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "vel_dyn_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "pool_eq": {
+     "identical": 3,
+     "of": 3,
+     "error": null
+    },
+    "desample": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "c_trend": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_tilt": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_ot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_uot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_vel": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "c_comp": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "comp_pool": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    }
+   },
+   "S_from_truncated_equals_rescore": true,
+   "seconds": 20.1
+  },
+  "4": {
+   "first_run": {
+    "persist": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "meanshift": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "ot": {
+     "identical": 4,
+     "of": 4,
+     "error": null
+    },
+    "uot_growth": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_ss": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_dyn": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "ot_vel_ss": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "ot_vel_dyn": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    }
+   },
+   "attempt": {
+    "ms_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_smooth": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_pool": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ot_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "uot_damp": {
+     "identical": 9,
+     "of": 9,
+     "error": null
+    },
+    "uot_rw": {
+     "identical": 13,
+     "of": 13,
+     "error": null
+    },
+    "tilt_rw": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "comp_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "comp_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "contract": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "xfit": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "vel_ss_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "vel_dyn_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "pool_eq": {
+     "identical": 3,
+     "of": 3,
+     "error": null
+    },
+    "desample": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "c_trend": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_tilt": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_ot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_uot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_vel": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "c_comp": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "comp_pool": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    }
+   },
+   "S_from_truncated_equals_rescore": true,
+   "seconds": 79.6
+  },
+  "5": {
+   "first_run": {
+    "persist": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "meanshift": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "ot": {
+     "identical": 4,
+     "of": 4,
+     "error": null
+    },
+    "uot_growth": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_ss": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "vel_dyn": {
+     "identical": 7,
+     "of": 7,
+     "error": null
+    },
+    "ot_vel_ss": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "ot_vel_dyn": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    }
+   },
+   "attempt": {
+    "ms_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_smooth": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ms_pool": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "ot_damp": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "uot_damp": {
+     "identical": 9,
+     "of": 9,
+     "error": null
+    },
+    "uot_rw": {
+     "identical": 13,
+     "of": 13,
+     "error": null
+    },
+    "tilt_rw": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "comp_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "comp_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_km": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "mk_atlas": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "contract": {
+     "identical": 6,
+     "of": 6,
+     "error": null
+    },
+    "xfit": {
+     "identical": 1,
+     "of": 1,
+     "error": null
+    },
+    "vel_ss_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "vel_dyn_nm": {
+     "identical": 10,
+     "of": 10,
+     "error": null
+    },
+    "pool_eq": {
+     "identical": 3,
+     "of": 3,
+     "error": null
+    },
+    "desample": {
+     "identical": 5,
+     "of": 5,
+     "error": null
+    },
+    "c_trend": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_tilt": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_ot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_uot": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    },
+    "c_vel": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "c_comp": {
+     "identical": 16,
+     "of": 16,
+     "error": null
+    },
+    "comp_pool": {
+     "identical": 12,
+     "of": 12,
+     "error": null
+    }
+   },
+   "S_from_truncated_equals_rescore": true,
+   "seconds": 90.5
+  }
+ },
+ "seconds": 591.6
+}

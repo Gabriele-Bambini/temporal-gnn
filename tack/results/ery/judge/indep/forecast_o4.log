@@ -1,0 +1,14 @@
+4 persist {'sd_fixed': '{}', 'energy': '{}', 'energy_U': '{}'} 26s
+4 meanshift {'sd_fixed': '{}', 'energy': '{}', 'energy_U': '{}'} 37s
+4 ot {'sd_fixed': '{"noise": 0.0}', 'energy': '{"noise": 1.0}', 'energy_U': '{"noise": 1.0}'} 64s
+4 uot_growth {'sd_fixed': '{"beta": 5.0, "noise": 0.0, "tau": 0.1}', 'energy': '{"beta": 5.0, "noise": 0.0, "tau": 0.1}', 'energy_U': '{"beta": 5.0, "noise": 0.0, "tau": 0.1}'} 126s
+4 vel_ss {'sd_fixed': '{"c": 2}', 'energy': '{"c": 0.25}', 'energy_U': '{"c": 0.25}'} 202s
+4 vel_dyn {'sd_fixed': '{"c": 2}', 'energy': '{"c": 1}', 'energy_U': '{"c": 1}'} 273s
+4 ot_vel_ss {'sd_fixed': '{"c": 2, "w": 0.25}', 'energy': '{"c": 0.5, "w": 0.25}', 'energy_U': '{"c": 0.5, "w": 0.25}'} 345s
+4 ot_vel_dyn {'sd_fixed': '{"c": 2, "w": 0.25}', 'energy': '{"c": 0.5, "w": 0.25}', 'energy_U': '{"c": 0.5, "w": 0.25}'} 406s
+4 uot_rw grid done 460s
+4 tilt_rw grid done 482s
+4 mk_km grid done 497s
+4 contract grid done 519s
+4 ms_smooth grid done 536s
+done 4 536.4 {'calls': 228, 'log_path': 0, 'unconverged': 0, 'max_marg_err': 9.994243210798004e-10}

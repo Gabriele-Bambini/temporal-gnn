@@ -1,0 +1,3185 @@
+{
+ "title": "Atlas mechanism analysis (EXPLORATORY)",
+ "status": "EXPLORATORY, not pre-registered. The pre-registered verdicts in confirm.json (H1 FAIL, H1b FAIL, H1c PASS, H2 FAIL, H2b FAIL) are final and unchanged by anything here. ORACLE-labelled rows use the held / future stage to choose a setting and are never valid as methods.",
+ "scripts": {
+  "check_repro.py": "local reproduction of confirm.json",
+  "interp_mechanism.py": "Q1 composition + interpolation geometry",
+  "within_lineage.py": "Q2 within-lineage rerun of the frozen methods",
+  "forecast_oracle.py": "Q3 oracle forecasting grid",
+  "assemble.py": "this file",
+  "spread_eps.py": "Q1 dispersion of the OT midpoint clouds + ORACLE eps_rel scan",
+  "common.py": "helpers (mirror of atlas_confirm.run_interp with masks)"
+ },
+ "data": "C:\\Users\\Gabriele\\AppData\\Local\\Temp\\claude\\C--Users-Gabriele-My-Drive-PhD---Research-Temporal-GNN\\264f6820-d374-441d-a750-fb2a7c436807\\scratchpad\\atlas",
+ "reproduction": {
+  "script": "check_repro.py",
+  "exploratory": true,
+  "interp": {
+   "1": {
+    "max_abs_diff_ED_U": 3.552713678800501e-15,
+    "max_abs_diff_ED_U_gene": 7.105427357601002e-15
+   },
+   "2": {
+    "max_abs_diff_ED_U": 3.552713678800501e-15,
+    "max_abs_diff_ED_U_gene": 7.105427357601002e-15
+   },
+   "3": {
+    "max_abs_diff_ED_U": 1.0658141036401503e-14,
+    "max_abs_diff_ED_U_gene": 3.552713678800501e-15
+   },
+   "4": {
+    "max_abs_diff_ED_U": 7.105427357601002e-15,
+    "max_abs_diff_ED_U_gene": 1.0658141036401503e-14
+   },
+   "5": {
+    "max_abs_diff_ED_U": 3.552713678800501e-15,
+    "max_abs_diff_ED_U_gene": 7.105427357601002e-15
+   },
+   "6": {
+    "max_abs_diff_ED_U": 8.881784197001252e-15,
+    "max_abs_diff_ED_U_gene": 7.105427357601002e-15
+   },
+   "7": {
+    "max_abs_diff_ED_U": 3.552713678800501e-15,
+    "max_abs_diff_ED_U_gene": 7.105427357601002e-15
+   }
+  },
+  "forecast": {
+   "2": {
+    "persist": {
+     "hp_same": true,
+     "abs_diff_ED_U": 1.7763568394002505e-15,
+     "abs_diff_backtest": 3.552713678800501e-15
+    },
+    "meanshift": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 0.0
+    },
+    "uot_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 1.7763568394002505e-15,
+     "abs_diff_backtest": 3.552713678800501e-15
+    },
+    "tilt_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 1.7763568394002505e-15,
+     "abs_diff_backtest": 3.552713678800501e-15
+    }
+   },
+   "3": {
+    "persist": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 1.7763568394002505e-15
+    },
+    "meanshift": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 0.0
+    },
+    "uot_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 1.7763568394002505e-15
+    },
+    "tilt_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 1.7763568394002505e-15
+    }
+   },
+   "4": {
+    "persist": {
+     "hp_same": true,
+     "abs_diff_ED_U": 1.7763568394002505e-15,
+     "abs_diff_backtest": 0.0
+    },
+    "meanshift": {
+     "hp_same": true,
+     "abs_diff_ED_U": 5.329070518200751e-15,
+     "abs_diff_backtest": 0.0
+    },
+    "uot_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 1.7763568394002505e-15,
+     "abs_diff_backtest": 0.0
+    },
+    "tilt_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 1.7763568394002505e-15,
+     "abs_diff_backtest": 0.0
+    }
+   },
+   "5": {
+    "persist": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 1.7763568394002505e-15
+    },
+    "meanshift": {
+     "hp_same": true,
+     "abs_diff_ED_U": 3.552713678800501e-15,
+     "abs_diff_backtest": 5.329070518200751e-15
+    },
+    "uot_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 1.7763568394002505e-15
+    },
+    "tilt_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 1.7763568394002505e-15
+    }
+   },
+   "6": {
+    "persist": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 0.0
+    },
+    "meanshift": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 3.552713678800501e-15
+    },
+    "uot_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 0.0
+    },
+    "tilt_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 0.0
+    }
+   },
+   "7": {
+    "persist": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 0.0
+    },
+    "meanshift": {
+     "hp_same": true,
+     "abs_diff_ED_U": 3.552713678800501e-15,
+     "abs_diff_backtest": 0.0
+    },
+    "uot_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 1.7763568394002505e-15,
+     "abs_diff_backtest": 0.0
+    },
+    "tilt_rw": {
+     "hp_same": true,
+     "abs_diff_ED_U": 0.0,
+     "abs_diff_backtest": 0.0
+    }
+   }
+  },
+  "all_ok": true,
+  "seconds": 288.3
+ },
+ "Q1_composition": {
+  "per_k": {
+   "1": {
+    "TV_held_prev": 0.2421,
+    "TV_held_next": 0.1493,
+    "TV_held_mix5050": 0.1151,
+    "best_alpha_next": 0.8,
+    "TV_held_best_alpha_mix": 0.0958,
+    "TV_prev_next": 0.3419,
+    "share_of_TV_prev_next_from_one_sided_types": 0.2583,
+    "next_mass_types_absent_at_prev(appearing)": 0.1873,
+    "prev_mass_types_absent_at_next(vanishing)": 0.0007,
+    "held_mass_types_absent_at_prev": 0.0874,
+    "held_mass_types_absent_at_next": 0.0039,
+    "held_transient_peak_excess": 0.0471,
+    "held_mass_in_types_between_neighbours": 0.6578,
+    "held_closer_to_mix_than_both_neighbours": true
+   },
+   "2": {
+    "TV_held_prev": 0.1493,
+    "TV_held_next": 0.11,
+    "TV_held_mix5050": 0.073,
+    "best_alpha_next": 0.6,
+    "TV_held_best_alpha_mix": 0.0682,
+    "TV_prev_next": 0.2022,
+    "share_of_TV_prev_next_from_one_sided_types": 0.1433,
+    "next_mass_types_absent_at_prev(appearing)": 0.0653,
+    "prev_mass_types_absent_at_next(vanishing)": 0.0014,
+    "held_mass_types_absent_at_prev": 0.022,
+    "held_mass_types_absent_at_next": 0.0027,
+    "held_transient_peak_excess": 0.0513,
+    "held_mass_in_types_between_neighbours": 0.652,
+    "held_closer_to_mix_than_both_neighbours": true
+   },
+   "3": {
+    "TV_held_prev": 0.11,
+    "TV_held_next": 0.4583,
+    "TV_held_mix5050": 0.2165,
+    "best_alpha_next": 0.14,
+    "TV_held_best_alpha_mix": 0.0806,
+    "TV_prev_next": 0.5063,
+    "share_of_TV_prev_next_from_one_sided_types": 0.3091,
+    "next_mass_types_absent_at_prev(appearing)": 0.3207,
+    "prev_mass_types_absent_at_next(vanishing)": 0.0,
+    "held_mass_types_absent_at_prev": 0.0273,
+    "held_mass_types_absent_at_next": 0.0,
+    "held_transient_peak_excess": 0.044,
+    "held_mass_in_types_between_neighbours": 0.6827,
+    "held_closer_to_mix_than_both_neighbours": false
+   },
+   "4": {
+    "TV_held_prev": 0.4583,
+    "TV_held_next": 0.2681,
+    "TV_held_mix5050": 0.1971,
+    "best_alpha_next": 0.75,
+    "TV_held_best_alpha_mix": 0.1449,
+    "TV_prev_next": 0.6907,
+    "share_of_TV_prev_next_from_one_sided_types": 0.2629,
+    "next_mass_types_absent_at_prev(appearing)": 0.3329,
+    "prev_mass_types_absent_at_next(vanishing)": 0.0363,
+    "held_mass_types_absent_at_prev": 0.127,
+    "held_mass_types_absent_at_next": 0.0093,
+    "held_transient_peak_excess": 0.0358,
+    "held_mass_in_types_between_neighbours": 0.5543,
+    "held_closer_to_mix_than_both_neighbours": true
+   },
+   "5": {
+    "TV_held_prev": 0.2681,
+    "TV_held_next": 0.2585,
+    "TV_held_mix5050": 0.1483,
+    "best_alpha_next": 0.53,
+    "TV_held_best_alpha_mix": 0.1477,
+    "TV_prev_next": 0.5067,
+    "share_of_TV_prev_next_from_one_sided_types": 0.3711,
+    "next_mass_types_absent_at_prev(appearing)": 0.0843,
+    "prev_mass_types_absent_at_next(vanishing)": 0.2963,
+    "held_mass_types_absent_at_prev": 0.0543,
+    "held_mass_types_absent_at_next": 0.0513,
+    "held_transient_peak_excess": 0.0199,
+    "held_mass_in_types_between_neighbours": 0.7831,
+    "held_closer_to_mix_than_both_neighbours": true
+   },
+   "6": {
+    "TV_held_prev": 0.2585,
+    "TV_held_next": 0.3583,
+    "TV_held_mix5050": 0.2071,
+    "best_alpha_next": 0.51,
+    "TV_held_best_alpha_mix": 0.2068,
+    "TV_prev_next": 0.5251,
+    "share_of_TV_prev_next_from_one_sided_types": 0.1403,
+    "next_mass_types_absent_at_prev(appearing)": 0.086,
+    "prev_mass_types_absent_at_next(vanishing)": 0.0676,
+    "held_mass_types_absent_at_prev": 0.009,
+    "held_mass_types_absent_at_next": 0.0207,
+    "held_transient_peak_excess": 0.0827,
+    "held_mass_in_types_between_neighbours": 0.555,
+    "held_closer_to_mix_than_both_neighbours": true
+   },
+   "7": {
+    "TV_held_prev": 0.3583,
+    "TV_held_next": 0.1467,
+    "TV_held_mix5050": 0.1562,
+    "best_alpha_next": 0.78,
+    "TV_held_best_alpha_mix": 0.085,
+    "TV_prev_next": 0.487,
+    "share_of_TV_prev_next_from_one_sided_types": 0.3723,
+    "next_mass_types_absent_at_prev(appearing)": 0.051,
+    "prev_mass_types_absent_at_next(vanishing)": 0.3187,
+    "held_mass_types_absent_at_prev": 0.0113,
+    "held_mass_types_absent_at_next": 0.0753,
+    "held_transient_peak_excess": 0.0143,
+    "held_mass_in_types_between_neighbours": 0.7537,
+    "held_closer_to_mix_than_both_neighbours": false
+   }
+  },
+  "n_k_held_closer_to_mix_than_both": 5,
+  "n_k": 7
+ },
+ "Q1_geometry": {
+  "per_k": {
+   "1": {
+    "union": 1.4759894024475706,
+    "ot_pairs": 1.7316318110944653,
+    "uot": 1.9595228257766457,
+    "prev": 2.8708131565864563,
+    "next": 1.0475223422928768,
+    "ED_prev_next": 2.008663856286359,
+    "quarter_ED_prev_next(bonus)": 0.5021659640715898,
+    "identity_pred_union": 1.457001785368077,
+    "ORACLE_best_t": 1.0,
+    "ORACLE_best_t_ED_U": 1.0392187358160125,
+    "t0.5_own_draw_ED_U": 1.6556636338705228,
+    "ORACLE_best_alpha": 0.95,
+    "ORACLE_best_alpha_ED_U": 1.0432712255602734,
+    "ORACLE_best_spread": "two_point_h0.5",
+    "ORACLE_best_spread_ED_U": 1.4606908794465336,
+    "spread_uniform_h0.5": 1.5727674347552725,
+    "off_manifold_frac": {
+     "prev": 0.687,
+     "next": 0.523,
+     "union": 0.61,
+     "ot_pairs": 0.66,
+     "uot": 0.614,
+     "indep": 0.755
+    },
+    "target_uncovered_frac": {
+     "prev": 0.255,
+     "next": 0.273,
+     "union": 0.211,
+     "ot_pairs": 0.213,
+     "uot": 0.201,
+     "indep": 0.291
+    },
+    "plan_mass_same_type": 0.5779685091889754,
+    "off_manifold_same_vs_cross_type_midpoints": [
+     0.5433734939759036,
+     0.7776119402985074
+    ]
+   },
+   "2": {
+    "union": 0.34271630584743323,
+    "ot_pairs": 0.3518964055339436,
+    "uot": 0.3484678253881774,
+    "prev": 0.9968060840171867,
+    "next": 0.5629269228189765,
+    "ED_prev_next": 1.7516123424995158,
+    "quarter_ED_prev_next(bonus)": 0.43790308562487895,
+    "identity_pred_union": 0.34196341779320266,
+    "ORACLE_best_t": 0.6,
+    "ORACLE_best_t_ED_U": 0.34172127224610804,
+    "t0.5_own_draw_ED_U": 0.37418900323801313,
+    "ORACLE_best_alpha": 0.6,
+    "ORACLE_best_alpha_ED_U": 0.31594795829838773,
+    "ORACLE_best_spread": "uniform_h0.5",
+    "ORACLE_best_spread_ED_U": 0.3543520666038524,
+    "spread_uniform_h0.5": 0.3543520666038524,
+    "off_manifold_frac": {
+     "prev": 0.192,
+     "next": 0.215,
+     "union": 0.201,
+     "ot_pairs": 0.157,
+     "uot": 0.056,
+     "indep": 0.526
+    },
+    "target_uncovered_frac": {
+     "prev": 0.271,
+     "next": 0.136,
+     "union": 0.136,
+     "ot_pairs": 0.116,
+     "uot": 0.104,
+     "indep": 0.175
+    },
+    "plan_mass_same_type": 0.6631280941531805,
+    "off_manifold_same_vs_cross_type_midpoints": [
+     0.043912175648702596,
+     0.3353413654618474
+    ]
+   },
+   "3": {
+    "union": 0.6440503054621356,
+    "ot_pairs": 0.7251317799995262,
+    "uot": 0.547228928277649,
+    "prev": 0.41066154864837817,
+    "next": 1.8779255013119844,
+    "ED_prev_next": 2.075844552493139,
+    "quarter_ED_prev_next(bonus)": 0.5189611381232847,
+    "identity_pred_union": 0.6253323868568966,
+    "ORACLE_best_t": 0.1,
+    "ORACLE_best_t_ED_U": 0.3699667440590743,
+    "t0.5_own_draw_ED_U": 0.6902940537778992,
+    "ORACLE_best_alpha": 0.15,
+    "ORACLE_best_alpha_ED_U": 0.36574858995626275,
+    "ORACLE_best_spread": "two_point_h0.4",
+    "ORACLE_best_spread_ED_U": 0.6099985220687009,
+    "spread_uniform_h0.5": 0.6287304793613977,
+    "off_manifold_frac": {
+     "prev": 0.118,
+     "next": 0.453,
+     "union": 0.287,
+     "ot_pairs": 0.279,
+     "uot": 0.131,
+     "indep": 0.678
+    },
+    "target_uncovered_frac": {
+     "prev": 0.191,
+     "next": 0.307,
+     "union": 0.189,
+     "ot_pairs": 0.157,
+     "uot": 0.139,
+     "indep": 0.264
+    },
+    "plan_mass_same_type": 0.3823761512609044,
+    "off_manifold_same_vs_cross_type_midpoints": [
+     0.05565217391304348,
+     0.42702702702702705
+    ]
+   },
+   "4": {
+    "union": 0.35669204484623646,
+    "ot_pairs": 0.5186533751327254,
+    "uot": 0.7135187892074306,
+    "prev": 1.9106876387946248,
+    "next": 0.6097223761361358,
+    "ED_prev_next": 3.5951957524778138,
+    "quarter_ED_prev_next(bonus)": 0.8987989381194534,
+    "identity_pred_union": 0.3614060693459269,
+    "ORACLE_best_t": 0.7,
+    "ORACLE_best_t_ED_U": 0.33980178097813746,
+    "t0.5_own_draw_ED_U": 0.5092056851020968,
+    "ORACLE_best_alpha": 0.7,
+    "ORACLE_best_alpha_ED_U": 0.24491463176696016,
+    "ORACLE_best_spread": "two_point_h0.5",
+    "ORACLE_best_spread_ED_U": 0.37165424122948804,
+    "spread_uniform_h0.5": 0.40721137370375377,
+    "off_manifold_frac": {
+     "prev": 0.227,
+     "next": 0.3,
+     "union": 0.269,
+     "ot_pairs": 0.283,
+     "uot": 0.124,
+     "indep": 0.689
+    },
+    "target_uncovered_frac": {
+     "prev": 0.411,
+     "next": 0.181,
+     "union": 0.156,
+     "ot_pairs": 0.125,
+     "uot": 0.115,
+     "indep": 0.255
+    },
+    "plan_mass_same_type": 0.262311447375491,
+    "off_manifold_same_vs_cross_type_midpoints": [
+     0.022167487684729065,
+     0.40036563071297987
+    ]
+   },
+   "5": {
+    "union": 0.24785224487042257,
+    "ot_pairs": 0.40308210496964136,
+    "uot": 0.26945433337654734,
+    "prev": 0.5265937410280834,
+    "next": 0.8684607431900572,
+    "ED_prev_next": 1.817947937702926,
+    "quarter_ED_prev_next(bonus)": 0.4544869844257315,
+    "identity_pred_union": 0.2430402576833388,
+    "ORACLE_best_t": 0.3,
+    "ORACLE_best_t_ED_U": 0.35347215026532436,
+    "t0.5_own_draw_ED_U": 0.4034732787120869,
+    "ORACLE_best_alpha": 0.4,
+    "ORACLE_best_alpha_ED_U": 0.22693058503213237,
+    "ORACLE_best_spread": "two_point_h0.5",
+    "ORACLE_best_spread_ED_U": 0.2534976207826034,
+    "spread_uniform_h0.5": 0.31736843463762315,
+    "off_manifold_frac": {
+     "prev": 0.147,
+     "next": 0.146,
+     "union": 0.149,
+     "ot_pairs": 0.265,
+     "uot": 0.069,
+     "indep": 0.657
+    },
+    "target_uncovered_frac": {
+     "prev": 0.268,
+     "next": 0.175,
+     "union": 0.122,
+     "ot_pairs": 0.112,
+     "uot": 0.11,
+     "indep": 0.225
+    },
+    "plan_mass_same_type": 0.31695820393791146,
+    "off_manifold_same_vs_cross_type_midpoints": [
+     0.02510460251046025,
+     0.38943248532289626
+    ]
+   },
+   "6": {
+    "union": 0.2762891678402634,
+    "ot_pairs": 0.34926424148207147,
+    "uot": 0.2616058762576839,
+    "prev": 0.7574319710258107,
+    "next": 0.9502875264219194,
+    "ED_prev_next": 2.2833393601482648,
+    "quarter_ED_prev_next(bonus)": 0.5708348400370662,
+    "identity_pred_union": 0.28302490868679886,
+    "ORACLE_best_t": 0.5,
+    "ORACLE_best_t_ED_U": 0.3431506150125229,
+    "t0.5_own_draw_ED_U": 0.3431506150125229,
+    "ORACLE_best_alpha": 0.45,
+    "ORACLE_best_alpha_ED_U": 0.2789445033216005,
+    "ORACLE_best_spread": "two_point_h0.4",
+    "ORACLE_best_spread_ED_U": 0.26019898503518313,
+    "spread_uniform_h0.5": 0.2703488892956282,
+    "off_manifold_frac": {
+     "prev": 0.101,
+     "next": 0.203,
+     "union": 0.157,
+     "ot_pairs": 0.344,
+     "uot": 0.091,
+     "indep": 0.636
+    },
+    "target_uncovered_frac": {
+     "prev": 0.109,
+     "next": 0.18,
+     "union": 0.109,
+     "ot_pairs": 0.084,
+     "uot": 0.073,
+     "indep": 0.181
+    },
+    "plan_mass_same_type": 0.2893239110592422,
+    "off_manifold_same_vs_cross_type_midpoints": [
+     0.02522935779816514,
+     0.4830827067669173
+    ]
+   },
+   "7": {
+    "union": 0.2075129104638768,
+    "ot_pairs": 0.22584811266804591,
+    "uot": 0.2042857828239312,
+    "prev": 0.9775189051821774,
+    "next": 0.6415971679369322,
+    "ED_prev_next": 2.426976155695749,
+    "quarter_ED_prev_next(bonus)": 0.6067440389239372,
+    "identity_pred_union": 0.20281399763561758,
+    "ORACLE_best_t": 0.6,
+    "ORACLE_best_t_ED_U": 0.20022510060004942,
+    "t0.5_own_draw_ED_U": 0.21344021137465674,
+    "ORACLE_best_alpha": 0.55,
+    "ORACLE_best_alpha_ED_U": 0.19187672827727967,
+    "ORACLE_best_spread": "two_point_h0.4",
+    "ORACLE_best_spread_ED_U": 0.16438161828206907,
+    "spread_uniform_h0.5": 0.1702166519016277,
+    "off_manifold_frac": {
+     "prev": 0.167,
+     "next": 0.395,
+     "union": 0.287,
+     "ot_pairs": 0.217,
+     "uot": 0.123,
+     "indep": 0.605
+    },
+    "target_uncovered_frac": {
+     "prev": 0.261,
+     "next": 0.457,
+     "union": 0.207,
+     "ot_pairs": 0.105,
+     "uot": 0.095,
+     "indep": 0.267
+    },
+    "plan_mass_same_type": 0.3251795446437845,
+    "off_manifold_same_vs_cross_type_midpoints": [
+     0.03717472118959108,
+     0.28586278586278585
+    ]
+   }
+  },
+  "n_k_ORACLE_best_t_OT_beats_best_alpha_mix": 1,
+  "n_k_ORACLE_best_spread_beats_best_alpha_mix": 2,
+  "n_k_ot_pairs_less_off_manifold_than_union": 3,
+  "n_k_ot_pairs_covers_target_better_than_union": 6
+ },
+ "Q1_stage_vote": {
+  "1": {
+   "classifier_acc_prev_next": [
+    0.947,
+    0.969
+   ],
+   "intermediate_frac": {
+    "held_all": 0.621,
+    "union": 0.149,
+    "ot_pairs": 0.599,
+    "uot": 0.617
+   },
+   "held_mean_P_next": 0.446,
+   "held_pool_mean_P_next": {
+    "7": 0.446
+   }
+  },
+  "2": {
+   "classifier_acc_prev_next": [
+    0.991,
+    0.955
+   ],
+   "intermediate_frac": {
+    "held_all": 0.605,
+    "union": 0.123,
+    "ot_pairs": 0.715,
+    "uot": 0.664
+   },
+   "held_mean_P_next": 0.6,
+   "held_pool_mean_P_next": {
+    "10": 0.472,
+    "14": 0.821,
+    "15": 0.87,
+    "30": 0.616,
+    "31": 0.528,
+    "32": 0.545
+   }
+  },
+  "3": {
+   "classifier_acc_prev_next": [
+    0.925,
+    0.948
+   ],
+   "intermediate_frac": {
+    "held_all": 0.537,
+    "union": 0.222,
+    "ot_pairs": 0.659,
+    "uot": 0.631
+   },
+   "held_mean_P_next": 0.293,
+   "held_pool_mean_P_next": {
+    "23": 0.22,
+    "26": 0.304,
+    "27": 0.298
+   }
+  },
+  "4": {
+   "classifier_acc_prev_next": [
+    0.982,
+    0.985
+   ],
+   "intermediate_frac": {
+    "held_all": 0.292,
+    "union": 0.058,
+    "ot_pairs": 0.572,
+    "uot": 0.538
+   },
+   "held_mean_P_next": 0.706,
+   "held_pool_mean_P_next": {
+    "19": 0.679,
+    "2": 0.881,
+    "20": 0.729,
+    "3": 0.758,
+    "4": 0.523,
+    "6": 0.745
+   }
+  },
+  "5": {
+   "classifier_acc_prev_next": [
+    0.952,
+    0.949
+   ],
+   "intermediate_frac": {
+    "held_all": 0.4,
+    "union": 0.171,
+    "ot_pairs": 0.659,
+    "uot": 0.617
+   },
+   "held_mean_P_next": 0.524,
+   "held_pool_mean_P_next": {
+    "12": 0.681,
+    "13": 0.665,
+    "8": 0.185,
+    "9": 0.424
+   }
+  },
+  "6": {
+   "classifier_acc_prev_next": [
+    0.87,
+    0.899
+   ],
+   "intermediate_frac": {
+    "held_all": 0.67,
+    "union": 0.433,
+    "ot_pairs": 0.649,
+    "uot": 0.697
+   },
+   "held_mean_P_next": 0.348,
+   "held_pool_mean_P_next": {
+    "16": 0.481,
+    "33": 0.312,
+    "34": 0.312,
+    "35": 0.299
+   }
+  },
+  "7": {
+   "classifier_acc_prev_next": [
+    0.991,
+    0.987
+   ],
+   "intermediate_frac": {
+    "held_all": 0.444,
+    "union": 0.055,
+    "ot_pairs": 0.546,
+    "uot": 0.547
+   },
+   "held_mean_P_next": 0.404,
+   "held_pool_mean_P_next": {
+    "24": 0.46,
+    "25": 0.458,
+    "28": 0.243
+   }
+  }
+ },
+ "Q1_pools": {
+  "rows": [
+   {
+    "k": 1,
+    "pool": "7",
+    "n": 2072,
+    "P_next": 0.44594594594594594,
+    "union": 1.4568,
+    "ot_pairs": 1.7044,
+    "uot": 1.9297,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 1.0,
+    "ORACLE_pool_best_alpha": 0.95,
+    "ORACLE_pool_best_t_OT_beats_best_mix": true,
+    "ORACLE_pool_best_t_ED_U": 1.024818507170367,
+    "ORACLE_pool_best_alpha_ED_U": 1.0280690448690326
+   },
+   {
+    "k": 2,
+    "pool": "10",
+    "n": 447,
+    "P_next": 0.4723340790454884,
+    "union": 0.3587,
+    "ot_pairs": 0.4158,
+    "uot": 0.3993,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.5,
+    "ORACLE_pool_best_alpha": 0.45,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.3992542527940053,
+    "ORACLE_pool_best_alpha_ED_U": 0.37476906062092813
+   },
+   {
+    "k": 2,
+    "pool": "14",
+    "n": 238,
+    "P_next": 0.8207282913165267,
+    "union": 0.6482,
+    "ot_pairs": 0.7273,
+    "uot": 0.7264,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.8,
+    "ORACLE_pool_best_alpha": 0.75,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.5405327909750905,
+    "ORACLE_pool_best_alpha_ED_U": 0.5156681789492676
+   },
+   {
+    "k": 2,
+    "pool": "15",
+    "n": 295,
+    "P_next": 0.8702824858757062,
+    "union": 0.7257,
+    "ot_pairs": 0.786,
+    "uot": 0.7835,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.9,
+    "ORACLE_pool_best_alpha": 0.85,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.5640908542524249,
+    "ORACLE_pool_best_alpha_ED_U": 0.5380565542813525
+   },
+   {
+    "k": 2,
+    "pool": "30",
+    "n": 682,
+    "P_next": 0.6162267839687194,
+    "union": 0.4807,
+    "ot_pairs": 0.4967,
+    "uot": 0.4958,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.6,
+    "ORACLE_pool_best_alpha": 0.65,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.48100420744423467,
+    "ORACLE_pool_best_alpha_ED_U": 0.45339315971504374
+   },
+   {
+    "k": 2,
+    "pool": "31",
+    "n": 666,
+    "P_next": 0.527927927927928,
+    "union": 0.5587,
+    "ot_pairs": 0.5615,
+    "uot": 0.567,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.6,
+    "ORACLE_pool_best_alpha": 0.6,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.5655772291354975,
+    "ORACLE_pool_best_alpha_ED_U": 0.5388176920656734
+   },
+   {
+    "k": 2,
+    "pool": "32",
+    "n": 672,
+    "P_next": 0.5450396825396825,
+    "union": 0.4892,
+    "ot_pairs": 0.4767,
+    "uot": 0.4687,
+    "union_beats_ot_pairs": false,
+    "ORACLE_pool_best_t": 0.6,
+    "ORACLE_pool_best_alpha": 0.6,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.48986149121266226,
+    "ORACLE_pool_best_alpha_ED_U": 0.47765397376080543
+   },
+   {
+    "k": 3,
+    "pool": "23",
+    "n": 294,
+    "P_next": 0.2204081632653061,
+    "union": 1.063,
+    "ot_pairs": 1.2043,
+    "uot": 0.7939,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.0,
+    "ORACLE_pool_best_alpha": 0.0,
+    "ORACLE_pool_best_t_OT_beats_best_mix": true,
+    "ORACLE_pool_best_t_ED_U": 0.34300954490880287,
+    "ORACLE_pool_best_alpha_ED_U": 0.34654317039346694
+   },
+   {
+    "k": 3,
+    "pool": "26",
+    "n": 1307,
+    "P_next": 0.30400408059168577,
+    "union": 0.7007,
+    "ot_pairs": 0.7699,
+    "uot": 0.6021,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.1,
+    "ORACLE_pool_best_alpha": 0.15,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.4531051470658465,
+    "ORACLE_pool_best_alpha_ED_U": 0.4483748421669927
+   },
+   {
+    "k": 3,
+    "pool": "27",
+    "n": 1399,
+    "P_next": 0.29840362163450085,
+    "union": 0.6732,
+    "ot_pairs": 0.7424,
+    "uot": 0.6058,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.2,
+    "ORACLE_pool_best_alpha": 0.2,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.4641303161314762,
+    "ORACLE_pool_best_alpha_ED_U": 0.448713749716721
+   },
+   {
+    "k": 4,
+    "pool": "19",
+    "n": 1603,
+    "P_next": 0.6785610313994593,
+    "union": 0.3881,
+    "ot_pairs": 0.5373,
+    "uot": 0.7092,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.7,
+    "ORACLE_pool_best_alpha": 0.65,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.4219634728312407,
+    "ORACLE_pool_best_alpha_ED_U": 0.319626383524497
+   },
+   {
+    "k": 4,
+    "pool": "2",
+    "n": 85,
+    "P_next": 0.8807843137254903,
+    "union": 1.0103,
+    "ot_pairs": 1.2278,
+    "uot": 1.3468,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.8,
+    "ORACLE_pool_best_alpha": 0.75,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.8413455492290941,
+    "ORACLE_pool_best_alpha_ED_U": 0.7688151289302354
+   },
+   {
+    "k": 4,
+    "pool": "20",
+    "n": 420,
+    "P_next": 0.7292063492063492,
+    "union": 0.445,
+    "ot_pairs": 0.5326,
+    "uot": 0.6515,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.7,
+    "ORACLE_pool_best_alpha": 0.65,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.4395959464488837,
+    "ORACLE_pool_best_alpha_ED_U": 0.36792502136563005
+   },
+   {
+    "k": 4,
+    "pool": "3",
+    "n": 111,
+    "P_next": 0.7579579579579581,
+    "union": 1.7493,
+    "ot_pairs": 2.1563,
+    "uot": 2.6582,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 1.0,
+    "ORACLE_pool_best_alpha": 0.9,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 1.245702196119204,
+    "ORACLE_pool_best_alpha_ED_U": 1.214860613665581
+   },
+   {
+    "k": 4,
+    "pool": "4",
+    "n": 70,
+    "P_next": 0.5228571428571429,
+    "union": 1.8747,
+    "ot_pairs": 2.3633,
+    "uot": 2.8462,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 1.0,
+    "ORACLE_pool_best_alpha": 0.8,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 1.6434632918818377,
+    "ORACLE_pool_best_alpha_ED_U": 1.5285276709662814
+   },
+   {
+    "k": 4,
+    "pool": "6",
+    "n": 711,
+    "P_next": 0.7446788560712612,
+    "union": 0.7158,
+    "ot_pairs": 0.879,
+    "uot": 1.1096,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.8,
+    "ORACLE_pool_best_alpha": 0.75,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.5843835272488024,
+    "ORACLE_pool_best_alpha_ED_U": 0.5111742663385938
+   },
+   {
+    "k": 5,
+    "pool": "12",
+    "n": 854,
+    "P_next": 0.6814988290398126,
+    "union": 0.4365,
+    "ot_pairs": 0.4934,
+    "uot": 0.5053,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.7,
+    "ORACLE_pool_best_alpha": 0.7,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.4131134236897059,
+    "ORACLE_pool_best_alpha_ED_U": 0.3584493173057564
+   },
+   {
+    "k": 5,
+    "pool": "13",
+    "n": 963,
+    "P_next": 0.6654205607476635,
+    "union": 0.3325,
+    "ot_pairs": 0.4469,
+    "uot": 0.4173,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.7,
+    "ORACLE_pool_best_alpha": 0.65,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.41748638079396844,
+    "ORACLE_pool_best_alpha_ED_U": 0.29890409765337483
+   },
+   {
+    "k": 5,
+    "pool": "8",
+    "n": 635,
+    "P_next": 0.18456692913385825,
+    "union": 1.5236,
+    "ot_pairs": 1.795,
+    "uot": 1.4224,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.0,
+    "ORACLE_pool_best_alpha": 0.0,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.8305551673692264,
+    "ORACLE_pool_best_alpha_ED_U": 0.8232050113036719
+   },
+   {
+    "k": 5,
+    "pool": "9",
+    "n": 549,
+    "P_next": 0.42428658166363087,
+    "union": 1.2464,
+    "ot_pairs": 1.5399,
+    "uot": 1.263,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.0,
+    "ORACLE_pool_best_alpha": 0.15,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 1.067473247508411,
+    "ORACLE_pool_best_alpha_ED_U": 1.0166522371712514
+   },
+   {
+    "k": 6,
+    "pool": "16",
+    "n": 702,
+    "P_next": 0.48148148148148145,
+    "union": 0.5777,
+    "ot_pairs": 0.8895,
+    "uot": 0.6801,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.2,
+    "ORACLE_pool_best_alpha": 0.35,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.7721397312889202,
+    "ORACLE_pool_best_alpha_ED_U": 0.5193277749180302
+   },
+   {
+    "k": 6,
+    "pool": "33",
+    "n": 782,
+    "P_next": 0.3120204603580563,
+    "union": 0.3615,
+    "ot_pairs": 0.3946,
+    "uot": 0.3349,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.5,
+    "ORACLE_pool_best_alpha": 0.45,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.3869774594702455,
+    "ORACLE_pool_best_alpha_ED_U": 0.3621868968998096
+   },
+   {
+    "k": 6,
+    "pool": "34",
+    "n": 779,
+    "P_next": 0.3115104835258879,
+    "union": 0.4107,
+    "ot_pairs": 0.4055,
+    "uot": 0.3642,
+    "union_beats_ot_pairs": false,
+    "ORACLE_pool_best_t": 0.5,
+    "ORACLE_pool_best_alpha": 0.5,
+    "ORACLE_pool_best_t_OT_beats_best_mix": true,
+    "ORACLE_pool_best_t_ED_U": 0.39499682041068357,
+    "ORACLE_pool_best_alpha_ED_U": 0.4227141944495916
+   },
+   {
+    "k": 6,
+    "pool": "35",
+    "n": 737,
+    "P_next": 0.29932157394843967,
+    "union": 0.4023,
+    "ot_pairs": 0.3679,
+    "uot": 0.3441,
+    "union_beats_ot_pairs": false,
+    "ORACLE_pool_best_t": 0.6,
+    "ORACLE_pool_best_alpha": 0.55,
+    "ORACLE_pool_best_t_OT_beats_best_mix": true,
+    "ORACLE_pool_best_t_ED_U": 0.35649627662530453,
+    "ORACLE_pool_best_alpha_ED_U": 0.4134780968686271
+   },
+   {
+    "k": 7,
+    "pool": "24",
+    "n": 1069,
+    "P_next": 0.4601808543810415,
+    "union": 0.4647,
+    "ot_pairs": 0.4379,
+    "uot": 0.4081,
+    "union_beats_ot_pairs": false,
+    "ORACLE_pool_best_t": 0.6,
+    "ORACLE_pool_best_alpha": 0.65,
+    "ORACLE_pool_best_t_OT_beats_best_mix": true,
+    "ORACLE_pool_best_t_ED_U": 0.36906726136569407,
+    "ORACLE_pool_best_alpha_ED_U": 0.41560860631401003
+   },
+   {
+    "k": 7,
+    "pool": "25",
+    "n": 1172,
+    "P_next": 0.4584755403868032,
+    "union": 0.4191,
+    "ot_pairs": 0.3928,
+    "uot": 0.3661,
+    "union_beats_ot_pairs": false,
+    "ORACLE_pool_best_t": 0.6,
+    "ORACLE_pool_best_alpha": 0.65,
+    "ORACLE_pool_best_t_OT_beats_best_mix": true,
+    "ORACLE_pool_best_t_ED_U": 0.3285216351641355,
+    "ORACLE_pool_best_alpha_ED_U": 0.37071764424158776
+   },
+   {
+    "k": 7,
+    "pool": "28",
+    "n": 759,
+    "P_next": 0.2426877470355731,
+    "union": 0.2534,
+    "ot_pairs": 0.3767,
+    "uot": 0.3668,
+    "union_beats_ot_pairs": true,
+    "ORACLE_pool_best_t": 0.3,
+    "ORACLE_pool_best_alpha": 0.35,
+    "ORACLE_pool_best_t_OT_beats_best_mix": false,
+    "ORACLE_pool_best_t_ED_U": 0.33188345868760943,
+    "ORACLE_pool_best_alpha_ED_U": 0.22366678126706377
+   }
+  ],
+  "n_pools": 27,
+  "n_union_beats_ot_pairs": 22,
+  "n_ORACLE_pool_best_t_OT_beats_best_mix": 6,
+  "n_ORACLE_pool_best_t_OT_beats_best_mix_multi_pool_stages": 5,
+  "n_pools_multi_pool_stages": 26,
+  "spearman_pool_P_next_vs_pool_best_t": 0.7763066112224509,
+  "best_t_range_per_k": {
+   "1": [
+    1.0,
+    1.0
+   ],
+   "2": [
+    0.5,
+    0.9
+   ],
+   "3": [
+    0.0,
+    0.2
+   ],
+   "4": [
+    0.7,
+    1.0
+   ],
+   "5": [
+    0.0,
+    0.7
+   ],
+   "6": [
+    0.2,
+    0.6
+   ],
+   "7": [
+    0.3,
+    0.6
+   ]
+  }
+ },
+ "Q2_within_lineage": {
+  "summary": {
+   "type": {
+    "n_units": 33,
+    "ot_pairs<union": 10,
+    "ot_pairs_beats_prev_next_union": 8,
+    "median_ot_pairs/union": 1.0636873760994974,
+    "uot<union": 10,
+    "uot_beats_prev_next_union": 8,
+    "median_uot/union": 1.0341351192079917,
+    "sb_half<union": 15,
+    "sb_half_beats_prev_next_union": 10,
+    "median_sb_half/union": 1.003387902107297,
+    "ot_pairs<indep": 33,
+    "best_method_counts": {
+     "next": 4,
+     "uot": 4,
+     "sb_half": 7,
+     "union": 8,
+     "prev": 7,
+     "ot_pairs": 3
+    },
+    "units_ot_pairs<union": [
+     "k1:ExE ectoderm",
+     "k1:ExE endoderm",
+     "k4:ExE ectoderm",
+     "k5:ExE endoderm",
+     "k6:ExE endoderm",
+     "k7:ExE endoderm",
+     "k7:Mesenchyme",
+     "k7:Pharyngeal mesoderm",
+     "k7:Somitic mesoderm",
+     "k7:Surface ectoderm"
+    ]
+   },
+   "group": {
+    "n_units": 25,
+    "ot_pairs<union": 2,
+    "ot_pairs_beats_prev_next_union": 2,
+    "median_ot_pairs/union": 1.1218657224760107,
+    "uot<union": 9,
+    "uot_beats_prev_next_union": 7,
+    "median_uot/union": 1.117573369267713,
+    "sb_half<union": 5,
+    "sb_half_beats_prev_next_union": 5,
+    "median_sb_half/union": 1.1232609006533794,
+    "ot_pairs<indep": 25,
+    "best_method_counts": {
+     "next": 4,
+     "sb_half": 4,
+     "uot": 6,
+     "union": 7,
+     "prev": 4
+    },
+    "units_ot_pairs<union": [
+     "k4:epiblast_ectoderm",
+     "k7:epiblast_ectoderm"
+    ]
+   },
+   "shared": {
+    "n_units": 7,
+    "ot_pairs<union": 1,
+    "ot_pairs_beats_prev_next_union": 1,
+    "median_ot_pairs/union": 1.203078606628185,
+    "uot<union": 2,
+    "uot_beats_prev_next_union": 1,
+    "median_uot/union": 1.0580281543489956,
+    "sb_half<union": 0,
+    "sb_half_beats_prev_next_union": 0,
+    "median_sb_half/union": 1.545588479907468,
+    "ot_pairs<indep": 7,
+    "best_method_counts": {
+     "next": 1,
+     "union": 3,
+     "prev": 1,
+     "uot": 1,
+     "ot_pairs": 1
+    },
+    "units_ot_pairs<union": [
+     "k7:shared_types"
+    ]
+   }
+  },
+  "reps": 3,
+  "min_n": 100,
+  "units": [
+   {
+    "family": "type",
+    "k": 1,
+    "name": "Epiblast",
+    "n_prev": 1958,
+    "n_held": 856,
+    "n_next": 1068,
+    "prev": 4.0161,
+    "next": 1.8198,
+    "union": 2.2318,
+    "indep": 2.7001,
+    "ot_pairs": 2.5333,
+    "sb_half": 2.3761,
+    "uot": 2.4521,
+    "sd_union": 0.0756,
+    "sd_ot_pairs": 0.0157,
+    "quarter_ED_prev_next": 0.643
+   },
+   {
+    "family": "type",
+    "k": 1,
+    "name": "ExE ectoderm",
+    "n_prev": 540,
+    "n_held": 403,
+    "n_next": 405,
+    "prev": 3.1483,
+    "next": 1.1532,
+    "union": 1.6674,
+    "indep": 1.9242,
+    "ot_pairs": 1.6592,
+    "sb_half": 1.6383,
+    "uot": 1.7217,
+    "sd_union": 0.082,
+    "sd_ot_pairs": 0.0156,
+    "quarter_ED_prev_next": 0.4868
+   },
+   {
+    "family": "type",
+    "k": 1,
+    "name": "ExE endoderm",
+    "n_prev": 111,
+    "n_held": 197,
+    "n_next": 268,
+    "prev": 1.5872,
+    "next": 1.3095,
+    "union": 0.9998,
+    "indep": 1.0955,
+    "ot_pairs": 0.9837,
+    "sb_half": 1.0372,
+    "uot": 0.9579,
+    "sd_union": 0.0648,
+    "sd_ot_pairs": 0.0178,
+    "quarter_ED_prev_next": 0.4766
+   },
+   {
+    "family": "type",
+    "k": 1,
+    "name": "Primitive Streak",
+    "n_prev": 333,
+    "n_held": 326,
+    "n_next": 620,
+    "prev": 3.0589,
+    "next": 1.7091,
+    "union": 1.8456,
+    "indep": 2.2627,
+    "ot_pairs": 2.0388,
+    "sb_half": 1.9295,
+    "uot": 1.8523,
+    "sd_union": 0.0392,
+    "sd_ot_pairs": 0.0692,
+    "quarter_ED_prev_next": 0.5084
+   },
+   {
+    "family": "group",
+    "k": 1,
+    "name": "epiblast_ectoderm",
+    "n_prev": 1960,
+    "n_held": 861,
+    "n_next": 1079,
+    "prev": 4.0303,
+    "next": 1.8122,
+    "union": 2.2658,
+    "indep": 2.6941,
+    "ot_pairs": 2.5419,
+    "sb_half": 2.3825,
+    "uot": 2.4825,
+    "sd_union": 0.0308,
+    "sd_ot_pairs": 0.0379,
+    "quarter_ED_prev_next": 0.6353
+   },
+   {
+    "family": "group",
+    "k": 1,
+    "name": "streak_mesoderm",
+    "n_prev": 335,
+    "n_held": 497,
+    "n_next": 1121,
+    "prev": 3.4444,
+    "next": 1.4774,
+    "union": 1.7765,
+    "indep": 2.0534,
+    "ot_pairs": 1.9371,
+    "sb_half": 1.7959,
+    "uot": 2.064,
+    "sd_union": 0.036,
+    "sd_ot_pairs": 0.0088,
+    "quarter_ED_prev_next": 0.6704
+   },
+   {
+    "family": "group",
+    "k": 1,
+    "name": "extraembryonic_ecto_endo",
+    "n_prev": 704,
+    "n_held": 709,
+    "n_next": 777,
+    "prev": 2.7614,
+    "next": 0.862,
+    "union": 1.1074,
+    "indep": 1.8847,
+    "ot_pairs": 1.2069,
+    "sb_half": 1.412,
+    "uot": 1.799,
+    "sd_union": 0.055,
+    "sd_ot_pairs": 0.0244,
+    "quarter_ED_prev_next": 0.697
+   },
+   {
+    "family": "group",
+    "k": 1,
+    "name": "early_gastrulation_axis",
+    "n_prev": 2293,
+    "n_held": 1353,
+    "n_next": 2184,
+    "prev": 3.7406,
+    "next": 1.545,
+    "union": 1.9909,
+    "indep": 2.3773,
+    "ot_pairs": 2.1901,
+    "sb_half": 2.0227,
+    "uot": 2.1983,
+    "sd_union": 0.0368,
+    "sd_ot_pairs": 0.0496,
+    "quarter_ED_prev_next": 0.6597
+   },
+   {
+    "family": "shared",
+    "k": 1,
+    "name": "shared_types",
+    "n_prev": 2988,
+    "n_held": 1891,
+    "n_next": 2438,
+    "prev": 2.8911,
+    "next": 1.0013,
+    "union": 1.463,
+    "indep": 1.9775,
+    "ot_pairs": 1.6622,
+    "sb_half": 1.4819,
+    "uot": 1.9316,
+    "sd_union": 0.0433,
+    "sd_ot_pairs": 0.0534,
+    "quarter_ED_prev_next": 0.4799
+   },
+   {
+    "family": "type",
+    "k": 2,
+    "name": "Epiblast",
+    "n_prev": 856,
+    "n_held": 1068,
+    "n_next": 954,
+    "prev": 1.6799,
+    "next": 0.807,
+    "union": 0.5298,
+    "indep": 0.6673,
+    "ot_pairs": 0.5592,
+    "sb_half": 0.5175,
+    "uot": 0.5307,
+    "sd_union": 0.0028,
+    "sd_ot_pairs": 0.0054,
+    "quarter_ED_prev_next": 0.7086
+   },
+   {
+    "family": "type",
+    "k": 2,
+    "name": "ExE ectoderm",
+    "n_prev": 403,
+    "n_held": 405,
+    "n_next": 370,
+    "prev": 1.0348,
+    "next": 1.0216,
+    "union": 0.4862,
+    "indep": 0.6285,
+    "ot_pairs": 0.4891,
+    "sb_half": 0.4586,
+    "uot": 0.4309,
+    "sd_union": 0.0195,
+    "sd_ot_pairs": 0.0254,
+    "quarter_ED_prev_next": 0.5671
+   },
+   {
+    "family": "type",
+    "k": 2,
+    "name": "ExE endoderm",
+    "n_prev": 197,
+    "n_held": 268,
+    "n_next": 298,
+    "prev": 1.255,
+    "next": 1.6231,
+    "union": 0.7057,
+    "indep": 0.9356,
+    "ot_pairs": 0.7826,
+    "sb_half": 0.7494,
+    "uot": 0.7076,
+    "sd_union": 0.0152,
+    "sd_ot_pairs": 0.0492,
+    "quarter_ED_prev_next": 0.6965
+   },
+   {
+    "family": "type",
+    "k": 2,
+    "name": "Nascent mesoderm",
+    "n_prev": 138,
+    "n_held": 320,
+    "n_next": 437,
+    "prev": 1.663,
+    "next": 0.9008,
+    "union": 0.5246,
+    "indep": 0.7227,
+    "ot_pairs": 0.5476,
+    "sb_half": 0.5254,
+    "uot": 0.5834,
+    "sd_union": 0.014,
+    "sd_ot_pairs": 0.0159,
+    "quarter_ED_prev_next": 0.7403
+   },
+   {
+    "family": "type",
+    "k": 2,
+    "name": "Primitive Streak",
+    "n_prev": 326,
+    "n_held": 620,
+    "n_next": 507,
+    "prev": 1.4947,
+    "next": 0.8329,
+    "union": 0.4698,
+    "indep": 0.6007,
+    "ot_pairs": 0.4746,
+    "sb_half": 0.4569,
+    "uot": 0.4803,
+    "sd_union": 0.0112,
+    "sd_ot_pairs": 0.0101,
+    "quarter_ED_prev_next": 0.6916
+   },
+   {
+    "family": "group",
+    "k": 2,
+    "name": "epiblast_ectoderm",
+    "n_prev": 861,
+    "n_held": 1079,
+    "n_next": 983,
+    "prev": 1.6691,
+    "next": 0.8099,
+    "union": 0.5365,
+    "indep": 0.6465,
+    "ot_pairs": 0.5477,
+    "sb_half": 0.5146,
+    "uot": 0.5435,
+    "sd_union": 0.0074,
+    "sd_ot_pairs": 0.0066,
+    "quarter_ED_prev_next": 0.7062
+   },
+   {
+    "family": "group",
+    "k": 2,
+    "name": "streak_mesoderm",
+    "n_prev": 497,
+    "n_held": 1121,
+    "n_next": 1178,
+    "prev": 1.2744,
+    "next": 0.8447,
+    "union": 0.4074,
+    "indep": 0.6709,
+    "ot_pairs": 0.4485,
+    "sb_half": 0.428,
+    "uot": 0.401,
+    "sd_union": 0.0065,
+    "sd_ot_pairs": 0.01,
+    "quarter_ED_prev_next": 0.6561
+   },
+   {
+    "family": "group",
+    "k": 2,
+    "name": "extraembryonic_ecto_endo",
+    "n_prev": 709,
+    "n_held": 777,
+    "n_next": 743,
+    "prev": 0.7764,
+    "next": 0.7343,
+    "union": 0.3051,
+    "indep": 1.3437,
+    "ot_pairs": 0.3768,
+    "sb_half": 0.7174,
+    "uot": 0.433,
+    "sd_union": 0.0067,
+    "sd_ot_pairs": 0.0222,
+    "quarter_ED_prev_next": 0.4425
+   },
+   {
+    "family": "group",
+    "k": 2,
+    "name": "early_gastrulation_axis",
+    "n_prev": 1353,
+    "n_held": 2184,
+    "n_next": 2086,
+    "prev": 1.3994,
+    "next": 0.7151,
+    "union": 0.4137,
+    "indep": 0.6462,
+    "ot_pairs": 0.4413,
+    "sb_half": 0.4094,
+    "uot": 0.4623,
+    "sd_union": 0.008,
+    "sd_ot_pairs": 0.0127,
+    "quarter_ED_prev_next": 0.6417
+   },
+   {
+    "family": "shared",
+    "k": 2,
+    "name": "shared_types",
+    "n_prev": 2062,
+    "n_held": 2934,
+    "n_next": 2804,
+    "prev": 0.9588,
+    "next": 0.549,
+    "union": 0.3286,
+    "indep": 0.8033,
+    "ot_pairs": 0.3416,
+    "sb_half": 0.5061,
+    "uot": 0.3477,
+    "sd_union": 0.0047,
+    "sd_ot_pairs": 0.009,
+    "quarter_ED_prev_next": 0.4247
+   },
+   {
+    "family": "type",
+    "k": 3,
+    "name": "Epiblast",
+    "n_prev": 1068,
+    "n_held": 954,
+    "n_next": 264,
+    "prev": 0.627,
+    "next": 1.2818,
+    "union": 0.6296,
+    "indep": 0.785,
+    "ot_pairs": 0.7036,
+    "sb_half": 0.6433,
+    "uot": 0.6947,
+    "sd_union": 0.0067,
+    "sd_ot_pairs": 0.0296,
+    "quarter_ED_prev_next": 0.3129
+   },
+   {
+    "family": "type",
+    "k": 3,
+    "name": "ExE ectoderm",
+    "n_prev": 405,
+    "n_held": 370,
+    "n_next": 596,
+    "prev": 0.7552,
+    "next": 1.6279,
+    "union": 0.8158,
+    "indep": 0.9968,
+    "ot_pairs": 0.8686,
+    "sb_half": 0.7999,
+    "uot": 0.9025,
+    "sd_union": 0.0212,
+    "sd_ot_pairs": 0.0287,
+    "quarter_ED_prev_next": 0.3742
+   },
+   {
+    "family": "type",
+    "k": 3,
+    "name": "ExE endoderm",
+    "n_prev": 268,
+    "n_held": 298,
+    "n_next": 486,
+    "prev": 1.2499,
+    "next": 2.8278,
+    "union": 1.7702,
+    "indep": 2.2613,
+    "ot_pairs": 1.9081,
+    "sb_half": 1.7276,
+    "uot": 1.8827,
+    "sd_union": 0.0833,
+    "sd_ot_pairs": 0.0182,
+    "quarter_ED_prev_next": 0.2909
+   },
+   {
+    "family": "type",
+    "k": 3,
+    "name": "Nascent mesoderm",
+    "n_prev": 320,
+    "n_held": 437,
+    "n_next": 196,
+    "prev": 0.8115,
+    "next": 1.9644,
+    "union": 0.7945,
+    "indep": 1.0342,
+    "ot_pairs": 0.8791,
+    "sb_half": 0.8332,
+    "uot": 0.8142,
+    "sd_union": 0.0034,
+    "sd_ot_pairs": 0.0242,
+    "quarter_ED_prev_next": 0.5895
+   },
+   {
+    "family": "type",
+    "k": 3,
+    "name": "Primitive Streak",
+    "n_prev": 620,
+    "n_held": 507,
+    "n_next": 159,
+    "prev": 0.6586,
+    "next": 1.3633,
+    "union": 0.6273,
+    "indep": 0.8116,
+    "ot_pairs": 0.6936,
+    "sb_half": 0.6488,
+    "uot": 0.6959,
+    "sd_union": 0.0206,
+    "sd_ot_pairs": 0.0178,
+    "quarter_ED_prev_next": 0.3707
+   },
+   {
+    "family": "group",
+    "k": 3,
+    "name": "epiblast_ectoderm",
+    "n_prev": 1079,
+    "n_held": 983,
+    "n_next": 788,
+    "prev": 0.6242,
+    "next": 2.8499,
+    "union": 0.9546,
+    "indep": 1.1491,
+    "ot_pairs": 1.0707,
+    "sb_half": 1.0723,
+    "uot": 0.8756,
+    "sd_union": 0.0115,
+    "sd_ot_pairs": 0.0312,
+    "quarter_ED_prev_next": 0.7584
+   },
+   {
+    "family": "group",
+    "k": 3,
+    "name": "streak_mesoderm",
+    "n_prev": 1121,
+    "n_held": 1178,
+    "n_next": 918,
+    "prev": 0.7443,
+    "next": 2.7893,
+    "union": 0.7891,
+    "indep": 1.1136,
+    "ot_pairs": 0.9119,
+    "sb_half": 0.924,
+    "uot": 0.6679,
+    "sd_union": 0.008,
+    "sd_ot_pairs": 0.0268,
+    "quarter_ED_prev_next": 0.9796
+   },
+   {
+    "family": "group",
+    "k": 3,
+    "name": "extraembryonic_ecto_endo",
+    "n_prev": 777,
+    "n_held": 743,
+    "n_next": 1159,
+    "prev": 0.574,
+    "next": 1.2054,
+    "union": 0.6469,
+    "indep": 1.5819,
+    "ot_pairs": 0.7622,
+    "sb_half": 1.1274,
+    "uot": 0.7368,
+    "sd_union": 0.0275,
+    "sd_ot_pairs": 0.0417,
+    "quarter_ED_prev_next": 0.2168
+   },
+   {
+    "family": "group",
+    "k": 3,
+    "name": "early_gastrulation_axis",
+    "n_prev": 2184,
+    "n_held": 2086,
+    "n_next": 805,
+    "prev": 0.5587,
+    "next": 1.512,
+    "union": 0.559,
+    "indep": 0.857,
+    "ot_pairs": 0.6207,
+    "sb_half": 0.6559,
+    "uot": 0.5412,
+    "sd_union": 0.0116,
+    "sd_ot_pairs": 0.0135,
+    "quarter_ED_prev_next": 0.4706
+   },
+   {
+    "family": "shared",
+    "k": 3,
+    "name": "shared_types",
+    "n_prev": 2977,
+    "n_held": 2918,
+    "n_next": 2038,
+    "prev": 0.4223,
+    "next": 3.0196,
+    "union": 0.9509,
+    "indep": 1.6928,
+    "ot_pairs": 1.144,
+    "sb_half": 1.4697,
+    "uot": 0.5846,
+    "sd_union": 0.0677,
+    "sd_ot_pairs": 0.0213,
+    "quarter_ED_prev_next": 0.7502
+   },
+   {
+    "family": "type",
+    "k": 4,
+    "name": "ExE ectoderm",
+    "n_prev": 370,
+    "n_held": 596,
+    "n_next": 577,
+    "prev": 2.1655,
+    "next": 0.5669,
+    "union": 0.4212,
+    "indep": 0.5559,
+    "ot_pairs": 0.4145,
+    "sb_half": 0.4384,
+    "uot": 0.4752,
+    "sd_union": 0.0185,
+    "sd_ot_pairs": 0.017,
+    "quarter_ED_prev_next": 0.9407
+   },
+   {
+    "family": "type",
+    "k": 4,
+    "name": "ExE endoderm",
+    "n_prev": 298,
+    "n_held": 486,
+    "n_next": 480,
+    "prev": 3.4448,
+    "next": 0.5646,
+    "union": 0.7717,
+    "indep": 1.0088,
+    "ot_pairs": 0.8346,
+    "sb_half": 0.8408,
+    "uot": 0.9454,
+    "sd_union": 0.0163,
+    "sd_ot_pairs": 0.0403,
+    "quarter_ED_prev_next": 1.2477
+   },
+   {
+    "family": "group",
+    "k": 4,
+    "name": "epiblast_ectoderm",
+    "n_prev": 983,
+    "n_held": 788,
+    "n_next": 814,
+    "prev": 2.9851,
+    "next": 1.8036,
+    "union": 0.6692,
+    "indep": 0.7757,
+    "ot_pairs": 0.6548,
+    "sb_half": 0.537,
+    "uot": 0.6687,
+    "sd_union": 0.0202,
+    "sd_ot_pairs": 0.0095,
+    "quarter_ED_prev_next": 1.7388
+   },
+   {
+    "family": "group",
+    "k": 4,
+    "name": "streak_mesoderm",
+    "n_prev": 1178,
+    "n_held": 918,
+    "n_next": 975,
+    "prev": 2.8836,
+    "next": 1.6194,
+    "union": 0.5387,
+    "indep": 0.9076,
+    "ot_pairs": 0.6567,
+    "sb_half": 0.4986,
+    "uot": 0.7164,
+    "sd_union": 0.0162,
+    "sd_ot_pairs": 0.0035,
+    "quarter_ED_prev_next": 1.7114
+   },
+   {
+    "family": "group",
+    "k": 4,
+    "name": "extraembryonic_ecto_endo",
+    "n_prev": 743,
+    "n_held": 1159,
+    "n_next": 1085,
+    "prev": 1.4618,
+    "next": 0.3273,
+    "union": 0.3019,
+    "indep": 1.6161,
+    "ot_pairs": 0.3447,
+    "sb_half": 0.8257,
+    "uot": 0.4258,
+    "sd_union": 0.0057,
+    "sd_ot_pairs": 0.0088,
+    "quarter_ED_prev_next": 0.5884
+   },
+   {
+    "family": "group",
+    "k": 4,
+    "name": "early_gastrulation_axis",
+    "n_prev": 2086,
+    "n_held": 805,
+    "n_next": 127,
+    "prev": 1.5948,
+    "next": 0.9947,
+    "union": 0.3386,
+    "indep": 0.8078,
+    "ot_pairs": 0.4987,
+    "sb_half": 0.428,
+    "uot": 0.4682,
+    "sd_union": 0.0018,
+    "sd_ot_pairs": 0.0046,
+    "quarter_ED_prev_next": 0.9807
+   },
+   {
+    "family": "shared",
+    "k": 4,
+    "name": "shared_types",
+    "n_prev": 2879,
+    "n_held": 2591,
+    "n_next": 1998,
+    "prev": 2.0929,
+    "next": 0.7382,
+    "union": 0.2632,
+    "indep": 1.1158,
+    "ot_pairs": 0.5156,
+    "sb_half": 0.465,
+    "uot": 0.6832,
+    "sd_union": 0.0017,
+    "sd_ot_pairs": 0.0182,
+    "quarter_ED_prev_next": 1.1671
+   },
+   {
+    "family": "type",
+    "k": 5,
+    "name": "Caudal epiblast",
+    "n_prev": 126,
+    "n_held": 152,
+    "n_next": 227,
+    "prev": 2.2117,
+    "next": 0.9287,
+    "union": 0.6015,
+    "indep": 0.932,
+    "ot_pairs": 0.8425,
+    "sb_half": 0.5955,
+    "uot": 0.9205,
+    "sd_union": 0.0306,
+    "sd_ot_pairs": 0.0594,
+    "quarter_ED_prev_next": 1.0479
+   },
+   {
+    "family": "type",
+    "k": 5,
+    "name": "ExE ectoderm",
+    "n_prev": 596,
+    "n_held": 577,
+    "n_next": 209,
+    "prev": 0.4256,
+    "next": 0.8665,
+    "union": 0.1863,
+    "indep": 0.3535,
+    "ot_pairs": 0.2261,
+    "sb_half": 0.2092,
+    "uot": 0.2496,
+    "sd_union": 0.0055,
+    "sd_ot_pairs": 0.0126,
+    "quarter_ED_prev_next": 0.4577
+   },
+   {
+    "family": "type",
+    "k": 5,
+    "name": "ExE endoderm",
+    "n_prev": 486,
+    "n_held": 480,
+    "n_next": 293,
+    "prev": 0.4908,
+    "next": 0.5544,
+    "union": 0.148,
+    "indep": 0.2604,
+    "ot_pairs": 0.1365,
+    "sb_half": 0.1642,
+    "uot": 0.1443,
+    "sd_union": 0.0011,
+    "sd_ot_pairs": 0.0025,
+    "quarter_ED_prev_next": 0.3754
+   },
+   {
+    "family": "type",
+    "k": 5,
+    "name": "Mesenchyme",
+    "n_prev": 168,
+    "n_held": 211,
+    "n_next": 199,
+    "prev": 1.0238,
+    "next": 0.5975,
+    "union": 0.2862,
+    "indep": 0.47,
+    "ot_pairs": 0.3408,
+    "sb_half": 0.3263,
+    "uot": 0.4007,
+    "sd_union": 0.0218,
+    "sd_ot_pairs": 0.0213,
+    "quarter_ED_prev_next": 0.5518
+   },
+   {
+    "family": "type",
+    "k": 5,
+    "name": "Rostral neurectoderm",
+    "n_prev": 329,
+    "n_held": 393,
+    "n_next": 355,
+    "prev": 1.0714,
+    "next": 1.0282,
+    "union": 0.3723,
+    "indep": 0.6094,
+    "ot_pairs": 0.4516,
+    "sb_half": 0.3736,
+    "uot": 0.4716,
+    "sd_union": 0.0162,
+    "sd_ot_pairs": 0.0253,
+    "quarter_ED_prev_next": 0.6642
+   },
+   {
+    "family": "group",
+    "k": 5,
+    "name": "epiblast_ectoderm",
+    "n_prev": 788,
+    "n_held": 814,
+    "n_next": 945,
+    "prev": 1.5958,
+    "next": 0.7705,
+    "union": 0.4056,
+    "indep": 0.608,
+    "ot_pairs": 0.4913,
+    "sb_half": 0.4107,
+    "uot": 0.5343,
+    "sd_union": 0.0084,
+    "sd_ot_pairs": 0.0047,
+    "quarter_ED_prev_next": 0.7652
+   },
+   {
+    "family": "group",
+    "k": 5,
+    "name": "streak_mesoderm",
+    "n_prev": 918,
+    "n_held": 975,
+    "n_next": 1430,
+    "prev": 1.4389,
+    "next": 0.4873,
+    "union": 0.3868,
+    "indep": 0.8059,
+    "ot_pairs": 0.4982,
+    "sb_half": 0.406,
+    "uot": 0.4511,
+    "sd_union": 0.0114,
+    "sd_ot_pairs": 0.0166,
+    "quarter_ED_prev_next": 0.5803
+   },
+   {
+    "family": "group",
+    "k": 5,
+    "name": "extraembryonic_ecto_endo",
+    "n_prev": 1159,
+    "n_held": 1085,
+    "n_next": 518,
+    "prev": 0.2585,
+    "next": 1.1056,
+    "union": 0.2649,
+    "indep": 1.7278,
+    "ot_pairs": 0.3447,
+    "sb_half": 1.0265,
+    "uot": 0.1156,
+    "sd_union": 0.0087,
+    "sd_ot_pairs": 0.0266,
+    "quarter_ED_prev_next": 0.4387
+   },
+   {
+    "family": "shared",
+    "k": 5,
+    "name": "shared_types",
+    "n_prev": 2111,
+    "n_held": 2684,
+    "n_next": 2733,
+    "prev": 0.5155,
+    "next": 1.061,
+    "union": 0.136,
+    "indep": 0.9715,
+    "ot_pairs": 0.3965,
+    "sb_half": 0.3886,
+    "uot": 0.1588,
+    "sd_union": 0.0077,
+    "sd_ot_pairs": 0.0141,
+    "quarter_ED_prev_next": 0.6437
+   },
+   {
+    "family": "type",
+    "k": 6,
+    "name": "ExE endoderm",
+    "n_prev": 480,
+    "n_held": 293,
+    "n_next": 119,
+    "prev": 0.3348,
+    "next": 1.6224,
+    "union": 0.5947,
+    "indep": 0.7248,
+    "ot_pairs": 0.5499,
+    "sb_half": 0.5676,
+    "uot": 0.4764,
+    "sd_union": 0.0292,
+    "sd_ot_pairs": 0.0398,
+    "quarter_ED_prev_next": 0.393
+   },
+   {
+    "family": "type",
+    "k": 6,
+    "name": "Intermediate mesoderm",
+    "n_prev": 145,
+    "n_held": 294,
+    "n_next": 204,
+    "prev": 0.4172,
+    "next": 1.3298,
+    "union": 0.5533,
+    "indep": 0.808,
+    "ot_pairs": 0.6444,
+    "sb_half": 0.5932,
+    "uot": 0.6069,
+    "sd_union": 0.0161,
+    "sd_ot_pairs": 0.0296,
+    "quarter_ED_prev_next": 0.3138
+   },
+   {
+    "family": "type",
+    "k": 6,
+    "name": "Mesenchyme",
+    "n_prev": 211,
+    "n_held": 199,
+    "n_next": 221,
+    "prev": 0.346,
+    "next": 1.5205,
+    "union": 0.4229,
+    "indep": 0.5684,
+    "ot_pairs": 0.4234,
+    "sb_half": 0.4328,
+    "uot": 0.3703,
+    "sd_union": 0.0188,
+    "sd_ot_pairs": 0.0927,
+    "quarter_ED_prev_next": 0.5004
+   },
+   {
+    "family": "type",
+    "k": 6,
+    "name": "Paraxial mesoderm",
+    "n_prev": 112,
+    "n_held": 190,
+    "n_next": 249,
+    "prev": 0.6608,
+    "next": 1.4531,
+    "union": 0.6541,
+    "indep": 0.8487,
+    "ot_pairs": 0.7204,
+    "sb_half": 0.6818,
+    "uot": 0.6765,
+    "sd_union": 0.0288,
+    "sd_ot_pairs": 0.0417,
+    "quarter_ED_prev_next": 0.3715
+   },
+   {
+    "family": "type",
+    "k": 6,
+    "name": "Surface ectoderm",
+    "n_prev": 102,
+    "n_held": 163,
+    "n_next": 214,
+    "prev": 0.3367,
+    "next": 1.1451,
+    "union": 0.3959,
+    "indep": 0.6238,
+    "ot_pairs": 0.4189,
+    "sb_half": 0.3748,
+    "uot": 0.48,
+    "sd_union": 0.0013,
+    "sd_ot_pairs": 0.0296,
+    "quarter_ED_prev_next": 0.3358
+   },
+   {
+    "family": "group",
+    "k": 6,
+    "name": "epiblast_ectoderm",
+    "n_prev": 814,
+    "n_held": 945,
+    "n_next": 1206,
+    "prev": 0.4643,
+    "next": 1.4329,
+    "union": 0.5414,
+    "indep": 0.6749,
+    "ot_pairs": 0.5641,
+    "sb_half": 0.5642,
+    "uot": 0.5343,
+    "sd_union": 0.0236,
+    "sd_ot_pairs": 0.0159,
+    "quarter_ED_prev_next": 0.4319
+   },
+   {
+    "family": "group",
+    "k": 6,
+    "name": "streak_mesoderm",
+    "n_prev": 975,
+    "n_held": 1430,
+    "n_next": 1494,
+    "prev": 0.3378,
+    "next": 0.8147,
+    "union": 0.352,
+    "indep": 0.6194,
+    "ot_pairs": 0.3546,
+    "sb_half": 0.4522,
+    "uot": 0.3306,
+    "sd_union": 0.0185,
+    "sd_ot_pairs": 0.0252,
+    "quarter_ED_prev_next": 0.2229
+   },
+   {
+    "family": "group",
+    "k": 6,
+    "name": "extraembryonic_ecto_endo",
+    "n_prev": 1085,
+    "n_held": 518,
+    "n_next": 193,
+    "prev": 1.0303,
+    "next": 0.7637,
+    "union": 0.327,
+    "indep": 1.7675,
+    "ot_pairs": 0.4494,
+    "sb_half": 1.1967,
+    "uot": 0.8921,
+    "sd_union": 0.0261,
+    "sd_ot_pairs": 0.0521,
+    "quarter_ED_prev_next": 0.5258
+   },
+   {
+    "family": "shared",
+    "k": 6,
+    "name": "shared_types",
+    "n_prev": 2773,
+    "n_held": 2906,
+    "n_next": 2716,
+    "prev": 0.791,
+    "next": 0.8982,
+    "union": 0.2722,
+    "indep": 0.5933,
+    "ot_pairs": 0.3341,
+    "sb_half": 0.442,
+    "uot": 0.2428,
+    "sd_union": 0.0166,
+    "sd_ot_pairs": 0.0069,
+    "quarter_ED_prev_next": 0.5756
+   },
+   {
+    "family": "type",
+    "k": 7,
+    "name": "ExE endoderm",
+    "n_prev": 293,
+    "n_held": 119,
+    "n_next": 120,
+    "prev": 1.3275,
+    "next": 1.8152,
+    "union": 0.6504,
+    "indep": 0.7465,
+    "ot_pairs": 0.5798,
+    "sb_half": 0.4995,
+    "uot": 0.6751,
+    "sd_union": 0.0336,
+    "sd_ot_pairs": 0.0697,
+    "quarter_ED_prev_next": 0.9149
+   },
+   {
+    "family": "type",
+    "k": 7,
+    "name": "ExE mesoderm",
+    "n_prev": 132,
+    "n_held": 122,
+    "n_next": 185,
+    "prev": 2.3389,
+    "next": 1.609,
+    "union": 0.4242,
+    "indep": 0.5322,
+    "ot_pairs": 0.4624,
+    "sb_half": 0.3947,
+    "uot": 0.4633,
+    "sd_union": 0.0264,
+    "sd_ot_pairs": 0.0883,
+    "quarter_ED_prev_next": 1.5018
+   },
+   {
+    "family": "type",
+    "k": 7,
+    "name": "Mesenchyme",
+    "n_prev": 199,
+    "n_held": 221,
+    "n_next": 217,
+    "prev": 1.6337,
+    "next": 1.9315,
+    "union": 0.4042,
+    "indep": 0.4724,
+    "ot_pairs": 0.2958,
+    "sb_half": 0.3371,
+    "uot": 0.312,
+    "sd_union": 0.029,
+    "sd_ot_pairs": 0.0332,
+    "quarter_ED_prev_next": 1.3846
+   },
+   {
+    "family": "type",
+    "k": 7,
+    "name": "Paraxial mesoderm",
+    "n_prev": 190,
+    "n_held": 249,
+    "n_next": 264,
+    "prev": 1.7079,
+    "next": 1.1565,
+    "union": 0.3562,
+    "indep": 0.5165,
+    "ot_pairs": 0.3789,
+    "sb_half": 0.3225,
+    "uot": 0.3234,
+    "sd_union": 0.0224,
+    "sd_ot_pairs": 0.0549,
+    "quarter_ED_prev_next": 1.0806
+   },
+   {
+    "family": "type",
+    "k": 7,
+    "name": "Pharyngeal mesoderm",
+    "n_prev": 197,
+    "n_held": 196,
+    "n_next": 157,
+    "prev": 1.2525,
+    "next": 1.7245,
+    "union": 0.3788,
+    "indep": 0.4081,
+    "ot_pairs": 0.3165,
+    "sb_half": 0.3326,
+    "uot": 0.2822,
+    "sd_union": 0.0297,
+    "sd_ot_pairs": 0.0283,
+    "quarter_ED_prev_next": 1.126
+   },
+   {
+    "family": "type",
+    "k": 7,
+    "name": "Somitic mesoderm",
+    "n_prev": 124,
+    "n_held": 158,
+    "n_next": 119,
+    "prev": 2.797,
+    "next": 1.9789,
+    "union": 0.669,
+    "indep": 0.7865,
+    "ot_pairs": 0.5876,
+    "sb_half": 0.4728,
+    "uot": 0.6473,
+    "sd_union": 0.022,
+    "sd_ot_pairs": 0.0278,
+    "quarter_ED_prev_next": 1.7059
+   },
+   {
+    "family": "type",
+    "k": 7,
+    "name": "Surface ectoderm",
+    "n_prev": 163,
+    "n_held": 214,
+    "n_next": 238,
+    "prev": 1.183,
+    "next": 1.2562,
+    "union": 0.3749,
+    "indep": 0.6043,
+    "ot_pairs": 0.3657,
+    "sb_half": 0.3995,
+    "uot": 0.2651,
+    "sd_union": 0.0081,
+    "sd_ot_pairs": 0.0323,
+    "quarter_ED_prev_next": 0.8391
+   },
+   {
+    "family": "group",
+    "k": 7,
+    "name": "epiblast_ectoderm",
+    "n_prev": 945,
+    "n_held": 1206,
+    "n_next": 1375,
+    "prev": 1.5318,
+    "next": 1.324,
+    "union": 0.3346,
+    "indep": 0.392,
+    "ot_pairs": 0.2441,
+    "sb_half": 0.2704,
+    "uot": 0.2396,
+    "sd_union": 0.0111,
+    "sd_ot_pairs": 0.0077,
+    "quarter_ED_prev_next": 1.0944
+   },
+   {
+    "family": "group",
+    "k": 7,
+    "name": "streak_mesoderm",
+    "n_prev": 1430,
+    "n_held": 1494,
+    "n_next": 1373,
+    "prev": 0.8487,
+    "next": 0.7863,
+    "union": 0.1497,
+    "indep": 0.4588,
+    "ot_pairs": 0.1731,
+    "sb_half": 0.1916,
+    "uot": 0.2043,
+    "sd_union": 0.0019,
+    "sd_ot_pairs": 0.0068,
+    "quarter_ED_prev_next": 0.6689
+   },
+   {
+    "family": "group",
+    "k": 7,
+    "name": "extraembryonic_ecto_endo",
+    "n_prev": 518,
+    "n_held": 193,
+    "n_next": 121,
+    "prev": 0.538,
+    "next": 7.8248,
+    "union": 1.7797,
+    "indep": 2.8919,
+    "ot_pairs": 2.6988,
+    "sb_half": 2.2838,
+    "uot": 4.5167,
+    "sd_union": 0.0306,
+    "sd_ot_pairs": 0.0999,
+    "quarter_ED_prev_next": 2.491
+   },
+   {
+    "family": "shared",
+    "k": 7,
+    "name": "shared_types",
+    "n_prev": 2035,
+    "n_held": 2741,
+    "n_next": 2840,
+    "prev": 1.3381,
+    "next": 0.6107,
+    "union": 0.3722,
+    "indep": 0.7134,
+    "ot_pairs": 0.3605,
+    "sb_half": 0.4307,
+    "uot": 0.3919,
+    "sd_union": 0.0328,
+    "sd_ot_pairs": 0.03,
+    "quarter_ED_prev_next": 0.6493
+   }
+  ]
+ },
+ "Q1_spread_eps": {
+  "summary": {
+   "full_n_k_ot_pairs_spread_below_union": 7,
+   "full_mean_spread": {
+    "prev": 0.9956977675762465,
+    "next": 1.0237332546952447,
+    "union": 1.0395367298750913,
+    "indep": 0.7176825988310582,
+    "ot_pairs": 0.907122571045065,
+    "sb_half": 1.070088873910224,
+    "uot": 0.9297079002199382,
+    "held_rest": 1.0007295582990956
+   },
+   "full_n_k_ORACLE_best_eps_beats_union": 0,
+   "full_ORACLE_best_eps": {
+    "1": "0.01",
+    "2": "0.02",
+    "3": "0.01",
+    "4": "0.01",
+    "5": "0.02",
+    "6": "0.02",
+    "7": "0.02"
+   },
+   "types_n": 33,
+   "types_n_ot_pairs_spread_below_union": 33,
+   "types_n_ORACLE_best_eps_beats_union": 15,
+   "types_median_spread": {
+    "prev": 1.0241732840251812,
+    "next": 1.0650126176817325,
+    "union": 1.155673633618555,
+    "ot_pairs": 0.9146545096076156,
+    "uot": 0.9220081008978761,
+    "indep": 0.7410333062376881
+   }
+  },
+  "full_per_k": {
+   "1": {
+    "spread": {
+     "prev": 0.875,
+     "next": 1.016,
+     "union": 0.976,
+     "indep": 0.666,
+     "ot_pairs": 0.839,
+     "sb_half": 0.969,
+     "uot": 0.816,
+     "held_rest": 0.995
+    },
+    "eps_ORACLE_ED_U": {
+     "0.01": 1.5667,
+     "0.02": 1.6008,
+     "0.05": 1.7114,
+     "0.1": 1.7154,
+     "0.2": 1.6808
+    },
+    "eps_median_eff_partners": {
+     "0.01": 9.2,
+     "0.02": 46.1,
+     "0.05": 332.7,
+     "0.1": 749.4,
+     "0.2": 1038.4
+    },
+    "union_ED_U": 1.476
+   },
+   "2": {
+    "spread": {
+     "prev": 1.029,
+     "next": 1.024,
+     "union": 1.05,
+     "indep": 0.722,
+     "ot_pairs": 0.952,
+     "sb_half": 1.099,
+     "uot": 0.965,
+     "held_rest": 1.022
+    },
+    "eps_ORACLE_ED_U": {
+     "0.01": 0.35,
+     "0.02": 0.3491,
+     "0.05": 0.3547,
+     "0.1": 0.3579,
+     "0.2": 0.3856
+    },
+    "eps_median_eff_partners": {
+     "0.01": 15.4,
+     "0.02": 73.1,
+     "0.05": 331.5,
+     "0.1": 671.5,
+     "0.2": 923.8
+    },
+    "union_ED_U": 0.3427
+   },
+   "3": {
+    "spread": {
+     "prev": 1.012,
+     "next": 1.2,
+     "union": 1.138,
+     "indep": 0.791,
+     "ot_pairs": 1.018,
+     "sb_half": 1.213,
+     "uot": 1.0,
+     "held_rest": 0.987
+    },
+    "eps_ORACLE_ED_U": {
+     "0.01": 0.6905,
+     "0.02": 0.691,
+     "0.05": 0.7219,
+     "0.1": 0.7272,
+     "0.2": 0.7229
+    },
+    "eps_median_eff_partners": {
+     "0.01": 25.0,
+     "0.02": 106.8,
+     "0.05": 434.9,
+     "0.1": 867.0,
+     "0.2": 1142.1
+    },
+    "union_ED_U": 0.6441
+   },
+   "4": {
+    "spread": {
+     "prev": 0.853,
+     "next": 1.02,
+     "union": 0.976,
+     "indep": 0.67,
+     "ot_pairs": 0.842,
+     "sb_half": 1.016,
+     "uot": 0.836,
+     "held_rest": 1.001
+    },
+    "eps_ORACLE_ED_U": {
+     "0.01": 0.448,
+     "0.02": 0.483,
+     "0.05": 0.485,
+     "0.1": 0.6041,
+     "0.2": 0.5361
+    },
+    "eps_median_eff_partners": {
+     "0.01": 29.0,
+     "0.02": 112.9,
+     "0.05": 439.2,
+     "0.1": 875.9,
+     "0.2": 1161.3
+    },
+    "union_ED_U": 0.3567
+   },
+   "5": {
+    "spread": {
+     "prev": 0.999,
+     "next": 0.914,
+     "union": 0.97,
+     "indep": 0.68,
+     "ot_pairs": 0.861,
+     "sb_half": 1.018,
+     "uot": 0.922,
+     "held_rest": 1.015
+    },
+    "eps_ORACLE_ED_U": {
+     "0.01": 0.4027,
+     "0.02": 0.3777,
+     "0.05": 0.3997,
+     "0.1": 0.4319,
+     "0.2": 0.4854
+    },
+    "eps_median_eff_partners": {
+     "0.01": 17.8,
+     "0.02": 66.2,
+     "0.05": 259.2,
+     "0.1": 570.2,
+     "0.2": 907.3
+    },
+    "union_ED_U": 0.2479
+   },
+   "6": {
+    "spread": {
+     "prev": 1.12,
+     "next": 0.942,
+     "union": 1.065,
+     "indep": 0.737,
+     "ot_pairs": 0.893,
+     "sb_half": 1.073,
+     "uot": 0.997,
+     "held_rest": 1.002
+    },
+    "eps_ORACLE_ED_U": {
+     "0.01": 0.3377,
+     "0.02": 0.3223,
+     "0.05": 0.3532,
+     "0.1": 0.3767,
+     "0.2": 0.3901
+    },
+    "eps_median_eff_partners": {
+     "0.01": 13.1,
+     "0.02": 48.5,
+     "0.05": 229.6,
+     "0.1": 557.5,
+     "0.2": 955.5
+    },
+    "union_ED_U": 0.2763
+   },
+   "7": {
+    "spread": {
+     "prev": 1.082,
+     "next": 1.05,
+     "union": 1.101,
+     "indep": 0.757,
+     "ot_pairs": 0.944,
+     "sb_half": 1.103,
+     "uot": 0.971,
+     "held_rest": 0.983
+    },
+    "eps_ORACLE_ED_U": {
+     "0.01": 0.2131,
+     "0.02": 0.2102,
+     "0.05": 0.2239,
+     "0.1": 0.2271,
+     "0.2": 0.2662
+    },
+    "eps_median_eff_partners": {
+     "0.01": 8.4,
+     "0.02": 29.6,
+     "0.05": 143.6,
+     "0.1": 425.1,
+     "0.2": 893.6
+    },
+    "union_ED_U": 0.2075
+   }
+  }
+ },
+ "Q3_forecast": {
+  "summary": {
+   "uot_rw": {
+    "origins_any_lam_pos_beats_persist": [
+     3,
+     5,
+     6,
+     7
+    ],
+    "oracle_beats_strict_persist_count": 4,
+    "mean_oracle_ED_U": 0.7164958834661977,
+    "mean_rolling_ED_U": 0.8153643097819655,
+    "mean_persist_ED_U": 0.7708356360835321,
+    "median_spearman_backtest_vs_final": 0.20879120879120877
+   },
+   "tilt_rw": {
+    "origins_any_lam_pos_beats_persist": [
+     4,
+     5,
+     6
+    ],
+    "oracle_beats_strict_persist_count": 3,
+    "mean_oracle_ED_U": 0.7621405229723454,
+    "mean_rolling_ED_U": 0.7296851725265977,
+    "mean_persist_ED_U": 0.7708356360835321,
+    "median_spearman_backtest_vs_final": 0.8
+   },
+   "all_repro_ok": true
+  },
+  "per_origin": {
+   "2": {
+    "forecast_stage": "E7.25",
+    "persist": 0.4999259889176422,
+    "uot_rw_rolling_choice": {
+     "lam": 0.0,
+     "tau": 1.0,
+     "beta": 0.0
+    },
+    "uot_rw_rolling_ED_U": 0.4999259889176422,
+    "uot_rw_best_lam_pos_hp": {
+     "lam": 0.5,
+     "tau": 1.0,
+     "beta": 2.0
+    },
+    "uot_rw_best_lam_pos_ED_U": 0.5047861849878181,
+    "uot_rw_any_lam_pos_beats_persist": false,
+    "uot_rw_oracle_rel_gain_vs_persist": -0.009721831186849196,
+    "uot_rw_n_grid_lam_pos_beating_persist": 0,
+    "uot_rw_spearman_backtest_vs_final": 0.23076923076923078,
+    "tilt_rw_rolling_choice": {
+     "lam": 0.0
+    },
+    "tilt_rw_rolling_ED_U": 0.4999259889176422,
+    "tilt_rw_best_lam_pos_hp": {
+     "lam": 0.25
+    },
+    "tilt_rw_best_lam_pos_ED_U": 0.6009465169223596,
+    "tilt_rw_any_lam_pos_beats_persist": false,
+    "tilt_rw_oracle_rel_gain_vs_persist": -0.20207096699139504,
+    "tilt_rw_n_grid_lam_pos_beating_persist": 0,
+    "tilt_rw_spearman_backtest_vs_final": 1.0,
+    "uot_rw_extended_ORACLE_best": 0.5996723375623638,
+    "truth_bound_best": "knn_true_ratio_lam1.0",
+    "truth_bound_best_ED_U": 0.14869250440984239,
+    "truth_bound_rel_gain": 0.7025709650907187,
+    "celltype_weights_ED_U": 0.4448993025979817,
+    "truth_bound_best_ess": 411.05473087889084,
+    "truth_bound_insample_best_ED_U": 0.22957034881436122,
+    "uot_rw_min_ess_lam_pos": 1379.4901453118603,
+    "uot_rw_rolling_weight_by_type": null,
+    "floor_ED_U_future_rest": -0.006139599377020133,
+    "frac_future_off_support": 0.13766666666666666,
+    "median_nn_future_over_self": 1.240214952988803,
+    "future_mass_types_absent_now": 0.027333333333333334,
+    "TV_now_future_types": 0.10999999999999999
+   },
+   "3": {
+    "forecast_stage": "E7.5",
+    "persist": 1.639789405154822,
+    "uot_rw_rolling_choice": {
+     "lam": 0.0,
+     "tau": 1.0,
+     "beta": 0.0
+    },
+    "uot_rw_rolling_ED_U": 1.639789405154822,
+    "uot_rw_best_lam_pos_hp": {
+     "lam": 2.0,
+     "tau": 1.0,
+     "beta": 2.0
+    },
+    "uot_rw_best_lam_pos_ED_U": 1.6237923210336334,
+    "uot_rw_any_lam_pos_beats_persist": true,
+    "uot_rw_oracle_rel_gain_vs_persist": 0.009755572313676672,
+    "uot_rw_n_grid_lam_pos_beating_persist": 3,
+    "uot_rw_spearman_backtest_vs_final": 0.7802197802197801,
+    "tilt_rw_rolling_choice": {
+     "lam": 0.0
+    },
+    "tilt_rw_rolling_ED_U": 1.639789405154822,
+    "tilt_rw_best_lam_pos_hp": {
+     "lam": 0.25
+    },
+    "tilt_rw_best_lam_pos_ED_U": 1.9141760298970851,
+    "tilt_rw_any_lam_pos_beats_persist": false,
+    "tilt_rw_oracle_rel_gain_vs_persist": -0.16733040467251745,
+    "tilt_rw_n_grid_lam_pos_beating_persist": 0,
+    "tilt_rw_spearman_backtest_vs_final": 1.0,
+    "uot_rw_extended_ORACLE_best": 1.552420287027914,
+    "truth_bound_best": "celltype_composition_weights",
+    "truth_bound_best_ED_U": 0.6453484520886921,
+    "truth_bound_rel_gain": 0.6064443092143524,
+    "celltype_weights_ED_U": 0.6453484520886921,
+    "truth_bound_best_ess": 307.7364195877608,
+    "truth_bound_insample_best_ED_U": 0.6869132731069172,
+    "uot_rw_min_ess_lam_pos": 1398.3346661371318,
+    "uot_rw_rolling_weight_by_type": null,
+    "floor_ED_U_future_rest": -0.010155224241859884,
+    "frac_future_off_support": 0.38766666666666666,
+    "median_nn_future_over_self": 1.373698594210783,
+    "future_mass_types_absent_now": 0.127,
+    "TV_now_future_types": 0.45833333333333337
+   },
+   "4": {
+    "forecast_stage": "E7.75",
+    "persist": 0.46831106649954357,
+    "uot_rw_rolling_choice": {
+     "lam": 2.0,
+     "tau": 1.0,
+     "beta": 2.0
+    },
+    "uot_rw_rolling_ED_U": 1.0433927173153226,
+    "uot_rw_best_lam_pos_hp": {
+     "lam": 0.5,
+     "tau": 0.1,
+     "beta": 0.0
+    },
+    "uot_rw_best_lam_pos_ED_U": 0.48011270318013466,
+    "uot_rw_any_lam_pos_beats_persist": false,
+    "uot_rw_oracle_rel_gain_vs_persist": -0.025200422379091036,
+    "uot_rw_n_grid_lam_pos_beating_persist": 0,
+    "uot_rw_spearman_backtest_vs_final": 0.1868131868131868,
+    "tilt_rw_rolling_choice": {
+     "lam": 0.0
+    },
+    "tilt_rw_rolling_ED_U": 0.46831106649954357,
+    "tilt_rw_best_lam_pos_hp": {
+     "lam": 1.0
+    },
+    "tilt_rw_best_lam_pos_ED_U": 0.43334829994183544,
+    "tilt_rw_any_lam_pos_beats_persist": true,
+    "tilt_rw_oracle_rel_gain_vs_persist": 0.07465714363540929,
+    "tilt_rw_n_grid_lam_pos_beating_persist": 5,
+    "tilt_rw_spearman_backtest_vs_final": -0.2571428571428572,
+    "uot_rw_extended_ORACLE_best": 1.4562480907149027,
+    "truth_bound_best": "celltype_composition_weights",
+    "truth_bound_best_ED_U": 0.3067548743283073,
+    "truth_bound_rel_gain": 0.34497624277557776,
+    "celltype_weights_ED_U": 0.3067548743283073,
+    "truth_bound_best_ess": 862.4464855795553,
+    "truth_bound_insample_best_ED_U": 0.2970694281920938,
+    "uot_rw_min_ess_lam_pos": 1210.4684785056154,
+    "uot_rw_rolling_weight_by_type": {
+     "hp": {
+      "lam": 2.0,
+      "tau": 1.0,
+      "beta": 2.0
+     },
+     "mean_weight": {
+      "ExE endoderm": 1.56530891869939,
+      "ExE ectoderm": 1.4292607634965895,
+      "Visceral endoderm": 1.1051317890456727,
+      "Mesenchyme": 1.050793735135559,
+      "Mixed mesoderm": 0.791149214915163,
+      "Intermediate mesoderm": 0.7386350349162744,
+      "Nascent mesoderm": 0.7099470299256241,
+      "Def. endoderm": 0.6441469827430594,
+      "Caudal epiblast": 0.6440301082726666,
+      "Primitive Streak": 0.6255315398435838,
+      "Rostral neurectoderm": 0.6252535116939058,
+      "Epiblast": 0.6163504642185682
+     },
+     "future_over_now_type_ratio": {
+      "Caudal epiblast": 1.2059472239412259,
+      "Def. endoderm": 0.31070724173023406,
+      "Epiblast": 0.13253158038229682,
+      "ExE ectoderm": 0.9677982059671385,
+      "ExE endoderm": 0.9873252125834598,
+      "Intermediate mesoderm": 2.3379303672969223,
+      "Mesenchyme": 1.2555338696624934,
+      "Mixed mesoderm": 0.3213214642738135,
+      "Nascent mesoderm": 0.11730783616345573,
+      "Primitive Streak": 0.09430818657931633,
+      "Rostral neurectoderm": 1.1941308317693495,
+      "Visceral endoderm": 0.3580895920265384
+     },
+     "spearman_weight_vs_true_type_ratio": 0.31468531468531474
+    },
+    "floor_ED_U_future_rest": -0.0021024566347982443,
+    "frac_future_off_support": 0.12095968010663112,
+    "median_nn_future_over_self": 1.1741388139986024,
+    "future_mass_types_absent_now": 0.054315228257247584,
+    "TV_now_future_types": 0.26813928690436517
+   },
+   "5": {
+    "forecast_stage": "E8.0",
+    "persist": 0.7667848285424217,
+    "uot_rw_rolling_choice": {
+     "lam": 0.0,
+     "tau": 1.0,
+     "beta": 0.0
+    },
+    "uot_rw_rolling_ED_U": 0.7667848285424217,
+    "uot_rw_best_lam_pos_hp": {
+     "lam": 2.0,
+     "tau": 1.0,
+     "beta": 0.0
+    },
+    "uot_rw_best_lam_pos_ED_U": 0.7597062371300947,
+    "uot_rw_any_lam_pos_beats_persist": true,
+    "uot_rw_oracle_rel_gain_vs_persist": 0.009231522519534843,
+    "uot_rw_n_grid_lam_pos_beating_persist": 3,
+    "uot_rw_spearman_backtest_vs_final": 0.3516483516483516,
+    "tilt_rw_rolling_choice": {
+     "lam": 1.0
+    },
+    "tilt_rw_rolling_ED_U": 0.5389512917904007,
+    "tilt_rw_best_lam_pos_hp": {
+     "lam": 0.5
+    },
+    "tilt_rw_best_lam_pos_ED_U": 0.4734824331429195,
+    "tilt_rw_any_lam_pos_beats_persist": true,
+    "tilt_rw_oracle_rel_gain_vs_persist": 0.3825093878774826,
+    "tilt_rw_n_grid_lam_pos_beating_persist": 4,
+    "tilt_rw_spearman_backtest_vs_final": 0.8285714285714287,
+    "uot_rw_extended_ORACLE_best": 0.7578594131724419,
+    "truth_bound_best": "knn_true_ratio_lam1.0",
+    "truth_bound_best_ED_U": 0.17375038532598985,
+    "truth_bound_rel_gain": 0.7734039865443461,
+    "celltype_weights_ED_U": 0.2789573727230348,
+    "truth_bound_best_ess": 605.9351315795806,
+    "truth_bound_insample_best_ED_U": 0.15990145730799732,
+    "uot_rw_min_ess_lam_pos": 1406.6497227858372,
+    "uot_rw_rolling_weight_by_type": null,
+    "floor_ED_U_future_rest": -0.003477285871131386,
+    "frac_future_off_support": 0.08866666666666667,
+    "median_nn_future_over_self": 1.1694327767348804,
+    "future_mass_types_absent_now": 0.009,
+    "TV_now_future_types": 0.25845595912473623
+   },
+   "6": {
+    "forecast_stage": "E8.25",
+    "persist": 0.9116058677452088,
+    "uot_rw_rolling_choice": {
+     "lam": 2.0,
+     "tau": 1.0,
+     "beta": 0.0
+    },
+    "uot_rw_rolling_ED_U": 0.5960440563098413,
+    "uot_rw_best_lam_pos_hp": {
+     "lam": 2.0,
+     "tau": 1.0,
+     "beta": 0.0
+    },
+    "uot_rw_best_lam_pos_ED_U": 0.5960440563098413,
+    "uot_rw_any_lam_pos_beats_persist": true,
+    "uot_rw_oracle_rel_gain_vs_persist": 0.3461603556983314,
+    "uot_rw_n_grid_lam_pos_beating_persist": 12,
+    "uot_rw_spearman_backtest_vs_final": 0.03296703296703297,
+    "tilt_rw_rolling_choice": {
+     "lam": 0.5
+    },
+    "tilt_rw_rolling_ED_U": 0.7862876134155226,
+    "tilt_rw_best_lam_pos_hp": {
+     "lam": 0.5
+    },
+    "tilt_rw_best_lam_pos_ED_U": 0.7862876134155226,
+    "tilt_rw_any_lam_pos_beats_persist": true,
+    "tilt_rw_oracle_rel_gain_vs_persist": 0.13746977587984585,
+    "tilt_rw_n_grid_lam_pos_beating_persist": 2,
+    "tilt_rw_spearman_backtest_vs_final": 0.7142857142857143,
+    "uot_rw_extended_ORACLE_best": 0.55413779597718,
+    "truth_bound_best": "knn_true_ratio_lam1.0",
+    "truth_bound_best_ED_U": 0.3128962593213469,
+    "truth_bound_rel_gain": 0.6567636624638308,
+    "celltype_weights_ED_U": 0.3805419349285408,
+    "truth_bound_best_ess": 361.95816786261696,
+    "truth_bound_insample_best_ED_U": 0.3603987861268916,
+    "uot_rw_min_ess_lam_pos": 1392.9900782667219,
+    "uot_rw_rolling_weight_by_type": {
+     "hp": {
+      "lam": 2.0,
+      "tau": 1.0,
+      "beta": 0.0
+     },
+     "mean_weight": {
+      "Somitic mesoderm": 1.214841274473643,
+      "Intermediate mesoderm": 1.19098723994798,
+      "ExE mesoderm": 1.1478416253008001,
+      "Caudal Mesoderm": 1.145904578639494,
+      "Pharyngeal mesoderm": 1.1443164243036563,
+      "Paraxial mesoderm": 1.141906218122379,
+      "Allantois": 1.1279225948171852,
+      "Caudal epiblast": 1.1162095437920891,
+      "Mesenchyme": 1.0808107124279285,
+      "Caudal neurectoderm": 1.0800253785699194,
+      "Surface ectoderm": 1.0594920014373612,
+      "Rostral neurectoderm": 1.0438292073685755,
+      "Gut": 0.9364119842974833,
+      "ExE endoderm": 0.5564074903270024,
+      "ExE ectoderm": 0.3387048443110754
+     },
+     "future_over_now_type_ratio": {
+      "Allantois": 1.3370786516853934,
+      "Caudal Mesoderm": 0.31372549019607837,
+      "Caudal epiblast": 0.15859030837004406,
+      "Caudal neurectoderm": 0.2524271844660194,
+      "ExE ectoderm": 0.3397129186602871,
+      "ExE endoderm": 0.40614334470989766,
+      "ExE mesoderm": 0.9242424242424242,
+      "Gut": 1.0,
+      "Intermediate mesoderm": 0.6938775510204082,
+      "Mesenchyme": 1.1105527638190957,
+      "Paraxial mesoderm": 1.3105263157894735,
+      "Pharyngeal mesoderm": 0.9949238578680202,
+      "Rostral neurectoderm": 0.22535211267605634,
+      "Somitic mesoderm": 1.2741935483870968,
+      "Surface ectoderm": 1.312883435582822
+     },
+     "spearman_weight_vs_true_type_ratio": 0.22142857142857136
+    },
+    "floor_ED_U_future_rest": 0.013152687618102732,
+    "frac_future_off_support": 0.159,
+    "median_nn_future_over_self": 1.2480640600452704,
+    "future_mass_types_absent_now": 0.011333333333333334,
+    "TV_now_future_types": 0.3583333333333333
+   },
+   "7": {
+    "forecast_stage": "E8.5",
+    "persist": 0.3385966596415546,
+    "uot_rw_rolling_choice": {
+     "lam": 2.0,
+     "tau": 1.0,
+     "beta": 0.0
+    },
+    "uot_rw_rolling_ED_U": 0.346248862451743,
+    "uot_rw_best_lam_pos_hp": {
+     "lam": 0.5,
+     "tau": 1.0,
+     "beta": 2.0
+    },
+    "uot_rw_best_lam_pos_ED_U": 0.33453379815566464,
+    "uot_rw_any_lam_pos_beats_persist": true,
+    "uot_rw_oracle_rel_gain_vs_persist": 0.01199911862742827,
+    "uot_rw_n_grid_lam_pos_beating_persist": 4,
+    "uot_rw_spearman_backtest_vs_final": -0.4230769230769231,
+    "tilt_rw_rolling_choice": {
+     "lam": 0.5
+    },
+    "tilt_rw_rolling_ED_U": 0.44484566938165493,
+    "tilt_rw_best_lam_pos_hp": {
+     "lam": 0.25
+    },
+    "tilt_rw_best_lam_pos_ED_U": 0.36460224451434975,
+    "tilt_rw_any_lam_pos_beats_persist": false,
+    "tilt_rw_oracle_rel_gain_vs_persist": -0.0768040207494226,
+    "tilt_rw_n_grid_lam_pos_beating_persist": 0,
+    "tilt_rw_spearman_backtest_vs_final": 0.7714285714285715,
+    "uot_rw_extended_ORACLE_best": 0.35649083894973366,
+    "truth_bound_best": "knn_true_ratio_lam0.5",
+    "truth_bound_best_ED_U": 0.252435355549844,
+    "truth_bound_rel_gain": 0.2544659010603435,
+    "celltype_weights_ED_U": 0.30321516110697644,
+    "truth_bound_best_ess": 1117.6858234413587,
+    "truth_bound_insample_best_ED_U": 0.24021987341457773,
+    "uot_rw_min_ess_lam_pos": 1413.5431111809075,
+    "uot_rw_rolling_weight_by_type": {
+     "hp": {
+      "lam": 2.0,
+      "tau": 1.0,
+      "beta": 0.0
+     },
+     "mean_weight": {
+      "Cardiomyocytes": 1.597186674601906,
+      "Endothelium": 1.5092892261631652,
+      "Forebrain/Midbrain/Hindbrain": 1.0727520826011183,
+      "Rostral neurectoderm": 1.071536060676928,
+      "Spinal cord": 1.0537368788876613,
+      "Mesenchyme": 1.0322285594299878,
+      "Paraxial mesoderm": 1.027259897082412,
+      "Surface ectoderm": 1.0200989250454326,
+      "Pharyngeal mesoderm": 1.0065261796687055,
+      "NMP": 0.9965222321780292,
+      "ExE mesoderm": 0.9421834613613123,
+      "Somitic mesoderm": 0.9414819348999146,
+      "Intermediate mesoderm": 0.9402581316267985,
+      "Allantois": 0.9352074058325534,
+      "Gut": 0.9339283273708616,
+      "ExE endoderm": 0.37735053458302453,
+      "ExE ectoderm": 0.3403650034515876
+     },
+     "future_over_now_type_ratio": {
+      "Allantois": 0.9579831932773109,
+      "Cardiomyocytes": 1.2,
+      "Endothelium": 1.0681818181818181,
+      "ExE ectoderm": 0.0,
+      "ExE endoderm": 1.0084033613445378,
+      "ExE mesoderm": 1.516393442622951,
+      "Forebrain/Midbrain/Hindbrain": 1.3444976076555022,
+      "Gut": 1.2840909090909092,
+      "Intermediate mesoderm": 0.4264705882352941,
+      "Mesenchyme": 0.9819004524886877,
+      "NMP": 1.03781512605042,
+      "Paraxial mesoderm": 1.0602409638554215,
+      "Pharyngeal mesoderm": 0.8010204081632655,
+      "Rostral neurectoderm": 0.024999999999999998,
+      "Somitic mesoderm": 0.7531645569620253,
+      "Spinal cord": 1.0742857142857143,
+      "Surface ectoderm": 1.1121495327102804
+     },
+     "spearman_weight_vs_true_type_ratio": 0.35784313725490197
+    },
+    "floor_ED_U_future_rest": 0.0014350195682055755,
+    "frac_future_off_support": 0.176,
+    "median_nn_future_over_self": 1.1910528173466584,
+    "future_mass_types_absent_now": 0.0016666666666666668,
+    "TV_now_future_types": 0.14666666666666667
+   }
+  }
+ },
+ "headline_numbers": {
+  "per_k": {
+   "1": {
+    "ot_pairs/union": 1.1732007074190192,
+    "ot_minus_union": 0.2556424086468947,
+    "intermediate_excess_ot_minus_held": -0.02200000000000002,
+    "pair_draw_noise_abs(own_t0.5_draw_vs_recorded)": 0.07596817722394245,
+    "ORACLE_best_t": 1.0,
+    "composition_best_alpha": 0.8
+   },
+   "2": {
+    "ot_pairs/union": 1.0267862938817887,
+    "ot_minus_union": 0.009180099686510346,
+    "intermediate_excess_ot_minus_held": 0.10999999999999999,
+    "pair_draw_noise_abs(own_t0.5_draw_vs_recorded)": 0.02229259770406955,
+    "ORACLE_best_t": 0.6,
+    "composition_best_alpha": 0.6
+   },
+   "3": {
+    "ot_pairs/union": 1.1258930767515294,
+    "ot_minus_union": 0.08108147453739056,
+    "intermediate_excess_ot_minus_held": 0.122,
+    "pair_draw_noise_abs(own_t0.5_draw_vs_recorded)": 0.03483772622162695,
+    "ORACLE_best_t": 0.1,
+    "composition_best_alpha": 0.14
+   },
+   "4": {
+    "ot_pairs/union": 1.4540648792891009,
+    "ot_minus_union": 0.1619613302864889,
+    "intermediate_excess_ot_minus_held": 0.27999999999999997,
+    "pair_draw_noise_abs(own_t0.5_draw_vs_recorded)": 0.009447690030628508,
+    "ORACLE_best_t": 0.7,
+    "composition_best_alpha": 0.75
+   },
+   "5": {
+    "ot_pairs/union": 1.626299996517575,
+    "ot_minus_union": 0.1552298600992188,
+    "intermediate_excess_ot_minus_held": 0.259,
+    "pair_draw_noise_abs(own_t0.5_draw_vs_recorded)": 0.0003911737424455164,
+    "ORACLE_best_t": 0.3,
+    "composition_best_alpha": 0.53
+   },
+   "6": {
+    "ot_pairs/union": 1.2641257136942792,
+    "ot_minus_union": 0.07297507364180805,
+    "intermediate_excess_ot_minus_held": -0.02100000000000002,
+    "pair_draw_noise_abs(own_t0.5_draw_vs_recorded)": 0.00611362646954855,
+    "ORACLE_best_t": 0.5,
+    "composition_best_alpha": 0.51
+   },
+   "7": {
+    "ot_pairs/union": 1.0883569227725753,
+    "ot_minus_union": 0.01833520220416912,
+    "intermediate_excess_ot_minus_held": 0.10200000000000004,
+    "pair_draw_noise_abs(own_t0.5_draw_vs_recorded)": 0.012407901293389173,
+    "ORACLE_best_t": 0.6,
+    "composition_best_alpha": 0.78
+   }
+  },
+  "spearman_k_intermediate_excess_vs_ot_over_union": 0.39285714285714296,
+  "spearman_k_best_t_vs_composition_alpha": 0.900937462695559,
+  "full_spread_mean": {
+   "prev": 0.9956977675762465,
+   "next": 1.0237332546952447,
+   "union": 1.0395367298750913,
+   "indep": 0.7176825988310582,
+   "ot_pairs": 0.907122571045065,
+   "sb_half": 1.070088873910224,
+   "uot": 0.9297079002199382,
+   "held_rest": 1.0007295582990956
+  }
+ },
+ "confirm_verdicts": {
+  "H1_ot_pairs": {
+   "wins": 0,
+   "of": 7,
+   "need": 5,
+   "mean_ok": false,
+   "pass": false
+  },
+  "H1b_uot": {
+   "wins": 2,
+   "of": 7,
+   "need": 5,
+   "mean_ok": false,
+   "pass": false
+  },
+  "H1c_pairing": {
+   "wins": 7,
+   "of": 7,
+   "need": 5,
+   "mean_ok": true,
+   "pass": true
+  },
+  "H2_uot_rw": {
+   "wins": 1,
+   "of": 6,
+   "need": 4,
+   "mean_ok": false,
+   "pass": false
+  },
+  "H2b_ot_needed": {
+   "wins": 2,
+   "of": 6,
+   "need": 4,
+   "mean_ok": false,
+   "pass": false
+  }
+ }
+}

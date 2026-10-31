@@ -1,0 +1,24 @@
+origin1 pca: 579 cells, 24 blocks, 0.0s
+origin1 genes: 579 cells, 24 blocks, 0.0s
+origin2 pca: 2288 cells, 38 blocks, 0.2s
+origin2 genes: 2288 cells, 38 blocks, 0.7s
+origin3 pca: 5099 cells, 54 blocks, 0.7s
+origin3 genes: 5099 cells, 54 blocks, 3.4s
+origin4 pca: 6794 cells, 69 blocks, 1.3s
+origin4 genes: 6794 cells, 69 blocks, 3.7s
+origin5 pca: 9815 cells, 89 blocks, 2.2s
+origin5 permutation tests 0.8s
+origin5 genes: 9815 cells, 89 blocks, 8.2s
+interp2 pca: 2245 cells, 33 blocks, 0.2s
+interp2 permutation tests 0.2s
+interp2 genes: 2245 cells, 33 blocks, 1.5s
+interp3 pca: 4991 cells, 44 blocks, 0.7s
+interp3 permutation tests 0.4s
+interp3 genes: 4991 cells, 44 blocks, 2.4s
+interp4 pca: 6215 cells, 45 blocks, 0.7s
+interp4 permutation tests 0.4s
+interp4 genes: 6215 cells, 45 blocks, 3.2s
+interp5 pca: 7527 cells, 51 blocks, 1.3s
+interp5 permutation tests 0.6s
+interp5 genes: 7527 cells, 51 blocks, 4.4s
+done in 39.5s

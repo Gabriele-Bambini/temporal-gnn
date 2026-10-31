@@ -1,0 +1,60 @@
+{
+ "min_shared": 50,
+ "units": {
+  "Epo_24": {
+   "n_a": 3776,
+   "n_b": 1128,
+   "shared_clones_all": 195,
+   "shared_clones_sampled": 195
+  },
+  "Epo_46": {
+   "n_a": 1128,
+   "n_b": 1202,
+   "shared_clones_all": 143,
+   "shared_clones_sampled": 143
+  },
+  "Gcsf_24": {
+   "n_a": 3776,
+   "n_b": 2121,
+   "shared_clones_all": 387,
+   "shared_clones_sampled": 387
+  },
+  "Gcsf_46": {
+   "n_a": 2121,
+   "n_b": 1852,
+   "shared_clones_all": 260,
+   "shared_clones_sampled": 260
+  },
+  "Mcsf_24": {
+   "n_a": 3776,
+   "n_b": 2109,
+   "shared_clones_all": 396,
+   "shared_clones_sampled": 396
+  },
+  "Mcsf_46": {
+   "n_a": 2109,
+   "n_b": 5131,
+   "shared_clones_all": 671,
+   "shared_clones_sampled": 671
+  },
+  "SCF_24": {
+   "n_a": 3776,
+   "n_b": 2432,
+   "shared_clones_all": 403,
+   "shared_clones_sampled": 403
+  },
+  "full_24": {
+   "n_a": 3776,
+   "n_b": 282,
+   "shared_clones_all": 101,
+   "shared_clones_sampled": 101
+  },
+  "full_46": {
+   "n_a": 282,
+   "n_b": 5716,
+   "shared_clones_all": 163,
+   "shared_clones_sampled": 163
+  }
+ },
+ "excluded": {}
+}

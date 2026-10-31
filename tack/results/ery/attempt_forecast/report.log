@@ -1,0 +1,447 @@
+Targets: {'2': 'E7.75', '3': 'E8.0', '4': 'E8.25', '5': 'E8.5'}  rho_xfit: {'1': 0.697, '2': 0.487, '3': 0.724, '4': 0.882, '5': 0.932}
+max |diff| of the re-run first-run families vs rescore.json (same noise draws): {'2': '2.2e-16', '3': '6.4e-13', '4': '8.7e-13', '5': '9.8e-13'}
+  origin 2 ot {"noise": 1.0}: different noise draw from rescore (recorded hp, global RNG): |d energy| 0.078 |d sd_fixed| 0.007
+  origin 3 ot {"noise": 1.0}: different noise draw from rescore (recorded hp, global RNG): |d energy| 0.009 |d sd_fixed| 0.002
+floors (sampling halves; diag_batch leave-one-pool-out and oracle, energy V-stat): {'2': {'halves_sd_fixed': 0.08, 'halves_energy': 0.019, 'loso_energy_V': 1.635, 'oracle_energy_V': 0.339}, '3': {'halves_sd_fixed': 0.069, 'halves_energy': 0.014, 'loso_energy_V': 1.683, 'oracle_energy_V': 0.294}, '4': {'halves_sd_fixed': 0.109, 'halves_energy': 0.015, 'loso_energy_V': 1.387, 'oracle_energy_V': 0.389}, '5': {'halves_sd_fixed': 0.056, 'halves_energy': 0.008, 'loso_energy_V': 1.15, 'oracle_energy_V': 0.236}}
+
+==== metric sd_fixed (primary), PRIMARY rolling-origin hp; lower = better
+      family       tags      o2      o3      o4      o5    mean  wins_vs_P+M  hp(o2..o5)
+     persist  first-run   0.557   0.406   0.462   0.656   0.520     -     
+   meanshift  first-run   0.932   0.742   0.691   0.569   0.734     -     
+          ot  first-run   0.905   0.763   0.687   0.493   0.712  1/4  noise=0 | noise=0 | noise=0 | noise=0
+  uot_growth  first-run   0.852   0.667   0.697   0.520   0.684  1/4  beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1 | beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1
+      vel_ss  first-run   0.547   0.377   0.450   0.664   0.510  3/4 PASS mean_ok  c=4 | c=4 | c=2 | c=2
+     vel_dyn  first-run   0.557   0.477   0.449   0.685   0.542  2/4  c=0.25 | c=8 | c=2 | c=4
+   ot_vel_ss  first-run   0.641   0.460   0.443   0.536   0.520  2/4 mean_ok  c=8,w=0.25 | c=8,w=0.5 | c=2,w=0.25 | c=8,w=0.5
+  ot_vel_dyn  first-run   0.581   0.471   0.470   0.555   0.519  1/4 mean_ok  c=0.5,w=0.25 | c=8,w=0.25 | c=2,w=0.25 | c=2,w=0.25
+     ms_damp              0.557   0.406   0.462   0.656   0.520  0/4  lam=0 | lam=0 | lam=0 | lam=0
+   ms_smooth              0.557   0.406   0.462   0.466   0.472  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.75
+     ms_pool     sample   0.557   0.406   0.462   0.656   0.520  0/4  lam=0 | lam=0 | lam=0 | lam=0
+     ot_damp         OT   0.557   0.406   0.462   0.656   0.520  0/4  lam=0 | lam=0 | lam=0 | lam=0
+    uot_damp         OT   0.557   0.406   0.462   0.656   0.520  0/4  beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1
+      uot_rw         OT   0.537   0.371   0.379   0.482   0.442  4/4 PASS mean_ok  beta=0,lam=2,tau=0.1 | beta=0,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1
+     tilt_rw              0.488   0.346   0.438   0.527   0.450  4/4 PASS mean_ok  lam=2 | lam=2 | lam=2 | lam=2
+     comp_km              0.466   0.449   0.453   0.648   0.504  2/4 mean_ok  lam=2 | lam=2 | lam=0.5 | lam=0.5
+  comp_atlas       LEAK   0.508   0.386   0.383   0.304   0.395  4/4 PASS mean_ok  lam=0.5 | lam=1 | lam=0.5 | lam=2
+       mk_km         OT   0.557   0.339   0.350   0.460   0.426  3/4 PASS mean_ok  lam=0 | lam=1 | lam=1 | lam=1
+    mk_atlas    LEAK,OT   0.519   0.371   0.365   0.325   0.395  4/4 PASS mean_ok  lam=2 | lam=2 | lam=1 | lam=2
+    contract              0.274   0.242   0.363   0.550   0.357  4/4 PASS mean_ok  a=0.5 | a=0.5 | a=0.5 | a=0.4
+        xfit              0.272   0.269   0.409   0.623   0.393  3/4 PASS mean_ok  - | - | - | -
+   vel_ss_nm        VEL   0.521   0.368   0.450   0.658   0.499  3/4 PASS mean_ok  c=1 | c=2 | c=2 | c=1
+  vel_dyn_nm        VEL   0.563   0.429   0.462   0.656   0.527  0/4  c=-4 | c=4 | c=0 | c=2
+     pool_eq     sample   0.557   0.406   0.462   0.656   0.520  0/4  g=0 | g=0 | g=0 | g=0
+    desample     sample   0.497   0.318   0.412   0.609   0.459  3/4 PASS mean_ok  kappa=1 | kappa=1 | kappa=1 | kappa=1
+     c_trend              0.286   0.242   0.359   0.407   0.324  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0.5
+      c_tilt              0.286   0.224   0.352   0.479   0.335  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.45,lam=1 | a=0.45,lam=1 | a=0.45,lam=1
+        c_ot         OT   0.286   0.242   0.359   0.551   0.359  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0
+       c_uot         OT   0.286   0.230   0.330   0.479   0.331  4/4 PASS mean_ok  a=0.45,beta=2,lam=0,tau=1 | a=0.45,beta=2,lam=2,tau=1 | a=0.45,beta=2,lam=2,tau=1 | a=0.45,beta=2,lam=2,tau=1
+       c_vel        VEL   0.280   0.241   0.354   0.564   0.360  4/4 PASS mean_ok  a=0.45,c=1 | a=0.45,c=1 | a=0.45,c=1 | a=0.45,c=1
+      c_comp              0.286   0.388   0.359   0.551   0.396  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.45,lam=1.5 | a=0.45,lam=0 | a=0.45,lam=0
+   comp_pool     sample   0.476   0.442   0.453   0.651   0.506  2/4 mean_ok  g=0,lam=1.5 | g=1,lam=1.5 | g=0,lam=0.5 | g=1,lam=0.5
+  pre-registered (literal, first-run families): {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+  post hoc extension: {'OT_helps_ext': ['c_ot', 'c_uot', 'mk_atlas', 'mk_km', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': ['c_vel', 'vel_ss_nm'], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_comp', 'c_ot', 'c_tilt', 'c_trend', 'c_uot', 'c_vel', 'comp_atlas', 'contract', 'desample', 'mk_atlas', 'mk_km', 'tilt_rw', 'uot_rw', 'vel_ss_nm', 'xfit'], 'combos_beating_contract_alone': ['c_tilt', 'c_uot']}
+
+==== metric sd_fixed (primary), SENSITIVITY first-run backtest hp; lower = better
+      family       tags      o2      o3      o4      o5    mean  wins_vs_P+M  hp(o2..o5)
+     persist  first-run   0.557   0.406   0.462   0.656   0.520     -     
+   meanshift  first-run   0.932   0.742   0.691   0.569   0.734     -     
+          ot  first-run   0.905   0.763   0.687   0.493   0.712  1/4  noise=0 | noise=0 | noise=0 | noise=0
+  uot_growth  first-run   0.852   0.667   0.697   0.520   0.684  1/4  beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1 | beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1
+      vel_ss  first-run   0.547   0.377   0.450   0.664   0.510  3/4 PASS mean_ok  c=4 | c=4 | c=2 | c=2
+     vel_dyn  first-run   0.557   0.477   0.449   0.685   0.542  2/4  c=0.25 | c=8 | c=2 | c=4
+   ot_vel_ss  first-run   0.641   0.460   0.443   0.536   0.520  2/4 mean_ok  c=8,w=0.25 | c=8,w=0.5 | c=2,w=0.25 | c=8,w=0.5
+  ot_vel_dyn  first-run   0.581   0.471   0.470   0.555   0.519  1/4 mean_ok  c=0.5,w=0.25 | c=8,w=0.25 | c=2,w=0.25 | c=2,w=0.25
+     ms_damp              0.557   0.406   0.462   0.656   0.520  0/4  lam=0 | lam=0 | lam=0 | lam=0
+   ms_smooth              0.557   0.406   0.462   0.466   0.472  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.75
+     ms_pool     sample   0.557   0.417   0.462   0.656   0.523  0/4  lam=0 | lam=0.25 | lam=0 | lam=0
+     ot_damp         OT   0.557   0.406   0.462   0.656   0.520  0/4  lam=0 | lam=0 | lam=0 | lam=0
+    uot_damp         OT   0.557   0.406   0.462   0.544   0.492  1/4 mean_ok  beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=2,lam=0.25,tau=1
+      uot_rw         OT   0.537   0.371   0.379   0.482   0.442  4/4 PASS mean_ok  beta=2,lam=2,tau=0.1 | beta=0,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1
+     tilt_rw              0.488   0.346   0.438   0.527   0.450  4/4 PASS mean_ok  lam=2 | lam=2 | lam=2 | lam=2
+     comp_km              0.557   0.449   0.453   0.656   0.529  1/4  lam=0 | lam=2 | lam=0.5 | lam=0
+  comp_atlas       LEAK   0.557   0.397   0.383   0.304   0.410  3/4 PASS mean_ok  lam=0 | lam=1.5 | lam=0.5 | lam=2
+       mk_km         OT   0.525   0.428   0.350   0.460   0.441  3/4 PASS mean_ok  lam=1 | lam=2 | lam=1 | lam=1
+    mk_atlas    LEAK,OT   0.557   0.371   0.365   0.325   0.404  3/4 PASS mean_ok  lam=0 | lam=2 | lam=1 | lam=2
+    contract              0.274   0.245   0.357   0.557   0.359  4/4 PASS mean_ok  a=0.5 | a=0.4 | a=0.4 | a=0.3
+        xfit              0.272   0.269   0.409   0.623   0.393  3/4 PASS mean_ok  - | - | - | -
+   vel_ss_nm        VEL   0.546   0.377   0.450   0.665   0.509  3/4 PASS mean_ok  c=4 | c=4 | c=2 | c=2
+  vel_dyn_nm        VEL   0.563   0.494   0.457   0.656   0.543  1/4  c=-4 | c=8 | c=0.5 | c=2
+     pool_eq     sample   0.595   0.424   0.462   0.656   0.534  0/4  g=1 | g=0.5 | g=0 | g=0
+    desample     sample   0.497   0.318   0.412   0.609   0.459  3/4 PASS mean_ok  kappa=1 | kappa=1 | kappa=1 | kappa=1
+     c_trend              0.286   0.242   0.359   0.414   0.325  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0 | a=0.3,lam=0.5
+      c_tilt              0.286   0.225   0.352   0.476   0.335  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.45,lam=0.5 | a=0.45,lam=1 | a=0.3,lam=1
+        c_ot         OT   0.286   0.242   0.359   0.557   0.361  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0 | a=0.3,lam=0
+       c_uot         OT   0.284   0.242   0.330   0.478   0.333  4/4 PASS mean_ok  a=0.45,beta=2,lam=2,tau=1 | a=0.45,beta=2,lam=0,tau=1 | a=0.45,beta=2,lam=2,tau=1 | a=0.3,beta=2,lam=2,tau=1
+       c_vel        VEL   0.287   0.246   0.359   0.582   0.369  3/4 PASS mean_ok  a=0.45,c=2 | a=0.45,c=2 | a=0.45,c=0 | a=0.3,c=2
+      c_comp              0.286   0.385   0.366   0.557   0.399  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.3,lam=1.5 | a=0.3,lam=0.5 | a=0.3,lam=0
+   comp_pool     sample   0.595   0.441   0.453   0.656   0.536  1/4  g=1,lam=0 | g=0,lam=1.5 | g=0,lam=0.5 | g=0,lam=0
+  pre-registered (literal, first-run families): {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+  post hoc extension: {'OT_helps_ext': ['c_ot', 'c_uot', 'mk_atlas', 'mk_km', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': ['c_vel', 'vel_ss_nm'], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_comp', 'c_ot', 'c_tilt', 'c_trend', 'c_uot', 'c_vel', 'comp_atlas', 'contract', 'desample', 'mk_atlas', 'mk_km', 'tilt_rw', 'uot_rw', 'vel_ss_nm', 'xfit'], 'combos_beating_contract_alone': ['c_tilt', 'c_uot']}
+
+==== metric sd_fixed (primary), DESCRIPTIVE best hp in hindsight (not a forecast); lower = better
+      family       tags      o2      o3      o4      o5    mean  wins_vs_P+M  hp(o2..o5)
+     persist  first-run   0.557   0.406   0.462   0.656   0.520     -     
+   meanshift  first-run   0.932   0.742   0.691   0.569   0.734     -     
+          ot  first-run   0.905   0.763   0.687   0.493   0.712  1/4  noise=0 | noise=0 | noise=0 | noise=0
+  uot_growth  first-run   0.852   0.667   0.697   0.520   0.684  1/4  beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1 | beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1
+      vel_ss  first-run   0.547   0.377   0.450   0.664   0.510  3/4 PASS mean_ok  c=4 | c=4 | c=2 | c=2
+     vel_dyn  first-run   0.557   0.477   0.449   0.685   0.542  2/4  c=0.25 | c=8 | c=2 | c=4
+   ot_vel_ss  first-run   0.641   0.460   0.443   0.536   0.520  2/4 mean_ok  c=8,w=0.25 | c=8,w=0.5 | c=2,w=0.25 | c=8,w=0.5
+  ot_vel_dyn  first-run   0.581   0.471   0.470   0.555   0.519  1/4 mean_ok  c=0.5,w=0.25 | c=8,w=0.25 | c=2,w=0.25 | c=2,w=0.25
+     ms_damp              0.557   0.406   0.462   0.536   0.490  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.75
+   ms_smooth              0.557   0.406   0.386   0.435   0.446  2/4 mean_ok  lam=0 | lam=0 | lam=0.75 | lam=1
+     ms_pool     sample   0.557   0.406   0.462   0.540   0.491  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.5
+     ot_damp         OT   0.557   0.406   0.462   0.478   0.476  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.75
+    uot_damp         OT   0.557   0.406   0.462   0.506   0.482  1/4 mean_ok  beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=2,lam=0.75,tau=1
+      uot_rw         OT   0.537   0.371   0.379   0.482   0.442  4/4 PASS mean_ok  beta=0,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1
+     tilt_rw              0.488   0.346   0.438   0.527   0.450  4/4 PASS mean_ok  lam=2 | lam=2 | lam=2 | lam=2
+     comp_km              0.466   0.345   0.453   0.648   0.478  3/4 PASS mean_ok  lam=2 | lam=0.5 | lam=0.5 | lam=0.5
+  comp_atlas       LEAK   0.503   0.337   0.292   0.298   0.358  4/4 PASS mean_ok  lam=1 | lam=0.5 | lam=2 | lam=1.5
+       mk_km         OT   0.525   0.339   0.350   0.420   0.408  4/4 PASS mean_ok  lam=1 | lam=1 | lam=1 | lam=1.5
+    mk_atlas    LEAK,OT   0.519   0.331   0.324   0.325   0.375  4/4 PASS mean_ok  lam=2 | lam=1 | lam=2 | lam=2
+    contract              0.274   0.242   0.357   0.550   0.356  4/4 PASS mean_ok  a=0.5 | a=0.5 | a=0.4 | a=0.4
+        xfit              0.272   0.269   0.409   0.623   0.393  3/4 PASS mean_ok  - | - | - | -
+   vel_ss_nm        VEL   0.506   0.368   0.441   0.656   0.493  3/4 PASS mean_ok  c=2 | c=2 | c=1 | c=0
+  vel_dyn_nm        VEL   0.554   0.406   0.450   0.652   0.515  2/4 mean_ok  c=4 | c=0 | c=2 | c=1
+     pool_eq     sample   0.557   0.406   0.462   0.656   0.520  0/4  g=0 | g=0 | g=0 | g=0
+    desample     sample   0.497   0.318   0.412   0.609   0.459  3/4 PASS mean_ok  kappa=1 | kappa=1 | kappa=1 | kappa=1
+     c_trend              0.286   0.242   0.289   0.407   0.306  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0.5 | a=0.45,lam=0.5
+      c_tilt              0.278   0.224   0.352   0.476   0.332  4/4 PASS mean_ok  a=0.45,lam=1 | a=0.45,lam=1 | a=0.45,lam=1 | a=0.3,lam=1
+        c_ot         OT   0.286   0.242   0.359   0.409   0.324  4/4 PASS mean_ok  a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0.5
+       c_uot         OT   0.284   0.230   0.330   0.478   0.330  4/4 PASS mean_ok  a=0.45,beta=2,lam=2,tau=1 | a=0.45,beta=2,lam=2,tau=1 | a=0.45,beta=2,lam=2,tau=1 | a=0.3,beta=2,lam=2,tau=1
+       c_vel        VEL   0.280   0.241   0.354   0.541   0.354  4/4 PASS mean_ok  a=0.45,c=1 | a=0.45,c=1 | a=0.45,c=1 | a=0.45,c=-1
+      c_comp              0.260   0.242   0.359   0.551   0.353  4/4 PASS mean_ok  a=0.45,lam=1.5 | a=0.45,lam=0 | a=0.45,lam=0 | a=0.45,lam=0
+   comp_pool     sample   0.455   0.345   0.452   0.648   0.475  3/4 PASS mean_ok  g=1,lam=1.5 | g=0,lam=0.5 | g=1,lam=0.5 | g=0,lam=0.5
+  pre-registered (literal, first-run families): {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+  post hoc extension: {'OT_helps_ext': ['c_ot', 'c_uot', 'mk_atlas', 'mk_km', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': ['c_vel', 'vel_ss_nm'], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_comp', 'c_ot', 'c_tilt', 'c_trend', 'c_uot', 'c_vel', 'comp_atlas', 'comp_km', 'comp_pool', 'contract', 'desample', 'mk_atlas', 'mk_km', 'tilt_rw', 'uot_rw', 'vel_ss_nm', 'xfit'], 'combos_beating_contract_alone': ['c_tilt', 'c_uot', 'c_vel']}
+
+==== metric energy (secondary), PRIMARY rolling-origin hp; lower = better
+      family       tags      o2      o3      o4      o5    mean  wins_vs_P+M  hp(o2..o5)
+     persist  first-run   1.756   1.995   2.796   5.130   2.919     -     
+   meanshift  first-run   5.304   5.798   5.363   4.654   5.280     -     
+          ot  first-run   5.009   5.773   5.055   3.984   4.955  1/4  noise=1 | noise=1 | noise=1 | noise=1
+  uot_growth  first-run   4.775   5.093   5.673   4.448   4.997  1/4  beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1 | beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1
+      vel_ss  first-run   2.403   2.048   2.756   5.542   3.187  1/4  c=4 | c=2 | c=0.25 | c=2
+     vel_dyn  first-run   1.749   2.323   2.751   5.549   3.093  2/4  c=0.25 | c=8 | c=1 | c=4
+   ot_vel_ss  first-run   2.834   2.351   3.026   4.597   3.202  1/4  c=8,w=0.25 | c=2,w=0.25 | c=0.5,w=0.25 | c=2,w=0.25
+  ot_vel_dyn  first-run   2.039   2.539   3.106   5.208   3.223  0/4  c=0.5,w=0.25 | c=8,w=0.25 | c=0.5,w=0.25 | c=8,w=0.25
+     ms_damp              1.756   1.995   2.796   5.130   2.919  0/4  lam=0 | lam=0 | lam=0 | lam=0
+   ms_smooth              1.756   1.995   2.796   3.254   2.450  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.75
+     ms_pool     sample   1.756   1.995   2.796   5.130   2.919  0/4  lam=0 | lam=0 | lam=0 | lam=0
+     ot_damp         OT   1.756   1.995   2.796   5.130   2.919  0/4  lam=0 | lam=0 | lam=0 | lam=0
+    uot_damp         OT   1.756   1.995   2.796   5.130   2.919  0/4  beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1
+      uot_rw         OT   1.756   1.808   2.249   4.026   2.460  3/4 PASS mean_ok  beta=0,lam=0,tau=1 | beta=0,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1
+     tilt_rw              1.756   1.995   2.762   4.528   2.760  2/4 mean_ok  lam=0 | lam=0 | lam=1 | lam=2
+     comp_km              1.756   3.530   2.796   5.130   3.303  0/4  lam=0 | lam=1.5 | lam=0 | lam=0
+  comp_atlas       LEAK   1.332   2.703   2.796   1.842   2.168  2/4 mean_ok  lam=0.5 | lam=2 | lam=0 | lam=2
+       mk_km         OT   1.756   1.712   2.360   3.382   2.302  3/4 PASS mean_ok  lam=0 | lam=0.5 | lam=0.5 | lam=2
+    mk_atlas    LEAK,OT   1.427   2.565   2.426   2.218   2.159  3/4 PASS mean_ok  lam=2 | lam=2 | lam=0.5 | lam=2
+    contract              1.721   1.963   2.899   5.130   2.928  2/4  a=0.2 | a=0.1 | a=0.1 | a=0
+        xfit              2.136   2.069   2.924   5.282   3.103  0/4  - | - | - | -
+   vel_ss_nm        VEL   1.730   1.979   2.730   5.312   2.938  3/4  c=0.5 | c=0.5 | c=0.5 | c=1
+  vel_dyn_nm        VEL   1.705   2.563   2.870   5.218   3.089  1/4  c=2 | c=8 | c=-1 | c=2
+     pool_eq     sample   1.756   2.256   2.796   5.130   2.984  0/4  g=0 | g=1 | g=0 | g=0
+    desample     sample   1.608   1.871   2.894   5.130   2.876  2/4 mean_ok  kappa=1 | kappa=1 | kappa=1 | kappa=0
+     c_trend              1.712   1.970   2.972   3.713   2.592  3/4 PASS mean_ok  a=0.15,lam=0 | a=0.15,lam=0 | a=0.15,lam=0 | a=0,lam=0.5
+      c_tilt              1.712   1.970   2.950   4.646   2.820  3/4 PASS mean_ok  a=0.15,lam=0 | a=0.15,lam=0 | a=0.15,lam=0.5 | a=0,lam=1
+        c_ot         OT   1.712   1.970   2.972   5.130   2.946  2/4  a=0.15,lam=0 | a=0.15,lam=0 | a=0.15,lam=0 | a=0,lam=0
+       c_uot         OT   1.712   1.859   2.700   4.581   2.713  4/4 PASS mean_ok  a=0.15,beta=2,lam=0,tau=1 | a=0.15,beta=2,lam=2,tau=1 | a=0.15,beta=2,lam=2,tau=1 | a=0,beta=2,lam=2,tau=1
+       c_vel        VEL   1.712   1.970   2.972   5.312   2.992  2/4  a=0.15,c=0 | a=0.15,c=0 | a=0.15,c=0 | a=0,c=1
+      c_comp              1.712   3.409   2.972   5.130   3.306  1/4  a=0.15,lam=0 | a=0.15,lam=1 | a=0.15,lam=0 | a=0,lam=0
+   comp_pool     sample   1.756   3.198   2.796   5.130   3.220  0/4  g=0,lam=0 | g=1,lam=1 | g=0,lam=0 | g=0,lam=0
+  pre-registered (literal, first-run families): {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+  post hoc extension: {'OT_helps_ext': ['c_uot', 'mk_atlas', 'mk_km', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': [], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_tilt', 'c_trend', 'c_uot', 'mk_atlas', 'mk_km', 'uot_rw'], 'combos_beating_contract_alone': ['c_uot']}
+
+==== metric energy (secondary), SENSITIVITY first-run backtest hp; lower = better
+      family       tags      o2      o3      o4      o5    mean  wins_vs_P+M  hp(o2..o5)
+     persist  first-run   1.756   1.995   2.796   5.130   2.919     -     
+   meanshift  first-run   5.304   5.798   5.363   4.654   5.280     -     
+          ot  first-run   5.009   5.773   5.055   3.984   4.955  1/4  noise=1 | noise=1 | noise=1 | noise=1
+  uot_growth  first-run   4.775   5.093   5.673   4.448   4.997  1/4  beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1 | beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1
+      vel_ss  first-run   2.403   2.048   2.756   5.542   3.187  1/4  c=4 | c=2 | c=0.25 | c=2
+     vel_dyn  first-run   1.749   2.323   2.751   5.549   3.093  2/4  c=0.25 | c=8 | c=1 | c=4
+   ot_vel_ss  first-run   2.834   2.351   3.026   4.597   3.202  1/4  c=8,w=0.25 | c=2,w=0.25 | c=0.5,w=0.25 | c=2,w=0.25
+  ot_vel_dyn  first-run   2.039   2.539   3.106   5.208   3.223  0/4  c=0.5,w=0.25 | c=8,w=0.25 | c=0.5,w=0.25 | c=8,w=0.25
+     ms_damp              1.756   1.995   2.796   5.130   2.919  0/4  lam=0 | lam=0 | lam=0 | lam=0
+   ms_smooth              1.756   1.995   2.796   3.254   2.450  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.75
+     ms_pool     sample   1.756   2.210   2.796   5.130   2.973  0/4  lam=0 | lam=0.25 | lam=0 | lam=0
+     ot_damp         OT   1.756   1.995   2.796   5.130   2.919  0/4  lam=0 | lam=0 | lam=0 | lam=0
+    uot_damp         OT   1.756   1.995   2.796   5.130   2.919  0/4  beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1
+      uot_rw         OT   1.733   1.995   2.249   4.026   2.501  3/4 PASS mean_ok  beta=0,lam=2,tau=0.1 | beta=0,lam=0,tau=1 | beta=2,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1
+     tilt_rw              1.756   1.995   2.773   4.528   2.763  2/4 mean_ok  lam=0 | lam=0 | lam=0.5 | lam=2
+     comp_km              1.756   3.530   2.796   5.130   3.303  0/4  lam=0 | lam=1.5 | lam=0 | lam=0
+  comp_atlas       LEAK   1.332   2.703   2.796   1.842   2.168  2/4 mean_ok  lam=0.5 | lam=2 | lam=0 | lam=2
+       mk_km         OT   1.756   3.330   2.360   3.590   2.759  2/4 mean_ok  lam=0 | lam=2 | lam=0.5 | lam=1.5
+    mk_atlas    LEAK,OT   1.427   2.565   2.426   2.218   2.159  3/4 PASS mean_ok  lam=2 | lam=2 | lam=0.5 | lam=2
+    contract              1.756   1.995   2.796   5.130   2.919  0/4  a=0 | a=0 | a=0 | a=0
+        xfit              2.136   2.069   2.924   5.282   3.103  0/4  - | - | - | -
+   vel_ss_nm        VEL   2.394   2.044   2.922   5.532   3.223  0/4  c=4 | c=2 | c=-0.5 | c=2
+  vel_dyn_nm        VEL   1.877   2.563   2.870   5.218   3.132  0/4  c=-4 | c=8 | c=-1 | c=2
+     pool_eq     sample   1.515   2.256   2.796   5.130   2.924  1/4  g=1 | g=1 | g=0 | g=0
+    desample     sample   1.608   1.995   2.806   5.130   2.885  1/4 mean_ok  kappa=1 | kappa=0 | kappa=0.25 | kappa=0
+     c_trend              1.756   1.995   2.796   3.713   2.565  1/4 mean_ok  a=0,lam=0 | a=0,lam=0 | a=0,lam=0 | a=0,lam=0.5
+      c_tilt              1.756   1.995   2.773   4.646   2.792  2/4 mean_ok  a=0,lam=0 | a=0,lam=0 | a=0,lam=0.5 | a=0,lam=1
+        c_ot         OT   1.756   1.995   2.796   5.130   2.919  0/4  a=0,lam=0 | a=0,lam=0 | a=0,lam=0 | a=0,lam=0
+       c_uot         OT   1.748   1.995   2.539   4.581   2.716  3/4 PASS mean_ok  a=0,beta=2,lam=2,tau=1 | a=0,beta=2,lam=0,tau=1 | a=0,beta=2,lam=2,tau=1 | a=0,beta=2,lam=2,tau=1
+       c_vel        VEL   1.858   2.044   3.105   5.532   3.135  0/4  a=0,c=2 | a=0,c=2 | a=0,c=-1 | a=0,c=2
+      c_comp              1.756   3.530   2.796   5.130   3.303  0/4  a=0,lam=0 | a=0,lam=1.5 | a=0,lam=0 | a=0,lam=0
+   comp_pool     sample   1.515   3.538   2.796   5.130   3.245  1/4  g=1,lam=0 | g=1,lam=1.5 | g=0,lam=0 | g=0,lam=0
+  pre-registered (literal, first-run families): {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+  post hoc extension: {'OT_helps_ext': ['c_uot', 'mk_atlas', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': [], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_uot', 'mk_atlas', 'uot_rw'], 'combos_beating_contract_alone': ['c_uot']}
+
+==== metric energy (secondary), DESCRIPTIVE best hp in hindsight (not a forecast); lower = better
+      family       tags      o2      o3      o4      o5    mean  wins_vs_P+M  hp(o2..o5)
+     persist  first-run   1.756   1.995   2.796   5.130   2.919     -     
+   meanshift  first-run   5.304   5.798   5.363   4.654   5.280     -     
+          ot  first-run   5.009   5.773   5.055   3.984   4.955  1/4  noise=1 | noise=1 | noise=1 | noise=1
+  uot_growth  first-run   4.775   5.093   5.673   4.448   4.997  1/4  beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1 | beta=5,noise=0,tau=0.1 | beta=5,noise=0,tau=1
+      vel_ss  first-run   2.403   2.048   2.756   5.542   3.187  1/4  c=4 | c=2 | c=0.25 | c=2
+     vel_dyn  first-run   1.749   2.323   2.751   5.549   3.093  2/4  c=0.25 | c=8 | c=1 | c=4
+   ot_vel_ss  first-run   2.834   2.351   3.026   4.597   3.202  1/4  c=8,w=0.25 | c=2,w=0.25 | c=0.5,w=0.25 | c=2,w=0.25
+  ot_vel_dyn  first-run   2.039   2.539   3.106   5.208   3.223  0/4  c=0.5,w=0.25 | c=8,w=0.25 | c=0.5,w=0.25 | c=8,w=0.25
+     ms_damp              1.756   1.995   2.796   4.109   2.664  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.5
+   ms_smooth              1.756   1.995   2.116   2.973   2.210  2/4 mean_ok  lam=0 | lam=0 | lam=0.75 | lam=1
+     ms_pool     sample   1.756   1.995   2.796   4.143   2.672  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.5
+     ot_damp         OT   1.756   1.995   2.796   3.799   2.586  1/4 mean_ok  lam=0 | lam=0 | lam=0 | lam=0.75
+    uot_damp         OT   1.756   1.995   2.796   4.130   2.669  1/4 mean_ok  beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=0,lam=0,tau=1 | beta=2,lam=0.5,tau=1
+      uot_rw         OT   1.733   1.808   2.249   4.026   2.454  4/4 PASS mean_ok  beta=0,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1 | beta=2,lam=2,tau=0.1
+     tilt_rw              1.756   1.860   2.754   4.528   2.724  3/4 PASS mean_ok  lam=0 | lam=1 | lam=2 | lam=2
+     comp_km              1.636   1.995   2.796   5.130   2.889  1/4 mean_ok  lam=1.5 | lam=0 | lam=0 | lam=0
+  comp_atlas       LEAK   1.250   1.995   1.514   1.842   1.650  3/4 PASS mean_ok  lam=2 | lam=0 | lam=2 | lam=2
+       mk_km         OT   1.676   1.712   1.824   3.382   2.149  4/4 PASS mean_ok  lam=0.5 | lam=0.5 | lam=2 | lam=2
+    mk_atlas    LEAK,OT   1.427   1.700   1.740   2.218   1.771  4/4 PASS mean_ok  lam=2 | lam=0.5 | lam=2 | lam=2
+    contract              1.716   1.963   2.796   5.130   2.901  2/4 mean_ok  a=0.1 | a=0.1 | a=0 | a=0
+        xfit              2.136   2.069   2.924   5.282   3.103  0/4  - | - | - | -
+   vel_ss_nm        VEL   1.730   1.979   2.727   4.804   2.810  3/4 PASS mean_ok  c=0.5 | c=0.5 | c=1 | c=-4
+  vel_dyn_nm        VEL   1.594   1.988   2.718   5.130   2.857  3/4 PASS mean_ok  c=8 | c=-1 | c=2 | c=0
+     pool_eq     sample   1.515   1.995   2.796   5.130   2.859  1/4 mean_ok  g=1 | g=0 | g=0 | g=0
+    desample     sample   1.608   1.871   2.796   5.130   2.851  2/4 mean_ok  kappa=1 | kappa=1 | kappa=0 | kappa=0
+     c_trend              1.712   1.970   2.136   3.713   2.383  4/4 PASS mean_ok  a=0.15,lam=0 | a=0.15,lam=0 | a=0,lam=0.5 | a=0,lam=0.5
+      c_tilt              1.712   1.858   2.762   4.646   2.745  4/4 PASS mean_ok  a=0.15,lam=0 | a=0.15,lam=0.5 | a=0,lam=1 | a=0,lam=1
+        c_ot         OT   1.712   1.970   2.796   3.857   2.584  3/4 PASS mean_ok  a=0.15,lam=0 | a=0.15,lam=0 | a=0,lam=0 | a=0,lam=0.5
+       c_uot         OT   1.708   1.859   2.539   4.581   2.671  4/4 PASS mean_ok  a=0.15,beta=2,lam=2,tau=1 | a=0.15,beta=2,lam=2,tau=1 | a=0,beta=2,lam=2,tau=1 | a=0,beta=2,lam=2,tau=1
+       c_vel        VEL   1.712   1.970   2.727   4.987   2.849  3/4 PASS mean_ok  a=0.15,c=0 | a=0.15,c=0 | a=0,c=1 | a=0,c=-1
+      c_comp              1.618   1.970   2.796   5.130   2.878  2/4 mean_ok  a=0.15,lam=1 | a=0.15,lam=0 | a=0,lam=0 | a=0,lam=0
+   comp_pool     sample   1.485   1.995   2.796   5.130   2.851  1/4 mean_ok  g=1,lam=1 | g=0,lam=0 | g=0,lam=0 | g=0,lam=0
+  pre-registered (literal, first-run families): {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}
+  post hoc extension: {'OT_helps_ext': ['c_ot', 'c_uot', 'mk_atlas', 'mk_km', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_ot', 'c_tilt', 'c_trend', 'c_uot', 'c_vel', 'comp_atlas', 'mk_atlas', 'mk_km', 'tilt_rw', 'uot_rw', 'vel_dyn_nm', 'vel_ss_nm'], 'combos_beating_contract_alone': ['c_tilt', 'c_trend', 'c_uot', 'c_vel']}
+
+==== secondary, hp by sd_fixed under 'roll' (first-run families Mode B): gene PCC of the mean change, P@200 up, gene-space energy (robustness column)
+      family    pcc2    pcc3    pcc4    pcc5    p@2    p@3    p@4    p@5     Eg2     Eg3     Eg4     Eg5
+     persist     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+   meanshift  -0.029  -0.015  -0.098   0.450  0.205  0.180  0.230  0.320   2.445   2.415   2.093   2.323
+          ot  -0.018   0.004  -0.150   0.503  0.200  0.190  0.215  0.345   2.398   2.486   2.108   2.098
+  uot_growth  -0.118  -0.095  -0.353   0.423  0.170  0.155  0.145  0.300   2.299   2.081   2.203   2.265
+      vel_ss   0.015   0.003   0.043   0.037  0.105  0.005  0.095  0.025  15.770  18.833  13.244   3.814
+     vel_dyn   0.087   0.025   0.051   0.039  0.195  0.155  0.195  0.130   0.933   2.023   1.196   3.999
+   ot_vel_ss   0.014   0.003   0.032   0.173  0.110  0.075  0.115  0.085  27.574  19.017   8.677   6.225
+  ot_vel_dyn  -0.013   0.024  -0.061   0.308  0.200  0.145  0.175  0.245   1.044   1.619   1.254   2.438
+     ms_damp     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+   ms_smooth     nan     nan     nan   0.642    nan    nan    nan  0.470   0.935   0.819   1.125   1.793
+     ms_pool     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+     ot_damp     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+    uot_damp     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+      uot_rw   0.136   0.419   0.659   0.699  0.195  0.375  0.490  0.485   0.933   0.745   0.883   2.054
+     tilt_rw  -0.048   0.252   0.373   0.603  0.170  0.315  0.310  0.405   0.987   0.789   1.088   2.265
+     comp_km   0.204   0.390   0.148  -0.170  0.230  0.340  0.225  0.105   0.981   1.451   1.111   2.833
+  comp_atlas   0.496   0.408   0.677   0.808  0.315  0.355  0.485  0.515   0.786   1.079   0.893   1.055
+       mk_km     nan   0.387   0.668   0.700    nan  0.340  0.485  0.470   0.935   0.846   0.793   2.013
+    mk_atlas   0.545   0.407   0.675   0.796  0.370  0.340  0.485  0.525   0.808   1.083   0.843   1.185
+    contract     nan     nan     nan     nan    nan    nan    nan    nan   2.873   3.077   3.093   3.748
+        xfit     nan     nan     nan     nan    nan    nan    nan    nan   2.983   1.439   1.201   2.681
+   vel_ss_nm   0.015   0.003   0.043   0.038  0.105  0.005  0.090  0.020   2.347   6.761  13.241   2.980
+  vel_dyn_nm  -0.104  -0.039     nan   0.032  0.145  0.155    nan  0.075   1.024   1.068   1.125   2.983
+     pool_eq     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+    desample   0.183     nan     nan     nan  0.220    nan    nan    nan   0.915   0.823   1.118   2.660
+     c_trend     nan     nan     nan   0.642    nan    nan    nan  0.470   2.484   2.604   2.668   3.236
+      c_tilt     nan   0.245   0.363   0.595    nan  0.310  0.295  0.405   2.484   2.621   2.668   3.728
+        c_ot     nan     nan     nan     nan    nan    nan    nan    nan   2.484   2.604   2.668   4.091
+       c_uot     nan   0.395   0.661   0.665    nan  0.345  0.495  0.460   2.484   2.563   2.541   3.713
+       c_vel   0.015   0.003   0.043   0.038  0.105  0.005  0.090  0.020   4.027   4.337   6.872   4.463
+      c_comp     nan   0.390     nan     nan    nan  0.340    nan    nan   2.484   3.603   2.668   4.091
+   comp_pool   0.228   0.389   0.148  -0.159  0.230  0.340  0.225  0.105   0.945   1.421   1.111   2.797
+
+==== secondary, hp by energy under 'roll' (first-run families Mode B): gene PCC of the mean change, P@200 up, gene-space energy (robustness column)
+      family    pcc2    pcc3    pcc4    pcc5    p@2    p@3    p@4    p@5     Eg2     Eg3     Eg4     Eg5
+     persist     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+   meanshift  -0.029  -0.015  -0.098   0.450  0.205  0.180  0.230  0.320   2.445   2.415   2.093   2.323
+          ot  -0.018   0.004  -0.150   0.503  0.200  0.190  0.215  0.345   2.398   2.486   2.108   2.098
+  uot_growth  -0.118  -0.095  -0.353   0.423  0.170  0.155  0.145  0.300   2.299   2.081   2.203   2.265
+      vel_ss   0.015   0.003   0.043   0.037  0.105  0.005  0.095  0.025  15.770   6.771   1.361   3.814
+     vel_dyn   0.087   0.025   0.051   0.039  0.195  0.155  0.195  0.130   0.933   2.023   1.131   3.999
+   ot_vel_ss   0.014   0.003  -0.001   0.212  0.110  0.085  0.170  0.095  27.574   4.497   1.747   2.941
+  ot_vel_dyn  -0.013   0.024  -0.131   0.119  0.200  0.145  0.205  0.165   1.044   1.619   1.218   5.253
+     ms_damp     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+   ms_smooth     nan     nan     nan   0.642    nan    nan    nan  0.470   0.935   0.819   1.125   1.793
+     ms_pool     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+     ot_damp     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+    uot_damp     nan     nan     nan     nan    nan    nan    nan    nan   0.935   0.819   1.125   2.669
+      uot_rw     nan   0.419   0.659   0.699    nan  0.375  0.490  0.485   0.935   0.745   0.883   2.054
+     tilt_rw     nan     nan   0.363   0.603    nan    nan  0.295  0.405   0.935   0.819   1.096   2.265
+     comp_km     nan   0.390     nan     nan    nan  0.340    nan    nan   0.935   1.418   1.125   2.669
+  comp_atlas   0.496   0.407     nan   0.808  0.315  0.355    nan  0.515   0.786   1.120   1.125   1.055
+       mk_km     nan   0.387   0.668   0.724    nan  0.340  0.485  0.490   0.935   0.700   0.936   1.675
+    mk_atlas   0.545   0.407   0.675   0.796  0.370  0.340  0.485  0.525   0.808   1.083   0.970   1.185
+    contract     nan     nan     nan     nan    nan    nan    nan    nan   1.249   0.899   1.177   2.669
+        xfit     nan     nan     nan     nan    nan    nan    nan    nan   2.983   1.439   1.201   2.681
+   vel_ss_nm   0.015   0.003   0.043   0.038  0.105  0.005  0.090  0.020   1.305   1.275   2.099   2.980
+  vel_dyn_nm   0.104  -0.039  -0.055   0.032  0.195  0.155  0.100  0.075   0.922   1.789   1.175   2.983
+     pool_eq     nan  -0.195     nan     nan    nan  0.220    nan    nan   0.935   0.918   1.125   2.669
+    desample   0.183     nan     nan     nan  0.220    nan    nan    nan   0.915   0.823   1.118   2.669
+     c_trend     nan     nan     nan   0.642    nan    nan    nan  0.470   1.122   0.997   1.256   2.010
+      c_tilt     nan     nan   0.353   0.595    nan    nan  0.300  0.405   1.122   0.997   1.245   2.344
+        c_ot     nan     nan     nan     nan    nan    nan    nan    nan   1.122   0.997   1.256   2.669
+       c_uot     nan   0.395   0.661   0.665    nan  0.345  0.495  0.460   1.122   0.956   1.139   2.354
+       c_vel     nan     nan     nan   0.038    nan    nan    nan  0.020   1.122   0.997   1.256   2.980
+      c_comp     nan   0.388     nan     nan    nan  0.340    nan    nan   1.122   1.605   1.256   2.669
+   comp_pool     nan   0.387     nan     nan    nan  0.340    nan    nan   0.935   1.290   1.125   2.669
+
+==== CHECK sd_full (textbook Sinkhorn divergence) of the forecasts selected by sd_fixed, 'roll' hp
+     persist   0.456   0.311   0.369   0.574   0.427  
+   meanshift   0.832   0.647   0.598   0.487   0.641  
+          ot   0.805   0.671   0.599   0.416   0.623  1/4
+  uot_growth   0.751   0.576   0.611   0.445   0.596  1/4
+      vel_ss   0.453   0.296   0.363   0.588   0.425  3/4 PASS
+     vel_dyn   0.456   0.370   0.356   0.597   0.445  2/4
+   ot_vel_ss   0.550   0.380   0.357   0.467   0.439  2/4
+  ot_vel_dyn   0.481   0.369   0.378   0.474   0.426  1/4
+     ms_damp   0.456   0.311   0.369   0.574   0.427  0/4
+   ms_smooth   0.456   0.311   0.369   0.384   0.380  1/4
+     ms_pool   0.456   0.311   0.369   0.574   0.427  0/4
+     ot_damp   0.456   0.311   0.369   0.574   0.427  0/4
+    uot_damp   0.456   0.311   0.369   0.574   0.427  0/4
+      uot_rw   0.436   0.279   0.290   0.407   0.353  4/4 PASS
+     tilt_rw   0.384   0.259   0.347   0.451   0.360  4/4 PASS
+     comp_km   0.367   0.369   0.360   0.568   0.416  2/4
+  comp_atlas   0.413   0.304   0.294   0.238   0.312  4/4 PASS
+       mk_km   0.456   0.256   0.263   0.386   0.340  3/4 PASS
+    mk_atlas   0.422   0.290   0.277   0.259   0.312  4/4 PASS
+    contract   0.222   0.201   0.320   0.511   0.314  3/4 PASS
+        xfit   0.221   0.214   0.333   0.552   0.330  3/4 PASS
+   vel_ss_nm   0.422   0.282   0.363   0.579   0.412  3/4 PASS
+  vel_dyn_nm   0.462   0.331   0.369   0.573   0.434  0/4
+     pool_eq   0.456   0.311   0.369   0.574   0.427  0/4
+    desample   0.401   0.232   0.329   0.538   0.375  3/4 PASS
+     c_trend   0.230   0.199   0.314   0.370   0.278  4/4 PASS
+      c_tilt   0.230   0.184   0.308   0.445   0.292  4/4 PASS
+        c_ot   0.230   0.199   0.314   0.513   0.314  3/4 PASS
+       c_uot   0.230   0.188   0.286   0.444   0.287  4/4 PASS
+       c_vel   0.227   0.199   0.310   0.527   0.316  3/4 PASS
+      c_comp   0.230   0.343   0.314   0.513   0.350  2/4
+   comp_pool   0.376   0.362   0.360   0.569   0.417  2/4
+  [sd_fixed|roll] literal: {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}  post hoc: {'OT_helps_ext': ['c_ot', 'c_uot', 'mk_atlas', 'mk_km', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': ['c_vel', 'vel_ss_nm'], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_ot', 'c_tilt', 'c_trend', 'c_uot', 'c_vel', 'comp_atlas', 'contract', 'desample', 'mk_atlas', 'mk_km', 'tilt_rw', 'uot_rw', 'vel_ss_nm', 'xfit'], 'combos_beating_contract_alone': ['c_tilt', 'c_trend', 'c_uot']}
+  [sd_fixed|same] literal: {'OT_helps': False, 'velocity_helps': True, 'sink_helps': False}  post hoc: {'OT_helps_ext': ['c_ot', 'c_uot', 'mk_atlas', 'mk_km', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': ['c_vel', 'vel_ss_nm'], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_ot', 'c_tilt', 'c_trend', 'c_uot', 'c_vel', 'contract', 'desample', 'mk_atlas', 'mk_km', 'tilt_rw', 'uot_rw', 'vel_ss_nm', 'xfit'], 'combos_beating_contract_alone': ['c_tilt', 'c_uot']}
+
+==== CHECK sd_full (textbook Sinkhorn divergence) of the forecasts selected by energy, 'roll' hp
+     persist   0.456   0.311   0.369   0.574   0.427  
+   meanshift   0.832   0.647   0.598   0.487   0.641  
+          ot   1.079   0.850   0.803   0.609   0.835  0/4
+  uot_growth   0.751   0.576   0.611   0.445   0.596  1/4
+      vel_ss   0.453   0.282   0.362   0.588   0.421  3/4 PASS
+     vel_dyn   0.456   0.370   0.360   0.597   0.446  2/4
+   ot_vel_ss   0.550   0.306   0.374   0.488   0.430  1/4
+  ot_vel_dyn   0.481   0.369   0.385   0.560   0.449  0/4
+     ms_damp   0.456   0.311   0.369   0.574   0.427  0/4
+   ms_smooth   0.456   0.311   0.369   0.384   0.380  1/4
+     ms_pool   0.456   0.311   0.369   0.574   0.427  0/4
+     ot_damp   0.456   0.311   0.369   0.574   0.427  0/4
+    uot_damp   0.456   0.311   0.369   0.574   0.427  0/4
+      uot_rw   0.456   0.279   0.290   0.407   0.358  3/4 PASS
+     tilt_rw   0.456   0.311   0.351   0.451   0.392  2/4
+     comp_km   0.456   0.361   0.369   0.574   0.440  0/4
+  comp_atlas   0.413   0.316   0.369   0.238   0.334  2/4
+       mk_km   0.456   0.258   0.304   0.351   0.342  3/4 PASS
+    mk_atlas   0.422   0.290   0.318   0.259   0.322  4/4 PASS
+    contract   0.321   0.264   0.338   0.574   0.374  3/4 PASS
+        xfit   0.221   0.214   0.333   0.552   0.330  3/4 PASS
+   vel_ss_nm   0.436   0.299   0.357   0.579   0.418  3/4 PASS
+  vel_dyn_nm   0.455   0.389   0.379   0.573   0.449  1/4
+     pool_eq   0.456   0.347   0.369   0.574   0.436  0/4
+    desample   0.401   0.232   0.329   0.574   0.384  3/4 PASS
+     c_trend   0.350   0.246   0.327   0.431   0.338  4/4 PASS
+      c_tilt   0.350   0.246   0.318   0.467   0.345  4/4 PASS
+        c_ot   0.350   0.246   0.327   0.574   0.374  3/4 PASS
+       c_uot   0.350   0.232   0.293   0.477   0.338  4/4 PASS
+       c_vel   0.350   0.246   0.327   0.579   0.375  3/4 PASS
+      c_comp   0.350   0.309   0.327   0.574   0.390  3/4 PASS
+   comp_pool   0.456   0.332   0.369   0.574   0.433  0/4
+  [energy|roll] literal: {'OT_helps': False, 'velocity_helps': True, 'sink_helps': True}  post hoc: {'OT_helps_ext': ['c_ot', 'c_uot', 'mk_atlas', 'mk_km', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': ['c_vel', 'vel_ss_nm'], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_comp', 'c_ot', 'c_tilt', 'c_trend', 'c_uot', 'c_vel', 'contract', 'desample', 'mk_atlas', 'mk_km', 'uot_rw', 'vel_ss_nm', 'xfit'], 'combos_beating_contract_alone': ['c_tilt', 'c_trend', 'c_uot']}
+  [energy|same] literal: {'OT_helps': False, 'velocity_helps': True, 'sink_helps': True}  post hoc: {'OT_helps_ext': ['c_uot', 'mk_atlas', 'uot_rw'], 'velocity_helps_ext_vs_ot': ['c_vel', 'vel_dyn_nm', 'vel_ss_nm'], 'velocity_ext_strict': [], 'sink_ext_vs_ot': ['c_uot', 'uot_damp', 'uot_rw'], 'sink_ext_vs_ot_damp': ['uot_rw'], 'new_families_passing_vs_persist_meanshift': ['c_uot', 'mk_atlas', 'uot_rw', 'xfit'], 'combos_beating_contract_alone': ['c_uot']}
+
+==== DESCRIPTIVE metric check: half A of the true stage contracted by a vs half B (argmin over a)
+  origin 2 same loc.: sd_fixed argmin a=0.2 (0.76 of a=0)  sd_full argmin a=0.1 (0.86 of a=0)  energy argmin a=0.0 (1.00 of a=0)  mmd argmin a=0.0 (1.00 of a=0)
+  origin 2 displaced: sd_fixed argmin a=0.2 (0.91 of a=0)  sd_full argmin a=0.1 (0.97 of a=0)  energy argmin a=0.0 (1.00 of a=0)  mmd argmin a=0.0 (1.00 of a=0)
+  origin 3 same loc.: sd_fixed argmin a=0.2 (0.80 of a=0)  sd_full argmin a=0.1 (0.87 of a=0)  energy argmin a=0.0 (1.00 of a=0)  mmd argmin a=0.0 (1.00 of a=0)
+  origin 3 displaced: sd_fixed argmin a=0.2 (0.93 of a=0)  sd_full argmin a=0.1 (0.98 of a=0)  energy argmin a=0.0 (1.00 of a=0)  mmd argmin a=0.0 (1.00 of a=0)
+  origin 4 same loc.: sd_fixed argmin a=0.2 (0.79 of a=0)  sd_full argmin a=0.1 (0.86 of a=0)  energy argmin a=0.0 (1.00 of a=0)  mmd argmin a=0.0 (1.00 of a=0)
+  origin 4 displaced: sd_fixed argmin a=0.2 (0.93 of a=0)  sd_full argmin a=0.1 (0.97 of a=0)  energy argmin a=0.0 (1.00 of a=0)  mmd argmin a=0.0 (1.00 of a=0)
+  origin 5 same loc.: sd_fixed argmin a=0.1 (0.88 of a=0)  sd_full argmin a=0.1 (0.96 of a=0)  energy argmin a=0.0 (1.00 of a=0)  mmd argmin a=0.0 (1.00 of a=0)
+  origin 5 displaced: sd_fixed argmin a=0.1 (0.99 of a=0)  sd_full argmin a=0.1 (1.00 of a=0)  energy argmin a=0.0 (1.00 of a=0)  mmd argmin a=0.0 (1.00 of a=0)
+
+==== target-pool breakdown, metric sd_fixed, 'roll' hp: pools where the family beats persistence (of n) and mean difference to persistence over pools
+pools: {'2': {'12': 514, '13': 526, '8': 274, '9': 395}, '3': {'16': 1210, '33': 589, '34': 505, '35': 507}, '4': {'24': 639, '25': 681, '28': 375}, '5': {'17': 557, '29': 689, '36': 975, '37': 800}} batches: {'2': {'12': '2', '13': '2', '8': '1', '9': '1'}, '3': {'16': '2', '33': '3', '34': '3', '35': '3'}, '4': {'24': '2', '25': '2', '28': '2'}, '5': {'17': '2', '29': '3', '36': '3', '37': '3'}}
+   meanshift o2 0/4 +0.351  o3 0/4 +0.347  o4 0/3 +0.232  o5 4/4 -0.091
+          ot o2 0/4 +0.324  o3 0/4 +0.370  o4 0/3 +0.231  o5 4/4 -0.167
+  uot_growth o2 0/4 +0.269  o3 0/4 +0.268  o4 0/3 +0.236  o5 4/4 -0.137
+      vel_ss o2 3/4 -0.018  o3 3/4 -0.047  o4 3/3 -0.039  o5 2/4 +0.005
+     vel_dyn o2 2/4 -0.000  o3 0/4 +0.075  o4 2/3 -0.011  o5 0/4 +0.032
+   ot_vel_ss o2 0/4 +0.069  o3 0/4 +0.042  o4 3/3 -0.038  o5 4/4 -0.128
+  ot_vel_dyn o2 1/4 +0.019  o3 0/4 +0.071  o4 1/3 +0.011  o5 4/4 -0.101
+     ms_damp o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 0/4 +0.000
+   ms_smooth o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 4/4 -0.187
+     ms_pool o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 0/4 +0.000
+     ot_damp o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 0/4 +0.000
+    uot_damp o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 0/4 +0.000
+      uot_rw o2 4/4 -0.021  o3 4/4 -0.031  o4 3/3 -0.072  o5 4/4 -0.169
+     tilt_rw o2 4/4 -0.078  o3 4/4 -0.050  o4 3/3 -0.023  o5 4/4 -0.125
+     comp_km o2 4/4 -0.095  o3 1/4 +0.063  o4 3/3 -0.013  o5 2/4 -0.004
+  comp_atlas o2 3/4 -0.043  o3 1/4 -0.002  o4 3/3 -0.067  o5 4/4 -0.348
+       mk_km o2 0/4 +0.000  o3 4/4 -0.047  o4 3/3 -0.098  o5 4/4 -0.189
+    mk_atlas o2 3/4 -0.030  o3 1/4 -0.015  o4 3/3 -0.081  o5 4/4 -0.329
+    contract o2 4/4 -0.310  o3 4/4 -0.190  o4 3/3 -0.126  o5 4/4 -0.111
+        xfit o2 4/4 -0.313  o3 4/4 -0.151  o4 3/3 -0.059  o5 4/4 -0.034
+   vel_ss_nm o2 4/4 -0.039  o3 4/4 -0.051  o4 3/3 -0.038  o5 2/4 +0.000
+  vel_dyn_nm o2 2/4 +0.004  o3 0/4 +0.025  o4 0/3 +0.000  o5 3/4 +0.001
+     pool_eq o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 0/4 +0.000
+    desample o2 4/4 -0.065  o3 4/4 -0.100  o4 3/3 -0.089  o5 4/4 -0.050
+     c_trend o2 4/4 -0.296  o3 4/4 -0.188  o4 3/3 -0.127  o5 4/4 -0.252
+      c_tilt o2 4/4 -0.296  o3 4/4 -0.200  o4 3/3 -0.133  o5 4/4 -0.180
+        c_ot o2 4/4 -0.296  o3 4/4 -0.188  o4 3/3 -0.127  o5 4/4 -0.111
+       c_uot o2 4/4 -0.296  o3 4/4 -0.198  o4 3/3 -0.153  o5 4/4 -0.180
+       c_vel o2 4/4 -0.303  o3 4/4 -0.194  o4 3/3 -0.141  o5 4/4 -0.099
+      c_comp o2 4/4 -0.296  o3 2/4 -0.019  o4 3/3 -0.127  o5 4/4 -0.111
+   comp_pool o2 4/4 -0.084  o3 1/4 +0.056  o4 3/3 -0.013  o5 2/4 -0.001
+
+==== target-pool breakdown, metric energy, 'roll' hp: pools where the family beats persistence (of n) and mean difference to persistence over pools
+pools: {'2': {'12': 514, '13': 526, '8': 274, '9': 395}, '3': {'16': 1210, '33': 589, '34': 505, '35': 507}, '4': {'24': 639, '25': 681, '28': 375}, '5': {'17': 557, '29': 689, '36': 975, '37': 800}} batches: {'2': {'12': '2', '13': '2', '8': '1', '9': '1'}, '3': {'16': '2', '33': '3', '34': '3', '35': '3'}, '4': {'24': '2', '25': '2', '28': '2'}, '5': {'17': '2', '29': '3', '36': '3', '37': '3'}}
+   meanshift o2 0/4 +3.379  o3 0/4 +3.926  o4 0/3 +2.594  o5 3/4 -0.551
+          ot o2 0/4 +3.138  o3 0/4 +3.941  o4 0/3 +2.297  o5 4/4 -1.216
+  uot_growth o2 0/4 +2.838  o3 0/4 +3.172  o4 0/3 +2.854  o5 3/4 -0.749
+      vel_ss o2 0/4 +0.681  o3 2/4 -0.042  o4 3/3 -0.051  o5 0/4 +0.392
+     vel_dyn o2 4/4 -0.005  o3 0/4 +0.379  o4 2/3 -0.037  o5 0/4 +0.421
+   ot_vel_ss o2 0/4 +1.077  o3 0/4 +0.321  o4 0/3 +0.219  o5 4/4 -0.563
+  ot_vel_dyn o2 1/4 +0.229  o3 0/4 +0.615  o4 0/3 +0.318  o5 1/4 +0.067
+     ms_damp o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 0/4 +0.000
+   ms_smooth o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 4/4 -1.840
+     ms_pool o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 0/4 +0.000
+     ot_damp o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 0/4 +0.000
+    uot_damp o2 0/4 +0.000  o3 0/4 +0.000  o4 0/3 +0.000  o5 0/4 +0.000
+      uot_rw o2 0/4 +0.000  o3 4/4 -0.157  o4 3/3 -0.493  o5 4/4 -1.089
+     tilt_rw o2 0/4 +0.000  o3 0/4 +0.000  o4 3/3 -0.031  o5 4/4 -0.588
+     comp_km o2 0/4 +0.000  o3 0/4 +1.840  o4 0/3 +0.000  o5 0/4 +0.000
+  comp_atlas o2 4/4 -0.381  o3 1/4 +0.961  o4 0/3 +0.000  o5 4/4 -3.262
+       mk_km o2 0/4 +0.000  o3 2/4 -0.191  o4 3/3 -0.398  o5 4/4 -1.720
+    mk_atlas o2 4/4 -0.294  o3 1/4 +0.821  o4 3/3 -0.330  o5 4/4 -2.885
+    contract o2 2/4 -0.054  o3 3/4 -0.053  o4 0/3 +0.097  o5 0/4 +0.000
+        xfit o2 1/4 +0.325  o3 3/4 +0.014  o4 0/3 +0.121  o5 0/4 +0.154
+   vel_ss_nm o2 4/4 -0.024  o3 3/4 -0.040  o4 3/3 -0.088  o5 0/4 +0.172
+  vel_dyn_nm o2 4/4 -0.043  o3 0/4 +0.588  o4 0/3 +0.066  o5 0/4 +0.090
+     pool_eq o2 0/4 +0.000  o3 0/4 +0.243  o4 0/3 +0.000  o5 0/4 +0.000
+    desample o2 4/4 -0.148  o3 4/4 -0.149  o4 0/3 +0.092  o5 0/4 +0.000
+     c_trend o2 3/4 -0.058  o3 3/4 -0.056  o4 0/3 +0.167  o5 4/4 -1.392
+      c_tilt o2 3/4 -0.058  o3 3/4 -0.056  o4 0/3 +0.148  o5 4/4 -0.473
+        c_ot o2 3/4 -0.058  o3 3/4 -0.056  o4 0/3 +0.167  o5 0/4 +0.000
+       c_uot o2 3/4 -0.058  o3 4/4 -0.153  o4 2/3 -0.080  o5 4/4 -0.541
+       c_vel o2 3/4 -0.058  o3 3/4 -0.056  o4 0/3 +0.167  o5 0/4 +0.172
+      c_comp o2 3/4 -0.058  o3 0/4 +1.691  o4 0/3 +0.167  o5 0/4 +0.000
+   comp_pool o2 0/4 +0.000  o3 0/4 +1.485  o4 0/3 +0.000  o5 0/4 +0.000

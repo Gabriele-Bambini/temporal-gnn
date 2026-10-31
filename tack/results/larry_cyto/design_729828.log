@@ -1,0 +1,133 @@
+cells 65075 columns ['Library', 'Cell barcode', 'Time point', 'Cell type annotation', 'Cytokine condition', 'SPRING-x', 'SPRING-y']
+Time point              2      4      6    All
+Cytokine condition                            
+Epo                     0   3481   5010   8491
+G-csf                   0   6879   2936   9815
+M-csf                   0   6127   8223  14350
+SCF                     0   6113      0   6113
+full cocktail       15728    802   9776  26306
+All                 15728  23402  25945  65075
+Time point  Cytokine condition  Library 
+2           full cocktail       d2_1        2715
+                                d2_2        2798
+                                d2_3        2529
+                                d2_4        2176
+                                d2_5        2940
+                                d2_6        2570
+4           Epo                 d4_EPO_1    1795
+                                d4_EPO_2    1686
+            G-csf               d4_G_1      2243
+                                d4_G_2      2073
+                                d4_G_3      2563
+            M-csf               d4_M_1      1929
+                                d4_M_2      1945
+                                d4_M_3      2253
+            SCF                 d4_SCF_1    1497
+                                d4_SCF_2    1949
+                                d4_SCF_3    2667
+            full cocktail       d4_all_1     802
+6           Epo                 d6_EPO_1    1746
+                                d6_EPO_2    1693
+                                d6_EPO_3    1571
+            G-csf               d6_G_1      1234
+                                d6_G_2      1702
+            M-csf               d6_M_1      4172
+                                d6_M_2      4051
+            full cocktail       d6_all_1    2863
+                                d6_all_2    2652
+                                d6_all_3    2158
+                                d6_all_4    2103
+Time point                2     4      6
+Cell type annotation                    
+Ba                      375  1430   2587
+Eos                      24    77     52
+Er                     1077   873   2868
+Ma                       96   310    356
+Mk                      278   771    925
+Mo                     1648  5276  12366
+Neu                    1058  4564   2623
+Undifferentiated      11141  9801   3474
+cDC                      22   111    557
+pDC1                      9   131    134
+pDC2                      0    58      3
+clone matrix (cells x clones) (65075, 5257) cells by number of barcodes {0: 39326, 1: 25749}
+single-clone cells per time point x condition
+col_0             2     4     6
+row_0                          
+Epo               0  1128  1202
+G-csf             0  2121  1852
+M-csf             0  2109  5131
+SCF               0  2432     0
+full cocktail  3776   282  5716
+clones shared between (time point, condition) groups
+  (2, 'full cocktail') -> (4, 'Epo'): shared clones 195, cells in shared clones 281 / 392
+  (2, 'full cocktail') -> (4, 'G-csf'): shared clones 387, cells in shared clones 618 / 791
+  (2, 'full cocktail') -> (4, 'M-csf'): shared clones 396, cells in shared clones 655 / 840
+  (2, 'full cocktail') -> (4, 'SCF'): shared clones 403, cells in shared clones 589 / 864
+  (2, 'full cocktail') -> (4, 'full cocktail'): shared clones 101, cells in shared clones 153 / 111
+  (2, 'full cocktail') -> (6, 'Epo'): shared clones 64, cells in shared clones 87 / 293
+  (2, 'full cocktail') -> (6, 'G-csf'): shared clones 170, cells in shared clones 248 / 558
+  (2, 'full cocktail') -> (6, 'M-csf'): shared clones 448, cells in shared clones 731 / 1907
+  (2, 'full cocktail') -> (6, 'full cocktail'): shared clones 586, cells in shared clones 861 / 1582
+  (4, 'Epo') -> (6, 'Epo'): shared clones 143, cells in shared clones 404 / 884
+  (4, 'Epo') -> (6, 'G-csf'): shared clones 29, cells in shared clones 61 / 109
+  (4, 'Epo') -> (6, 'M-csf'): shared clones 42, cells in shared clones 63 / 150
+  (4, 'Epo') -> (6, 'full cocktail'): shared clones 68, cells in shared clones 124 / 212
+  (4, 'G-csf') -> (6, 'Epo'): shared clones 22, cells in shared clones 56 / 84
+  (4, 'G-csf') -> (6, 'G-csf'): shared clones 260, cells in shared clones 651 / 925
+  (4, 'G-csf') -> (6, 'M-csf'): shared clones 222, cells in shared clones 390 / 1139
+  (4, 'G-csf') -> (6, 'full cocktail'): shared clones 155, cells in shared clones 265 / 380
+  (4, 'M-csf') -> (6, 'Epo'): shared clones 14, cells in shared clones 24 / 57
+  (4, 'M-csf') -> (6, 'G-csf'): shared clones 81, cells in shared clones 162 / 215
+  (4, 'M-csf') -> (6, 'M-csf'): shared clones 671, cells in shared clones 1522 / 3356
+  (4, 'M-csf') -> (6, 'full cocktail'): shared clones 246, cells in shared clones 543 / 612
+  (4, 'SCF') -> (6, 'Epo'): shared clones 24, cells in shared clones 55 / 103
+  (4, 'SCF') -> (6, 'G-csf'): shared clones 124, cells in shared clones 293 / 455
+  (4, 'SCF') -> (6, 'M-csf'): shared clones 206, cells in shared clones 461 / 1022
+  (4, 'SCF') -> (6, 'full cocktail'): shared clones 280, cells in shared clones 594 / 843
+  (4, 'full cocktail') -> (6, 'Epo'): shared clones 5, cells in shared clones 5 / 14
+  (4, 'full cocktail') -> (6, 'G-csf'): shared clones 21, cells in shared clones 24 / 50
+  (4, 'full cocktail') -> (6, 'M-csf'): shared clones 44, cells in shared clones 48 / 252
+  (4, 'full cocktail') -> (6, 'full cocktail'): shared clones 163, cells in shared clones 200 / 568
+integrity: same-type sister enrichment inside each group (type-permutation null)
+  (2, 'full cocktail'): n 3776 clones 2222 enrichment 4.94 (null 0.51 +- 0.02)
+  (4, 'Epo'): n 1128 clones 509 enrichment 3.57 (null 0.72 +- 0.04)
+  (4, 'G-csf'): n 2121 clones 975 enrichment 3.52 (null 0.70 +- 0.02)
+  (4, 'M-csf'): n 2109 clones 1016 enrichment 1.94 (null 0.65 +- 0.03)
+  (4, 'SCF'): n 2432 clones 1070 enrichment 3.07 (null 0.76 +- 0.10)
+  (4, 'full cocktail'): n 282 clones 234 enrichment 2.61 (null 0.29 +- 0.06)
+  (6, 'Epo'): n 1202 clones 223 enrichment 2.22 (null 0.89 +- 0.03)
+  (6, 'G-csf'): n 1852 clones 549 enrichment 3.02 (null 0.85 +- 0.04)
+  (6, 'M-csf'): n 5131 clones 1286 enrichment 1.53 (null 0.88 +- 0.01)
+  (6, 'full cocktail'): n 5716 clones 1749 enrichment 4.32 (null 0.82 +- 0.01)
+integrity per library
+  d2_1: n 644 enrichment 1.18
+  d2_2: n 658 enrichment 1.56
+  d2_3: n 604 enrichment 1.64
+  d2_4: n 526 enrichment 1.62
+  d2_5: n 676 enrichment 0.81
+  d2_6: n 668 enrichment 0.85
+  d4_EPO_1: n 580 enrichment 2.99
+  d4_EPO_2: n 548 enrichment 2.96
+  d4_G_1: n 640 enrichment 1.85
+  d4_G_2: n 644 enrichment 3.11
+  d4_G_3: n 837 enrichment 3.56
+  d4_M_1: n 695 enrichment 1.39
+  d4_M_2: n 652 enrichment 1.52
+  d4_M_3: n 762 enrichment 1.42
+  d4_SCF_1: n 603 enrichment 3.88
+  d4_SCF_2: n 806 enrichment 1.57
+  d4_SCF_3: n 1023 enrichment 1.75
+  d4_all_1: n 282 enrichment 2.61
+  d6_EPO_1: n 449 enrichment 1.95
+  d6_EPO_2: n 393 enrichment 1.81
+  d6_EPO_3: n 360 enrichment 1.93
+  d6_G_1: n 801 enrichment 2.31
+  d6_G_2: n 1051 enrichment 2.82
+  d6_M_1: n 2616 enrichment 1.34
+  d6_M_2: n 2515 enrichment 1.41
+  d6_all_1: n 1691 enrichment 3.97
+  d6_all_2: n 1544 enrichment 2.99
+  d6_all_3: n 1235 enrichment 2.45
+  d6_all_4: n 1246 enrichment 2.98
+end
